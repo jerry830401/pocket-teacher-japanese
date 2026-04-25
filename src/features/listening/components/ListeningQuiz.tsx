@@ -63,7 +63,6 @@ export default function ListeningQuiz({ cards }: Props) {
     correct: 0,
   })
   const [autoNext, setAutoNext] = useState(() => localStorage.getItem('autoNext:listening') === 'true')
-  const [playing, setPlaying] = useState(false)
   const [roundResult, setRoundResult] = useState<{ correct: number } | null>(null)
 
   useEffect(() => {
@@ -77,17 +76,8 @@ export default function ListeningQuiz({ cards }: Props) {
 
   const playCurrentWord = useCallback(() => {
     if (!current) return
-    setPlaying(true)
-    speak(current.payload.reading).finally(() => {
-      setTimeout(() => setPlaying(false), 1500)
-    })
+    speak(current.payload.reading)
   }, [current])
-
-  // 換題時自動播放
-  useEffect(() => {
-    if (current) playCurrentWord()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [current?.id])
 
   function startNextRound() {
     const round = buildRound(cards)
@@ -167,13 +157,7 @@ export default function ListeningQuiz({ cards }: Props) {
       <div className="flex flex-col items-center justify-center w-56 min-h-36 gap-4 rounded-2xl border-2 border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-950 shadow-sm px-4 py-6">
         <button
           onClick={playCurrentWord}
-          disabled={playing}
-          className={[
-            'flex items-center justify-center w-16 h-16 rounded-full border-2 transition-colors',
-            playing
-              ? 'border-orange-300 dark:border-orange-700 bg-orange-100 dark:bg-orange-900 text-orange-300 dark:text-orange-700'
-              : 'border-orange-400 dark:border-orange-500 bg-white dark:bg-orange-900 text-orange-500 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-800 cursor-pointer',
-          ].join(' ')}
+          className="flex items-center justify-center w-16 h-16 rounded-full border-2 transition-colors border-orange-400 dark:border-orange-500 bg-white dark:bg-orange-900 text-orange-500 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-800 cursor-pointer"
           aria-label="播放發音"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
