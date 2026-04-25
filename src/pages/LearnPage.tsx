@@ -5,21 +5,19 @@ import type { GrammarCard } from '@/features/grammar/types'
 import { loadKana, filterByType } from '@/features/kana/data'
 import { loadVocabulary, filterByLevel as filterVocab } from '@/features/vocabulary/data'
 import { loadGrammar, filterByLevel as filterGrammar } from '@/features/grammar/data'
-import { isSupported, preloadVoices } from '@/lib/tts/tts'
+import { preloadVoices } from '@/lib/tts/tts'
 import KanaTable from '@/features/kana/components/KanaTable'
 import VocabStudy from '@/features/vocabulary/components/VocabStudy'
 import GrammarStudy from '@/features/grammar/components/GrammarStudy'
-import ListeningStudy from '@/features/listening/components/ListeningStudy'
 
-type Subject = 'kana' | 'vocab' | 'grammar' | 'listening'
+type Subject = 'kana' | 'vocab' | 'grammar'
 type JlptLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
 const LEVELS: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
 
 const SUBJECTS: { id: Subject; label: string; icon: string }[] = [
-  { id: 'kana',      label: '五十音', icon: 'あ' },
-  { id: 'vocab',     label: '單字',   icon: '語' },
-  { id: 'grammar',   label: '文法',   icon: '文' },
-  { id: 'listening', label: '聽力',   icon: '音' },
+  { id: 'kana',    label: '五十音', icon: 'あ' },
+  { id: 'vocab',   label: '單字',   icon: '語' },
+  { id: 'grammar', label: '文法',   icon: '文' },
 ]
 
 // ── Kana section ─────────────────────────────────────────────
@@ -83,12 +81,11 @@ function LevelSelector({
   allCards: { level: string }[]
   level: JlptLevel
   onChange: (l: JlptLevel) => void
-  color: 'indigo' | 'teal' | 'orange'
+  color: 'indigo' | 'teal'
 }) {
   const active = {
     indigo: 'bg-indigo-600 text-white',
     teal:   'bg-teal-600 text-white',
-    orange: 'bg-orange-500 text-white',
   }[color]
 
   return (
@@ -149,30 +146,6 @@ function GrammarSection({ allCards }: { allCards: GrammarCard[] }) {
   )
 }
 
-// ── Listening section ─────────────────────────────────────────
-function ListeningSection({ allCards }: { allCards: VocabCard[] }) {
-  const [level, setLevel] = useState<JlptLevel>('N5')
-  const cards = filterVocab(allCards, level)
-
-  if (!isSupported()) {
-    return (
-      <div className="rounded-lg border border-dashed border-slate-300 dark:border-slate-700 p-6 text-sm text-slate-500">
-        您的瀏覽器不支援語音合成（Web Speech API），請使用 Chrome 或 Safari。
-      </div>
-    )
-  }
-
-  return (
-    <div className="space-y-4">
-      <LevelSelector allCards={allCards} level={level} onChange={setLevel} color="orange" />
-      {cards.length > 0
-        ? <ListeningStudy cards={cards} />
-        : <EmptyLevel level={level} />
-      }
-    </div>
-  )
-}
-
 function EmptyLevel({ level }: { level: JlptLevel }) {
   return (
     <div className="rounded-lg border border-dashed border-slate-300 dark:border-slate-700 p-6 text-sm text-slate-500">
@@ -226,10 +199,9 @@ export default function LearnPage() {
 
       {dataError && <p className="text-red-500 text-sm">{dataError}</p>}
 
-      {subject === 'kana'      && <KanaSection />}
-      {subject === 'vocab'     && <VocabSection allCards={vocabCards} />}
-      {subject === 'grammar'   && <GrammarSection allCards={grammarCards} />}
-      {subject === 'listening' && <ListeningSection allCards={vocabCards} />}
+      {subject === 'kana'    && <KanaSection />}
+      {subject === 'vocab'   && <VocabSection allCards={vocabCards} />}
+      {subject === 'grammar' && <GrammarSection allCards={grammarCards} />}
     </div>
   )
 }
