@@ -24,6 +24,7 @@ Phase 0 (scaffold) → Phase 1 (kana). Higher JLPT levels (N4–N1) are planned 
 | `npm run build` | Type-check (`tsc -b`) then production build |
 | `npm run lint` | ESLint over the project |
 | `npm run preview` | Serve the production build locally |
+| `npm run deploy` | 發佈到 GitHub Pages，發佈前執行完整防呆檢查（分支、乾淨工作區、遠端同步、Node 版本、node_modules）|
 
 ## Project structure
 

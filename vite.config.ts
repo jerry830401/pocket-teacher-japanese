@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/pocket-teacher-japanese/',
   plugins: [react(), tailwindcss()],
   server: {
     host: true, // 監聽 0.0.0.0，讓同網段裝置可透過 IP 連入
