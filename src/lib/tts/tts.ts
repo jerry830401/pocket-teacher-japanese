@@ -31,14 +31,18 @@ function pickJaVoice(voices: SpeechSynthesisVoice[]): SpeechSynthesisVoice | nul
     ?? null
 }
 
-function doSpeak(text: string, lang: string): void {
+function doSpeak(text: string, lang: string, onError?: () => void): void {
   const ss = window.speechSynthesis
   const utt = new SpeechSynthesisUtterance(text)
   activeUtt = utt
   utt.lang = lang
   utt.rate = 0.7
   utt.onend = () => { activeUtt = null }
-  utt.onerror = () => { activeUtt = null }
+  utt.onerror = (e) => {
+    activeUtt = null
+    // 'interrupted' is fired when we call cancel() ourselves — not a real error
+    if (e.error !== 'interrupted') onError?.()
+  }
 
   const voice = cachedVoices ? pickJaVoice(cachedVoices) : null
   if (voice) utt.voice = voice
@@ -59,15 +63,15 @@ function doSpeak(text: string, lang: string): void {
     if (!ss.speaking && !ss.paused && activeUtt === utt) {
       ss.cancel()
       cachedVoices = null
-      loadVoices().then(() => doSpeak(text, lang))
+      loadVoices().then(() => doSpeak(text, lang, onError))
     }
   }, 200)
 }
 
-export function speak(text: string, lang = 'ja-JP'): void {
+export function speak(text: string, lang = 'ja-JP', onError?: () => void): void {
   if (!window.speechSynthesis) return
   window.speechSynthesis.cancel()
-  doSpeak(text, lang)
+  doSpeak(text, lang, onError)
 }
 
 export function preloadVoices(): void {

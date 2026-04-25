@@ -13,19 +13,18 @@ export default function KanaPage() {
   const [showRomaji, setShowRomaji] = useState(true)
   const [quizMode, setQuizMode] = useState<'kana→romaji' | 'romaji→kana'>('kana→romaji')
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    loadKana().then((chars) => {
-      setAllChars(chars)
-      setLoading(false)
-    })
+    loadKana()
+      .then((chars) => { setAllChars(chars); setLoading(false) })
+      .catch(() => { setError('資料載入失敗，請重新整理頁面'); setLoading(false) })
   }, [])
 
   const chars = filterByType(allChars, kanaType).filter((c) => c.group !== 'combo')
 
-  if (loading) {
-    return <p className="text-slate-400">載入中⋯</p>
-  }
+  if (loading) return <p className="text-slate-400">載入中⋯</p>
+  if (error)   return <p className="text-red-500">{error}</p>
 
   return (
     <div className="space-y-6">

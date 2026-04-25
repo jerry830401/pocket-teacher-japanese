@@ -64,6 +64,7 @@ export default function ListeningQuiz({ cards }: Props) {
   })
   const [autoNext, setAutoNext] = useState(() => localStorage.getItem('autoNext:listening') === 'true')
   const [roundResult, setRoundResult] = useState<{ correct: number } | null>(null)
+  const [ttsError, setTtsError] = useState(false)
 
   useEffect(() => {
     const round = buildRound(cards)
@@ -76,7 +77,8 @@ export default function ListeningQuiz({ cards }: Props) {
 
   const playCurrentWord = useCallback(() => {
     if (!current) return
-    speak(current.payload.reading)
+    setTtsError(false)
+    speak(current.payload.reading, 'ja-JP', () => setTtsError(true))
   }, [current])
 
   function startNextRound() {
@@ -165,7 +167,10 @@ export default function ListeningQuiz({ cards }: Props) {
             <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" />
           </svg>
         </button>
-        <p className="text-xs text-orange-400 dark:text-orange-500">點擊播放發音</p>
+        {ttsError
+          ? <p className="text-xs text-red-500">語音播放失敗，請再試一次</p>
+          : <p className="text-xs text-orange-400 dark:text-orange-500">點擊播放發音</p>
+        }
 
         {/* 答題後顯示正確答案 */}
         {selected && (

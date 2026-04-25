@@ -19,6 +19,7 @@ export async function loadKana(): Promise<KanaChar[]> {
   if (cache) return cache
 
   const res = await fetch(`${import.meta.env.BASE_URL}data/kana.json`)
+  if (!res.ok) throw new Error(`Failed to load kana data: ${res.status}`)
   const json: KanaJson = await res.json()
 
   const toChars = (type: KanaType) => (raw: RawKanaChar): KanaChar => ({

@@ -22,6 +22,8 @@ interface Stats {
   due: SrsCard[]
 }
 
+type LoadState = { status: 'loading' } | { status: 'ok'; data: Stats } | { status: 'error' }
+
 function pct(a: number, b: number) {
   if (b === 0) return 0
   return Math.round((a / b) * 100)
@@ -42,20 +44,25 @@ function mastered(cards: SrsCard[]) {
 }
 
 export default function ProgressPage() {
-  const [stats, setStats] = useState<Stats | null>(null)
+  const [loadState, setLoadState] = useState<LoadState>({ status: 'loading' })
 
   useEffect(() => {
     async function load() {
-      const all = await db.srsCards.toArray()
-      const due = await db.srsCards.where('dueAt').belowOrEqual(Date.now()).toArray()
-      setStats({ all, due })
+      try {
+        const all = await db.srsCards.toArray()
+        const due = await db.srsCards.where('dueAt').belowOrEqual(Date.now()).toArray()
+        setLoadState({ status: 'ok', data: { all, due } })
+      } catch {
+        setLoadState({ status: 'error' })
+      }
     }
     load()
   }, [])
 
-  if (!stats) return <p className="text-slate-400">載入中⋯</p>
+  if (loadState.status === 'loading') return <p className="text-slate-400">載入中⋯</p>
+  if (loadState.status === 'error') return <p className="text-red-500">無法讀取學習記錄，您的瀏覽器可能不支援本地儲存（如私密模式）。</p>
 
-  const { all, due } = stats
+  const { all, due } = loadState.data
   const totalReviewed = reviewed(all).length
 
   // 連續學習天數：看 lastReviewedAt 往回數連續有記錄的天數
@@ -133,9 +140,12 @@ function ProgressBar({ value, label, color }: { value: number; label: string; co
 
 function calcStreak(reviewedDays: Set<string>): number {
   if (reviewedDays.size === 0) return 0
-  let streak = 0
   const today = new Date()
-  for (let i = 0; i < 365; i++) {
+  // If today has no activity yet, start counting from yesterday so a streak
+  // earned yesterday isn't lost before the user practices today.
+  const startOffset = reviewedDays.has(today.toDateString()) ? 0 : 1
+  let streak = 0
+  for (let i = startOffset; i < 365; i++) {
     const d = new Date(today)
     d.setDate(today.getDate() - i)
     if (reviewedDays.has(d.toDateString())) {

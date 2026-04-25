@@ -1,10 +1,10 @@
 # Pocket Teacher Japanese (PTJP)
 
-A frontend-only React web app for learning Japanese. Users practice 五十音, JLPT vocabulary, kanji, grammar, and listening — all locally in the browser via IndexedDB. No backend.
+A frontend-only React web app for learning Japanese. Users practice 五十音, JLPT vocabulary, grammar, and listening — all locally in the browser via IndexedDB. No backend.
 
 ## Status
 
-Phase 0 (scaffold) → Phase 1 (kana). Higher JLPT levels (N4–N1) are planned but not implemented; designs must keep them in mind.
+Phase 1 complete (kana + N5 vocabulary, grammar, listening). Higher JLPT levels (N4–N1) are planned but not implemented; designs must keep them in mind.
 
 ## Stack
 
@@ -30,34 +30,44 @@ Phase 0 (scaffold) → Phase 1 (kana). Higher JLPT levels (N4–N1) are planned 
 
 ```
 src/
-├── features/     One folder per learning module (kana, vocabulary, kanji, …).
-│                 Each owns its components, hooks, store, types, and tests.
+├── features/     One folder per learning module (kana, vocabulary, grammar, listening, progress).
+│                 Each owns its components, hooks, types, and tests.
+│                 Route-level pages currently live here too (e.g. KanaPage.tsx).
 ├── lib/          Cross-cutting infrastructure (srs/, db/, tts/).
 ├── shared/       Generic UI building blocks reused across features.
-├── stores/       Top-level Zustand stores (settings, session).
-├── pages/        Route-level components that compose features.
+├── stores/       Top-level Zustand stores — planned Phase 2 (settings, session cache).
+├── pages/        Reserved for route-level components if extracted from features.
 ├── App.tsx       Router declaration.
 └── main.tsx      React entry point.
 ```
 
-Public data files (kana tables, JLPT vocab JSON, etc.) live under `public/data/` and are loaded into IndexedDB on first run.
+Public data files live under `public/data/` and are fetched at runtime (not bundled into JS):
+
+| File | Card type | ID format | Notes |
+|------|-----------|-----------|-------|
+| `kana.json` | `{ hiragana: KanaChar[], katakana: KanaChar[] }` | `h-a`, `k-ka` | Loaded once, cached in module |
+| `vocabulary.json` | `VocabCard[]` | `vocab-N5-001` | Fetched per page mount |
+| `grammar.json` | `GrammarCard[]` | `grammar-N5-001` | Fetched per page mount |
+
+All cards implement the shared `Card` interface: `{ id, type, level, payload, tags }`.
 
 ## Conventions
 
 - **Language**: User-facing text (UI labels, page copy, ARIA labels, errors, README, user-facing docs) is **Traditional Chinese (zh-Hant) primary, English supplementary**. English may appear smaller/secondary where it genuinely helps (technical terms, brand). Code-facing text (identifiers, comments, commit messages, TypeScript types, this file) stays English. Japanese learning content (kana, vocab, examples) stays Japanese.
 - **Path alias**: import from `@/...` (configured in `vite.config.ts` and `tsconfig.app.json`). Avoid deep relative imports like `../../../`.
 - **Feature-first**: new code goes under `src/features/<feature>/` unless it is genuinely cross-cutting, in which case it lives in `lib/` or `shared/`.
-- **JLPT extensibility**: every learnable item must implement the shared `Card` interface (`id`, `type`, `level`, `payload`, `tags`). Adding N4–N1 should be a data change, not a code change.
+- **JLPT extensibility**: every learnable item must implement the shared `Card` interface (`id`, `type`, `level`, `payload`, `tags`). Adding N4–N1 should be a data-only change — add entries to the relevant JSON under `public/data/`; no code changes required.
 - **Pure frontend**: no servers, no runtime API calls beyond bundled assets. Persistence is IndexedDB or LocalStorage.
 - **No speaking features**: pronunciation grading, recording, etc. are out of scope.
 - **Comments**: let names explain *what*; only comment when *why* is non-obvious (constraints, workarounds, surprising invariants).
 
 ## Out of scope
 
+- Kanji module (removed from roadmap).
 - Server-side rendering, authentication, multi-device sync.
 - AI-generated content at runtime. (We may use AI offline to *prepare* data, but the shipped app is static.)
 - Speaking practice and pronunciation grading.
 
 ## Testing
 
-Not wired up yet. Planned: Vitest + React Testing Library, introduced alongside the SRS engine in Phase 2 where pure-logic testing has the highest payoff.
+Vitest is configured. `src/lib/srs/sm2.test.ts` covers the SM-2 algorithm. Component and data-loading tests are planned for Phase 2.

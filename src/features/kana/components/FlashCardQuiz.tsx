@@ -95,7 +95,7 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
     if (selected || !current) return
     const isCorrect = choice.id === current.id
     dispatch({ type: 'PICK', choiceId: choice.id, isCorrect })
-    getOrCreateCard(current.id).then((card) => saveCard(review(card, isCorrect ? 5 : 1)))
+    getOrCreateCard(`kana-${current.id}`).then((card) => saveCard(review(card, isCorrect ? 5 : 1)))
     if (isCorrect && autoNext) {
       const next = correct + 1
       setTimeout(() => advance(index + 1, next), 400)
