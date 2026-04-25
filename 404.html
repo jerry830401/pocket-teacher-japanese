@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pocket Teacher Japanese</title>
+    <script>
+      // GitHub Pages SPA fallback
+      // 把完整路徑存入 sessionStorage，再跳回首頁讓 React Router 接手
+      var base = '/pocket-teacher-japanese';
+      var path = location.pathname.slice(base.length) + location.search + location.hash;
+      sessionStorage.setItem('spa_redirect', path || '/');
+      location.replace(base + '/');
+    </script>
+  </head>
+  <body></body>
+</html>
