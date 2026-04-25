@@ -64,7 +64,7 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
     selected: null,
     correct: 0,
   })
-  const [autoNext, setAutoNext] = useState(false)
+  const [autoNext, setAutoNext] = useState(() => localStorage.getItem('autoNext:kana') === 'true')
   const [roundResult, setRoundResult] = useState<{ correct: number } | null>(null)
 
   // Reset when chars or mode changes
@@ -196,7 +196,7 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
         <button
           role="switch"
           aria-checked={autoNext}
-          onClick={() => setAutoNext((v) => !v)}
+          onClick={() => setAutoNext((v) => { const next = !v; localStorage.setItem('autoNext:kana', String(next)); return next })}
           className={[
             'relative inline-flex h-5 w-9 shrink-0 rounded-full border-2 border-transparent transition-colors duration-200',
             autoNext ? 'bg-indigo-600' : 'bg-slate-300 dark:bg-slate-600',

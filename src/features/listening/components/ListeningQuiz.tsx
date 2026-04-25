@@ -62,7 +62,7 @@ export default function ListeningQuiz({ cards }: Props) {
     selected: null,
     correct: 0,
   })
-  const [autoNext, setAutoNext] = useState(false)
+  const [autoNext, setAutoNext] = useState(() => localStorage.getItem('autoNext:listening') === 'true')
   const [playing, setPlaying] = useState(false)
   const [roundResult, setRoundResult] = useState<{ correct: number } | null>(null)
 
@@ -232,7 +232,7 @@ export default function ListeningQuiz({ cards }: Props) {
         <button
           role="switch"
           aria-checked={autoNext}
-          onClick={() => setAutoNext((v) => !v)}
+          onClick={() => setAutoNext((v) => { const next = !v; localStorage.setItem('autoNext:listening', String(next)); return next })}
           className={[
             'relative inline-flex h-5 w-9 shrink-0 rounded-full border-2 border-transparent transition-colors duration-200',
             autoNext ? 'bg-orange-500' : 'bg-slate-300 dark:bg-slate-600',
