@@ -5,6 +5,7 @@ import Home from '@/pages/Home'
 
 const KanaPage        = lazy(() => import('@/features/kana/KanaPage'))
 const VocabularyPage  = lazy(() => import('@/features/vocabulary/VocabularyPage'))
+const GrammarPage     = lazy(() => import('@/features/grammar/GrammarPage'))
 
 function Loading() {
   return (
@@ -32,6 +33,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <VocabularyPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/grammar"
+          element={
+            <Suspense fallback={<Loading />}>
+              <GrammarPage />
             </Suspense>
           }
         />

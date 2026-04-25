@@ -24,6 +24,12 @@ const navItems = [
     label: '單字',
     icon: <span className="text-lg leading-none font-medium">語</span>,
   },
+  {
+    to: '/grammar',
+    end: false,
+    label: '文法',
+    icon: <span className="text-lg leading-none font-medium">文</span>,
+  },
 ] as const
 
 export default function Layout() {
