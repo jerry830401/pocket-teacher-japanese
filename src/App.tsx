@@ -2,11 +2,9 @@ import { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from '@/shared/Layout'
 
-const KanaPage        = lazy(() => import('@/features/kana/KanaPage'))
-const VocabularyPage  = lazy(() => import('@/features/vocabulary/VocabularyPage'))
-const GrammarPage     = lazy(() => import('@/features/grammar/GrammarPage'))
-const ListeningPage   = lazy(() => import('@/features/listening/ListeningPage'))
-const ProgressPage    = lazy(() => import('@/features/progress/ProgressPage'))
+const LearnPage    = lazy(() => import('@/pages/LearnPage'))
+const QuizPage     = lazy(() => import('@/pages/QuizPage'))
+const ProgressPage = lazy(() => import('@/features/progress/ProgressPage'))
 
 function Loading() {
   return (
@@ -20,36 +18,20 @@ function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Navigate to="/kana" replace />} />
+        <Route path="/" element={<Navigate to="/learn" replace />} />
         <Route
-          path="/kana"
+          path="/learn"
           element={
             <Suspense fallback={<Loading />}>
-              <KanaPage />
+              <LearnPage />
             </Suspense>
           }
         />
         <Route
-          path="/vocabulary"
+          path="/quiz"
           element={
             <Suspense fallback={<Loading />}>
-              <VocabularyPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/grammar"
-          element={
-            <Suspense fallback={<Loading />}>
-              <GrammarPage />
-            </Suspense>
-          }
-        />
-        <Route
-          path="/listening"
-          element={
-            <Suspense fallback={<Loading />}>
-              <ListeningPage />
+              <QuizPage />
             </Suspense>
           }
         />

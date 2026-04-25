@@ -1,38 +1,26 @@
 import { NavLink, Outlet } from 'react-router-dom'
 
-// 每個導覽項目的圖示用日文字符，直覺又省外部依賴
 const navItems = [
   {
-    to: '/kana',
-    end: false,
-    label: '五十音',
-    icon: <span className="text-lg leading-none font-medium">あ</span>,
-  },
-  {
-    to: '/vocabulary',
-    end: false,
-    label: '單字',
-    icon: <span className="text-lg leading-none font-medium">語</span>,
-  },
-  {
-    to: '/grammar',
-    end: false,
-    label: '文法',
-    icon: <span className="text-lg leading-none font-medium">文</span>,
-  },
-  {
-    to: '/listening',
-    end: false,
-    label: '聽力',
+    to: '/learn',
+    label: '學習',
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-        <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z" />
+        <path d="M11.25 4.533A9.707 9.707 0 0 0 6 3a9.735 9.735 0 0 0-3.25.555.75.75 0 0 0-.5.707v14.25a.75.75 0 0 0 1 .707A8.237 8.237 0 0 1 6 18.75c1.995 0 3.823.707 5.25 1.886V4.533ZM12.75 20.636A8.214 8.214 0 0 1 18 18.75c.966 0 1.89.166 2.75.47a.75.75 0 0 0 1-.708V4.262a.75.75 0 0 0-.5-.707A9.735 9.735 0 0 0 18 3a9.707 9.707 0 0 0-5.25 1.533v16.103Z" />
+      </svg>
+    ),
+  },
+  {
+    to: '/quiz',
+    label: '測驗',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+        <path fillRule="evenodd" d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm11.378-3.917c-.89-.777-2.366-.777-3.255 0a.75.75 0 0 1-.988-1.129c1.454-1.272 3.776-1.272 5.23 0 1.454 1.272 1.454 3.329 0 4.601-.42.368-.903.6-1.407.706-.197.04-.306.11-.342.17a.75.75 0 0 1-1.3-.75c.316-.547.87-.914 1.525-1.048.292-.06.528-.179.696-.327.508-.445.508-1.276 0-1.722Zm-.878 5.167a.75.75 0 1 0 0 1.5.75.75 0 0 0 0-1.5Z" clipRule="evenodd" />
       </svg>
     ),
   },
   {
     to: '/progress',
-    end: false,
     label: '進度',
     icon: (
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -57,7 +45,6 @@ export default function Layout() {
               <li key={item.to}>
                 <NavLink
                   to={item.to}
-                  end={item.end}
                   className={({ isActive }) =>
                     [
                       'flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-colors',
@@ -77,7 +64,7 @@ export default function Layout() {
       </header>
 
       {/* ── 主要內容區 ── */}
-      {/* pb-20 留空間給手機底部導覽；md 以上不需要 */}
+      {/* pb-24 留空間給手機底部導覽；md 以上不需要 */}
       <main className="flex-1 mx-auto w-full max-w-5xl px-4 py-6 pb-24 md:pb-8">
         <Outlet />
       </main>
@@ -89,7 +76,6 @@ export default function Layout() {
             <li key={item.to} className="flex-1">
               <NavLink
                 to={item.to}
-                end={item.end}
                 className={({ isActive }) =>
                   [
                     'flex flex-col items-center gap-1 w-full py-2.5 text-[11px] font-medium transition-colors',
@@ -106,7 +92,7 @@ export default function Layout() {
           ))}
         </ul>
         {/* iOS safe area */}
-        <div className="h-safe-bottom" style={{ paddingBottom: 'env(safe-area-inset-bottom)' }} />
+        <div style={{ paddingBottom: 'env(safe-area-inset-bottom)' }} />
       </nav>
 
     </div>
