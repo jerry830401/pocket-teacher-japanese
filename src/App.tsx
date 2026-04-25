@@ -3,7 +3,8 @@ import { Route, Routes } from 'react-router-dom'
 import Layout from '@/shared/Layout'
 import Home from '@/pages/Home'
 
-const KanaPage = lazy(() => import('@/features/kana/KanaPage'))
+const KanaPage        = lazy(() => import('@/features/kana/KanaPage'))
+const VocabularyPage  = lazy(() => import('@/features/vocabulary/VocabularyPage'))
 
 function Loading() {
   return (
@@ -23,6 +24,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <KanaPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/vocabulary"
+          element={
+            <Suspense fallback={<Loading />}>
+              <VocabularyPage />
             </Suspense>
           }
         />

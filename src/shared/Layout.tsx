@@ -18,6 +18,12 @@ const navItems = [
     label: '五十音',
     icon: <span className="text-lg leading-none font-medium">あ</span>,
   },
+  {
+    to: '/vocabulary',
+    end: false,
+    label: '單字',
+    icon: <span className="text-lg leading-none font-medium">語</span>,
+  },
 ] as const
 
 export default function Layout() {
