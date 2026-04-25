@@ -1,1 +1,0 @@
-async function e(){let e=await fetch(`/pocket-teacher-japanese/data/vocabulary.json`);if(!e.ok)throw Error(`Failed to load vocabulary data: ${e.status}`);return e.json()}function t(e,t){return e.filter(e=>e.level===t)}export{e as n,t};
