@@ -1,11 +1,38 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useReducer, useState, useEffect, useMemo } from 'react'
 import type { KanaChar } from '../types'
+import { getOrCreateCard, saveCard } from '@/lib/db/db'
+import { review } from '@/lib/srs/sm2'
 
 type Mode = 'kana→romaji' | 'romaji→kana'
 
 interface Props {
   chars: KanaChar[]
   mode: Mode
+}
+
+interface QuizState {
+  deck: KanaChar[]
+  index: number
+  choices: KanaChar[]
+  selected: string | null
+  correct: number
+  total: number
+}
+
+type QuizAction =
+  | { type: 'RESET'; deck: KanaChar[]; choices: KanaChar[] }
+  | { type: 'PICK'; choiceId: string; isCorrect: boolean }
+  | { type: 'NEXT'; index: number; choices: KanaChar[] }
+
+function reducer(state: QuizState, action: QuizAction): QuizState {
+  switch (action.type) {
+    case 'RESET':
+      return { deck: action.deck, index: 0, choices: action.choices, selected: null, correct: 0, total: 0 }
+    case 'PICK':
+      return { ...state, selected: action.choiceId, total: state.total + 1, correct: state.correct + (action.isCorrect ? 1 : 0) }
+    case 'NEXT':
+      return { ...state, index: action.index, choices: action.choices, selected: null }
+  }
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -17,50 +44,49 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function buildChoices(correct: KanaChar, pool: KanaChar[], _mode: Mode): KanaChar[] {
-  const others = pool.filter((c) => c.id !== correct.id)
-  const wrong = shuffle(others).slice(0, 3)
+function buildChoices(correct: KanaChar, pool: KanaChar[]): KanaChar[] {
+  const wrong = shuffle(pool.filter((c) => c.id !== correct.id)).slice(0, 3)
   return shuffle([correct, ...wrong])
 }
 
+function buildReset(chars: KanaChar[]): QuizAction {
+  const deck = shuffle(chars)
+  return { type: 'RESET', deck, choices: buildChoices(deck[0], chars) }
+}
+
 export default function FlashCardQuiz({ chars, mode }: Props) {
-  const [deck, setDeck] = useState<KanaChar[]>([])
-  const [index, setIndex] = useState(0)
-  const [choices, setChoices] = useState<KanaChar[]>([])
-  const [selected, setSelected] = useState<string | null>(null)
-  const [correct, setCorrect] = useState(0)
-  const [total, setTotal] = useState(0)
+  const [state, dispatch] = useReducer(reducer, null, () => {
+    const deck = shuffle(chars)
+    return { deck, index: 0, choices: buildChoices(deck[0], chars), selected: null, correct: 0, total: 0 }
+  })
+  const [autoNext, setAutoNext] = useState(false)
 
-  const start = useCallback(() => {
-    const shuffled = shuffle(chars)
-    setDeck(shuffled)
-    setIndex(0)
-    setSelected(null)
-    setCorrect(0)
-    setTotal(0)
-    setChoices(buildChoices(shuffled[0], chars, mode))
-  }, [chars, mode])
+  // Reset when chars or mode changes (derived from props, not internal state)
+  const resetAction = useMemo(() => buildReset(chars), [chars])
+  useEffect(() => { dispatch(resetAction) }, [resetAction])
 
-  useEffect(() => { start() }, [start])
-
+  const { deck, index, choices, selected, correct, total } = state
   const current = deck[index]
 
-  function pick(choice: KanaChar) {
-    if (selected) return
-    setSelected(choice.id)
-    setTotal((t) => t + 1)
-    if (choice.id === current.id) setCorrect((c) => c + 1)
+  function advance(nextIndex: number) {
+    if (nextIndex >= deck.length) {
+      dispatch(buildReset(chars))
+    } else {
+      dispatch({ type: 'NEXT', index: nextIndex, choices: buildChoices(deck[nextIndex], chars) })
+    }
   }
 
-  function next() {
-    const nextIndex = index + 1
-    if (nextIndex >= deck.length) {
-      start()
-      return
+  async function pick(choice: KanaChar) {
+    if (selected || !current) return
+    const isCorrect = choice.id === current.id
+    dispatch({ type: 'PICK', choiceId: choice.id, isCorrect })
+
+    getOrCreateCard(current.id).then((card) => saveCard(review(card, isCorrect ? 5 : 1)))
+
+    if (isCorrect && autoNext) {
+      // Brief flash so user sees the green highlight before advancing
+      setTimeout(() => advance(index + 1), 400)
     }
-    setIndex(nextIndex)
-    setSelected(null)
-    setChoices(buildChoices(deck[nextIndex], chars, mode))
   }
 
   if (!current) return null
@@ -68,6 +94,9 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
   const isFinished = index === deck.length - 1 && selected !== null
   const prompt = mode === 'kana→romaji' ? current.kana : current.romaji
   const answerKey = (c: KanaChar) => mode === 'kana→romaji' ? c.romaji : c.kana
+
+  // When autoNext is on and answer is correct, hide the next button
+  const showNext = selected !== null && !(autoNext && selected === current.id)
 
   return (
     <div className="flex flex-col items-center gap-6">
@@ -88,8 +117,7 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
         {choices.map((choice) => {
           const isCorrect = choice.id === current.id
           const isPicked = choice.id === selected
-          let cls =
-            'rounded-xl border-2 py-3 text-lg font-medium transition-colors '
+          let cls = 'rounded-xl border-2 py-3 text-lg font-medium transition-colors '
           if (!selected) {
             cls += 'border-slate-200 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 cursor-pointer'
           } else if (isCorrect) {
@@ -109,12 +137,33 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
 
       {/* 下一題 — always reserves space so layout doesn't shift on mobile */}
       <button
-        onClick={next}
-        disabled={!selected}
-        className={`mt-2 px-6 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors ${!selected ? 'invisible' : ''}`}
+        onClick={() => advance(index + 1)}
+        disabled={!showNext}
+        className={`mt-2 px-6 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
       >
         {isFinished ? '重新開始' : '下一題'}
       </button>
+
+      {/* 自動下一題開關 */}
+      <label className="flex items-center gap-2 text-sm text-slate-500 cursor-pointer select-none">
+        <span>答對自動下一題</span>
+        <button
+          role="switch"
+          aria-checked={autoNext}
+          onClick={() => setAutoNext((v) => !v)}
+          className={[
+            'relative inline-flex h-5 w-9 shrink-0 rounded-full border-2 border-transparent transition-colors duration-200',
+            autoNext ? 'bg-indigo-600' : 'bg-slate-300 dark:bg-slate-600',
+          ].join(' ')}
+        >
+          <span
+            className={[
+              'inline-block h-4 w-4 rounded-full bg-white shadow transition-transform duration-200',
+              autoNext ? 'translate-x-4' : 'translate-x-0',
+            ].join(' ')}
+          />
+        </button>
+      </label>
     </div>
   )
 }
