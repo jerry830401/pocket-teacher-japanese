@@ -1,7 +1,6 @@
 import { lazy, Suspense } from 'react'
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from '@/shared/Layout'
-import Home from '@/pages/Home'
 
 const KanaPage        = lazy(() => import('@/features/kana/KanaPage'))
 const VocabularyPage  = lazy(() => import('@/features/vocabulary/VocabularyPage'))
@@ -21,7 +20,7 @@ function App() {
   return (
     <Routes>
       <Route element={<Layout />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Navigate to="/kana" replace />} />
         <Route
           path="/kana"
           element={
