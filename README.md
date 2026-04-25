@@ -6,7 +6,6 @@
 
 - 五十音（平假名、片假名）
 - JLPT 單字（先支援 N5，架構保留 N4–N1 擴充）
-- 漢字（含筆順）
 - 文法句型
 - 聽力（Web Speech API）
 - 進度追蹤與 SRS（間隔重複）
@@ -15,13 +14,13 @@
 
 ## 開發指令
 
-| 指令 | 用途 |
-|---|---|
-| `npm install` | 安裝依賴 |
-| `npm run dev` | 啟動開發伺服器（http://localhost:5173） |
-| `npm run build` | 型別檢查 + 產生 production build |
-| `npm run lint` | ESLint 檢查 |
-| `npm run preview` | 預覽 production build |
+| 指令              | 用途                                    |
+| ----------------- | --------------------------------------- |
+| `npm install`     | 安裝依賴                                |
+| `npm run dev`     | 啟動開發伺服器（http://localhost:5173） |
+| `npm run build`   | 型別檢查 + 產生 production build        |
+| `npm run lint`    | ESLint 檢查                             |
+| `npm run preview` | 預覽 production build                   |
 
 ## 技術棧
 
