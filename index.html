@@ -5,6 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pocket Teacher Japanese</title>
+    <script>
+      // 還原 404.html 存入的路徑，讓 React Router 導向正確頁面
+      (function () {
+        var redirect = sessionStorage.getItem('spa_redirect');
+        if (redirect) {
+          sessionStorage.removeItem('spa_redirect');
+          history.replaceState(null, '', '/pocket-teacher-japanese' + redirect);
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
