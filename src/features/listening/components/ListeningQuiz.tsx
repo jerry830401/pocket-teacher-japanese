@@ -1,8 +1,10 @@
-import { useReducer, useState, useEffect, useMemo, useCallback } from 'react'
+import { useReducer, useState, useEffect, useRef, useCallback } from 'react'
 import type { VocabCard } from '@/features/vocabulary/types'
 import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
 import { speak } from '@/lib/tts/tts'
+
+const ROUND_SIZE = 20
 
 interface Props {
   cards: VocabCard[]
@@ -14,20 +16,19 @@ interface QuizState {
   choices: VocabCard[]
   selected: string | null
   correct: number
-  total: number
 }
 
 type QuizAction =
-  | { type: 'RESET'; deck: VocabCard[]; choices: VocabCard[] }
+  | { type: 'START'; deck: VocabCard[]; choices: VocabCard[] }
   | { type: 'PICK'; choiceId: string; isCorrect: boolean }
   | { type: 'NEXT'; index: number; choices: VocabCard[] }
 
 function reducer(state: QuizState, action: QuizAction): QuizState {
   switch (action.type) {
-    case 'RESET':
-      return { deck: action.deck, index: 0, choices: action.choices, selected: null, correct: 0, total: 0 }
+    case 'START':
+      return { deck: action.deck, index: 0, choices: action.choices, selected: null, correct: 0 }
     case 'PICK':
-      return { ...state, selected: action.choiceId, total: state.total + 1, correct: state.correct + (action.isCorrect ? 1 : 0) }
+      return { ...state, selected: action.choiceId, correct: state.correct + (action.isCorrect ? 1 : 0) }
     case 'NEXT':
       return { ...state, index: action.index, choices: action.choices, selected: null }
   }
@@ -47,23 +48,31 @@ function buildChoices(correct: VocabCard, pool: VocabCard[]): VocabCard[] {
   return shuffle([correct, ...wrong])
 }
 
-function buildReset(cards: VocabCard[]): QuizAction {
-  const deck = shuffle(cards)
-  return { type: 'RESET', deck, choices: buildChoices(deck[0], cards) }
+function buildRound(cards: VocabCard[]): { deck: VocabCard[]; choices: VocabCard[] } {
+  const deck = shuffle(cards).slice(0, ROUND_SIZE)
+  return { deck, choices: buildChoices(deck[0], cards) }
 }
 
 export default function ListeningQuiz({ cards }: Props) {
-  const [state, dispatch] = useReducer(reducer, null, () => {
-    const deck = shuffle(cards)
-    return { deck, index: 0, choices: buildChoices(deck[0], cards), selected: null, correct: 0, total: 0 }
+  const initialRound = useRef(buildRound(cards))
+  const [state, dispatch] = useReducer(reducer, {
+    deck: initialRound.current.deck,
+    index: 0,
+    choices: initialRound.current.choices,
+    selected: null,
+    correct: 0,
   })
   const [autoNext, setAutoNext] = useState(false)
   const [playing, setPlaying] = useState(false)
+  const [roundResult, setRoundResult] = useState<{ correct: number } | null>(null)
 
-  const resetAction = useMemo(() => buildReset(cards), [cards])
-  useEffect(() => { dispatch(resetAction) }, [resetAction])
+  useEffect(() => {
+    const round = buildRound(cards)
+    dispatch({ type: 'START', deck: round.deck, choices: round.choices })
+    setRoundResult(null)
+  }, [cards])
 
-  const { deck, index, choices, selected, correct, total } = state
+  const { deck, index, choices, selected, correct } = state
   const current = deck[index]
 
   const playCurrentWord = useCallback(() => {
@@ -80,9 +89,15 @@ export default function ListeningQuiz({ cards }: Props) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [current?.id])
 
-  function advance(nextIndex: number) {
+  function startNextRound() {
+    const round = buildRound(cards)
+    dispatch({ type: 'START', deck: round.deck, choices: round.choices })
+    setRoundResult(null)
+  }
+
+  function advance(nextIndex: number, finalCorrect = state.correct) {
     if (nextIndex >= deck.length) {
-      dispatch(buildReset(cards))
+      setRoundResult({ correct: finalCorrect })
     } else {
       dispatch({ type: 'NEXT', index: nextIndex, choices: buildChoices(deck[nextIndex], cards) })
     }
@@ -94,22 +109,58 @@ export default function ListeningQuiz({ cards }: Props) {
     dispatch({ type: 'PICK', choiceId: choice.id, isCorrect })
     getOrCreateCard(current.id).then((card) => saveCard(review(card, isCorrect ? 5 : 1)))
     if (isCorrect && autoNext) {
-      setTimeout(() => advance(index + 1), 400)
+      const next = correct + 1
+      setTimeout(() => advance(index + 1, next), 400)
     }
+  }
+
+  // Round summary screen
+  if (roundResult !== null) {
+    const pct = Math.round((roundResult.correct / deck.length) * 100)
+    return (
+      <div className="flex flex-col items-center gap-6 py-4">
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-5xl font-bold text-orange-500 dark:text-orange-400">{pct}%</span>
+          <span className="text-slate-500 text-sm">
+            {deck.length} 題中答對 {roundResult.correct} 題
+          </span>
+        </div>
+        <div className="w-full max-w-xs rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-sm text-slate-500 text-center">
+          {pct === 100 && '完美！全部答對 🎉'}
+          {pct >= 80 && pct < 100 && '答得很好，再接再厲！'}
+          {pct >= 60 && pct < 80 && '還不錯，繼續練習！'}
+          {pct < 60 && '多練幾輪，加油！'}
+        </div>
+        <button
+          onClick={startNextRound}
+          className="px-8 py-2.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium transition-colors"
+        >
+          下一輪（{ROUND_SIZE} 題）
+        </button>
+      </div>
+    )
   }
 
   if (!current) return null
 
-  const isFinished = index === deck.length - 1 && selected !== null
+  const isLastQuestion = index === deck.length - 1
   const showNext = selected !== null && !(autoNext && selected === current.id)
 
   return (
     <div className="flex flex-col items-center gap-6">
       {/* 進度 */}
       <div className="flex items-center gap-3 text-sm text-slate-500">
-        <span>{index + 1} / {deck.length}</span>
+        <span>第 {index + 1} / {deck.length} 題</span>
         <span className="text-slate-300 dark:text-slate-600">·</span>
-        <span>正確 {correct} / {total}</span>
+        <span>正確 {correct}</span>
+      </div>
+
+      {/* 進度條 */}
+      <div className="w-full max-w-xs h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+        <div
+          className="h-full rounded-full bg-orange-400 transition-all duration-300"
+          style={{ width: `${((index + (selected ? 1 : 0)) / deck.length) * 100}%` }}
+        />
       </div>
 
       {/* 題目卡：播放按鈕 */}
@@ -125,7 +176,6 @@ export default function ListeningQuiz({ cards }: Props) {
           ].join(' ')}
           aria-label="播放發音"
         >
-          {/* Speaker icon */}
           <svg viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
             <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z" />
             <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" />
@@ -173,7 +223,7 @@ export default function ListeningQuiz({ cards }: Props) {
         disabled={!showNext}
         className={`mt-2 px-6 py-2 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
       >
-        {isFinished ? '重新開始' : '下一題'}
+        {isLastQuestion ? '查看結果' : '下一題'}
       </button>
 
       {/* 答對自動下一題 */}

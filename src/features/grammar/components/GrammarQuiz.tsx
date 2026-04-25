@@ -1,7 +1,9 @@
-import { useReducer, useState, useEffect, useMemo } from 'react'
+import { useReducer, useState, useEffect, useRef, useMemo } from 'react'
 import type { GrammarCard } from '../types'
 import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
+
+const ROUND_SIZE = 20
 
 interface Props {
   cards: GrammarCard[]
@@ -12,20 +14,19 @@ interface QuizState {
   index: number
   selected: string | null
   correct: number
-  total: number
 }
 
 type QuizAction =
-  | { type: 'RESET'; deck: GrammarCard[] }
+  | { type: 'START'; deck: GrammarCard[] }
   | { type: 'PICK'; choiceId: string; isCorrect: boolean }
   | { type: 'NEXT'; index: number }
 
 function reducer(state: QuizState, action: QuizAction): QuizState {
   switch (action.type) {
-    case 'RESET':
-      return { deck: action.deck, index: 0, selected: null, correct: 0, total: 0 }
+    case 'START':
+      return { deck: action.deck, index: 0, selected: null, correct: 0 }
     case 'PICK':
-      return { ...state, selected: action.choiceId, total: state.total + 1, correct: state.correct + (action.isCorrect ? 1 : 0) }
+      return { ...state, selected: action.choiceId, correct: state.correct + (action.isCorrect ? 1 : 0) }
     case 'NEXT':
       return { ...state, index: action.index, selected: null }
   }
@@ -40,8 +41,8 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function buildReset(cards: GrammarCard[]): QuizAction {
-  return { type: 'RESET', deck: shuffle(cards) }
+function buildRound(cards: GrammarCard[]): GrammarCard[] {
+  return shuffle(cards).slice(0, ROUND_SIZE)
 }
 
 // 把 ___ 切成前後兩段，方便渲染空格
@@ -52,20 +53,32 @@ function splitSentence(sentence: string): [string, string] {
 }
 
 export default function GrammarQuiz({ cards }: Props) {
-  const [state, dispatch] = useReducer(reducer, null, () => ({
-    deck: shuffle(cards), index: 0, selected: null, correct: 0, total: 0,
-  }))
+  const initialDeck = useRef(buildRound(cards))
+  const [state, dispatch] = useReducer(reducer, {
+    deck: initialDeck.current,
+    index: 0,
+    selected: null,
+    correct: 0,
+  })
   const [autoNext, setAutoNext] = useState(false)
+  const [roundResult, setRoundResult] = useState<{ correct: number } | null>(null)
 
-  const resetAction = useMemo(() => buildReset(cards), [cards])
-  useEffect(() => { dispatch(resetAction) }, [resetAction])
+  useEffect(() => {
+    dispatch({ type: 'START', deck: buildRound(cards) })
+    setRoundResult(null)
+  }, [cards])
 
-  const { deck, index, selected, correct, total } = state
+  const { deck, index, selected, correct } = state
   const current = deck[index]
 
-  function advance(nextIndex: number) {
+  function startNextRound() {
+    dispatch({ type: 'START', deck: buildRound(cards) })
+    setRoundResult(null)
+  }
+
+  function advance(nextIndex: number, finalCorrect = state.correct) {
     if (nextIndex >= deck.length) {
-      dispatch(buildReset(cards))
+      setRoundResult({ correct: finalCorrect })
     } else {
       dispatch({ type: 'NEXT', index: nextIndex })
     }
@@ -77,8 +90,36 @@ export default function GrammarQuiz({ cards }: Props) {
     dispatch({ type: 'PICK', choiceId: choice, isCorrect })
     getOrCreateCard(current.id).then((card) => saveCard(review(card, isCorrect ? 5 : 1)))
     if (isCorrect && autoNext) {
-      setTimeout(() => advance(index + 1), 400)
+      const next = correct + 1
+      setTimeout(() => advance(index + 1, next), 400)
     }
+  }
+
+  // Round summary screen
+  if (roundResult !== null) {
+    const pct = Math.round((roundResult.correct / deck.length) * 100)
+    return (
+      <div className="flex flex-col items-center gap-6 py-4">
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-5xl font-bold text-teal-600 dark:text-teal-400">{pct}%</span>
+          <span className="text-slate-500 text-sm">
+            {deck.length} 題中答對 {roundResult.correct} 題
+          </span>
+        </div>
+        <div className="w-full max-w-xs rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-sm text-slate-500 text-center">
+          {pct === 100 && '完美！全部答對 🎉'}
+          {pct >= 80 && pct < 100 && '答得很好，再接再厲！'}
+          {pct >= 60 && pct < 80 && '還不錯，繼續練習！'}
+          {pct < 60 && '多練幾輪，加油！'}
+        </div>
+        <button
+          onClick={startNextRound}
+          className="px-8 py-2.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium transition-colors"
+        >
+          下一輪（{ROUND_SIZE} 題）
+        </button>
+      </div>
+    )
   }
 
   if (!current) return null
@@ -89,16 +130,24 @@ export default function GrammarQuiz({ cards }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [current.id],
   )
-  const isFinished = index === deck.length - 1 && selected !== null
+  const isLastQuestion = index === deck.length - 1
   const showNext = selected !== null && !(autoNext && selected === current.payload.answer)
 
   return (
     <div className="flex flex-col items-center gap-6">
       {/* 進度 */}
       <div className="flex items-center gap-3 text-sm text-slate-500">
-        <span>{index + 1} / {deck.length}</span>
+        <span>第 {index + 1} / {deck.length} 題</span>
         <span className="text-slate-300 dark:text-slate-600">·</span>
-        <span>正確 {correct} / {total}</span>
+        <span>正確 {correct}</span>
+      </div>
+
+      {/* 進度條 */}
+      <div className="w-full max-w-sm h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+        <div
+          className="h-full rounded-full bg-teal-500 transition-all duration-300"
+          style={{ width: `${((index + (selected ? 1 : 0)) / deck.length) * 100}%` }}
+        />
       </div>
 
       {/* 題目卡 */}
@@ -107,7 +156,7 @@ export default function GrammarQuiz({ cards }: Props) {
         <p className="text-lg font-medium text-center leading-relaxed">
           {before}
           <span className={[
-            'inline-block min-w-[3rem] mx-1 px-2 rounded border-b-2 text-center transition-colors',
+            'inline-block min-w-12 mx-1 px-2 rounded border-b-2 text-center transition-colors',
             !selected
               ? 'border-teal-400 dark:border-teal-500 text-teal-400 dark:text-teal-500'
               : selected === current.payload.answer
@@ -159,7 +208,7 @@ export default function GrammarQuiz({ cards }: Props) {
         disabled={!showNext}
         className={`mt-2 px-6 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
       >
-        {isFinished ? '重新開始' : '下一題'}
+        {isLastQuestion ? '查看結果' : '下一題'}
       </button>
 
       {/* 答對自動下一題 */}

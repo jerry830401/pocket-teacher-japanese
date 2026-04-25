@@ -1,32 +1,33 @@
-import { useReducer, useState, useEffect, useMemo } from 'react'
+import { useReducer, useState, useEffect, useRef } from 'react'
 import type { VocabCard } from '../types'
 import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
+
+const ROUND_SIZE = 20
 
 interface Props {
   cards: VocabCard[]
 }
 
 interface QuizState {
-  deck: VocabCard[]
+  deck: VocabCard[]   // current round's 20 cards
   index: number
   choices: VocabCard[]
   selected: string | null
   correct: number
-  total: number
 }
 
 type QuizAction =
-  | { type: 'RESET'; deck: VocabCard[]; choices: VocabCard[] }
+  | { type: 'START'; deck: VocabCard[]; choices: VocabCard[] }
   | { type: 'PICK'; choiceId: string; isCorrect: boolean }
   | { type: 'NEXT'; index: number; choices: VocabCard[] }
 
 function reducer(state: QuizState, action: QuizAction): QuizState {
   switch (action.type) {
-    case 'RESET':
-      return { deck: action.deck, index: 0, choices: action.choices, selected: null, correct: 0, total: 0 }
+    case 'START':
+      return { deck: action.deck, index: 0, choices: action.choices, selected: null, correct: 0 }
     case 'PICK':
-      return { ...state, selected: action.choiceId, total: state.total + 1, correct: state.correct + (action.isCorrect ? 1 : 0) }
+      return { ...state, selected: action.choiceId, correct: state.correct + (action.isCorrect ? 1 : 0) }
     case 'NEXT':
       return { ...state, index: action.index, choices: action.choices, selected: null }
   }
@@ -46,9 +47,9 @@ function buildChoices(correct: VocabCard, pool: VocabCard[]): VocabCard[] {
   return shuffle([correct, ...wrong])
 }
 
-function buildReset(cards: VocabCard[]): QuizAction {
-  const deck = shuffle(cards)
-  return { type: 'RESET', deck, choices: buildChoices(deck[0], cards) }
+function buildRound(cards: VocabCard[]): { deck: VocabCard[]; choices: VocabCard[] } {
+  const deck = shuffle(cards).slice(0, ROUND_SIZE)
+  return { deck, choices: buildChoices(deck[0], cards) }
 }
 
 const POS_LABEL: Record<string, string> = {
@@ -57,21 +58,36 @@ const POS_LABEL: Record<string, string> = {
 }
 
 export default function VocabQuiz({ cards }: Props) {
-  const [state, dispatch] = useReducer(reducer, null, () => {
-    const deck = shuffle(cards)
-    return { deck, index: 0, choices: buildChoices(deck[0], cards), selected: null, correct: 0, total: 0 }
+  const initialRound = useRef(buildRound(cards))
+  const [state, dispatch] = useReducer(reducer, {
+    deck: initialRound.current.deck,
+    index: 0,
+    choices: initialRound.current.choices,
+    selected: null,
+    correct: 0,
   })
   const [autoNext, setAutoNext] = useState(false)
+  const [roundResult, setRoundResult] = useState<{ correct: number } | null>(null)
 
-  const resetAction = useMemo(() => buildReset(cards), [cards])
-  useEffect(() => { dispatch(resetAction) }, [resetAction])
+  // reset when the card pool changes (e.g. level switch)
+  useEffect(() => {
+    const round = buildRound(cards)
+    dispatch({ type: 'START', deck: round.deck, choices: round.choices })
+    setRoundResult(null)
+  }, [cards])
 
-  const { deck, index, choices, selected, correct, total } = state
+  const { deck, index, choices, selected, correct } = state
   const current = deck[index]
 
-  function advance(nextIndex: number) {
+  function startNextRound() {
+    const round = buildRound(cards)
+    dispatch({ type: 'START', deck: round.deck, choices: round.choices })
+    setRoundResult(null)
+  }
+
+  function advance(nextIndex: number, finalCorrect = state.correct) {
     if (nextIndex >= deck.length) {
-      dispatch(buildReset(cards))
+      setRoundResult({ correct: finalCorrect })
     } else {
       dispatch({ type: 'NEXT', index: nextIndex, choices: buildChoices(deck[nextIndex], cards) })
     }
@@ -83,22 +99,58 @@ export default function VocabQuiz({ cards }: Props) {
     dispatch({ type: 'PICK', choiceId: choice.id, isCorrect })
     getOrCreateCard(current.id).then((card) => saveCard(review(card, isCorrect ? 5 : 1)))
     if (isCorrect && autoNext) {
-      setTimeout(() => advance(index + 1), 400)
+      const next = correct + 1
+      setTimeout(() => advance(index + 1, next), 400)
     }
+  }
+
+  // Round summary screen
+  if (roundResult !== null) {
+    const pct = Math.round((roundResult.correct / deck.length) * 100)
+    return (
+      <div className="flex flex-col items-center gap-6 py-4">
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-5xl font-bold text-indigo-600 dark:text-indigo-400">{pct}%</span>
+          <span className="text-slate-500 text-sm">
+            {deck.length} 題中答對 {roundResult.correct} 題
+          </span>
+        </div>
+        <div className="w-full max-w-xs rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-sm text-slate-500 text-center">
+          {pct === 100 && '完美！全部答對 🎉'}
+          {pct >= 80 && pct < 100 && '答得很好，再接再厲！'}
+          {pct >= 60 && pct < 80 && '還不錯，繼續練習！'}
+          {pct < 60 && '多練幾輪，加油！'}
+        </div>
+        <button
+          onClick={startNextRound}
+          className="px-8 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors"
+        >
+          下一輪（{ROUND_SIZE} 題）
+        </button>
+      </div>
+    )
   }
 
   if (!current) return null
 
-  const isFinished = index === deck.length - 1 && selected !== null
+  const isLastQuestion = index === deck.length - 1
   const showNext = selected !== null && !(autoNext && selected === current.id)
 
   return (
     <div className="flex flex-col items-center gap-6">
       {/* 進度 */}
       <div className="flex items-center gap-3 text-sm text-slate-500">
-        <span>{index + 1} / {deck.length}</span>
+        <span>第 {index + 1} / {deck.length} 題</span>
         <span className="text-slate-300 dark:text-slate-600">·</span>
-        <span>正確 {correct} / {total}</span>
+        <span>正確 {correct}</span>
+      </div>
+
+      {/* 進度條 */}
+      <div className="w-full max-w-xs h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+        <div
+          className="h-full rounded-full bg-indigo-500 transition-all duration-300"
+          style={{ width: `${((index + (selected ? 1 : 0)) / deck.length) * 100}%` }}
+        />
       </div>
 
       {/* 題目卡 */}
@@ -139,7 +191,7 @@ export default function VocabQuiz({ cards }: Props) {
         disabled={!showNext}
         className={`mt-2 px-6 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
       >
-        {isFinished ? '重新開始' : '下一題'}
+        {isLastQuestion ? '查看結果' : '下一題'}
       </button>
 
       {/* 答對自動下一題 */}
