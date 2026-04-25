@@ -1,7 +1,7 @@
 import type { GrammarCard, JlptLevel } from './types'
 
 export async function loadGrammar(): Promise<GrammarCard[]> {
-  const res = await fetch('/data/grammar.json')
+  const res = await fetch(`${import.meta.env.BASE_URL}data/grammar.json`)
   if (!res.ok) throw new Error(`Failed to load grammar data: ${res.status}`)
   return res.json() as Promise<GrammarCard[]>
 }
