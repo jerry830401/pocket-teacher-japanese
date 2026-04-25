@@ -70,6 +70,10 @@ export function speak(text: string, lang = 'ja-JP'): void {
   doSpeak(text, lang)
 }
 
+export function preloadVoices(): void {
+  if (window.speechSynthesis) loadVoices()
+}
+
 export function isSupported(): boolean {
   return typeof window !== 'undefined' && 'speechSynthesis' in window
 }

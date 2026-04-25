@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import type { VocabCard } from '@/features/vocabulary/types'
 import type { JlptLevel } from './types'
 import { loadVocabulary, filterByLevel } from '@/features/vocabulary/data'
-import { isSupported } from '@/lib/tts/tts'
+import { isSupported, preloadVoices } from '@/lib/tts/tts'
 import ListeningQuiz from './components/ListeningQuiz'
 
 const LEVELS: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
@@ -14,6 +14,7 @@ export default function ListeningPage() {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
+    preloadVoices()
     loadVocabulary()
       .then((data) => { setAllCards(data); setLoading(false) })
       .catch(() => { setError('資料載入失敗'); setLoading(false) })
