@@ -11,10 +11,9 @@ interface ModuleStat {
 }
 
 const MODULES: ModuleStat[] = [
-  { label: '五十音', prefix: 'kana-',      color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-950', border: 'border-indigo-200 dark:border-indigo-800' },
-  { label: '單字',   prefix: 'vocab-',     color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-950', border: 'border-indigo-200 dark:border-indigo-800' },
-  { label: '文法',   prefix: 'grammar-',   color: 'text-teal-600 dark:text-teal-400',     bg: 'bg-teal-50 dark:bg-teal-950',     border: 'border-teal-200 dark:border-teal-800' },
-  { label: '聽力',   prefix: 'vocab-',     color: 'text-orange-600 dark:text-orange-400', bg: 'bg-orange-50 dark:bg-orange-950', border: 'border-orange-200 dark:border-orange-800' },
+  { label: '五十音', prefix: 'kana-',    color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-950', border: 'border-indigo-200 dark:border-indigo-800' },
+  { label: '單字',   prefix: 'vocab-',   color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-950', border: 'border-indigo-200 dark:border-indigo-800' },
+  { label: '文法',   prefix: 'grammar-', color: 'text-teal-600 dark:text-teal-400',     bg: 'bg-teal-50 dark:bg-teal-950',     border: 'border-teal-200 dark:border-teal-800' },
 ]
 
 interface Stats {
@@ -33,12 +32,10 @@ function moduleCards(all: SrsCard[], prefix: string) {
   return all.filter((c) => c.cardId.startsWith(prefix))
 }
 
-// 答過至少一次的牌（repetitions > 0）
 function reviewed(cards: SrsCard[]) {
   return cards.filter((c) => c.repetitions > 0)
 }
 
-// 熟悉度：repetitions >= 3 視為「已熟悉」
 function mastered(cards: SrsCard[]) {
   return cards.filter((c) => c.repetitions >= 3)
 }
@@ -63,9 +60,8 @@ export default function ProgressPage() {
   if (loadState.status === 'error') return <p className="text-red-500">無法讀取學習記錄，您的瀏覽器可能不支援本地儲存（如私密模式）。</p>
 
   const { all, due } = loadState.data
-  const totalReviewed = reviewed(all).length
+  const totalReviewed = all.filter((c) => c.repetitions > 0).length
 
-  // 連續學習天數：看 lastReviewedAt 往回數連續有記錄的天數
   const reviewedDays = new Set(
     all
       .filter((c) => c.lastReviewedAt > 0)
@@ -97,7 +93,7 @@ export default function ProgressPage() {
           const dueCount = due.filter((c) => c.cardId.startsWith(m.prefix)).length
           if (cards.length === 0) return null
           return (
-            <div key={m.label + m.prefix} className={`rounded-xl border ${m.border} ${m.bg} px-4 py-3 space-y-2`}>
+            <div key={m.label} className={`rounded-xl border ${m.border} ${m.bg} px-4 py-3 space-y-2`}>
               <div className="flex items-center justify-between">
                 <span className={`text-sm font-medium ${m.color}`}>{m.label}</span>
                 <span className="text-xs text-slate-400">{dueCount > 0 ? `${dueCount} 張待複習` : '無待複習'}</span>
@@ -141,8 +137,6 @@ function ProgressBar({ value, label, color }: { value: number; label: string; co
 function calcStreak(reviewedDays: Set<string>): number {
   if (reviewedDays.size === 0) return 0
   const today = new Date()
-  // If today has no activity yet, start counting from yesterday so a streak
-  // earned yesterday isn't lost before the user practices today.
   const startOffset = reviewedDays.has(today.toDateString()) ? 0 : 1
   let streak = 0
   for (let i = startOffset; i < 365; i++) {

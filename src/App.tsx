@@ -4,6 +4,7 @@ import Layout from '@/shared/Layout'
 
 const LearnPage    = lazy(() => import('@/pages/LearnPage'))
 const QuizPage     = lazy(() => import('@/pages/QuizPage'))
+const ReviewPage   = lazy(() => import('@/pages/ReviewPage'))
 const ProgressPage = lazy(() => import('@/features/progress/ProgressPage'))
 
 function Loading() {
@@ -32,6 +33,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <QuizPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/review"
+          element={
+            <Suspense fallback={<Loading />}>
+              <ReviewPage />
             </Suspense>
           }
         />
