@@ -4,7 +4,7 @@ A frontend-only React web app for learning Japanese. Users practice 五十音, J
 
 ## Status
 
-Phase 1 complete (kana + N5 vocabulary, grammar, listening). Higher JLPT levels (N4–N1) are planned but not implemented; designs must keep them in mind.
+N5 complete (kana + vocabulary 500 entries + grammar 200 entries, listening, SRS review, weak-card review, offline PWA). Higher JLPT levels (N4–N1) are planned but not yet populated; designs must keep them in mind.
 
 ## Stack
 
@@ -14,14 +14,14 @@ Phase 1 complete (kana + N5 vocabulary, grammar, listening). Higher JLPT levels 
 - Dexie.js (IndexedDB) for SRS state and bundled JLPT content
 - React Router v7
 - Web Speech API for TTS
-- Vite PWA (planned, Phase 5)
+- Workbox service worker (offline PWA)
 
 ## Commands
 
 | Command | What it does |
 |---|---|
 | `npm run dev` | Vite dev server (http://localhost:5173) |
-| `npm run build` | Type-check (`tsc -b`) then production build |
+| `npm run build` | Type-check (`tsc -b`), production build, then generate `dist/sw.js` via Workbox |
 | `npm run lint` | ESLint over the project |
 | `npm run preview` | Serve the production build locally |
 | `npm run deploy` | 發佈到 GitHub Pages，發佈前執行完整防呆檢查（分支、乾淨工作區、遠端同步、Node 版本、node_modules）|
@@ -35,7 +35,7 @@ src/
 │                 Route-level pages currently live here too (e.g. KanaPage.tsx).
 ├── lib/          Cross-cutting infrastructure (srs/, db/, tts/).
 ├── shared/       Generic UI building blocks reused across features.
-├── stores/       Top-level Zustand stores — planned Phase 2 (settings, session cache).
+├── stores/       Top-level Zustand stores (currently unused; reserved for settings/session cache).
 ├── pages/        Reserved for route-level components if extracted from features.
 ├── App.tsx       Router declaration.
 └── main.tsx      React entry point.
@@ -46,8 +46,8 @@ Public data files live under `public/data/` and are fetched at runtime (not bund
 | File | Card type | ID format | Notes |
 |------|-----------|-----------|-------|
 | `kana.json` | `{ hiragana: KanaChar[], katakana: KanaChar[] }` | `h-a`, `k-ka` | Loaded once, cached in module |
-| `vocabulary.json` | `VocabCard[]` | `vocab-N5-001` | Fetched per page mount |
-| `grammar.json` | `GrammarCard[]` | `grammar-N5-001` | Fetched per page mount |
+| `vocabulary.json` | `VocabCard[]` | `vocab-N5-001` | Prefers IndexedDB (`offlineData` table); falls back to fetch |
+| `grammar.json` | `GrammarCard[]` | `grammar-N5-001` | Prefers IndexedDB (`offlineData` table); falls back to fetch |
 
 All cards implement the shared `Card` interface: `{ id, type, level, payload, tags }`.
 
@@ -68,6 +68,16 @@ All cards implement the shared `Card` interface: `{ id, type, level, payload, ta
 - AI-generated content at runtime. (We may use AI offline to *prepare* data, but the shipped app is static.)
 - Speaking practice and pronunciation grading.
 
+## PWA / Offline
+
+- `public/manifest.json` — web app manifest (name, icons, theme color)
+- `public/icon-192.png`, `public/icon-512.png` — PWA icons
+- `src/sw.ts` — service worker source (Workbox precache + route)
+- `scripts/build-sw.js` — post-build script: esbuild bundles `sw.ts`, then `workbox-build` injects the precache manifest into `dist/sw.js`
+- `src/lib/db/offlineData.ts` — manual offline data download: saves vocab/grammar JSON into IndexedDB `offlineData` table; `loadVocabulary`/`loadGrammar` check this table first
+
+To test PWA locally use `npm run preview` (not `npm run dev` — dev server does not register the SW).
+
 ## Testing
 
-Vitest is configured. `src/lib/srs/sm2.test.ts` covers the SM-2 algorithm. Component and data-loading tests are planned for Phase 2.
+Vitest is configured. `src/lib/srs/sm2.test.ts` covers the SM-2 algorithm. Component and data-loading tests are not yet written.

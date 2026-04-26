@@ -5,10 +5,11 @@
 ## 功能範圍
 
 - 五十音（平假名、片假名）
-- JLPT 單字（先支援 N5，架構保留 N4–N1 擴充）
-- 文法句型
-- 聽力（Web Speech API）
-- 進度追蹤與 SRS（間隔重複）
+- JLPT N5 單字 500 筆、文法 200 筆（架構保留 N4–N1 擴充）
+- 文法句型填空測驗
+- 聽力（Web Speech API TTS）
+- SRS 間隔重複 + 錯題本
+- 離線支援（PWA + 手動下載資料至 IndexedDB）
 
 > 不在範圍：口說 / 發音評分、後端服務、跨裝置同步。
 
@@ -18,13 +19,14 @@
 | ----------------- | --------------------------------------- |
 | `npm install`     | 安裝依賴                                |
 | `npm run dev`     | 啟動開發伺服器（http://localhost:5173） |
-| `npm run build`   | 型別檢查 + 產生 production build        |
-| `npm run lint`    | ESLint 檢查                             |
-| `npm run preview` | 預覽 production build                   |
+| `npm run build`   | 型別檢查 + production build + 產生 sw.js |
+| `npm run lint`    | ESLint 檢查                              |
+| `npm run preview` | 預覽 production build（可測試 PWA/SW）   |
+| `npm run deploy`  | 部署到 GitHub Pages                      |
 
 ## 技術棧
 
-Vite · React 19 · TypeScript · Tailwind CSS v4 · Zustand · Dexie.js (IndexedDB) · React Router v7
+Vite · React 19 · TypeScript · Tailwind CSS v4 · Zustand · Dexie.js (IndexedDB) · React Router v7 · Workbox (PWA)
 
 ## 專案結構
 
