@@ -1,72 +1,4155 @@
 [
-  { "id": "grammar-N5-001", "type": "grammar", "level": "N5", "payload": { "sentence": "私___学生です。", "answer": "は", "choices": ["は", "が", "を", "に"], "meaning": "我是學生。", "grammar": "は（主題助詞）：標示句子的主題" }, "tags": ["particle", "は"] },
-  { "id": "grammar-N5-002", "type": "grammar", "level": "N5", "payload": { "sentence": "これ___本です。", "answer": "は", "choices": ["は", "も", "が", "の"], "meaning": "這是書。", "grammar": "は（主題助詞）：標示句子的主題" }, "tags": ["particle", "は"] },
-  { "id": "grammar-N5-003", "type": "grammar", "level": "N5", "payload": { "sentence": "田中さん___先生です。", "answer": "は", "choices": ["は", "が", "を", "で"], "meaning": "田中先生是老師。", "grammar": "は（主題助詞）：標示句子的主題" }, "tags": ["particle", "は"] },
-  { "id": "grammar-N5-004", "type": "grammar", "level": "N5", "payload": { "sentence": "猫___います。", "answer": "が", "choices": ["が", "は", "を", "に"], "meaning": "有貓。", "grammar": "が（主語助詞）：強調存在的主體" }, "tags": ["particle", "が"] },
-  { "id": "grammar-N5-005", "type": "grammar", "level": "N5", "payload": { "sentence": "雨___降っています。", "answer": "が", "choices": ["が", "は", "で", "に"], "meaning": "雨在下。", "grammar": "が（主語助詞）：標示自然現象的主體" }, "tags": ["particle", "が"] },
-  { "id": "grammar-N5-006", "type": "grammar", "level": "N5", "payload": { "sentence": "水___飲みます。", "answer": "を", "choices": ["を", "が", "に", "で"], "meaning": "喝水。", "grammar": "を（受詞助詞）：標示動作的對象" }, "tags": ["particle", "を"] },
-  { "id": "grammar-N5-007", "type": "grammar", "level": "N5", "payload": { "sentence": "本___読みます。", "answer": "を", "choices": ["を", "が", "は", "の"], "meaning": "讀書。", "grammar": "を（受詞助詞）：標示動作的對象" }, "tags": ["particle", "を"] },
-  { "id": "grammar-N5-008", "type": "grammar", "level": "N5", "payload": { "sentence": "学校___行きます。", "answer": "に", "choices": ["に", "へ", "で", "を"], "meaning": "去學校。", "grammar": "に（方向助詞）：表示移動的目的地" }, "tags": ["particle", "に"] },
-  { "id": "grammar-N5-009", "type": "grammar", "level": "N5", "payload": { "sentence": "七時___起きます。", "answer": "に", "choices": ["に", "は", "が", "で"], "meaning": "七點起床。", "grammar": "に（時間助詞）：表示動作發生的具體時間" }, "tags": ["particle", "に"] },
-  { "id": "grammar-N5-010", "type": "grammar", "level": "N5", "payload": { "sentence": "机___上に本があります。", "answer": "の", "choices": ["の", "が", "を", "に"], "meaning": "書桌上面有書。", "grammar": "の（所有／連接助詞）：連接名詞" }, "tags": ["particle", "の"] },
-  { "id": "grammar-N5-011", "type": "grammar", "level": "N5", "payload": { "sentence": "私___友達は山田さんです。", "answer": "の", "choices": ["の", "が", "は", "も"], "meaning": "我的朋友是山田先生。", "grammar": "の（所有助詞）：表示所有關係" }, "tags": ["particle", "の"] },
-  { "id": "grammar-N5-012", "type": "grammar", "level": "N5", "payload": { "sentence": "公園___遊びます。", "answer": "で", "choices": ["で", "に", "を", "へ"], "meaning": "在公園玩。", "grammar": "で（場所助詞）：表示動作發生的場所" }, "tags": ["particle", "で"] },
-  { "id": "grammar-N5-013", "type": "grammar", "level": "N5", "payload": { "sentence": "電車___来ました。", "answer": "で", "choices": ["で", "に", "を", "が"], "meaning": "搭電車來了。", "grammar": "で（手段助詞）：表示動作的手段或工具" }, "tags": ["particle", "で"] },
-  { "id": "grammar-N5-014", "type": "grammar", "level": "N5", "payload": { "sentence": "日本___行きたいです。", "answer": "へ", "choices": ["へ", "に", "で", "を"], "meaning": "想去日本。", "grammar": "へ（方向助詞）：表示移動的方向（較正式）" }, "tags": ["particle", "へ"] },
-  { "id": "grammar-N5-015", "type": "grammar", "level": "N5", "payload": { "sentence": "私___妹がいます。", "answer": "も", "choices": ["も", "は", "が", "の"], "meaning": "我也有妹妹。", "grammar": "も（添加助詞）：表示「也」，添加同類項目" }, "tags": ["particle", "も"] },
-  { "id": "grammar-N5-016", "type": "grammar", "level": "N5", "payload": { "sentence": "友達___一緒に映画を見ました。", "answer": "と", "choices": ["と", "に", "で", "が"], "meaning": "和朋友一起看了電影。", "grammar": "と（共同助詞）：表示「和…一起」" }, "tags": ["particle", "と"] },
-  { "id": "grammar-N5-017", "type": "grammar", "level": "N5", "payload": { "sentence": "りんご___みかんを買いました。", "answer": "と", "choices": ["と", "や", "が", "を"], "meaning": "買了蘋果和橘子。", "grammar": "と（列舉助詞）：列舉所有項目" }, "tags": ["particle", "と"] },
-  { "id": "grammar-N5-018", "type": "grammar", "level": "N5", "payload": { "sentence": "野菜___果物を食べます。", "answer": "や", "choices": ["や", "と", "が", "を"], "meaning": "吃蔬菜和水果等。", "grammar": "や（部分列舉助詞）：列舉代表性項目（還有其他）" }, "tags": ["particle", "や"] },
-  { "id": "grammar-N5-019", "type": "grammar", "level": "N5", "payload": { "sentence": "これは何___ですか。", "answer": "です", "choices": ["です", "ます", "だ", "でした"], "meaning": "這是什麼？", "grammar": "です（禮貌體）：禮貌的判斷句結尾" }, "tags": ["copula", "です"] },
-  { "id": "grammar-N5-020", "type": "grammar", "level": "N5", "payload": { "sentence": "毎日学校に行き___。", "answer": "ます", "choices": ["ます", "です", "た", "ない"], "meaning": "每天去學校。", "grammar": "〜ます（禮貌體動詞）：動詞禮貌形現在式" }, "tags": ["verb-ending", "ます"] },
-  { "id": "grammar-N5-021", "type": "grammar", "level": "N5", "payload": { "sentence": "昨日映画を見___。", "answer": "ました", "choices": ["ました", "ます", "ません", "でした"], "meaning": "昨天看了電影。", "grammar": "〜ました（禮貌體動詞過去式）：動詞禮貌形過去式" }, "tags": ["verb-ending", "ました"] },
-  { "id": "grammar-N5-022", "type": "grammar", "level": "N5", "payload": { "sentence": "お酒は飲み___。", "answer": "ません", "choices": ["ません", "ます", "ました", "ないです"], "meaning": "不喝酒。", "grammar": "〜ません（禮貌體否定）：動詞禮貌形否定" }, "tags": ["verb-ending", "ません"] },
-  { "id": "grammar-N5-023", "type": "grammar", "level": "N5", "payload": { "sentence": "今日は学校に行き___でした。", "answer": "ません", "choices": ["ません", "ます", "ました", "ない"], "meaning": "今天沒去學校。", "grammar": "〜ませんでした（禮貌體過去否定）：動詞禮貌形過去否定" }, "tags": ["verb-ending", "ませんでした"] },
-  { "id": "grammar-N5-024", "type": "grammar", "level": "N5", "payload": { "sentence": "これは私の___ではありません。", "answer": "もの", "choices": ["もの", "こと", "ところ", "とき"], "meaning": "這不是我的東西。", "grammar": "〜ではありません（禮貌體否定）：名詞禮貌形否定" }, "tags": ["copula", "ではありません"] },
-  { "id": "grammar-N5-025", "type": "grammar", "level": "N5", "payload": { "sentence": "図書館に本が___。", "answer": "あります", "choices": ["あります", "います", "です", "します"], "meaning": "圖書館裡有書。", "grammar": "あります（無生命存在）：表示無生命事物的存在" }, "tags": ["existence", "あります"] },
-  { "id": "grammar-N5-026", "type": "grammar", "level": "N5", "payload": { "sentence": "公園に犬が___。", "answer": "います", "choices": ["います", "あります", "です", "します"], "meaning": "公園裡有狗。", "grammar": "います（有生命存在）：表示有生命體的存在" }, "tags": ["existence", "います"] },
-  { "id": "grammar-N5-027", "type": "grammar", "level": "N5", "payload": { "sentence": "部屋に誰も___。", "answer": "いません", "choices": ["いません", "ありません", "いないです", "いない"], "meaning": "房間裡沒有任何人。", "grammar": "いません（有生命否定存在）：有生命體不存在" }, "tags": ["existence", "いません"] },
-  { "id": "grammar-N5-028", "type": "grammar", "level": "N5", "payload": { "sentence": "お金が___。", "answer": "ありません", "choices": ["ありません", "いません", "ないです", "ない"], "meaning": "沒有錢。", "grammar": "ありません（無生命否定存在）：無生命事物不存在" }, "tags": ["existence", "ありません"] },
-  { "id": "grammar-N5-029", "type": "grammar", "level": "N5", "payload": { "sentence": "今、テレビを見て___。", "answer": "います", "choices": ["います", "あります", "ます", "いました"], "meaning": "現在正在看電視。", "grammar": "〜ています（進行式）：表示動作正在進行中" }, "tags": ["te-form", "ています"] },
-  { "id": "grammar-N5-030", "type": "grammar", "level": "N5", "payload": { "sentence": "結婚して___。", "answer": "います", "choices": ["います", "あります", "ます", "いました"], "meaning": "已婚（現在狀態）。", "grammar": "〜ています（狀態持續）：表示動作結果的持續狀態" }, "tags": ["te-form", "ています"] },
-  { "id": "grammar-N5-031", "type": "grammar", "level": "N5", "payload": { "sentence": "手を洗って___ください。", "answer": "から", "choices": ["から", "ので", "て", "ながら"], "meaning": "洗完手後請吃。", "grammar": "〜てから（先後順序）：表示「做完…之後」" }, "tags": ["te-form", "てから"] },
-  { "id": "grammar-N5-032", "type": "grammar", "level": "N5", "payload": { "sentence": "ここに名前を書いて___。", "answer": "ください", "choices": ["ください", "います", "あります", "みます"], "meaning": "請在這裡寫名字。", "grammar": "〜てください（請求）：禮貌地請求對方做某事" }, "tags": ["te-form", "てください"] },
-  { "id": "grammar-N5-033", "type": "grammar", "level": "N5", "payload": { "sentence": "この映画を見て___。", "answer": "みました", "choices": ["みました", "います", "ください", "あります"], "meaning": "試著看了這部電影。", "grammar": "〜てみる（嘗試）：試著做某件事" }, "tags": ["te-form", "てみる"] },
-  { "id": "grammar-N5-034", "type": "grammar", "level": "N5", "payload": { "sentence": "日本語___話せますか。", "answer": "が", "choices": ["が", "は", "を", "で"], "meaning": "會說日語嗎？", "grammar": "が（能力對象）：〜できる・〜たい 等的對象用が" }, "tags": ["particle", "が", "できる"] },
-  { "id": "grammar-N5-035", "type": "grammar", "level": "N5", "payload": { "sentence": "寿司___食べたいです。", "answer": "が", "choices": ["が", "を", "は", "に"], "meaning": "想吃壽司。", "grammar": "〜たい（願望）：表示說話者的願望，對象用が" }, "tags": ["たい", "particle"] },
-  { "id": "grammar-N5-036", "type": "grammar", "level": "N5", "payload": { "sentence": "明日、映画___見たいです。", "answer": "を", "choices": ["を", "が", "は", "に"], "meaning": "明天想看電影。", "grammar": "〜たい（願望）：〜たい 也可用を（と口語都可）" }, "tags": ["たい"] },
-  { "id": "grammar-N5-037", "type": "grammar", "level": "N5", "payload": { "sentence": "ピアノ___弾けます。", "answer": "が", "choices": ["が", "を", "は", "で"], "meaning": "會彈鋼琴。", "grammar": "〜できる（能力）：表示具備某種能力，對象用が" }, "tags": ["できる", "particle"] },
-  { "id": "grammar-N5-038", "type": "grammar", "level": "N5", "payload": { "sentence": "この本は難し___。", "answer": "いです", "choices": ["いです", "です", "くです", "なです"], "meaning": "這本書很難。", "grammar": "い形容詞＋です：い形容詞的禮貌形" }, "tags": ["i-adjective"] },
-  { "id": "grammar-N5-039", "type": "grammar", "level": "N5", "payload": { "sentence": "この映画は面白___ありません。", "answer": "く", "choices": ["く", "い", "に", "で"], "meaning": "這部電影不有趣。", "grammar": "い形容詞否定：〜くない・〜くありません" }, "tags": ["i-adjective", "negative"] },
-  { "id": "grammar-N5-040", "type": "grammar", "level": "N5", "payload": { "sentence": "昨日は寒___です。", "answer": "かった", "choices": ["かった", "い", "く", "だった"], "meaning": "昨天很冷。", "grammar": "い形容詞過去式：〜かった＋です" }, "tags": ["i-adjective", "past"] },
-  { "id": "grammar-N5-041", "type": "grammar", "level": "N5", "payload": { "sentence": "東京は___な都市です。", "answer": "にぎやか", "choices": ["にぎやか", "にぎやかい", "にぎやく", "にぎやかな"], "meaning": "東京是個熱鬧的城市。", "grammar": "な形容詞＋な＋名詞：な形容詞修飾名詞時加な" }, "tags": ["na-adjective"] },
-  { "id": "grammar-N5-042", "type": "grammar", "level": "N5", "payload": { "sentence": "彼女は___です。", "answer": "きれい", "choices": ["きれい", "きれいい", "きれいな", "きれく"], "meaning": "她很漂亮。", "grammar": "な形容詞＋です：な形容詞的禮貌形（不加な）" }, "tags": ["na-adjective"] },
-  { "id": "grammar-N5-043", "type": "grammar", "level": "N5", "payload": { "sentence": "日本語は___ではありません。", "answer": "簡単", "choices": ["簡単", "簡単い", "簡単な", "簡単く"], "meaning": "日語不簡單。", "grammar": "な形容詞否定：〜ではありません" }, "tags": ["na-adjective", "negative"] },
-  { "id": "grammar-N5-044", "type": "grammar", "level": "N5", "payload": { "sentence": "学校は家___近いです。", "answer": "から", "choices": ["から", "まで", "に", "で"], "meaning": "學校離家近。", "grammar": "〜から（起點）：表示距離或時間的起點" }, "tags": ["particle", "から"] },
-  { "id": "grammar-N5-045", "type": "grammar", "level": "N5", "payload": { "sentence": "九時___五時まで働きます。", "answer": "から", "choices": ["から", "に", "で", "まで"], "meaning": "從九點工作到五點。", "grammar": "〜から〜まで：表示「從…到…」的時間範圍" }, "tags": ["particle", "から", "まで"] },
-  { "id": "grammar-N5-046", "type": "grammar", "level": "N5", "payload": { "sentence": "駅から家___歩いて十分です。", "answer": "まで", "choices": ["まで", "から", "に", "へ"], "meaning": "從車站走到家要十分鐘。", "grammar": "〜まで（終點）：表示距離或時間的終點" }, "tags": ["particle", "まで"] },
-  { "id": "grammar-N5-047", "type": "grammar", "level": "N5", "payload": { "sentence": "お茶___コーヒーのどちらがいいですか。", "answer": "と", "choices": ["と", "や", "か", "も"], "meaning": "茶和咖啡哪個好？", "grammar": "と（選擇列舉）：列出選項供選擇" }, "tags": ["particle", "と"] },
-  { "id": "grammar-N5-048", "type": "grammar", "level": "N5", "payload": { "sentence": "疲れた___、早く寝ます。", "answer": "から", "choices": ["から", "ので", "て", "が"], "meaning": "因為累了，所以早點睡。", "grammar": "〜から（原因）：表示主觀原因，語氣較直接" }, "tags": ["conjunction", "から"] },
-  { "id": "grammar-N5-049", "type": "grammar", "level": "N5", "payload": { "sentence": "雨___降ったので、傘を持ってきました。", "answer": "が", "choices": ["が", "は", "を", "に"], "meaning": "因為下雨了，所以帶了傘來。", "grammar": "が（主語助詞）：が用於客觀陳述事實" }, "tags": ["particle", "が"] },
-  { "id": "grammar-N5-050", "type": "grammar", "level": "N5", "payload": { "sentence": "お腹が空いた___、何か食べましょう。", "answer": "から", "choices": ["から", "ので", "が", "て"], "meaning": "因為肚子餓了，吃點什麼吧。", "grammar": "〜から（原因）：口語中常用から表示原因" }, "tags": ["conjunction", "から"] },
-  { "id": "grammar-N5-051", "type": "grammar", "level": "N5", "payload": { "sentence": "音楽を聴き___、勉強します。", "answer": "ながら", "choices": ["ながら", "てから", "ながら", "まま"], "meaning": "一邊聽音樂一邊學習。", "grammar": "〜ながら（同時動作）：表示兩個動作同時進行" }, "tags": ["ながら"] },
-  { "id": "grammar-N5-052", "type": "grammar", "level": "N5", "payload": { "sentence": "電気を消さないで___ください。", "answer": "おいて", "choices": ["おいて", "ください", "みて", "います"], "meaning": "請不要關燈。（保持開著）", "grammar": "〜ておく（事前準備）：提前做好某事的準備" }, "tags": ["te-form", "ておく"] },
-  { "id": "grammar-N5-053", "type": "grammar", "level": "N5", "payload": { "sentence": "窓を___ください。", "answer": "開けて", "choices": ["開けて", "開けます", "開けた", "開け"], "meaning": "請打開窗戶。", "grammar": "動詞て形＋ください：禮貌請求" }, "tags": ["te-form", "てください"] },
-  { "id": "grammar-N5-054", "type": "grammar", "level": "N5", "payload": { "sentence": "ここで写真を撮っては___。", "answer": "いけません", "choices": ["いけません", "ください", "います", "あります"], "meaning": "不可以在這裡拍照。", "grammar": "〜てはいけない（禁止）：表示禁止" }, "tags": ["prohibition"] },
-  { "id": "grammar-N5-055", "type": "grammar", "level": "N5", "payload": { "sentence": "もっとゆっくり話して___か。", "answer": "もらえます", "choices": ["もらえます", "あります", "います", "ください"], "meaning": "可以說慢一點嗎？", "grammar": "〜てもらえますか（委婉請求）：更禮貌的請求方式" }, "tags": ["te-form", "もらう"] },
-  { "id": "grammar-N5-056", "type": "grammar", "level": "N5", "payload": { "sentence": "彼は学生___、アルバイトもしています。", "answer": "で", "choices": ["で", "に", "が", "は"], "meaning": "他是學生，也在打工。", "grammar": "〜で（原因・中間連接）：名詞句連接下文" }, "tags": ["conjunction", "で"] },
-  { "id": "grammar-N5-057", "type": "grammar", "level": "N5", "payload": { "sentence": "もし雨___降ったら、家にいます。", "answer": "が", "choices": ["が", "は", "を", "に"], "meaning": "如果下雨的話，就待在家裡。", "grammar": "〜たら（條件）：表示假設條件" }, "tags": ["conditional", "たら"] },
-  { "id": "grammar-N5-058", "type": "grammar", "level": "N5", "payload": { "sentence": "春に___、花見をしましょう。", "answer": "なったら", "choices": ["なったら", "なれば", "なると", "なるなら"], "meaning": "等到了春天，去賞花吧。", "grammar": "〜たら（時間條件）：到了某個時間點之後" }, "tags": ["conditional", "たら"] },
-  { "id": "grammar-N5-059", "type": "grammar", "level": "N5", "payload": { "sentence": "日本語が上手に___たいです。", "answer": "なり", "choices": ["なり", "なる", "なって", "なれ"], "meaning": "想要日語變好。", "grammar": "〜たい（願望）：〜たい 前接動詞ます形去ます" }, "tags": ["たい"] },
-  { "id": "grammar-N5-060", "type": "grammar", "level": "N5", "payload": { "sentence": "この薬を飲め___、すぐ良くなりますよ。", "answer": "ば", "choices": ["ば", "たら", "と", "なら"], "meaning": "如果吃這藥的話，馬上就會好。", "grammar": "〜ば（假設條件）：表示假設條件，語氣較正式" }, "tags": ["conditional", "ば"] },
-  { "id": "grammar-N5-061", "type": "grammar", "level": "N5", "payload": { "sentence": "春になる___、暖かくなります。", "answer": "と", "choices": ["と", "たら", "ば", "なら"], "meaning": "一到春天就會變暖和。", "grammar": "〜と（自然結果條件）：前因必然導致後果" }, "tags": ["conditional", "と"] },
-  { "id": "grammar-N5-062", "type": "grammar", "level": "N5", "payload": { "sentence": "彼女は歌が___です。", "answer": "上手", "choices": ["上手", "上手い", "じょうず", "うまい"], "meaning": "她很擅長唱歌。", "grammar": "〜が上手（擅長）：表示擅長某事，對象用が" }, "tags": ["上手", "particle"] },
-  { "id": "grammar-N5-063", "type": "grammar", "level": "N5", "payload": { "sentence": "私は料理が___です。", "answer": "下手", "choices": ["下手", "じょうず", "きらい", "すき"], "meaning": "我不擅長做料理。", "grammar": "〜が下手（不擅長）：表示不擅長某事" }, "tags": ["下手", "particle"] },
-  { "id": "grammar-N5-064", "type": "grammar", "level": "N5", "payload": { "sentence": "子供の時、よく公園で___。", "answer": "遊びました", "choices": ["遊びました", "遊びます", "遊んでいます", "遊ぶ"], "meaning": "小時候常在公園玩。", "grammar": "〜ました（過去式）：回憶過去的習慣或動作" }, "tags": ["past", "ました"] },
-  { "id": "grammar-N5-065", "type": "grammar", "level": "N5", "payload": { "sentence": "どこ___来ましたか。", "answer": "から", "choices": ["から", "に", "で", "へ"], "meaning": "你從哪裡來的？", "grammar": "〜から（出發點）：表示出發的起點" }, "tags": ["particle", "から"] },
-  { "id": "grammar-N5-066", "type": "grammar", "level": "N5", "payload": { "sentence": "部屋を掃除しなければ___ません。", "answer": "なり", "choices": ["なり", "いけ", "なれ", "でき"], "meaning": "必須打掃房間。", "grammar": "〜なければなりません（義務）：表示必須做某事" }, "tags": ["obligation"] },
-  { "id": "grammar-N5-067", "type": "grammar", "level": "N5", "payload": { "sentence": "今日は休んでも___です。", "answer": "いい", "choices": ["いい", "ある", "いる", "なる"], "meaning": "今天可以休息。", "grammar": "〜てもいい（許可）：表示許可，可以做某事" }, "tags": ["permission"] },
-  { "id": "grammar-N5-068", "type": "grammar", "level": "N5", "payload": { "sentence": "辞書を使っても___か。", "answer": "いいです", "choices": ["いいです", "あります", "います", "できます"], "meaning": "可以使用字典嗎？", "grammar": "〜てもいいですか（請求許可）：詢問是否被允許" }, "tags": ["permission"] },
-  { "id": "grammar-N5-069", "type": "grammar", "level": "N5", "payload": { "sentence": "もう少し___話してください。", "answer": "ゆっくり", "choices": ["ゆっくり", "ゆっくりく", "ゆっくりに", "ゆっくりな"], "meaning": "請說慢一點。", "grammar": "副詞的用法：ゆっくり 直接修飾動詞" }, "tags": ["adverb"] },
-  { "id": "grammar-N5-070", "type": "grammar", "level": "N5", "payload": { "sentence": "田中さんはもう___ました。", "answer": "帰り", "choices": ["帰り", "帰って", "帰る", "帰れ"], "meaning": "田中先生已經回去了。", "grammar": "もう〜ました（已完成）：表示動作已經完成" }, "tags": ["already", "もう"] }
+  {
+    "id": "grammar-N5-001",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "私___学生です。",
+      "answer": "は",
+      "choices": [
+        "は",
+        "が",
+        "を",
+        "に"
+      ],
+      "meaning": "我是學生。",
+      "grammar": "は（主題助詞）：標示句子的主題"
+    },
+    "tags": [
+      "particle",
+      "は"
+    ]
+  },
+  {
+    "id": "grammar-N5-002",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "これ___本です。",
+      "answer": "は",
+      "choices": [
+        "は",
+        "も",
+        "が",
+        "の"
+      ],
+      "meaning": "這是書。",
+      "grammar": "は（主題助詞）：標示句子的主題"
+    },
+    "tags": [
+      "particle",
+      "は"
+    ]
+  },
+  {
+    "id": "grammar-N5-003",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "田中さん___先生です。",
+      "answer": "は",
+      "choices": [
+        "は",
+        "が",
+        "を",
+        "で"
+      ],
+      "meaning": "田中先生是老師。",
+      "grammar": "は（主題助詞）：標示句子的主題"
+    },
+    "tags": [
+      "particle",
+      "は"
+    ]
+  },
+  {
+    "id": "grammar-N5-004",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "猫___います。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "を",
+        "に"
+      ],
+      "meaning": "有貓。",
+      "grammar": "が（主語助詞）：強調存在的主體"
+    },
+    "tags": [
+      "particle",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N5-005",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "雨___降っています。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "で",
+        "に"
+      ],
+      "meaning": "雨在下。",
+      "grammar": "が（主語助詞）：標示自然現象的主體"
+    },
+    "tags": [
+      "particle",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N5-006",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "水___飲みます。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "に",
+        "で"
+      ],
+      "meaning": "喝水。",
+      "grammar": "を（受詞助詞）：標示動作的對象"
+    },
+    "tags": [
+      "particle",
+      "を"
+    ]
+  },
+  {
+    "id": "grammar-N5-007",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "本___読みます。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "は",
+        "の"
+      ],
+      "meaning": "讀書。",
+      "grammar": "を（受詞助詞）：標示動作的對象"
+    },
+    "tags": [
+      "particle",
+      "を"
+    ]
+  },
+  {
+    "id": "grammar-N5-008",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "学校___行きます。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "へ",
+        "で",
+        "を"
+      ],
+      "meaning": "去學校。",
+      "grammar": "に（方向助詞）：表示移動的目的地"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N5-009",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "七時___起きます。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "は",
+        "が",
+        "で"
+      ],
+      "meaning": "七點起床。",
+      "grammar": "に（時間助詞）：表示動作發生的具體時間"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N5-010",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "机___上に本があります。",
+      "answer": "の",
+      "choices": [
+        "の",
+        "が",
+        "を",
+        "に"
+      ],
+      "meaning": "書桌上面有書。",
+      "grammar": "の（所有／連接助詞）：連接名詞"
+    },
+    "tags": [
+      "particle",
+      "の"
+    ]
+  },
+  {
+    "id": "grammar-N5-011",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "私___友達は山田さんです。",
+      "answer": "の",
+      "choices": [
+        "の",
+        "が",
+        "は",
+        "も"
+      ],
+      "meaning": "我的朋友是山田先生。",
+      "grammar": "の（所有助詞）：表示所有關係"
+    },
+    "tags": [
+      "particle",
+      "の"
+    ]
+  },
+  {
+    "id": "grammar-N5-012",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "公園___遊びます。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "に",
+        "を",
+        "へ"
+      ],
+      "meaning": "在公園玩。",
+      "grammar": "で（場所助詞）：表示動作發生的場所"
+    },
+    "tags": [
+      "particle",
+      "で"
+    ]
+  },
+  {
+    "id": "grammar-N5-013",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "電車___来ました。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "に",
+        "を",
+        "が"
+      ],
+      "meaning": "搭電車來了。",
+      "grammar": "で（手段助詞）：表示動作的手段或工具"
+    },
+    "tags": [
+      "particle",
+      "で"
+    ]
+  },
+  {
+    "id": "grammar-N5-014",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "日本___行きたいです。",
+      "answer": "へ",
+      "choices": [
+        "へ",
+        "に",
+        "で",
+        "を"
+      ],
+      "meaning": "想去日本。",
+      "grammar": "へ（方向助詞）：表示移動的方向（較正式）"
+    },
+    "tags": [
+      "particle",
+      "へ"
+    ]
+  },
+  {
+    "id": "grammar-N5-015",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "私___妹がいます。",
+      "answer": "も",
+      "choices": [
+        "も",
+        "は",
+        "が",
+        "の"
+      ],
+      "meaning": "我也有妹妹。",
+      "grammar": "も（添加助詞）：表示「也」，添加同類項目"
+    },
+    "tags": [
+      "particle",
+      "も"
+    ]
+  },
+  {
+    "id": "grammar-N5-016",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "友達___一緒に映画を見ました。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "に",
+        "で",
+        "が"
+      ],
+      "meaning": "和朋友一起看了電影。",
+      "grammar": "と（共同助詞）：表示「和…一起」"
+    },
+    "tags": [
+      "particle",
+      "と"
+    ]
+  },
+  {
+    "id": "grammar-N5-017",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "りんご___みかんを買いました。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "や",
+        "が",
+        "を"
+      ],
+      "meaning": "買了蘋果和橘子。",
+      "grammar": "と（列舉助詞）：列舉所有項目"
+    },
+    "tags": [
+      "particle",
+      "と"
+    ]
+  },
+  {
+    "id": "grammar-N5-018",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "野菜___果物を食べます。",
+      "answer": "や",
+      "choices": [
+        "や",
+        "と",
+        "が",
+        "を"
+      ],
+      "meaning": "吃蔬菜和水果等。",
+      "grammar": "や（部分列舉助詞）：列舉代表性項目（還有其他）"
+    },
+    "tags": [
+      "particle",
+      "や"
+    ]
+  },
+  {
+    "id": "grammar-N5-019",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "これは何___ですか。",
+      "answer": "です",
+      "choices": [
+        "です",
+        "ます",
+        "だ",
+        "でした"
+      ],
+      "meaning": "這是什麼？",
+      "grammar": "です（禮貌體）：禮貌的判斷句結尾"
+    },
+    "tags": [
+      "copula",
+      "です"
+    ]
+  },
+  {
+    "id": "grammar-N5-020",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "毎日学校に行き___。",
+      "answer": "ます",
+      "choices": [
+        "ます",
+        "です",
+        "た",
+        "ない"
+      ],
+      "meaning": "每天去學校。",
+      "grammar": "〜ます（禮貌體動詞）：動詞禮貌形現在式"
+    },
+    "tags": [
+      "verb-ending",
+      "ます"
+    ]
+  },
+  {
+    "id": "grammar-N5-021",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "昨日映画を見___。",
+      "answer": "ました",
+      "choices": [
+        "ました",
+        "ます",
+        "ません",
+        "でした"
+      ],
+      "meaning": "昨天看了電影。",
+      "grammar": "〜ました（禮貌體動詞過去式）：動詞禮貌形過去式"
+    },
+    "tags": [
+      "verb-ending",
+      "ました"
+    ]
+  },
+  {
+    "id": "grammar-N5-022",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "お酒は飲み___。",
+      "answer": "ません",
+      "choices": [
+        "ません",
+        "ます",
+        "ました",
+        "ないです"
+      ],
+      "meaning": "不喝酒。",
+      "grammar": "〜ません（禮貌體否定）：動詞禮貌形否定"
+    },
+    "tags": [
+      "verb-ending",
+      "ません"
+    ]
+  },
+  {
+    "id": "grammar-N5-023",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "今日は学校に行き___でした。",
+      "answer": "ません",
+      "choices": [
+        "ません",
+        "ます",
+        "ました",
+        "ない"
+      ],
+      "meaning": "今天沒去學校。",
+      "grammar": "〜ませんでした（禮貌體過去否定）：動詞禮貌形過去否定"
+    },
+    "tags": [
+      "verb-ending",
+      "ませんでした"
+    ]
+  },
+  {
+    "id": "grammar-N5-024",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "これは私の___ではありません。",
+      "answer": "もの",
+      "choices": [
+        "もの",
+        "こと",
+        "ところ",
+        "とき"
+      ],
+      "meaning": "這不是我的東西。",
+      "grammar": "〜ではありません（禮貌體否定）：名詞禮貌形否定"
+    },
+    "tags": [
+      "copula",
+      "ではありません"
+    ]
+  },
+  {
+    "id": "grammar-N5-025",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "図書館に本が___。",
+      "answer": "あります",
+      "choices": [
+        "あります",
+        "います",
+        "です",
+        "します"
+      ],
+      "meaning": "圖書館裡有書。",
+      "grammar": "あります（無生命存在）：表示無生命事物的存在"
+    },
+    "tags": [
+      "existence",
+      "あります"
+    ]
+  },
+  {
+    "id": "grammar-N5-026",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "公園に犬が___。",
+      "answer": "います",
+      "choices": [
+        "います",
+        "あります",
+        "です",
+        "します"
+      ],
+      "meaning": "公園裡有狗。",
+      "grammar": "います（有生命存在）：表示有生命體的存在"
+    },
+    "tags": [
+      "existence",
+      "います"
+    ]
+  },
+  {
+    "id": "grammar-N5-027",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "部屋に誰も___。",
+      "answer": "いません",
+      "choices": [
+        "いません",
+        "ありません",
+        "いないです",
+        "いない"
+      ],
+      "meaning": "房間裡沒有任何人。",
+      "grammar": "いません（有生命否定存在）：有生命體不存在"
+    },
+    "tags": [
+      "existence",
+      "いません"
+    ]
+  },
+  {
+    "id": "grammar-N5-028",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "お金が___。",
+      "answer": "ありません",
+      "choices": [
+        "ありません",
+        "いません",
+        "ないです",
+        "ない"
+      ],
+      "meaning": "沒有錢。",
+      "grammar": "ありません（無生命否定存在）：無生命事物不存在"
+    },
+    "tags": [
+      "existence",
+      "ありません"
+    ]
+  },
+  {
+    "id": "grammar-N5-029",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "今、テレビを見て___。",
+      "answer": "います",
+      "choices": [
+        "います",
+        "あります",
+        "ます",
+        "いました"
+      ],
+      "meaning": "現在正在看電視。",
+      "grammar": "〜ています（進行式）：表示動作正在進行中"
+    },
+    "tags": [
+      "te-form",
+      "ています"
+    ]
+  },
+  {
+    "id": "grammar-N5-030",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "結婚して___。",
+      "answer": "います",
+      "choices": [
+        "います",
+        "あります",
+        "ます",
+        "いました"
+      ],
+      "meaning": "已婚（現在狀態）。",
+      "grammar": "〜ています（狀態持續）：表示動作結果的持續狀態"
+    },
+    "tags": [
+      "te-form",
+      "ています"
+    ]
+  },
+  {
+    "id": "grammar-N5-031",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "手を洗って___ください。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "ので",
+        "て",
+        "ながら"
+      ],
+      "meaning": "洗完手後請吃。",
+      "grammar": "〜てから（先後順序）：表示「做完…之後」"
+    },
+    "tags": [
+      "te-form",
+      "てから"
+    ]
+  },
+  {
+    "id": "grammar-N5-032",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "ここに名前を書いて___。",
+      "answer": "ください",
+      "choices": [
+        "ください",
+        "います",
+        "あります",
+        "みます"
+      ],
+      "meaning": "請在這裡寫名字。",
+      "grammar": "〜てください（請求）：禮貌地請求對方做某事"
+    },
+    "tags": [
+      "te-form",
+      "てください"
+    ]
+  },
+  {
+    "id": "grammar-N5-033",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この映画を見て___。",
+      "answer": "みました",
+      "choices": [
+        "みました",
+        "います",
+        "ください",
+        "あります"
+      ],
+      "meaning": "試著看了這部電影。",
+      "grammar": "〜てみる（嘗試）：試著做某件事"
+    },
+    "tags": [
+      "te-form",
+      "てみる"
+    ]
+  },
+  {
+    "id": "grammar-N5-034",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "日本語___話せますか。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "を",
+        "で"
+      ],
+      "meaning": "會說日語嗎？",
+      "grammar": "が（能力對象）：〜できる・〜たい 等的對象用が"
+    },
+    "tags": [
+      "particle",
+      "が",
+      "できる"
+    ]
+  },
+  {
+    "id": "grammar-N5-035",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "寿司___食べたいです。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "を",
+        "は",
+        "に"
+      ],
+      "meaning": "想吃壽司。",
+      "grammar": "〜たい（願望）：表示說話者的願望，對象用が"
+    },
+    "tags": [
+      "たい",
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N5-036",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "明日、映画___見たいです。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "は",
+        "に"
+      ],
+      "meaning": "明天想看電影。",
+      "grammar": "〜たい（願望）：〜たい 也可用を（と口語都可）"
+    },
+    "tags": [
+      "たい"
+    ]
+  },
+  {
+    "id": "grammar-N5-037",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "ピアノ___弾けます。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "を",
+        "は",
+        "で"
+      ],
+      "meaning": "會彈鋼琴。",
+      "grammar": "〜できる（能力）：表示具備某種能力，對象用が"
+    },
+    "tags": [
+      "できる",
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N5-038",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この本は難し___。",
+      "answer": "いです",
+      "choices": [
+        "いです",
+        "です",
+        "くです",
+        "なです"
+      ],
+      "meaning": "這本書很難。",
+      "grammar": "い形容詞＋です：い形容詞的禮貌形"
+    },
+    "tags": [
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-039",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この映画は面白___ありません。",
+      "answer": "く",
+      "choices": [
+        "く",
+        "い",
+        "に",
+        "で"
+      ],
+      "meaning": "這部電影不有趣。",
+      "grammar": "い形容詞否定：〜くない・〜くありません"
+    },
+    "tags": [
+      "i-adjective",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-040",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "昨日は寒___です。",
+      "answer": "かった",
+      "choices": [
+        "かった",
+        "い",
+        "く",
+        "だった"
+      ],
+      "meaning": "昨天很冷。",
+      "grammar": "い形容詞過去式：〜かった＋です"
+    },
+    "tags": [
+      "i-adjective",
+      "past"
+    ]
+  },
+  {
+    "id": "grammar-N5-041",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "東京は___な都市です。",
+      "answer": "にぎやか",
+      "choices": [
+        "にぎやか",
+        "にぎやかい",
+        "にぎやく",
+        "にぎやかな"
+      ],
+      "meaning": "東京是個熱鬧的城市。",
+      "grammar": "な形容詞＋な＋名詞：な形容詞修飾名詞時加な"
+    },
+    "tags": [
+      "na-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-042",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼女は___です。",
+      "answer": "きれい",
+      "choices": [
+        "きれい",
+        "きれいい",
+        "きれいな",
+        "きれく"
+      ],
+      "meaning": "她很漂亮。",
+      "grammar": "な形容詞＋です：な形容詞的禮貌形（不加な）"
+    },
+    "tags": [
+      "na-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-043",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "日本語は___ではありません。",
+      "answer": "簡単",
+      "choices": [
+        "簡単",
+        "簡単い",
+        "簡単な",
+        "簡単く"
+      ],
+      "meaning": "日語不簡單。",
+      "grammar": "な形容詞否定：〜ではありません"
+    },
+    "tags": [
+      "na-adjective",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-044",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "学校は家___近いです。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "まで",
+        "に",
+        "で"
+      ],
+      "meaning": "學校離家近。",
+      "grammar": "〜から（起點）：表示距離或時間的起點"
+    },
+    "tags": [
+      "particle",
+      "から"
+    ]
+  },
+  {
+    "id": "grammar-N5-045",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "九時___五時まで働きます。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "に",
+        "で",
+        "まで"
+      ],
+      "meaning": "從九點工作到五點。",
+      "grammar": "〜から〜まで：表示「從…到…」的時間範圍"
+    },
+    "tags": [
+      "particle",
+      "から",
+      "まで"
+    ]
+  },
+  {
+    "id": "grammar-N5-046",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "駅から家___歩いて十分です。",
+      "answer": "まで",
+      "choices": [
+        "まで",
+        "から",
+        "に",
+        "へ"
+      ],
+      "meaning": "從車站走到家要十分鐘。",
+      "grammar": "〜まで（終點）：表示距離或時間的終點"
+    },
+    "tags": [
+      "particle",
+      "まで"
+    ]
+  },
+  {
+    "id": "grammar-N5-047",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "お茶___コーヒーのどちらがいいですか。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "や",
+        "か",
+        "も"
+      ],
+      "meaning": "茶和咖啡哪個好？",
+      "grammar": "と（選擇列舉）：列出選項供選擇"
+    },
+    "tags": [
+      "particle",
+      "と"
+    ]
+  },
+  {
+    "id": "grammar-N5-048",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "疲れた___、早く寝ます。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "ので",
+        "て",
+        "が"
+      ],
+      "meaning": "因為累了，所以早點睡。",
+      "grammar": "〜から（原因）：表示主觀原因，語氣較直接"
+    },
+    "tags": [
+      "conjunction",
+      "から"
+    ]
+  },
+  {
+    "id": "grammar-N5-049",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "雨___降ったので、傘を持ってきました。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "を",
+        "に"
+      ],
+      "meaning": "因為下雨了，所以帶了傘來。",
+      "grammar": "が（主語助詞）：が用於客觀陳述事實"
+    },
+    "tags": [
+      "particle",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N5-050",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "お腹が空いた___、何か食べましょう。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "ので",
+        "が",
+        "て"
+      ],
+      "meaning": "因為肚子餓了，吃點什麼吧。",
+      "grammar": "〜から（原因）：口語中常用から表示原因"
+    },
+    "tags": [
+      "conjunction",
+      "から"
+    ]
+  },
+  {
+    "id": "grammar-N5-051",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "音楽を聴き___、勉強します。",
+      "answer": "ながら",
+      "choices": [
+        "ながら",
+        "てから",
+        "ながら",
+        "まま"
+      ],
+      "meaning": "一邊聽音樂一邊學習。",
+      "grammar": "〜ながら（同時動作）：表示兩個動作同時進行"
+    },
+    "tags": [
+      "ながら"
+    ]
+  },
+  {
+    "id": "grammar-N5-052",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "電気を消さないで___ください。",
+      "answer": "おいて",
+      "choices": [
+        "おいて",
+        "ください",
+        "みて",
+        "います"
+      ],
+      "meaning": "請不要關燈。（保持開著）",
+      "grammar": "〜ておく（事前準備）：提前做好某事的準備"
+    },
+    "tags": [
+      "te-form",
+      "ておく"
+    ]
+  },
+  {
+    "id": "grammar-N5-053",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "窓を___ください。",
+      "answer": "開けて",
+      "choices": [
+        "開けて",
+        "開けます",
+        "開けた",
+        "開け"
+      ],
+      "meaning": "請打開窗戶。",
+      "grammar": "動詞て形＋ください：禮貌請求"
+    },
+    "tags": [
+      "te-form",
+      "てください"
+    ]
+  },
+  {
+    "id": "grammar-N5-054",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "ここで写真を撮っては___。",
+      "answer": "いけません",
+      "choices": [
+        "いけません",
+        "ください",
+        "います",
+        "あります"
+      ],
+      "meaning": "不可以在這裡拍照。",
+      "grammar": "〜てはいけない（禁止）：表示禁止"
+    },
+    "tags": [
+      "prohibition"
+    ]
+  },
+  {
+    "id": "grammar-N5-055",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "もっとゆっくり話して___か。",
+      "answer": "もらえます",
+      "choices": [
+        "もらえます",
+        "あります",
+        "います",
+        "ください"
+      ],
+      "meaning": "可以說慢一點嗎？",
+      "grammar": "〜てもらえますか（委婉請求）：更禮貌的請求方式"
+    },
+    "tags": [
+      "te-form",
+      "もらう"
+    ]
+  },
+  {
+    "id": "grammar-N5-056",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼は学生___、アルバイトもしています。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "に",
+        "が",
+        "は"
+      ],
+      "meaning": "他是學生，也在打工。",
+      "grammar": "〜で（原因・中間連接）：名詞句連接下文"
+    },
+    "tags": [
+      "conjunction",
+      "で"
+    ]
+  },
+  {
+    "id": "grammar-N5-057",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "もし雨___降ったら、家にいます。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "を",
+        "に"
+      ],
+      "meaning": "如果下雨的話，就待在家裡。",
+      "grammar": "〜たら（條件）：表示假設條件"
+    },
+    "tags": [
+      "conditional",
+      "たら"
+    ]
+  },
+  {
+    "id": "grammar-N5-058",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "春に___、花見をしましょう。",
+      "answer": "なったら",
+      "choices": [
+        "なったら",
+        "なれば",
+        "なると",
+        "なるなら"
+      ],
+      "meaning": "等到了春天，去賞花吧。",
+      "grammar": "〜たら（時間條件）：到了某個時間點之後"
+    },
+    "tags": [
+      "conditional",
+      "たら"
+    ]
+  },
+  {
+    "id": "grammar-N5-059",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "日本語が上手に___たいです。",
+      "answer": "なり",
+      "choices": [
+        "なり",
+        "なる",
+        "なって",
+        "なれ"
+      ],
+      "meaning": "想要日語變好。",
+      "grammar": "〜たい（願望）：〜たい 前接動詞ます形去ます"
+    },
+    "tags": [
+      "たい"
+    ]
+  },
+  {
+    "id": "grammar-N5-060",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この薬を飲め___、すぐ良くなりますよ。",
+      "answer": "ば",
+      "choices": [
+        "ば",
+        "たら",
+        "と",
+        "なら"
+      ],
+      "meaning": "如果吃這藥的話，馬上就會好。",
+      "grammar": "〜ば（假設條件）：表示假設條件，語氣較正式"
+    },
+    "tags": [
+      "conditional",
+      "ば"
+    ]
+  },
+  {
+    "id": "grammar-N5-061",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "春になる___、暖かくなります。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "たら",
+        "ば",
+        "なら"
+      ],
+      "meaning": "一到春天就會變暖和。",
+      "grammar": "〜と（自然結果條件）：前因必然導致後果"
+    },
+    "tags": [
+      "conditional",
+      "と"
+    ]
+  },
+  {
+    "id": "grammar-N5-062",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼女は歌が___です。",
+      "answer": "上手",
+      "choices": [
+        "上手",
+        "上手い",
+        "じょうず",
+        "うまい"
+      ],
+      "meaning": "她很擅長唱歌。",
+      "grammar": "〜が上手（擅長）：表示擅長某事，對象用が"
+    },
+    "tags": [
+      "上手",
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N5-063",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "私は料理が___です。",
+      "answer": "下手",
+      "choices": [
+        "下手",
+        "じょうず",
+        "きらい",
+        "すき"
+      ],
+      "meaning": "我不擅長做料理。",
+      "grammar": "〜が下手（不擅長）：表示不擅長某事"
+    },
+    "tags": [
+      "下手",
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N5-064",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "子供の時、よく公園で___。",
+      "answer": "遊びました",
+      "choices": [
+        "遊びました",
+        "遊びます",
+        "遊んでいます",
+        "遊ぶ"
+      ],
+      "meaning": "小時候常在公園玩。",
+      "grammar": "〜ました（過去式）：回憶過去的習慣或動作"
+    },
+    "tags": [
+      "past",
+      "ました"
+    ]
+  },
+  {
+    "id": "grammar-N5-065",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "どこ___来ましたか。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "に",
+        "で",
+        "へ"
+      ],
+      "meaning": "你從哪裡來的？",
+      "grammar": "〜から（出發點）：表示出發的起點"
+    },
+    "tags": [
+      "particle",
+      "から"
+    ]
+  },
+  {
+    "id": "grammar-N5-066",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "部屋を掃除しなければ___ません。",
+      "answer": "なり",
+      "choices": [
+        "なり",
+        "いけ",
+        "なれ",
+        "でき"
+      ],
+      "meaning": "必須打掃房間。",
+      "grammar": "〜なければなりません（義務）：表示必須做某事"
+    },
+    "tags": [
+      "obligation"
+    ]
+  },
+  {
+    "id": "grammar-N5-067",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "今日は休んでも___です。",
+      "answer": "いい",
+      "choices": [
+        "いい",
+        "ある",
+        "いる",
+        "なる"
+      ],
+      "meaning": "今天可以休息。",
+      "grammar": "〜てもいい（許可）：表示許可，可以做某事"
+    },
+    "tags": [
+      "permission"
+    ]
+  },
+  {
+    "id": "grammar-N5-068",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "辞書を使っても___か。",
+      "answer": "いいです",
+      "choices": [
+        "いいです",
+        "あります",
+        "います",
+        "できます"
+      ],
+      "meaning": "可以使用字典嗎？",
+      "grammar": "〜てもいいですか（請求許可）：詢問是否被允許"
+    },
+    "tags": [
+      "permission"
+    ]
+  },
+  {
+    "id": "grammar-N5-069",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "もう少し___話してください。",
+      "answer": "ゆっくり",
+      "choices": [
+        "ゆっくり",
+        "ゆっくりく",
+        "ゆっくりに",
+        "ゆっくりな"
+      ],
+      "meaning": "請說慢一點。",
+      "grammar": "副詞的用法：ゆっくり 直接修飾動詞"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "grammar-N5-070",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "田中さんはもう___ました。",
+      "answer": "帰り",
+      "choices": [
+        "帰り",
+        "帰って",
+        "帰る",
+        "帰れ"
+      ],
+      "meaning": "田中先生已經回去了。",
+      "grammar": "もう〜ました（已完成）：表示動作已經完成"
+    },
+    "tags": [
+      "already",
+      "もう"
+    ]
+  },
+  {
+    "id": "grammar-N5-071",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "これ___何ですか。",
+      "answer": "は",
+      "choices": [
+        "は",
+        "が",
+        "を",
+        "に"
+      ],
+      "meaning": "這是什麼？",
+      "grammar": "は（主題助詞）：標示句子的主題"
+    },
+    "tags": [
+      "particle",
+      "は"
+    ]
+  },
+  {
+    "id": "grammar-N5-072",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "あそこ___図書館です。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "を",
+        "で"
+      ],
+      "meaning": "那裡是圖書館。",
+      "grammar": "が（主語助詞）：強調主語或指定主語"
+    },
+    "tags": [
+      "particle",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N5-073",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "電車___乗ります。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "で",
+        "を",
+        "が"
+      ],
+      "meaning": "搭電車。",
+      "grammar": "に（方向/對象助詞）：搭乘交通工具用に"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N5-074",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "公園___遊びます。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "に",
+        "を",
+        "が"
+      ],
+      "meaning": "在公園玩耍。",
+      "grammar": "で（場所助詞）：表示動作發生的場所"
+    },
+    "tags": [
+      "particle",
+      "で"
+    ]
+  },
+  {
+    "id": "grammar-N5-075",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "学校___行きます。",
+      "answer": "へ",
+      "choices": [
+        "へ",
+        "に",
+        "で",
+        "を"
+      ],
+      "meaning": "去學校。",
+      "grammar": "へ（方向助詞）：表示移動方向，可與に替換"
+    },
+    "tags": [
+      "particle",
+      "へ"
+    ]
+  },
+  {
+    "id": "grammar-N5-076",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "友達___手紙を書きます。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "で",
+        "へ",
+        "を"
+      ],
+      "meaning": "給朋友寫信。",
+      "grammar": "に（對象助詞）：表示動作的對象"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N5-077",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "バスと電車___来ました。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "に",
+        "を",
+        "へ"
+      ],
+      "meaning": "搭公車和電車來了。",
+      "grammar": "で（手段助詞）：表示使用的交通工具或手段"
+    },
+    "tags": [
+      "particle",
+      "で"
+    ]
+  },
+  {
+    "id": "grammar-N5-078",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "りんご___みかんを買いました。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "や",
+        "も",
+        "が"
+      ],
+      "meaning": "買了蘋果和橘子。",
+      "grammar": "と（並列助詞）：列舉全部事物"
+    },
+    "tags": [
+      "particle",
+      "と"
+    ]
+  },
+  {
+    "id": "grammar-N5-079",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "りんご___みかんなど果物を買いました。",
+      "answer": "や",
+      "choices": [
+        "や",
+        "と",
+        "も",
+        "が"
+      ],
+      "meaning": "買了蘋果和橘子等水果。",
+      "grammar": "や（並列助詞）：列舉部分事物，後接など"
+    },
+    "tags": [
+      "particle",
+      "や"
+    ]
+  },
+  {
+    "id": "grammar-N5-080",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "私___学校に行きます。",
+      "answer": "も",
+      "choices": [
+        "も",
+        "は",
+        "が",
+        "を"
+      ],
+      "meaning": "我也去學校。",
+      "grammar": "も（添加助詞）：表示「也」，替換は或が"
+    },
+    "tags": [
+      "particle",
+      "も"
+    ]
+  },
+  {
+    "id": "grammar-N5-081",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "これは私___本です。",
+      "answer": "の",
+      "choices": [
+        "の",
+        "が",
+        "を",
+        "に"
+      ],
+      "meaning": "這是我的書。",
+      "grammar": "の（所有助詞）：表示所有或修飾關係"
+    },
+    "tags": [
+      "particle",
+      "の"
+    ]
+  },
+  {
+    "id": "grammar-N5-082",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "駅___コンビニがあります。",
+      "answer": "の前に",
+      "choices": [
+        "の前に",
+        "で",
+        "から",
+        "まで"
+      ],
+      "meaning": "車站前面有便利商店。",
+      "grammar": "の前に：表示位置「在…前面」"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N5-083",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "学校は駅___歩いて5分です。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "まで",
+        "で",
+        "に"
+      ],
+      "meaning": "學校從車站走路5分鐘。",
+      "grammar": "から（起點助詞）：表示出發點"
+    },
+    "tags": [
+      "particle",
+      "から"
+    ]
+  },
+  {
+    "id": "grammar-N5-084",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "9時___6時まで働きます。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "まで",
+        "に",
+        "で"
+      ],
+      "meaning": "從9點工作到6點。",
+      "grammar": "から〜まで：表示時間或範圍的起點與終點"
+    },
+    "tags": [
+      "particle",
+      "から"
+    ]
+  },
+  {
+    "id": "grammar-N5-085",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "東京から大阪___新幹線で行きます。",
+      "answer": "まで",
+      "choices": [
+        "まで",
+        "から",
+        "に",
+        "へ"
+      ],
+      "meaning": "從東京到大阪搭新幹線。",
+      "grammar": "まで（終點助詞）：表示到達點"
+    },
+    "tags": [
+      "particle",
+      "まで"
+    ]
+  },
+  {
+    "id": "grammar-N5-086",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼女は歌___上手です。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "を",
+        "に"
+      ],
+      "meaning": "她擅長唱歌。",
+      "grammar": "が（能力助詞）：好き・嫌い・上手・下手等後接が"
+    },
+    "tags": [
+      "particle",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N5-087",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "水___飲みたいです。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "を",
+        "は",
+        "に"
+      ],
+      "meaning": "想喝水。",
+      "grammar": "が（希望助詞）：〜たい前面通常用が表示希望的對象"
+    },
+    "tags": [
+      "particle",
+      "が",
+      "たい"
+    ]
+  },
+  {
+    "id": "grammar-N5-088",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "明日映画を見___行きます。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "を",
+        "で",
+        "が"
+      ],
+      "meaning": "明天去看電影。",
+      "grammar": "動詞連用形＋に行く：表示去做某事的目的"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N5-089",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "今日は学校___休みです。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "を",
+        "で"
+      ],
+      "meaning": "今天學校放假。",
+      "grammar": "が（主語助詞）：強調主語"
+    },
+    "tags": [
+      "particle",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N5-090",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "誕生日は___月ですか。",
+      "answer": "何",
+      "choices": [
+        "何",
+        "どの",
+        "どこ",
+        "どんな"
+      ],
+      "meaning": "生日是幾月？",
+      "grammar": "何月（なんがつ）：詢問月份"
+    },
+    "tags": [
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N5-091",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "今___時ですか。",
+      "answer": "何",
+      "choices": [
+        "何",
+        "どの",
+        "いつ",
+        "どんな"
+      ],
+      "meaning": "現在幾點？",
+      "grammar": "何時（なんじ）：詢問時刻"
+    },
+    "tags": [
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N5-092",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この荷物は___ですか。",
+      "answer": "誰の",
+      "choices": [
+        "誰の",
+        "何の",
+        "どこの",
+        "いつの"
+      ],
+      "meaning": "這個行李是誰的？",
+      "grammar": "誰の：詢問所有者"
+    },
+    "tags": [
+      "particle",
+      "の"
+    ]
+  },
+  {
+    "id": "grammar-N5-093",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "田中さんは___にいますか。",
+      "answer": "どこ",
+      "choices": [
+        "どこ",
+        "何",
+        "誰",
+        "いつ"
+      ],
+      "meaning": "田中先生在哪裡？",
+      "grammar": "どこ：詢問場所"
+    },
+    "tags": [
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N5-094",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "駅まで___で行きますか。",
+      "answer": "どうやって",
+      "choices": [
+        "どうやって",
+        "どこ",
+        "いつ",
+        "誰"
+      ],
+      "meaning": "要怎麼去車站？",
+      "grammar": "どうやって：詢問方法"
+    },
+    "tags": [
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N5-095",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "今日は___がいいですね。",
+      "answer": "天気",
+      "choices": [
+        "天気",
+        "天",
+        "空気",
+        "空"
+      ],
+      "meaning": "今天天氣真好呢。",
+      "grammar": "天気がいい：天氣好的常用說法"
+    },
+    "tags": [
+      "particle",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N5-096",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この映画は___白いです。",
+      "answer": "面",
+      "choices": [
+        "面",
+        "前",
+        "外",
+        "中"
+      ],
+      "meaning": "這部電影很有趣。",
+      "grammar": "面白い（おもしろい）：有趣的"
+    },
+    "tags": [
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-097",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "昨日は___かったです。",
+      "answer": "寒",
+      "choices": [
+        "寒",
+        "暑",
+        "涼し",
+        "暖か"
+      ],
+      "meaning": "昨天很冷。",
+      "grammar": "い形容詞過去式：〜かったです"
+    },
+    "tags": [
+      "i-adjective",
+      "past"
+    ]
+  },
+  {
+    "id": "grammar-N5-098",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この問題は___しくありませんでした。",
+      "answer": "難",
+      "choices": [
+        "難",
+        "易",
+        "楽",
+        "苦"
+      ],
+      "meaning": "這道題不難。",
+      "grammar": "い形容詞過去否定：〜しくありませんでした"
+    },
+    "tags": [
+      "i-adjective",
+      "negative",
+      "past"
+    ]
+  },
+  {
+    "id": "grammar-N5-099",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼は___気な人です。",
+      "answer": "元",
+      "choices": [
+        "元",
+        "大",
+        "細",
+        "高"
+      ],
+      "meaning": "他是精神好的人。",
+      "grammar": "元気な（げんきな）：有精神的、健康的"
+    },
+    "tags": [
+      "na-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-100",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この公園は___やかです。",
+      "answer": "賑",
+      "choices": [
+        "賑",
+        "静",
+        "暖",
+        "涼"
+      ],
+      "meaning": "這個公園很熱鬧。",
+      "grammar": "賑やか（にぎやか）：熱鬧的"
+    },
+    "tags": [
+      "na-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-101",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "明日は___ではありません。",
+      "answer": "暇",
+      "choices": [
+        "暇",
+        "元気",
+        "大切",
+        "便利"
+      ],
+      "meaning": "明天不空閒。",
+      "grammar": "な形容詞否定：〜ではありません"
+    },
+    "tags": [
+      "na-adjective",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-102",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "先週の試験は___でした。",
+      "answer": "大変",
+      "choices": [
+        "大変",
+        "大切",
+        "上手",
+        "有名"
+      ],
+      "meaning": "上週的考試很辛苦。",
+      "grammar": "な形容詞過去式：〜でした"
+    },
+    "tags": [
+      "na-adjective",
+      "past"
+    ]
+  },
+  {
+    "id": "grammar-N5-103",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この店は___ではありませんでした。",
+      "answer": "有名",
+      "choices": [
+        "有名",
+        "元気",
+        "暇",
+        "大切"
+      ],
+      "meaning": "這家店以前不有名。",
+      "grammar": "な形容詞過去否定：〜ではありませんでした"
+    },
+    "tags": [
+      "na-adjective",
+      "negative",
+      "past"
+    ]
+  },
+  {
+    "id": "grammar-N5-104",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "毎日牛乳___飲みます。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "は",
+        "に"
+      ],
+      "meaning": "每天喝牛奶。",
+      "grammar": "を（目的語助詞）：表示動作的對象"
+    },
+    "tags": [
+      "particle",
+      "を"
+    ]
+  },
+  {
+    "id": "grammar-N5-105",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "7時に起きて、朝ご飯___食べました。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "は",
+        "で"
+      ],
+      "meaning": "7點起床，吃了早餐。",
+      "grammar": "を（目的語助詞）：表示動作的對象"
+    },
+    "tags": [
+      "particle",
+      "を",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N5-106",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "来年日本___行きたいです。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "へ",
+        "で",
+        "を"
+      ],
+      "meaning": "明年想去日本。",
+      "grammar": "に／へ（方向）：表示移動目的地；たい表示希望"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "たい"
+    ]
+  },
+  {
+    "id": "grammar-N5-107",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "電話___かけてください。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "に",
+        "で",
+        "が"
+      ],
+      "meaning": "請打電話。",
+      "grammar": "電話をかける：打電話的固定搭配"
+    },
+    "tags": [
+      "particle",
+      "を",
+      "てください"
+    ]
+  },
+  {
+    "id": "grammar-N5-108",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "先生に名前___呼ばれました。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "は",
+        "で"
+      ],
+      "meaning": "被老師叫了名字。",
+      "grammar": "を（受身的目的語）：被動句中的目的語"
+    },
+    "tags": [
+      "particle",
+      "を"
+    ]
+  },
+  {
+    "id": "grammar-N5-109",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "部屋に入る前に、靴___脱いでください。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "は",
+        "で"
+      ],
+      "meaning": "進房間前請脫鞋。",
+      "grammar": "を（目的語助詞）：脱ぐ的對象"
+    },
+    "tags": [
+      "particle",
+      "を",
+      "てください"
+    ]
+  },
+  {
+    "id": "grammar-N5-110",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "音楽___聞きながら勉強します。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "は",
+        "に"
+      ],
+      "meaning": "一邊聽音樂一邊學習。",
+      "grammar": "〜ながら：同時做兩個動作"
+    },
+    "tags": [
+      "particle",
+      "を",
+      "ながら"
+    ]
+  },
+  {
+    "id": "grammar-N5-111",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "もっと___食べてください。",
+      "answer": "たくさん",
+      "choices": [
+        "たくさん",
+        "ゆっくり",
+        "はっきり",
+        "すぐ"
+      ],
+      "meaning": "請多吃一點。",
+      "grammar": "たくさん：很多，用於修飾動詞"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "grammar-N5-112",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼女は___話します。",
+      "answer": "あまり話しません",
+      "choices": [
+        "あまり話しません",
+        "たくさん",
+        "ゆっくり",
+        "すぐに"
+      ],
+      "meaning": "她不太說話。",
+      "grammar": "あまり〜ません：不太〜，程度副詞配否定"
+    },
+    "tags": [
+      "adverb",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-113",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この映画を___見ましたか。",
+      "answer": "もう",
+      "choices": [
+        "もう",
+        "まだ",
+        "また",
+        "すぐ"
+      ],
+      "meaning": "這部電影你已經看了嗎？",
+      "grammar": "もう（已經）：用於疑問句詢問是否已完成"
+    },
+    "tags": [
+      "adverb",
+      "already"
+    ]
+  },
+  {
+    "id": "grammar-N5-114",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "宿題は___終わっていません。",
+      "answer": "まだ",
+      "choices": [
+        "まだ",
+        "もう",
+        "また",
+        "すぐ"
+      ],
+      "meaning": "作業還沒完成。",
+      "grammar": "まだ〜ていません：還沒做〜"
+    },
+    "tags": [
+      "adverb",
+      "ています",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-115",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "___日本語が話せますか。",
+      "answer": "どのくらい",
+      "choices": [
+        "どのくらい",
+        "どうやって",
+        "どんな",
+        "どれ"
+      ],
+      "meaning": "你能說多少日語？",
+      "grammar": "どのくらい：詢問程度、數量"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "grammar-N5-116",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "先生は教室に___います。",
+      "answer": "いつも",
+      "choices": [
+        "いつも",
+        "まだ",
+        "もう",
+        "また"
+      ],
+      "meaning": "老師總是在教室裡。",
+      "grammar": "いつも：總是，表示習慣"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "grammar-N5-117",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この仕事は___できます。",
+      "answer": "すぐに",
+      "choices": [
+        "すぐに",
+        "ゆっくり",
+        "たぶん",
+        "きっと"
+      ],
+      "meaning": "這份工作馬上就能完成。",
+      "grammar": "すぐに：立刻、馬上"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "grammar-N5-118",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼は___来ないと思います。",
+      "answer": "たぶん",
+      "choices": [
+        "たぶん",
+        "きっと",
+        "もちろん",
+        "すぐ"
+      ],
+      "meaning": "他大概不會來吧。",
+      "grammar": "たぶん：大概、也許，表示不確定的推測"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "grammar-N5-119",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼女は___来ます。",
+      "answer": "きっと",
+      "choices": [
+        "きっと",
+        "たぶん",
+        "もしかして",
+        "あまり"
+      ],
+      "meaning": "她一定會來。",
+      "grammar": "きっと：一定，表示確信"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "grammar-N5-120",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "___日本語が上手ですね。",
+      "answer": "本当に",
+      "choices": [
+        "本当に",
+        "たぶん",
+        "きっと",
+        "あまり"
+      ],
+      "meaning": "日語真的很好呢。",
+      "grammar": "本当に：真的，強調程度"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "grammar-N5-121",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "ご飯を食べた___、歯を磨きます。",
+      "answer": "後で",
+      "choices": [
+        "後で",
+        "前に",
+        "時に",
+        "間に"
+      ],
+      "meaning": "吃完飯之後刷牙。",
+      "grammar": "〜た後で：做完〜之後"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-122",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "出かける___に、窓を閉めてください。",
+      "answer": "前",
+      "choices": [
+        "前",
+        "後",
+        "時",
+        "間"
+      ],
+      "meaning": "出門前請關窗戶。",
+      "grammar": "〜する前に：做〜之前"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-123",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "暇な___は本を読みます。",
+      "answer": "時",
+      "choices": [
+        "時",
+        "後",
+        "前",
+        "間"
+      ],
+      "meaning": "空閒的時候看書。",
+      "grammar": "〜時（とき）：在〜的時候"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-124",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "授業の___は静かにしてください。",
+      "answer": "間",
+      "choices": [
+        "間",
+        "後",
+        "前",
+        "時"
+      ],
+      "meaning": "上課期間請保持安靜。",
+      "grammar": "〜の間（あいだ）：在〜期間"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-125",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "日本に___ことがあります。",
+      "answer": "行った",
+      "choices": [
+        "行った",
+        "行く",
+        "行き",
+        "行って"
+      ],
+      "meaning": "我去過日本。",
+      "grammar": "〜たことがある：有做過〜的經驗"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-126",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この映画を見た___がありますか。",
+      "answer": "こと",
+      "choices": [
+        "こと",
+        "もの",
+        "とき",
+        "ため"
+      ],
+      "meaning": "你有看過這部電影嗎？",
+      "grammar": "〜たことがある：有做過〜的經驗"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-127",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "来月東京に___つもりです。",
+      "answer": "行く",
+      "choices": [
+        "行く",
+        "行き",
+        "行った",
+        "行って"
+      ],
+      "meaning": "下個月打算去東京。",
+      "grammar": "〜つもりです：打算做〜"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-128",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "今日は早く___ようと思います。",
+      "answer": "帰ろ",
+      "choices": [
+        "帰ろ",
+        "帰り",
+        "帰る",
+        "帰って"
+      ],
+      "meaning": "今天打算早點回去。",
+      "grammar": "〜ようと思います：打算做〜（意志表現）"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-129",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "田中さんは今電話を___います。",
+      "answer": "かけて",
+      "choices": [
+        "かけて",
+        "かけ",
+        "かけた",
+        "かける"
+      ],
+      "meaning": "田中先生現在正在打電話。",
+      "grammar": "〜ています：正在做〜（動作進行中）"
+    },
+    "tags": [
+      "ています"
+    ]
+  },
+  {
+    "id": "grammar-N5-130",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "あの人は何を___いますか。",
+      "answer": "して",
+      "choices": [
+        "して",
+        "し",
+        "する",
+        "した"
+      ],
+      "meaning": "那個人在做什麼？",
+      "grammar": "〜ています：正在做〜（動作進行中）"
+    },
+    "tags": [
+      "ています"
+    ]
+  },
+  {
+    "id": "grammar-N5-131",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼女は結婚___います。",
+      "answer": "して",
+      "choices": [
+        "して",
+        "し",
+        "する",
+        "した"
+      ],
+      "meaning": "她已婚（目前狀態）。",
+      "grammar": "〜ています：表示狀態持續"
+    },
+    "tags": [
+      "ています"
+    ]
+  },
+  {
+    "id": "grammar-N5-132",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "テーブルの上にりんごが___います。",
+      "answer": "あります",
+      "choices": [
+        "あります",
+        "います",
+        "なります",
+        "できます"
+      ],
+      "meaning": "桌子上有蘋果。",
+      "grammar": "あります：無生命物的存在（物品）"
+    },
+    "tags": [
+      "existence",
+      "あります"
+    ]
+  },
+  {
+    "id": "grammar-N5-133",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "公園に子供が___います。",
+      "answer": "遊んで",
+      "choices": [
+        "遊んで",
+        "遊び",
+        "遊ぶ",
+        "遊んだ"
+      ],
+      "meaning": "公園裡有小孩在玩。",
+      "grammar": "〜ています（進行中）：動作的持續進行"
+    },
+    "tags": [
+      "ています",
+      "existence"
+    ]
+  },
+  {
+    "id": "grammar-N5-134",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "冷蔵庫に牛乳が___ありません。",
+      "answer": "何も",
+      "choices": [
+        "何も",
+        "何か",
+        "どこか",
+        "誰も"
+      ],
+      "meaning": "冰箱裡什麼都沒有。",
+      "grammar": "何もありません：什麼都沒有，強調全無"
+    },
+    "tags": [
+      "existence",
+      "ありません",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-135",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "机の___に本があります。",
+      "answer": "上",
+      "choices": [
+        "上",
+        "下",
+        "中",
+        "横"
+      ],
+      "meaning": "桌子上面有書。",
+      "grammar": "名詞の上に：表示位置「在…上面」"
+    },
+    "tags": [
+      "existence",
+      "あります"
+    ]
+  },
+  {
+    "id": "grammar-N5-136",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "ソファーの___に猫がいます。",
+      "answer": "下",
+      "choices": [
+        "下",
+        "上",
+        "中",
+        "前"
+      ],
+      "meaning": "沙發下面有貓。",
+      "grammar": "名詞の下に：表示位置「在…下面」"
+    },
+    "tags": [
+      "existence",
+      "います"
+    ]
+  },
+  {
+    "id": "grammar-N5-137",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "箱の___に何がありますか。",
+      "answer": "中",
+      "choices": [
+        "中",
+        "外",
+        "上",
+        "横"
+      ],
+      "meaning": "箱子裡面有什麼？",
+      "grammar": "名詞の中に：表示位置「在…裡面」"
+    },
+    "tags": [
+      "existence",
+      "あります"
+    ]
+  },
+  {
+    "id": "grammar-N5-138",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "銀行は郵便局の___にあります。",
+      "answer": "隣",
+      "choices": [
+        "隣",
+        "前",
+        "後ろ",
+        "上"
+      ],
+      "meaning": "銀行在郵局旁邊。",
+      "grammar": "名詞の隣に：表示位置「在…旁邊」"
+    },
+    "tags": [
+      "existence",
+      "あります"
+    ]
+  },
+  {
+    "id": "grammar-N5-139",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "毎朝ジョギングを___います。",
+      "answer": "して",
+      "choices": [
+        "して",
+        "し",
+        "する",
+        "した"
+      ],
+      "meaning": "每天早上在慢跑（習慣）。",
+      "grammar": "〜ています：表示習慣性動作"
+    },
+    "tags": [
+      "ています"
+    ]
+  },
+  {
+    "id": "grammar-N5-140",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この歌を___ことができますか。",
+      "answer": "歌う",
+      "choices": [
+        "歌う",
+        "歌い",
+        "歌って",
+        "歌った"
+      ],
+      "meaning": "你會唱這首歌嗎？",
+      "grammar": "〜ことができる：能做〜（能力表現）"
+    },
+    "tags": [
+      "できる"
+    ]
+  },
+  {
+    "id": "grammar-N5-141",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "日本語で___できますか。",
+      "answer": "話す",
+      "choices": [
+        "話す",
+        "話し",
+        "話して",
+        "話した"
+      ],
+      "meaning": "能用日文說話嗎？",
+      "grammar": "〜ことができる：能做〜"
+    },
+    "tags": [
+      "できる"
+    ]
+  },
+  {
+    "id": "grammar-N5-142",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼は泳ぐことが___。",
+      "answer": "できません",
+      "choices": [
+        "できません",
+        "できます",
+        "あります",
+        "います"
+      ],
+      "meaning": "他不會游泳。",
+      "grammar": "〜ことができません：不能做〜"
+    },
+    "tags": [
+      "できる",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-143",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "宿題を___から、遊びに行きます。",
+      "answer": "してから",
+      "choices": [
+        "してから",
+        "したら",
+        "すれば",
+        "しても"
+      ],
+      "meaning": "做完作業之後去玩。",
+      "grammar": "〜てから：做完〜之後（強調順序）"
+    },
+    "tags": [
+      "てから"
+    ]
+  },
+  {
+    "id": "grammar-N5-144",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "シャワーを___から寝ます。",
+      "answer": "浴びて",
+      "choices": [
+        "浴びて",
+        "浴び",
+        "浴びる",
+        "浴びた"
+      ],
+      "meaning": "洗完澡後睡覺。",
+      "grammar": "〜てから：做完〜後，動作的先後順序"
+    },
+    "tags": [
+      "てから",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N5-145",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "明日雨が___ら、家にいます。",
+      "answer": "降った",
+      "choices": [
+        "降った",
+        "降る",
+        "降り",
+        "降って"
+      ],
+      "meaning": "明天如果下雨就待在家裡。",
+      "grammar": "〜たら：假定條件（如果…的話）"
+    },
+    "tags": [
+      "たら",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N5-146",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "時間があっ___、映画を見に行きましょう。",
+      "answer": "たら",
+      "choices": [
+        "たら",
+        "ても",
+        "から",
+        "ので"
+      ],
+      "meaning": "如果有時間的話，一起去看電影吧。",
+      "grammar": "〜たら：假定條件，完成後的結果"
+    },
+    "tags": [
+      "たら",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N5-147",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "雨が降っ___、試合は中止です。",
+      "answer": "たら",
+      "choices": [
+        "たら",
+        "ても",
+        "から",
+        "ので"
+      ],
+      "meaning": "如果下雨的話，比賽就中止。",
+      "grammar": "〜たら：假定條件"
+    },
+    "tags": [
+      "たら",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N5-148",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "忙しく___、映画を見に行けません。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "で",
+        "に",
+        "が"
+      ],
+      "meaning": "因為忙，不能去看電影。",
+      "grammar": "い形容詞て形：〜くて（表示原因或連接）"
+    },
+    "tags": [
+      "te-form",
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-149",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この部屋は広く___明るいです。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "で",
+        "し",
+        "が"
+      ],
+      "meaning": "這個房間又寬又亮。",
+      "grammar": "い形容詞て形：〜くて（列舉性質）"
+    },
+    "tags": [
+      "te-form",
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-150",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この町は静か___、住みやすいです。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "て",
+        "に",
+        "が"
+      ],
+      "meaning": "這個城鎮安靜，住起來很舒服。",
+      "grammar": "な形容詞て形：〜で（列舉性質或表原因）"
+    },
+    "tags": [
+      "te-form",
+      "na-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-151",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼女は親切___、みんなに好かれています。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "て",
+        "に",
+        "が"
+      ],
+      "meaning": "她很親切，大家都喜歡她。",
+      "grammar": "な形容詞て形：〜で（表原因）"
+    },
+    "tags": [
+      "te-form",
+      "na-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-152",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この本は読みやすく___、面白いです。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "で",
+        "し",
+        "が"
+      ],
+      "meaning": "這本書容易閱讀，又有趣。",
+      "grammar": "〜くて：い形容詞連接"
+    },
+    "tags": [
+      "te-form",
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-153",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "窓を___もいいですか。",
+      "answer": "開けて",
+      "choices": [
+        "開けて",
+        "開け",
+        "開ける",
+        "開けた"
+      ],
+      "meaning": "可以開窗嗎？",
+      "grammar": "〜てもいいですか：可以〜嗎（請求許可）"
+    },
+    "tags": [
+      "permission",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N5-154",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "ここで写真を撮っ___いいですか。",
+      "answer": "ても",
+      "choices": [
+        "ても",
+        "ては",
+        "でも",
+        "では"
+      ],
+      "meaning": "可以在這裡拍照嗎？",
+      "grammar": "〜てもいい：可以做〜（許可）"
+    },
+    "tags": [
+      "permission",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N5-155",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "ここでタバコを吸っ___いけません。",
+      "answer": "ては",
+      "choices": [
+        "ては",
+        "ても",
+        "では",
+        "でも"
+      ],
+      "meaning": "這裡不能抽菸。",
+      "grammar": "〜てはいけません：不可以做〜（禁止）"
+    },
+    "tags": [
+      "prohibition",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N5-156",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "廊下を走っ___いけません。",
+      "answer": "ては",
+      "choices": [
+        "ては",
+        "ても",
+        "では",
+        "でも"
+      ],
+      "meaning": "走廊不可以跑步。",
+      "grammar": "〜てはいけません：禁止某行為"
+    },
+    "tags": [
+      "prohibition",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N5-157",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "宿題を___なければなりません。",
+      "answer": "し",
+      "choices": [
+        "し",
+        "して",
+        "した",
+        "する"
+      ],
+      "meaning": "必須做作業。",
+      "grammar": "〜なければなりません：必須做〜（義務）"
+    },
+    "tags": [
+      "obligation"
+    ]
+  },
+  {
+    "id": "grammar-N5-158",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "薬を___なければなりません。",
+      "answer": "飲ま",
+      "choices": [
+        "飲ま",
+        "飲み",
+        "飲んで",
+        "飲む"
+      ],
+      "meaning": "必須吃藥。",
+      "grammar": "〜なければなりません：動詞否定形＋なければなりません"
+    },
+    "tags": [
+      "obligation"
+    ]
+  },
+  {
+    "id": "grammar-N5-159",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "今日中に___なければなりません。",
+      "answer": "終わら",
+      "choices": [
+        "終わら",
+        "終わり",
+        "終わって",
+        "終わる"
+      ],
+      "meaning": "今天之內必須完成。",
+      "grammar": "〜なければなりません：義務表現"
+    },
+    "tags": [
+      "obligation"
+    ]
+  },
+  {
+    "id": "grammar-N5-160",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "毎日練習___ば、上手になります。",
+      "answer": "すれ",
+      "choices": [
+        "すれ",
+        "し",
+        "する",
+        "した"
+      ],
+      "meaning": "每天練習的話就會變好。",
+      "grammar": "〜ば：條件（如果〜的話）"
+    },
+    "tags": [
+      "conditional",
+      "ば"
+    ]
+  },
+  {
+    "id": "grammar-N5-161",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "早く起きれ___、遅刻しません。",
+      "answer": "ば",
+      "choices": [
+        "ば",
+        "たら",
+        "ても",
+        "から"
+      ],
+      "meaning": "如果早起的話就不會遲到。",
+      "grammar": "〜ば：條件假設"
+    },
+    "tags": [
+      "conditional",
+      "ば"
+    ]
+  },
+  {
+    "id": "grammar-N5-162",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "安けれ___、買います。",
+      "answer": "ば",
+      "choices": [
+        "ば",
+        "たら",
+        "ても",
+        "から"
+      ],
+      "meaning": "如果便宜的話就買。",
+      "grammar": "い形容詞〜ければ：假設條件"
+    },
+    "tags": [
+      "conditional",
+      "ば",
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-163",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "暇___、手伝ってください。",
+      "answer": "なら",
+      "choices": [
+        "なら",
+        "たら",
+        "ても",
+        "から"
+      ],
+      "meaning": "如果有空的話，請幫忙。",
+      "grammar": "〜なら：條件，基於對方情況的假設"
+    },
+    "tags": [
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N5-164",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "雨が降っ___、傘を持っていきます。",
+      "answer": "ても",
+      "choices": [
+        "ても",
+        "たら",
+        "から",
+        "ので"
+      ],
+      "meaning": "即使下雨，我也帶傘去。",
+      "grammar": "〜ても：即使〜也〜（讓步條件）"
+    },
+    "tags": [
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N5-165",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "忙し___、連絡してください。",
+      "answer": "くても",
+      "choices": [
+        "くても",
+        "くて",
+        "いても",
+        "いて"
+      ],
+      "meaning": "即使忙，也請聯絡。",
+      "grammar": "い形容詞〜くても：即使〜也〜"
+    },
+    "tags": [
+      "conditional",
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-166",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "難し___、諦めません。",
+      "answer": "くても",
+      "choices": [
+        "くても",
+        "くて",
+        "いても",
+        "いて"
+      ],
+      "meaning": "即使困難也不放棄。",
+      "grammar": "い形容詞〜くても：讓步條件"
+    },
+    "tags": [
+      "conditional",
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-167",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼女は来る___思います。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "が",
+        "か",
+        "も"
+      ],
+      "meaning": "我認為她會來。",
+      "grammar": "〜と思います：我認為〜（表達意見）"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-168",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "明日は晴れる___思います。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "が",
+        "か",
+        "も"
+      ],
+      "meaning": "我想明天會放晴。",
+      "grammar": "〜と思います：表達推測或意見"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-169",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼は来ない___思います。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "が",
+        "か",
+        "も"
+      ],
+      "meaning": "我認為他不會來。",
+      "grammar": "〜と思います：表達意見（否定形）"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-170",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "田中さんは「明日来る」___言いました。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "が",
+        "か",
+        "に"
+      ],
+      "meaning": "田中先生說「明天會來」。",
+      "grammar": "〜と言いました：引用他人說話"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-171",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "先生が宿題を___ように言いました。",
+      "answer": "する",
+      "choices": [
+        "する",
+        "して",
+        "した",
+        "すれ"
+      ],
+      "meaning": "老師說要做作業。",
+      "grammar": "〜ように言いました：轉述指示或命令"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-172",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "体のために、野菜を___ようにしています。",
+      "answer": "食べる",
+      "choices": [
+        "食べる",
+        "食べ",
+        "食べて",
+        "食べた"
+      ],
+      "meaning": "為了身體，努力吃蔬菜。",
+      "grammar": "〜ようにしています：努力養成某種習慣"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-173",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "病気___ように、手を洗います。",
+      "answer": "にならない",
+      "choices": [
+        "にならない",
+        "にならなく",
+        "にならず",
+        "になって"
+      ],
+      "meaning": "為了不生病，洗手。",
+      "grammar": "〜ないように：為了不〜而〜"
+    },
+    "tags": [
+      "verb-ending",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-174",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "授業に遅れ___ように、早く起きます。",
+      "answer": "ない",
+      "choices": [
+        "ない",
+        "なく",
+        "ず",
+        "て"
+      ],
+      "meaning": "為了不遲到，早起。",
+      "grammar": "〜ないように：為了不〜"
+    },
+    "tags": [
+      "verb-ending",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-175",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "急いで___ので、電車に乗り遅れました。",
+      "answer": "いなかった",
+      "choices": [
+        "いなかった",
+        "いない",
+        "いなく",
+        "いる"
+      ],
+      "meaning": "因為沒有趕，錯過了電車。",
+      "grammar": "〜ので：原因表現（較客觀）"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-176",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "疲れた___、早く寝ます。",
+      "answer": "ので",
+      "choices": [
+        "ので",
+        "から",
+        "が",
+        "て"
+      ],
+      "meaning": "因為累了，早點睡。",
+      "grammar": "〜ので：表示原因（比から更柔和）"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-177",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "頭が痛い___、学校を休みました。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "ので",
+        "が",
+        "て"
+      ],
+      "meaning": "因為頭痛，所以請假了。",
+      "grammar": "〜から：表示原因（主觀語氣）"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-178",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この本は面白い___、読んでみてください。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "ので",
+        "が",
+        "て"
+      ],
+      "meaning": "這本書很有趣，請試著讀看看。",
+      "grammar": "〜から：表示理由（主觀推薦）"
+    },
+    "tags": [
+      "verb-ending",
+      "てみる"
+    ]
+  },
+  {
+    "id": "grammar-N5-179",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "一度食べ___ください。",
+      "answer": "てみて",
+      "choices": [
+        "てみて",
+        "て",
+        "てから",
+        "ても"
+      ],
+      "meaning": "請試著吃吃看。",
+      "grammar": "〜てみてください：請試著做〜"
+    },
+    "tags": [
+      "てみる",
+      "てください"
+    ]
+  },
+  {
+    "id": "grammar-N5-180",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この薬を飲ん___ください。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "に",
+        "が",
+        "を"
+      ],
+      "meaning": "請吃這個藥。",
+      "grammar": "〜んでください：飲む的て形（んで形）"
+    },
+    "tags": [
+      "てください",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N5-181",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "このケーキは食べ___おきます。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "に",
+        "が",
+        "を"
+      ],
+      "meaning": "把這個蛋糕先吃掉（備用/保留）。",
+      "grammar": "〜ておく：事先做〜，為將來準備"
+    },
+    "tags": [
+      "ておく",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N5-182",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "旅行の前に地図を調べ___おきました。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "に",
+        "が",
+        "を"
+      ],
+      "meaning": "旅行前事先查好了地圖。",
+      "grammar": "〜ておく：事先做好準備"
+    },
+    "tags": [
+      "ておく",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N5-183",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "会議室の予約___ておきました。",
+      "answer": "をし",
+      "choices": [
+        "をし",
+        "をする",
+        "がし",
+        "がする"
+      ],
+      "meaning": "已事先預約了會議室。",
+      "grammar": "〜ておく：事先準備"
+    },
+    "tags": [
+      "ておく"
+    ]
+  },
+  {
+    "id": "grammar-N5-184",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "病院に行った___がいいですよ。",
+      "answer": "ほう",
+      "choices": [
+        "ほう",
+        "こと",
+        "もの",
+        "とき"
+      ],
+      "meaning": "最好去醫院看看喔。",
+      "grammar": "〜たほうがいい：建議做〜"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-185",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "夜遅く食べない___がいいです。",
+      "answer": "ほう",
+      "choices": [
+        "ほう",
+        "こと",
+        "もの",
+        "とき"
+      ],
+      "meaning": "最好不要太晚吃東西。",
+      "grammar": "〜ないほうがいい：建議不要做〜"
+    },
+    "tags": [
+      "verb-ending",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-186",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "毎日野菜を食べた___がいいですよ。",
+      "answer": "ほう",
+      "choices": [
+        "ほう",
+        "こと",
+        "もの",
+        "とき"
+      ],
+      "meaning": "最好每天吃蔬菜喔。",
+      "grammar": "〜たほうがいい：建議"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-187",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この問題は難し___です。",
+      "answer": "すぎ",
+      "choices": [
+        "すぎ",
+        "すぎる",
+        "すぎた",
+        "すぎて"
+      ],
+      "meaning": "這道題太難了。",
+      "grammar": "〜すぎ：太過〜，程度過度"
+    },
+    "tags": [
+      "verb-ending",
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-188",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "昨日食べ___て、お腹が痛いです。",
+      "answer": "すぎ",
+      "choices": [
+        "すぎ",
+        "すぎる",
+        "すぎた",
+        "もらい"
+      ],
+      "meaning": "昨天吃太多，肚子痛。",
+      "grammar": "〜すぎて：太過〜以至於〜"
+    },
+    "tags": [
+      "verb-ending"
+    ]
+  },
+  {
+    "id": "grammar-N5-189",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この薬は飲み___です。",
+      "answer": "やすい",
+      "choices": [
+        "やすい",
+        "にくい",
+        "たい",
+        "すぎ"
+      ],
+      "meaning": "這個藥容易吞服。",
+      "grammar": "〜やすい：容易做〜"
+    },
+    "tags": [
+      "verb-ending",
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-190",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この字は読み___です。",
+      "answer": "にくい",
+      "choices": [
+        "にくい",
+        "やすい",
+        "たい",
+        "すぎ"
+      ],
+      "meaning": "這個字很難讀。",
+      "grammar": "〜にくい：難以做〜"
+    },
+    "tags": [
+      "verb-ending",
+      "i-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-191",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼女は歌が___です。",
+      "answer": "得意",
+      "choices": [
+        "得意",
+        "苦手",
+        "上手",
+        "下手"
+      ],
+      "meaning": "她擅長唱歌。",
+      "grammar": "得意（とくい）：擅長，比上手更主觀（自信）"
+    },
+    "tags": [
+      "na-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-192",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "私は数学が___です。",
+      "answer": "苦手",
+      "choices": [
+        "苦手",
+        "得意",
+        "上手",
+        "下手"
+      ],
+      "meaning": "我不擅長數學。",
+      "grammar": "苦手（にがて）：不擅長，主觀感受"
+    },
+    "tags": [
+      "na-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-193",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この絵は___に描きました。",
+      "answer": "丁寧",
+      "choices": [
+        "丁寧",
+        "有名",
+        "元気",
+        "大切"
+      ],
+      "meaning": "這幅畫是仔細畫的。",
+      "grammar": "丁寧に（ていねいに）：有禮貌地、仔細地"
+    },
+    "tags": [
+      "na-adjective"
+    ]
+  },
+  {
+    "id": "grammar-N5-194",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "これは私に___大切なものです。",
+      "answer": "とって",
+      "choices": [
+        "とって",
+        "よって",
+        "ついて",
+        "なって"
+      ],
+      "meaning": "這對我來說是重要的東西。",
+      "grammar": "〜にとって：對〜來說"
+    },
+    "tags": [
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N5-195",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "試験の結果___よって、奨学金が決まります。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "で",
+        "を",
+        "が"
+      ],
+      "meaning": "根據考試結果決定獎學金。",
+      "grammar": "〜によって：根據〜、依〜而定"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N5-196",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "先生___、この本はとても大切です。",
+      "answer": "によると",
+      "choices": [
+        "によると",
+        "によって",
+        "にとって",
+        "について"
+      ],
+      "meaning": "根據老師說，這本書非常重要。",
+      "grammar": "〜によると：根據〜（引用消息來源）"
+    },
+    "tags": [
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N5-197",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "日本の文化___興味があります。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "で",
+        "を",
+        "が"
+      ],
+      "meaning": "對日本文化有興趣。",
+      "grammar": "〜に興味がある：對〜有興趣"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N5-198",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "彼女___会いたいです。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "を",
+        "で",
+        "が"
+      ],
+      "meaning": "想見她。",
+      "grammar": "〜に会う：見面，對象用に"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "たい"
+    ]
+  },
+  {
+    "id": "grammar-N5-199",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "友達___プレゼントをもらいました。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "から",
+        "で",
+        "を"
+      ],
+      "meaning": "從朋友那裡收到禮物。",
+      "grammar": "〜にもらう／〜からもらう：從〜那裡得到"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "もらう"
+    ]
+  },
+  {
+    "id": "grammar-N5-200",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "先生___日本語を教えてもらいました。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "から",
+        "で",
+        "を"
+      ],
+      "meaning": "請老師教了我日語。",
+      "grammar": "〜に〜てもらう：請〜幫我做〜"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "もらう"
+    ]
+  }
 ]
