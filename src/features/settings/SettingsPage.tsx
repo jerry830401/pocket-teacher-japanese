@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom'
 import { useSettings } from '@/stores/useSettings'
+import OfflineDataButton from '@/features/progress/OfflineDataButton'
 
 type AutoNextKey = 'kana' | 'vocab' | 'grammar' | 'listening'
 
@@ -29,6 +31,7 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean
 }
 
 export default function SettingsPage() {
+  const navigate = useNavigate()
   const { autoNextKana, autoNextVocab, autoNextGrammar, autoNextListening, setAutoNext } = useSettings()
 
   const values: Record<AutoNextKey, boolean> = {
@@ -41,8 +44,14 @@ export default function SettingsPage() {
   return (
     <div className="h-full overflow-y-auto pb-20 md:pb-6">
       <div className="pt-4 space-y-6">
-        <header>
+        <header className="flex items-center justify-between">
           <h1 className="text-xl font-semibold tracking-tight">設定</h1>
+          <button
+            onClick={() => navigate(-1)}
+            className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
+          >
+            ← 返回
+          </button>
         </header>
 
         <section className="space-y-1">
@@ -60,6 +69,13 @@ export default function SettingsPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        <section className="space-y-1">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 px-1">
+            離線
+          </h2>
+          <OfflineDataButton />
         </section>
       </div>
     </div>

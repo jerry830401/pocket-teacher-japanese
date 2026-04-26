@@ -132,7 +132,7 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
   const showNext = selected !== null && !(autoNext && selected === current.id)
 
   return (
-    <div className="h-full flex flex-col justify-between">
+    <div className="h-full flex flex-col gap-4 py-2">
       {/* 進度區 */}
       <div className="shrink-0 space-y-2">
         <div className="flex items-center gap-3 text-sm text-slate-500">
@@ -149,19 +149,19 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
       </div>
 
       {/* 題目卡 */}
-      <div className="flex-1 min-h-0 flex items-center justify-center py-2">
+      <div className="flex-1 min-h-0 flex items-center justify-center">
         <div className="flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 shadow-sm">
           <span className="text-5xl sm:text-6xl">{prompt}</span>
         </div>
       </div>
 
       {/* 選項 + 下一題 */}
-      <div className="shrink-0 space-y-3">
-        <div className="grid grid-cols-2 gap-2 w-full max-w-xs mx-auto">
+      <div className="shrink-0 flex flex-col items-center gap-4">
+        <div className="grid grid-cols-2 gap-2.5 w-full max-w-xs">
           {choices.map((choice) => {
             const isCorrect = choice.id === current.id
             const isPicked = choice.id === selected
-            let cls = 'rounded-xl border-2 py-2.5 text-lg font-medium transition-colors '
+            let cls = 'rounded-xl border-2 py-3 text-lg font-medium transition-colors '
             if (!selected) {
               cls += 'border-slate-200 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 cursor-pointer'
             } else if (isCorrect) {
@@ -179,15 +179,13 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
           })}
         </div>
 
-        <div className="flex justify-center">
-          <button
-            onClick={() => advance(index + 1)}
-            disabled={!showNext}
-            className={`px-6 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
-          >
-            {isLastQuestion ? '查看結果' : '下一題'}
-          </button>
-        </div>
+        <button
+          onClick={() => advance(index + 1)}
+          disabled={!showNext}
+          className={`px-8 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
+        >
+          {isLastQuestion ? '查看結果' : '下一題'}
+        </button>
       </div>
     </div>
   )

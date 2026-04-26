@@ -135,7 +135,7 @@ export default function ListeningQuiz({ cards }: Props) {
   const showNext = selected !== null && !(autoNext && selected === current.id)
 
   return (
-    <div className="h-full flex flex-col justify-between">
+    <div className="h-full flex flex-col gap-4 py-2">
       {/* 進度區 */}
       <div className="shrink-0 space-y-2">
         <div className="flex items-center gap-3 text-sm text-slate-500">
@@ -152,8 +152,8 @@ export default function ListeningQuiz({ cards }: Props) {
       </div>
 
       {/* 題目卡 */}
-      <div className="flex-1 min-h-0 flex items-center justify-center py-2">
-        <div className="flex flex-col items-center justify-center w-56 gap-3 rounded-2xl border-2 border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-950 shadow-sm px-4 py-4">
+      <div className="flex-1 min-h-0 flex items-center justify-center">
+        <div className="flex flex-col items-center justify-center w-56 h-44 gap-3 rounded-2xl border-2 border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-950 shadow-sm px-4 py-4">
           <button
             onClick={playCurrentWord}
             className="flex items-center justify-center w-14 h-14 rounded-full border-2 transition-colors border-orange-400 dark:border-orange-500 bg-white dark:bg-orange-900 text-orange-500 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-800 cursor-pointer"
@@ -168,23 +168,21 @@ export default function ListeningQuiz({ cards }: Props) {
             ? <p className="text-xs text-red-500">語音播放失敗，請再試一次</p>
             : <p className="text-xs text-orange-400 dark:text-orange-500">點擊播放發音</p>
           }
-          {selected && (
-            <div className="flex flex-col items-center gap-0.5">
-              <span className="text-xl font-medium text-orange-700 dark:text-orange-300">{current.payload.word}</span>
-              <span className="text-sm text-orange-500 dark:text-orange-400">{current.payload.reading}</span>
-              <span className="text-sm text-orange-400 dark:text-orange-500">{current.payload.meaning}</span>
-            </div>
-          )}
+          <div className={`flex flex-col items-center gap-0.5 transition-opacity ${selected ? 'opacity-100' : 'opacity-0'}`}>
+            <span className="text-xl font-medium text-orange-700 dark:text-orange-300">{current.payload.word}</span>
+            <span className="text-sm text-orange-500 dark:text-orange-400">{current.payload.reading}</span>
+            <span className="text-sm text-orange-400 dark:text-orange-500">{current.payload.meaning}</span>
+          </div>
         </div>
       </div>
 
       {/* 選項 + 下一題 */}
-      <div className="shrink-0 space-y-3">
-        <div className="grid grid-cols-2 gap-2 w-full max-w-xs mx-auto">
+      <div className="shrink-0 flex flex-col items-center gap-4">
+        <div className="grid grid-cols-2 gap-2.5 w-full max-w-xs">
           {choices.map((choice) => {
             const isCorrect = choice.id === current.id
             const isPicked = choice.id === selected
-            let cls = 'rounded-xl border-2 py-2.5 px-2 text-sm font-medium transition-colors '
+            let cls = 'rounded-xl border-2 py-3 px-2 text-sm font-medium transition-colors '
             if (!selected) {
               cls += 'border-slate-200 dark:border-slate-700 hover:border-orange-400 dark:hover:border-orange-500 cursor-pointer'
             } else if (isCorrect) {
@@ -203,15 +201,13 @@ export default function ListeningQuiz({ cards }: Props) {
           })}
         </div>
 
-        <div className="flex justify-center">
-          <button
-            onClick={() => advance(index + 1)}
-            disabled={!showNext}
-            className={`px-6 py-2 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
-          >
-            {isLastQuestion ? '查看結果' : '下一題'}
-          </button>
-        </div>
+        <button
+          onClick={() => advance(index + 1)}
+          disabled={!showNext}
+          className={`px-8 py-2.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
+        >
+          {isLastQuestion ? '查看結果' : '下一題'}
+        </button>
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useLocation } from 'react-router-dom'
 
 const navItems = [
   {
@@ -46,6 +46,9 @@ const SettingsIcon = () => (
 )
 
 export default function Layout() {
+  const { pathname } = useLocation()
+  const isSettings = pathname === '/settings'
+
   return (
     <div className="h-dvh flex flex-col overflow-hidden">
 
@@ -76,38 +79,28 @@ export default function Layout() {
             ))}
           </ul>
           {/* 設定按鈕（桌機） */}
-          <NavLink
-            to="/settings"
-            className={({ isActive }) =>
-              [
-                'flex items-center justify-center w-8 h-8 rounded-md transition-colors',
-                isActive
-                  ? 'text-indigo-600 dark:text-indigo-400'
-                  : 'text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800',
-              ].join(' ')
-            }
-            aria-label="設定"
-          >
-            <SettingsIcon />
-          </NavLink>
+          {!isSettings && (
+            <NavLink
+              to="/settings"
+              className="flex items-center justify-center w-8 h-8 rounded-md transition-colors text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+              aria-label="設定"
+            >
+              <SettingsIcon />
+            </NavLink>
+          )}
         </div>
       </header>
 
       {/* ── 手機右上角設定按鈕（fixed，md 以下顯示）── */}
-      <NavLink
-        to="/settings"
-        className={({ isActive }) =>
-          [
-            'md:hidden fixed top-3 right-4 z-40 flex items-center justify-center w-9 h-9 rounded-full transition-colors',
-            isActive
-              ? 'text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-950'
-              : 'text-slate-500 dark:text-slate-400 bg-white/80 dark:bg-slate-950/80 backdrop-blur',
-          ].join(' ')
-        }
-        aria-label="設定"
-      >
-        <SettingsIcon />
-      </NavLink>
+      {!isSettings && (
+        <NavLink
+          to="/settings"
+          className="md:hidden fixed top-3 right-4 z-40 flex items-center justify-center w-9 h-9 rounded-full transition-colors text-slate-500 dark:text-slate-400 bg-white/80 dark:bg-slate-950/80 backdrop-blur"
+          aria-label="設定"
+        >
+          <SettingsIcon />
+        </NavLink>
+      )}
 
       {/* ── 主要內容區 ── */}
       <main className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-5xl px-4 md:py-6">
