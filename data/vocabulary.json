@@ -98,5 +98,15 @@
   {"id":"vocab-N5-097","type":"vocabulary","level":"N5","payload":{"word":"少し","reading":"すこし","meaning":"一點點","pos":"adverb"},"tags":[]},
   {"id":"vocab-N5-098","type":"vocabulary","level":"N5","payload":{"word":"もう","reading":"もう","meaning":"已經、再","pos":"adverb"},"tags":[]},
   {"id":"vocab-N5-099","type":"vocabulary","level":"N5","payload":{"word":"まだ","reading":"まだ","meaning":"還、仍然","pos":"adverb"},"tags":[]},
-  {"id":"vocab-N5-100","type":"vocabulary","level":"N5","payload":{"word":"一緒に","reading":"いっしょに","meaning":"一起","pos":"adverb"},"tags":[]}
+  {"id":"vocab-N5-100","type":"vocabulary","level":"N5","payload":{"word":"一緒に","reading":"いっしょに","meaning":"一起","pos":"adverb"},"tags":[]},
+  {"id":"vocab-N5-101","type":"vocabulary","level":"N5","payload":{"word":"名前","reading":"なまえ","meaning":"名字","pos":"noun"},"tags":["person"]},
+  {"id":"vocab-N5-102","type":"vocabulary","level":"N5","payload":{"word":"国","reading":"くに","meaning":"國家、國","pos":"noun"},"tags":["place"]},
+  {"id":"vocab-N5-103","type":"vocabulary","level":"N5","payload":{"word":"言葉","reading":"ことば","meaning":"語言、詞語","pos":"noun"},"tags":["object"]},
+  {"id":"vocab-N5-104","type":"vocabulary","level":"N5","payload":{"word":"天気","reading":"てんき","meaning":"天氣","pos":"noun"},"tags":["weather"]},
+  {"id":"vocab-N5-105","type":"vocabulary","level":"N5","payload":{"word":"山","reading":"やま","meaning":"山","pos":"noun"},"tags":["place"]},
+  {"id":"vocab-N5-106","type":"vocabulary","level":"N5","payload":{"word":"川","reading":"かわ","meaning":"河川","pos":"noun"},"tags":["place"]},
+  {"id":"vocab-N5-107","type":"vocabulary","level":"N5","payload":{"word":"海","reading":"うみ","meaning":"海","pos":"noun"},"tags":["place"]},
+  {"id":"vocab-N5-108","type":"vocabulary","level":"N5","payload":{"word":"花","reading":"はな","meaning":"花","pos":"noun"},"tags":["object"]},
+  {"id":"vocab-N5-109","type":"vocabulary","level":"N5","payload":{"word":"犬","reading":"いぬ","meaning":"狗","pos":"noun"},"tags":["object"]},
+  {"id":"vocab-N5-110","type":"vocabulary","level":"N5","payload":{"word":"猫","reading":"ねこ","meaning":"貓","pos":"noun"},"tags":["object"]}
 ]
