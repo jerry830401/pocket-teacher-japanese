@@ -1,9 +1,13 @@
 import type { GrammarCard, JlptLevel } from './types'
 
+let cache: GrammarCard[] | null = null
+
 export async function loadGrammar(): Promise<GrammarCard[]> {
+  if (cache) return cache
   const res = await fetch(`${import.meta.env.BASE_URL}data/grammar.json`)
   if (!res.ok) throw new Error(`Failed to load grammar data: ${res.status}`)
-  return res.json() as Promise<GrammarCard[]>
+  cache = await res.json() as GrammarCard[]
+  return cache
 }
 
 export function filterByLevel(cards: GrammarCard[], level: JlptLevel): GrammarCard[] {
