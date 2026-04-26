@@ -71,10 +71,10 @@ export default function ProgressPage() {
   const streak = calcStreak(reviewedDays)
 
   return (
-    <div className="space-y-6">
-      <header className="space-y-1">
-        <h1 className="text-2xl font-semibold tracking-tight">進度</h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400">學習統計與 SRS 複習狀態</p>
+    <div className="h-full overflow-y-auto pb-20 md:pb-6">
+      <div className="pt-4 space-y-6">
+      <header className="pr-10 md:pr-0">
+        <h1 className="text-xl font-semibold tracking-tight">進度</h1>
       </header>
 
       {/* 總覽 */}
@@ -111,6 +111,7 @@ export default function ProgressPage() {
           <p className="text-sm text-slate-400 py-4 text-center">還沒有練習記錄，去各模組答題後就會顯示統計。</p>
         )}
       </section>
+      </div>
     </div>
   )
 }

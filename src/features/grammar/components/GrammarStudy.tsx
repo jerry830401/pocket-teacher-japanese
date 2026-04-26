@@ -35,7 +35,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
 
   if (batchDone) {
     return (
-      <div className="flex flex-col items-center gap-6 py-4">
+      <div className="h-full flex flex-col items-center justify-center gap-4">
         <p className="text-slate-500 text-sm">已瀏覽 {BATCH_SIZE} 個文法項目</p>
         <button
           onClick={() => startBatch(cards)}
@@ -51,33 +51,35 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
   const [before, after] = splitSentence(current.payload.sentence)
 
   return (
-    <div className="flex flex-col items-center gap-6">
-      {/* 進度 */}
-      <div className="text-sm text-slate-500">第 {index + 1} / {deck.length} 張</div>
-
-      {/* 進度條 */}
-      <div className="w-full max-w-sm h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
-        <div
-          className="h-full rounded-full bg-teal-500 transition-all duration-300"
-          style={{ width: `${(index + 1) / deck.length * 100}%` }}
-        />
+    <div className="h-full flex flex-col justify-between">
+      {/* 進度區 */}
+      <div className="shrink-0 space-y-2">
+        <div className="text-sm text-slate-500">第 {index + 1} / {deck.length} 張</div>
+        <div className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+          <div
+            className="h-full rounded-full bg-teal-500 transition-all duration-300"
+            style={{ width: `${(index + 1) / deck.length * 100}%` }}
+          />
+        </div>
       </div>
 
       {/* 卡片 */}
-      <div className="w-full max-w-sm rounded-2xl border-2 border-teal-200 dark:border-teal-800 bg-teal-50 dark:bg-teal-950 px-5 py-5 space-y-3">
-        <p className="text-base font-medium leading-relaxed">
-          {before}
-          <span className="inline-block min-w-10 mx-1 px-2 rounded border-b-2 border-teal-500 text-teal-600 dark:text-teal-300 text-center">
-            {current.payload.answer}
-          </span>
-          {after}
-        </p>
-        <p className="text-sm text-teal-600 dark:text-teal-300">{current.payload.meaning}</p>
-        <p className="text-xs text-teal-400 dark:text-teal-500">{current.payload.grammar}</p>
+      <div className="flex-1 min-h-0 flex items-center justify-center py-2">
+        <div className="w-full max-w-sm rounded-2xl border-2 border-teal-200 dark:border-teal-800 bg-teal-50 dark:bg-teal-950 px-5 py-5 space-y-3">
+          <p className="text-base font-medium leading-relaxed">
+            {before}
+            <span className="inline-block min-w-10 mx-1 px-2 rounded border-b-2 border-teal-500 text-teal-600 dark:text-teal-300 text-center">
+              {current.payload.answer}
+            </span>
+            {after}
+          </p>
+          <p className="text-sm text-teal-600 dark:text-teal-300">{current.payload.meaning}</p>
+          <p className="text-xs text-teal-400 dark:text-teal-500">{current.payload.grammar}</p>
+        </div>
       </div>
 
       {/* 導覽按鈕 */}
-      <div className="flex items-center gap-3">
+      <div className="shrink-0 flex items-center justify-center gap-3">
         <button
           onClick={() => setIndex(index - 1)}
           disabled={index === 0}

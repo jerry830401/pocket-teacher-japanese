@@ -6,6 +6,7 @@ const LearnPage    = lazy(() => import('@/pages/LearnPage'))
 const QuizPage     = lazy(() => import('@/pages/QuizPage'))
 const ReviewPage   = lazy(() => import('@/pages/ReviewPage'))
 const ProgressPage = lazy(() => import('@/features/progress/ProgressPage'))
+const SettingsPage = lazy(() => import('@/features/settings/SettingsPage'))
 
 function Loading() {
   return (
@@ -49,6 +50,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <ProgressPage />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/settings"
+          element={
+            <Suspense fallback={<Loading />}>
+              <SettingsPage />
             </Suspense>
           }
         />

@@ -11,7 +11,6 @@ import VocabQuiz from '@/features/vocabulary/components/VocabQuiz'
 import GrammarQuiz from '@/features/grammar/components/GrammarQuiz'
 import FlashCardQuiz from '@/features/kana/components/FlashCardQuiz'
 
-// 曾答錯且尚未熟悉的卡片
 function isWeak(card: SrsCard) {
   return card.easeFactor < 2.5 && card.repetitions < 3
 }
@@ -63,39 +62,43 @@ export default function ReviewPage() {
       const idSet = new Set(ids)
       if (subject === 'vocab') {
         const all = await loadVocabulary()
-        const cards = all.filter((c) => idSet.has(c.id))
-        setReviewState({ status: 'ready', subject: 'vocab', cards })
+        setReviewState({ status: 'ready', subject: 'vocab', cards: all.filter((c) => idSet.has(c.id)) })
       } else if (subject === 'grammar') {
         const all = await loadGrammar()
-        const cards = all.filter((c) => idSet.has(c.id))
-        setReviewState({ status: 'ready', subject: 'grammar', cards })
+        setReviewState({ status: 'ready', subject: 'grammar', cards: all.filter((c) => idSet.has(c.id)) })
       } else {
         const all = await loadKana()
-        // kana cardId format: "kana-h-a" → strip "kana-" to match KanaChar.id
         const rawIds = new Set(ids.map((id) => id.replace(/^kana-/, '')))
-        const chars = all.filter((c) => rawIds.has(c.id))
-        setReviewState({ status: 'ready', subject: 'kana', chars })
+        setReviewState({ status: 'ready', subject: 'kana', chars: all.filter((c) => rawIds.has(c.id)) })
       }
     } catch {
       setReviewState({ status: 'error' })
     }
   }
 
-  // ── 複習中畫面 ──
   if (reviewState.status === 'loading') {
-    return <p className="text-slate-400 py-10 text-center">載入中⋯</p>
+    return (
+      <div className="h-full flex items-center justify-center pb-16 md:pb-0">
+        <p className="text-slate-400">載入中⋯</p>
+      </div>
+    )
   }
   if (reviewState.status === 'error') {
-    return <p className="text-red-500 text-sm">資料載入失敗，請重新整理頁面</p>
+    return (
+      <div className="h-full flex items-center justify-center pb-16 md:pb-0">
+        <p className="text-red-500 text-sm">資料載入失敗，請重新整理頁面</p>
+      </div>
+    )
   }
+
   if (reviewState.status === 'ready') {
     const meta = SUBJECT_META[reviewState.subject]
     return (
-      <div className="space-y-6">
-        <header className="flex items-center justify-between">
-          <div className="space-y-1">
-            <h1 className="text-2xl font-semibold tracking-tight">錯題複習</h1>
-            <p className="text-sm text-slate-500 dark:text-slate-400">{meta.label}</p>
+      <div className="h-full flex flex-col pb-16 md:pb-0">
+        <div className="shrink-0 pt-4 pb-3 flex items-center justify-between pr-10 md:pr-0">
+          <div>
+            <h1 className="text-xl font-semibold tracking-tight">錯題複習</h1>
+            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{meta.label}</p>
           </div>
           <button
             onClick={() => setReviewState({ status: 'idle' })}
@@ -103,74 +106,77 @@ export default function ReviewPage() {
           >
             ← 返回
           </button>
-        </header>
+        </div>
 
-        {reviewState.subject === 'vocab' && (() => {
-          if (reviewState.cards.length < 4) return (
-            <p className="text-sm text-slate-500">錯題不足 4 張，多練幾輪後再回來！</p>
-          )
-          return <VocabQuiz cards={reviewState.cards} />
-        })()}
-        {reviewState.subject === 'grammar' && (() => {
-          if (reviewState.cards.length < 4) return (
-            <p className="text-sm text-slate-500">錯題不足 4 張，多練幾輪後再回來！</p>
-          )
-          return <GrammarQuiz cards={reviewState.cards} />
-        })()}
-        {reviewState.subject === 'kana' && (() => {
-          if (reviewState.chars.length < 4) return (
-            <p className="text-sm text-slate-500">錯題不足 4 張，多練幾輪後再回來！</p>
-          )
-          return <FlashCardQuiz chars={reviewState.chars} mode="kana→romaji" />
-        })()}
+        <div className="flex-1 min-h-0">
+          {reviewState.subject === 'vocab' && (() => {
+            if (reviewState.cards.length < 4) return (
+              <p className="text-sm text-slate-500">錯題不足 4 張，多練幾輪後再回來！</p>
+            )
+            return <VocabQuiz cards={reviewState.cards} />
+          })()}
+          {reviewState.subject === 'grammar' && (() => {
+            if (reviewState.cards.length < 4) return (
+              <p className="text-sm text-slate-500">錯題不足 4 張，多練幾輪後再回來！</p>
+            )
+            return <GrammarQuiz cards={reviewState.cards} />
+          })()}
+          {reviewState.subject === 'kana' && (() => {
+            if (reviewState.chars.length < 4) return (
+              <p className="text-sm text-slate-500">錯題不足 4 張，多練幾輪後再回來！</p>
+            )
+            return <FlashCardQuiz chars={reviewState.chars} mode="kana→romaji" />
+          })()}
+        </div>
       </div>
     )
   }
 
-  // ── 錯題列表畫面 ──
+  // 錯題列表
   return (
-    <div className="space-y-6">
-      <header className="space-y-1">
-        <h1 className="text-2xl font-semibold tracking-tight">錯題本</h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400">曾答錯且尚未熟悉的卡片</p>
-      </header>
+    <div className="h-full flex flex-col pb-16 md:pb-0">
+      <div className="shrink-0 pt-4 pb-3 pr-10 md:pr-0">
+        <h1 className="text-xl font-semibold tracking-tight">錯題本</h1>
+      </div>
 
-      {pageState.status === 'loading' && <p className="text-slate-400">載入中⋯</p>}
-      {pageState.status === 'error' && <p className="text-red-500 text-sm">無法讀取學習記錄</p>}
-      {pageState.status === 'ready' && (() => {
-        const { weakIds } = pageState
-        const total = weakIds.kana.length + weakIds.vocab.length + weakIds.grammar.length
-        if (total === 0) {
+      <div className="flex-1 min-h-0 overflow-y-auto">
+        {pageState.status === 'loading' && <p className="text-slate-400">載入中⋯</p>}
+        {pageState.status === 'error' && <p className="text-red-500 text-sm">無法讀取學習記錄</p>}
+        {pageState.status === 'ready' && (() => {
+          const { weakIds } = pageState
+          const total = weakIds.kana.length + weakIds.vocab.length + weakIds.grammar.length
+          if (total === 0) {
+            return (
+              <div className="rounded-lg border border-dashed border-slate-300 dark:border-slate-700 p-8 text-center text-sm text-slate-500">
+                目前沒有錯題，繼續保持！
+              </div>
+            )
+          }
           return (
-            <div className="rounded-lg border border-dashed border-slate-300 dark:border-slate-700 p-8 text-center text-sm text-slate-500">
-              目前沒有錯題，繼續保持！
+            <div className="space-y-3">
+              {(['kana', 'vocab', 'grammar'] as const).map((subject) => {
+                const count = weakIds[subject].length
+                if (count === 0) return null
+                const meta = SUBJECT_META[subject]
+                return (
+                  <div key={subject} className={`rounded-xl border ${meta.border} ${meta.bg} px-4 py-3 flex items-center justify-between`}>
+                    <div>
+                      <p className={`text-sm font-medium ${meta.color}`}>{meta.label}</p>
+                      <p className="text-xs text-slate-500 mt-0.5">{count} 張待加強</p>
+                    </div>
+                    <button
+                      onClick={() => startReview(subject, weakIds[subject])}
+                      className={`px-4 py-1.5 rounded-lg ${meta.btnColor} text-white text-xs font-medium transition-colors`}
+                    >
+                      開始複習
+                    </button>
+                  </div>
+                )
+              })}
             </div>
           )
-        }
-        return (
-          <div className="space-y-3">
-            {(['kana', 'vocab', 'grammar'] as const).map((subject) => {
-              const count = weakIds[subject].length
-              if (count === 0) return null
-              const meta = SUBJECT_META[subject]
-              return (
-                <div key={subject} className={`rounded-xl border ${meta.border} ${meta.bg} px-4 py-3 flex items-center justify-between`}>
-                  <div>
-                    <p className={`text-sm font-medium ${meta.color}`}>{meta.label}</p>
-                    <p className="text-xs text-slate-500 mt-0.5">{count} 張待加強</p>
-                  </div>
-                  <button
-                    onClick={() => startReview(subject, weakIds[subject])}
-                    className={`px-4 py-1.5 rounded-lg ${meta.btnColor} text-white text-xs font-medium transition-colors`}
-                  >
-                    開始複習
-                  </button>
-                </div>
-              )
-            })}
-          </div>
-        )
-      })()}
+        })()}
+      </div>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import { useReducer, useState, useEffect, useRef } from 'react'
 import type { KanaChar } from '../types'
 import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
+import { useSettings } from '@/stores/useSettings'
 
 const ROUND_SIZE = 20
 
@@ -56,6 +57,7 @@ function buildRound(chars: KanaChar[]): { deck: KanaChar[]; choices: KanaChar[] 
 }
 
 export default function FlashCardQuiz({ chars, mode }: Props) {
+  const autoNext = useSettings((s) => s.autoNextKana)
   const initialRound = useRef(buildRound(chars))
   const [state, dispatch] = useReducer(reducer, {
     deck: initialRound.current.deck,
@@ -64,10 +66,8 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
     selected: null,
     correct: 0,
   })
-  const [autoNext, setAutoNext] = useState(() => localStorage.getItem('autoNext:kana') === 'true')
   const [roundResult, setRoundResult] = useState<{ correct: number } | null>(null)
 
-  // Reset when chars or mode changes
   useEffect(() => {
     const round = buildRound(chars)
     dispatch({ type: 'START', deck: round.deck, choices: round.choices })
@@ -102,17 +102,12 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
     }
   }
 
-  // Round summary screen
   if (roundResult !== null) {
     const pct = Math.round((roundResult.correct / deck.length) * 100)
     return (
-      <div className="flex flex-col items-center gap-6 py-4">
-        <div className="flex flex-col items-center gap-1">
-          <span className="text-5xl font-bold text-indigo-600 dark:text-indigo-400">{pct}%</span>
-          <span className="text-slate-500 text-sm">
-            {deck.length} 題中答對 {roundResult.correct} 題
-          </span>
-        </div>
+      <div className="h-full flex flex-col items-center justify-center gap-4">
+        <span className="text-5xl font-bold text-indigo-600 dark:text-indigo-400">{pct}%</span>
+        <span className="text-slate-500 text-sm">{deck.length} 題中答對 {roundResult.correct} 題</span>
         <div className="w-full max-w-xs rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-sm text-slate-500 text-center">
           {pct === 100 && '完美！全部答對 🎉'}
           {pct >= 80 && pct < 100 && '答得很好，再接再厲！'}
@@ -137,79 +132,63 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
   const showNext = selected !== null && !(autoNext && selected === current.id)
 
   return (
-    <div className="flex flex-col items-center gap-6">
-      {/* 進度 */}
-      <div className="flex items-center gap-3 text-sm text-slate-500">
-        <span>第 {index + 1} / {deck.length} 題</span>
-        <span className="text-slate-300 dark:text-slate-600">·</span>
-        <span>正確 {correct}</span>
-      </div>
-
-      {/* 進度條 */}
-      <div className="w-full max-w-xs h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
-        <div
-          className="h-full rounded-full bg-indigo-500 transition-all duration-300"
-          style={{ width: `${((index + (selected ? 1 : 0)) / deck.length) * 100}%` }}
-        />
+    <div className="h-full flex flex-col justify-between">
+      {/* 進度區 */}
+      <div className="shrink-0 space-y-2">
+        <div className="flex items-center gap-3 text-sm text-slate-500">
+          <span>第 {index + 1} / {deck.length} 題</span>
+          <span className="text-slate-300 dark:text-slate-600">·</span>
+          <span>正確 {correct}</span>
+        </div>
+        <div className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+          <div
+            className="h-full rounded-full bg-indigo-500 transition-all duration-300"
+            style={{ width: `${((index + (selected ? 1 : 0)) / deck.length) * 100}%` }}
+          />
+        </div>
       </div>
 
       {/* 題目卡 */}
-      <div className="flex items-center justify-center w-40 h-40 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 shadow-sm">
-        <span className="text-6xl">{prompt}</span>
+      <div className="flex-1 min-h-0 flex items-center justify-center py-2">
+        <div className="flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 shadow-sm">
+          <span className="text-5xl sm:text-6xl">{prompt}</span>
+        </div>
       </div>
 
-      {/* 選項 */}
-      <div className="grid grid-cols-2 gap-3 w-full max-w-xs">
-        {choices.map((choice) => {
-          const isCorrect = choice.id === current.id
-          const isPicked = choice.id === selected
-          let cls = 'rounded-xl border-2 py-3 text-lg font-medium transition-colors '
-          if (!selected) {
-            cls += 'border-slate-200 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 cursor-pointer'
-          } else if (isCorrect) {
-            cls += 'border-green-500 bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300'
-          } else if (isPicked) {
-            cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400'
-          } else {
-            cls += 'border-slate-200 dark:border-slate-700 opacity-40'
-          }
-          return (
-            <button key={choice.id} className={cls} onClick={() => pick(choice)}>
-              {answerKey(choice)}
-            </button>
-          )
-        })}
+      {/* 選項 + 下一題 */}
+      <div className="shrink-0 space-y-3">
+        <div className="grid grid-cols-2 gap-2 w-full max-w-xs mx-auto">
+          {choices.map((choice) => {
+            const isCorrect = choice.id === current.id
+            const isPicked = choice.id === selected
+            let cls = 'rounded-xl border-2 py-2.5 text-lg font-medium transition-colors '
+            if (!selected) {
+              cls += 'border-slate-200 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 cursor-pointer'
+            } else if (isCorrect) {
+              cls += 'border-green-500 bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300'
+            } else if (isPicked) {
+              cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400'
+            } else {
+              cls += 'border-slate-200 dark:border-slate-700 opacity-40'
+            }
+            return (
+              <button key={choice.id} className={cls} onClick={() => pick(choice)}>
+                {answerKey(choice)}
+              </button>
+            )
+          })}
+        </div>
+
+        <div className="flex justify-center">
+          <button
+            onClick={() => advance(index + 1)}
+            disabled={!showNext}
+            className={`px-6 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
+          >
+            {isLastQuestion ? '查看結果' : '下一題'}
+          </button>
+        </div>
       </div>
-
-      {/* 下一題 */}
-      <button
-        onClick={() => advance(index + 1)}
-        disabled={!showNext}
-        className={`mt-2 px-6 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
-      >
-        {isLastQuestion ? '查看結果' : '下一題'}
-      </button>
-
-      {/* 自動下一題開關 */}
-      <label className="flex items-center gap-2 text-sm text-slate-500 cursor-pointer select-none">
-        <span>答對自動下一題</span>
-        <button
-          role="switch"
-          aria-checked={autoNext}
-          onClick={() => setAutoNext((v) => { const next = !v; localStorage.setItem('autoNext:kana', String(next)); return next })}
-          className={[
-            'relative inline-flex h-5 w-9 shrink-0 rounded-full border-2 border-transparent transition-colors duration-200',
-            autoNext ? 'bg-indigo-600' : 'bg-slate-300 dark:bg-slate-600',
-          ].join(' ')}
-        >
-          <span
-            className={[
-              'inline-block h-4 w-4 rounded-full bg-white shadow transition-transform duration-200',
-              autoNext ? 'translate-x-4' : 'translate-x-0',
-            ].join(' ')}
-          />
-        </button>
-      </label>
     </div>
   )
 }

@@ -20,7 +20,6 @@ const SUBJECTS: { id: Subject; label: string; icon: string }[] = [
   { id: 'grammar', label: '文法',   icon: '文' },
 ]
 
-// ── Kana section ─────────────────────────────────────────────
 function KanaSection() {
   const [chars, setChars] = useState<KanaChar[]>([])
   const [kanaType, setKanaType] = useState<KanaType>('hiragana')
@@ -38,15 +37,16 @@ function KanaSection() {
   const filtered = filterByType(chars, kanaType).filter((c) => c.group !== 'combo')
 
   return (
-    <div className="space-y-4">
-      <div className="flex items-center gap-3 flex-wrap">
+    // 五十音允許捲動
+    <div className="h-full overflow-y-auto pb-4">
+      <div className="flex items-center gap-3 flex-wrap pb-4">
         <div className="flex gap-2">
           {(['hiragana', 'katakana'] as const).map((t) => (
             <button
               key={t}
               onClick={() => setKanaType(t)}
               className={[
-                'px-4 py-1.5 rounded-full text-sm font-medium transition-colors',
+                'px-3 py-1 rounded-full text-sm font-medium transition-colors',
                 kanaType === t
                   ? 'bg-indigo-600 text-white'
                   : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700',
@@ -74,7 +74,6 @@ function KanaSection() {
   )
 }
 
-// ── Shared level selector ─────────────────────────────────────
 function LevelSelector({
   allCards, level, onChange, color,
 }: {
@@ -89,7 +88,7 @@ function LevelSelector({
   }[color]
 
   return (
-    <div className="flex gap-2 flex-wrap">
+    <div className="flex gap-1.5 flex-wrap">
       {LEVELS.map((l) => {
         const count = allCards.filter((c) => c.level === l).length
         const available = count > 0
@@ -99,7 +98,7 @@ function LevelSelector({
             onClick={() => available && onChange(l)}
             disabled={!available}
             className={[
-              'px-4 py-1.5 rounded-full text-sm font-medium transition-colors',
+              'px-3 py-1 rounded-full text-xs font-medium transition-colors',
               level === l
                 ? active
                 : available
@@ -108,7 +107,7 @@ function LevelSelector({
             ].join(' ')}
           >
             {l}
-            {available && <span className="ml-1 text-xs opacity-60">{count}</span>}
+            {available && <span className="ml-1 opacity-60">{count}</span>}
           </button>
         )
       })}
@@ -116,32 +115,32 @@ function LevelSelector({
   )
 }
 
-// ── Vocab section ─────────────────────────────────────────────
 function VocabSection({ allCards }: { allCards: VocabCard[] }) {
   const [level, setLevel] = useState<JlptLevel>('N5')
   const cards = filterVocab(allCards, level)
   return (
-    <div className="space-y-4">
-      <LevelSelector allCards={allCards} level={level} onChange={setLevel} color="indigo" />
-      {cards.length > 0
-        ? <VocabStudy cards={cards} />
-        : <EmptyLevel level={level} />
-      }
+    <div className="h-full flex flex-col">
+      <div className="shrink-0 pb-3">
+        <LevelSelector allCards={allCards} level={level} onChange={setLevel} color="indigo" />
+      </div>
+      <div className="flex-1 min-h-0">
+        {cards.length > 0 ? <VocabStudy cards={cards} /> : <EmptyLevel level={level} />}
+      </div>
     </div>
   )
 }
 
-// ── Grammar section ───────────────────────────────────────────
 function GrammarSection({ allCards }: { allCards: GrammarCard[] }) {
   const [level, setLevel] = useState<JlptLevel>('N5')
   const cards = filterGrammar(allCards, level)
   return (
-    <div className="space-y-4">
-      <LevelSelector allCards={allCards} level={level} onChange={setLevel} color="teal" />
-      {cards.length > 0
-        ? <GrammarStudy cards={cards} />
-        : <EmptyLevel level={level} />
-      }
+    <div className="h-full flex flex-col">
+      <div className="shrink-0 pb-3">
+        <LevelSelector allCards={allCards} level={level} onChange={setLevel} color="teal" />
+      </div>
+      <div className="flex-1 min-h-0">
+        {cards.length > 0 ? <GrammarStudy cards={cards} /> : <EmptyLevel level={level} />}
+      </div>
     </div>
   )
 }
@@ -154,7 +153,6 @@ function EmptyLevel({ level }: { level: JlptLevel }) {
   )
 }
 
-// ── Page ──────────────────────────────────────────────────────
 export default function LearnPage() {
   const [subject, setSubject] = useState<Subject>('kana')
   const [vocabCards, setVocabCards] = useState<VocabCard[]>([])
@@ -172,20 +170,20 @@ export default function LearnPage() {
   }, [])
 
   return (
-    <div className="space-y-6">
-      <header className="space-y-1">
-        <h1 className="text-2xl font-semibold tracking-tight">學習</h1>
-        <p className="text-sm text-slate-500 dark:text-slate-400">瀏覽單字、文法規則與假名對照表</p>
-      </header>
+    <div className="h-full flex flex-col pb-16 md:pb-0">
+      {/* 頁首 */}
+      <div className="shrink-0 pt-4 pb-2 pr-10 md:pr-0">
+        <h1 className="text-xl font-semibold tracking-tight">學習</h1>
+      </div>
 
       {/* 科目 tabs */}
-      <div className="flex gap-1 border-b border-slate-200 dark:border-slate-800">
+      <div className="shrink-0 flex gap-1 border-b border-slate-200 dark:border-slate-800">
         {SUBJECTS.map((s) => (
           <button
             key={s.id}
             onClick={() => setSubject(s.id)}
             className={[
-              'flex items-center gap-1.5 px-3 py-2 text-sm font-medium border-b-2 -mb-px transition-colors',
+              'flex items-center gap-1 px-2.5 py-2 text-sm font-medium border-b-2 -mb-px transition-colors',
               subject === s.id
                 ? 'border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400'
                 : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300',
@@ -197,11 +195,14 @@ export default function LearnPage() {
         ))}
       </div>
 
-      {dataError && <p className="text-red-500 text-sm">{dataError}</p>}
+      {dataError && <p className="shrink-0 text-red-500 text-sm pt-2">{dataError}</p>}
 
-      {subject === 'kana'    && <KanaSection />}
-      {subject === 'vocab'   && <VocabSection allCards={vocabCards} />}
-      {subject === 'grammar' && <GrammarSection allCards={grammarCards} />}
+      {/* 內容區 */}
+      <div className="flex-1 min-h-0 pt-3">
+        {subject === 'kana'    && <KanaSection />}
+        {subject === 'vocab'   && <VocabSection allCards={vocabCards} />}
+        {subject === 'grammar' && <GrammarSection allCards={grammarCards} />}
+      </div>
     </div>
   )
 }
