@@ -1,14 +1,25 @@
 import Dexie, { type EntityTable } from 'dexie'
 import type { SrsCard } from '@/lib/srs/types'
 
+export interface OfflineDataRecord {
+  key: string      // 'vocab' | 'grammar'
+  data: unknown[]
+  savedAt: number  // timestamp ms
+}
+
 class PtjpDb extends Dexie {
   srsCards!: EntityTable<SrsCard, 'cardId'>
+  offlineData!: EntityTable<OfflineDataRecord, 'key'>
 
   constructor() {
     super('ptjp')
     this.version(1).stores({
       // cardId is the primary key; dueAt is indexed for efficient due-card queries
       srsCards: 'cardId, dueAt',
+    })
+    this.version(2).stores({
+      srsCards: 'cardId, dueAt',
+      offlineData: 'key',
     })
   }
 }

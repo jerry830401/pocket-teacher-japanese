@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { db } from '@/lib/db/db'
 import type { SrsCard } from '@/lib/srs/types'
+import OfflineDataButton from './OfflineDataButton'
 
 interface ModuleStat {
   label: string
@@ -82,6 +83,9 @@ export default function ProgressPage() {
         <StatCard label="已練習" value={totalReviewed} unit="張" />
         <StatCard label="連續學習" value={streak} unit="天" />
       </div>
+
+      {/* 離線資料 */}
+      <OfflineDataButton />
 
       {/* 各模組 */}
       <section className="space-y-3">
