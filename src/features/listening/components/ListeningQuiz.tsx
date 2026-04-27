@@ -135,7 +135,7 @@ export default function ListeningQuiz({ cards }: Props) {
   const showNext = selected !== null && !(autoNext && selected === current.id)
 
   return (
-    <div className="h-full flex flex-col gap-4 py-2">
+    <div className="h-full flex flex-col justify-between py-2">
       {/* 進度區 */}
       <div className="shrink-0 space-y-2">
         <div className="flex items-center gap-3 text-sm text-slate-500">
@@ -185,7 +185,7 @@ export default function ListeningQuiz({ cards }: Props) {
       </div>
 
       {/* 選項 + 下一題 */}
-      <div className="shrink-0 flex flex-col items-center gap-8 pb-[calc(env(safe-area-inset-bottom)+4rem)] md:pb-4">
+      <div className="shrink-0 flex flex-col items-center gap-8 pb-4">
         <div className="grid grid-cols-2 gap-2.5 w-full max-w-xs">
           {choices.map((choice) => {
             const isCorrect = choice.id === current.id
