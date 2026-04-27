@@ -115,6 +115,13 @@ export default function Layout() {
         <Outlet />
       </main>
 
+      {/* ── 手機底部導覽佔位（讓 main 的 flex-1 不延伸到 nav 下方）── */}
+      <div
+        className="md:hidden shrink-0"
+        style={{ height: 'calc(env(safe-area-inset-bottom) + 3.75rem)' }}
+        aria-hidden="true"
+      />
+
       {/* ── 手機底部導覽（md 以下顯示）── */}
       <nav
         className="md:hidden shrink-0 fixed bottom-0 inset-x-0 z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur border-t border-slate-200 dark:border-slate-800"
