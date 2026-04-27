@@ -153,23 +153,31 @@ export default function ListeningQuiz({ cards }: Props) {
 
       {/* 題目卡 */}
       <div className="flex-1 min-h-0 flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center w-56 h-44 gap-3 rounded-2xl border-2 border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-950 shadow-sm px-4 py-4">
-          <button
-            onClick={playCurrentWord}
-            className="flex items-center justify-center w-14 h-14 rounded-full border-2 transition-colors border-orange-400 dark:border-orange-500 bg-white dark:bg-orange-900 text-orange-500 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-800 cursor-pointer"
-            aria-label="播放發音"
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
-              <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z" />
-              <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" />
-            </svg>
-          </button>
-          {ttsError
-            ? <p className="text-xs text-red-500">語音播放失敗，請再試一次</p>
-            : <p className="text-xs text-orange-400 dark:text-orange-500">點擊播放發音</p>
-          }
-          <div className={`flex flex-col items-center gap-0.5 transition-opacity ${selected ? 'opacity-100' : 'opacity-0'}`}>
-            <span className="text-xl font-medium text-orange-700 dark:text-orange-300">{current.payload.word}</span>
+        <div className="flex items-center gap-5 w-full max-w-xs rounded-2xl border-2 border-orange-200 dark:border-orange-900 bg-orange-50 dark:bg-orange-950 shadow-sm px-5 py-5">
+          {/* 左側：播放按鈕 */}
+          <div className="shrink-0 flex flex-col items-center gap-1.5">
+            <button
+              onClick={playCurrentWord}
+              className="flex items-center justify-center w-14 h-14 rounded-full border-2 transition-colors border-orange-400 dark:border-orange-500 bg-white dark:bg-orange-900 text-orange-500 dark:text-orange-400 hover:bg-orange-100 dark:hover:bg-orange-800 cursor-pointer"
+              aria-label="播放發音"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
+                <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z" />
+                <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" />
+              </svg>
+            </button>
+            {ttsError
+              ? <p className="text-xs text-red-500">播放失敗</p>
+              : <p className="text-xs text-orange-400 dark:text-orange-500">點擊播放</p>
+            }
+          </div>
+
+          {/* 分隔線 */}
+          <div className="self-stretch w-px bg-orange-200 dark:bg-orange-800" />
+
+          {/* 右側：答案揭示 */}
+          <div className={`flex-1 flex flex-col gap-1 transition-opacity ${selected ? 'opacity-100' : 'opacity-0'}`}>
+            <span className="text-2xl font-medium text-orange-700 dark:text-orange-300">{current.payload.word}</span>
             <span className="text-sm text-orange-500 dark:text-orange-400">{current.payload.reading}</span>
             <span className="text-sm text-orange-400 dark:text-orange-500">{current.payload.meaning}</span>
           </div>
@@ -177,7 +185,7 @@ export default function ListeningQuiz({ cards }: Props) {
       </div>
 
       {/* 選項 + 下一題 */}
-      <div className="shrink-0 flex flex-col items-center gap-4">
+      <div className="shrink-0 flex flex-col items-center gap-8 pb-4">
         <div className="grid grid-cols-2 gap-2.5 w-full max-w-xs">
           {choices.map((choice) => {
             const isCorrect = choice.id === current.id

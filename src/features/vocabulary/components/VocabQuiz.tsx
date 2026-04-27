@@ -160,7 +160,7 @@ export default function VocabQuiz({ cards }: Props) {
       </div>
 
       {/* 選項 + 下一題 */}
-      <div className="shrink-0 flex flex-col items-center gap-4">
+      <div className="shrink-0 flex flex-col items-center gap-8 pb-4">
         <div className="grid grid-cols-2 gap-2.5 w-full max-w-xs">
           {choices.map((choice) => {
             const isCorrect = choice.id === current.id

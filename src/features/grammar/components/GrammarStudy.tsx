@@ -51,7 +51,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
   const [before, after] = splitSentence(current.payload.sentence)
 
   return (
-    <div className="h-full flex flex-col justify-between">
+    <div className="h-full flex flex-col gap-4 py-2">
       {/* 進度區 */}
       <div className="shrink-0 space-y-2">
         <div className="text-sm text-slate-500">第 {index + 1} / {deck.length} 張</div>
@@ -64,7 +64,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
       </div>
 
       {/* 卡片 */}
-      <div className="flex-1 min-h-0 flex items-center justify-center py-2">
+      <div className="flex-1 min-h-0 flex items-center justify-center">
         <div className="w-full max-w-sm rounded-2xl border-2 border-teal-200 dark:border-teal-800 bg-teal-50 dark:bg-teal-950 px-5 py-5 space-y-3">
           <p className="text-base font-medium leading-relaxed">
             {before}
@@ -79,7 +79,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
       </div>
 
       {/* 導覽按鈕 */}
-      <div className="shrink-0 flex items-center justify-center gap-3">
+      <div className="shrink-0 flex items-center justify-center gap-3 pb-4">
         <button
           onClick={() => setIndex(index - 1)}
           disabled={index === 0}

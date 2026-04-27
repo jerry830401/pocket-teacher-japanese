@@ -62,7 +62,7 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
   }
 
   return (
-    <div className="h-full flex flex-col justify-between">
+    <div className="h-full flex flex-col gap-4 py-2">
       {/* 進度區 */}
       <div className="shrink-0 space-y-2">
         <div className="text-sm text-slate-500">第 {index + 1} / {deck.length} 張</div>
@@ -75,7 +75,7 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
       </div>
 
       {/* 卡片 */}
-      <div className="flex-1 min-h-0 flex items-center justify-center py-2">
+      <div className="flex-1 min-h-0 flex items-center justify-center">
         <div className="w-full max-w-xs rounded-2xl border-2 border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-950 px-5 py-5">
           <div className="flex items-start justify-between gap-3">
             <div className="space-y-1.5 min-w-0">
@@ -102,7 +102,7 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
       </div>
 
       {/* 導覽按鈕 */}
-      <div className="shrink-0 flex items-center justify-center gap-3">
+      <div className="shrink-0 flex items-center justify-center gap-3 pb-4">
         <button
           onClick={() => goTo(index - 1)}
           disabled={index === 0}
