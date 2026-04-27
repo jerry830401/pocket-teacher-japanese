@@ -111,7 +111,7 @@ export default function Layout() {
       )}
 
       {/* ── 主要內容區 ── */}
-      <main className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-5xl px-4 md:py-6">
+      <main className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-5xl px-4 md:py-6 pb-[calc(env(safe-area-inset-bottom)+4rem)] md:pb-0">
         <Outlet />
       </main>
 
