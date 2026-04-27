@@ -103,12 +103,18 @@ export default function Layout() {
       )}
 
       {/* ── 主要內容區 ── */}
-      <main className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-5xl px-4 md:py-6">
+      <main
+        className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-5xl px-4 md:py-6"
+        style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+      >
         <Outlet />
       </main>
 
       {/* ── 手機底部導覽（md 以下顯示）── */}
-      <nav className="md:hidden shrink-0 fixed bottom-0 inset-x-0 z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur border-t border-slate-200 dark:border-slate-800">
+      <nav
+        className="md:hidden shrink-0 fixed bottom-0 inset-x-0 z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur border-t border-slate-200 dark:border-slate-800"
+        style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+      >
         <ul className="flex">
           {navItems.map((item) => (
             <li key={item.to} className="flex-1">
@@ -129,8 +135,6 @@ export default function Layout() {
             </li>
           ))}
         </ul>
-        {/* iOS safe area */}
-        <div style={{ paddingBottom: 'env(safe-area-inset-bottom)' }} />
       </nav>
 
     </div>
