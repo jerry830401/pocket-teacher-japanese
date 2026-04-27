@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import type { VocabCard } from '../types'
 import { speak } from '@/lib/tts/tts'
+import { markAsSeen } from '@/lib/db/db'
 
 const BATCH_SIZE = 5
 
@@ -32,6 +33,10 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
   }
 
   useEffect(() => { startBatch(cards) }, [cards])
+
+  useEffect(() => {
+    if (deck[index]) markAsSeen(deck[index].id)
+  }, [deck, index])
 
   if (deck.length === 0) return null
 

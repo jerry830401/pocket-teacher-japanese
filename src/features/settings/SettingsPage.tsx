@@ -1,14 +1,12 @@
 import { useNavigate } from 'react-router-dom'
-import { useSettings } from '@/stores/useSettings'
+import { useSettings, QUIZ_ROUND_OPTIONS, type QuizRoundSize, type QuizKey } from '@/stores/useSettings'
 import OfflineDataButton from '@/features/progress/OfflineDataButton'
 
-type AutoNextKey = 'kana' | 'vocab' | 'grammar' | 'listening'
-
-const ITEMS: { key: AutoNextKey; label: string; desc: string }[] = [
-  { key: 'kana',      label: '五十音',  desc: '答對後自動進入下一題' },
-  { key: 'vocab',     label: '單字',    desc: '答對後自動進入下一題' },
-  { key: 'grammar',   label: '文法',    desc: '答對後自動進入下一題' },
-  { key: 'listening', label: '聽力',    desc: '答對後自動進入下一題' },
+const ITEMS: { key: QuizKey; label: string }[] = [
+  { key: 'kana',      label: '五十音' },
+  { key: 'vocab',     label: '單字'   },
+  { key: 'grammar',   label: '文法'   },
+  { key: 'listening', label: '聽力'   },
 ]
 
 function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
@@ -32,13 +30,23 @@ function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean
 
 export default function SettingsPage() {
   const navigate = useNavigate()
-  const { autoNextKana, autoNextVocab, autoNextGrammar, autoNextListening, setAutoNext } = useSettings()
+  const {
+    autoNextKana, autoNextVocab, autoNextGrammar, autoNextListening, setAutoNext,
+    roundSizeKana, roundSizeVocab, roundSizeGrammar, roundSizeListening, setRoundSize,
+  } = useSettings()
 
-  const values: Record<AutoNextKey, boolean> = {
+  const autoNextValues: Record<QuizKey, boolean> = {
     kana:      autoNextKana,
     vocab:     autoNextVocab,
     grammar:   autoNextGrammar,
     listening: autoNextListening,
+  }
+
+  const roundSizeValues: Record<QuizKey, QuizRoundSize> = {
+    kana:      roundSizeKana,
+    vocab:     roundSizeVocab,
+    grammar:   roundSizeGrammar,
+    listening: roundSizeListening,
   }
 
   return (
@@ -59,13 +67,39 @@ export default function SettingsPage() {
             答對自動下一題
           </h2>
           <div className="rounded-xl border border-slate-200 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800 overflow-hidden">
-            {ITEMS.map(({ key, label, desc }) => (
+            {ITEMS.map(({ key, label }) => (
               <div key={key} className="flex items-center justify-between px-4 py-3 bg-white dark:bg-slate-900">
-                <div>
-                  <p className="text-sm font-medium text-slate-700 dark:text-slate-200">{label}</p>
-                  <p className="text-xs text-slate-400 dark:text-slate-500">{desc}</p>
+                <p className="text-sm font-medium text-slate-700 dark:text-slate-200">{label}</p>
+                <Toggle checked={autoNextValues[key]} onChange={(v) => setAutoNext(key, v)} />
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="space-y-1">
+          <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 px-1">
+            每輪題數
+          </h2>
+          <div className="rounded-xl border border-slate-200 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800 overflow-hidden">
+            {ITEMS.map(({ key, label }) => (
+              <div key={key} className="flex items-center justify-between px-4 py-3 bg-white dark:bg-slate-900">
+                <p className="text-sm font-medium text-slate-700 dark:text-slate-200">{label}</p>
+                <div className="flex gap-1.5">
+                  {QUIZ_ROUND_OPTIONS.map((n) => (
+                    <button
+                      key={n}
+                      onClick={() => setRoundSize(key, n)}
+                      className={[
+                        'w-10 py-1.5 rounded-lg text-xs font-medium border-2 transition-colors',
+                        roundSizeValues[key] === n
+                          ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300'
+                          : 'border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:border-indigo-300',
+                      ].join(' ')}
+                    >
+                      {n}
+                    </button>
+                  ))}
                 </div>
-                <Toggle checked={values[key]} onChange={(v) => setAutoNext(key, v)} />
               </div>
             ))}
           </div>

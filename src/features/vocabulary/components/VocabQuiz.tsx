@@ -4,7 +4,6 @@ import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
 import { useSettings } from '@/stores/useSettings'
 
-const ROUND_SIZE = 20
 
 interface Props {
   cards: VocabCard[]
@@ -48,8 +47,8 @@ function buildChoices(correct: VocabCard, pool: VocabCard[]): VocabCard[] {
   return shuffle([correct, ...wrong])
 }
 
-function buildRound(cards: VocabCard[]): { deck: VocabCard[]; choices: VocabCard[] } {
-  const deck = shuffle(cards).slice(0, ROUND_SIZE)
+function buildRound(cards: VocabCard[], size: number): { deck: VocabCard[]; choices: VocabCard[] } {
+  const deck = shuffle(cards).slice(0, size)
   return { deck, choices: buildChoices(deck[0], cards) }
 }
 
@@ -60,7 +59,8 @@ const POS_LABEL: Record<string, string> = {
 
 export default function VocabQuiz({ cards }: Props) {
   const autoNext = useSettings((s) => s.autoNextVocab)
-  const initialRound = useRef(buildRound(cards))
+  const roundSize = useSettings((s) => s.roundSizeVocab)
+  const initialRound = useRef(buildRound(cards, roundSize))
   const [state, dispatch] = useReducer(reducer, {
     deck: initialRound.current.deck,
     index: 0,
@@ -68,26 +68,26 @@ export default function VocabQuiz({ cards }: Props) {
     selected: null,
     correct: 0,
   })
-  const [roundResult, setRoundResult] = useState<{ correct: number } | null>(null)
+  const [roundDone, setRoundDone] = useState(false)
 
   useEffect(() => {
-    const round = buildRound(cards)
+    const round = buildRound(cards, roundSize)
     dispatch({ type: 'START', deck: round.deck, choices: round.choices })
-    setRoundResult(null)
-  }, [cards])
+    setRoundDone(false)
+  }, [cards, roundSize])
 
   const { deck, index, choices, selected, correct } = state
   const current = deck[index]
 
   function startNextRound() {
-    const round = buildRound(cards)
+    const round = buildRound(cards, roundSize)
     dispatch({ type: 'START', deck: round.deck, choices: round.choices })
-    setRoundResult(null)
+    setRoundDone(false)
   }
 
-  function advance(nextIndex: number, finalCorrect = state.correct) {
+  function advance(nextIndex: number) {
     if (nextIndex >= deck.length) {
-      setRoundResult({ correct: finalCorrect })
+      setRoundDone(true)
     } else {
       dispatch({ type: 'NEXT', index: nextIndex, choices: buildChoices(deck[nextIndex], cards) })
     }
@@ -99,17 +99,16 @@ export default function VocabQuiz({ cards }: Props) {
     dispatch({ type: 'PICK', choiceId: choice.id, isCorrect })
     getOrCreateCard(current.id).then((card) => saveCard(review(card, isCorrect ? 5 : 1)))
     if (isCorrect && autoNext) {
-      const next = correct + 1
-      setTimeout(() => advance(index + 1, next), 400)
+      setTimeout(() => advance(index + 1), 400)
     }
   }
 
-  if (roundResult !== null) {
-    const pct = Math.round((roundResult.correct / deck.length) * 100)
+  if (roundDone) {
+    const pct = Math.round((correct / deck.length) * 100)
     return (
       <div className="h-full flex flex-col items-center justify-center gap-4">
         <span className="text-5xl font-bold text-indigo-600 dark:text-indigo-400">{pct}%</span>
-        <span className="text-slate-500 text-sm">{deck.length} 題中答對 {roundResult.correct} 題</span>
+        <span className="text-slate-500 text-sm">{deck.length} 題中答對 {correct} 題</span>
         <div className="w-full max-w-xs rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-sm text-slate-500 text-center">
           {pct === 100 && '完美！全部答對 🎉'}
           {pct >= 80 && pct < 100 && '答得很好，再接再厲！'}
@@ -120,7 +119,7 @@ export default function VocabQuiz({ cards }: Props) {
           onClick={startNextRound}
           className="px-8 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors"
         >
-          下一輪（{ROUND_SIZE} 題）
+          下一輪（{roundSize} 題）
         </button>
       </div>
     )

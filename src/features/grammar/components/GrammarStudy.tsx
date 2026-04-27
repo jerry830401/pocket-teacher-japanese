@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import type { GrammarCard } from '../types'
+import { markAsSeen } from '@/lib/db/db'
 
 const BATCH_SIZE = 5
 
@@ -30,6 +31,10 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
   }
 
   useEffect(() => { startBatch(cards) }, [cards])
+
+  useEffect(() => {
+    if (deck[index]) markAsSeen(deck[index].id)
+  }, [deck, index])
 
   if (deck.length === 0) return null
 

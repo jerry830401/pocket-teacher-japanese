@@ -6,10 +6,12 @@ import { loadKana, filterByType } from '@/features/kana/data'
 import { loadVocabulary, filterByLevel as filterVocab } from '@/features/vocabulary/data'
 import { loadGrammar, filterByLevel as filterGrammar } from '@/features/grammar/data'
 import { isSupported, preloadVoices } from '@/lib/tts/tts'
+import { getSeenIds } from '@/lib/db/db'
 import FlashCardQuiz from '@/features/kana/components/FlashCardQuiz'
 import VocabQuiz from '@/features/vocabulary/components/VocabQuiz'
 import GrammarQuiz from '@/features/grammar/components/GrammarQuiz'
 import ListeningQuiz from '@/features/listening/components/ListeningQuiz'
+import { useSettings } from '@/stores/useSettings'
 
 type Subject = 'kana' | 'vocab' | 'grammar' | 'listening'
 type JlptLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
@@ -123,38 +125,80 @@ function LevelSelector({
 }
 
 function VocabSection({ allCards }: { allCards: VocabCard[] }) {
+  const roundSize = useSettings((s) => s.roundSizeVocab)
   const [level, setLevel] = useState<JlptLevel>('N5')
-  const cards = filterVocab(allCards, level)
+  const [seenCards, setSeenCards] = useState<VocabCard[] | null>(null)
+  const levelCards = filterVocab(allCards, level)
+
+  useEffect(() => {
+    if (levelCards.length === 0) { setSeenCards([]); return }
+    getSeenIds(levelCards.map((c) => c.id)).then((ids) =>
+      setSeenCards(levelCards.filter((c) => ids.has(c.id)))
+    )
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [level, allCards])
+
   return (
     <div className="h-full flex flex-col">
       <div className="shrink-0 pb-3">
         <LevelSelector allCards={allCards} level={level} onChange={setLevel} color="indigo" />
       </div>
       <div className="flex-1 min-h-0">
-        {cards.length >= 4 ? <VocabQuiz cards={cards} /> : <EmptyLevel level={level} />}
+        {seenCards === null
+          ? null
+          : seenCards.length >= roundSize
+            ? <VocabQuiz cards={seenCards} />
+            : <NotStudied level={level} needed={roundSize} />
+        }
       </div>
     </div>
   )
 }
 
 function GrammarSection({ allCards }: { allCards: GrammarCard[] }) {
+  const roundSize = useSettings((s) => s.roundSizeGrammar)
   const [level, setLevel] = useState<JlptLevel>('N5')
-  const cards = filterGrammar(allCards, level)
+  const [seenCards, setSeenCards] = useState<GrammarCard[] | null>(null)
+  const levelCards = filterGrammar(allCards, level)
+
+  useEffect(() => {
+    if (levelCards.length === 0) { setSeenCards([]); return }
+    getSeenIds(levelCards.map((c) => c.id)).then((ids) =>
+      setSeenCards(levelCards.filter((c) => ids.has(c.id)))
+    )
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [level, allCards])
+
   return (
     <div className="h-full flex flex-col">
       <div className="shrink-0 pb-3">
         <LevelSelector allCards={allCards} level={level} onChange={setLevel} color="teal" />
       </div>
       <div className="flex-1 min-h-0">
-        {cards.length >= 4 ? <GrammarQuiz cards={cards} /> : <EmptyLevel level={level} />}
+        {seenCards === null
+          ? null
+          : seenCards.length >= roundSize
+            ? <GrammarQuiz cards={seenCards} />
+            : <NotStudied level={level} needed={roundSize} />
+        }
       </div>
     </div>
   )
 }
 
 function ListeningSection({ allCards }: { allCards: VocabCard[] }) {
+  const roundSize = useSettings((s) => s.roundSizeListening)
   const [level, setLevel] = useState<JlptLevel>('N5')
-  const cards = filterVocab(allCards, level)
+  const [seenCards, setSeenCards] = useState<VocabCard[] | null>(null)
+  const levelCards = filterVocab(allCards, level)
+
+  useEffect(() => {
+    if (levelCards.length === 0) { setSeenCards([]); return }
+    getSeenIds(levelCards.map((c) => c.id)).then((ids) =>
+      setSeenCards(levelCards.filter((c) => ids.has(c.id)))
+    )
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [level, allCards])
 
   if (!isSupported()) {
     return (
@@ -170,16 +214,22 @@ function ListeningSection({ allCards }: { allCards: VocabCard[] }) {
         <LevelSelector allCards={allCards} level={level} onChange={setLevel} color="orange" />
       </div>
       <div className="flex-1 min-h-0">
-        {cards.length >= 4 ? <ListeningQuiz cards={cards} /> : <EmptyLevel level={level} />}
+        {seenCards === null
+          ? null
+          : seenCards.length >= roundSize
+            ? <ListeningQuiz cards={seenCards} />
+            : <NotStudied level={level} needed={roundSize} />
+        }
       </div>
     </div>
   )
 }
 
-function EmptyLevel({ level }: { level: JlptLevel }) {
+function NotStudied({ level, needed }: { level: JlptLevel; needed: number }) {
   return (
-    <div className="rounded-lg border border-dashed border-slate-300 dark:border-slate-700 p-6 text-sm text-slate-500">
-      {level} 資料尚未加入，敬請期待。
+    <div className="rounded-lg border border-dashed border-slate-300 dark:border-slate-700 p-6 text-sm text-slate-500 space-y-1">
+      <p>{level} 尚未學習足夠題目（至少需看過 {needed} 張卡片）。</p>
+      <p>請先前往「學習」頁面瀏覽卡片，再回來測驗。</p>
     </div>
   )
 }

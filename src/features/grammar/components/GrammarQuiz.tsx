@@ -4,7 +4,6 @@ import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
 import { useSettings } from '@/stores/useSettings'
 
-const ROUND_SIZE = 20
 
 interface Props {
   cards: GrammarCard[]
@@ -42,8 +41,8 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function buildRound(cards: GrammarCard[]): GrammarCard[] {
-  return shuffle(cards).slice(0, ROUND_SIZE)
+function buildRound(cards: GrammarCard[], size: number): GrammarCard[] {
+  return shuffle(cards).slice(0, size)
 }
 
 function splitSentence(sentence: string): [string, string] {
@@ -54,31 +53,32 @@ function splitSentence(sentence: string): [string, string] {
 
 export default function GrammarQuiz({ cards }: Props) {
   const autoNext = useSettings((s) => s.autoNextGrammar)
-  const initialDeck = useRef(buildRound(cards))
+  const roundSize = useSettings((s) => s.roundSizeGrammar)
+  const initialDeck = useRef(buildRound(cards, roundSize))
   const [state, dispatch] = useReducer(reducer, {
     deck: initialDeck.current,
     index: 0,
     selected: null,
     correct: 0,
   })
-  const [roundResult, setRoundResult] = useState<{ correct: number } | null>(null)
+  const [roundDone, setRoundDone] = useState(false)
 
   useEffect(() => {
-    dispatch({ type: 'START', deck: buildRound(cards) })
-    setRoundResult(null)
-  }, [cards])
+    dispatch({ type: 'START', deck: buildRound(cards, roundSize) })
+    setRoundDone(false)
+  }, [cards, roundSize])
 
   const { deck, index, selected, correct } = state
   const current = deck[index]
 
   function startNextRound() {
-    dispatch({ type: 'START', deck: buildRound(cards) })
-    setRoundResult(null)
+    dispatch({ type: 'START', deck: buildRound(cards, roundSize) })
+    setRoundDone(false)
   }
 
-  function advance(nextIndex: number, finalCorrect = state.correct) {
+  function advance(nextIndex: number) {
     if (nextIndex >= deck.length) {
-      setRoundResult({ correct: finalCorrect })
+      setRoundDone(true)
     } else {
       dispatch({ type: 'NEXT', index: nextIndex })
     }
@@ -90,17 +90,16 @@ export default function GrammarQuiz({ cards }: Props) {
     dispatch({ type: 'PICK', choiceId: choice, isCorrect })
     getOrCreateCard(current.id).then((card) => saveCard(review(card, isCorrect ? 5 : 1)))
     if (isCorrect && autoNext) {
-      const next = correct + 1
-      setTimeout(() => advance(index + 1, next), 400)
+      setTimeout(() => advance(index + 1), 400)
     }
   }
 
-  if (roundResult !== null) {
-    const pct = Math.round((roundResult.correct / deck.length) * 100)
+  if (roundDone) {
+    const pct = Math.round((correct / deck.length) * 100)
     return (
       <div className="h-full flex flex-col items-center justify-center gap-4">
         <span className="text-5xl font-bold text-teal-600 dark:text-teal-400">{pct}%</span>
-        <span className="text-slate-500 text-sm">{deck.length} 題中答對 {roundResult.correct} 題</span>
+        <span className="text-slate-500 text-sm">{deck.length} 題中答對 {correct} 題</span>
         <div className="w-full max-w-xs rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-sm text-slate-500 text-center">
           {pct === 100 && '完美！全部答對 🎉'}
           {pct >= 80 && pct < 100 && '答得很好，再接再厲！'}
@@ -111,7 +110,7 @@ export default function GrammarQuiz({ cards }: Props) {
           onClick={startNextRound}
           className="px-8 py-2.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium transition-colors"
         >
-          下一輪（{ROUND_SIZE} 題）
+          下一輪（{roundSize} 題）
         </button>
       </div>
     )

@@ -42,3 +42,15 @@ export async function saveCard(card: SrsCard): Promise<void> {
 export async function getDueCards(now = Date.now()): Promise<SrsCard[]> {
   return db.srsCards.where('dueAt').belowOrEqual(now).toArray()
 }
+
+export async function markAsSeen(cardId: string): Promise<void> {
+  const existing = await db.srsCards.get(cardId)
+  if (existing) return
+  const { createCard } = await import('@/lib/srs/sm2')
+  await db.srsCards.put(createCard(cardId))
+}
+
+export async function getSeenIds(cardIds: string[]): Promise<Set<string>> {
+  const found = await db.srsCards.where('cardId').anyOf(cardIds).primaryKeys()
+  return new Set(found as string[])
+}
