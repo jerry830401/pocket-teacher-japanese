@@ -115,9 +115,9 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      {/* ── 手機底部導覽佔位（讓 main 的 flex-1 不延伸到 nav 下方）── */}
+      {/* ── 手機底部導覽佔位（只在 PWA standalone 模式生效）── */}
       <div
-        className="md:hidden shrink-0"
+        className="md:hidden shrink-0 [@media(display-mode:standalone)]:block hidden"
         style={{ height: 'calc(env(safe-area-inset-bottom) + 3.75rem)' }}
         aria-hidden="true"
       />
