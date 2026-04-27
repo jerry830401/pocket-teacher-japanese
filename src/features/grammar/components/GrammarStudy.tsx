@@ -79,7 +79,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
       </div>
 
       {/* 導覽按鈕 */}
-      <div className="shrink-0 flex items-center justify-center gap-3 pb-4">
+      <div className="shrink-0 flex items-center justify-center gap-3 pb-[calc(env(safe-area-inset-bottom)+4rem)] md:pb-4">
         <button
           onClick={() => setIndex(index - 1)}
           disabled={index === 0}
