@@ -70,7 +70,7 @@ export default function ProgressPage() {
   const streak = calcStreak(reviewedDays)
 
   return (
-    <div className="h-full overflow-y-auto pb-20 md:pb-6">
+    <div className="h-full overflow-y-auto md:pb-6">
       <div className="pt-4 space-y-6">
       <header className="pr-10 md:pr-0">
         <h1 className="text-xl font-semibold tracking-tight">進度</h1>

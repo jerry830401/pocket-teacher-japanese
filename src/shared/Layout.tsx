@@ -117,7 +117,7 @@ export default function Layout() {
 
       {/* ── 手機底部導覽（md 以下顯示）── */}
       <nav
-        className="md:hidden shrink-0 fixed bottom-0 inset-x-0 z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur border-t border-slate-200 dark:border-slate-800"
+        className="md:hidden shrink-0 bg-white/90 dark:bg-slate-950/90 backdrop-blur border-t border-slate-200 dark:border-slate-800"
         style={{
           paddingBottom: 'env(safe-area-inset-bottom)',
           paddingLeft: 'env(safe-area-inset-left)',
