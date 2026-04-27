@@ -50,7 +50,14 @@ export default function Layout() {
   const isSettings = pathname === '/settings'
 
   return (
-    <div className="h-dvh flex flex-col overflow-hidden">
+    <div
+      className="h-dvh flex flex-col overflow-hidden"
+      style={{
+        paddingTop: 'env(safe-area-inset-top)',
+        paddingLeft: 'env(safe-area-inset-left)',
+        paddingRight: 'env(safe-area-inset-right)',
+      }}
+    >
 
       {/* ── 桌機頂部導覽（md 以上顯示）── */}
       <header className="hidden md:block shrink-0 border-b border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950">
@@ -95,7 +102,8 @@ export default function Layout() {
       {!isSettings && (
         <NavLink
           to="/settings"
-          className="md:hidden fixed top-3 right-4 z-40 flex items-center justify-center w-9 h-9 rounded-full transition-colors text-slate-500 dark:text-slate-400 bg-white/80 dark:bg-slate-950/80 backdrop-blur"
+          className="md:hidden fixed right-4 z-40 flex items-center justify-center w-9 h-9 rounded-full transition-colors text-slate-500 dark:text-slate-400 bg-white/80 dark:bg-slate-950/80 backdrop-blur"
+          style={{ top: 'calc(env(safe-area-inset-top) + 0.75rem)' }}
           aria-label="設定"
         >
           <SettingsIcon />
@@ -103,17 +111,18 @@ export default function Layout() {
       )}
 
       {/* ── 主要內容區 ── */}
-      <main
-        className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-5xl px-4 md:py-6"
-        style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
-      >
+      <main className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-5xl px-4 md:py-6">
         <Outlet />
       </main>
 
       {/* ── 手機底部導覽（md 以下顯示）── */}
       <nav
         className="md:hidden shrink-0 fixed bottom-0 inset-x-0 z-50 bg-white/90 dark:bg-slate-950/90 backdrop-blur border-t border-slate-200 dark:border-slate-800"
-        style={{ paddingBottom: 'env(safe-area-inset-bottom)' }}
+        style={{
+          paddingBottom: 'env(safe-area-inset-bottom)',
+          paddingLeft: 'env(safe-area-inset-left)',
+          paddingRight: 'env(safe-area-inset-right)',
+        }}
       >
         <ul className="flex">
           {navItems.map((item) => (
