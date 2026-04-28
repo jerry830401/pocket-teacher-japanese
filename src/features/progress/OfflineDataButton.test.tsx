@@ -11,6 +11,13 @@ vi.mock('@/lib/db/offlineData', () => ({
   downloadOfflineData: mockDownloadOfflineData,
 }))
 
+// Override matchMedia to simulate standalone (PWA) mode before module loads
+vi.stubGlobal('matchMedia', (_query: string) => ({
+  matches: true, media: _query, onchange: null,
+  addListener: () => {}, removeListener: () => {},
+  addEventListener: () => {}, removeEventListener: () => {}, dispatchEvent: () => false,
+}))
+
 import OfflineDataButton from './OfflineDataButton'
 
 beforeEach(() => { vi.clearAllMocks() })

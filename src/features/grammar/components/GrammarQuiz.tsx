@@ -71,6 +71,12 @@ export default function GrammarQuiz({ cards }: Props) {
   const { deck, index, selected, correct } = state
   const current = deck[index]
 
+  const shuffledChoices = useMemo(
+    () => (current ? shuffle(current.payload.choices) : []),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [current?.id],
+  )
+
   function startNextRound() {
     dispatch({ type: 'START', deck: buildRound(cards, roundSize) })
     setRoundDone(false)
@@ -119,11 +125,6 @@ export default function GrammarQuiz({ cards }: Props) {
   if (!current) return null
 
   const [before, after] = splitSentence(current.payload.sentence)
-  const shuffledChoices = useMemo(
-    () => shuffle(current.payload.choices),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [current.id],
-  )
   const isLastQuestion = index === deck.length - 1
   const showNext = selected !== null && !(autoNext && selected === current.payload.answer)
 

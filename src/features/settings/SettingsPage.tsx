@@ -105,7 +105,7 @@ export default function SettingsPage() {
           </div>
         </section>
 
-        {isPwa && (
+        {isPwa() && (
           <section className="space-y-1">
             <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 px-1">
               離線
