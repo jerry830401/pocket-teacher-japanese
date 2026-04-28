@@ -8,10 +8,13 @@ type ButtonState =
   | { phase: 'done'; savedAt: number }
   | { phase: 'error'; message: string }
 
+export const isPwa = window.matchMedia('(display-mode: standalone)').matches
+
 export default function OfflineDataButton() {
   const [state, setState] = useState<ButtonState>({ phase: 'checking' })
 
   useEffect(() => {
+    if (!isPwa) return
     getOfflineStatus().then((status) => setState({ phase: 'idle', status }))
   }, [])
 
@@ -28,7 +31,7 @@ export default function OfflineDataButton() {
     }
   }
 
-  if (state.phase === 'checking') return null
+  if (!isPwa || state.phase === 'checking') return null
 
   const hasData = state.phase === 'idle' ? state.status.hasData : state.phase === 'done'
   const savedAt =

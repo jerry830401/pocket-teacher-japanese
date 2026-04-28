@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import { useSettings, QUIZ_ROUND_OPTIONS, type QuizRoundSize, type QuizKey } from '@/stores/useSettings'
-import OfflineDataButton from '@/features/progress/OfflineDataButton'
+import OfflineDataButton, { isPwa } from '@/features/progress/OfflineDataButton'
 
 const ITEMS: { key: QuizKey; label: string }[] = [
   { key: 'kana',      label: '五十音' },
@@ -105,12 +105,14 @@ export default function SettingsPage() {
           </div>
         </section>
 
-        <section className="space-y-1">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 px-1">
-            離線
-          </h2>
-          <OfflineDataButton />
-        </section>
+        {isPwa && (
+          <section className="space-y-1">
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 px-1">
+              離線
+            </h2>
+            <OfflineDataButton />
+          </section>
+        )}
       </div>
     </div>
   )
