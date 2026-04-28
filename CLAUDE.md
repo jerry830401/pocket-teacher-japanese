@@ -32,22 +32,19 @@ N5 complete (kana + vocabulary 500 entries + grammar 200 entries, listening, SRS
 src/
 ├── features/     One folder per learning module (kana, vocabulary, grammar, listening, progress).
 │                 Each owns its components, hooks, types, and tests.
-│                 Route-level pages currently live here too (e.g. KanaPage.tsx).
 ├── lib/          Cross-cutting infrastructure (srs/, db/, tts/).
 ├── shared/       Generic UI building blocks reused across features.
-├── stores/       Top-level Zustand stores (currently unused; reserved for settings/session cache).
-├── pages/        Reserved for route-level components if extracted from features.
 ├── App.tsx       Router declaration.
 └── main.tsx      React entry point.
 ```
 
 Public data files live under `public/data/` and are fetched at runtime (not bundled into JS):
 
-| File | Card type | ID format | Notes |
-|------|-----------|-----------|-------|
-| `kana.json` | `{ hiragana: KanaChar[], katakana: KanaChar[] }` | `h-a`, `k-ka` | Loaded once, cached in module |
-| `vocabulary.json` | `VocabCard[]` | `vocab-N5-001` | Prefers IndexedDB (`offlineData` table); falls back to fetch |
-| `grammar.json` | `GrammarCard[]` | `grammar-N5-001` | Prefers IndexedDB (`offlineData` table); falls back to fetch |
+| File | ID format | Notes |
+|------|-----------|-------|
+| `kana.json` | `h-a`, `k-ka` | Loaded once, cached in module |
+| `vocabulary.json` | `vocab-N5-001` | Prefers IndexedDB (`offlineData` table); falls back to fetch |
+| `grammar.json` | `grammar-N5-001` | Prefers IndexedDB (`offlineData` table); falls back to fetch |
 
 All cards implement the shared `Card` interface: `{ id, type, level, payload, tags }`.
 
@@ -70,14 +67,12 @@ All cards implement the shared `Card` interface: `{ id, type, level, payload, ta
 
 ## PWA / Offline
 
-- `public/manifest.json` — web app manifest (name, icons, theme color)
-- `public/icon-192.png`, `public/icon-512.png` — PWA icons
-- `src/sw.ts` — service worker source (Workbox precache + route)
-- `scripts/build-sw.js` — post-build script: esbuild bundles `sw.ts`, then `workbox-build` injects the precache manifest into `dist/sw.js`
-- `src/lib/db/offlineData.ts` — manual offline data download: saves vocab/grammar JSON into IndexedDB `offlineData` table; `loadVocabulary`/`loadGrammar` check this table first
-
-To test PWA locally use `npm run preview` (not `npm run dev` — dev server does not register the SW).
+To test PWA locally use `npm run preview` — dev server does not register the SW.
 
 ## Testing
 
 Vitest is configured. `src/lib/srs/sm2.test.ts` covers the SM-2 algorithm. Component and data-loading tests are not yet written.
+
+## Architecture
+
+Core data-flow, SRS update rules, weak-card criteria, and design invariants are documented in `docs/architecture.md`. Read it before modifying quiz, review, or SRS-related code.
