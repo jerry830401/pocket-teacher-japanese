@@ -54,8 +54,6 @@ describe('vocabulary.json', () => {
   })
 
   it('reading contains only hiragana and allowed punctuation', () => {
-    // Hiragana: ぀-ゟ, small variants, elongation mark, common punctuation
-    const pattern = /^[぀-ゟー゠-ヿー・〜をん\s]+$/
     for (const card of cards) {
       const c = card as Record<string, unknown>
       const p = c.payload as Record<string, unknown>

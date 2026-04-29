@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { useSettings, QUIZ_ROUND_OPTIONS, type QuizRoundSize, type QuizKey } from '@/stores/useSettings'
-import OfflineDataButton, { isPwa } from '@/features/progress/OfflineDataButton'
+import OfflineDataButton from '@/features/progress/OfflineDataButton'
+import { isPwa } from '@/lib/pwa'
 
 const ITEMS: { key: QuizKey; label: string }[] = [
   { key: 'kana',      label: '五十音' },

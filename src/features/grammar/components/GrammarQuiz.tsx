@@ -1,4 +1,4 @@
-import { useReducer, useState, useEffect, useRef, useMemo } from 'react'
+import { useReducer, useEffect, useMemo } from 'react'
 import type { GrammarCard } from '../types'
 import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
@@ -14,21 +14,25 @@ interface QuizState {
   index: number
   selected: string | null
   correct: number
+  roundDone: boolean
 }
 
 type QuizAction =
   | { type: 'START'; deck: GrammarCard[] }
   | { type: 'PICK'; choiceId: string; isCorrect: boolean }
   | { type: 'NEXT'; index: number }
+  | { type: 'DONE' }
 
 function reducer(state: QuizState, action: QuizAction): QuizState {
   switch (action.type) {
     case 'START':
-      return { deck: action.deck, index: 0, selected: null, correct: 0 }
+      return { deck: action.deck, index: 0, selected: null, correct: 0, roundDone: false }
     case 'PICK':
       return { ...state, selected: action.choiceId, correct: state.correct + (action.isCorrect ? 1 : 0) }
     case 'NEXT':
       return { ...state, index: action.index, selected: null }
+    case 'DONE':
+      return { ...state, roundDone: true }
   }
 }
 
@@ -54,21 +58,19 @@ function splitSentence(sentence: string): [string, string] {
 export default function GrammarQuiz({ cards }: Props) {
   const autoNext = useSettings((s) => s.autoNextGrammar)
   const roundSize = useSettings((s) => s.roundSizeGrammar)
-  const initialDeck = useRef(buildRound(cards, roundSize))
-  const [state, dispatch] = useReducer(reducer, {
-    deck: initialDeck.current,
+  const [state, dispatch] = useReducer(reducer, undefined, () => ({
+    deck: buildRound(cards, roundSize),
     index: 0,
     selected: null,
     correct: 0,
-  })
-  const [roundDone, setRoundDone] = useState(false)
+    roundDone: false,
+  }))
 
   useEffect(() => {
     dispatch({ type: 'START', deck: buildRound(cards, roundSize) })
-    setRoundDone(false)
   }, [cards, roundSize])
 
-  const { deck, index, selected, correct } = state
+  const { deck, index, selected, correct, roundDone } = state
   const current = deck[index]
 
   const shuffledChoices = useMemo(
@@ -79,12 +81,11 @@ export default function GrammarQuiz({ cards }: Props) {
 
   function startNextRound() {
     dispatch({ type: 'START', deck: buildRound(cards, roundSize) })
-    setRoundDone(false)
   }
 
   function advance(nextIndex: number) {
     if (nextIndex >= deck.length) {
-      setRoundDone(true)
+      dispatch({ type: 'DONE' })
     } else {
       dispatch({ type: 'NEXT', index: nextIndex })
     }

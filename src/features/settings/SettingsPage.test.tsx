@@ -5,10 +5,8 @@ import userEvent from '@testing-library/user-event'
 import { MemoryRouter } from 'react-router-dom'
 
 // Simulate non-PWA environment (isPwa returns false)
-vi.mock('@/features/progress/OfflineDataButton', () => ({
-  isPwa: () => false,
-  default: () => null,
-}))
+vi.mock('@/lib/pwa', () => ({ isPwa: () => false }))
+vi.mock('@/features/progress/OfflineDataButton', () => ({ default: () => null }))
 
 const mockSetAutoNext = vi.hoisted(() => vi.fn())
 const mockSetRoundSize = vi.hoisted(() => vi.fn())

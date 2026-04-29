@@ -1,8 +1,27 @@
-import { useState, useEffect } from 'react'
+import { useReducer, useEffect } from 'react'
 import type { GrammarCard } from '../types'
 import { markAsSeen } from '@/lib/db/db'
 
 const BATCH_SIZE = 5
+
+interface StudyState {
+  deck: GrammarCard[]
+  index: number
+  batchDone: boolean
+}
+
+type StudyAction =
+  | { type: 'START'; deck: GrammarCard[] }
+  | { type: 'GO'; index: number }
+  | { type: 'DONE' }
+
+function reducer(_state: StudyState, action: StudyAction): StudyState {
+  switch (action.type) {
+    case 'START': return { deck: action.deck, index: 0, batchDone: false }
+    case 'GO': return { ..._state, index: action.index }
+    case 'DONE': return { ..._state, batchDone: true }
+  }
+}
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
@@ -20,17 +39,16 @@ function splitSentence(sentence: string): [string, string] {
 }
 
 export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
-  const [deck, setDeck] = useState<GrammarCard[]>([])
-  const [index, setIndex] = useState(0)
-  const [batchDone, setBatchDone] = useState(false)
+  const [state, dispatch] = useReducer(reducer, undefined, () => ({
+    deck: shuffle(cards).slice(0, BATCH_SIZE),
+    index: 0,
+    batchDone: false,
+  }))
+  const { deck, index, batchDone } = state
 
-  function startBatch(pool: GrammarCard[]) {
-    setDeck(shuffle(pool).slice(0, BATCH_SIZE))
-    setIndex(0)
-    setBatchDone(false)
-  }
-
-  useEffect(() => { startBatch(cards) }, [cards])
+  useEffect(() => {
+    dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })
+  }, [cards])
 
   useEffect(() => {
     if (deck[index]) markAsSeen(deck[index].id)
@@ -43,7 +61,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
       <div className="h-full flex flex-col items-center justify-center gap-4">
         <p className="text-slate-500 text-sm">已瀏覽 {BATCH_SIZE} 個文法項目</p>
         <button
-          onClick={() => startBatch(cards)}
+          onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
           className="px-8 py-2.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium transition-colors"
         >
           下一組（{BATCH_SIZE} 個）
@@ -86,14 +104,16 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
       {/* 導覽按鈕 */}
       <div className="shrink-0 flex items-center justify-center gap-3 pb-4">
         <button
-          onClick={() => setIndex(index - 1)}
+          onClick={() => dispatch({ type: 'GO', index: index - 1 })}
           disabled={index === 0}
           className="px-5 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
         >
           上一張
         </button>
         <button
-          onClick={() => index + 1 >= deck.length ? setBatchDone(true) : setIndex(index + 1)}
+          onClick={() => index + 1 >= deck.length
+            ? dispatch({ type: 'DONE' })
+            : dispatch({ type: 'GO', index: index + 1 })}
           className="px-6 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium transition-colors"
         >
           {index + 1 >= deck.length ? '完成這組' : '下一張'}

@@ -4,7 +4,7 @@ let cachedVoices: SpeechSynthesisVoice[] | null = null
 
 // Prevent Chrome GC bug: keep a strong reference to the active utterance so
 // onend/onerror are not silently dropped after garbage collection.
-let activeUtt: SpeechSynthesisUtterance | null = null  // eslint-disable-line prefer-const
+let activeUtt: SpeechSynthesisUtterance | null = null
 
 function loadVoices(): Promise<SpeechSynthesisVoice[]> {
   return new Promise((resolve) => {

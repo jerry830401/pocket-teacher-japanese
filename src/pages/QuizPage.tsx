@@ -131,10 +131,10 @@ function VocabSection({ allCards }: { allCards: VocabCard[] }) {
   const levelCards = filterVocab(allCards, level)
 
   useEffect(() => {
-    if (levelCards.length === 0) { setSeenCards([]); return }
-    getSeenIds(levelCards.map((c) => c.id)).then((ids) =>
-      setSeenCards(levelCards.filter((c) => ids.has(c.id)))
-    )
+    const ids$ = levelCards.length === 0
+      ? Promise.resolve(new Set<string>())
+      : getSeenIds(levelCards.map((c) => c.id))
+    ids$.then((ids) => setSeenCards(levelCards.filter((c) => ids.has(c.id))))
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, allCards])
 
@@ -162,10 +162,10 @@ function GrammarSection({ allCards }: { allCards: GrammarCard[] }) {
   const levelCards = filterGrammar(allCards, level)
 
   useEffect(() => {
-    if (levelCards.length === 0) { setSeenCards([]); return }
-    getSeenIds(levelCards.map((c) => c.id)).then((ids) =>
-      setSeenCards(levelCards.filter((c) => ids.has(c.id)))
-    )
+    const ids$ = levelCards.length === 0
+      ? Promise.resolve(new Set<string>())
+      : getSeenIds(levelCards.map((c) => c.id))
+    ids$.then((ids) => setSeenCards(levelCards.filter((c) => ids.has(c.id))))
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, allCards])
 
@@ -193,10 +193,10 @@ function ListeningSection({ allCards }: { allCards: VocabCard[] }) {
   const levelCards = filterVocab(allCards, level)
 
   useEffect(() => {
-    if (levelCards.length === 0) { setSeenCards([]); return }
-    getSeenIds(levelCards.map((c) => c.id)).then((ids) =>
-      setSeenCards(levelCards.filter((c) => ids.has(c.id)))
-    )
+    const ids$ = levelCards.length === 0
+      ? Promise.resolve(new Set<string>())
+      : getSeenIds(levelCards.map((c) => c.id))
+    ids$.then((ids) => setSeenCards(levelCards.filter((c) => ids.has(c.id))))
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, allCards])
 

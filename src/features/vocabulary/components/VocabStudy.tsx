@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useReducer, useState, useEffect } from 'react'
 import type { VocabCard } from '../types'
 import { speak } from '@/lib/tts/tts'
 import { markAsSeen } from '@/lib/db/db'
@@ -8,6 +8,25 @@ const BATCH_SIZE = 5
 const POS_LABEL: Record<string, string> = {
   noun: '名詞', verb: '動詞', 'i-adj': 'い形', 'na-adj': 'な形',
   adverb: '副詞', particle: '助詞', expression: '表現', other: '其他',
+}
+
+interface StudyState {
+  deck: VocabCard[]
+  index: number
+  batchDone: boolean
+}
+
+type StudyAction =
+  | { type: 'START'; deck: VocabCard[] }
+  | { type: 'GO'; index: number }
+  | { type: 'DONE' }
+
+function reducer(_state: StudyState, action: StudyAction): StudyState {
+  switch (action.type) {
+    case 'START': return { deck: action.deck, index: 0, batchDone: false }
+    case 'GO': return { ..._state, index: action.index }
+    case 'DONE': return { ..._state, batchDone: true }
+  }
 }
 
 function shuffle<T>(arr: T[]): T[] {
@@ -20,19 +39,17 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
-  const [deck, setDeck] = useState<VocabCard[]>([])
-  const [index, setIndex] = useState(0)
-  const [batchDone, setBatchDone] = useState(false)
+  const [state, dispatch] = useReducer(reducer, undefined, () => ({
+    deck: shuffle(cards).slice(0, BATCH_SIZE),
+    index: 0,
+    batchDone: false,
+  }))
   const [ttsError, setTtsError] = useState(false)
+  const { deck, index, batchDone } = state
 
-  function startBatch(pool: VocabCard[]) {
-    setDeck(shuffle(pool).slice(0, BATCH_SIZE))
-    setIndex(0)
-    setBatchDone(false)
-    setTtsError(false)
-  }
-
-  useEffect(() => { startBatch(cards) }, [cards])
+  useEffect(() => {
+    dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })
+  }, [cards])
 
   useEffect(() => {
     if (deck[index]) markAsSeen(deck[index].id)
@@ -45,7 +62,7 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
       <div className="h-full flex flex-col items-center justify-center gap-4">
         <p className="text-slate-500 text-sm">已瀏覽 {BATCH_SIZE} 個單字</p>
         <button
-          onClick={() => startBatch(cards)}
+          onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
           className="px-8 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors"
         >
           下一組（{BATCH_SIZE} 個）
@@ -62,7 +79,7 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
   }
 
   function goTo(i: number) {
-    setIndex(i)
+    dispatch({ type: 'GO', index: i })
     setTtsError(false)
   }
 
@@ -116,7 +133,7 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
           上一張
         </button>
         <button
-          onClick={() => index + 1 >= deck.length ? setBatchDone(true) : goTo(index + 1)}
+          onClick={() => index + 1 >= deck.length ? dispatch({ type: 'DONE' }) : goTo(index + 1)}
           className="px-6 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors"
         >
           {index + 1 >= deck.length ? '完成這組' : '下一張'}

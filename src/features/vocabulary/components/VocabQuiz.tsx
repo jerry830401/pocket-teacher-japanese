@@ -1,4 +1,4 @@
-import { useReducer, useState, useEffect, useRef } from 'react'
+import { useReducer, useEffect } from 'react'
 import type { VocabCard } from '../types'
 import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
@@ -15,21 +15,25 @@ interface QuizState {
   choices: VocabCard[]
   selected: string | null
   correct: number
+  roundDone: boolean
 }
 
 type QuizAction =
   | { type: 'START'; deck: VocabCard[]; choices: VocabCard[] }
   | { type: 'PICK'; choiceId: string; isCorrect: boolean }
   | { type: 'NEXT'; index: number; choices: VocabCard[] }
+  | { type: 'DONE' }
 
 function reducer(state: QuizState, action: QuizAction): QuizState {
   switch (action.type) {
     case 'START':
-      return { deck: action.deck, index: 0, choices: action.choices, selected: null, correct: 0 }
+      return { deck: action.deck, index: 0, choices: action.choices, selected: null, correct: 0, roundDone: false }
     case 'PICK':
       return { ...state, selected: action.choiceId, correct: state.correct + (action.isCorrect ? 1 : 0) }
     case 'NEXT':
       return { ...state, index: action.index, choices: action.choices, selected: null }
+    case 'DONE':
+      return { ...state, roundDone: true }
   }
 }
 
@@ -60,34 +64,27 @@ const POS_LABEL: Record<string, string> = {
 export default function VocabQuiz({ cards }: Props) {
   const autoNext = useSettings((s) => s.autoNextVocab)
   const roundSize = useSettings((s) => s.roundSizeVocab)
-  const initialRound = useRef(buildRound(cards, roundSize))
-  const [state, dispatch] = useReducer(reducer, {
-    deck: initialRound.current.deck,
-    index: 0,
-    choices: initialRound.current.choices,
-    selected: null,
-    correct: 0,
+  const [state, dispatch] = useReducer(reducer, undefined, () => {
+    const round = buildRound(cards, roundSize)
+    return { deck: round.deck, index: 0, choices: round.choices, selected: null, correct: 0, roundDone: false }
   })
-  const [roundDone, setRoundDone] = useState(false)
 
   useEffect(() => {
     const round = buildRound(cards, roundSize)
     dispatch({ type: 'START', deck: round.deck, choices: round.choices })
-    setRoundDone(false)
   }, [cards, roundSize])
 
-  const { deck, index, choices, selected, correct } = state
+  const { deck, index, choices, selected, correct, roundDone } = state
   const current = deck[index]
 
   function startNextRound() {
     const round = buildRound(cards, roundSize)
     dispatch({ type: 'START', deck: round.deck, choices: round.choices })
-    setRoundDone(false)
   }
 
   function advance(nextIndex: number) {
     if (nextIndex >= deck.length) {
-      setRoundDone(true)
+      dispatch({ type: 'DONE' })
     } else {
       dispatch({ type: 'NEXT', index: nextIndex, choices: buildChoices(deck[nextIndex], cards) })
     }

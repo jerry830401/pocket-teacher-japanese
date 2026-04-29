@@ -1,4 +1,4 @@
-import { useReducer, useState, useEffect, useRef } from 'react'
+import { useReducer, useEffect } from 'react'
 import type { KanaChar } from '../types'
 import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
@@ -18,21 +18,25 @@ interface QuizState {
   choices: KanaChar[]
   selected: string | null
   correct: number
+  roundDone: boolean
 }
 
 type QuizAction =
   | { type: 'START'; deck: KanaChar[]; choices: KanaChar[] }
   | { type: 'PICK'; choiceId: string; isCorrect: boolean }
   | { type: 'NEXT'; index: number; choices: KanaChar[] }
+  | { type: 'DONE' }
 
 function reducer(state: QuizState, action: QuizAction): QuizState {
   switch (action.type) {
     case 'START':
-      return { deck: action.deck, index: 0, choices: action.choices, selected: null, correct: 0 }
+      return { deck: action.deck, index: 0, choices: action.choices, selected: null, correct: 0, roundDone: false }
     case 'PICK':
       return { ...state, selected: action.choiceId, correct: state.correct + (action.isCorrect ? 1 : 0) }
     case 'NEXT':
       return { ...state, index: action.index, choices: action.choices, selected: null }
+    case 'DONE':
+      return { ...state, roundDone: true }
   }
 }
 
@@ -58,34 +62,27 @@ function buildRound(chars: KanaChar[], size: number): { deck: KanaChar[]; choice
 export default function FlashCardQuiz({ chars, mode }: Props) {
   const autoNext = useSettings((s) => s.autoNextKana)
   const roundSize = useSettings((s) => s.roundSizeKana)
-  const initialRound = useRef(buildRound(chars, roundSize))
-  const [state, dispatch] = useReducer(reducer, {
-    deck: initialRound.current.deck,
-    index: 0,
-    choices: initialRound.current.choices,
-    selected: null,
-    correct: 0,
+  const [state, dispatch] = useReducer(reducer, undefined, () => {
+    const round = buildRound(chars, roundSize)
+    return { deck: round.deck, index: 0, choices: round.choices, selected: null, correct: 0, roundDone: false }
   })
-  const [roundDone, setRoundDone] = useState(false)
 
   useEffect(() => {
     const round = buildRound(chars, roundSize)
     dispatch({ type: 'START', deck: round.deck, choices: round.choices })
-    setRoundDone(false)
   }, [chars, roundSize])
 
-  const { deck, index, choices, selected, correct } = state
+  const { deck, index, choices, selected, correct, roundDone } = state
   const current = deck[index]
 
   function startNextRound() {
     const round = buildRound(chars, roundSize)
     dispatch({ type: 'START', deck: round.deck, choices: round.choices })
-    setRoundDone(false)
   }
 
   function advance(nextIndex: number) {
     if (nextIndex >= deck.length) {
-      setRoundDone(true)
+      dispatch({ type: 'DONE' })
     } else {
       dispatch({ type: 'NEXT', index: nextIndex, choices: buildChoices(deck[nextIndex], chars) })
     }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { getOfflineStatus, downloadOfflineData, type OfflineStatus } from '@/lib/db/offlineData'
+import { isPwa } from '@/lib/pwa'
 
 type ButtonState =
   | { phase: 'checking' }
@@ -7,10 +8,6 @@ type ButtonState =
   | { phase: 'downloading'; done: number; total: number }
   | { phase: 'done'; savedAt: number }
   | { phase: 'error'; message: string }
-
-export function isPwa() {
-  return window.matchMedia('(display-mode: standalone)').matches
-}
 
 export default function OfflineDataButton() {
   const [state, setState] = useState<ButtonState>({ phase: 'checking' })
