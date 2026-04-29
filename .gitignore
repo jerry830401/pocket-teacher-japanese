@@ -26,3 +26,7 @@ dist-ssr
 # Claude Code: personal settings only — shared settings.json is tracked
 .claude/settings.local.json
 
+# Playwright
+/playwright-report/
+/test-results/
+
