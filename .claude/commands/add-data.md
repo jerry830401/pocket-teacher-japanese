@@ -116,6 +116,37 @@ Grammar 規範：
 - 干擾選項必須是同類型的助詞或語尾（不能隨意湊數）
 - `meaning` 是完整句子的繁體中文翻譯
 
+**Grammar tags 兩層系統：**
+
+第一層（必填一個，代表功能類別）：
+
+| Tag | 說明 |
+|-----|------|
+| `particle` | 助詞（は、が、を、に、で、へ、と、も、や、から、まで、の、か） |
+| `copula` | です／だ、ではありません 等基本判斷表現 |
+| `verb-form` | 動詞活用（ます形、て形本身、ない形、目的移動 に行く、すぎ、やすい、にくい） |
+| `adjective-form` | い形容詞／な形容詞的活用、連接、修飾 |
+| `sentence-pattern` | 複合語法點（てください、たい、できる、なければならない、たら、ば、と思います 等） |
+| `tense-aspect` | 時態與體貌（ています、ました、てから、た後で、もう、まだ、時、間、たことがある） |
+| `conjunction` | 接續、因果（から原因、ので） |
+| `expression` | 固定表達、副詞、疑問詞用法（いつも、たぶん、どこ、どうやって 等） |
+
+第二層（精確標籤，依語法點選填，可複選）：
+
+- **助詞**：`は`、`が`、`を`、`に`、`で`、`へ`、`と`、`も`、`や`、`から`、`まで`、`の`、`か`
+- **動詞形式**：`te-form`、`ta-form`、`masu-form`、`nai-form`
+- **時態修飾**：`past`、`negative`、`aspect`
+- **語法功能**：`conditional`、`permission`、`prohibition`、`obligation`、`desire`、`ability`、`suggestion`、`concession`、`quotation`、`simultaneous`、`purpose`、`intent`、`habit`、`experience`、`existence`、`location`、`request`
+- **具體語法點**：`ています`、`てから`、`てください`、`てみる`、`ておく`、`たことがある`、`たほうがいい`、`なければならない`、`ことができる`、`と思います`、`と言いました`、`ながら`、`つもり`、`よう`、`ないように`、`ようにしている`、`に行く`、`すぎ`、`やすい`、`にくい`、`にとって`、`によって`、`によると`、`もらう`
+- **副詞**：`adverb`、`interrogative`、`fixed-phrase`
+- **形容詞類型**：`i-adj`、`na-adj`
+
+每筆 grammar 格式範例：
+- 助詞題：`["particle", "に"]`
+- 語法句型：`["sentence-pattern", "te-form", "てください"]`
+- 形容詞活用：`["adjective-form", "i-adj", "past"]`
+- 接續詞：`["conjunction", "ので"]`
+
 ### 生成原則（兩種 type 共用）
 
 - 所有資料必須確實屬於指定 JLPT 等級的範圍
@@ -144,6 +175,8 @@ Grammar 規範：
 - [ ] `meaning` 是填入 answer 後完整句子的翻譯
 - [ ] 干擾選項與答案是同類型，具有合理迷惑性
 - [ ] 文法說明準確
+- [ ] tags 第一層必須是以下八個之一：`particle`、`copula`、`verb-form`、`adjective-form`、`sentence-pattern`、`tense-aspect`、`conjunction`、`expression`
+- [ ] tags 第二層使用上方表格中的具體標籤，不自創新標籤
 
 若有問題，就地修正後繼續，並在最後報告修正了哪些條目。
 

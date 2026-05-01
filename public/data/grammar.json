@@ -415,8 +415,8 @@
       "grammar": "〜ます（禮貌體動詞）：動詞禮貌形現在式"
     },
     "tags": [
-      "verb-ending",
-      "ます"
+      "verb-form",
+      "masu-form"
     ]
   },
   {
@@ -436,8 +436,9 @@
       "grammar": "〜ました（禮貌體動詞過去式）：動詞禮貌形過去式"
     },
     "tags": [
-      "verb-ending",
-      "ました"
+      "verb-form",
+      "masu-form",
+      "past"
     ]
   },
   {
@@ -457,8 +458,9 @@
       "grammar": "〜ません（禮貌體否定）：動詞禮貌形否定"
     },
     "tags": [
-      "verb-ending",
-      "ません"
+      "verb-form",
+      "masu-form",
+      "negative"
     ]
   },
   {
@@ -478,8 +480,10 @@
       "grammar": "〜ませんでした（禮貌體過去否定）：動詞禮貌形過去否定"
     },
     "tags": [
-      "verb-ending",
-      "ませんでした"
+      "verb-form",
+      "masu-form",
+      "negative",
+      "past"
     ]
   },
   {
@@ -500,7 +504,7 @@
     },
     "tags": [
       "copula",
-      "ではありません"
+      "negative"
     ]
   },
   {
@@ -520,8 +524,8 @@
       "grammar": "あります（無生命存在）：表示無生命事物的存在"
     },
     "tags": [
-      "existence",
-      "あります"
+      "sentence-pattern",
+      "existence"
     ]
   },
   {
@@ -541,8 +545,8 @@
       "grammar": "います（有生命存在）：表示有生命體的存在"
     },
     "tags": [
-      "existence",
-      "います"
+      "sentence-pattern",
+      "existence"
     ]
   },
   {
@@ -562,8 +566,9 @@
       "grammar": "いません（有生命否定存在）：有生命體不存在"
     },
     "tags": [
+      "sentence-pattern",
       "existence",
-      "いません"
+      "negative"
     ]
   },
   {
@@ -583,8 +588,9 @@
       "grammar": "ありません（無生命否定存在）：無生命事物不存在"
     },
     "tags": [
+      "sentence-pattern",
       "existence",
-      "ありません"
+      "negative"
     ]
   },
   {
@@ -604,6 +610,7 @@
       "grammar": "〜ています（進行式）：表示動作正在進行中"
     },
     "tags": [
+      "tense-aspect",
       "te-form",
       "ています"
     ]
@@ -625,6 +632,7 @@
       "grammar": "〜ています（狀態持續）：表示動作結果的持續狀態"
     },
     "tags": [
+      "tense-aspect",
       "te-form",
       "ています"
     ]
@@ -646,6 +654,7 @@
       "grammar": "〜てから（先後順序）：表示「做完…之後」"
     },
     "tags": [
+      "sentence-pattern",
       "te-form",
       "てから"
     ]
@@ -667,6 +676,7 @@
       "grammar": "〜てください（請求）：禮貌地請求對方做某事"
     },
     "tags": [
+      "sentence-pattern",
       "te-form",
       "てください"
     ]
@@ -688,6 +698,7 @@
       "grammar": "〜てみる（嘗試）：試著做某件事"
     },
     "tags": [
+      "sentence-pattern",
       "te-form",
       "てみる"
     ]
@@ -710,8 +721,7 @@
     },
     "tags": [
       "particle",
-      "が",
-      "できる"
+      "が"
     ]
   },
   {
@@ -731,8 +741,9 @@
       "grammar": "〜たい（願望）：表示說話者的願望，對象用が"
     },
     "tags": [
-      "たい",
-      "particle"
+      "sentence-pattern",
+      "desire",
+      "たい"
     ]
   },
   {
@@ -752,6 +763,8 @@
       "grammar": "〜たい（願望）：〜たい 也可用を（と口語都可）"
     },
     "tags": [
+      "sentence-pattern",
+      "desire",
       "たい"
     ]
   },
@@ -772,8 +785,9 @@
       "grammar": "〜できる（能力）：表示具備某種能力，對象用が"
     },
     "tags": [
-      "できる",
-      "particle"
+      "sentence-pattern",
+      "ability",
+      "できる"
     ]
   },
   {
@@ -793,7 +807,9 @@
       "grammar": "い形容詞＋です：い形容詞的禮貌形"
     },
     "tags": [
-      "i-adjective"
+      "adjective-form",
+      "i-adj",
+      "です"
     ]
   },
   {
@@ -813,7 +829,8 @@
       "grammar": "い形容詞否定：〜くない・〜くありません"
     },
     "tags": [
-      "i-adjective",
+      "adjective-form",
+      "i-adj",
       "negative"
     ]
   },
@@ -834,7 +851,8 @@
       "grammar": "い形容詞過去式：〜かった＋です"
     },
     "tags": [
-      "i-adjective",
+      "adjective-form",
+      "i-adj",
       "past"
     ]
   },
@@ -855,7 +873,8 @@
       "grammar": "な形容詞＋な＋名詞：な形容詞修飾名詞時加な"
     },
     "tags": [
-      "na-adjective"
+      "adjective-form",
+      "na-adj"
     ]
   },
   {
@@ -875,7 +894,9 @@
       "grammar": "な形容詞＋です：な形容詞的禮貌形（不加な）"
     },
     "tags": [
-      "na-adjective"
+      "adjective-form",
+      "na-adj",
+      "です"
     ]
   },
   {
@@ -895,7 +916,8 @@
       "grammar": "な形容詞否定：〜ではありません"
     },
     "tags": [
-      "na-adjective",
+      "adjective-form",
+      "na-adj",
       "negative"
     ]
   },
@@ -1064,6 +1086,8 @@
       "grammar": "〜ながら（同時動作）：表示兩個動作同時進行"
     },
     "tags": [
+      "sentence-pattern",
+      "simultaneous",
       "ながら"
     ]
   },
@@ -1084,6 +1108,7 @@
       "grammar": "〜ておく（事前準備）：提前做好某事的準備"
     },
     "tags": [
+      "sentence-pattern",
       "te-form",
       "ておく"
     ]
@@ -1105,6 +1130,7 @@
       "grammar": "動詞て形＋ください：禮貌請求"
     },
     "tags": [
+      "sentence-pattern",
       "te-form",
       "てください"
     ]
@@ -1126,6 +1152,8 @@
       "grammar": "〜てはいけない（禁止）：表示禁止"
     },
     "tags": [
+      "sentence-pattern",
+      "te-form",
       "prohibition"
     ]
   },
@@ -1146,8 +1174,9 @@
       "grammar": "〜てもらえますか（委婉請求）：更禮貌的請求方式"
     },
     "tags": [
+      "sentence-pattern",
       "te-form",
-      "もらう"
+      "request"
     ]
   },
   {
@@ -1167,7 +1196,7 @@
       "grammar": "〜で（原因・中間連接）：名詞句連接下文"
     },
     "tags": [
-      "conjunction",
+      "particle",
       "で"
     ]
   },
@@ -1188,6 +1217,7 @@
       "grammar": "〜たら（條件）：表示假設條件"
     },
     "tags": [
+      "sentence-pattern",
       "conditional",
       "たら"
     ]
@@ -1209,6 +1239,7 @@
       "grammar": "〜たら（時間條件）：到了某個時間點之後"
     },
     "tags": [
+      "sentence-pattern",
       "conditional",
       "たら"
     ]
@@ -1230,6 +1261,8 @@
       "grammar": "〜たい（願望）：〜たい 前接動詞ます形去ます"
     },
     "tags": [
+      "sentence-pattern",
+      "desire",
       "たい"
     ]
   },
@@ -1250,6 +1283,7 @@
       "grammar": "〜ば（假設條件）：表示假設條件，語氣較正式"
     },
     "tags": [
+      "sentence-pattern",
       "conditional",
       "ば"
     ]
@@ -1271,6 +1305,7 @@
       "grammar": "〜と（自然結果條件）：前因必然導致後果"
     },
     "tags": [
+      "sentence-pattern",
       "conditional",
       "と"
     ]
@@ -1292,8 +1327,9 @@
       "grammar": "〜が上手（擅長）：表示擅長某事，對象用が"
     },
     "tags": [
-      "上手",
-      "particle"
+      "sentence-pattern",
+      "ability",
+      "上手"
     ]
   },
   {
@@ -1313,8 +1349,9 @@
       "grammar": "〜が下手（不擅長）：表示不擅長某事"
     },
     "tags": [
-      "下手",
-      "particle"
+      "sentence-pattern",
+      "ability",
+      "下手"
     ]
   },
   {
@@ -1334,8 +1371,8 @@
       "grammar": "〜ました（過去式）：回憶過去的習慣或動作"
     },
     "tags": [
-      "past",
-      "ました"
+      "tense-aspect",
+      "past"
     ]
   },
   {
@@ -1376,7 +1413,9 @@
       "grammar": "〜なければなりません（義務）：表示必須做某事"
     },
     "tags": [
-      "obligation"
+      "sentence-pattern",
+      "obligation",
+      "なければならない"
     ]
   },
   {
@@ -1396,6 +1435,8 @@
       "grammar": "〜てもいい（許可）：表示許可，可以做某事"
     },
     "tags": [
+      "sentence-pattern",
+      "te-form",
       "permission"
     ]
   },
@@ -1416,6 +1457,8 @@
       "grammar": "〜てもいいですか（請求許可）：詢問是否被允許"
     },
     "tags": [
+      "sentence-pattern",
+      "te-form",
       "permission"
     ]
   },
@@ -1436,6 +1479,7 @@
       "grammar": "副詞的用法：ゆっくり 直接修飾動詞"
     },
     "tags": [
+      "expression",
       "adverb"
     ]
   },
@@ -1456,7 +1500,8 @@
       "grammar": "もう〜ました（已完成）：表示動作已經完成"
     },
     "tags": [
-      "already",
+      "tense-aspect",
+      "past",
       "もう"
     ]
   },
@@ -1709,7 +1754,8 @@
     },
     "tags": [
       "particle",
-      "に"
+      "の",
+      "location"
     ]
   },
   {
@@ -1751,7 +1797,8 @@
     },
     "tags": [
       "particle",
-      "から"
+      "から",
+      "まで"
     ]
   },
   {
@@ -1814,8 +1861,7 @@
     },
     "tags": [
       "particle",
-      "が",
-      "たい"
+      "が"
     ]
   },
   {
@@ -1835,8 +1881,9 @@
       "grammar": "動詞連用形＋に行く：表示去做某事的目的"
     },
     "tags": [
-      "particle",
-      "に"
+      "verb-form",
+      "purpose",
+      "に行く"
     ]
   },
   {
@@ -1877,7 +1924,8 @@
       "grammar": "何月（なんがつ）：詢問月份"
     },
     "tags": [
-      "particle"
+      "expression",
+      "interrogative"
     ]
   },
   {
@@ -1897,7 +1945,8 @@
       "grammar": "何時（なんじ）：詢問時刻"
     },
     "tags": [
-      "particle"
+      "expression",
+      "interrogative"
     ]
   },
   {
@@ -1917,8 +1966,8 @@
       "grammar": "誰の：詢問所有者"
     },
     "tags": [
-      "particle",
-      "の"
+      "expression",
+      "interrogative"
     ]
   },
   {
@@ -1938,7 +1987,8 @@
       "grammar": "どこ：詢問場所"
     },
     "tags": [
-      "particle"
+      "expression",
+      "interrogative"
     ]
   },
   {
@@ -1958,7 +2008,8 @@
       "grammar": "どうやって：詢問方法"
     },
     "tags": [
-      "particle"
+      "expression",
+      "interrogative"
     ]
   },
   {
@@ -1978,8 +2029,8 @@
       "grammar": "天気がいい：天氣好的常用說法"
     },
     "tags": [
-      "particle",
-      "が"
+      "expression",
+      "fixed-phrase"
     ]
   },
   {
@@ -1999,7 +2050,8 @@
       "grammar": "面白い（おもしろい）：有趣的"
     },
     "tags": [
-      "i-adjective"
+      "adjective-form",
+      "i-adj"
     ]
   },
   {
@@ -2019,7 +2071,8 @@
       "grammar": "い形容詞過去式：〜かったです"
     },
     "tags": [
-      "i-adjective",
+      "adjective-form",
+      "i-adj",
       "past"
     ]
   },
@@ -2040,7 +2093,8 @@
       "grammar": "い形容詞過去否定：〜しくありませんでした"
     },
     "tags": [
-      "i-adjective",
+      "adjective-form",
+      "i-adj",
       "negative",
       "past"
     ]
@@ -2062,7 +2116,8 @@
       "grammar": "元気な（げんきな）：有精神的、健康的"
     },
     "tags": [
-      "na-adjective"
+      "adjective-form",
+      "na-adj"
     ]
   },
   {
@@ -2082,7 +2137,8 @@
       "grammar": "賑やか（にぎやか）：熱鬧的"
     },
     "tags": [
-      "na-adjective"
+      "adjective-form",
+      "na-adj"
     ]
   },
   {
@@ -2102,7 +2158,8 @@
       "grammar": "な形容詞否定：〜ではありません"
     },
     "tags": [
-      "na-adjective",
+      "adjective-form",
+      "na-adj",
       "negative"
     ]
   },
@@ -2123,7 +2180,8 @@
       "grammar": "な形容詞過去式：〜でした"
     },
     "tags": [
-      "na-adjective",
+      "adjective-form",
+      "na-adj",
       "past"
     ]
   },
@@ -2144,7 +2202,8 @@
       "grammar": "な形容詞過去否定：〜ではありませんでした"
     },
     "tags": [
-      "na-adjective",
+      "adjective-form",
+      "na-adj",
       "negative",
       "past"
     ]
@@ -2188,8 +2247,7 @@
     },
     "tags": [
       "particle",
-      "を",
-      "te-form"
+      "を"
     ]
   },
   {
@@ -2210,8 +2268,7 @@
     },
     "tags": [
       "particle",
-      "に",
-      "たい"
+      "に"
     ]
   },
   {
@@ -2231,9 +2288,8 @@
       "grammar": "電話をかける：打電話的固定搭配"
     },
     "tags": [
-      "particle",
-      "を",
-      "てください"
+      "expression",
+      "fixed-phrase"
     ]
   },
   {
@@ -2275,8 +2331,7 @@
     },
     "tags": [
       "particle",
-      "を",
-      "てください"
+      "を"
     ]
   },
   {
@@ -2296,8 +2351,8 @@
       "grammar": "〜ながら：同時做兩個動作"
     },
     "tags": [
-      "particle",
-      "を",
+      "sentence-pattern",
+      "simultaneous",
       "ながら"
     ]
   },
@@ -2318,6 +2373,7 @@
       "grammar": "たくさん：很多，用於修飾動詞"
     },
     "tags": [
+      "expression",
       "adverb"
     ]
   },
@@ -2338,6 +2394,7 @@
       "grammar": "あまり〜ません：不太〜，程度副詞配否定"
     },
     "tags": [
+      "expression",
       "adverb",
       "negative"
     ]
@@ -2359,8 +2416,9 @@
       "grammar": "もう（已經）：用於疑問句詢問是否已完成"
     },
     "tags": [
-      "adverb",
-      "already"
+      "tense-aspect",
+      "aspect",
+      "もう"
     ]
   },
   {
@@ -2380,9 +2438,9 @@
       "grammar": "まだ〜ていません：還沒做〜"
     },
     "tags": [
-      "adverb",
-      "ています",
-      "negative"
+      "tense-aspect",
+      "aspect",
+      "まだ"
     ]
   },
   {
@@ -2402,7 +2460,8 @@
       "grammar": "どのくらい：詢問程度、數量"
     },
     "tags": [
-      "adverb"
+      "expression",
+      "interrogative"
     ]
   },
   {
@@ -2422,6 +2481,7 @@
       "grammar": "いつも：總是，表示習慣"
     },
     "tags": [
+      "expression",
       "adverb"
     ]
   },
@@ -2442,6 +2502,7 @@
       "grammar": "すぐに：立刻、馬上"
     },
     "tags": [
+      "expression",
       "adverb"
     ]
   },
@@ -2462,6 +2523,7 @@
       "grammar": "たぶん：大概、也許，表示不確定的推測"
     },
     "tags": [
+      "expression",
       "adverb"
     ]
   },
@@ -2482,6 +2544,7 @@
       "grammar": "きっと：一定，表示確信"
     },
     "tags": [
+      "expression",
       "adverb"
     ]
   },
@@ -2502,6 +2565,7 @@
       "grammar": "本当に：真的，強調程度"
     },
     "tags": [
+      "expression",
       "adverb"
     ]
   },
@@ -2522,7 +2586,9 @@
       "grammar": "〜た後で：做完〜之後"
     },
     "tags": [
-      "verb-ending"
+      "tense-aspect",
+      "ta-form",
+      "後で"
     ]
   },
   {
@@ -2542,7 +2608,8 @@
       "grammar": "〜する前に：做〜之前"
     },
     "tags": [
-      "verb-ending"
+      "tense-aspect",
+      "前に"
     ]
   },
   {
@@ -2562,7 +2629,8 @@
       "grammar": "〜時（とき）：在〜的時候"
     },
     "tags": [
-      "verb-ending"
+      "tense-aspect",
+      "時"
     ]
   },
   {
@@ -2582,7 +2650,8 @@
       "grammar": "〜の間（あいだ）：在〜期間"
     },
     "tags": [
-      "verb-ending"
+      "tense-aspect",
+      "間"
     ]
   },
   {
@@ -2602,7 +2671,9 @@
       "grammar": "〜たことがある：有做過〜的經驗"
     },
     "tags": [
-      "verb-ending"
+      "tense-aspect",
+      "experience",
+      "たことがある"
     ]
   },
   {
@@ -2622,7 +2693,9 @@
       "grammar": "〜たことがある：有做過〜的經驗"
     },
     "tags": [
-      "verb-ending"
+      "tense-aspect",
+      "experience",
+      "たことがある"
     ]
   },
   {
@@ -2642,7 +2715,9 @@
       "grammar": "〜つもりです：打算做〜"
     },
     "tags": [
-      "verb-ending"
+      "sentence-pattern",
+      "intent",
+      "つもり"
     ]
   },
   {
@@ -2662,7 +2737,9 @@
       "grammar": "〜ようと思います：打算做〜（意志表現）"
     },
     "tags": [
-      "verb-ending"
+      "sentence-pattern",
+      "intent",
+      "よう"
     ]
   },
   {
@@ -2682,6 +2759,8 @@
       "grammar": "〜ています：正在做〜（動作進行中）"
     },
     "tags": [
+      "tense-aspect",
+      "te-form",
       "ています"
     ]
   },
@@ -2702,6 +2781,8 @@
       "grammar": "〜ています：正在做〜（動作進行中）"
     },
     "tags": [
+      "tense-aspect",
+      "te-form",
       "ています"
     ]
   },
@@ -2722,6 +2803,8 @@
       "grammar": "〜ています：表示狀態持續"
     },
     "tags": [
+      "tense-aspect",
+      "te-form",
       "ています"
     ]
   },
@@ -2742,8 +2825,8 @@
       "grammar": "あります：無生命物的存在（物品）"
     },
     "tags": [
-      "existence",
-      "あります"
+      "sentence-pattern",
+      "existence"
     ]
   },
   {
@@ -2763,8 +2846,9 @@
       "grammar": "〜ています（進行中）：動作的持續進行"
     },
     "tags": [
-      "ています",
-      "existence"
+      "tense-aspect",
+      "te-form",
+      "ています"
     ]
   },
   {
@@ -2784,8 +2868,8 @@
       "grammar": "何もありません：什麼都沒有，強調全無"
     },
     "tags": [
+      "sentence-pattern",
       "existence",
-      "ありません",
       "negative"
     ]
   },
@@ -2806,8 +2890,9 @@
       "grammar": "名詞の上に：表示位置「在…上面」"
     },
     "tags": [
-      "existence",
-      "あります"
+      "particle",
+      "の",
+      "location"
     ]
   },
   {
@@ -2827,8 +2912,9 @@
       "grammar": "名詞の下に：表示位置「在…下面」"
     },
     "tags": [
-      "existence",
-      "います"
+      "particle",
+      "の",
+      "location"
     ]
   },
   {
@@ -2848,8 +2934,9 @@
       "grammar": "名詞の中に：表示位置「在…裡面」"
     },
     "tags": [
-      "existence",
-      "あります"
+      "particle",
+      "の",
+      "location"
     ]
   },
   {
@@ -2869,8 +2956,9 @@
       "grammar": "名詞の隣に：表示位置「在…旁邊」"
     },
     "tags": [
-      "existence",
-      "あります"
+      "particle",
+      "の",
+      "location"
     ]
   },
   {
@@ -2890,6 +2978,8 @@
       "grammar": "〜ています：表示習慣性動作"
     },
     "tags": [
+      "tense-aspect",
+      "te-form",
       "ています"
     ]
   },
@@ -2910,7 +3000,9 @@
       "grammar": "〜ことができる：能做〜（能力表現）"
     },
     "tags": [
-      "できる"
+      "sentence-pattern",
+      "ability",
+      "ことができる"
     ]
   },
   {
@@ -2930,7 +3022,9 @@
       "grammar": "〜ことができる：能做〜"
     },
     "tags": [
-      "できる"
+      "sentence-pattern",
+      "ability",
+      "ことができる"
     ]
   },
   {
@@ -2950,7 +3044,9 @@
       "grammar": "〜ことができません：不能做〜"
     },
     "tags": [
-      "できる",
+      "sentence-pattern",
+      "ability",
+      "ことができる",
       "negative"
     ]
   },
@@ -2971,6 +3067,8 @@
       "grammar": "〜てから：做完〜之後（強調順序）"
     },
     "tags": [
+      "sentence-pattern",
+      "te-form",
       "てから"
     ]
   },
@@ -2991,8 +3089,9 @@
       "grammar": "〜てから：做完〜後，動作的先後順序"
     },
     "tags": [
-      "てから",
-      "te-form"
+      "sentence-pattern",
+      "te-form",
+      "てから"
     ]
   },
   {
@@ -3012,8 +3111,9 @@
       "grammar": "〜たら：假定條件（如果…的話）"
     },
     "tags": [
-      "たら",
-      "conditional"
+      "sentence-pattern",
+      "conditional",
+      "たら"
     ]
   },
   {
@@ -3033,8 +3133,9 @@
       "grammar": "〜たら：假定條件，完成後的結果"
     },
     "tags": [
-      "たら",
-      "conditional"
+      "sentence-pattern",
+      "conditional",
+      "たら"
     ]
   },
   {
@@ -3054,8 +3155,9 @@
       "grammar": "〜たら：假定條件"
     },
     "tags": [
-      "たら",
-      "conditional"
+      "sentence-pattern",
+      "conditional",
+      "たら"
     ]
   },
   {
@@ -3075,8 +3177,9 @@
       "grammar": "い形容詞て形：〜くて（表示原因或連接）"
     },
     "tags": [
-      "te-form",
-      "i-adjective"
+      "adjective-form",
+      "i-adj",
+      "te-form"
     ]
   },
   {
@@ -3096,8 +3199,9 @@
       "grammar": "い形容詞て形：〜くて（列舉性質）"
     },
     "tags": [
-      "te-form",
-      "i-adjective"
+      "adjective-form",
+      "i-adj",
+      "te-form"
     ]
   },
   {
@@ -3117,8 +3221,9 @@
       "grammar": "な形容詞て形：〜で（列舉性質或表原因）"
     },
     "tags": [
-      "te-form",
-      "na-adjective"
+      "adjective-form",
+      "na-adj",
+      "te-form"
     ]
   },
   {
@@ -3138,8 +3243,9 @@
       "grammar": "な形容詞て形：〜で（表原因）"
     },
     "tags": [
-      "te-form",
-      "na-adjective"
+      "adjective-form",
+      "na-adj",
+      "te-form"
     ]
   },
   {
@@ -3159,8 +3265,9 @@
       "grammar": "〜くて：い形容詞連接"
     },
     "tags": [
-      "te-form",
-      "i-adjective"
+      "adjective-form",
+      "i-adj",
+      "te-form"
     ]
   },
   {
@@ -3180,8 +3287,9 @@
       "grammar": "〜てもいいですか：可以〜嗎（請求許可）"
     },
     "tags": [
-      "permission",
-      "te-form"
+      "sentence-pattern",
+      "te-form",
+      "permission"
     ]
   },
   {
@@ -3201,8 +3309,9 @@
       "grammar": "〜てもいい：可以做〜（許可）"
     },
     "tags": [
-      "permission",
-      "te-form"
+      "sentence-pattern",
+      "te-form",
+      "permission"
     ]
   },
   {
@@ -3222,8 +3331,9 @@
       "grammar": "〜てはいけません：不可以做〜（禁止）"
     },
     "tags": [
-      "prohibition",
-      "te-form"
+      "sentence-pattern",
+      "te-form",
+      "prohibition"
     ]
   },
   {
@@ -3243,8 +3353,9 @@
       "grammar": "〜てはいけません：禁止某行為"
     },
     "tags": [
-      "prohibition",
-      "te-form"
+      "sentence-pattern",
+      "te-form",
+      "prohibition"
     ]
   },
   {
@@ -3264,7 +3375,9 @@
       "grammar": "〜なければなりません：必須做〜（義務）"
     },
     "tags": [
-      "obligation"
+      "sentence-pattern",
+      "obligation",
+      "なければならない"
     ]
   },
   {
@@ -3284,7 +3397,9 @@
       "grammar": "〜なければなりません：動詞否定形＋なければなりません"
     },
     "tags": [
-      "obligation"
+      "sentence-pattern",
+      "obligation",
+      "なければならない"
     ]
   },
   {
@@ -3304,7 +3419,9 @@
       "grammar": "〜なければなりません：義務表現"
     },
     "tags": [
-      "obligation"
+      "sentence-pattern",
+      "obligation",
+      "なければならない"
     ]
   },
   {
@@ -3324,6 +3441,7 @@
       "grammar": "〜ば：條件（如果〜的話）"
     },
     "tags": [
+      "sentence-pattern",
       "conditional",
       "ば"
     ]
@@ -3345,6 +3463,7 @@
       "grammar": "〜ば：條件假設"
     },
     "tags": [
+      "sentence-pattern",
       "conditional",
       "ば"
     ]
@@ -3366,9 +3485,10 @@
       "grammar": "い形容詞〜ければ：假設條件"
     },
     "tags": [
+      "adjective-form",
+      "i-adj",
       "conditional",
-      "ば",
-      "i-adjective"
+      "ば"
     ]
   },
   {
@@ -3388,7 +3508,9 @@
       "grammar": "〜なら：條件，基於對方情況的假設"
     },
     "tags": [
-      "conditional"
+      "sentence-pattern",
+      "conditional",
+      "なら"
     ]
   },
   {
@@ -3408,7 +3530,8 @@
       "grammar": "〜ても：即使〜也〜（讓步條件）"
     },
     "tags": [
-      "conditional"
+      "sentence-pattern",
+      "concession"
     ]
   },
   {
@@ -3428,8 +3551,9 @@
       "grammar": "い形容詞〜くても：即使〜也〜"
     },
     "tags": [
-      "conditional",
-      "i-adjective"
+      "adjective-form",
+      "i-adj",
+      "concession"
     ]
   },
   {
@@ -3449,8 +3573,9 @@
       "grammar": "い形容詞〜くても：讓步條件"
     },
     "tags": [
-      "conditional",
-      "i-adjective"
+      "adjective-form",
+      "i-adj",
+      "concession"
     ]
   },
   {
@@ -3470,7 +3595,9 @@
       "grammar": "〜と思います：我認為〜（表達意見）"
     },
     "tags": [
-      "verb-ending"
+      "sentence-pattern",
+      "quotation",
+      "と思います"
     ]
   },
   {
@@ -3490,7 +3617,9 @@
       "grammar": "〜と思います：表達推測或意見"
     },
     "tags": [
-      "verb-ending"
+      "sentence-pattern",
+      "quotation",
+      "と思います"
     ]
   },
   {
@@ -3510,7 +3639,9 @@
       "grammar": "〜と思います：表達意見（否定形）"
     },
     "tags": [
-      "verb-ending"
+      "sentence-pattern",
+      "quotation",
+      "と思います"
     ]
   },
   {
@@ -3530,7 +3661,9 @@
       "grammar": "〜と言いました：引用他人說話"
     },
     "tags": [
-      "verb-ending"
+      "sentence-pattern",
+      "quotation",
+      "と言いました"
     ]
   },
   {
@@ -3550,7 +3683,9 @@
       "grammar": "〜ように言いました：轉述指示或命令"
     },
     "tags": [
-      "verb-ending"
+      "sentence-pattern",
+      "quotation",
+      "ように言いました"
     ]
   },
   {
@@ -3570,7 +3705,9 @@
       "grammar": "〜ようにしています：努力養成某種習慣"
     },
     "tags": [
-      "verb-ending"
+      "sentence-pattern",
+      "habit",
+      "ようにしている"
     ]
   },
   {
@@ -3590,8 +3727,9 @@
       "grammar": "〜ないように：為了不〜而〜"
     },
     "tags": [
-      "verb-ending",
-      "negative"
+      "sentence-pattern",
+      "purpose",
+      "ないように"
     ]
   },
   {
@@ -3611,8 +3749,9 @@
       "grammar": "〜ないように：為了不〜"
     },
     "tags": [
-      "verb-ending",
-      "negative"
+      "sentence-pattern",
+      "purpose",
+      "ないように"
     ]
   },
   {
@@ -3632,7 +3771,8 @@
       "grammar": "〜ので：原因表現（較客觀）"
     },
     "tags": [
-      "verb-ending"
+      "conjunction",
+      "ので"
     ]
   },
   {
@@ -3652,7 +3792,8 @@
       "grammar": "〜ので：表示原因（比から更柔和）"
     },
     "tags": [
-      "verb-ending"
+      "conjunction",
+      "ので"
     ]
   },
   {
@@ -3672,7 +3813,8 @@
       "grammar": "〜から：表示原因（主觀語氣）"
     },
     "tags": [
-      "verb-ending"
+      "conjunction",
+      "から"
     ]
   },
   {
@@ -3692,8 +3834,8 @@
       "grammar": "〜から：表示理由（主觀推薦）"
     },
     "tags": [
-      "verb-ending",
-      "てみる"
+      "conjunction",
+      "から"
     ]
   },
   {
@@ -3713,8 +3855,9 @@
       "grammar": "〜てみてください：請試著做〜"
     },
     "tags": [
-      "てみる",
-      "てください"
+      "sentence-pattern",
+      "te-form",
+      "てみる"
     ]
   },
   {
@@ -3734,8 +3877,9 @@
       "grammar": "〜んでください：飲む的て形（んで形）"
     },
     "tags": [
-      "てください",
-      "te-form"
+      "sentence-pattern",
+      "te-form",
+      "てください"
     ]
   },
   {
@@ -3755,8 +3899,9 @@
       "grammar": "〜ておく：事先做〜，為將來準備"
     },
     "tags": [
-      "ておく",
-      "te-form"
+      "sentence-pattern",
+      "te-form",
+      "ておく"
     ]
   },
   {
@@ -3776,8 +3921,9 @@
       "grammar": "〜ておく：事先做好準備"
     },
     "tags": [
-      "ておく",
-      "te-form"
+      "sentence-pattern",
+      "te-form",
+      "ておく"
     ]
   },
   {
@@ -3797,6 +3943,8 @@
       "grammar": "〜ておく：事先準備"
     },
     "tags": [
+      "sentence-pattern",
+      "te-form",
       "ておく"
     ]
   },
@@ -3817,7 +3965,9 @@
       "grammar": "〜たほうがいい：建議做〜"
     },
     "tags": [
-      "verb-ending"
+      "sentence-pattern",
+      "suggestion",
+      "たほうがいい"
     ]
   },
   {
@@ -3837,8 +3987,9 @@
       "grammar": "〜ないほうがいい：建議不要做〜"
     },
     "tags": [
-      "verb-ending",
-      "negative"
+      "sentence-pattern",
+      "suggestion",
+      "たほうがいい"
     ]
   },
   {
@@ -3858,7 +4009,9 @@
       "grammar": "〜たほうがいい：建議"
     },
     "tags": [
-      "verb-ending"
+      "sentence-pattern",
+      "suggestion",
+      "たほうがいい"
     ]
   },
   {
@@ -3878,8 +4031,8 @@
       "grammar": "〜すぎ：太過〜，程度過度"
     },
     "tags": [
-      "verb-ending",
-      "i-adjective"
+      "verb-form",
+      "すぎ"
     ]
   },
   {
@@ -3899,7 +4052,8 @@
       "grammar": "〜すぎて：太過〜以至於〜"
     },
     "tags": [
-      "verb-ending"
+      "verb-form",
+      "すぎ"
     ]
   },
   {
@@ -3919,8 +4073,8 @@
       "grammar": "〜やすい：容易做〜"
     },
     "tags": [
-      "verb-ending",
-      "i-adjective"
+      "verb-form",
+      "やすい"
     ]
   },
   {
@@ -3940,8 +4094,8 @@
       "grammar": "〜にくい：難以做〜"
     },
     "tags": [
-      "verb-ending",
-      "i-adjective"
+      "verb-form",
+      "にくい"
     ]
   },
   {
@@ -3961,7 +4115,9 @@
       "grammar": "得意（とくい）：擅長，比上手更主觀（自信）"
     },
     "tags": [
-      "na-adjective"
+      "sentence-pattern",
+      "ability",
+      "得意"
     ]
   },
   {
@@ -3981,7 +4137,9 @@
       "grammar": "苦手（にがて）：不擅長，主觀感受"
     },
     "tags": [
-      "na-adjective"
+      "sentence-pattern",
+      "ability",
+      "苦手"
     ]
   },
   {
@@ -4001,7 +4159,8 @@
       "grammar": "丁寧に（ていねいに）：有禮貌地、仔細地"
     },
     "tags": [
-      "na-adjective"
+      "expression",
+      "adverb"
     ]
   },
   {
@@ -4021,7 +4180,9 @@
       "grammar": "〜にとって：對〜來說"
     },
     "tags": [
-      "particle"
+      "sentence-pattern",
+      "に",
+      "にとって"
     ]
   },
   {
@@ -4041,8 +4202,9 @@
       "grammar": "〜によって：根據〜、依〜而定"
     },
     "tags": [
-      "particle",
-      "に"
+      "sentence-pattern",
+      "に",
+      "によって"
     ]
   },
   {
@@ -4062,7 +4224,9 @@
       "grammar": "〜によると：根據〜（引用消息來源）"
     },
     "tags": [
-      "particle"
+      "sentence-pattern",
+      "に",
+      "によると"
     ]
   },
   {
@@ -4082,8 +4246,9 @@
       "grammar": "〜に興味がある：對〜有興趣"
     },
     "tags": [
-      "particle",
-      "に"
+      "sentence-pattern",
+      "に",
+      "interest"
     ]
   },
   {
@@ -4103,9 +4268,8 @@
       "grammar": "〜に会う：見面，對象用に"
     },
     "tags": [
-      "particle",
-      "に",
-      "たい"
+      "sentence-pattern",
+      "に"
     ]
   },
   {
@@ -4125,7 +4289,7 @@
       "grammar": "〜にもらう／〜からもらう：從〜那裡得到"
     },
     "tags": [
-      "particle",
+      "sentence-pattern",
       "に",
       "もらう"
     ]
@@ -4147,9 +4311,223 @@
       "grammar": "〜に〜てもらう：請〜幫我做〜"
     },
     "tags": [
-      "particle",
+      "sentence-pattern",
       "に",
       "もらう"
+    ]
+  },
+  {
+    "id": "grammar-N5-201",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "友達に荷物を持っ___あげました。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "で",
+        "に",
+        "を"
+      ],
+      "meaning": "我幫朋友拿了行李。",
+      "grammar": "〜てあげる（為他人做）：動詞て形＋あげる，表示說話者為他人做某事"
+    },
+    "tags": [
+      "sentence-pattern",
+      "te-form",
+      "request"
+    ]
+  },
+  {
+    "id": "grammar-N5-202",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "宿題を忘れ___しまいました。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "で",
+        "に",
+        "が"
+      ],
+      "meaning": "我把功課忘了（很遺憾）。",
+      "grammar": "〜てしまう（完了・遺憾）：動詞て形＋しまう，表示動作完了，帶有遺憾或意外的語氣"
+    },
+    "tags": [
+      "sentence-pattern",
+      "te-form",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N5-203",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "もっとゆっくり話し___ほしいです。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "に",
+        "を",
+        "が"
+      ],
+      "meaning": "希望你說慢一點。",
+      "grammar": "〜てほしい（希望他人做）：動詞て形＋ほしい，表示說話者希望對方做某事"
+    },
+    "tags": [
+      "sentence-pattern",
+      "te-form",
+      "desire"
+    ]
+  },
+  {
+    "id": "grammar-N5-204",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "一枚___ください。それ以上はいりません。",
+      "answer": "だけ",
+      "choices": [
+        "だけ",
+        "しか",
+        "まで",
+        "ほど"
+      ],
+      "meaning": "只要一張就好，不需要更多。",
+      "grammar": "〜だけ（限定）：表示只有某數量或範圍，語氣中性"
+    },
+    "tags": [
+      "particle",
+      "だけ"
+    ]
+  },
+  {
+    "id": "grammar-N5-205",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "財布に百円___ありません。",
+      "answer": "しか",
+      "choices": [
+        "しか",
+        "だけ",
+        "も",
+        "は"
+      ],
+      "meaning": "錢包裡只有一百日圓（含嫌少之意）。",
+      "grammar": "〜しか〜ない（限定否定）：表示只有某程度，必須搭配否定，帶有「僅此而已」的遺憾語氣"
+    },
+    "tags": [
+      "particle",
+      "しか",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N5-206",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "外が暗いから、もう夜___。",
+      "answer": "でしょう",
+      "choices": [
+        "でしょう",
+        "ですか",
+        "ではありません",
+        "でした"
+      ],
+      "meaning": "外面很暗，大概已經是晚上了吧。",
+      "grammar": "〜でしょう（推測）：表示說話者的推測，語氣帶有確信"
+    },
+    "tags": [
+      "copula",
+      "modality"
+    ]
+  },
+  {
+    "id": "grammar-N5-207",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "明日は雨___かもしれません。",
+      "answer": "かも",
+      "choices": [
+        "かも",
+        "でしょう",
+        "だろう",
+        "らしい"
+      ],
+      "meaning": "明天可能會下雨。",
+      "grammar": "〜かもしれない（不確定推測）：表示說話者不確定的推測，可能性約50%"
+    },
+    "tags": [
+      "sentence-pattern",
+      "modality"
+    ]
+  },
+  {
+    "id": "grammar-N5-208",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "疲れたから、コーヒー___飲みましょう。",
+      "answer": "でも",
+      "choices": [
+        "でも",
+        "しか",
+        "だけ",
+        "など"
+      ],
+      "meaning": "累了，喝點咖啡之類的吧。",
+      "grammar": "〜でも（例示・輕微提議）：提出一個例子，暗示還有其他選項，語氣輕鬆"
+    },
+    "tags": [
+      "particle",
+      "でも"
+    ]
+  },
+  {
+    "id": "grammar-N5-209",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "行きたい___、時間がありません。",
+      "answer": "けど",
+      "choices": [
+        "けど",
+        "から",
+        "ので",
+        "し"
+      ],
+      "meaning": "想去，但是沒有時間。",
+      "grammar": "〜けど（逆接接續）：口語的逆接接續詞，表示「雖然…但是…」"
+    },
+    "tags": [
+      "conjunction",
+      "けど"
+    ]
+  },
+  {
+    "id": "grammar-N5-210",
+    "type": "grammar",
+    "level": "N5",
+    "payload": {
+      "sentence": "この料理はおいし___です。",
+      "answer": "そう",
+      "choices": [
+        "そう",
+        "らしい",
+        "よう",
+        "はず"
+      ],
+      "meaning": "這道料理看起來很好吃。",
+      "grammar": "〜そうです（樣態）：接い形容詞語幹，根據外觀推測，表示「看起來〜」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "modality"
     ]
   }
 ]
