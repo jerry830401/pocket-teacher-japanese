@@ -146,12 +146,20 @@ export default function VocabQuiz({ cards }: Props) {
 
       {/* 題目卡 */}
       <div className="flex-1 min-h-0 flex items-center justify-center">
-        <div className="flex flex-col items-center justify-center w-56 min-h-28 gap-2 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 shadow-sm px-4 py-4">
-          <span className="text-4xl font-medium">{current.payload.word}</span>
-          <span className="text-base text-indigo-400 dark:text-indigo-300">{current.payload.reading}</span>
-          <span className="text-xs text-indigo-300 dark:text-indigo-500">
-            {POS_LABEL[current.payload.pos] ?? current.payload.pos}
-          </span>
+        <div className="relative w-full max-w-xs px-4">
+          {/* 底層牌：絕對定位撐滿主卡，由主卡決定高度 */}
+          <div className="absolute inset-x-4 inset-y-0 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 pointer-events-none"
+            style={{ transform: 'rotate(-3deg) translateY(4px)', opacity: 0.4 }} />
+          <div className="absolute inset-x-4 inset-y-0 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 pointer-events-none"
+            style={{ transform: 'rotate(2.5deg) translateY(2px)', opacity: 0.6 }} />
+          {/* 主卡 */}
+          <div key={index} className="card-enter relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 shadow-md px-4 py-6 min-h-28">
+            <span className="text-4xl font-medium">{current.payload.word}</span>
+            <span className="text-base text-indigo-400 dark:text-indigo-300">{current.payload.reading}</span>
+            <span className="text-xs text-indigo-300 dark:text-indigo-500">
+              {POS_LABEL[current.payload.pos] ?? current.payload.pos}
+            </span>
+          </div>
         </div>
       </div>
 

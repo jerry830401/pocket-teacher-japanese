@@ -148,7 +148,14 @@ export default function GrammarQuiz({ cards }: Props) {
 
       {/* 題目卡 */}
       <div className="flex-1 min-h-0 flex items-center justify-center">
-        <div className="flex flex-col items-center gap-2 w-full max-w-sm rounded-2xl border-2 border-teal-200 dark:border-teal-900 bg-teal-50 dark:bg-teal-950 shadow-sm px-4 py-4">
+        <div className="relative w-full max-w-sm">
+          {/* 底層牌：跟隨主卡高度 */}
+          <div className="absolute inset-0 rounded-2xl border-2 border-teal-200 dark:border-teal-900 bg-teal-50 dark:bg-teal-950 pointer-events-none"
+            style={{ transform: 'rotate(-3deg) translateY(4px)', opacity: 0.4 }} />
+          <div className="absolute inset-0 rounded-2xl border-2 border-teal-200 dark:border-teal-900 bg-teal-50 dark:bg-teal-950 pointer-events-none"
+            style={{ transform: 'rotate(2.5deg) translateY(2px)', opacity: 0.6 }} />
+          {/* 主卡 */}
+          <div key={index} className="card-enter relative flex flex-col items-center gap-2 rounded-2xl border-2 border-teal-200 dark:border-teal-900 bg-teal-50 dark:bg-teal-950 shadow-md px-4 py-6">
           <p className="text-base font-medium text-center leading-relaxed">
             {before}
             <span className={[
@@ -169,6 +176,7 @@ export default function GrammarQuiz({ cards }: Props) {
           <p className={`text-xs text-teal-400 dark:text-teal-500 text-center transition-opacity ${selected ? 'opacity-100' : 'opacity-0'}`}>
             {current.payload.grammar}
           </p>
+          </div>
         </div>
       </div>
 

@@ -146,8 +146,16 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
 
       {/* 題目卡 */}
       <div className="flex-1 min-h-0 flex items-center justify-center">
-        <div className="flex items-center justify-center w-32 h-32 sm:w-40 sm:h-40 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 shadow-sm">
-          <span className="text-5xl sm:text-6xl">{prompt}</span>
+        <div className="relative w-32 h-32 sm:w-40 sm:h-40">
+          {/* 底層牌 */}
+          <div className="absolute inset-0 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 origin-bottom"
+            style={{ transform: 'rotate(-4deg) translateY(4px)', opacity: 0.4 }} />
+          <div className="absolute inset-0 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 origin-bottom"
+            style={{ transform: 'rotate(3deg) translateY(2px)', opacity: 0.6 }} />
+          {/* 主卡 */}
+          <div key={index} className="card-enter absolute inset-0 flex items-center justify-center rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 shadow-md">
+            <span className="text-5xl sm:text-6xl">{prompt}</span>
+          </div>
         </div>
       </div>
 
