@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import Layout from '@/shared/Layout'
 
-const LearnPage    = lazy(() => import('@/pages/LearnPageV2'))
+const LearnPage    = lazy(() => import('@/pages/LearnPage'))
 const QuizPage     = lazy(() => import('@/pages/QuizPage'))
 const ReviewPage   = lazy(() => import('@/pages/ReviewPage'))
 const ProgressPage = lazy(() => import('@/features/progress/ProgressPage'))
