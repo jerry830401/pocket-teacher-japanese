@@ -9,9 +9,7 @@
       "meaning": "我",
       "pos": "noun"
     },
-    "tags": [
-      "person"
-    ]
+    "tags": ["person"]
   },
   {
     "id": "vocab-N5-002",
@@ -23,9 +21,7 @@
       "meaning": "你",
       "pos": "noun"
     },
-    "tags": [
-      "person"
-    ]
+    "tags": ["person"]
   },
   {
     "id": "vocab-N5-003",
@@ -37,9 +33,7 @@
       "meaning": "人",
       "pos": "noun"
     },
-    "tags": [
-      "person"
-    ]
+    "tags": ["person"]
   },
   {
     "id": "vocab-N5-004",
@@ -51,9 +45,7 @@
       "meaning": "現在",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-005",
@@ -65,9 +57,7 @@
       "meaning": "日本",
       "pos": "noun"
     },
-    "tags": [
-      "place"
-    ]
+    "tags": ["place"]
   },
   {
     "id": "vocab-N5-006",
@@ -79,10 +69,7 @@
       "meaning": "老師",
       "pos": "noun"
     },
-    "tags": [
-      "person",
-      "school"
-    ]
+    "tags": ["person", "school"]
   },
   {
     "id": "vocab-N5-007",
@@ -94,10 +81,7 @@
       "meaning": "學生",
       "pos": "noun"
     },
-    "tags": [
-      "person",
-      "school"
-    ]
+    "tags": ["person", "school"]
   },
   {
     "id": "vocab-N5-008",
@@ -109,9 +93,7 @@
       "meaning": "朋友",
       "pos": "noun"
     },
-    "tags": [
-      "person"
-    ]
+    "tags": ["person"]
   },
   {
     "id": "vocab-N5-009",
@@ -123,9 +105,7 @@
       "meaning": "家人",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-010",
@@ -137,9 +117,7 @@
       "meaning": "父親",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-011",
@@ -151,9 +129,7 @@
       "meaning": "母親",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-012",
@@ -165,10 +141,7 @@
       "meaning": "小孩",
       "pos": "noun"
     },
-    "tags": [
-      "family",
-      "person"
-    ]
+    "tags": ["family", "person"]
   },
   {
     "id": "vocab-N5-013",
@@ -180,10 +153,7 @@
       "meaning": "學校",
       "pos": "noun"
     },
-    "tags": [
-      "school",
-      "place"
-    ]
+    "tags": ["school", "place"]
   },
   {
     "id": "vocab-N5-014",
@@ -195,10 +165,7 @@
       "meaning": "公司",
       "pos": "noun"
     },
-    "tags": [
-      "work",
-      "place"
-    ]
+    "tags": ["work", "place"]
   },
   {
     "id": "vocab-N5-015",
@@ -210,10 +177,7 @@
       "meaning": "家",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "place"
-    ]
+    "tags": ["home", "place"]
   },
   {
     "id": "vocab-N5-016",
@@ -225,9 +189,7 @@
       "meaning": "房間",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-017",
@@ -239,10 +201,7 @@
       "meaning": "車站",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "transport"
-    ]
+    "tags": ["place", "transport"]
   },
   {
     "id": "vocab-N5-018",
@@ -254,10 +213,7 @@
       "meaning": "店",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "shopping"
-    ]
+    "tags": ["place", "shopping"]
   },
   {
     "id": "vocab-N5-019",
@@ -269,9 +225,7 @@
       "meaning": "書",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-020",
@@ -283,9 +237,7 @@
       "meaning": "報紙",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-021",
@@ -297,9 +249,7 @@
       "meaning": "雜誌",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-022",
@@ -311,9 +261,7 @@
       "meaning": "電話",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-023",
@@ -325,9 +273,7 @@
       "meaning": "車",
       "pos": "noun"
     },
-    "tags": [
-      "transport"
-    ]
+    "tags": ["transport"]
   },
   {
     "id": "vocab-N5-024",
@@ -339,9 +285,7 @@
       "meaning": "電車",
       "pos": "noun"
     },
-    "tags": [
-      "transport"
-    ]
+    "tags": ["transport"]
   },
   {
     "id": "vocab-N5-025",
@@ -353,9 +297,7 @@
       "meaning": "公車",
       "pos": "noun"
     },
-    "tags": [
-      "transport"
-    ]
+    "tags": ["transport"]
   },
   {
     "id": "vocab-N5-026",
@@ -367,9 +309,7 @@
       "meaning": "飛機",
       "pos": "noun"
     },
-    "tags": [
-      "transport"
-    ]
+    "tags": ["transport"]
   },
   {
     "id": "vocab-N5-027",
@@ -381,9 +321,7 @@
       "meaning": "食物",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-028",
@@ -395,9 +333,7 @@
       "meaning": "飲料",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-029",
@@ -409,9 +345,7 @@
       "meaning": "水",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-030",
@@ -423,9 +357,7 @@
       "meaning": "米飯/餐食",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-031",
@@ -437,9 +369,7 @@
       "meaning": "肉",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-032",
@@ -451,9 +381,7 @@
       "meaning": "魚",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-033",
@@ -465,9 +393,7 @@
       "meaning": "蔬菜",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-034",
@@ -479,9 +405,7 @@
       "meaning": "水果",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-035",
@@ -493,9 +417,7 @@
       "meaning": "錢",
       "pos": "noun"
     },
-    "tags": [
-      "shopping"
-    ]
+    "tags": ["shopping"]
   },
   {
     "id": "vocab-N5-036",
@@ -507,9 +429,7 @@
       "meaning": "時間",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-037",
@@ -521,9 +441,7 @@
       "meaning": "年/歲",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-038",
@@ -535,9 +453,7 @@
       "meaning": "月",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-039",
@@ -549,9 +465,7 @@
       "meaning": "週",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-040",
@@ -563,9 +477,7 @@
       "meaning": "早上",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-041",
@@ -577,9 +489,7 @@
       "meaning": "中午",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-042",
@@ -591,9 +501,7 @@
       "meaning": "晚上",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-043",
@@ -605,9 +513,7 @@
       "meaning": "今天",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-044",
@@ -619,9 +525,7 @@
       "meaning": "明天",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-045",
@@ -633,9 +537,7 @@
       "meaning": "昨天",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-046",
@@ -647,10 +549,7 @@
       "meaning": "吃",
       "pos": "verb"
     },
-    "tags": [
-      "food",
-      "verb"
-    ]
+    "tags": ["food", "verb"]
   },
   {
     "id": "vocab-N5-047",
@@ -662,10 +561,7 @@
       "meaning": "喝",
       "pos": "verb"
     },
-    "tags": [
-      "food",
-      "verb"
-    ]
+    "tags": ["food", "verb"]
   },
   {
     "id": "vocab-N5-048",
@@ -677,9 +573,7 @@
       "meaning": "看",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-049",
@@ -691,9 +585,7 @@
       "meaning": "聽/問",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-050",
@@ -705,9 +597,7 @@
       "meaning": "說話",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-051",
@@ -719,10 +609,7 @@
       "meaning": "讀",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "school"
-    ]
+    "tags": ["verb", "school"]
   },
   {
     "id": "vocab-N5-052",
@@ -734,10 +621,7 @@
       "meaning": "寫",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "school"
-    ]
+    "tags": ["verb", "school"]
   },
   {
     "id": "vocab-N5-053",
@@ -749,10 +633,7 @@
       "meaning": "買",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "shopping"
-    ]
+    "tags": ["verb", "shopping"]
   },
   {
     "id": "vocab-N5-054",
@@ -764,10 +645,7 @@
       "meaning": "賣",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "shopping"
-    ]
+    "tags": ["verb", "shopping"]
   },
   {
     "id": "vocab-N5-055",
@@ -779,9 +657,7 @@
       "meaning": "去",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-056",
@@ -793,9 +669,7 @@
       "meaning": "來",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-057",
@@ -807,9 +681,7 @@
       "meaning": "回去",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-058",
@@ -821,9 +693,7 @@
       "meaning": "起床",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-059",
@@ -835,9 +705,7 @@
       "meaning": "睡覺",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-060",
@@ -849,10 +717,7 @@
       "meaning": "工作",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "work"
-    ]
+    "tags": ["verb", "work"]
   },
   {
     "id": "vocab-N5-061",
@@ -864,10 +729,7 @@
       "meaning": "學習",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "school"
-    ]
+    "tags": ["verb", "school"]
   },
   {
     "id": "vocab-N5-062",
@@ -879,9 +741,7 @@
       "meaning": "等待",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-063",
@@ -893,10 +753,7 @@
       "meaning": "見面",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "person"
-    ]
+    "tags": ["verb", "person"]
   },
   {
     "id": "vocab-N5-064",
@@ -908,9 +765,7 @@
       "meaning": "明白",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-065",
@@ -922,9 +777,7 @@
       "meaning": "有(事物)",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-066",
@@ -936,9 +789,7 @@
       "meaning": "有(人/動物)",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-067",
@@ -950,9 +801,7 @@
       "meaning": "大的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-068",
@@ -964,9 +813,7 @@
       "meaning": "小的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-069",
@@ -978,9 +825,7 @@
       "meaning": "長的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-070",
@@ -992,9 +837,7 @@
       "meaning": "短的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-071",
@@ -1006,10 +849,7 @@
       "meaning": "高的/貴的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size",
-      "shopping"
-    ]
+    "tags": ["size", "shopping"]
   },
   {
     "id": "vocab-N5-072",
@@ -1021,10 +861,7 @@
       "meaning": "便宜的",
       "pos": "i-adj"
     },
-    "tags": [
-      "shopping",
-      "adjective"
-    ]
+    "tags": ["shopping", "adjective"]
   },
   {
     "id": "vocab-N5-073",
@@ -1036,9 +873,7 @@
       "meaning": "新的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-074",
@@ -1050,9 +885,7 @@
       "meaning": "舊的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-075",
@@ -1064,9 +897,7 @@
       "meaning": "好的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-076",
@@ -1078,9 +909,7 @@
       "meaning": "壞的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-077",
@@ -1092,9 +921,7 @@
       "meaning": "多的",
       "pos": "i-adj"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-078",
@@ -1106,9 +933,7 @@
       "meaning": "少的",
       "pos": "i-adj"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-079",
@@ -1120,9 +945,7 @@
       "meaning": "熱的(天氣)",
       "pos": "i-adj"
     },
-    "tags": [
-      "weather"
-    ]
+    "tags": ["weather"]
   },
   {
     "id": "vocab-N5-080",
@@ -1134,9 +957,7 @@
       "meaning": "冷的(天氣)",
       "pos": "i-adj"
     },
-    "tags": [
-      "weather"
-    ]
+    "tags": ["weather"]
   },
   {
     "id": "vocab-N5-081",
@@ -1148,9 +969,7 @@
       "meaning": "溫暖的",
       "pos": "i-adj"
     },
-    "tags": [
-      "weather"
-    ]
+    "tags": ["weather"]
   },
   {
     "id": "vocab-N5-082",
@@ -1162,9 +981,7 @@
       "meaning": "涼爽的",
       "pos": "i-adj"
     },
-    "tags": [
-      "weather"
-    ]
+    "tags": ["weather"]
   },
   {
     "id": "vocab-N5-083",
@@ -1176,10 +993,7 @@
       "meaning": "忙的",
       "pos": "i-adj"
     },
-    "tags": [
-      "work",
-      "adjective"
-    ]
+    "tags": ["work", "adjective"]
   },
   {
     "id": "vocab-N5-084",
@@ -1191,9 +1005,7 @@
       "meaning": "快樂的",
       "pos": "i-adj"
     },
-    "tags": [
-      "emotion"
-    ]
+    "tags": ["emotion"]
   },
   {
     "id": "vocab-N5-085",
@@ -1205,10 +1017,7 @@
       "meaning": "困難的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective",
-      "school"
-    ]
+    "tags": ["adjective", "school"]
   },
   {
     "id": "vocab-N5-086",
@@ -1220,10 +1029,7 @@
       "meaning": "容易的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective",
-      "school"
-    ]
+    "tags": ["adjective", "school"]
   },
   {
     "id": "vocab-N5-087",
@@ -1235,9 +1041,7 @@
       "meaning": "安靜的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-088",
@@ -1249,9 +1053,7 @@
       "meaning": "熱鬧的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-089",
@@ -1263,9 +1065,7 @@
       "meaning": "漂亮的/乾淨的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-090",
@@ -1277,9 +1077,7 @@
       "meaning": "有名的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-091",
@@ -1291,9 +1089,7 @@
       "meaning": "喜歡的",
       "pos": "na-adj"
     },
-    "tags": [
-      "emotion"
-    ]
+    "tags": ["emotion"]
   },
   {
     "id": "vocab-N5-092",
@@ -1305,9 +1101,7 @@
       "meaning": "討厭的",
       "pos": "na-adj"
     },
-    "tags": [
-      "emotion"
-    ]
+    "tags": ["emotion"]
   },
   {
     "id": "vocab-N5-093",
@@ -1319,9 +1113,7 @@
       "meaning": "擅長的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-094",
@@ -1333,9 +1125,7 @@
       "meaning": "不擅長的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-095",
@@ -1347,10 +1137,7 @@
       "meaning": "有精神的",
       "pos": "na-adj"
     },
-    "tags": [
-      "health",
-      "adjective"
-    ]
+    "tags": ["health", "adjective"]
   },
   {
     "id": "vocab-N5-096",
@@ -1362,9 +1149,7 @@
       "meaning": "非常",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-097",
@@ -1376,9 +1161,7 @@
       "meaning": "一點點",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-098",
@@ -1390,9 +1173,7 @@
       "meaning": "已經/再",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-099",
@@ -1404,9 +1185,7 @@
       "meaning": "還/仍然",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-100",
@@ -1418,9 +1197,7 @@
       "meaning": "一起",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-101",
@@ -1432,9 +1209,7 @@
       "meaning": "名字",
       "pos": "noun"
     },
-    "tags": [
-      "person"
-    ]
+    "tags": ["person"]
   },
   {
     "id": "vocab-N5-102",
@@ -1446,9 +1221,7 @@
       "meaning": "國家",
       "pos": "noun"
     },
-    "tags": [
-      "place"
-    ]
+    "tags": ["place"]
   },
   {
     "id": "vocab-N5-103",
@@ -1460,9 +1233,7 @@
       "meaning": "語言/詞語",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-104",
@@ -1474,9 +1245,7 @@
       "meaning": "天氣",
       "pos": "noun"
     },
-    "tags": [
-      "weather"
-    ]
+    "tags": ["weather"]
   },
   {
     "id": "vocab-N5-105",
@@ -1488,9 +1257,7 @@
       "meaning": "山",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-106",
@@ -1502,9 +1269,7 @@
       "meaning": "河川",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-107",
@@ -1516,9 +1281,7 @@
       "meaning": "海",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-108",
@@ -1530,9 +1293,7 @@
       "meaning": "花",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-109",
@@ -1544,9 +1305,7 @@
       "meaning": "狗",
       "pos": "noun"
     },
-    "tags": [
-      "animal"
-    ]
+    "tags": ["animal"]
   },
   {
     "id": "vocab-N5-110",
@@ -1558,9 +1317,7 @@
       "meaning": "貓",
       "pos": "noun"
     },
-    "tags": [
-      "animal"
-    ]
+    "tags": ["animal"]
   },
   {
     "id": "vocab-N5-111",
@@ -1572,9 +1329,7 @@
       "meaning": "頭",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-112",
@@ -1586,9 +1341,7 @@
       "meaning": "眼睛",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-113",
@@ -1600,9 +1353,7 @@
       "meaning": "手",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-114",
@@ -1614,9 +1365,7 @@
       "meaning": "腳/腿",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-115",
@@ -1628,9 +1377,7 @@
       "meaning": "嘴巴",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-116",
@@ -1642,9 +1389,7 @@
       "meaning": "白色的",
       "pos": "i-adj"
     },
-    "tags": [
-      "color"
-    ]
+    "tags": ["color"]
   },
   {
     "id": "vocab-N5-117",
@@ -1656,9 +1401,7 @@
       "meaning": "黑色的",
       "pos": "i-adj"
     },
-    "tags": [
-      "color"
-    ]
+    "tags": ["color"]
   },
   {
     "id": "vocab-N5-118",
@@ -1670,9 +1413,7 @@
       "meaning": "紅色的",
       "pos": "i-adj"
     },
-    "tags": [
-      "color"
-    ]
+    "tags": ["color"]
   },
   {
     "id": "vocab-N5-119",
@@ -1684,9 +1425,7 @@
       "meaning": "藍色的",
       "pos": "i-adj"
     },
-    "tags": [
-      "color"
-    ]
+    "tags": ["color"]
   },
   {
     "id": "vocab-N5-120",
@@ -1698,9 +1437,7 @@
       "meaning": "黃色的",
       "pos": "i-adj"
     },
-    "tags": [
-      "color"
-    ]
+    "tags": ["color"]
   },
   {
     "id": "vocab-N5-121",
@@ -1712,9 +1449,7 @@
       "meaning": "使用",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-122",
@@ -1726,9 +1461,7 @@
       "meaning": "製作/做",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-123",
@@ -1740,9 +1473,7 @@
       "meaning": "出去/出現",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-124",
@@ -1754,9 +1485,7 @@
       "meaning": "進入",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-125",
@@ -1768,10 +1497,7 @@
       "meaning": "打開",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "home"
-    ]
+    "tags": ["verb", "home"]
   },
   {
     "id": "vocab-N5-126",
@@ -1783,10 +1509,7 @@
       "meaning": "關上",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "home"
-    ]
+    "tags": ["verb", "home"]
   },
   {
     "id": "vocab-N5-127",
@@ -1798,10 +1521,7 @@
       "meaning": "教/告知",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "school"
-    ]
+    "tags": ["verb", "school"]
   },
   {
     "id": "vocab-N5-128",
@@ -1813,10 +1533,7 @@
       "meaning": "記住/學會",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "school"
-    ]
+    "tags": ["verb", "school"]
   },
   {
     "id": "vocab-N5-129",
@@ -1828,10 +1545,7 @@
       "meaning": "洗",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "home"
-    ]
+    "tags": ["verb", "home"]
   },
   {
     "id": "vocab-N5-130",
@@ -1843,10 +1557,7 @@
       "meaning": "穿(上衣)",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "clothing"
-    ]
+    "tags": ["verb", "clothing"]
   },
   {
     "id": "vocab-N5-131",
@@ -1858,10 +1569,7 @@
       "meaning": "醫院",
       "pos": "noun"
     },
-    "tags": [
-      "health",
-      "place"
-    ]
+    "tags": ["health", "place"]
   },
   {
     "id": "vocab-N5-132",
@@ -1873,10 +1581,7 @@
       "meaning": "銀行",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "shopping"
-    ]
+    "tags": ["place", "shopping"]
   },
   {
     "id": "vocab-N5-133",
@@ -1888,10 +1593,7 @@
       "meaning": "圖書館",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "school"
-    ]
+    "tags": ["place", "school"]
   },
   {
     "id": "vocab-N5-134",
@@ -1903,9 +1605,7 @@
       "meaning": "郵局",
       "pos": "noun"
     },
-    "tags": [
-      "place"
-    ]
+    "tags": ["place"]
   },
   {
     "id": "vocab-N5-135",
@@ -1917,10 +1617,7 @@
       "meaning": "公園",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "nature"
-    ]
+    "tags": ["place", "nature"]
   },
   {
     "id": "vocab-N5-136",
@@ -1932,10 +1629,7 @@
       "meaning": "道路/路",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "direction"
-    ]
+    "tags": ["place", "direction"]
   },
   {
     "id": "vocab-N5-137",
@@ -1947,9 +1641,7 @@
       "meaning": "橋",
       "pos": "noun"
     },
-    "tags": [
-      "place"
-    ]
+    "tags": ["place"]
   },
   {
     "id": "vocab-N5-138",
@@ -1961,10 +1653,7 @@
       "meaning": "機場",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "transport"
-    ]
+    "tags": ["place", "transport"]
   },
   {
     "id": "vocab-N5-139",
@@ -1976,9 +1665,7 @@
       "meaning": "地鐵",
       "pos": "noun"
     },
-    "tags": [
-      "transport"
-    ]
+    "tags": ["transport"]
   },
   {
     "id": "vocab-N5-140",
@@ -1990,9 +1677,7 @@
       "meaning": "腳踏車",
       "pos": "noun"
     },
-    "tags": [
-      "transport"
-    ]
+    "tags": ["transport"]
   },
   {
     "id": "vocab-N5-141",
@@ -2004,9 +1689,7 @@
       "meaning": "椅子",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-142",
@@ -2018,10 +1701,7 @@
       "meaning": "桌子",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "school"
-    ]
+    "tags": ["home", "school"]
   },
   {
     "id": "vocab-N5-143",
@@ -2033,9 +1713,7 @@
       "meaning": "窗戶",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-144",
@@ -2047,9 +1725,7 @@
       "meaning": "門",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-145",
@@ -2061,9 +1737,7 @@
       "meaning": "鑰匙",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-146",
@@ -2075,9 +1749,7 @@
       "meaning": "錢包",
       "pos": "noun"
     },
-    "tags": [
-      "shopping"
-    ]
+    "tags": ["shopping"]
   },
   {
     "id": "vocab-N5-147",
@@ -2089,10 +1761,7 @@
       "meaning": "雨傘",
       "pos": "noun"
     },
-    "tags": [
-      "weather",
-      "clothing"
-    ]
+    "tags": ["weather", "clothing"]
   },
   {
     "id": "vocab-N5-148",
@@ -2104,9 +1773,7 @@
       "meaning": "衣服",
       "pos": "noun"
     },
-    "tags": [
-      "clothing"
-    ]
+    "tags": ["clothing"]
   },
   {
     "id": "vocab-N5-149",
@@ -2118,9 +1785,7 @@
       "meaning": "鞋子",
       "pos": "noun"
     },
-    "tags": [
-      "clothing"
-    ]
+    "tags": ["clothing"]
   },
   {
     "id": "vocab-N5-150",
@@ -2132,9 +1797,7 @@
       "meaning": "帽子",
       "pos": "noun"
     },
-    "tags": [
-      "clothing"
-    ]
+    "tags": ["clothing"]
   },
   {
     "id": "vocab-N5-151",
@@ -2146,9 +1809,7 @@
       "meaning": "一個",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-152",
@@ -2160,9 +1821,7 @@
       "meaning": "兩個",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-153",
@@ -2174,9 +1833,7 @@
       "meaning": "三個",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-154",
@@ -2188,9 +1845,7 @@
       "meaning": "什麼",
       "pos": "noun"
     },
-    "tags": [
-      "question"
-    ]
+    "tags": ["question"]
   },
   {
     "id": "vocab-N5-155",
@@ -2202,10 +1857,7 @@
       "meaning": "誰",
       "pos": "noun"
     },
-    "tags": [
-      "question",
-      "person"
-    ]
+    "tags": ["question", "person"]
   },
   {
     "id": "vocab-N5-156",
@@ -2217,10 +1869,7 @@
       "meaning": "哪裡",
       "pos": "noun"
     },
-    "tags": [
-      "question",
-      "direction"
-    ]
+    "tags": ["question", "direction"]
   },
   {
     "id": "vocab-N5-157",
@@ -2232,10 +1881,7 @@
       "meaning": "什麼時候",
       "pos": "noun"
     },
-    "tags": [
-      "question",
-      "time"
-    ]
+    "tags": ["question", "time"]
   },
   {
     "id": "vocab-N5-158",
@@ -2247,9 +1893,7 @@
       "meaning": "哪一個",
       "pos": "noun"
     },
-    "tags": [
-      "question"
-    ]
+    "tags": ["question"]
   },
   {
     "id": "vocab-N5-159",
@@ -2261,9 +1905,7 @@
       "meaning": "這個",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-160",
@@ -2275,9 +1917,7 @@
       "meaning": "那個",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-161",
@@ -2289,9 +1929,7 @@
       "meaning": "那個(遠)",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-162",
@@ -2303,9 +1941,7 @@
       "meaning": "這(修飾)",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-163",
@@ -2317,9 +1953,7 @@
       "meaning": "那(修飾)",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-164",
@@ -2331,9 +1965,7 @@
       "meaning": "那(遠,修飾)",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-165",
@@ -2345,9 +1977,7 @@
       "meaning": "右邊",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-166",
@@ -2359,9 +1989,7 @@
       "meaning": "左邊",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-167",
@@ -2373,9 +2001,7 @@
       "meaning": "前面",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-168",
@@ -2387,9 +2013,7 @@
       "meaning": "後面",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-169",
@@ -2401,9 +2025,7 @@
       "meaning": "上面",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-170",
@@ -2415,9 +2037,7 @@
       "meaning": "下面",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-171",
@@ -2429,9 +2049,7 @@
       "meaning": "裡面/中間",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-172",
@@ -2443,9 +2061,7 @@
       "meaning": "旁邊",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-173",
@@ -2457,9 +2073,7 @@
       "meaning": "附近",
       "pos": "noun"
     },
-    "tags": [
-      "direction"
-    ]
+    "tags": ["direction"]
   },
   {
     "id": "vocab-N5-174",
@@ -2471,10 +2085,7 @@
       "meaning": "遠的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size",
-      "direction"
-    ]
+    "tags": ["size", "direction"]
   },
   {
     "id": "vocab-N5-175",
@@ -2486,10 +2097,7 @@
       "meaning": "近的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size",
-      "direction"
-    ]
+    "tags": ["size", "direction"]
   },
   {
     "id": "vocab-N5-176",
@@ -2501,9 +2109,7 @@
       "meaning": "寬廣的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-177",
@@ -2515,9 +2121,7 @@
       "meaning": "狹窄的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-178",
@@ -2529,9 +2133,7 @@
       "meaning": "重的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-179",
@@ -2543,9 +2145,7 @@
       "meaning": "輕的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-180",
@@ -2557,10 +2157,7 @@
       "meaning": "早的/快的",
       "pos": "i-adj"
     },
-    "tags": [
-      "time",
-      "adjective"
-    ]
+    "tags": ["time", "adjective"]
   },
   {
     "id": "vocab-N5-181",
@@ -2572,10 +2169,7 @@
       "meaning": "慢的/晚的",
       "pos": "i-adj"
     },
-    "tags": [
-      "time",
-      "adjective"
-    ]
+    "tags": ["time", "adjective"]
   },
   {
     "id": "vocab-N5-182",
@@ -2587,9 +2181,7 @@
       "meaning": "強的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-183",
@@ -2601,9 +2193,7 @@
       "meaning": "弱的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-184",
@@ -2615,10 +2205,7 @@
       "meaning": "辣的",
       "pos": "i-adj"
     },
-    "tags": [
-      "food",
-      "adjective"
-    ]
+    "tags": ["food", "adjective"]
   },
   {
     "id": "vocab-N5-185",
@@ -2630,10 +2217,7 @@
       "meaning": "甜的",
       "pos": "i-adj"
     },
-    "tags": [
-      "food",
-      "adjective"
-    ]
+    "tags": ["food", "adjective"]
   },
   {
     "id": "vocab-N5-186",
@@ -2645,10 +2229,7 @@
       "meaning": "苦的",
       "pos": "i-adj"
     },
-    "tags": [
-      "food",
-      "adjective"
-    ]
+    "tags": ["food", "adjective"]
   },
   {
     "id": "vocab-N5-187",
@@ -2660,10 +2241,7 @@
       "meaning": "好吃的",
       "pos": "i-adj"
     },
-    "tags": [
-      "food",
-      "adjective"
-    ]
+    "tags": ["food", "adjective"]
   },
   {
     "id": "vocab-N5-188",
@@ -2675,10 +2253,7 @@
       "meaning": "難吃的",
       "pos": "i-adj"
     },
-    "tags": [
-      "food",
-      "adjective"
-    ]
+    "tags": ["food", "adjective"]
   },
   {
     "id": "vocab-N5-189",
@@ -2690,9 +2265,7 @@
       "meaning": "高興的",
       "pos": "i-adj"
     },
-    "tags": [
-      "emotion"
-    ]
+    "tags": ["emotion"]
   },
   {
     "id": "vocab-N5-190",
@@ -2704,9 +2277,7 @@
       "meaning": "悲傷的",
       "pos": "i-adj"
     },
-    "tags": [
-      "emotion"
-    ]
+    "tags": ["emotion"]
   },
   {
     "id": "vocab-N5-191",
@@ -2718,9 +2289,7 @@
       "meaning": "可怕的",
       "pos": "i-adj"
     },
-    "tags": [
-      "emotion"
-    ]
+    "tags": ["emotion"]
   },
   {
     "id": "vocab-N5-192",
@@ -2732,10 +2301,7 @@
       "meaning": "痛的",
       "pos": "i-adj"
     },
-    "tags": [
-      "health",
-      "body"
-    ]
+    "tags": ["health", "body"]
   },
   {
     "id": "vocab-N5-193",
@@ -2747,10 +2313,7 @@
       "meaning": "想睡的",
       "pos": "i-adj"
     },
-    "tags": [
-      "health",
-      "adjective"
-    ]
+    "tags": ["health", "adjective"]
   },
   {
     "id": "vocab-N5-194",
@@ -2762,9 +2325,7 @@
       "meaning": "空閒的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-195",
@@ -2776,9 +2337,7 @@
       "meaning": "重要的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-196",
@@ -2790,9 +2349,7 @@
       "meaning": "方便的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-197",
@@ -2804,9 +2361,7 @@
       "meaning": "不方便的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-198",
@@ -2818,10 +2373,7 @@
       "meaning": "有禮貌的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective",
-      "greeting"
-    ]
+    "tags": ["adjective", "greeting"]
   },
   {
     "id": "vocab-N5-199",
@@ -2833,10 +2385,7 @@
       "meaning": "親切的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective",
-      "person"
-    ]
+    "tags": ["adjective", "person"]
   },
   {
     "id": "vocab-N5-200",
@@ -2848,10 +2397,7 @@
       "meaning": "危險的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective",
-      "health"
-    ]
+    "tags": ["adjective", "health"]
   },
   {
     "id": "vocab-N5-201",
@@ -2863,10 +2409,7 @@
       "meaning": "安全的",
       "pos": "na-adj"
     },
-    "tags": [
-      "adjective",
-      "health"
-    ]
+    "tags": ["adjective", "health"]
   },
   {
     "id": "vocab-N5-202",
@@ -2878,10 +2421,7 @@
       "meaning": "跑",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "health"
-    ]
+    "tags": ["verb", "health"]
   },
   {
     "id": "vocab-N5-203",
@@ -2893,10 +2433,7 @@
       "meaning": "走路",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "transport"
-    ]
+    "tags": ["verb", "transport"]
   },
   {
     "id": "vocab-N5-204",
@@ -2908,10 +2445,7 @@
       "meaning": "游泳",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "hobby"
-    ]
+    "tags": ["verb", "hobby"]
   },
   {
     "id": "vocab-N5-205",
@@ -2923,10 +2457,7 @@
       "meaning": "玩耍",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "hobby"
-    ]
+    "tags": ["verb", "hobby"]
   },
   {
     "id": "vocab-N5-206",
@@ -2938,10 +2469,7 @@
       "meaning": "休息",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "health"
-    ]
+    "tags": ["verb", "health"]
   },
   {
     "id": "vocab-N5-207",
@@ -2953,9 +2481,7 @@
       "meaning": "叫醒",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-208",
@@ -2967,9 +2493,7 @@
       "meaning": "借出",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-209",
@@ -2981,9 +2505,7 @@
       "meaning": "借入",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-210",
@@ -2995,9 +2517,7 @@
       "meaning": "知道",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-211",
@@ -3009,10 +2529,7 @@
       "meaning": "認為/想",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-212",
@@ -3024,10 +2541,7 @@
       "meaning": "聽得到",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "body"
-    ]
+    "tags": ["verb", "body"]
   },
   {
     "id": "vocab-N5-213",
@@ -3039,10 +2553,7 @@
       "meaning": "看得到",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "body"
-    ]
+    "tags": ["verb", "body"]
   },
   {
     "id": "vocab-N5-214",
@@ -3054,10 +2565,7 @@
       "meaning": "停止",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "transport"
-    ]
+    "tags": ["verb", "transport"]
   },
   {
     "id": "vocab-N5-215",
@@ -3069,9 +2577,7 @@
       "meaning": "開始(自)",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-216",
@@ -3083,9 +2589,7 @@
       "meaning": "結束(自)",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-217",
@@ -3097,9 +2601,7 @@
       "meaning": "發生",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-218",
@@ -3111,9 +2613,7 @@
       "meaning": "掉落",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-219",
@@ -3125,10 +2625,7 @@
       "meaning": "過(橋/馬路)",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "transport"
-    ]
+    "tags": ["verb", "transport"]
   },
   {
     "id": "vocab-N5-220",
@@ -3140,10 +2637,7 @@
       "meaning": "搭乘",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "transport"
-    ]
+    "tags": ["verb", "transport"]
   },
   {
     "id": "vocab-N5-221",
@@ -3155,10 +2649,7 @@
       "meaning": "下車",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "transport"
-    ]
+    "tags": ["verb", "transport"]
   },
   {
     "id": "vocab-N5-222",
@@ -3170,9 +2661,7 @@
       "meaning": "送/寄",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-223",
@@ -3184,9 +2673,7 @@
       "meaning": "收到",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-224",
@@ -3198,9 +2685,7 @@
       "meaning": "給(對方)",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-225",
@@ -3212,9 +2697,7 @@
       "meaning": "給(給我)",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-226",
@@ -3226,10 +2709,7 @@
       "meaning": "抵達",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "transport"
-    ]
+    "tags": ["verb", "transport"]
   },
   {
     "id": "vocab-N5-227",
@@ -3241,10 +2721,7 @@
       "meaning": "出發",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "transport"
-    ]
+    "tags": ["verb", "transport"]
   },
   {
     "id": "vocab-N5-228",
@@ -3256,9 +2733,7 @@
       "meaning": "電/電燈",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-229",
@@ -3270,10 +2745,7 @@
       "meaning": "電視",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "hobby"
-    ]
+    "tags": ["home", "hobby"]
   },
   {
     "id": "vocab-N5-230",
@@ -3285,10 +2757,7 @@
       "meaning": "收音機",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "hobby"
-    ]
+    "tags": ["home", "hobby"]
   },
   {
     "id": "vocab-N5-231",
@@ -3300,9 +2769,7 @@
       "meaning": "相機",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-232",
@@ -3314,10 +2781,7 @@
       "meaning": "電腦",
       "pos": "noun"
     },
-    "tags": [
-      "work",
-      "school"
-    ]
+    "tags": ["work", "school"]
   },
   {
     "id": "vocab-N5-233",
@@ -3329,9 +2793,7 @@
       "meaning": "智慧型手機",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-234",
@@ -3343,9 +2805,7 @@
       "meaning": "鉛筆",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-235",
@@ -3357,9 +2817,7 @@
       "meaning": "筆記本",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-236",
@@ -3371,9 +2829,7 @@
       "meaning": "信封",
       "pos": "noun"
     },
-    "tags": [
-      "work"
-    ]
+    "tags": ["work"]
   },
   {
     "id": "vocab-N5-237",
@@ -3385,9 +2841,7 @@
       "meaning": "郵票",
       "pos": "noun"
     },
-    "tags": [
-      "shopping"
-    ]
+    "tags": ["shopping"]
   },
   {
     "id": "vocab-N5-238",
@@ -3399,9 +2853,7 @@
       "meaning": "藥",
       "pos": "noun"
     },
-    "tags": [
-      "health"
-    ]
+    "tags": ["health"]
   },
   {
     "id": "vocab-N5-239",
@@ -3413,9 +2865,7 @@
       "meaning": "生病/疾病",
       "pos": "noun"
     },
-    "tags": [
-      "health"
-    ]
+    "tags": ["health"]
   },
   {
     "id": "vocab-N5-240",
@@ -3427,11 +2877,7 @@
       "meaning": "醫生",
       "pos": "noun"
     },
-    "tags": [
-      "health",
-      "work",
-      "person"
-    ]
+    "tags": ["health", "work", "person"]
   },
   {
     "id": "vocab-N5-241",
@@ -3443,11 +2889,7 @@
       "meaning": "護理師",
       "pos": "noun"
     },
-    "tags": [
-      "health",
-      "work",
-      "person"
-    ]
+    "tags": ["health", "work", "person"]
   },
   {
     "id": "vocab-N5-242",
@@ -3459,10 +2901,7 @@
       "meaning": "料理/烹飪",
       "pos": "noun"
     },
-    "tags": [
-      "food",
-      "home"
-    ]
+    "tags": ["food", "home"]
   },
   {
     "id": "vocab-N5-243",
@@ -3474,10 +2913,7 @@
       "meaning": "早餐",
       "pos": "noun"
     },
-    "tags": [
-      "food",
-      "time"
-    ]
+    "tags": ["food", "time"]
   },
   {
     "id": "vocab-N5-244",
@@ -3489,10 +2925,7 @@
       "meaning": "午餐",
       "pos": "noun"
     },
-    "tags": [
-      "food",
-      "time"
-    ]
+    "tags": ["food", "time"]
   },
   {
     "id": "vocab-N5-245",
@@ -3504,10 +2937,7 @@
       "meaning": "晚餐",
       "pos": "noun"
     },
-    "tags": [
-      "food",
-      "time"
-    ]
+    "tags": ["food", "time"]
   },
   {
     "id": "vocab-N5-246",
@@ -3519,9 +2949,7 @@
       "meaning": "麵包",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-247",
@@ -3533,9 +2961,7 @@
       "meaning": "牛奶",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-248",
@@ -3547,9 +2973,7 @@
       "meaning": "咖啡",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-249",
@@ -3561,9 +2985,7 @@
       "meaning": "茶",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-250",
@@ -3575,9 +2997,7 @@
       "meaning": "蛋",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-251",
@@ -3589,9 +3009,7 @@
       "meaning": "蘋果",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-252",
@@ -3603,9 +3021,7 @@
       "meaning": "橘子",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-253",
@@ -3617,9 +3033,7 @@
       "meaning": "香蕉",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-254",
@@ -3631,9 +3045,7 @@
       "meaning": "番茄",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-255",
@@ -3645,9 +3057,7 @@
       "meaning": "洋蔥",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-256",
@@ -3659,9 +3069,7 @@
       "meaning": "馬鈴薯",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-257",
@@ -3673,9 +3081,7 @@
       "meaning": "雞肉",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-258",
@@ -3687,9 +3093,7 @@
       "meaning": "豬肉",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-259",
@@ -3701,9 +3105,7 @@
       "meaning": "牛肉",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-260",
@@ -3715,10 +3117,7 @@
       "meaning": "春天",
       "pos": "noun"
     },
-    "tags": [
-      "weather",
-      "nature"
-    ]
+    "tags": ["weather", "nature"]
   },
   {
     "id": "vocab-N5-261",
@@ -3730,10 +3129,7 @@
       "meaning": "夏天",
       "pos": "noun"
     },
-    "tags": [
-      "weather",
-      "nature"
-    ]
+    "tags": ["weather", "nature"]
   },
   {
     "id": "vocab-N5-262",
@@ -3745,10 +3141,7 @@
       "meaning": "秋天",
       "pos": "noun"
     },
-    "tags": [
-      "weather",
-      "nature"
-    ]
+    "tags": ["weather", "nature"]
   },
   {
     "id": "vocab-N5-263",
@@ -3760,10 +3153,7 @@
       "meaning": "冬天",
       "pos": "noun"
     },
-    "tags": [
-      "weather",
-      "nature"
-    ]
+    "tags": ["weather", "nature"]
   },
   {
     "id": "vocab-N5-264",
@@ -3775,9 +3165,7 @@
       "meaning": "雨",
       "pos": "noun"
     },
-    "tags": [
-      "weather"
-    ]
+    "tags": ["weather"]
   },
   {
     "id": "vocab-N5-265",
@@ -3789,9 +3177,7 @@
       "meaning": "雪",
       "pos": "noun"
     },
-    "tags": [
-      "weather"
-    ]
+    "tags": ["weather"]
   },
   {
     "id": "vocab-N5-266",
@@ -3803,10 +3189,7 @@
       "meaning": "風",
       "pos": "noun"
     },
-    "tags": [
-      "weather",
-      "nature"
-    ]
+    "tags": ["weather", "nature"]
   },
   {
     "id": "vocab-N5-267",
@@ -3818,9 +3201,7 @@
       "meaning": "晴天",
       "pos": "noun"
     },
-    "tags": [
-      "weather"
-    ]
+    "tags": ["weather"]
   },
   {
     "id": "vocab-N5-268",
@@ -3832,9 +3213,7 @@
       "meaning": "陰天",
       "pos": "noun"
     },
-    "tags": [
-      "weather"
-    ]
+    "tags": ["weather"]
   },
   {
     "id": "vocab-N5-269",
@@ -3846,9 +3225,7 @@
       "meaning": "天空",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-270",
@@ -3860,9 +3237,7 @@
       "meaning": "太陽",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-271",
@@ -3874,9 +3249,7 @@
       "meaning": "月亮",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-272",
@@ -3888,9 +3261,7 @@
       "meaning": "星星",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-273",
@@ -3902,9 +3273,7 @@
       "meaning": "樹木",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-274",
@@ -3916,9 +3285,7 @@
       "meaning": "草",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-275",
@@ -3930,9 +3297,7 @@
       "meaning": "泥土",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-276",
@@ -3944,9 +3309,7 @@
       "meaning": "石頭",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-277",
@@ -3958,9 +3321,7 @@
       "meaning": "火",
       "pos": "noun"
     },
-    "tags": [
-      "nature"
-    ]
+    "tags": ["nature"]
   },
   {
     "id": "vocab-N5-278",
@@ -3972,9 +3333,7 @@
       "meaning": "聲音",
       "pos": "noun"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-279",
@@ -3986,9 +3345,7 @@
       "meaning": "顏色",
       "pos": "noun"
     },
-    "tags": [
-      "color"
-    ]
+    "tags": ["color"]
   },
   {
     "id": "vocab-N5-280",
@@ -4000,9 +3357,7 @@
       "meaning": "形狀",
       "pos": "noun"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-281",
@@ -4014,9 +3369,7 @@
       "meaning": "哥哥（自己的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-282",
@@ -4028,9 +3381,7 @@
       "meaning": "姊姊（自己的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-283",
@@ -4042,9 +3393,7 @@
       "meaning": "弟弟（自己的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-284",
@@ -4056,9 +3405,7 @@
       "meaning": "妹妹（自己的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-285",
@@ -4070,9 +3417,7 @@
       "meaning": "祖父（自己的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-286",
@@ -4084,9 +3429,7 @@
       "meaning": "祖母（自己的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-287",
@@ -4098,10 +3441,7 @@
       "meaning": "丈夫（自己的）",
       "pos": "noun"
     },
-    "tags": [
-      "family",
-      "person"
-    ]
+    "tags": ["family", "person"]
   },
   {
     "id": "vocab-N5-288",
@@ -4113,10 +3453,7 @@
       "meaning": "妻子（自己的）",
       "pos": "noun"
     },
-    "tags": [
-      "family",
-      "person"
-    ]
+    "tags": ["family", "person"]
   },
   {
     "id": "vocab-N5-289",
@@ -4128,9 +3465,7 @@
       "meaning": "男性",
       "pos": "noun"
     },
-    "tags": [
-      "person"
-    ]
+    "tags": ["person"]
   },
   {
     "id": "vocab-N5-290",
@@ -4142,9 +3477,7 @@
       "meaning": "女性",
       "pos": "noun"
     },
-    "tags": [
-      "person"
-    ]
+    "tags": ["person"]
   },
   {
     "id": "vocab-N5-291",
@@ -4156,9 +3489,7 @@
       "meaning": "男孩",
       "pos": "noun"
     },
-    "tags": [
-      "person"
-    ]
+    "tags": ["person"]
   },
   {
     "id": "vocab-N5-292",
@@ -4170,9 +3501,7 @@
       "meaning": "女孩",
       "pos": "noun"
     },
-    "tags": [
-      "person"
-    ]
+    "tags": ["person"]
   },
   {
     "id": "vocab-N5-293",
@@ -4184,9 +3513,7 @@
       "meaning": "大人",
       "pos": "noun"
     },
-    "tags": [
-      "person"
-    ]
+    "tags": ["person"]
   },
   {
     "id": "vocab-N5-294",
@@ -4198,10 +3525,7 @@
       "meaning": "客人",
       "pos": "noun"
     },
-    "tags": [
-      "person",
-      "work"
-    ]
+    "tags": ["person", "work"]
   },
   {
     "id": "vocab-N5-295",
@@ -4213,9 +3537,7 @@
       "meaning": "會議",
       "pos": "noun"
     },
-    "tags": [
-      "work"
-    ]
+    "tags": ["work"]
   },
   {
     "id": "vocab-N5-296",
@@ -4227,9 +3549,7 @@
       "meaning": "工作",
       "pos": "noun"
     },
-    "tags": [
-      "work"
-    ]
+    "tags": ["work"]
   },
   {
     "id": "vocab-N5-297",
@@ -4241,9 +3561,7 @@
       "meaning": "課程",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-298",
@@ -4255,9 +3573,7 @@
       "meaning": "考試",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-299",
@@ -4269,9 +3585,7 @@
       "meaning": "作業",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-300",
@@ -4283,10 +3597,7 @@
       "meaning": "旅行",
       "pos": "noun"
     },
-    "tags": [
-      "hobby",
-      "transport"
-    ]
+    "tags": ["hobby", "transport"]
   },
   {
     "id": "vocab-N5-301",
@@ -4298,9 +3609,7 @@
       "meaning": "散步",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-302",
@@ -4312,9 +3621,7 @@
       "meaning": "購物",
       "pos": "noun"
     },
-    "tags": [
-      "shopping"
-    ]
+    "tags": ["shopping"]
   },
   {
     "id": "vocab-N5-303",
@@ -4326,10 +3633,7 @@
       "meaning": "打電話",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "work"
-    ]
+    "tags": ["verb", "work"]
   },
   {
     "id": "vocab-N5-304",
@@ -4341,10 +3645,7 @@
       "meaning": "發郵件",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "work"
-    ]
+    "tags": ["verb", "work"]
   },
   {
     "id": "vocab-N5-305",
@@ -4356,10 +3657,7 @@
       "meaning": "練習",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "school"
-    ]
+    "tags": ["verb", "school"]
   },
   {
     "id": "vocab-N5-306",
@@ -4371,9 +3669,7 @@
       "meaning": "準備",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-307",
@@ -4385,10 +3681,7 @@
       "meaning": "說明",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "school"
-    ]
+    "tags": ["verb", "school"]
   },
   {
     "id": "vocab-N5-308",
@@ -4400,10 +3693,7 @@
       "meaning": "提問",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "school"
-    ]
+    "tags": ["verb", "school"]
   },
   {
     "id": "vocab-N5-309",
@@ -4415,9 +3705,7 @@
       "meaning": "回答/回覆",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-310",
@@ -4429,10 +3717,7 @@
       "meaning": "擔心",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-311",
@@ -4444,9 +3729,7 @@
       "meaning": "注意",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-312",
@@ -4458,9 +3741,7 @@
       "meaning": "確認",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-313",
@@ -4472,10 +3753,7 @@
       "meaning": "享受",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-314",
@@ -4487,10 +3765,7 @@
       "meaning": "困擾",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-315",
@@ -4502,10 +3777,7 @@
       "meaning": "高興",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-316",
@@ -4517,10 +3789,7 @@
       "meaning": "生氣",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-317",
@@ -4532,10 +3801,7 @@
       "meaning": "笑",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-318",
@@ -4547,10 +3813,7 @@
       "meaning": "哭",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-319",
@@ -4562,9 +3825,7 @@
       "meaning": "推/按",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-320",
@@ -4576,9 +3837,7 @@
       "meaning": "拉",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-321",
@@ -4590,9 +3849,7 @@
       "meaning": "切/剪",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-322",
@@ -4604,9 +3861,7 @@
       "meaning": "折",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-323",
@@ -4618,9 +3873,7 @@
       "meaning": "撿起",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-324",
@@ -4632,9 +3885,7 @@
       "meaning": "丟棄",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-325",
@@ -4646,9 +3897,7 @@
       "meaning": "排隊",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-326",
@@ -4660,9 +3909,7 @@
       "meaning": "聚集",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-327",
@@ -4674,10 +3921,7 @@
       "meaning": "離開",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "direction"
-    ]
+    "tags": ["verb", "direction"]
   },
   {
     "id": "vocab-N5-328",
@@ -4689,10 +3933,7 @@
       "meaning": "轉彎",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "direction"
-    ]
+    "tags": ["verb", "direction"]
   },
   {
     "id": "vocab-N5-329",
@@ -4704,10 +3945,7 @@
       "meaning": "通過",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "direction"
-    ]
+    "tags": ["verb", "direction"]
   },
   {
     "id": "vocab-N5-330",
@@ -4719,9 +3957,7 @@
       "meaning": "改變",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-331",
@@ -4733,10 +3969,7 @@
       "meaning": "樓梯",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "home"
-    ]
+    "tags": ["place", "home"]
   },
   {
     "id": "vocab-N5-332",
@@ -4748,10 +3981,7 @@
       "meaning": "電梯",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "home"
-    ]
+    "tags": ["place", "home"]
   },
   {
     "id": "vocab-N5-333",
@@ -4763,10 +3993,7 @@
       "meaning": "入口",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "direction"
-    ]
+    "tags": ["place", "direction"]
   },
   {
     "id": "vocab-N5-334",
@@ -4778,10 +4005,7 @@
       "meaning": "出口",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "direction"
-    ]
+    "tags": ["place", "direction"]
   },
   {
     "id": "vocab-N5-335",
@@ -4793,10 +4017,7 @@
       "meaning": "十字路口",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "transport"
-    ]
+    "tags": ["place", "transport"]
   },
   {
     "id": "vocab-N5-336",
@@ -4808,9 +4029,7 @@
       "meaning": "交通號誌",
       "pos": "noun"
     },
-    "tags": [
-      "transport"
-    ]
+    "tags": ["transport"]
   },
   {
     "id": "vocab-N5-337",
@@ -4822,10 +4041,7 @@
       "meaning": "地圖",
       "pos": "noun"
     },
-    "tags": [
-      "transport",
-      "place"
-    ]
+    "tags": ["transport", "place"]
   },
   {
     "id": "vocab-N5-338",
@@ -4837,10 +4053,7 @@
       "meaning": "住址",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "home"
-    ]
+    "tags": ["place", "home"]
   },
   {
     "id": "vocab-N5-339",
@@ -4852,9 +4065,7 @@
       "meaning": "號碼",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-340",
@@ -4866,9 +4077,7 @@
       "meaning": "照片",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-341",
@@ -4880,9 +4089,7 @@
       "meaning": "電影",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-342",
@@ -4894,9 +4101,7 @@
       "meaning": "音樂",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-343",
@@ -4908,9 +4113,7 @@
       "meaning": "運動",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-344",
@@ -4922,9 +4125,7 @@
       "meaning": "足球",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-345",
@@ -4936,9 +4137,7 @@
       "meaning": "棒球",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-346",
@@ -4950,9 +4149,7 @@
       "meaning": "網球",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-347",
@@ -4964,9 +4161,7 @@
       "meaning": "興趣/嗜好",
       "pos": "noun"
     },
-    "tags": [
-      "hobby"
-    ]
+    "tags": ["hobby"]
   },
   {
     "id": "vocab-N5-348",
@@ -4978,9 +4173,7 @@
       "meaning": "生活",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-349",
@@ -4992,9 +4185,7 @@
       "meaning": "習慣",
       "pos": "noun"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-350",
@@ -5006,9 +4197,7 @@
       "meaning": "夢/夢想",
       "pos": "noun"
     },
-    "tags": [
-      "emotion"
-    ]
+    "tags": ["emotion"]
   },
   {
     "id": "vocab-N5-351",
@@ -5020,9 +4209,7 @@
       "meaning": "想法",
       "pos": "noun"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-352",
@@ -5034,9 +4221,7 @@
       "meaning": "感受/心情",
       "pos": "noun"
     },
-    "tags": [
-      "emotion"
-    ]
+    "tags": ["emotion"]
   },
   {
     "id": "vocab-N5-353",
@@ -5048,9 +4233,7 @@
       "meaning": "意思/意義",
       "pos": "noun"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-354",
@@ -5062,9 +4245,7 @@
       "meaning": "理由",
       "pos": "noun"
     },
-    "tags": [
-      "conjunction"
-    ]
+    "tags": ["conjunction"]
   },
   {
     "id": "vocab-N5-355",
@@ -5076,9 +4257,7 @@
       "meaning": "問題",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-356",
@@ -5090,9 +4269,7 @@
       "meaning": "答案",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-357",
@@ -5104,9 +4281,7 @@
       "meaning": "方法",
       "pos": "noun"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-358",
@@ -5118,9 +4293,7 @@
       "meaning": "例子",
       "pos": "noun"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-359",
@@ -5132,9 +4305,7 @@
       "meaning": "全部",
       "pos": "noun"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-360",
@@ -5146,9 +4317,7 @@
       "meaning": "一半",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-361",
@@ -5160,10 +4329,7 @@
       "meaning": "第一次",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb",
-      "time"
-    ]
+    "tags": ["adverb", "time"]
   },
   {
     "id": "vocab-N5-362",
@@ -5175,9 +4341,7 @@
       "meaning": "再/又",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-363",
@@ -5189,10 +4353,7 @@
       "meaning": "馬上",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb",
-      "time"
-    ]
+    "tags": ["adverb", "time"]
   },
   {
     "id": "vocab-N5-364",
@@ -5204,9 +4365,7 @@
       "meaning": "慢慢地",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-365",
@@ -5218,9 +4377,7 @@
       "meaning": "清楚地",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-366",
@@ -5232,9 +4389,7 @@
       "meaning": "大概",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-367",
@@ -5246,9 +4401,7 @@
       "meaning": "特別",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-368",
@@ -5260,9 +4413,7 @@
       "meaning": "真的",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-369",
@@ -5274,9 +4425,7 @@
       "meaning": "也許",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-370",
@@ -5288,9 +4437,7 @@
       "meaning": "一定",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-371",
@@ -5302,9 +4449,7 @@
       "meaning": "當然",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-372",
@@ -5316,9 +4461,7 @@
       "meaning": "果然/還是",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-373",
@@ -5330,9 +4473,7 @@
       "meaning": "所以",
       "pos": "adverb"
     },
-    "tags": [
-      "conjunction"
-    ]
+    "tags": ["conjunction"]
   },
   {
     "id": "vocab-N5-374",
@@ -5344,9 +4485,7 @@
       "meaning": "但是",
       "pos": "adverb"
     },
-    "tags": [
-      "conjunction"
-    ]
+    "tags": ["conjunction"]
   },
   {
     "id": "vocab-N5-375",
@@ -5358,9 +4497,7 @@
       "meaning": "然後/而且",
       "pos": "adverb"
     },
-    "tags": [
-      "conjunction"
-    ]
+    "tags": ["conjunction"]
   },
   {
     "id": "vocab-N5-376",
@@ -5372,10 +4509,7 @@
       "meaning": "之後",
       "pos": "adverb"
     },
-    "tags": [
-      "conjunction",
-      "time"
-    ]
+    "tags": ["conjunction", "time"]
   },
   {
     "id": "vocab-N5-377",
@@ -5387,9 +4521,7 @@
       "meaning": "所以（承接）",
       "pos": "adverb"
     },
-    "tags": [
-      "conjunction"
-    ]
+    "tags": ["conjunction"]
   },
   {
     "id": "vocab-N5-378",
@@ -5401,10 +4533,7 @@
       "meaning": "那麼",
       "pos": "adverb"
     },
-    "tags": [
-      "conjunction",
-      "greeting"
-    ]
+    "tags": ["conjunction", "greeting"]
   },
   {
     "id": "vocab-N5-379",
@@ -5416,9 +4545,7 @@
       "meaning": "上週",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-380",
@@ -5430,9 +4557,7 @@
       "meaning": "下週",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-381",
@@ -5444,9 +4569,7 @@
       "meaning": "本週",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-382",
@@ -5458,9 +4581,7 @@
       "meaning": "上個月",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-383",
@@ -5472,9 +4593,7 @@
       "meaning": "下個月",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-384",
@@ -5486,9 +4605,7 @@
       "meaning": "本月",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-385",
@@ -5500,9 +4617,7 @@
       "meaning": "去年",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-386",
@@ -5514,9 +4629,7 @@
       "meaning": "明年",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-387",
@@ -5528,9 +4641,7 @@
       "meaning": "今年",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-388",
@@ -5542,10 +4653,7 @@
       "meaning": "每天",
       "pos": "noun"
     },
-    "tags": [
-      "time",
-      "adverb"
-    ]
+    "tags": ["time", "adverb"]
   },
   {
     "id": "vocab-N5-389",
@@ -5557,10 +4665,7 @@
       "meaning": "每週",
       "pos": "noun"
     },
-    "tags": [
-      "time",
-      "adverb"
-    ]
+    "tags": ["time", "adverb"]
   },
   {
     "id": "vocab-N5-390",
@@ -5572,10 +4677,7 @@
       "meaning": "每月",
       "pos": "noun"
     },
-    "tags": [
-      "time",
-      "adverb"
-    ]
+    "tags": ["time", "adverb"]
   },
   {
     "id": "vocab-N5-391",
@@ -5587,10 +4689,7 @@
       "meaning": "每年",
       "pos": "noun"
     },
-    "tags": [
-      "time",
-      "adverb"
-    ]
+    "tags": ["time", "adverb"]
   },
   {
     "id": "vocab-N5-392",
@@ -5602,9 +4701,7 @@
       "meaning": "上午",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-393",
@@ -5616,9 +4713,7 @@
       "meaning": "下午",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-394",
@@ -5630,9 +4725,7 @@
       "meaning": "傍晚",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-395",
@@ -5644,9 +4737,7 @@
       "meaning": "今晚",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-396",
@@ -5658,10 +4749,7 @@
       "meaning": "一大早",
       "pos": "adverb"
     },
-    "tags": [
-      "time",
-      "adverb"
-    ]
+    "tags": ["time", "adverb"]
   },
   {
     "id": "vocab-N5-397",
@@ -5673,9 +4761,7 @@
       "meaning": "字典",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-398",
@@ -5687,9 +4773,7 @@
       "meaning": "教科書",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-399",
@@ -5701,9 +4785,7 @@
       "meaning": "黑板",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-400",
@@ -5715,9 +4797,7 @@
       "meaning": "橡皮擦",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-401",
@@ -5729,9 +4809,7 @@
       "meaning": "尺",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-402",
@@ -5743,10 +4821,7 @@
       "meaning": "剪刀",
       "pos": "noun"
     },
-    "tags": [
-      "school",
-      "home"
-    ]
+    "tags": ["school", "home"]
   },
   {
     "id": "vocab-N5-403",
@@ -5758,10 +4833,7 @@
       "meaning": "膠水",
       "pos": "noun"
     },
-    "tags": [
-      "school",
-      "home"
-    ]
+    "tags": ["school", "home"]
   },
   {
     "id": "vocab-N5-404",
@@ -5773,10 +4845,7 @@
       "meaning": "膠帶",
       "pos": "noun"
     },
-    "tags": [
-      "school",
-      "home"
-    ]
+    "tags": ["school", "home"]
   },
   {
     "id": "vocab-N5-405",
@@ -5788,9 +4857,7 @@
       "meaning": "印刷品/講義",
       "pos": "noun"
     },
-    "tags": [
-      "school"
-    ]
+    "tags": ["school"]
   },
   {
     "id": "vocab-N5-406",
@@ -5802,10 +4869,7 @@
       "meaning": "盤子",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "food"
-    ]
+    "tags": ["home", "food"]
   },
   {
     "id": "vocab-N5-407",
@@ -5817,10 +4881,7 @@
       "meaning": "飯碗",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "food"
-    ]
+    "tags": ["home", "food"]
   },
   {
     "id": "vocab-N5-408",
@@ -5832,10 +4893,7 @@
       "meaning": "杯子",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "food"
-    ]
+    "tags": ["home", "food"]
   },
   {
     "id": "vocab-N5-409",
@@ -5847,10 +4905,7 @@
       "meaning": "筷子",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "food"
-    ]
+    "tags": ["home", "food"]
   },
   {
     "id": "vocab-N5-410",
@@ -5862,10 +4917,7 @@
       "meaning": "湯匙",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "food"
-    ]
+    "tags": ["home", "food"]
   },
   {
     "id": "vocab-N5-411",
@@ -5877,10 +4929,7 @@
       "meaning": "叉子",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "food"
-    ]
+    "tags": ["home", "food"]
   },
   {
     "id": "vocab-N5-412",
@@ -5892,9 +4941,7 @@
       "meaning": "冰箱",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-413",
@@ -5906,9 +4953,7 @@
       "meaning": "洗衣機",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-414",
@@ -5920,9 +4965,7 @@
       "meaning": "吸塵器",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-415",
@@ -5934,9 +4977,7 @@
       "meaning": "冷氣",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-416",
@@ -5948,9 +4989,7 @@
       "meaning": "暖氣",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-417",
@@ -5962,9 +5001,7 @@
       "meaning": "浴室/泡澡",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-418",
@@ -5976,10 +5013,7 @@
       "meaning": "廁所",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "place"
-    ]
+    "tags": ["home", "place"]
   },
   {
     "id": "vocab-N5-419",
@@ -5991,9 +5025,7 @@
       "meaning": "廚房",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-420",
@@ -6005,9 +5037,7 @@
       "meaning": "玄關",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-421",
@@ -6019,10 +5049,7 @@
       "meaning": "走廊",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "place"
-    ]
+    "tags": ["home", "place"]
   },
   {
     "id": "vocab-N5-422",
@@ -6034,9 +5061,7 @@
       "meaning": "屋頂",
       "pos": "noun"
     },
-    "tags": [
-      "home"
-    ]
+    "tags": ["home"]
   },
   {
     "id": "vocab-N5-423",
@@ -6048,10 +5073,7 @@
       "meaning": "庭院",
       "pos": "noun"
     },
-    "tags": [
-      "home",
-      "nature"
-    ]
+    "tags": ["home", "nature"]
   },
   {
     "id": "vocab-N5-424",
@@ -6063,10 +5085,7 @@
       "meaning": "打掃",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "home"
-    ]
+    "tags": ["verb", "home"]
   },
   {
     "id": "vocab-N5-425",
@@ -6078,10 +5097,7 @@
       "meaning": "洗衣服",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "home"
-    ]
+    "tags": ["verb", "home"]
   },
   {
     "id": "vocab-N5-426",
@@ -6093,11 +5109,7 @@
       "meaning": "做料理",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "food",
-      "home"
-    ]
+    "tags": ["verb", "food", "home"]
   },
   {
     "id": "vocab-N5-427",
@@ -6109,10 +5121,7 @@
       "meaning": "整理/收拾",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "home"
-    ]
+    "tags": ["verb", "home"]
   },
   {
     "id": "vocab-N5-428",
@@ -6124,10 +5133,7 @@
       "meaning": "裝飾",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "home"
-    ]
+    "tags": ["verb", "home"]
   },
   {
     "id": "vocab-N5-429",
@@ -6139,11 +5145,7 @@
       "meaning": "居住",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "home",
-      "place"
-    ]
+    "tags": ["verb", "home", "place"]
   },
   {
     "id": "vocab-N5-430",
@@ -6155,10 +5157,7 @@
       "meaning": "搬家",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "home"
-    ]
+    "tags": ["verb", "home"]
   },
   {
     "id": "vocab-N5-431",
@@ -6170,10 +5169,7 @@
       "meaning": "日式旅館",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "transport"
-    ]
+    "tags": ["place", "transport"]
   },
   {
     "id": "vocab-N5-432",
@@ -6185,10 +5181,7 @@
       "meaning": "飯店",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "transport"
-    ]
+    "tags": ["place", "transport"]
   },
   {
     "id": "vocab-N5-433",
@@ -6200,10 +5193,7 @@
       "meaning": "餐廳",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "food"
-    ]
+    "tags": ["place", "food"]
   },
   {
     "id": "vocab-N5-434",
@@ -6215,10 +5205,7 @@
       "meaning": "超市",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "shopping"
-    ]
+    "tags": ["place", "shopping"]
   },
   {
     "id": "vocab-N5-435",
@@ -6230,10 +5217,7 @@
       "meaning": "百貨公司",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "shopping"
-    ]
+    "tags": ["place", "shopping"]
   },
   {
     "id": "vocab-N5-436",
@@ -6245,10 +5229,7 @@
       "meaning": "便利商店",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "shopping"
-    ]
+    "tags": ["place", "shopping"]
   },
   {
     "id": "vocab-N5-437",
@@ -6260,10 +5241,7 @@
       "meaning": "市場",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "shopping"
-    ]
+    "tags": ["place", "shopping"]
   },
   {
     "id": "vocab-N5-438",
@@ -6275,10 +5253,7 @@
       "meaning": "游泳池",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "hobby"
-    ]
+    "tags": ["place", "hobby"]
   },
   {
     "id": "vocab-N5-439",
@@ -6290,11 +5265,7 @@
       "meaning": "體育館",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "school",
-      "hobby"
-    ]
+    "tags": ["place", "school", "hobby"]
   },
   {
     "id": "vocab-N5-440",
@@ -6306,10 +5277,7 @@
       "meaning": "美術館",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "hobby"
-    ]
+    "tags": ["place", "hobby"]
   },
   {
     "id": "vocab-N5-441",
@@ -6321,10 +5289,7 @@
       "meaning": "博物館",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "hobby"
-    ]
+    "tags": ["place", "hobby"]
   },
   {
     "id": "vocab-N5-442",
@@ -6336,10 +5301,7 @@
       "meaning": "動物園",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "animal"
-    ]
+    "tags": ["place", "animal"]
   },
   {
     "id": "vocab-N5-443",
@@ -6351,9 +5313,7 @@
       "meaning": "神社",
       "pos": "noun"
     },
-    "tags": [
-      "place"
-    ]
+    "tags": ["place"]
   },
   {
     "id": "vocab-N5-444",
@@ -6365,9 +5325,7 @@
       "meaning": "寺廟",
       "pos": "noun"
     },
-    "tags": [
-      "place"
-    ]
+    "tags": ["place"]
   },
   {
     "id": "vocab-N5-445",
@@ -6379,10 +5337,7 @@
       "meaning": "工廠",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "work"
-    ]
+    "tags": ["place", "work"]
   },
   {
     "id": "vocab-N5-446",
@@ -6394,10 +5349,7 @@
       "meaning": "農家",
       "pos": "noun"
     },
-    "tags": [
-      "place",
-      "work"
-    ]
+    "tags": ["place", "work"]
   },
   {
     "id": "vocab-N5-447",
@@ -6409,10 +5361,7 @@
       "meaning": "運動",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "hobby"
-    ]
+    "tags": ["verb", "hobby"]
   },
   {
     "id": "vocab-N5-448",
@@ -6424,10 +5373,7 @@
       "meaning": "住宿",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "transport"
-    ]
+    "tags": ["verb", "transport"]
   },
   {
     "id": "vocab-N5-449",
@@ -6439,10 +5385,7 @@
       "meaning": "預約",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "shopping"
-    ]
+    "tags": ["verb", "shopping"]
   },
   {
     "id": "vocab-N5-450",
@@ -6454,10 +5397,7 @@
       "meaning": "支付",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "shopping"
-    ]
+    "tags": ["verb", "shopping"]
   },
   {
     "id": "vocab-N5-451",
@@ -6469,9 +5409,7 @@
       "meaning": "尋找",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-452",
@@ -6483,9 +5421,7 @@
       "meaning": "找到",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-453",
@@ -6497,9 +5433,7 @@
       "meaning": "決定",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-454",
@@ -6511,9 +5445,7 @@
       "meaning": "選擇",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-455",
@@ -6525,9 +5457,7 @@
       "meaning": "比較",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-456",
@@ -6539,10 +5469,7 @@
       "meaning": "努力/加油",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-457",
@@ -6554,10 +5481,7 @@
       "meaning": "放棄",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-458",
@@ -6569,9 +5493,7 @@
       "meaning": "繼續",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-459",
@@ -6583,9 +5505,7 @@
       "meaning": "開始（他動詞）",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-460",
@@ -6597,9 +5517,7 @@
       "meaning": "結束（他動詞）",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-461",
@@ -6611,9 +5529,7 @@
       "meaning": "幫助",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-462",
@@ -6625,9 +5541,7 @@
       "meaning": "弄壞",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-463",
@@ -6639,9 +5553,7 @@
       "meaning": "修理/改正",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-464",
@@ -6653,9 +5565,7 @@
       "meaning": "拿/持有",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-465",
@@ -6667,9 +5577,7 @@
       "meaning": "放置/放下",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-466",
@@ -6681,9 +5589,7 @@
       "meaning": "拿取",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-467",
@@ -6695,9 +5601,7 @@
       "meaning": "交給/遞",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-468",
@@ -6709,9 +5613,7 @@
       "meaning": "叫/呼叫",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-469",
@@ -6723,10 +5625,7 @@
       "meaning": "回答",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "school"
-    ]
+    "tags": ["verb", "school"]
   },
   {
     "id": "vocab-N5-470",
@@ -6738,9 +5637,7 @@
       "meaning": "拜託/請求",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-471",
@@ -6752,9 +5649,7 @@
       "meaning": "拒絕",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-472",
@@ -6766,10 +5661,7 @@
       "meaning": "原諒/允許",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-473",
@@ -6781,10 +5673,7 @@
       "meaning": "相信",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "emotion"
-    ]
+    "tags": ["verb", "emotion"]
   },
   {
     "id": "vocab-N5-474",
@@ -6796,9 +5685,7 @@
       "meaning": "注意到/發覺",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-475",
@@ -6810,10 +5697,7 @@
       "meaning": "迷路/猶豫",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "direction"
-    ]
+    "tags": ["verb", "direction"]
   },
   {
     "id": "vocab-N5-476",
@@ -6825,9 +5709,7 @@
       "meaning": "相似",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-477",
@@ -6839,9 +5721,7 @@
       "meaning": "不同/不對",
       "pos": "verb"
     },
-    "tags": [
-      "verb"
-    ]
+    "tags": ["verb"]
   },
   {
     "id": "vocab-N5-478",
@@ -6853,10 +5733,7 @@
       "meaning": "增加",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "number"
-    ]
+    "tags": ["verb", "number"]
   },
   {
     "id": "vocab-N5-479",
@@ -6868,10 +5745,7 @@
       "meaning": "減少",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "number"
-    ]
+    "tags": ["verb", "number"]
   },
   {
     "id": "vocab-N5-480",
@@ -6883,10 +5757,7 @@
       "meaning": "變胖",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "health"
-    ]
+    "tags": ["verb", "health"]
   },
   {
     "id": "vocab-N5-481",
@@ -6898,10 +5769,7 @@
       "meaning": "變瘦",
       "pos": "verb"
     },
-    "tags": [
-      "verb",
-      "health"
-    ]
+    "tags": ["verb", "health"]
   },
   {
     "id": "vocab-N5-482",
@@ -6913,10 +5781,7 @@
       "meaning": "麻煩的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective",
-      "emotion"
-    ]
+    "tags": ["adjective", "emotion"]
   },
   {
     "id": "vocab-N5-483",
@@ -6928,9 +5793,7 @@
       "meaning": "圓的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-484",
@@ -6942,9 +5805,7 @@
       "meaning": "方形的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-485",
@@ -6956,9 +5817,7 @@
       "meaning": "細的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-486",
@@ -6970,9 +5829,7 @@
       "meaning": "粗的/胖的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size"
-    ]
+    "tags": ["size"]
   },
   {
     "id": "vocab-N5-487",
@@ -6984,10 +5841,7 @@
       "meaning": "深的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size",
-      "adjective"
-    ]
+    "tags": ["size", "adjective"]
   },
   {
     "id": "vocab-N5-488",
@@ -6999,10 +5853,7 @@
       "meaning": "淺的",
       "pos": "i-adj"
     },
-    "tags": [
-      "size",
-      "adjective"
-    ]
+    "tags": ["size", "adjective"]
   },
   {
     "id": "vocab-N5-489",
@@ -7014,9 +5865,7 @@
       "meaning": "硬的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-490",
@@ -7028,9 +5877,7 @@
       "meaning": "軟的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-491",
@@ -7042,9 +5889,7 @@
       "meaning": "暗的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-492",
@@ -7056,9 +5901,7 @@
       "meaning": "明亮的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-493",
@@ -7070,9 +5913,7 @@
       "meaning": "吵鬧的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-494",
@@ -7084,10 +5925,7 @@
       "meaning": "溫柔的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective",
-      "emotion"
-    ]
+    "tags": ["adjective", "emotion"]
   },
   {
     "id": "vocab-N5-495",
@@ -7099,9 +5937,7 @@
       "meaning": "嚴格的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-496",
@@ -7113,9 +5949,7 @@
       "meaning": "罕見的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-497",
@@ -7127,9 +5961,7 @@
       "meaning": "正確的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective"
-    ]
+    "tags": ["adjective"]
   },
   {
     "id": "vocab-N5-498",
@@ -7141,10 +5973,7 @@
       "meaning": "有趣的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective",
-      "emotion"
-    ]
+    "tags": ["adjective", "emotion"]
   },
   {
     "id": "vocab-N5-499",
@@ -7156,10 +5985,7 @@
       "meaning": "無聊的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective",
-      "emotion"
-    ]
+    "tags": ["adjective", "emotion"]
   },
   {
     "id": "vocab-N5-500",
@@ -7171,10 +5997,7 @@
       "meaning": "精彩的",
       "pos": "i-adj"
     },
-    "tags": [
-      "adjective",
-      "emotion"
-    ]
+    "tags": ["adjective", "emotion"]
   },
   {
     "id": "vocab-N5-501",
@@ -7186,9 +6009,7 @@
       "meaning": "早安",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-502",
@@ -7200,9 +6021,7 @@
       "meaning": "你好（白天）",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-503",
@@ -7214,9 +6033,7 @@
       "meaning": "晚上好",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-504",
@@ -7228,9 +6045,7 @@
       "meaning": "晚安",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-505",
@@ -7242,9 +6057,7 @@
       "meaning": "謝謝",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-506",
@@ -7256,9 +6069,7 @@
       "meaning": "不好意思/對不起",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-507",
@@ -7270,9 +6081,7 @@
       "meaning": "對不起",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-508",
@@ -7284,9 +6093,7 @@
       "meaning": "初次見面",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-509",
@@ -7298,9 +6105,7 @@
       "meaning": "請多關照",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-510",
@@ -7312,10 +6117,7 @@
       "meaning": "我要開動了",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting",
-      "food"
-    ]
+    "tags": ["greeting", "food"]
   },
   {
     "id": "vocab-N5-511",
@@ -7327,10 +6129,7 @@
       "meaning": "我吃飽了（感謝款待）",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting",
-      "food"
-    ]
+    "tags": ["greeting", "food"]
   },
   {
     "id": "vocab-N5-512",
@@ -7342,9 +6141,7 @@
       "meaning": "我出門了",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-513",
@@ -7356,9 +6153,7 @@
       "meaning": "慢走/路上小心",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-514",
@@ -7370,9 +6165,7 @@
       "meaning": "我回來了",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-515",
@@ -7384,9 +6177,7 @@
       "meaning": "歡迎回來",
       "pos": "adverb"
     },
-    "tags": [
-      "greeting"
-    ]
+    "tags": ["greeting"]
   },
   {
     "id": "vocab-N5-516",
@@ -7398,9 +6189,7 @@
       "meaning": "一（數字）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-517",
@@ -7412,9 +6201,7 @@
       "meaning": "二（數字）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-518",
@@ -7426,9 +6213,7 @@
       "meaning": "三（數字）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-519",
@@ -7440,9 +6225,7 @@
       "meaning": "四（數字）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-520",
@@ -7454,9 +6237,7 @@
       "meaning": "五（數字）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-521",
@@ -7468,9 +6249,7 @@
       "meaning": "六（數字）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-522",
@@ -7482,9 +6261,7 @@
       "meaning": "七（數字）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-523",
@@ -7496,9 +6273,7 @@
       "meaning": "八（數字）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-524",
@@ -7506,13 +6281,11 @@
     "level": "N5",
     "payload": {
       "word": "九",
-      "reading": "く",
+      "reading": "きゅう",
       "meaning": "九（數字）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-525",
@@ -7524,9 +6297,7 @@
       "meaning": "十（數字）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-526",
@@ -7538,9 +6309,7 @@
       "meaning": "百",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-527",
@@ -7552,9 +6321,7 @@
       "meaning": "千",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-528",
@@ -7566,9 +6333,7 @@
       "meaning": "萬",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-529",
@@ -7580,9 +6345,7 @@
       "meaning": "零",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-530",
@@ -7594,10 +6357,7 @@
       "meaning": "〜人（人數助數詞）",
       "pos": "noun"
     },
-    "tags": [
-      "number",
-      "person"
-    ]
+    "tags": ["number", "person"]
   },
   {
     "id": "vocab-N5-531",
@@ -7609,9 +6369,7 @@
       "meaning": "〜支/條（細長物助數詞）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-532",
@@ -7623,9 +6381,7 @@
       "meaning": "〜張（薄平物助數詞）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-533",
@@ -7637,10 +6393,7 @@
       "meaning": "〜本（書冊助數詞）",
       "pos": "noun"
     },
-    "tags": [
-      "number",
-      "school"
-    ]
+    "tags": ["number", "school"]
   },
   {
     "id": "vocab-N5-534",
@@ -7652,10 +6405,7 @@
       "meaning": "〜台（機械車輛助數詞）",
       "pos": "noun"
     },
-    "tags": [
-      "number",
-      "transport"
-    ]
+    "tags": ["number", "transport"]
   },
   {
     "id": "vocab-N5-535",
@@ -7667,10 +6417,7 @@
       "meaning": "〜隻（小動物助數詞）",
       "pos": "noun"
     },
-    "tags": [
-      "number",
-      "animal"
-    ]
+    "tags": ["number", "animal"]
   },
   {
     "id": "vocab-N5-536",
@@ -7682,10 +6429,7 @@
       "meaning": "〜杯（飲料容器助數詞）",
       "pos": "noun"
     },
-    "tags": [
-      "number",
-      "food"
-    ]
+    "tags": ["number", "food"]
   },
   {
     "id": "vocab-N5-537",
@@ -7697,10 +6441,7 @@
       "meaning": "〜樓（樓層助數詞）",
       "pos": "noun"
     },
-    "tags": [
-      "number",
-      "place"
-    ]
+    "tags": ["number", "place"]
   },
   {
     "id": "vocab-N5-538",
@@ -7712,9 +6453,7 @@
       "meaning": "第〜號",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-539",
@@ -7726,9 +6465,7 @@
       "meaning": "怎麼樣",
       "pos": "adverb"
     },
-    "tags": [
-      "question"
-    ]
+    "tags": ["question"]
   },
   {
     "id": "vocab-N5-540",
@@ -7740,9 +6477,7 @@
       "meaning": "什麼樣的",
       "pos": "adverb"
     },
-    "tags": [
-      "question"
-    ]
+    "tags": ["question"]
   },
   {
     "id": "vocab-N5-541",
@@ -7754,10 +6489,7 @@
       "meaning": "多少錢",
       "pos": "noun"
     },
-    "tags": [
-      "question",
-      "shopping"
-    ]
+    "tags": ["question", "shopping"]
   },
   {
     "id": "vocab-N5-542",
@@ -7769,10 +6501,7 @@
       "meaning": "幾個/幾歲",
       "pos": "noun"
     },
-    "tags": [
-      "question",
-      "number"
-    ]
+    "tags": ["question", "number"]
   },
   {
     "id": "vocab-N5-543",
@@ -7784,9 +6513,7 @@
       "meaning": "為什麼",
       "pos": "adverb"
     },
-    "tags": [
-      "question"
-    ]
+    "tags": ["question"]
   },
   {
     "id": "vocab-N5-544",
@@ -7798,9 +6525,7 @@
       "meaning": "為什麼/怎麼",
       "pos": "adverb"
     },
-    "tags": [
-      "question"
-    ]
+    "tags": ["question"]
   },
   {
     "id": "vocab-N5-545",
@@ -7812,10 +6537,7 @@
       "meaning": "大概多少/多久",
       "pos": "adverb"
     },
-    "tags": [
-      "question",
-      "number"
-    ]
+    "tags": ["question", "number"]
   },
   {
     "id": "vocab-N5-546",
@@ -7827,9 +6549,7 @@
       "meaning": "父親（對方的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-547",
@@ -7841,9 +6561,7 @@
       "meaning": "母親（對方的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-548",
@@ -7855,9 +6573,7 @@
       "meaning": "哥哥（對方的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-549",
@@ -7869,9 +6585,7 @@
       "meaning": "姊姊（對方的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-550",
@@ -7883,9 +6597,7 @@
       "meaning": "弟弟（對方的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-551",
@@ -7897,9 +6609,7 @@
       "meaning": "妹妹（對方的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-552",
@@ -7911,9 +6621,7 @@
       "meaning": "祖父/老爺爺（對方的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-553",
@@ -7925,9 +6633,7 @@
       "meaning": "祖母/老奶奶（對方的）",
       "pos": "noun"
     },
-    "tags": [
-      "family"
-    ]
+    "tags": ["family"]
   },
   {
     "id": "vocab-N5-554",
@@ -7939,10 +6645,7 @@
       "meaning": "鳥",
       "pos": "noun"
     },
-    "tags": [
-      "animal",
-      "nature"
-    ]
+    "tags": ["animal", "nature"]
   },
   {
     "id": "vocab-N5-555",
@@ -7954,9 +6657,7 @@
       "meaning": "兔子",
       "pos": "noun"
     },
-    "tags": [
-      "animal"
-    ]
+    "tags": ["animal"]
   },
   {
     "id": "vocab-N5-556",
@@ -7968,9 +6669,7 @@
       "meaning": "啤酒",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-557",
@@ -7982,9 +6681,7 @@
       "meaning": "果汁",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-558",
@@ -7996,9 +6693,7 @@
       "meaning": "酒",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-559",
@@ -8010,9 +6705,7 @@
       "meaning": "壽司",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-560",
@@ -8024,9 +6717,7 @@
       "meaning": "拉麵",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-561",
@@ -8038,9 +6729,7 @@
       "meaning": "咖哩",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-562",
@@ -8052,9 +6741,7 @@
       "meaning": "烏龍麵",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-563",
@@ -8066,9 +6753,7 @@
       "meaning": "蕎麥麵",
       "pos": "noun"
     },
-    "tags": [
-      "food"
-    ]
+    "tags": ["food"]
   },
   {
     "id": "vocab-N5-564",
@@ -8080,9 +6765,7 @@
       "meaning": "襯衫",
       "pos": "noun"
     },
-    "tags": [
-      "clothing"
-    ]
+    "tags": ["clothing"]
   },
   {
     "id": "vocab-N5-565",
@@ -8094,9 +6777,7 @@
       "meaning": "褲子",
       "pos": "noun"
     },
-    "tags": [
-      "clothing"
-    ]
+    "tags": ["clothing"]
   },
   {
     "id": "vocab-N5-566",
@@ -8108,9 +6789,7 @@
       "meaning": "裙子",
       "pos": "noun"
     },
-    "tags": [
-      "clothing"
-    ]
+    "tags": ["clothing"]
   },
   {
     "id": "vocab-N5-567",
@@ -8122,9 +6801,7 @@
       "meaning": "大衣",
       "pos": "noun"
     },
-    "tags": [
-      "clothing"
-    ]
+    "tags": ["clothing"]
   },
   {
     "id": "vocab-N5-568",
@@ -8136,9 +6813,7 @@
       "meaning": "毛衣",
       "pos": "noun"
     },
-    "tags": [
-      "clothing"
-    ]
+    "tags": ["clothing"]
   },
   {
     "id": "vocab-N5-569",
@@ -8150,9 +6825,7 @@
       "meaning": "鼻子",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-570",
@@ -8164,9 +6837,7 @@
       "meaning": "耳朵",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-571",
@@ -8178,9 +6849,7 @@
       "meaning": "背部",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-572",
@@ -8192,9 +6861,7 @@
       "meaning": "肚子",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-573",
@@ -8206,9 +6873,7 @@
       "meaning": "胸部",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-574",
@@ -8220,9 +6885,7 @@
       "meaning": "肩膀",
       "pos": "noun"
     },
-    "tags": [
-      "body"
-    ]
+    "tags": ["body"]
   },
   {
     "id": "vocab-N5-575",
@@ -8234,10 +6897,7 @@
       "meaning": "最（第一名）",
       "pos": "adverb"
     },
-    "tags": [
-      "number",
-      "adverb"
-    ]
+    "tags": ["number", "adverb"]
   },
   {
     "id": "vocab-N5-576",
@@ -8249,9 +6909,7 @@
       "meaning": "第〜個（順序）",
       "pos": "noun"
     },
-    "tags": [
-      "number"
-    ]
+    "tags": ["number"]
   },
   {
     "id": "vocab-N5-577",
@@ -8263,9 +6921,7 @@
       "meaning": "稍微/一點",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-578",
@@ -8277,9 +6933,7 @@
       "meaning": "相當/不太（後接否定）",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-579",
@@ -8291,9 +6945,7 @@
       "meaning": "完全（不）",
       "pos": "adverb"
     },
-    "tags": [
-      "adverb"
-    ]
+    "tags": ["adverb"]
   },
   {
     "id": "vocab-N5-580",
@@ -8305,10 +6957,7 @@
       "meaning": "〜點鐘",
       "pos": "noun"
     },
-    "tags": [
-      "time",
-      "number"
-    ]
+    "tags": ["time", "number"]
   },
   {
     "id": "vocab-N5-581",
@@ -8320,10 +6969,7 @@
       "meaning": "〜分鐘",
       "pos": "noun"
     },
-    "tags": [
-      "time",
-      "number"
-    ]
+    "tags": ["time", "number"]
   },
   {
     "id": "vocab-N5-582",
@@ -8335,10 +6981,7 @@
       "meaning": "〜秒",
       "pos": "noun"
     },
-    "tags": [
-      "time",
-      "number"
-    ]
+    "tags": ["time", "number"]
   },
   {
     "id": "vocab-N5-583",
@@ -8350,9 +6993,7 @@
       "meaning": "星期一",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-584",
@@ -8364,9 +7005,7 @@
       "meaning": "星期二",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-585",
@@ -8378,9 +7017,7 @@
       "meaning": "星期三",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-586",
@@ -8392,9 +7029,7 @@
       "meaning": "星期四",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-587",
@@ -8406,9 +7041,7 @@
       "meaning": "星期五",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-588",
@@ -8420,9 +7053,7 @@
       "meaning": "星期六",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   },
   {
     "id": "vocab-N5-589",
@@ -8434,8 +7065,6 @@
       "meaning": "星期日",
       "pos": "noun"
     },
-    "tags": [
-      "time"
-    ]
+    "tags": ["time"]
   }
 ]
