@@ -10,7 +10,7 @@
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "person"
     ]
   },
   {
@@ -24,7 +24,7 @@
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "person"
     ]
   },
   {
@@ -37,7 +37,9 @@
       "meaning": "人",
       "pos": "noun"
     },
-    "tags": []
+    "tags": [
+      "person"
+    ]
   },
   {
     "id": "vocab-N5-004",
@@ -46,7 +48,7 @@
     "payload": {
       "word": "今",
       "reading": "いま",
-      "meaning": "現在、現在",
+      "meaning": "現在",
       "pos": "noun"
     },
     "tags": [
@@ -78,7 +80,8 @@
       "pos": "noun"
     },
     "tags": [
-      "person"
+      "person",
+      "school"
     ]
   },
   {
@@ -92,7 +95,8 @@
       "pos": "noun"
     },
     "tags": [
-      "person"
+      "person",
+      "school"
     ]
   },
   {
@@ -116,11 +120,11 @@
     "payload": {
       "word": "家族",
       "reading": "かぞく",
-      "meaning": "家人、家族",
+      "meaning": "家人",
       "pos": "noun"
     },
     "tags": [
-      "person"
+      "family"
     ]
   },
   {
@@ -130,7 +134,7 @@
     "payload": {
       "word": "父",
       "reading": "ちち",
-      "meaning": "（自己的）父親",
+      "meaning": "父親",
       "pos": "noun"
     },
     "tags": [
@@ -144,7 +148,7 @@
     "payload": {
       "word": "母",
       "reading": "はは",
-      "meaning": "（自己的）母親",
+      "meaning": "母親",
       "pos": "noun"
     },
     "tags": [
@@ -162,7 +166,8 @@
       "pos": "noun"
     },
     "tags": [
-      "family"
+      "family",
+      "person"
     ]
   },
   {
@@ -176,6 +181,7 @@
       "pos": "noun"
     },
     "tags": [
+      "school",
       "place"
     ]
   },
@@ -190,6 +196,7 @@
       "pos": "noun"
     },
     "tags": [
+      "work",
       "place"
     ]
   },
@@ -204,6 +211,7 @@
       "pos": "noun"
     },
     "tags": [
+      "home",
       "place"
     ]
   },
@@ -218,7 +226,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "home"
     ]
   },
   {
@@ -232,7 +240,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "transport"
     ]
   },
   {
@@ -246,7 +255,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "shopping"
     ]
   },
   {
@@ -260,7 +270,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -274,7 +284,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "hobby"
     ]
   },
   {
@@ -288,7 +298,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "hobby"
     ]
   },
   {
@@ -302,7 +312,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -316,7 +326,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "transport"
     ]
   },
   {
@@ -410,7 +420,7 @@
     "payload": {
       "word": "ご飯",
       "reading": "ごはん",
-      "meaning": "米飯、餐食",
+      "meaning": "米飯/餐食",
       "pos": "noun"
     },
     "tags": [
@@ -483,7 +493,9 @@
       "meaning": "錢",
       "pos": "noun"
     },
-    "tags": []
+    "tags": [
+      "shopping"
+    ]
   },
   {
     "id": "vocab-N5-036",
@@ -506,7 +518,7 @@
     "payload": {
       "word": "年",
       "reading": "とし",
-      "meaning": "年、歲",
+      "meaning": "年/歲",
       "pos": "noun"
     },
     "tags": [
@@ -520,7 +532,7 @@
     "payload": {
       "word": "月",
       "reading": "つき",
-      "meaning": "月、月亮",
+      "meaning": "月",
       "pos": "noun"
     },
     "tags": [
@@ -636,7 +648,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "food",
+      "verb"
     ]
   },
   {
@@ -650,7 +663,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "food",
+      "verb"
     ]
   },
   {
@@ -664,7 +678,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -674,11 +688,11 @@
     "payload": {
       "word": "聞く",
       "reading": "きく",
-      "meaning": "聽、問",
+      "meaning": "聽/問",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -692,7 +706,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -706,7 +720,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "school"
     ]
   },
   {
@@ -720,7 +735,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "school"
     ]
   },
   {
@@ -734,7 +750,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "shopping"
     ]
   },
   {
@@ -748,7 +765,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "shopping"
     ]
   },
   {
@@ -762,7 +780,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -776,7 +794,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -786,11 +804,11 @@
     "payload": {
       "word": "帰る",
       "reading": "かえる",
-      "meaning": "回去、回家",
+      "meaning": "回去",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -804,7 +822,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -818,7 +836,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -832,7 +850,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "work"
     ]
   },
   {
@@ -842,11 +861,12 @@
     "payload": {
       "word": "勉強する",
       "reading": "べんきょうする",
-      "meaning": "學習、讀書",
+      "meaning": "學習",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "school"
     ]
   },
   {
@@ -860,7 +880,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -874,7 +894,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "person"
     ]
   },
   {
@@ -884,11 +905,11 @@
     "payload": {
       "word": "分かる",
       "reading": "わかる",
-      "meaning": "明白、懂",
+      "meaning": "明白",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -898,10 +919,12 @@
     "payload": {
       "word": "ある",
       "reading": "ある",
-      "meaning": "有（事物）",
+      "meaning": "有(事物)",
       "pos": "verb"
     },
-    "tags": []
+    "tags": [
+      "verb"
+    ]
   },
   {
     "id": "vocab-N5-066",
@@ -910,10 +933,12 @@
     "payload": {
       "word": "いる",
       "reading": "いる",
-      "meaning": "有（人、動物）",
+      "meaning": "有(人/動物)",
       "pos": "verb"
     },
-    "tags": []
+    "tags": [
+      "verb"
+    ]
   },
   {
     "id": "vocab-N5-067",
@@ -978,10 +1003,13 @@
     "payload": {
       "word": "高い",
       "reading": "たかい",
-      "meaning": "高的、貴的",
+      "meaning": "高的/貴的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "size",
+      "shopping"
+    ]
   },
   {
     "id": "vocab-N5-072",
@@ -993,7 +1021,10 @@
       "meaning": "便宜的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "shopping",
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-073",
@@ -1005,7 +1036,9 @@
       "meaning": "新的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-074",
@@ -1017,7 +1050,9 @@
       "meaning": "舊的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-075",
@@ -1029,7 +1064,9 @@
       "meaning": "好的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-076",
@@ -1041,7 +1078,9 @@
       "meaning": "壞的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-077",
@@ -1053,7 +1092,9 @@
       "meaning": "多的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "number"
+    ]
   },
   {
     "id": "vocab-N5-078",
@@ -1065,7 +1106,9 @@
       "meaning": "少的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "number"
+    ]
   },
   {
     "id": "vocab-N5-079",
@@ -1074,7 +1117,7 @@
     "payload": {
       "word": "暑い",
       "reading": "あつい",
-      "meaning": "熱的（天氣）",
+      "meaning": "熱的(天氣)",
       "pos": "i-adj"
     },
     "tags": [
@@ -1088,7 +1131,7 @@
     "payload": {
       "word": "寒い",
       "reading": "さむい",
-      "meaning": "冷的（天氣）",
+      "meaning": "冷的(天氣)",
       "pos": "i-adj"
     },
     "tags": [
@@ -1133,7 +1176,10 @@
       "meaning": "忙的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "work",
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-084",
@@ -1159,7 +1205,10 @@
       "meaning": "困難的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective",
+      "school"
+    ]
   },
   {
     "id": "vocab-N5-086",
@@ -1171,7 +1220,10 @@
       "meaning": "容易的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective",
+      "school"
+    ]
   },
   {
     "id": "vocab-N5-087",
@@ -1183,7 +1235,9 @@
       "meaning": "安靜的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-088",
@@ -1195,7 +1249,9 @@
       "meaning": "熱鬧的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-089",
@@ -1204,10 +1260,12 @@
     "payload": {
       "word": "きれいな",
       "reading": "きれいな",
-      "meaning": "漂亮的、乾淨的",
+      "meaning": "漂亮的/乾淨的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-090",
@@ -1219,7 +1277,9 @@
       "meaning": "有名的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-091",
@@ -1259,7 +1319,9 @@
       "meaning": "擅長的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-094",
@@ -1271,7 +1333,9 @@
       "meaning": "不擅長的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-095",
@@ -1283,7 +1347,10 @@
       "meaning": "有精神的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "health",
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-096",
@@ -1295,7 +1362,9 @@
       "meaning": "非常",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-097",
@@ -1307,7 +1376,9 @@
       "meaning": "一點點",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-098",
@@ -1316,10 +1387,12 @@
     "payload": {
       "word": "もう",
       "reading": "もう",
-      "meaning": "已經、再",
+      "meaning": "已經/再",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-099",
@@ -1328,10 +1401,12 @@
     "payload": {
       "word": "まだ",
       "reading": "まだ",
-      "meaning": "還、仍然",
+      "meaning": "還/仍然",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-100",
@@ -1343,7 +1418,9 @@
       "meaning": "一起",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-101",
@@ -1366,7 +1443,7 @@
     "payload": {
       "word": "国",
       "reading": "くに",
-      "meaning": "國家、國",
+      "meaning": "國家",
       "pos": "noun"
     },
     "tags": [
@@ -1380,11 +1457,11 @@
     "payload": {
       "word": "言葉",
       "reading": "ことば",
-      "meaning": "語言、詞語",
+      "meaning": "語言/詞語",
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -1412,7 +1489,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "nature"
     ]
   },
   {
@@ -1426,7 +1503,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "nature"
     ]
   },
   {
@@ -1440,7 +1517,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "nature"
     ]
   },
   {
@@ -1454,7 +1531,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "nature"
     ]
   },
   {
@@ -1468,7 +1545,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "animal"
     ]
   },
   {
@@ -1482,7 +1559,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "animal"
     ]
   },
   {
@@ -1496,7 +1573,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "body"
     ]
   },
   {
@@ -1510,7 +1587,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "body"
     ]
   },
   {
@@ -1524,7 +1601,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "body"
     ]
   },
   {
@@ -1534,11 +1611,11 @@
     "payload": {
       "word": "足",
       "reading": "あし",
-      "meaning": "腳、腿",
+      "meaning": "腳/腿",
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "body"
     ]
   },
   {
@@ -1552,7 +1629,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "body"
     ]
   },
   {
@@ -1565,7 +1642,9 @@
       "meaning": "白色的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "color"
+    ]
   },
   {
     "id": "vocab-N5-117",
@@ -1577,7 +1656,9 @@
       "meaning": "黑色的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "color"
+    ]
   },
   {
     "id": "vocab-N5-118",
@@ -1589,7 +1670,9 @@
       "meaning": "紅色的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "color"
+    ]
   },
   {
     "id": "vocab-N5-119",
@@ -1598,10 +1681,12 @@
     "payload": {
       "word": "青い",
       "reading": "あおい",
-      "meaning": "藍色的、青色的",
+      "meaning": "藍色的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "color"
+    ]
   },
   {
     "id": "vocab-N5-120",
@@ -1613,7 +1698,9 @@
       "meaning": "黃色的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "color"
+    ]
   },
   {
     "id": "vocab-N5-121",
@@ -1626,7 +1713,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -1636,11 +1723,11 @@
     "payload": {
       "word": "作る",
       "reading": "つくる",
-      "meaning": "製作、做",
+      "meaning": "製作/做",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -1650,11 +1737,11 @@
     "payload": {
       "word": "出る",
       "reading": "でる",
-      "meaning": "出去、出現",
+      "meaning": "出去/出現",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -1668,7 +1755,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -1682,7 +1769,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "home"
     ]
   },
   {
@@ -1696,7 +1784,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "home"
     ]
   },
   {
@@ -1706,11 +1795,12 @@
     "payload": {
       "word": "教える",
       "reading": "おしえる",
-      "meaning": "教、告知",
+      "meaning": "教/告知",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "school"
     ]
   },
   {
@@ -1720,11 +1810,12 @@
     "payload": {
       "word": "覚える",
       "reading": "おぼえる",
-      "meaning": "記住、學會",
+      "meaning": "記住/學會",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "school"
     ]
   },
   {
@@ -1738,7 +1829,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "home"
     ]
   },
   {
@@ -1748,11 +1840,12 @@
     "payload": {
       "word": "着る",
       "reading": "きる",
-      "meaning": "穿（上衣類）",
+      "meaning": "穿(上衣)",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "clothing"
     ]
   },
   {
@@ -1766,6 +1859,7 @@
       "pos": "noun"
     },
     "tags": [
+      "health",
       "place"
     ]
   },
@@ -1780,7 +1874,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "shopping"
     ]
   },
   {
@@ -1794,7 +1889,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "school"
     ]
   },
   {
@@ -1822,7 +1918,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "nature"
     ]
   },
   {
@@ -1832,11 +1929,12 @@
     "payload": {
       "word": "道",
       "reading": "みち",
-      "meaning": "道路、路",
+      "meaning": "道路/路",
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "direction"
     ]
   },
   {
@@ -1907,7 +2005,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -1921,7 +2019,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home",
+      "school"
     ]
   },
   {
@@ -1935,7 +2034,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -1949,7 +2048,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -1963,7 +2062,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -1977,7 +2076,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "shopping"
     ]
   },
   {
@@ -1991,7 +2090,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "weather",
+      "clothing"
     ]
   },
   {
@@ -2005,7 +2105,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "clothing"
     ]
   },
   {
@@ -2019,7 +2119,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "clothing"
     ]
   },
   {
@@ -2033,7 +2133,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "clothing"
     ]
   },
   {
@@ -2047,7 +2147,7 @@
       "pos": "noun"
     },
     "tags": [
-      "time"
+      "number"
     ]
   },
   {
@@ -2061,7 +2161,7 @@
       "pos": "noun"
     },
     "tags": [
-      "time"
+      "number"
     ]
   },
   {
@@ -2075,7 +2175,7 @@
       "pos": "noun"
     },
     "tags": [
-      "time"
+      "number"
     ]
   },
   {
@@ -2089,7 +2189,7 @@
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "question"
     ]
   },
   {
@@ -2103,7 +2203,8 @@
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "question",
+      "person"
     ]
   },
   {
@@ -2117,7 +2218,8 @@
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "question",
+      "direction"
     ]
   },
   {
@@ -2131,6 +2233,7 @@
       "pos": "noun"
     },
     "tags": [
+      "question",
       "time"
     ]
   },
@@ -2145,7 +2248,7 @@
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "question"
     ]
   },
   {
@@ -2159,7 +2262,7 @@
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "direction"
     ]
   },
   {
@@ -2173,7 +2276,7 @@
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "direction"
     ]
   },
   {
@@ -2183,11 +2286,11 @@
     "payload": {
       "word": "あれ",
       "reading": "あれ",
-      "meaning": "那個（遠處）",
+      "meaning": "那個(遠)",
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "direction"
     ]
   },
   {
@@ -2197,11 +2300,11 @@
     "payload": {
       "word": "この",
       "reading": "この",
-      "meaning": "這個（修飾名詞）",
+      "meaning": "這(修飾)",
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "direction"
     ]
   },
   {
@@ -2211,11 +2314,11 @@
     "payload": {
       "word": "その",
       "reading": "その",
-      "meaning": "那個（修飾名詞）",
+      "meaning": "那(修飾)",
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "direction"
     ]
   },
   {
@@ -2225,11 +2328,11 @@
     "payload": {
       "word": "あの",
       "reading": "あの",
-      "meaning": "那個（遠處，修飾名詞）",
+      "meaning": "那(遠,修飾)",
       "pos": "noun"
     },
     "tags": [
-      "pronoun"
+      "direction"
     ]
   },
   {
@@ -2243,7 +2346,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "direction"
     ]
   },
   {
@@ -2257,7 +2360,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "direction"
     ]
   },
   {
@@ -2271,7 +2374,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "direction"
     ]
   },
   {
@@ -2285,7 +2388,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "direction"
     ]
   },
   {
@@ -2299,7 +2402,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "direction"
     ]
   },
   {
@@ -2313,7 +2416,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "direction"
     ]
   },
   {
@@ -2323,11 +2426,11 @@
     "payload": {
       "word": "中",
       "reading": "なか",
-      "meaning": "裡面、中間",
+      "meaning": "裡面/中間",
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "direction"
     ]
   },
   {
@@ -2341,7 +2444,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "direction"
     ]
   },
   {
@@ -2355,7 +2458,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "direction"
     ]
   },
   {
@@ -2368,7 +2471,10 @@
       "meaning": "遠的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "size",
+      "direction"
+    ]
   },
   {
     "id": "vocab-N5-175",
@@ -2380,7 +2486,10 @@
       "meaning": "近的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "size",
+      "direction"
+    ]
   },
   {
     "id": "vocab-N5-176",
@@ -2445,11 +2554,12 @@
     "payload": {
       "word": "早い",
       "reading": "はやい",
-      "meaning": "早的、快的",
+      "meaning": "早的/快的",
       "pos": "i-adj"
     },
     "tags": [
-      "time"
+      "time",
+      "adjective"
     ]
   },
   {
@@ -2459,11 +2569,12 @@
     "payload": {
       "word": "遅い",
       "reading": "おそい",
-      "meaning": "慢的、晚的",
+      "meaning": "慢的/晚的",
       "pos": "i-adj"
     },
     "tags": [
-      "time"
+      "time",
+      "adjective"
     ]
   },
   {
@@ -2476,7 +2587,9 @@
       "meaning": "強的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-183",
@@ -2488,7 +2601,9 @@
       "meaning": "弱的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-184",
@@ -2501,7 +2616,8 @@
       "pos": "i-adj"
     },
     "tags": [
-      "food"
+      "food",
+      "adjective"
     ]
   },
   {
@@ -2515,7 +2631,8 @@
       "pos": "i-adj"
     },
     "tags": [
-      "food"
+      "food",
+      "adjective"
     ]
   },
   {
@@ -2529,7 +2646,8 @@
       "pos": "i-adj"
     },
     "tags": [
-      "food"
+      "food",
+      "adjective"
     ]
   },
   {
@@ -2543,7 +2661,8 @@
       "pos": "i-adj"
     },
     "tags": [
-      "food"
+      "food",
+      "adjective"
     ]
   },
   {
@@ -2557,7 +2676,8 @@
       "pos": "i-adj"
     },
     "tags": [
-      "food"
+      "food",
+      "adjective"
     ]
   },
   {
@@ -2567,7 +2687,7 @@
     "payload": {
       "word": "嬉しい",
       "reading": "うれしい",
-      "meaning": "高興的、開心的",
+      "meaning": "高興的",
       "pos": "i-adj"
     },
     "tags": [
@@ -2613,7 +2733,8 @@
       "pos": "i-adj"
     },
     "tags": [
-      "emotion"
+      "health",
+      "body"
     ]
   },
   {
@@ -2627,7 +2748,8 @@
       "pos": "i-adj"
     },
     "tags": [
-      "emotion"
+      "health",
+      "adjective"
     ]
   },
   {
@@ -2637,11 +2759,11 @@
     "payload": {
       "word": "暇な",
       "reading": "ひまな",
-      "meaning": "空閒的、無聊的",
+      "meaning": "空閒的",
       "pos": "na-adj"
     },
     "tags": [
-      "emotion"
+      "adjective"
     ]
   },
   {
@@ -2651,10 +2773,12 @@
     "payload": {
       "word": "大切な",
       "reading": "たいせつな",
-      "meaning": "重要的、珍貴的",
+      "meaning": "重要的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-196",
@@ -2666,7 +2790,9 @@
       "meaning": "方便的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-197",
@@ -2678,7 +2804,9 @@
       "meaning": "不方便的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-198",
@@ -2687,10 +2815,13 @@
     "payload": {
       "word": "丁寧な",
       "reading": "ていねいな",
-      "meaning": "有禮貌的、仔細的",
+      "meaning": "有禮貌的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective",
+      "greeting"
+    ]
   },
   {
     "id": "vocab-N5-199",
@@ -2702,7 +2833,10 @@
       "meaning": "親切的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective",
+      "person"
+    ]
   },
   {
     "id": "vocab-N5-200",
@@ -2714,7 +2848,10 @@
       "meaning": "危險的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective",
+      "health"
+    ]
   },
   {
     "id": "vocab-N5-201",
@@ -2726,7 +2863,10 @@
       "meaning": "安全的",
       "pos": "na-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective",
+      "health"
+    ]
   },
   {
     "id": "vocab-N5-202",
@@ -2739,7 +2879,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "health"
     ]
   },
   {
@@ -2753,7 +2894,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "transport"
     ]
   },
   {
@@ -2767,7 +2909,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "hobby"
     ]
   },
   {
@@ -2781,7 +2924,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "hobby"
     ]
   },
   {
@@ -2795,7 +2939,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "health"
     ]
   },
   {
@@ -2809,7 +2954,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -2819,11 +2964,11 @@
     "payload": {
       "word": "貸す",
       "reading": "かす",
-      "meaning": "借出、借給",
+      "meaning": "借出",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -2833,11 +2978,11 @@
     "payload": {
       "word": "借りる",
       "reading": "かりる",
-      "meaning": "借入、借來",
+      "meaning": "借入",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -2851,7 +2996,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -2861,11 +3006,12 @@
     "payload": {
       "word": "思う",
       "reading": "おもう",
-      "meaning": "認為、想",
+      "meaning": "認為/想",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "emotion"
     ]
   },
   {
@@ -2879,7 +3025,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "body"
     ]
   },
   {
@@ -2893,7 +3040,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "body"
     ]
   },
   {
@@ -2907,7 +3055,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "transport"
     ]
   },
   {
@@ -2917,11 +3066,11 @@
     "payload": {
       "word": "始まる",
       "reading": "はじまる",
-      "meaning": "開始（自動詞）",
+      "meaning": "開始(自)",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -2931,11 +3080,11 @@
     "payload": {
       "word": "終わる",
       "reading": "おわる",
-      "meaning": "結束（自動詞）",
+      "meaning": "結束(自)",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -2949,7 +3098,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -2963,7 +3112,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -2973,11 +3122,12 @@
     "payload": {
       "word": "渡る",
       "reading": "わたる",
-      "meaning": "過（橋、馬路）",
+      "meaning": "過(橋/馬路)",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "transport"
     ]
   },
   {
@@ -2991,7 +3141,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action",
+      "verb",
       "transport"
     ]
   },
@@ -3002,11 +3152,11 @@
     "payload": {
       "word": "降りる",
       "reading": "おりる",
-      "meaning": "下車、下來",
+      "meaning": "下車",
       "pos": "verb"
     },
     "tags": [
-      "action",
+      "verb",
       "transport"
     ]
   },
@@ -3017,11 +3167,11 @@
     "payload": {
       "word": "送る",
       "reading": "おくる",
-      "meaning": "送、寄",
+      "meaning": "送/寄",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -3031,11 +3181,11 @@
     "payload": {
       "word": "もらう",
       "reading": "もらう",
-      "meaning": "收到、得到",
+      "meaning": "收到",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -3045,11 +3195,11 @@
     "payload": {
       "word": "あげる",
       "reading": "あげる",
-      "meaning": "給（對方）",
+      "meaning": "給(對方)",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -3059,11 +3209,11 @@
     "payload": {
       "word": "くれる",
       "reading": "くれる",
-      "meaning": "給（給我）",
+      "meaning": "給(給我)",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -3077,7 +3227,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "transport"
     ]
   },
   {
@@ -3091,7 +3242,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action",
+      "verb",
       "transport"
     ]
   },
@@ -3102,11 +3253,11 @@
     "payload": {
       "word": "電気",
       "reading": "でんき",
-      "meaning": "電、電燈",
+      "meaning": "電/電燈",
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -3120,7 +3271,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home",
+      "hobby"
     ]
   },
   {
@@ -3134,7 +3286,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home",
+      "hobby"
     ]
   },
   {
@@ -3148,7 +3301,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "hobby"
     ]
   },
   {
@@ -3162,7 +3315,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "work",
+      "school"
     ]
   },
   {
@@ -3176,7 +3330,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "hobby"
     ]
   },
   {
@@ -3190,7 +3344,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -3204,7 +3358,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -3218,7 +3372,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "work"
     ]
   },
   {
@@ -3232,7 +3386,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "shopping"
     ]
   },
   {
@@ -3246,7 +3400,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "health"
     ]
   },
   {
@@ -3256,11 +3410,11 @@
     "payload": {
       "word": "病気",
       "reading": "びょうき",
-      "meaning": "生病、疾病",
+      "meaning": "生病/疾病",
       "pos": "noun"
     },
     "tags": [
-      "emotion"
+      "health"
     ]
   },
   {
@@ -3274,6 +3428,8 @@
       "pos": "noun"
     },
     "tags": [
+      "health",
+      "work",
       "person"
     ]
   },
@@ -3288,6 +3444,8 @@
       "pos": "noun"
     },
     "tags": [
+      "health",
+      "work",
       "person"
     ]
   },
@@ -3298,12 +3456,12 @@
     "payload": {
       "word": "料理",
       "reading": "りょうり",
-      "meaning": "料理、烹飪",
+      "meaning": "料理/烹飪",
       "pos": "noun"
     },
     "tags": [
       "food",
-      "action"
+      "home"
     ]
   },
   {
@@ -3317,7 +3475,8 @@
       "pos": "noun"
     },
     "tags": [
-      "food"
+      "food",
+      "time"
     ]
   },
   {
@@ -3331,7 +3490,8 @@
       "pos": "noun"
     },
     "tags": [
-      "food"
+      "food",
+      "time"
     ]
   },
   {
@@ -3345,7 +3505,8 @@
       "pos": "noun"
     },
     "tags": [
-      "food"
+      "food",
+      "time"
     ]
   },
   {
@@ -3555,8 +3716,8 @@
       "pos": "noun"
     },
     "tags": [
-      "time",
-      "weather"
+      "weather",
+      "nature"
     ]
   },
   {
@@ -3570,8 +3731,8 @@
       "pos": "noun"
     },
     "tags": [
-      "time",
-      "weather"
+      "weather",
+      "nature"
     ]
   },
   {
@@ -3585,8 +3746,8 @@
       "pos": "noun"
     },
     "tags": [
-      "time",
-      "weather"
+      "weather",
+      "nature"
     ]
   },
   {
@@ -3600,8 +3761,8 @@
       "pos": "noun"
     },
     "tags": [
-      "time",
-      "weather"
+      "weather",
+      "nature"
     ]
   },
   {
@@ -3643,7 +3804,8 @@
       "pos": "noun"
     },
     "tags": [
-      "weather"
+      "weather",
+      "nature"
     ]
   },
   {
@@ -3685,8 +3847,7 @@
       "pos": "noun"
     },
     "tags": [
-      "weather",
-      "place"
+      "nature"
     ]
   },
   {
@@ -3700,7 +3861,7 @@
       "pos": "noun"
     },
     "tags": [
-      "weather"
+      "nature"
     ]
   },
   {
@@ -3714,8 +3875,7 @@
       "pos": "noun"
     },
     "tags": [
-      "weather",
-      "time"
+      "nature"
     ]
   },
   {
@@ -3729,7 +3889,7 @@
       "pos": "noun"
     },
     "tags": [
-      "weather"
+      "nature"
     ]
   },
   {
@@ -3743,7 +3903,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "nature"
     ]
   },
   {
@@ -3757,7 +3917,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "nature"
     ]
   },
   {
@@ -3771,7 +3931,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "nature"
     ]
   },
   {
@@ -3785,7 +3945,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "nature"
     ]
   },
   {
@@ -3799,7 +3959,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "nature"
     ]
   },
   {
@@ -3813,7 +3973,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "adjective"
     ]
   },
   {
@@ -3827,7 +3987,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "color"
     ]
   },
   {
@@ -3841,7 +4001,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "size"
     ]
   },
   {
@@ -3851,7 +4011,7 @@
     "payload": {
       "word": "兄",
       "reading": "あに",
-      "meaning": "（自己的）哥哥",
+      "meaning": "哥哥（自己的）",
       "pos": "noun"
     },
     "tags": [
@@ -3865,7 +4025,7 @@
     "payload": {
       "word": "姉",
       "reading": "あね",
-      "meaning": "（自己的）姊姊",
+      "meaning": "姊姊（自己的）",
       "pos": "noun"
     },
     "tags": [
@@ -3879,7 +4039,7 @@
     "payload": {
       "word": "弟",
       "reading": "おとうと",
-      "meaning": "（自己的）弟弟",
+      "meaning": "弟弟（自己的）",
       "pos": "noun"
     },
     "tags": [
@@ -3893,7 +4053,7 @@
     "payload": {
       "word": "妹",
       "reading": "いもうと",
-      "meaning": "（自己的）妹妹",
+      "meaning": "妹妹（自己的）",
       "pos": "noun"
     },
     "tags": [
@@ -3907,7 +4067,7 @@
     "payload": {
       "word": "祖父",
       "reading": "そふ",
-      "meaning": "（自己的）祖父",
+      "meaning": "祖父（自己的）",
       "pos": "noun"
     },
     "tags": [
@@ -3921,7 +4081,7 @@
     "payload": {
       "word": "祖母",
       "reading": "そぼ",
-      "meaning": "（自己的）祖母",
+      "meaning": "祖母（自己的）",
       "pos": "noun"
     },
     "tags": [
@@ -3935,11 +4095,12 @@
     "payload": {
       "word": "夫",
       "reading": "おっと",
-      "meaning": "（自己的）丈夫",
+      "meaning": "丈夫（自己的）",
       "pos": "noun"
     },
     "tags": [
-      "family"
+      "family",
+      "person"
     ]
   },
   {
@@ -3949,11 +4110,12 @@
     "payload": {
       "word": "妻",
       "reading": "つま",
-      "meaning": "（自己的）妻子",
+      "meaning": "妻子（自己的）",
       "pos": "noun"
     },
     "tags": [
-      "family"
+      "family",
+      "person"
     ]
   },
   {
@@ -4037,7 +4199,8 @@
       "pos": "noun"
     },
     "tags": [
-      "person"
+      "person",
+      "work"
     ]
   },
   {
@@ -4051,7 +4214,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "work"
     ]
   },
   {
@@ -4065,7 +4228,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "work"
     ]
   },
   {
@@ -4075,11 +4238,11 @@
     "payload": {
       "word": "授業",
       "reading": "じゅぎょう",
-      "meaning": "課程、上課",
+      "meaning": "課程",
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "school"
     ]
   },
   {
@@ -4093,7 +4256,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "school"
     ]
   },
   {
@@ -4107,7 +4270,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "school"
     ]
   },
   {
@@ -4121,7 +4284,8 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "hobby",
+      "transport"
     ]
   },
   {
@@ -4135,7 +4299,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "hobby"
     ]
   },
   {
@@ -4149,7 +4313,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "shopping"
     ]
   },
   {
@@ -4163,7 +4327,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "work"
     ]
   },
   {
@@ -4177,7 +4342,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "work"
     ]
   },
   {
@@ -4191,7 +4357,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "school"
     ]
   },
   {
@@ -4205,7 +4372,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4219,7 +4386,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "school"
     ]
   },
   {
@@ -4233,7 +4401,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "school"
     ]
   },
   {
@@ -4243,11 +4412,11 @@
     "payload": {
       "word": "返事する",
       "reading": "へんじする",
-      "meaning": "回答、回覆",
+      "meaning": "回答/回覆",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4261,6 +4430,7 @@
       "pos": "verb"
     },
     "tags": [
+      "verb",
       "emotion"
     ]
   },
@@ -4275,7 +4445,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4289,7 +4459,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4299,10 +4469,11 @@
     "payload": {
       "word": "楽しむ",
       "reading": "たのしむ",
-      "meaning": "享受、享樂",
+      "meaning": "享受",
       "pos": "verb"
     },
     "tags": [
+      "verb",
       "emotion"
     ]
   },
@@ -4313,10 +4484,11 @@
     "payload": {
       "word": "困る",
       "reading": "こまる",
-      "meaning": "困擾、為難",
+      "meaning": "困擾",
       "pos": "verb"
     },
     "tags": [
+      "verb",
       "emotion"
     ]
   },
@@ -4327,10 +4499,11 @@
     "payload": {
       "word": "喜ぶ",
       "reading": "よろこぶ",
-      "meaning": "高興、歡喜",
+      "meaning": "高興",
       "pos": "verb"
     },
     "tags": [
+      "verb",
       "emotion"
     ]
   },
@@ -4345,6 +4518,7 @@
       "pos": "verb"
     },
     "tags": [
+      "verb",
       "emotion"
     ]
   },
@@ -4359,6 +4533,7 @@
       "pos": "verb"
     },
     "tags": [
+      "verb",
       "emotion"
     ]
   },
@@ -4373,6 +4548,7 @@
       "pos": "verb"
     },
     "tags": [
+      "verb",
       "emotion"
     ]
   },
@@ -4383,11 +4559,11 @@
     "payload": {
       "word": "押す",
       "reading": "おす",
-      "meaning": "推、按",
+      "meaning": "推/按",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4401,7 +4577,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4411,11 +4587,11 @@
     "payload": {
       "word": "切る",
       "reading": "きる",
-      "meaning": "切、剪",
+      "meaning": "切/剪",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4429,7 +4605,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4443,7 +4619,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4457,7 +4633,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4467,11 +4643,11 @@
     "payload": {
       "word": "並ぶ",
       "reading": "ならぶ",
-      "meaning": "排隊、並排",
+      "meaning": "排隊",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4485,7 +4661,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4495,11 +4671,12 @@
     "payload": {
       "word": "離れる",
       "reading": "はなれる",
-      "meaning": "離開、分離",
+      "meaning": "離開",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "direction"
     ]
   },
   {
@@ -4513,7 +4690,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "direction"
     ]
   },
   {
@@ -4527,7 +4705,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "direction"
     ]
   },
   {
@@ -4541,7 +4720,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -4555,7 +4734,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "home"
     ]
   },
   {
@@ -4570,7 +4750,7 @@
     },
     "tags": [
       "place",
-      "object"
+      "home"
     ]
   },
   {
@@ -4584,7 +4764,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "direction"
     ]
   },
   {
@@ -4598,7 +4779,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "direction"
     ]
   },
   {
@@ -4612,7 +4794,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "transport"
     ]
   },
   {
@@ -4622,11 +4805,10 @@
     "payload": {
       "word": "信号",
       "reading": "しんごう",
-      "meaning": "交通號誌、信號",
+      "meaning": "交通號誌",
       "pos": "noun"
     },
     "tags": [
-      "place",
       "transport"
     ]
   },
@@ -4641,7 +4823,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "transport",
+      "place"
     ]
   },
   {
@@ -4655,7 +4838,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "home"
     ]
   },
   {
@@ -4669,7 +4853,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "number"
     ]
   },
   {
@@ -4683,7 +4867,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "hobby"
     ]
   },
   {
@@ -4697,7 +4881,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "hobby"
     ]
   },
   {
@@ -4711,7 +4895,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "hobby"
     ]
   },
   {
@@ -4725,7 +4909,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "hobby"
     ]
   },
   {
@@ -4739,7 +4923,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "hobby"
     ]
   },
   {
@@ -4753,7 +4937,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "hobby"
     ]
   },
   {
@@ -4767,7 +4951,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "hobby"
     ]
   },
   {
@@ -4777,11 +4961,11 @@
     "payload": {
       "word": "趣味",
       "reading": "しゅみ",
-      "meaning": "興趣、嗜好",
+      "meaning": "興趣/嗜好",
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "hobby"
     ]
   },
   {
@@ -4795,7 +4979,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "home"
     ]
   },
   {
@@ -4809,7 +4993,7 @@
       "pos": "noun"
     },
     "tags": [
-      "action"
+      "adjective"
     ]
   },
   {
@@ -4819,7 +5003,7 @@
     "payload": {
       "word": "夢",
       "reading": "ゆめ",
-      "meaning": "夢、夢想",
+      "meaning": "夢/夢想",
       "pos": "noun"
     },
     "tags": [
@@ -4833,11 +5017,11 @@
     "payload": {
       "word": "考え",
       "reading": "かんがえ",
-      "meaning": "想法、思考",
+      "meaning": "想法",
       "pos": "noun"
     },
     "tags": [
-      "emotion"
+      "adjective"
     ]
   },
   {
@@ -4847,7 +5031,7 @@
     "payload": {
       "word": "気持ち",
       "reading": "きもち",
-      "meaning": "感受、心情",
+      "meaning": "感受/心情",
       "pos": "noun"
     },
     "tags": [
@@ -4861,11 +5045,11 @@
     "payload": {
       "word": "意味",
       "reading": "いみ",
-      "meaning": "意思、意義",
+      "meaning": "意思/意義",
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "adjective"
     ]
   },
   {
@@ -4879,7 +5063,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "conjunction"
     ]
   },
   {
@@ -4893,7 +5077,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -4907,7 +5091,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -4921,7 +5105,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "adjective"
     ]
   },
   {
@@ -4935,7 +5119,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "adjective"
     ]
   },
   {
@@ -4948,7 +5132,9 @@
       "meaning": "全部",
       "pos": "noun"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-360",
@@ -4960,7 +5146,9 @@
       "meaning": "一半",
       "pos": "noun"
     },
-    "tags": []
+    "tags": [
+      "number"
+    ]
   },
   {
     "id": "vocab-N5-361",
@@ -4973,6 +5161,7 @@
       "pos": "adverb"
     },
     "tags": [
+      "adverb",
       "time"
     ]
   },
@@ -4983,10 +5172,12 @@
     "payload": {
       "word": "また",
       "reading": "また",
-      "meaning": "再、又",
+      "meaning": "再/又",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-363",
@@ -4995,10 +5186,11 @@
     "payload": {
       "word": "すぐ",
       "reading": "すぐ",
-      "meaning": "馬上、立刻",
+      "meaning": "馬上",
       "pos": "adverb"
     },
     "tags": [
+      "adverb",
       "time"
     ]
   },
@@ -5012,7 +5204,9 @@
       "meaning": "慢慢地",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-365",
@@ -5024,7 +5218,9 @@
       "meaning": "清楚地",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-366",
@@ -5033,10 +5229,12 @@
     "payload": {
       "word": "だいたい",
       "reading": "だいたい",
-      "meaning": "大概、大致",
+      "meaning": "大概",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-367",
@@ -5045,10 +5243,12 @@
     "payload": {
       "word": "特に",
       "reading": "とくに",
-      "meaning": "特別、尤其",
+      "meaning": "特別",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-368",
@@ -5060,7 +5260,9 @@
       "meaning": "真的",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-369",
@@ -5069,10 +5271,12 @@
     "payload": {
       "word": "たぶん",
       "reading": "たぶん",
-      "meaning": "大概、也許",
+      "meaning": "也許",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-370",
@@ -5081,10 +5285,12 @@
     "payload": {
       "word": "きっと",
       "reading": "きっと",
-      "meaning": "一定、肯定",
+      "meaning": "一定",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-371",
@@ -5096,7 +5302,9 @@
       "meaning": "當然",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-372",
@@ -5105,10 +5313,12 @@
     "payload": {
       "word": "やはり",
       "reading": "やはり",
-      "meaning": "果然、還是",
+      "meaning": "果然/還是",
       "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "adverb"
+    ]
   },
   {
     "id": "vocab-N5-373",
@@ -5118,9 +5328,11 @@
       "word": "だから",
       "reading": "だから",
       "meaning": "所以",
-      "pos": "noun"
+      "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "conjunction"
+    ]
   },
   {
     "id": "vocab-N5-374",
@@ -5130,9 +5342,11 @@
       "word": "でも",
       "reading": "でも",
       "meaning": "但是",
-      "pos": "noun"
+      "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "conjunction"
+    ]
   },
   {
     "id": "vocab-N5-375",
@@ -5141,10 +5355,12 @@
     "payload": {
       "word": "そして",
       "reading": "そして",
-      "meaning": "然後、而且",
-      "pos": "noun"
+      "meaning": "然後/而且",
+      "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "conjunction"
+    ]
   },
   {
     "id": "vocab-N5-376",
@@ -5154,9 +5370,10 @@
       "word": "それから",
       "reading": "それから",
       "meaning": "之後",
-      "pos": "noun"
+      "pos": "adverb"
     },
     "tags": [
+      "conjunction",
       "time"
     ]
   },
@@ -5168,9 +5385,11 @@
       "word": "それで",
       "reading": "それで",
       "meaning": "所以（承接）",
-      "pos": "noun"
+      "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "conjunction"
+    ]
   },
   {
     "id": "vocab-N5-378",
@@ -5180,9 +5399,12 @@
       "word": "では",
       "reading": "では",
       "meaning": "那麼",
-      "pos": "noun"
+      "pos": "adverb"
     },
-    "tags": []
+    "tags": [
+      "conjunction",
+      "greeting"
+    ]
   },
   {
     "id": "vocab-N5-379",
@@ -5321,7 +5543,8 @@
       "pos": "noun"
     },
     "tags": [
-      "time"
+      "time",
+      "adverb"
     ]
   },
   {
@@ -5335,7 +5558,8 @@
       "pos": "noun"
     },
     "tags": [
-      "time"
+      "time",
+      "adverb"
     ]
   },
   {
@@ -5349,7 +5573,8 @@
       "pos": "noun"
     },
     "tags": [
-      "time"
+      "time",
+      "adverb"
     ]
   },
   {
@@ -5363,7 +5588,8 @@
       "pos": "noun"
     },
     "tags": [
-      "time"
+      "time",
+      "adverb"
     ]
   },
   {
@@ -5433,7 +5659,8 @@
       "pos": "adverb"
     },
     "tags": [
-      "time"
+      "time",
+      "adverb"
     ]
   },
   {
@@ -5447,7 +5674,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -5461,7 +5688,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -5475,7 +5702,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -5489,7 +5716,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -5503,7 +5730,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -5517,7 +5744,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school",
+      "home"
     ]
   },
   {
@@ -5531,7 +5759,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school",
+      "home"
     ]
   },
   {
@@ -5545,7 +5774,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school",
+      "home"
     ]
   },
   {
@@ -5555,11 +5785,11 @@
     "payload": {
       "word": "プリント",
       "reading": "ぷりんと",
-      "meaning": "印刷品、講義",
+      "meaning": "印刷品/講義",
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "school"
     ]
   },
   {
@@ -5573,7 +5803,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home",
+      "food"
     ]
   },
   {
@@ -5587,7 +5818,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home",
+      "food"
     ]
   },
   {
@@ -5601,7 +5833,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home",
+      "food"
     ]
   },
   {
@@ -5615,7 +5848,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home",
+      "food"
     ]
   },
   {
@@ -5629,7 +5863,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home",
+      "food"
     ]
   },
   {
@@ -5643,7 +5878,8 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home",
+      "food"
     ]
   },
   {
@@ -5657,7 +5893,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -5671,7 +5907,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -5685,7 +5921,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -5699,7 +5935,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -5713,7 +5949,7 @@
       "pos": "noun"
     },
     "tags": [
-      "object"
+      "home"
     ]
   },
   {
@@ -5723,11 +5959,11 @@
     "payload": {
       "word": "お風呂",
       "reading": "おふろ",
-      "meaning": "浴室、泡澡",
+      "meaning": "浴室/泡澡",
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "home"
     ]
   },
   {
@@ -5741,6 +5977,7 @@
       "pos": "noun"
     },
     "tags": [
+      "home",
       "place"
     ]
   },
@@ -5755,7 +5992,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "home"
     ]
   },
   {
@@ -5769,7 +6006,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "home"
     ]
   },
   {
@@ -5783,6 +6020,7 @@
       "pos": "noun"
     },
     "tags": [
+      "home",
       "place"
     ]
   },
@@ -5797,7 +6035,7 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "home"
     ]
   },
   {
@@ -5811,7 +6049,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "home",
+      "nature"
     ]
   },
   {
@@ -5825,7 +6064,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "home"
     ]
   },
   {
@@ -5839,7 +6079,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "home"
     ]
   },
   {
@@ -5853,8 +6094,9 @@
       "pos": "verb"
     },
     "tags": [
-      "action",
-      "food"
+      "verb",
+      "food",
+      "home"
     ]
   },
   {
@@ -5864,11 +6106,12 @@
     "payload": {
       "word": "片付ける",
       "reading": "かたづける",
-      "meaning": "整理、收拾",
+      "meaning": "整理/收拾",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "home"
     ]
   },
   {
@@ -5882,7 +6125,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "home"
     ]
   },
   {
@@ -5896,7 +6140,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action",
+      "verb",
+      "home",
       "place"
     ]
   },
@@ -5911,8 +6156,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action",
-      "place"
+      "verb",
+      "home"
     ]
   },
   {
@@ -5926,7 +6171,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "transport"
     ]
   },
   {
@@ -5940,7 +6186,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "transport"
     ]
   },
   {
@@ -5969,7 +6216,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "shopping"
     ]
   },
   {
@@ -5983,7 +6231,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "shopping"
     ]
   },
   {
@@ -5997,7 +6246,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "shopping"
     ]
   },
   {
@@ -6011,7 +6261,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "shopping"
     ]
   },
   {
@@ -6025,7 +6276,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "hobby"
     ]
   },
   {
@@ -6039,7 +6291,9 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "school",
+      "hobby"
     ]
   },
   {
@@ -6053,7 +6307,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "hobby"
     ]
   },
   {
@@ -6067,7 +6322,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "hobby"
     ]
   },
   {
@@ -6081,7 +6337,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "animal"
     ]
   },
   {
@@ -6123,7 +6380,8 @@
       "pos": "noun"
     },
     "tags": [
-      "place"
+      "place",
+      "work"
     ]
   },
   {
@@ -6138,7 +6396,7 @@
     },
     "tags": [
       "place",
-      "person"
+      "work"
     ]
   },
   {
@@ -6152,7 +6410,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "hobby"
     ]
   },
   {
@@ -6166,7 +6425,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "transport"
     ]
   },
   {
@@ -6180,7 +6440,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "shopping"
     ]
   },
   {
@@ -6194,7 +6455,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "shopping"
     ]
   },
   {
@@ -6208,7 +6470,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6222,7 +6484,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6236,7 +6498,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6250,7 +6512,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6264,7 +6526,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6274,11 +6536,12 @@
     "payload": {
       "word": "頑張る",
       "reading": "がんばる",
-      "meaning": "努力、加油",
+      "meaning": "努力/加油",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "emotion"
     ]
   },
   {
@@ -6292,7 +6555,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "emotion"
     ]
   },
   {
@@ -6306,7 +6570,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6320,7 +6584,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6334,7 +6598,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6344,11 +6608,11 @@
     "payload": {
       "word": "助ける",
       "reading": "たすける",
-      "meaning": "幫助、救助",
+      "meaning": "幫助",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6362,7 +6626,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6372,11 +6636,11 @@
     "payload": {
       "word": "直す",
       "reading": "なおす",
-      "meaning": "修理、改正",
+      "meaning": "修理/改正",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6386,11 +6650,11 @@
     "payload": {
       "word": "持つ",
       "reading": "もつ",
-      "meaning": "拿、持有",
+      "meaning": "拿/持有",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6400,11 +6664,11 @@
     "payload": {
       "word": "置く",
       "reading": "おく",
-      "meaning": "放置、放下",
+      "meaning": "放置/放下",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6418,7 +6682,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6428,11 +6692,11 @@
     "payload": {
       "word": "渡す",
       "reading": "わたす",
-      "meaning": "交給、遞",
+      "meaning": "交給/遞",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6442,11 +6706,11 @@
     "payload": {
       "word": "呼ぶ",
       "reading": "よぶ",
-      "meaning": "叫、呼叫",
+      "meaning": "叫/呼叫",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6460,7 +6724,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "school"
     ]
   },
   {
@@ -6470,11 +6735,11 @@
     "payload": {
       "word": "頼む",
       "reading": "たのむ",
-      "meaning": "拜託、請求",
+      "meaning": "拜託/請求",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6488,7 +6753,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6498,11 +6763,12 @@
     "payload": {
       "word": "許す",
       "reading": "ゆるす",
-      "meaning": "原諒、允許",
+      "meaning": "原諒/允許",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "emotion"
     ]
   },
   {
@@ -6516,7 +6782,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "emotion"
     ]
   },
   {
@@ -6526,11 +6793,11 @@
     "payload": {
       "word": "気づく",
       "reading": "きづく",
-      "meaning": "注意到、發覺",
+      "meaning": "注意到/發覺",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6540,11 +6807,12 @@
     "payload": {
       "word": "迷う",
       "reading": "まよう",
-      "meaning": "迷路、猶豫",
+      "meaning": "迷路/猶豫",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "direction"
     ]
   },
   {
@@ -6558,7 +6826,7 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6568,11 +6836,11 @@
     "payload": {
       "word": "違う",
       "reading": "ちがう",
-      "meaning": "不同、不對",
+      "meaning": "不同/不對",
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb"
     ]
   },
   {
@@ -6586,7 +6854,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "number"
     ]
   },
   {
@@ -6600,7 +6869,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "number"
     ]
   },
   {
@@ -6614,7 +6884,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "health"
     ]
   },
   {
@@ -6628,7 +6899,8 @@
       "pos": "verb"
     },
     "tags": [
-      "action"
+      "verb",
+      "health"
     ]
   },
   {
@@ -6638,10 +6910,11 @@
     "payload": {
       "word": "困った",
       "reading": "こまった",
-      "meaning": "麻煩的、令人為難的",
+      "meaning": "麻煩的",
       "pos": "i-adj"
     },
     "tags": [
+      "adjective",
       "emotion"
     ]
   },
@@ -6655,7 +6928,9 @@
       "meaning": "圓的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "size"
+    ]
   },
   {
     "id": "vocab-N5-484",
@@ -6667,7 +6942,9 @@
       "meaning": "方形的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "size"
+    ]
   },
   {
     "id": "vocab-N5-485",
@@ -6690,7 +6967,7 @@
     "payload": {
       "word": "太い",
       "reading": "ふとい",
-      "meaning": "粗的、胖的",
+      "meaning": "粗的/胖的",
       "pos": "i-adj"
     },
     "tags": [
@@ -6708,7 +6985,8 @@
       "pos": "i-adj"
     },
     "tags": [
-      "size"
+      "size",
+      "adjective"
     ]
   },
   {
@@ -6722,7 +7000,8 @@
       "pos": "i-adj"
     },
     "tags": [
-      "size"
+      "size",
+      "adjective"
     ]
   },
   {
@@ -6735,7 +7014,9 @@
       "meaning": "硬的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-490",
@@ -6747,7 +7028,9 @@
       "meaning": "軟的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-491",
@@ -6759,7 +7042,9 @@
       "meaning": "暗的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-492",
@@ -6771,7 +7056,9 @@
       "meaning": "明亮的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-493",
@@ -6784,7 +7071,7 @@
       "pos": "i-adj"
     },
     "tags": [
-      "emotion"
+      "adjective"
     ]
   },
   {
@@ -6798,6 +7085,7 @@
       "pos": "i-adj"
     },
     "tags": [
+      "adjective",
       "emotion"
     ]
   },
@@ -6812,7 +7100,7 @@
       "pos": "i-adj"
     },
     "tags": [
-      "emotion"
+      "adjective"
     ]
   },
   {
@@ -6825,7 +7113,9 @@
       "meaning": "罕見的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-497",
@@ -6837,7 +7127,9 @@
       "meaning": "正確的",
       "pos": "i-adj"
     },
-    "tags": []
+    "tags": [
+      "adjective"
+    ]
   },
   {
     "id": "vocab-N5-498",
@@ -6850,6 +7142,7 @@
       "pos": "i-adj"
     },
     "tags": [
+      "adjective",
       "emotion"
     ]
   },
@@ -6864,6 +7157,7 @@
       "pos": "i-adj"
     },
     "tags": [
+      "adjective",
       "emotion"
     ]
   },
@@ -6874,11 +7168,1274 @@
     "payload": {
       "word": "素晴らしい",
       "reading": "すばらしい",
-      "meaning": "精彩的、了不起的",
+      "meaning": "精彩的",
       "pos": "i-adj"
     },
     "tags": [
+      "adjective",
       "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N5-501",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "おはようございます",
+      "reading": "おはようございます",
+      "meaning": "早安",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-502",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "こんにちは",
+      "reading": "こんにちは",
+      "meaning": "你好（白天）",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-503",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "こんばんは",
+      "reading": "こんばんは",
+      "meaning": "晚上好",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-504",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "おやすみなさい",
+      "reading": "おやすみなさい",
+      "meaning": "晚安",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-505",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ありがとうございます",
+      "reading": "ありがとうございます",
+      "meaning": "謝謝",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-506",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "すみません",
+      "reading": "すみません",
+      "meaning": "不好意思/對不起",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-507",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ごめんなさい",
+      "reading": "ごめんなさい",
+      "meaning": "對不起",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-508",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "はじめまして",
+      "reading": "はじめまして",
+      "meaning": "初次見面",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-509",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "よろしくおねがいします",
+      "reading": "よろしくおねがいします",
+      "meaning": "請多關照",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-510",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "いただきます",
+      "reading": "いただきます",
+      "meaning": "我要開動了",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting",
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-511",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ごちそうさま",
+      "reading": "ごちそうさま",
+      "meaning": "我吃飽了（感謝款待）",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting",
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-512",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "いってきます",
+      "reading": "いってきます",
+      "meaning": "我出門了",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-513",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "いってらっしゃい",
+      "reading": "いってらっしゃい",
+      "meaning": "慢走/路上小心",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-514",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ただいま",
+      "reading": "ただいま",
+      "meaning": "我回來了",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-515",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "おかえり",
+      "reading": "おかえり",
+      "meaning": "歡迎回來",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N5-516",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "一",
+      "reading": "いち",
+      "meaning": "一（數字）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-517",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "二",
+      "reading": "に",
+      "meaning": "二（數字）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-518",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "三",
+      "reading": "さん",
+      "meaning": "三（數字）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-519",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "四",
+      "reading": "し",
+      "meaning": "四（數字）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-520",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "五",
+      "reading": "ご",
+      "meaning": "五（數字）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-521",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "六",
+      "reading": "ろく",
+      "meaning": "六（數字）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-522",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "七",
+      "reading": "しち",
+      "meaning": "七（數字）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-523",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "八",
+      "reading": "はち",
+      "meaning": "八（數字）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-524",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "九",
+      "reading": "く",
+      "meaning": "九（數字）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-525",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "十",
+      "reading": "じゅう",
+      "meaning": "十（數字）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-526",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "百",
+      "reading": "ひゃく",
+      "meaning": "百",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-527",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "千",
+      "reading": "せん",
+      "meaning": "千",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-528",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "万",
+      "reading": "まん",
+      "meaning": "萬",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-529",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "零",
+      "reading": "れい",
+      "meaning": "零",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-530",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜人",
+      "reading": "〜にん",
+      "meaning": "〜人（人數助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N5-531",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜本",
+      "reading": "〜ほん",
+      "meaning": "〜支/條（細長物助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-532",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜枚",
+      "reading": "〜まい",
+      "meaning": "〜張（薄平物助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-533",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜冊",
+      "reading": "〜さつ",
+      "meaning": "〜本（書冊助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N5-534",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜台",
+      "reading": "〜だい",
+      "meaning": "〜台（機械車輛助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N5-535",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜匹",
+      "reading": "〜ひき",
+      "meaning": "〜隻（小動物助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "animal"
+    ]
+  },
+  {
+    "id": "vocab-N5-536",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜杯",
+      "reading": "〜はい",
+      "meaning": "〜杯（飲料容器助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-537",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜階",
+      "reading": "〜かい",
+      "meaning": "〜樓（樓層助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N5-538",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜番",
+      "reading": "〜ばん",
+      "meaning": "第〜號",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-539",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "どう",
+      "reading": "どう",
+      "meaning": "怎麼樣",
+      "pos": "adverb"
+    },
+    "tags": [
+      "question"
+    ]
+  },
+  {
+    "id": "vocab-N5-540",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "どんな",
+      "reading": "どんな",
+      "meaning": "什麼樣的",
+      "pos": "adverb"
+    },
+    "tags": [
+      "question"
+    ]
+  },
+  {
+    "id": "vocab-N5-541",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "いくら",
+      "reading": "いくら",
+      "meaning": "多少錢",
+      "pos": "noun"
+    },
+    "tags": [
+      "question",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N5-542",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "いくつ",
+      "reading": "いくつ",
+      "meaning": "幾個/幾歲",
+      "pos": "noun"
+    },
+    "tags": [
+      "question",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-543",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "なぜ",
+      "reading": "なぜ",
+      "meaning": "為什麼",
+      "pos": "adverb"
+    },
+    "tags": [
+      "question"
+    ]
+  },
+  {
+    "id": "vocab-N5-544",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "どうして",
+      "reading": "どうして",
+      "meaning": "為什麼/怎麼",
+      "pos": "adverb"
+    },
+    "tags": [
+      "question"
+    ]
+  },
+  {
+    "id": "vocab-N5-545",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "どのくらい",
+      "reading": "どのくらい",
+      "meaning": "大概多少/多久",
+      "pos": "adverb"
+    },
+    "tags": [
+      "question",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-546",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "お父さん",
+      "reading": "おとうさん",
+      "meaning": "父親（對方的）",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N5-547",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "お母さん",
+      "reading": "おかあさん",
+      "meaning": "母親（對方的）",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N5-548",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "お兄さん",
+      "reading": "おにいさん",
+      "meaning": "哥哥（對方的）",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N5-549",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "お姉さん",
+      "reading": "おねえさん",
+      "meaning": "姊姊（對方的）",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N5-550",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "弟さん",
+      "reading": "おとうとさん",
+      "meaning": "弟弟（對方的）",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N5-551",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "妹さん",
+      "reading": "いもうとさん",
+      "meaning": "妹妹（對方的）",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N5-552",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "おじいさん",
+      "reading": "おじいさん",
+      "meaning": "祖父/老爺爺（對方的）",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N5-553",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "おばあさん",
+      "reading": "おばあさん",
+      "meaning": "祖母/老奶奶（對方的）",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N5-554",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "鳥",
+      "reading": "とり",
+      "meaning": "鳥",
+      "pos": "noun"
+    },
+    "tags": [
+      "animal",
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N5-555",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "うさぎ",
+      "reading": "うさぎ",
+      "meaning": "兔子",
+      "pos": "noun"
+    },
+    "tags": [
+      "animal"
+    ]
+  },
+  {
+    "id": "vocab-N5-556",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ビール",
+      "reading": "びーる",
+      "meaning": "啤酒",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-557",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ジュース",
+      "reading": "じゅーす",
+      "meaning": "果汁",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-558",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "お酒",
+      "reading": "おさけ",
+      "meaning": "酒",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-559",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "寿司",
+      "reading": "すし",
+      "meaning": "壽司",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-560",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ラーメン",
+      "reading": "らーめん",
+      "meaning": "拉麵",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-561",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "カレー",
+      "reading": "かれー",
+      "meaning": "咖哩",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-562",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "うどん",
+      "reading": "うどん",
+      "meaning": "烏龍麵",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-563",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "そば",
+      "reading": "そば",
+      "meaning": "蕎麥麵",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N5-564",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "シャツ",
+      "reading": "しゃつ",
+      "meaning": "襯衫",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "vocab-N5-565",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ズボン",
+      "reading": "ずぼん",
+      "meaning": "褲子",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "vocab-N5-566",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "スカート",
+      "reading": "すかーと",
+      "meaning": "裙子",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "vocab-N5-567",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "コート",
+      "reading": "こーと",
+      "meaning": "大衣",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "vocab-N5-568",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "セーター",
+      "reading": "せーたー",
+      "meaning": "毛衣",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "vocab-N5-569",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "鼻",
+      "reading": "はな",
+      "meaning": "鼻子",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": "vocab-N5-570",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "耳",
+      "reading": "みみ",
+      "meaning": "耳朵",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": "vocab-N5-571",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "背中",
+      "reading": "せなか",
+      "meaning": "背部",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": "vocab-N5-572",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "腹",
+      "reading": "はら",
+      "meaning": "肚子",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": "vocab-N5-573",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "胸",
+      "reading": "むね",
+      "meaning": "胸部",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": "vocab-N5-574",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "肩",
+      "reading": "かた",
+      "meaning": "肩膀",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ]
+  },
+  {
+    "id": "vocab-N5-575",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "一番",
+      "reading": "いちばん",
+      "meaning": "最（第一名）",
+      "pos": "adverb"
+    },
+    "tags": [
+      "number",
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N5-576",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜番目",
+      "reading": "〜ばんめ",
+      "meaning": "第〜個（順序）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-577",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ちょっと",
+      "reading": "ちょっと",
+      "meaning": "稍微/一點",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N5-578",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "なかなか",
+      "reading": "なかなか",
+      "meaning": "相當/不太（後接否定）",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N5-579",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ぜんぜん",
+      "reading": "ぜんぜん",
+      "meaning": "完全（不）",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N5-580",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜時",
+      "reading": "〜じ",
+      "meaning": "〜點鐘",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-581",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜分",
+      "reading": "〜ふん",
+      "meaning": "〜分鐘",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-582",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜秒",
+      "reading": "〜びょう",
+      "meaning": "〜秒",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N5-583",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "月曜日",
+      "reading": "げつようび",
+      "meaning": "星期一",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N5-584",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "火曜日",
+      "reading": "かようび",
+      "meaning": "星期二",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N5-585",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "水曜日",
+      "reading": "すいようび",
+      "meaning": "星期三",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N5-586",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "木曜日",
+      "reading": "もくようび",
+      "meaning": "星期四",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N5-587",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "金曜日",
+      "reading": "きんようび",
+      "meaning": "星期五",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N5-588",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "土曜日",
+      "reading": "どようび",
+      "meaning": "星期六",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N5-589",
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "日曜日",
+      "reading": "にちようび",
+      "meaning": "星期日",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
     ]
   }
 ]
