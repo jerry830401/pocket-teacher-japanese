@@ -59,11 +59,14 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
 
   if (batchDone) {
     return (
-      <div className="h-full flex flex-col items-center justify-center gap-4">
-        <p className="text-slate-500 text-sm">已瀏覽 {BATCH_SIZE} 個單字</p>
+      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
+        <div style={{ fontFamily: '"VT323", monospace', fontSize: 18, color: 'var(--color-ink-soft)' }}>
+          已瀏覽 {BATCH_SIZE} 個單字
+        </div>
         <button
+          className="pbtn pbtn-primary"
+          style={{ padding: '10px 24px', fontSize: 12 }}
           onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
-          className="px-8 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors"
         >
           下一組（{BATCH_SIZE} 個）
         </button>
@@ -72,6 +75,7 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
   }
 
   const current = deck[index]
+  const progress = ((index + 1) / deck.length) * 100
 
   function play() {
     setTtsError(false)
@@ -84,59 +88,87 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
   }
 
   return (
-    <div className="h-full flex flex-col justify-between py-2">
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
       {/* 進度區 */}
-      <div className="shrink-0 space-y-2">
-        <div className="text-sm text-slate-500">第 {index + 1} / {deck.length} 張</div>
-        <div className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
-          <div
-            className="h-full rounded-full bg-indigo-500 transition-all duration-300"
-            style={{ width: `${(index + 1) / deck.length * 100}%` }}
-          />
+      <div style={{ flexShrink: 0 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+            第 {index + 1} / {deck.length} 張
+          </span>
+        </div>
+        <div className="px-bar">
+          <span className="px-bar-fill" style={{ width: `${progress}%`, background: 'var(--color-indigo-px)' }} />
         </div>
       </div>
 
       {/* 卡片 */}
-      <div className="flex-1 min-h-0 flex items-center justify-center">
-        <div className="w-full max-w-xs rounded-2xl border-2 border-indigo-200 dark:border-indigo-800 bg-indigo-50 dark:bg-indigo-950 px-5 py-5">
-          <div className="flex items-start justify-between gap-3">
-            <div className="space-y-1.5 min-w-0">
-              <p className="text-4xl font-medium">{current.payload.word}</p>
-              <p className="text-base text-indigo-400 dark:text-indigo-300">{current.payload.reading}</p>
-              <p className="text-base text-slate-700 dark:text-slate-200">{current.payload.meaning}</p>
-              <p className="text-xs text-indigo-300 dark:text-indigo-500">
-                {POS_LABEL[current.payload.pos] ?? current.payload.pos}
-              </p>
-            </div>
-            <button
-              onClick={play}
-              className="flex-none flex items-center justify-center w-10 h-10 rounded-full border border-indigo-300 dark:border-indigo-600 bg-white dark:bg-indigo-900 text-indigo-500 hover:bg-indigo-100 dark:hover:bg-indigo-800 transition-colors mt-1"
-              aria-label={`播放 ${current.payload.word}`}
-            >
-              <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z" />
-                <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" />
-              </svg>
-            </button>
+      <div style={{ flex: 1, minHeight: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="pcard" style={{
+          background: 'var(--color-indigo-px-soft)',
+          width: '100%',
+          display: 'flex',
+          alignItems: 'flex-start',
+          gap: 16,
+          padding: '28px 20px',
+        }}>
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 6 }}>
+            <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 42 }}>
+              {current.payload.word}
+            </span>
+            <span style={{ fontFamily: '"VT323", monospace', fontSize: 22, color: 'var(--color-indigo-px)' }}>
+              {current.payload.reading}
+            </span>
+            <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 15, color: 'var(--color-ink-soft)' }}>
+              {current.payload.meaning}
+            </span>
+            <span className="ptag" style={{ alignSelf: 'flex-start', marginTop: 4 }}>
+              {POS_LABEL[current.payload.pos] ?? current.payload.pos}
+            </span>
+            {ttsError && (
+              <span style={{ fontFamily: '"VT323", monospace', fontSize: 14, color: '#c8633a' }}>
+                語音播放失敗
+              </span>
+            )}
           </div>
-          {ttsError && <p className="text-red-500 text-xs mt-2">語音播放失敗，請再試一次</p>}
+          <button
+            onClick={play}
+            aria-label={`播放 ${current.payload.word}`}
+            style={{
+              flexShrink: 0,
+              width: 48,
+              height: 48,
+              border: '3px solid var(--color-ink)',
+              boxShadow: '3px 3px 0 var(--color-ink)',
+              background: 'var(--color-indigo-px)',
+              color: 'var(--color-paper)',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: 20,
+            }}
+          >
+            ▶
+          </button>
         </div>
       </div>
 
       {/* 導覽按鈕 */}
-      <div className="shrink-0 flex items-center justify-center gap-3 pb-4">
+      <div style={{ flexShrink: 0, display: 'flex', gap: 10 }}>
         <button
+          className="pbtn pbtn-ghost"
+          style={{ flex: 1, padding: '10px 0', fontSize: 13 }}
           onClick={() => goTo(index - 1)}
           disabled={index === 0}
-          className="px-5 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
         >
           上一張
         </button>
         <button
+          className="pbtn pbtn-primary"
+          style={{ flex: 2, padding: '10px 0', fontSize: 13 }}
           onClick={() => index + 1 >= deck.length ? dispatch({ type: 'DONE' }) : goTo(index + 1)}
-          className="px-6 py-2 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors"
         >
-          {index + 1 >= deck.length ? '完成這組' : '下一張'}
+          {index + 1 >= deck.length ? '完成這組' : '下一張 →'}
         </button>
       </div>
     </div>

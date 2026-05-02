@@ -100,20 +100,20 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
 
   if (roundDone) {
     const pct = Math.round((correct / deck.length) * 100)
+    const msg = pct === 100 ? '完美！全部答對！'
+      : pct >= 80 ? '答得很好，再接再厲！'
+      : pct >= 60 ? '還不錯，繼續練習！'
+      : '多練幾輪，加油！'
     return (
-      <div className="h-full flex flex-col items-center justify-center gap-4">
-        <span className="text-5xl font-bold text-indigo-600 dark:text-indigo-400">{pct}%</span>
-        <span className="text-slate-500 text-sm">{deck.length} 題中答對 {correct} 題</span>
-        <div className="w-full max-w-xs rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-sm text-slate-500 text-center">
-          {pct === 100 && '完美！全部答對 🎉'}
-          {pct >= 80 && pct < 100 && '答得很好，再接再厲！'}
-          {pct >= 60 && pct < 80 && '還不錯，繼續練習！'}
-          {pct < 60 && '多練幾輪，加油！'}
+      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
+        <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 32, color: 'var(--color-indigo-px)' }}>{pct}%</div>
+        <div style={{ fontFamily: '"VT323", monospace', fontSize: 18, color: 'var(--color-ink-soft)' }}>
+          {deck.length} 題中答對 {correct} 題
         </div>
-        <button
-          onClick={startNextRound}
-          className="px-8 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors"
-        >
+        <div className="pcard" style={{ background: 'var(--color-indigo-px-soft)', textAlign: 'center', width: '100%', maxWidth: 280 }}>
+          <p style={{ margin: 0, fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 14 }}>{msg}</p>
+        </div>
+        <button className="pbtn pbtn-primary" style={{ padding: '10px 24px', fontSize: 12 }} onClick={startNextRound}>
           下一輪（{roundSize} 題）
         </button>
       </div>
@@ -126,69 +126,76 @@ export default function FlashCardQuiz({ chars, mode }: Props) {
   const prompt = mode === 'kana→romaji' ? current.kana : current.romaji
   const answerKey = (c: KanaChar) => mode === 'kana→romaji' ? c.romaji : c.kana
   const showNext = selected !== null && !(autoNext && selected === current.id)
+  const progress = ((index + (selected ? 1 : 0)) / deck.length) * 100
 
   return (
-    <div className="h-full flex flex-col justify-between py-2">
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
       {/* 進度區 */}
-      <div className="shrink-0 space-y-2">
-        <div className="flex items-center gap-3 text-sm text-slate-500">
-          <span>第 {index + 1} / {deck.length} 題</span>
-          <span className="text-slate-300 dark:text-slate-600">·</span>
-          <span>正確 {correct}</span>
+      <div style={{ flexShrink: 0 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+            第 {index + 1} / {deck.length} 題
+          </span>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+            正確 {correct}
+          </span>
         </div>
-        <div className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
-          <div
-            className="h-full rounded-full bg-indigo-500 transition-all duration-300"
-            style={{ width: `${((index + (selected ? 1 : 0)) / deck.length) * 100}%` }}
-          />
+        <div className="px-bar">
+          <span className="px-bar-fill" style={{ width: `${progress}%`, background: 'var(--color-indigo-px)' }} />
         </div>
       </div>
 
       {/* 題目卡 */}
-      <div className="flex-1 min-h-0 flex items-center justify-center">
-        <div className="relative w-32 h-32 sm:w-40 sm:h-40">
-          {/* 底層牌 */}
-          <div className="absolute inset-0 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 origin-bottom"
-            style={{ transform: 'rotate(-4deg) translateY(4px)', opacity: 0.4 }} />
-          <div className="absolute inset-0 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 origin-bottom"
-            style={{ transform: 'rotate(3deg) translateY(2px)', opacity: 0.6 }} />
-          {/* 主卡 */}
-          <div key={index} className="card-enter absolute inset-0 flex items-center justify-center rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 shadow-md">
-            <span className="text-5xl sm:text-6xl">{prompt}</span>
-          </div>
+      <div style={{ flex: 1, minHeight: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="pcard" style={{
+          background: 'var(--color-indigo-px-soft)',
+          width: 160,
+          height: 160,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexShrink: 0,
+        }}>
+          <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 72 }}>
+            {prompt}
+          </span>
         </div>
       </div>
 
-      {/* 選項 + 下一題 */}
-      <div className="shrink-0 flex flex-col items-center gap-8 pb-4">
-        <div className="grid grid-cols-2 gap-2.5 w-full max-w-xs">
-          {choices.map((choice) => {
-            const isCorrect = choice.id === current.id
-            const isPicked = choice.id === selected
-            let cls = 'rounded-xl border-2 py-3 text-lg font-medium transition-colors '
-            if (!selected) {
-              cls += 'border-slate-200 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 cursor-pointer'
-            } else if (isCorrect) {
-              cls += 'border-green-500 bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300'
-            } else if (isPicked) {
-              cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400'
-            } else {
-              cls += 'border-slate-200 dark:border-slate-700 opacity-40'
-            }
-            return (
-              <button key={choice.id} className={cls} onClick={() => pick(choice)}>
+      {/* 選項 */}
+      <div style={{ flexShrink: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+        {choices.map((choice) => {
+          const isCorrect = choice.id === current.id
+          const isPicked = choice.id === selected
+          let extraClass = 'px-choice'
+          if (selected) {
+            if (isCorrect) extraClass += ' px-choice-correct'
+            else if (isPicked) extraClass += ' px-choice-wrong'
+          }
+          return (
+            <button
+              key={choice.id}
+              className={extraClass}
+              style={{ opacity: selected && !isCorrect && !isPicked ? 0.4 : 1, justifyContent: 'center' }}
+              onClick={() => pick(choice)}
+            >
+              <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 20, fontWeight: 700 }}>
                 {answerKey(choice)}
-              </button>
-            )
-          })}
-        </div>
+              </span>
+            </button>
+          )
+        })}
+      </div>
 
+      {/* 下一題按鈕 */}
+      <div style={{ flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
         <button
+          className="pbtn pbtn-primary"
+          style={{ padding: '10px 32px', fontSize: 13, visibility: showNext ? 'visible' : 'hidden', width: '100%' }}
           onClick={() => advance(index + 1)}
           disabled={!showNext}
-          className={`px-8 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
         >
-          {isLastQuestion ? '查看結果' : '下一題'}
+          {isLastQuestion ? '查看結果' : '下一題 →'}
         </button>
       </div>
     </div>

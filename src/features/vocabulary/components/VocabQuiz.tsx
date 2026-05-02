@@ -102,20 +102,20 @@ export default function VocabQuiz({ cards }: Props) {
 
   if (roundDone) {
     const pct = Math.round((correct / deck.length) * 100)
+    const msg = pct === 100 ? '完美！全部答對！'
+      : pct >= 80 ? '答得很好，再接再厲！'
+      : pct >= 60 ? '還不錯，繼續練習！'
+      : '多練幾輪，加油！'
     return (
-      <div className="h-full flex flex-col items-center justify-center gap-4">
-        <span className="text-5xl font-bold text-indigo-600 dark:text-indigo-400">{pct}%</span>
-        <span className="text-slate-500 text-sm">{deck.length} 題中答對 {correct} 題</span>
-        <div className="w-full max-w-xs rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-sm text-slate-500 text-center">
-          {pct === 100 && '完美！全部答對 🎉'}
-          {pct >= 80 && pct < 100 && '答得很好，再接再厲！'}
-          {pct >= 60 && pct < 80 && '還不錯，繼續練習！'}
-          {pct < 60 && '多練幾輪，加油！'}
+      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
+        <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 32, color: 'var(--color-indigo-px)' }}>{pct}%</div>
+        <div style={{ fontFamily: '"VT323", monospace', fontSize: 18, color: 'var(--color-ink-soft)' }}>
+          {deck.length} 題中答對 {correct} 題
         </div>
-        <button
-          onClick={startNextRound}
-          className="px-8 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors"
-        >
+        <div className="pcard" style={{ background: 'var(--color-sakura-soft)', textAlign: 'center', width: '100%', maxWidth: 280 }}>
+          <p style={{ margin: 0, fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 14 }}>{msg}</p>
+        </div>
+        <button className="pbtn pbtn-primary" style={{ padding: '10px 24px', fontSize: 12 }} onClick={startNextRound}>
           下一輪（{roundSize} 題）
         </button>
       </div>
@@ -126,73 +126,80 @@ export default function VocabQuiz({ cards }: Props) {
 
   const isLastQuestion = index === deck.length - 1
   const showNext = selected !== null && !(autoNext && selected === current.id)
+  const progress = ((index + (selected ? 1 : 0)) / deck.length) * 100
 
   return (
-    <div className="h-full flex flex-col justify-between py-2">
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
       {/* 進度區 */}
-      <div className="shrink-0 space-y-2">
-        <div className="flex items-center gap-3 text-sm text-slate-500">
-          <span>第 {index + 1} / {deck.length} 題</span>
-          <span className="text-slate-300 dark:text-slate-600">·</span>
-          <span>正確 {correct}</span>
+      <div style={{ flexShrink: 0 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+            第 {index + 1} / {deck.length} 題
+          </span>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+            正確 {correct}
+          </span>
         </div>
-        <div className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
-          <div
-            className="h-full rounded-full bg-indigo-500 transition-all duration-300"
-            style={{ width: `${((index + (selected ? 1 : 0)) / deck.length) * 100}%` }}
-          />
+        <div className="px-bar">
+          <span className="px-bar-fill" style={{ width: `${progress}%`, background: 'var(--color-indigo-px)' }} />
         </div>
       </div>
 
       {/* 題目卡 */}
-      <div className="flex-1 min-h-0 flex items-center justify-center">
-        <div className="relative w-full max-w-xs px-4">
-          {/* 底層牌：絕對定位撐滿主卡，由主卡決定高度 */}
-          <div className="absolute inset-x-4 inset-y-0 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 pointer-events-none"
-            style={{ transform: 'rotate(-3deg) translateY(4px)', opacity: 0.4 }} />
-          <div className="absolute inset-x-4 inset-y-0 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 pointer-events-none"
-            style={{ transform: 'rotate(2.5deg) translateY(2px)', opacity: 0.6 }} />
-          {/* 主卡 */}
-          <div key={index} className="card-enter relative flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-indigo-200 dark:border-indigo-900 bg-indigo-50 dark:bg-indigo-950 shadow-md px-4 py-6 min-h-28">
-            <span className="text-4xl font-medium">{current.payload.word}</span>
-            <span className="text-base text-indigo-400 dark:text-indigo-300">{current.payload.reading}</span>
-            <span className="text-xs text-indigo-300 dark:text-indigo-500">
-              {POS_LABEL[current.payload.pos] ?? current.payload.pos}
-            </span>
-          </div>
+      <div style={{ flex: 1, minHeight: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="pcard" style={{
+          background: 'var(--color-indigo-px-soft)',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 8,
+          padding: '28px 16px',
+        }}>
+          <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 48 }}>
+            {current.payload.word}
+          </span>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: 22, color: 'var(--color-indigo-px)' }}>
+            {current.payload.reading}
+          </span>
+          <span className="ptag">{POS_LABEL[current.payload.pos] ?? current.payload.pos}</span>
         </div>
       </div>
 
-      {/* 選項 + 下一題 */}
-      <div className="shrink-0 flex flex-col items-center gap-8 pb-4">
-        <div className="grid grid-cols-2 gap-2.5 w-full max-w-xs">
-          {choices.map((choice) => {
-            const isCorrect = choice.id === current.id
-            const isPicked = choice.id === selected
-            let cls = 'rounded-xl border-2 py-3 px-2 text-sm font-medium transition-colors '
-            if (!selected) {
-              cls += 'border-slate-200 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 cursor-pointer'
-            } else if (isCorrect) {
-              cls += 'border-green-500 bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300'
-            } else if (isPicked) {
-              cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400'
-            } else {
-              cls += 'border-slate-200 dark:border-slate-700 opacity-40'
-            }
-            return (
-              <button key={choice.id} className={cls} onClick={() => pick(choice)}>
+      {/* 選項 */}
+      <div style={{ flexShrink: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+        {choices.map((choice) => {
+          const isCorrect = choice.id === current.id
+          const isPicked = choice.id === selected
+          let extraClass = 'px-choice'
+          if (selected) {
+            if (isCorrect) extraClass += ' px-choice-correct'
+            else if (isPicked) extraClass += ' px-choice-wrong'
+          }
+          return (
+            <button
+              key={choice.id}
+              className={extraClass}
+              style={{ opacity: selected && !isCorrect && !isPicked ? 0.4 : 1, justifyContent: 'center' }}
+              onClick={() => pick(choice)}
+            >
+              <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 14, fontWeight: 600 }}>
                 {choice.payload.meaning}
-              </button>
-            )
-          })}
-        </div>
+              </span>
+            </button>
+          )
+        })}
+      </div>
 
+      {/* 下一題按鈕：佔位保留高度避免跳動 */}
+      <div style={{ flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
         <button
+          className="pbtn pbtn-primary"
+          style={{ padding: '10px 32px', fontSize: 13, visibility: showNext ? 'visible' : 'hidden', width: '100%' }}
           onClick={() => advance(index + 1)}
           disabled={!showNext}
-          className={`px-8 py-2.5 rounded-lg bg-indigo-600 hover:bg-indigo-700 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
         >
-          {isLastQuestion ? '查看結果' : '下一題'}
+          {isLastQuestion ? '查看結果' : '下一題 →'}
         </button>
       </div>
     </div>

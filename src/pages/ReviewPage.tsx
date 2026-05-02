@@ -30,10 +30,10 @@ type ReviewState =
   | { status: 'ready'; subject: 'kana'; chars: KanaChar[] }
   | { status: 'error' }
 
-const SUBJECT_META: Record<Subject, { label: string; color: string; bg: string; border: string; btnColor: string }> = {
-  kana:    { label: '五十音', color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-950', border: 'border-indigo-200 dark:border-indigo-800', btnColor: 'bg-indigo-600 hover:bg-indigo-700' },
-  vocab:   { label: '單字',   color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-950', border: 'border-indigo-200 dark:border-indigo-800', btnColor: 'bg-indigo-600 hover:bg-indigo-700' },
-  grammar: { label: '文法',   color: 'text-teal-600 dark:text-teal-400',     bg: 'bg-teal-50 dark:bg-teal-950',     border: 'border-teal-200 dark:border-teal-800',     btnColor: 'bg-teal-600 hover:bg-teal-700' },
+const SUBJECT_META: Record<Subject, { label: string; bg: string }> = {
+  kana:    { label: '五十音', bg: 'var(--color-indigo-px-soft)' },
+  vocab:   { label: '單字',   bg: 'var(--color-sakura-soft)' },
+  grammar: { label: '文法',   bg: 'var(--color-matcha-soft)' },
 }
 
 export default function ReviewPage() {
@@ -78,15 +78,15 @@ export default function ReviewPage() {
 
   if (reviewState.status === 'loading') {
     return (
-      <div className="h-full flex items-center justify-center pb-16 md:pb-0">
-        <p className="text-slate-400">載入中⋯</p>
+      <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <p style={{ color: 'var(--color-ink-soft)', fontFamily: '"VT323", monospace', fontSize: 20 }}>載入中⋯</p>
       </div>
     )
   }
   if (reviewState.status === 'error') {
     return (
-      <div className="h-full flex items-center justify-center pb-16 md:pb-0">
-        <p className="text-red-500 text-sm">資料載入失敗，請重新整理頁面</p>
+      <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <p style={{ color: '#c8633a', fontSize: 13 }}>資料載入失敗，請重新整理頁面</p>
       </div>
     )
   }
@@ -94,36 +94,40 @@ export default function ReviewPage() {
   if (reviewState.status === 'ready') {
     const meta = SUBJECT_META[reviewState.subject]
     return (
-      <div className="h-full flex flex-col pb-16 md:pb-0">
-        <div className="shrink-0 pt-4 pb-3 flex items-center justify-between pr-10 md:pr-0">
-          <div>
-            <h1 className="text-xl font-semibold tracking-tight">錯題複習</h1>
-            <p className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">{meta.label}</p>
-          </div>
-          <button
-            onClick={() => setReviewState({ status: 'idle' })}
-            className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-          >
+      <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+        {/* 頁首 */}
+        <div style={{ flexShrink: 0, padding: '14px 16px 10px', display: 'flex', alignItems: 'center', gap: 8 }}>
+          <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, color: 'var(--color-ink-soft)', flex: 1 }}>
+            {meta.label}複習
+          </span>
+          <button className="pbtn pbtn-ghost" style={{ padding: '4px 10px', fontSize: 13, flexShrink: 0 }}
+            onClick={() => setReviewState({ status: 'idle' })}>
             ← 返回
           </button>
         </div>
 
-        <div className="flex-1 min-h-0">
+        <div style={{ flex: 1, minHeight: 0, padding: '0 16px 8px' }}>
           {reviewState.subject === 'vocab' && (() => {
             if (reviewState.cards.length < 4) return (
-              <p className="text-sm text-slate-500">錯題不足 4 張，多練幾輪後再回來！</p>
+              <div className="pcard" style={{ background: 'var(--color-sakura-soft)' }}>
+                <p style={{ margin: 0, fontSize: 14 }}>錯題不足 4 張，多練幾輪後再回來！</p>
+              </div>
             )
             return <VocabQuiz cards={reviewState.cards} />
           })()}
           {reviewState.subject === 'grammar' && (() => {
             if (reviewState.cards.length < 4) return (
-              <p className="text-sm text-slate-500">錯題不足 4 張，多練幾輪後再回來！</p>
+              <div className="pcard" style={{ background: 'var(--color-sakura-soft)' }}>
+                <p style={{ margin: 0, fontSize: 14 }}>錯題不足 4 張，多練幾輪後再回來！</p>
+              </div>
             )
             return <GrammarQuiz cards={reviewState.cards} />
           })()}
           {reviewState.subject === 'kana' && (() => {
             if (reviewState.chars.length < 4) return (
-              <p className="text-sm text-slate-500">錯題不足 4 張，多練幾輪後再回來！</p>
+              <div className="pcard" style={{ background: 'var(--color-sakura-soft)' }}>
+                <p style={{ margin: 0, fontSize: 14 }}>錯題不足 4 張，多練幾輪後再回來！</p>
+              </div>
             )
             return <FlashCardQuiz chars={reviewState.chars} mode="kana→romaji" />
           })()}
@@ -132,44 +136,64 @@ export default function ReviewPage() {
     )
   }
 
-  // 錯題列表
+  // ── 錯題列表（idle） ──
   return (
-    <div className="h-full flex flex-col pb-16 md:pb-0">
-      <div className="shrink-0 pt-4 pb-3 pr-10 md:pr-0">
-        <h1 className="text-xl font-semibold tracking-tight">錯題本</h1>
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flexShrink: 0, padding: '14px 16px 10px' }}>
+        <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 11, lineHeight: 1.4 }}>錯題本</span>
       </div>
 
-      <div className="flex-1 min-h-0 overflow-y-auto">
-        {pageState.status === 'loading' && <p className="text-slate-400">載入中⋯</p>}
-        {pageState.status === 'error' && <p className="text-red-500 text-sm">無法讀取學習記錄</p>}
+      <div style={{ flex: 1, minHeight: 0, overflowY: 'auto', padding: '0 16px 8px' }}>
+        {pageState.status === 'loading' && (
+          <p style={{ color: 'var(--color-ink-soft)', fontFamily: '"VT323", monospace', fontSize: 20 }}>載入中⋯</p>
+        )}
+        {pageState.status === 'error' && (
+          <p style={{ color: '#c8633a', fontSize: 13 }}>無法讀取學習記錄</p>
+        )}
         {pageState.status === 'ready' && (() => {
           const { weakIds } = pageState
           const total = weakIds.kana.length + weakIds.vocab.length + weakIds.grammar.length
+
           if (total === 0) {
             return (
-              <div className="rounded-lg border border-dashed border-slate-300 dark:border-slate-700 p-8 text-center text-sm text-slate-500">
-                目前沒有錯題，繼續保持！
+              <div className="pcard" style={{
+                background: 'var(--color-matcha-soft)',
+                textAlign: 'center',
+                padding: '32px 16px',
+              }}>
+                <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 10, lineHeight: 1.6, marginBottom: 8 }}>
+                  全部答對！
+                </div>
+                <p style={{ margin: 0, fontSize: 14, color: 'var(--color-ink-soft)' }}>目前沒有錯題，繼續保持！</p>
               </div>
             )
           }
+
           return (
-            <div className="space-y-3">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               {(['kana', 'vocab', 'grammar'] as const).map((subject) => {
                 const count = weakIds[subject].length
                 if (count === 0) return null
                 const meta = SUBJECT_META[subject]
                 return (
-                  <div key={subject} className={`rounded-xl border ${meta.border} ${meta.bg} px-4 py-3 flex items-center justify-between`}>
-                    <div>
-                      <p className={`text-sm font-medium ${meta.color}`}>{meta.label}</p>
-                      <p className="text-xs text-slate-500 mt-0.5">{count} 張待加強</p>
+                  <div key={subject} className="pcard" style={{ background: meta.bg }}>
+                    <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+                      <div>
+                        <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 10, lineHeight: 1.4 }}>
+                          {meta.label}
+                        </div>
+                        <div style={{ fontFamily: '"VT323", monospace', fontSize: 18, color: 'var(--color-ink-soft)', marginTop: 2 }}>
+                          {count} 張待加強
+                        </div>
+                      </div>
+                      <button
+                        className="pbtn pbtn-primary"
+                        style={{ padding: '8px 14px', fontSize: 13 }}
+                        onClick={() => startReview(subject, weakIds[subject])}
+                      >
+                        ▶ 開始複習
+                      </button>
                     </div>
-                    <button
-                      onClick={() => startReview(subject, weakIds[subject])}
-                      className={`px-4 py-1.5 rounded-lg ${meta.btnColor} text-white text-xs font-medium transition-colors`}
-                    >
-                      開始複習
-                    </button>
                   </div>
                 )
               })}

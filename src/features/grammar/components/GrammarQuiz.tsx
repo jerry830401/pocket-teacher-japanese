@@ -103,20 +103,20 @@ export default function GrammarQuiz({ cards }: Props) {
 
   if (roundDone) {
     const pct = Math.round((correct / deck.length) * 100)
+    const msg = pct === 100 ? '完美！全部答對！'
+      : pct >= 80 ? '答得很好，再接再厲！'
+      : pct >= 60 ? '還不錯，繼續練習！'
+      : '多練幾輪，加油！'
     return (
-      <div className="h-full flex flex-col items-center justify-center gap-4">
-        <span className="text-5xl font-bold text-teal-600 dark:text-teal-400">{pct}%</span>
-        <span className="text-slate-500 text-sm">{deck.length} 題中答對 {correct} 題</span>
-        <div className="w-full max-w-xs rounded-2xl border border-slate-200 dark:border-slate-700 p-4 text-sm text-slate-500 text-center">
-          {pct === 100 && '完美！全部答對 🎉'}
-          {pct >= 80 && pct < 100 && '答得很好，再接再厲！'}
-          {pct >= 60 && pct < 80 && '還不錯，繼續練習！'}
-          {pct < 60 && '多練幾輪，加油！'}
+      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
+        <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 32, color: 'var(--color-matcha)' }}>{pct}%</div>
+        <div style={{ fontFamily: '"VT323", monospace', fontSize: 18, color: 'var(--color-ink-soft)' }}>
+          {deck.length} 題中答對 {correct} 題
         </div>
-        <button
-          onClick={startNextRound}
-          className="px-8 py-2.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium transition-colors"
-        >
+        <div className="pcard" style={{ background: 'var(--color-matcha-soft)', textAlign: 'center', width: '100%', maxWidth: 280 }}>
+          <p style={{ margin: 0, fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 14 }}>{msg}</p>
+        </div>
+        <button className="pbtn pbtn-primary" style={{ padding: '10px 24px', fontSize: 12 }} onClick={startNextRound}>
           下一輪（{roundSize} 題）
         </button>
       </div>
@@ -128,88 +128,107 @@ export default function GrammarQuiz({ cards }: Props) {
   const [before, after] = splitSentence(current.payload.sentence)
   const isLastQuestion = index === deck.length - 1
   const showNext = selected !== null && !(autoNext && selected === current.payload.answer)
+  const progress = ((index + (selected ? 1 : 0)) / deck.length) * 100
+  const isAnswerCorrect = selected === current.payload.answer
 
   return (
-    <div className="h-full flex flex-col justify-between py-2">
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
       {/* 進度區 */}
-      <div className="shrink-0 space-y-2">
-        <div className="flex items-center gap-3 text-sm text-slate-500">
-          <span>第 {index + 1} / {deck.length} 題</span>
-          <span className="text-slate-300 dark:text-slate-600">·</span>
-          <span>正確 {correct}</span>
+      <div style={{ flexShrink: 0 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+            第 {index + 1} / {deck.length} 題
+          </span>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+            正確 {correct}
+          </span>
         </div>
-        <div className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
-          <div
-            className="h-full rounded-full bg-teal-500 transition-all duration-300"
-            style={{ width: `${((index + (selected ? 1 : 0)) / deck.length) * 100}%` }}
-          />
+        <div className="px-bar">
+          <span className="px-bar-fill" style={{ width: `${progress}%`, background: 'var(--color-matcha)' }} />
         </div>
       </div>
 
       {/* 題目卡 */}
-      <div className="flex-1 min-h-0 flex items-center justify-center">
-        <div className="relative w-full max-w-sm">
-          {/* 底層牌：跟隨主卡高度 */}
-          <div className="absolute inset-0 rounded-2xl border-2 border-teal-200 dark:border-teal-900 bg-teal-50 dark:bg-teal-950 pointer-events-none"
-            style={{ transform: 'rotate(-3deg) translateY(4px)', opacity: 0.4 }} />
-          <div className="absolute inset-0 rounded-2xl border-2 border-teal-200 dark:border-teal-900 bg-teal-50 dark:bg-teal-950 pointer-events-none"
-            style={{ transform: 'rotate(2.5deg) translateY(2px)', opacity: 0.6 }} />
-          {/* 主卡 */}
-          <div key={index} className="card-enter relative flex flex-col items-center gap-2 rounded-2xl border-2 border-teal-200 dark:border-teal-900 bg-teal-50 dark:bg-teal-950 shadow-md px-4 py-6">
-          <p className="text-base font-medium text-center leading-relaxed">
+      <div style={{ flex: 1, minHeight: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="pcard" style={{
+          background: 'var(--color-matcha-soft)',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: 12,
+          padding: '28px 16px',
+        }}>
+          {/* 填空句子 */}
+          <p style={{ margin: 0, fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 17, fontWeight: 600, textAlign: 'center', lineHeight: 2 }}>
             {before}
-            <span className={[
-              'inline-block min-w-12 mx-1 px-2 rounded border-b-2 text-center transition-colors',
-              !selected
-                ? 'border-teal-400 dark:border-teal-500 text-teal-400 dark:text-teal-500'
-                : selected === current.payload.answer
-                  ? 'border-green-500 text-green-600 dark:text-green-400'
-                  : 'border-red-400 text-red-500 dark:text-red-400',
-            ].join(' ')}>
+            <span style={{
+              display: 'inline-block',
+              minWidth: 48,
+              marginInline: 4,
+              paddingInline: 6,
+              borderBottom: `2px solid ${
+                !selected ? 'var(--color-matcha)'
+                  : isAnswerCorrect ? '#5c9e31'
+                  : '#c8633a'
+              }`,
+              color: !selected ? 'var(--color-matcha)'
+                : isAnswerCorrect ? '#5c9e31'
+                : '#c8633a',
+              textAlign: 'center',
+              transition: 'color 0.15s, border-color 0.15s',
+            }}>
               {selected ?? '　　'}
             </span>
             {after}
           </p>
-          <p className={`text-sm text-teal-600 dark:text-teal-300 transition-opacity ${selected ? 'opacity-100' : 'opacity-0'}`}>
-            {current.payload.meaning}
-          </p>
-          <p className={`text-xs text-teal-400 dark:text-teal-500 text-center transition-opacity ${selected ? 'opacity-100' : 'opacity-0'}`}>
-            {current.payload.grammar}
-          </p>
+
+          {/* 答案揭示 */}
+          <div style={{ opacity: selected ? 1 : 0, transition: 'opacity 0.2s', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 4 }}>
+            <span style={{ fontFamily: '"VT323", monospace', fontSize: 20, color: 'var(--color-matcha)' }}>
+              {current.payload.meaning}
+            </span>
+            <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 8, color: 'var(--color-ink-soft)' }}>
+              {current.payload.grammar}
+            </span>
           </div>
         </div>
       </div>
 
-      {/* 選項 + 下一題 */}
-      <div className="shrink-0 flex flex-col items-center gap-8 pb-4">
-        <div className="grid grid-cols-2 gap-2.5 w-full max-w-xs">
-          {shuffledChoices.map((choice) => {
-            const isCorrect = choice === current.payload.answer
-            const isPicked = choice === selected
-            let cls = 'rounded-xl border-2 py-3 px-2 text-sm font-medium transition-colors '
-            if (!selected) {
-              cls += 'border-slate-200 dark:border-slate-700 hover:border-teal-400 dark:hover:border-teal-500 cursor-pointer'
-            } else if (isCorrect) {
-              cls += 'border-green-500 bg-green-50 dark:bg-green-950 text-green-700 dark:text-green-300'
-            } else if (isPicked) {
-              cls += 'border-red-400 bg-red-50 dark:bg-red-950 text-red-600 dark:text-red-400'
-            } else {
-              cls += 'border-slate-200 dark:border-slate-700 opacity-40'
-            }
-            return (
-              <button key={choice} className={cls} onClick={() => pick(choice)}>
+      {/* 選項 */}
+      <div style={{ flexShrink: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
+        {shuffledChoices.map((choice) => {
+          const isCorrect = choice === current.payload.answer
+          const isPicked = choice === selected
+          let extraClass = 'px-choice'
+          if (selected) {
+            if (isCorrect) extraClass += ' px-choice-correct'
+            else if (isPicked) extraClass += ' px-choice-wrong'
+          }
+          return (
+            <button
+              key={choice}
+              className={extraClass}
+              style={{ opacity: selected && !isCorrect && !isPicked ? 0.4 : 1, justifyContent: 'center' }}
+              onClick={() => pick(choice)}
+            >
+              <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 15, fontWeight: 600 }}>
                 {choice}
-              </button>
-            )
-          })}
-        </div>
+              </span>
+            </button>
+          )
+        })}
+      </div>
 
+      {/* 下一題按鈕 */}
+      <div style={{ flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
         <button
+          className="pbtn pbtn-primary"
+          style={{ padding: '10px 32px', fontSize: 13, visibility: showNext ? 'visible' : 'hidden', width: '100%' }}
           onClick={() => advance(index + 1)}
           disabled={!showNext}
-          className={`px-8 py-2.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium transition-colors ${!showNext ? 'invisible' : ''}`}
         >
-          {isLastQuestion ? '查看結果' : '下一題'}
+          {isLastQuestion ? '查看結果' : '下一題 →'}
         </button>
       </div>
     </div>

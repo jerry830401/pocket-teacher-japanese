@@ -19,7 +19,6 @@ const JLPT_LEVELS: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
 
 // ── Category definitions ──────────────────────────────────────────────────────
 
-// filter: null = 全部；tags = 任意一個 tag 符合；pos = payload.pos 符合
 const VOCAB_CATS: Array<{ id: string; label: string; tags: string[] | null; pos: string[] | null }> = [
   { id: 'all',        label: '全部',         tags: null,                                          pos: null },
   { id: 'greeting',   label: '問候・表達',   tags: ['greeting', 'question'],                      pos: null },
@@ -64,15 +63,11 @@ const GRAMMAR_CATS: Array<{ id: string; label: string; tags: string[] | null }> 
 ]
 
 // ── Navigation state ──────────────────────────────────────────────────────────
-//
-// Drill path:
-//   kana:          subject → sub (KanaGroup) → content
-//   vocab/grammar: subject → sub (JlptLevel) → catId → content
 
 interface NavState {
   subject: 'hiragana' | 'katakana' | 'vocab' | 'grammar' | null
-  sub: string | null   // KanaGroup for kana; JlptLevel for vocab/grammar
-  catId: string | null // vocab/grammar category id
+  sub: string | null
+  catId: string | null
 }
 
 const NAV_INIT: NavState = { subject: null, sub: null, catId: null }
@@ -89,33 +84,28 @@ function getBreadcrumb(nav: NavState): string[] {
   const { subject, sub, catId } = nav
   const parts = ['學習']
   if (!subject) return parts
-
   if (subject === 'hiragana') parts.push('平假名')
   else if (subject === 'katakana') parts.push('片假名')
   else if (subject === 'vocab') parts.push('單字')
   else parts.push('文法')
-
   if (!sub) return parts
-
   if (subject === 'hiragana' || subject === 'katakana') {
     parts.push(ALL_ROWS.find(r => r.group === sub)?.label ?? sub)
   } else {
-    parts.push(sub) // JlptLevel
+    parts.push(sub)
     if (catId) {
       const cats = subject === 'vocab' ? VOCAB_CATS : GRAMMAR_CATS
       parts.push(cats.find(c => c.id === catId)?.label ?? catId)
     }
   }
-
   return parts
 }
 
-// ── Shared UI ─────────────────────────────────────────────────────────────────
+// ── Pixel drill item ──────────────────────────────────────────────────────────
 
 function DrillItem({
-  icon, label, badge, disabled, coming, onClick,
+  label, badge, disabled, coming, onClick,
 }: {
-  icon?: string
   label: string
   badge?: number
   disabled?: boolean
@@ -126,27 +116,38 @@ function DrillItem({
     <button
       onClick={onClick}
       disabled={disabled}
-      className={[
-        'w-full flex items-center gap-3 px-4 py-3.5 rounded-xl text-left border transition-colors',
-        disabled
-          ? 'bg-slate-50 dark:bg-slate-900/40 border-slate-100 dark:border-slate-800 text-slate-300 dark:text-slate-600 cursor-not-allowed'
-          : 'bg-white dark:bg-slate-900 border-slate-100 dark:border-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800',
-      ].join(' ')}
+      className="w-full flex items-center gap-3 text-left pcard-tap"
+      style={{
+        background: disabled ? 'var(--color-cream-2)' : 'var(--color-paper)',
+        border: '2.5px solid var(--color-ink)',
+        boxShadow: disabled ? 'none' : '2px 2px 0 var(--color-ink)',
+        padding: '12px 14px',
+        opacity: disabled ? 0.5 : 1,
+        cursor: disabled ? 'not-allowed' : 'pointer',
+        fontFamily: '"Zen Maru Gothic", sans-serif',
+        fontWeight: 700,
+        fontSize: 15,
+        color: 'var(--color-ink)',
+      }}
     >
-      {icon && <span className="text-xl w-7 text-center shrink-0 leading-none">{icon}</span>}
-      <span className="flex-1 font-medium">{label}</span>
+      <span style={{ flex: 1 }}>{label}</span>
       {coming && (
-        <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 dark:bg-slate-800 text-slate-400 dark:text-slate-500">
-          即將推出
-        </span>
+        <span className="ptag" style={{ fontSize: 8, padding: '2px 5px' }}>即將推出</span>
       )}
       {badge !== undefined && (
-        <span className="text-sm tabular-nums text-slate-400 dark:text-slate-500">{badge}</span>
+        <span style={{
+          fontFamily: '"VT323", monospace',
+          fontSize: 18,
+          color: 'var(--color-ink-soft)',
+          lineHeight: 1,
+        }}>{badge}</span>
       )}
       {!disabled && (
-        <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 shrink-0 text-slate-300 dark:text-slate-600">
-          <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-        </svg>
+        <span style={{
+          fontFamily: '"Press Start 2P", monospace',
+          fontSize: 9,
+          color: 'var(--color-ink-soft)',
+        }}>→</span>
       )}
     </button>
   )
@@ -154,31 +155,39 @@ function DrillItem({
 
 // ── List screens ──────────────────────────────────────────────────────────────
 
+// Subject tiles — 2×2 pixel card grid
+const TILE_STYLE: Record<string, { bg: string; char: string; label: string }> = {
+  hiragana: { bg: 'var(--color-paper)',     char: 'あ', label: '平假名' },
+  katakana: { bg: 'var(--color-indigo-px-soft)', char: 'ア', label: '片假名' },
+  vocab:    { bg: 'var(--color-sakura-soft)', char: '語', label: '單字' },
+  grammar:  { bg: 'var(--color-matcha-soft)', char: '文', label: '文法' },
+}
+
 function SubjectScreen({
   onSelect,
 }: {
   onSelect: (s: 'hiragana' | 'katakana' | 'vocab' | 'grammar') => void
 }) {
-  const tiles = [
-    { id: 'hiragana', label: '平假名', icon: 'あ', cls: 'bg-indigo-50 dark:bg-indigo-950/40 border-indigo-200 dark:border-indigo-800 hover:bg-indigo-100 dark:hover:bg-indigo-900/50' },
-    { id: 'katakana', label: '片假名', icon: 'ア', cls: 'bg-violet-50 dark:bg-violet-950/40 border-violet-200 dark:border-violet-800 hover:bg-violet-100 dark:hover:bg-violet-900/50' },
-    { id: 'vocab',    label: '單字',   icon: '語', cls: 'bg-teal-50 dark:bg-teal-950/40 border-teal-200 dark:border-teal-800 hover:bg-teal-100 dark:hover:bg-teal-900/50' },
-    { id: 'grammar',  label: '文法',   icon: '文', cls: 'bg-orange-50 dark:bg-orange-950/40 border-orange-200 dark:border-orange-800 hover:bg-orange-100 dark:hover:bg-orange-900/50' },
-  ] as const
-
+  const ids = ['hiragana', 'katakana', 'vocab', 'grammar'] as const
   return (
     <div className="h-full overflow-y-auto">
-      <div className="grid grid-cols-2 gap-3">
-        {tiles.map(({ id, label, icon, cls }) => (
-          <button
-            key={id}
-            onClick={() => onSelect(id)}
-            className={`flex flex-col items-center justify-center gap-2 py-10 rounded-2xl border-2 transition-all active:scale-95 ${cls}`}
-          >
-            <span className="text-4xl leading-none">{icon}</span>
-            <span className="text-sm font-semibold text-slate-700 dark:text-slate-200">{label}</span>
-          </button>
-        ))}
+      <div className="px-topic-grid">
+        {ids.map(id => {
+          const t = TILE_STYLE[id]
+          return (
+            <div
+              key={id}
+              className="px-topic"
+              style={{ background: t.bg }}
+              onClick={() => onSelect(id)}
+            >
+              <span className="kana" style={{ fontSize: 36, lineHeight: 1, fontWeight: 900 }}>{t.char}</span>
+              <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, lineHeight: 1.4 }}>
+                {t.label}
+              </span>
+            </div>
+          )
+        })}
       </div>
     </div>
   )
@@ -192,10 +201,9 @@ function KanaRowsScreen({
   onSelect: (group: KanaGroup) => void
 }) {
   const typeChars = filterByType(kanaChars, kanaType)
-
   return (
     <div className="h-full overflow-y-auto">
-      <div className="space-y-2">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         {ALL_ROWS.map(({ label, group }) => {
           const count = filterByGroup(typeChars, group).length
           if (count === 0) return null
@@ -222,22 +230,59 @@ function LevelsScreen({
   onSelect: (l: JlptLevel) => void
 }) {
   const allCards = subject === 'vocab' ? vocabCards : grammarCards
-
+  const LEVEL_BG: Record<string, string> = {
+    N5: 'var(--color-matcha-soft)',
+    N4: 'var(--color-paper)',
+    N3: 'var(--color-sakura-soft)',
+    N2: 'var(--color-indigo-px-soft)',
+    N1: 'var(--color-cream)',
+  }
   return (
     <div className="h-full overflow-y-auto">
-      <div className="space-y-2">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         {JLPT_LEVELS.map((level) => {
           const count = allCards.filter(c => c.level === level).length
           const available = count > 0
           return (
-            <DrillItem
+            <button
               key={level}
-              label={level}
-              badge={available ? count : undefined}
               disabled={!available}
-              coming={!available}
               onClick={() => { if (available) onSelect(level) }}
-            />
+              className="pcard-tap"
+              style={{
+                background: available ? LEVEL_BG[level] : 'var(--color-cream-2)',
+                border: '2.5px solid var(--color-ink)',
+                boxShadow: available ? '2px 2px 0 var(--color-ink)' : 'none',
+                padding: '14px',
+                opacity: available ? 1 : 0.45,
+                cursor: available ? 'pointer' : 'not-allowed',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 12,
+                textAlign: 'left',
+              }}
+            >
+              <div style={{
+                width: 48, height: 48,
+                border: '3px solid var(--color-ink)',
+                background: 'var(--color-paper)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontFamily: '"Press Start 2P", monospace',
+                fontSize: 12,
+                color: 'var(--color-ink)',
+                flexShrink: 0,
+              }}>{level}</div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, lineHeight: 1.4 }}>
+                  {level} {level === 'N5' ? '· 入門' : level === 'N4' ? '· 初級' : level === 'N3' ? '· 中級' : level === 'N2' ? '· 中高' : '· 高級'}
+                </div>
+                {available
+                  ? <div style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)', marginTop: 2 }}>{count} 個</div>
+                  : <div style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-faint)', marginTop: 2 }}>即將推出</div>
+                }
+              </div>
+              {available && <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, color: 'var(--color-ink-soft)' }}>→</span>}
+            </button>
           )
         })}
       </div>
@@ -253,16 +298,13 @@ function VocabCategoriesScreen({
   onSelect: (catId: string) => void
 }) {
   const levelCards = vocabCards.filter(c => c.level === level)
-
   return (
     <div className="h-full overflow-y-auto">
-      <div className="space-y-2">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         {VOCAB_CATS.map(({ id, label, tags, pos }) => {
           const count = filterVocabCat(levelCards, tags, pos).length
           if (count === 0) return null
-          return (
-            <DrillItem key={id} label={label} badge={count} onClick={() => onSelect(id)} />
-          )
+          return <DrillItem key={id} label={label} badge={count} onClick={() => onSelect(id)} />
         })}
       </div>
     </div>
@@ -277,18 +319,15 @@ function GrammarCategoriesScreen({
   onSelect: (catId: string) => void
 }) {
   const levelCards = grammarCards.filter(c => c.level === level)
-
   return (
     <div className="h-full overflow-y-auto">
-      <div className="space-y-2">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
         {GRAMMAR_CATS.map(({ id, label, tags }) => {
           const count = tags === null
             ? levelCards.length
             : levelCards.filter(c => c.tags.some(t => tags.includes(t))).length
           if (count === 0) return null
-          return (
-            <DrillItem key={id} label={label} badge={count} onClick={() => onSelect(id)} />
-          )
+          return <DrillItem key={id} label={label} badge={count} onClick={() => onSelect(id)} />
         })}
       </div>
     </div>
@@ -297,46 +336,48 @@ function GrammarCategoriesScreen({
 
 // ── Content screens ───────────────────────────────────────────────────────────
 
-function KanaRowContent({
-  kanaType, group, allChars,
-}: {
-  kanaType: KanaType
-  group: KanaGroup
-  allChars: KanaChar[]
+function KanaRowContent({ kanaType, group, allChars }: {
+  kanaType: KanaType; group: KanaGroup; allChars: KanaChar[]
 }) {
   const chars = useMemo(
     () => filterByGroup(filterByType(allChars, kanaType), group).sort((a, b) => a.order - b.order),
     [allChars, kanaType, group],
   )
-
   return (
     <div className="h-full overflow-y-auto pb-4">
-      <div className="space-y-3">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
         {chars.map(char => (
           <div
             key={char.id}
-            className="rounded-2xl border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 shadow-sm overflow-hidden"
+            className="pcard"
+            style={{ padding: 0, overflow: 'hidden' }}
           >
             {/* 假名 + 羅馬拼音 */}
-            <div className="flex items-center gap-4 px-5 pt-4 pb-3">
-              <span className="text-5xl leading-none font-light tracking-tight text-slate-900 dark:text-slate-100 w-14 text-center shrink-0">
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '14px 16px 10px' }}>
+              <span className="kana" style={{ fontSize: 52, lineHeight: 1, width: 60, textAlign: 'center', flexShrink: 0 }}>
                 {char.kana}
               </span>
-              <span className="text-lg text-slate-400 dark:text-slate-500 font-mono">{char.romaji}</span>
+              <span style={{ fontFamily: '"VT323", monospace', fontSize: 22, color: 'var(--color-ink-soft)' }}>
+                {char.romaji}
+              </span>
             </div>
-
-            {/* 代表單字 + 例句 */}
             {char.word && (
-              <div className="border-t border-slate-100 dark:border-slate-800 px-5 py-3 space-y-1.5">
-                <div className="flex items-baseline gap-2">
-                  <span className="text-base font-semibold text-slate-800 dark:text-slate-200">{char.word.word}</span>
+              <div style={{
+                borderTop: '2px dashed var(--color-ink-faint)',
+                padding: '10px 16px 12px',
+                display: 'flex', flexDirection: 'column', gap: 4,
+              }}>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
+                  <span className="kana" style={{ fontSize: 17, fontWeight: 900 }}>{char.word.word}</span>
                   {char.word.word !== char.word.reading && (
-                    <span className="text-sm text-slate-400 dark:text-slate-500">（{char.word.reading}）</span>
+                    <span style={{ fontSize: 13, color: 'var(--color-ink-soft)' }}>（{char.word.reading}）</span>
                   )}
-                  <span className="text-sm text-indigo-600 dark:text-indigo-400 ml-auto shrink-0">{char.word.meaning}</span>
+                  <span style={{ fontSize: 13, color: 'var(--color-matcha-dark)', marginLeft: 'auto', flexShrink: 0 }}>
+                    {char.word.meaning}
+                  </span>
                 </div>
-                <p className="text-sm text-slate-600 dark:text-slate-400">{char.word.sentence}</p>
-                <p className="text-xs text-slate-400 dark:text-slate-500">{char.word.sentence_meaning}</p>
+                <p style={{ fontSize: 13, color: 'var(--color-ink-soft)', margin: 0 }}>{char.word.sentence}</p>
+                <p style={{ fontSize: 11, color: 'var(--color-ink-faint)', margin: 0 }}>{char.word.sentence_meaning}</p>
               </div>
             )}
           </div>
@@ -346,52 +387,42 @@ function KanaRowContent({
   )
 }
 
-function VocabCategoryContent({
-  level, catId, allCards,
-}: {
-  level: JlptLevel
-  catId: string
-  allCards: VocabCard[]
+function VocabCategoryContent({ level, catId, allCards }: {
+  level: JlptLevel; catId: string; allCards: VocabCard[]
 }) {
   const cat = VOCAB_CATS.find(c => c.id === catId)!
   const cards = useMemo(() => {
     const byLevel = allCards.filter(c => c.level === level)
     return filterVocabCat(byLevel, cat.tags, cat.pos)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allCards, level, catId])
-
   return (
     <div className="h-full flex flex-col">
       <div className="flex-1 min-h-0">
         {cards.length > 0
           ? <VocabStudy cards={cards} />
-          : <p className="text-sm text-slate-500">此分類暫無資料。</p>
+          : <p style={{ color: 'var(--color-ink-soft)', fontSize: 14 }}>此分類暫無資料。</p>
         }
       </div>
     </div>
   )
 }
 
-function GrammarCategoryContent({
-  level, catId, allCards,
-}: {
-  level: JlptLevel
-  catId: string
-  allCards: GrammarCard[]
+function GrammarCategoryContent({ level, catId, allCards }: {
+  level: JlptLevel; catId: string; allCards: GrammarCard[]
 }) {
   const cat = GRAMMAR_CATS.find(c => c.id === catId)!
   const cards = useMemo(() => {
     const byLevel = allCards.filter(c => c.level === level)
     return cat.tags === null ? byLevel : byLevel.filter(c => c.tags.some(t => cat.tags!.includes(t)))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [allCards, level, catId])
-
   return (
     <div className="h-full flex flex-col">
       <div className="flex-1 min-h-0">
         {cards.length > 0
           ? <GrammarStudy cards={cards} />
-          : <p className="text-sm text-slate-500">此分類暫無資料。</p>
+          : <p style={{ color: 'var(--color-ink-soft)', fontSize: 14 }}>此分類暫無資料。</p>
         }
       </div>
     </div>
@@ -400,7 +431,7 @@ function GrammarCategoryContent({
 
 // ── Page ──────────────────────────────────────────────────────────────────────
 
-export default function LearnPageV2() {
+export default function LearnPage() {
   const [kanaChars,    setKanaChars]    = useState<KanaChar[]>([])
   const [vocabCards,   setVocabCards]   = useState<VocabCard[]>([])
   const [grammarCards, setGrammarCards] = useState<GrammarCard[]>([])
@@ -425,9 +456,7 @@ export default function LearnPageV2() {
     const { subject, sub, catId } = nav
 
     if (!subject) {
-      return (
-        <SubjectScreen onSelect={(s) => setNav({ subject: s, sub: null, catId: null })} />
-      )
+      return <SubjectScreen onSelect={(s) => setNav({ subject: s, sub: null, catId: null })} />
     }
 
     if (subject === 'hiragana' || subject === 'katakana') {
@@ -440,16 +469,9 @@ export default function LearnPageV2() {
           />
         )
       }
-      return (
-        <KanaRowContent
-          kanaType={subject}
-          group={sub as KanaGroup}
-          allChars={kanaChars}
-        />
-      )
+      return <KanaRowContent kanaType={subject} group={sub as KanaGroup} allChars={kanaChars} />
     }
 
-    // vocab or grammar
     if (!sub) {
       return (
         <LevelsScreen
@@ -471,13 +493,7 @@ export default function LearnPageV2() {
           />
         )
       }
-      return (
-        <VocabCategoryContent
-          level={sub as JlptLevel}
-          catId={catId}
-          allCards={vocabCards}
-        />
-      )
+      return <VocabCategoryContent level={sub as JlptLevel} catId={catId} allCards={vocabCards} />
     }
 
     // grammar
@@ -490,38 +506,59 @@ export default function LearnPageV2() {
         />
       )
     }
-    return (
-      <GrammarCategoryContent
-        level={sub as JlptLevel}
-        catId={catId}
-        allCards={grammarCards}
-      />
-    )
+    return <GrammarCategoryContent level={sub as JlptLevel} catId={catId} allCards={grammarCards} />
   }
 
   return (
-    <div className="h-full flex flex-col pb-16 md:pb-0">
-      {/* 頁首：麵包屑 + 右上返回 */}
-      <div className="shrink-0 pt-4 pb-3 flex items-center gap-2">
-        <h1 className="flex-1 min-w-0 text-base font-semibold tracking-tight truncate text-slate-900 dark:text-slate-100">
-          {breadcrumb.join(' - ')}
-        </h1>
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+      {/* 頁首 */}
+      <div style={{
+        flexShrink: 0,
+        padding: '14px 16px 10px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: 8,
+      }}>
+        <span style={{
+          fontFamily: '"Press Start 2P", monospace',
+          fontSize: 11,
+          lineHeight: 1.4,
+          color: 'var(--color-ink)',
+          flexShrink: 0,
+        }}>
+          學習
+        </span>
+        {breadcrumb.length > 1 && (
+          <span style={{
+            flex: 1,
+            fontFamily: '"Press Start 2P", monospace',
+            fontSize: 9,
+            lineHeight: 1.4,
+            color: 'var(--color-ink-soft)',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+          }}>
+            {breadcrumb.slice(1).join(' › ')}
+          </span>
+        )}
+        {!breadcrumb.length || breadcrumb.length <= 1 ? <span style={{ flex: 1 }} /> : null}
         {canGoBack && (
           <button
             onClick={back}
-            className="shrink-0 flex items-center gap-1 text-sm text-indigo-600 dark:text-indigo-400"
+            className="pbtn pbtn-ghost"
+            style={{ padding: '4px 10px', fontSize: 13, flexShrink: 0 }}
           >
-            <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-              <path fillRule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clipRule="evenodd" />
-            </svg>
-            返回
+            ← 返回
           </button>
         )}
       </div>
 
-      {error && <p className="shrink-0 text-sm text-red-500 pb-2">{error}</p>}
+      {error && (
+        <p style={{ color: '#c8633a', fontSize: 13, padding: '0 16px 8px', flexShrink: 0 }}>{error}</p>
+      )}
 
-      <div className="flex-1 min-h-0">
+      <div style={{ flex: 1, minHeight: 0, padding: '0 16px 8px' }}>
         {renderScreen()}
       </div>
     </div>

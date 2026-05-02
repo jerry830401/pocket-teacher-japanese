@@ -30,19 +30,12 @@ export default function KanaTable({ chars, showRomaji }: Props) {
   const dakutenGrid = buildGrid(chars, DAKUTEN_ROW_ORDER)
 
   return (
-    <div className="space-y-10">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
       <Section title="清音" grid={mainGrid} showRomaji={showRomaji} />
       <Section title="濁音・半濁音" grid={dakutenGrid} showRomaji={showRomaji} />
     </div>
   )
 }
-
-// 響應式尺寸常數，集中在一處方便調整
-// 手機：格子 44px，標籤 32px，gap 8px → 總寬 32+5×44+5×8 = 292px < 343px ✓
-// 桌機：格子 56px，標籤 48px，gap 12px → 總寬 48+5×56+5×12 = 388px
-const CELL = 'w-11 h-11 md:w-14 md:h-14'
-const LABEL = 'w-8 md:w-12'
-const GAP = 'gap-2 md:gap-3'
 
 function Section({
   title,
@@ -54,21 +47,35 @@ function Section({
   showRomaji: boolean
 }) {
   return (
-    <div className="space-y-3">
-      <h3 className="text-xs font-semibold tracking-widest text-slate-400 dark:text-slate-500 uppercase">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+      <span style={{
+        fontFamily: '"Press Start 2P", monospace',
+        fontSize: 9,
+        color: 'var(--color-ink-soft)',
+        letterSpacing: '0.15em',
+      }}>
         {title}
-      </h3>
+      </span>
 
-      {/* overflow-x-auto 保險；w-fit mx-auto 讓表格置中 */}
-      <div className="overflow-x-auto pb-1">
-        <div className="w-fit mx-auto">
-          {/* 欄首（a i u e o）*/}
-          <div className={`flex items-center ${GAP} mb-1`}>
-            <span className={`${LABEL} shrink-0`} />
+      <div style={{ overflowX: 'auto', paddingBottom: 4 }}>
+        <div style={{ width: 'fit-content', margin: '0 auto' }}>
+          {/* 欄首 */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginBottom: 4 }}>
+            <span style={{ width: 32, flexShrink: 0 }} />
             {VOWEL_ORDER.map((v) => (
               <span
                 key={v}
-                className={`${CELL} shrink-0 flex items-center justify-center text-xs font-medium text-slate-400 dark:text-slate-500`}
+                style={{
+                  width: 48,
+                  height: 48,
+                  flexShrink: 0,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontFamily: '"VT323", monospace',
+                  fontSize: 16,
+                  color: 'var(--color-ink-soft)',
+                }}
               >
                 {v}
               </span>
@@ -76,10 +83,18 @@ function Section({
           </div>
 
           {/* 每一行 */}
-          <div className="space-y-2 md:space-y-2.5">
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 6 }}>
             {grid.map(({ label, cells, single }) => (
-              <div key={label} className={`flex items-center ${GAP}`}>
-                <span className={`${LABEL} shrink-0 text-right text-[11px] md:text-xs text-slate-400 dark:text-slate-500 pr-0.5`}>
+              <div key={label} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+                <span style={{
+                  width: 32,
+                  flexShrink: 0,
+                  textAlign: 'right',
+                  fontFamily: '"VT323", monospace',
+                  fontSize: 13,
+                  color: 'var(--color-ink-soft)',
+                  paddingRight: 2,
+                }}>
                   {label}
                 </span>
                 {single ? (
@@ -100,14 +115,32 @@ function Section({
 
 function KanaCell({ char, showRomaji }: { char: KanaChar | null; showRomaji: boolean }) {
   if (!char) {
-    return <span className={`${CELL} shrink-0`} />
+    return <span style={{ width: 48, height: 48, flexShrink: 0 }} />
   }
 
   return (
-    <div className={`${CELL} shrink-0 flex flex-col items-center justify-center rounded-xl border border-slate-200 dark:border-slate-700 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-indigo-50 dark:hover:bg-indigo-950 transition-colors cursor-default select-none`}>
-      <span className="text-lg md:text-xl leading-none">{char.kana}</span>
+    <div style={{
+      width: 48,
+      height: 48,
+      flexShrink: 0,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      justifyContent: 'center',
+      border: '2px solid var(--color-ink)',
+      background: 'var(--color-paper)',
+      cursor: 'default',
+      userSelect: 'none',
+      transition: 'background 0.1s',
+    }}
+      onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-indigo-px-soft)')}
+      onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--color-paper)')}
+    >
+      <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 18, lineHeight: 1 }}>
+        {char.kana}
+      </span>
       {showRomaji && (
-        <span className="text-[9px] md:text-[10px] text-slate-400 dark:text-slate-500 mt-0.5">
+        <span style={{ fontFamily: '"VT323", monospace', fontSize: 12, color: 'var(--color-ink-soft)', marginTop: 1 }}>
           {char.romaji}
         </span>
       )}

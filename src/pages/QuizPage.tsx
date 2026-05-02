@@ -16,7 +16,7 @@ import { useSettings } from '@/stores/useSettings'
 type JlptLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
 const LEVELS: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
 
-// ── navigation stack ─────────────────────────────────────────────────────────
+// ── Navigation stack ──────────────────────────────────────────────────────────
 
 type Screen =
   | { id: 'home' }
@@ -33,20 +33,20 @@ type Screen =
 function getBreadcrumb(stack: Screen[]): string[] {
   const parts = ['測驗']
   for (const s of stack.slice(1)) {
-    if (s.id === 'kana-type')       parts.push('五十音')
-    else if (s.id === 'kana-mode')  parts.push(s.kanaType === 'hiragana' ? '平假名' : '片假名')
-    else if (s.id === 'kana-quiz')  parts.push(s.quizMode === 'kana→romaji' ? '看假名選讀音' : '看讀音選假名')
-    else if (s.id === 'vocab-level')    parts.push('單字')
-    else if (s.id === 'vocab-quiz')     parts.push(s.level)
-    else if (s.id === 'grammar-level')  parts.push('文法')
-    else if (s.id === 'grammar-quiz')   parts.push(s.level)
+    if (s.id === 'kana-type')            parts.push('五十音')
+    else if (s.id === 'kana-mode')       parts.push(s.kanaType === 'hiragana' ? '平假名' : '片假名')
+    else if (s.id === 'kana-quiz')       parts.push(s.quizMode === 'kana→romaji' ? '看假名選讀音' : '看讀音選假名')
+    else if (s.id === 'vocab-level')     parts.push('單字')
+    else if (s.id === 'vocab-quiz')      parts.push(s.level)
+    else if (s.id === 'grammar-level')   parts.push('文法')
+    else if (s.id === 'grammar-quiz')    parts.push(s.level)
     else if (s.id === 'listening-level') parts.push('聽力')
     else if (s.id === 'listening-quiz')  parts.push(s.level)
   }
   return parts
 }
 
-// ── slide animation wrapper ───────────────────────────────────────────────────
+// ── Slide animation wrapper ───────────────────────────────────────────────────
 
 function SlideScreen({ children, dir }: { children: React.ReactNode; dir: 'forward' | 'back' }) {
   const ref = useRef<HTMLDivElement>(null)
@@ -54,10 +54,10 @@ function SlideScreen({ children, dir }: { children: React.ReactNode; dir: 'forwa
     const el = ref.current
     if (!el) return
     const from = dir === 'forward' ? 'translateX(40px)' : 'translateX(-40px)'
-    el.animate([
-      { opacity: 0, transform: from },
-      { opacity: 1, transform: 'translateX(0)' },
-    ], { duration: 260, easing: 'cubic-bezier(0.22,1,0.36,1)', fill: 'both' })
+    el.animate(
+      [{ opacity: 0, transform: from }, { opacity: 1, transform: 'translateX(0)' }],
+      { duration: 260, easing: 'cubic-bezier(0.22,1,0.36,1)', fill: 'both' },
+    )
   }, [dir])
   return (
     <div ref={ref} className="h-full flex flex-col">
@@ -66,54 +66,60 @@ function SlideScreen({ children, dir }: { children: React.ReactNode; dir: 'forwa
   )
 }
 
-// ── option button ─────────────────────────────────────────────────────────────
+// ── Pixel option button ───────────────────────────────────────────────────────
 
 function OptionButton({
-  label, sub, onClick, accent = 'indigo',
+  label, sub, onClick, bg = 'var(--color-paper)',
 }: {
   label: string
   sub?: string
   onClick: () => void
-  accent?: 'indigo' | 'teal' | 'orange'
+  bg?: string
 }) {
-  const border = {
-    indigo: 'border-indigo-200 dark:border-indigo-800 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-indigo-50 dark:hover:bg-indigo-950',
-    teal:   'border-teal-200 dark:border-teal-800 hover:border-teal-400 dark:hover:border-teal-500 hover:bg-teal-50 dark:hover:bg-teal-950',
-    orange: 'border-orange-200 dark:border-orange-800 hover:border-orange-400 dark:hover:border-orange-500 hover:bg-orange-50 dark:hover:bg-orange-950',
-  }[accent]
   return (
     <button
       onClick={onClick}
-      className={`w-full flex items-center justify-between px-4 py-3.5 rounded-2xl border-2 transition-colors ${border}`}
+      className="pcard-tap"
+      style={{
+        width: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        gap: 12,
+        background: bg,
+        border: '2.5px solid var(--color-ink)',
+        boxShadow: '2px 2px 0 var(--color-ink)',
+        padding: '14px',
+        textAlign: 'left',
+        cursor: 'pointer',
+      }}
     >
-      <span className="font-medium text-slate-800 dark:text-slate-100">{label}</span>
-      <div className="flex items-center gap-2">
-        {sub && <span className="text-xs text-slate-400">{sub}</span>}
-        <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-slate-400">
-          <path fillRule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clipRule="evenodd" />
-        </svg>
+      <div style={{ flex: 1 }}>
+        <div style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 16 }}>{label}</div>
+        {sub && <div style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)', marginTop: 1 }}>{sub}</div>}
       </div>
+      <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, color: 'var(--color-ink-soft)' }}>→</span>
     </button>
   )
 }
 
-// ── level grid ────────────────────────────────────────────────────────────────
+// ── Level grid (pixel cards) ──────────────────────────────────────────────────
+
+const LEVEL_BG: Record<string, string> = {
+  N5: 'var(--color-matcha-soft)',
+  N4: 'var(--color-paper)',
+  N3: 'var(--color-sakura-soft)',
+  N2: 'var(--color-indigo-px-soft)',
+  N1: 'var(--color-cream)',
+}
 
 function LevelGrid({
-  allCards, onSelect, color,
+  allCards, onSelect,
 }: {
   allCards: { level: string }[]
   onSelect: (l: JlptLevel) => void
-  color: 'indigo' | 'teal' | 'orange'
 }) {
-  const hoverActive = {
-    indigo: 'hover:border-indigo-400 hover:bg-indigo-50 dark:hover:border-indigo-500 dark:hover:bg-indigo-950',
-    teal:   'hover:border-teal-400 hover:bg-teal-50 dark:hover:border-teal-500 dark:hover:bg-teal-950',
-    orange: 'hover:border-orange-400 hover:bg-orange-50 dark:hover:border-orange-500 dark:hover:bg-orange-950',
-  }[color]
-
   return (
-    <div className="flex flex-col gap-2.5">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
       {LEVELS.map((l) => {
         const count = allCards.filter((c) => c.level === l).length
         const available = count > 0
@@ -122,20 +128,37 @@ function LevelGrid({
             key={l}
             onClick={() => available && onSelect(l)}
             disabled={!available}
-            className={[
-              'w-full flex items-center justify-between px-4 py-3.5 rounded-2xl border-2 transition-colors',
-              available
-                ? `border-slate-200 dark:border-slate-700 ${hoverActive}`
-                : 'border-slate-100 dark:border-slate-800 opacity-40 cursor-not-allowed',
-            ].join(' ')}
+            className={available ? 'pcard-tap' : ''}
+            style={{
+              background: available ? LEVEL_BG[l] : 'var(--color-cream-2)',
+              border: '2.5px solid var(--color-ink)',
+              boxShadow: available ? '2px 2px 0 var(--color-ink)' : 'none',
+              padding: '14px',
+              opacity: available ? 1 : 0.45,
+              cursor: available ? 'pointer' : 'not-allowed',
+              display: 'flex',
+              alignItems: 'center',
+              gap: 12,
+              textAlign: 'left',
+            }}
           >
-            <span className="font-medium">{l}</span>
-            <div className="flex items-center gap-2">
-              {available && <span className="text-xs text-slate-400">{count} 題</span>}
-              <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-slate-400">
-                <path fillRule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638L10.23 5.29a.75.75 0 1 1 1.04-1.08l5.5 5.25a.75.75 0 0 1 0 1.08l-5.5 5.25a.75.75 0 1 1-1.04-1.08l4.158-3.96H3.75A.75.75 0 0 1 3 10Z" clipRule="evenodd" />
-              </svg>
+            <div style={{
+              width: 44, height: 44,
+              border: '3px solid var(--color-ink)',
+              background: 'var(--color-paper)',
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              fontFamily: '"Press Start 2P", monospace',
+              fontSize: 11,
+              flexShrink: 0,
+            }}>{l}</div>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 15 }}>{l}</div>
+              {available
+                ? <div style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>{count} 題</div>
+                : <div style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-faint)' }}>即將推出</div>
+              }
             </div>
+            {available && <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, color: 'var(--color-ink-soft)' }}>→</span>}
           </button>
         )
       })}
@@ -143,25 +166,22 @@ function LevelGrid({
   )
 }
 
-// ── quiz screens (no back button inside) ─────────────────────────────────────
+// ── Quiz screens ──────────────────────────────────────────────────────────────
 
 function KanaQuizScreen({ kanaType, quizMode }: { kanaType: KanaType; quizMode: 'kana→romaji' | 'romaji→kana' }) {
   const [chars, setChars] = useState<KanaChar[]>([])
   const [error, setError] = useState<string | null>(null)
-
   useEffect(() => {
     loadKana().then(setChars).catch(() => setError('資料載入失敗，請重新整理頁面'))
   }, [])
-
   const filtered = filterByType(chars, kanaType).filter((c) => c.group !== 'combo')
-
   return (
     <SlideScreen dir="forward">
       <div className="flex-1 min-h-0">
         {error
-          ? <p className="text-red-500 text-sm">{error}</p>
+          ? <p style={{ color: '#c8633a', fontSize: 13 }}>{error}</p>
           : chars.length === 0
-            ? <p className="text-slate-400">載入中⋯</p>
+            ? <p style={{ color: 'var(--color-ink-soft)', fontSize: 14 }}>載入中⋯</p>
             : <FlashCardQuiz chars={filtered} mode={quizMode} />
         }
       </div>
@@ -173,15 +193,13 @@ function VocabQuizScreen({ level, allCards }: { level: JlptLevel; allCards: Voca
   const roundSize = useSettings((s) => s.roundSizeVocab)
   const [seenCards, setSeenCards] = useState<VocabCard[] | null>(null)
   const levelCards = filterVocab(allCards, level)
-
   useEffect(() => {
     const ids$ = levelCards.length === 0
       ? Promise.resolve(new Set<string>())
       : getSeenIds(levelCards.map((c) => c.id))
     ids$.then((ids) => setSeenCards(levelCards.filter((c) => ids.has(c.id))))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, allCards])
-
   return (
     <SlideScreen dir="forward">
       <div className="flex-1 min-h-0">
@@ -200,15 +218,13 @@ function GrammarQuizScreen({ level, allCards }: { level: JlptLevel; allCards: Gr
   const roundSize = useSettings((s) => s.roundSizeGrammar)
   const [seenCards, setSeenCards] = useState<GrammarCard[] | null>(null)
   const levelCards = filterGrammar(allCards, level)
-
   useEffect(() => {
     const ids$ = levelCards.length === 0
       ? Promise.resolve(new Set<string>())
       : getSeenIds(levelCards.map((c) => c.id))
     ids$.then((ids) => setSeenCards(levelCards.filter((c) => ids.has(c.id))))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, allCards])
-
   return (
     <SlideScreen dir="forward">
       <div className="flex-1 min-h-0">
@@ -227,15 +243,13 @@ function ListeningQuizScreen({ level, allCards }: { level: JlptLevel; allCards: 
   const roundSize = useSettings((s) => s.roundSizeListening)
   const [seenCards, setSeenCards] = useState<VocabCard[] | null>(null)
   const levelCards = filterVocab(allCards, level)
-
   useEffect(() => {
     const ids$ = levelCards.length === 0
       ? Promise.resolve(new Set<string>())
       : getSeenIds(levelCards.map((c) => c.id))
     ids$.then((ids) => setSeenCards(levelCards.filter((c) => ids.has(c.id))))
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, allCards])
-
   return (
     <SlideScreen dir="forward">
       <div className="flex-1 min-h-0">
@@ -252,14 +266,29 @@ function ListeningQuizScreen({ level, allCards }: { level: JlptLevel; allCards: 
 
 function NotStudied({ level, needed }: { level: JlptLevel; needed: number }) {
   return (
-    <div className="rounded-lg border border-dashed border-slate-300 dark:border-slate-700 p-6 text-sm text-slate-500 space-y-1">
-      <p>{level} 尚未學習足夠題目（至少需看過 {needed} 張卡片）。</p>
-      <p>請先前往「學習」頁面瀏覽卡片，再回來測驗。</p>
+    <div className="pcard" style={{ background: 'var(--color-sakura-soft)' }}>
+      <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, lineHeight: 1.6, marginBottom: 8 }}>
+        尚未學習足夠題目
+      </div>
+      <p style={{ fontSize: 14, margin: 0, color: 'var(--color-ink-soft)' }}>
+        {level} 至少需看過 {needed} 張卡片。請先前往「學習」頁面瀏覽，再回來測驗。
+      </p>
     </div>
   )
 }
 
-// ── main page ─────────────────────────────────────────────────────────────────
+// ── Home screen option cards ──────────────────────────────────────────────────
+
+const HOME_OPTIONS: Array<{
+  label: string; sub: string; bg: string; screen: string; ttsOnly?: boolean
+}> = [
+  { label: '五十音', sub: '假名練習', bg: 'var(--color-paper)',           screen: 'kana-type'       },
+  { label: '單字',   sub: 'JLPT 詞彙', bg: 'var(--color-sakura-soft)',   screen: 'vocab-level'     },
+  { label: '文法',   sub: '填空選擇', bg: 'var(--color-matcha-soft)',    screen: 'grammar-level'   },
+  { label: '聽力',   sub: '聽音選字', bg: 'var(--color-indigo-px-soft)', screen: 'listening-level', ttsOnly: true },
+]
+
+// ── Main page ─────────────────────────────────────────────────────────────────
 
 export default function QuizPage() {
   const [stack, setStack] = useState<Screen[]>([{ id: 'home' }])
@@ -291,64 +320,86 @@ export default function QuizPage() {
   }
 
   return (
-    <div className="h-full flex flex-col pb-16 md:pb-0">
-      {/* 頁首：麵包屑 + 右上返回（與學習頁相同結構） */}
-      <div className="shrink-0 pt-4 pb-3 flex items-center gap-2">
-        <h1 className="flex-1 min-w-0 text-base font-semibold tracking-tight truncate text-slate-900 dark:text-slate-100">
-          {breadcrumb.join(' - ')}
-        </h1>
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+      {/* 頁首 */}
+      <div style={{
+        flexShrink: 0,
+        padding: '14px 16px 10px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: 8,
+      }}>
+        <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 11, lineHeight: 1.4, flexShrink: 0 }}>
+          測驗
+        </span>
+        {breadcrumb.length > 1 && (
+          <span style={{
+            flex: 1,
+            fontFamily: '"Press Start 2P", monospace',
+            fontSize: 9,
+            lineHeight: 1.4,
+            color: 'var(--color-ink-soft)',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap',
+          }}>
+            {breadcrumb.slice(1).join(' › ')}
+          </span>
+        )}
+        {!breadcrumb.length || breadcrumb.length <= 1 ? <span style={{ flex: 1 }} /> : null}
         {canGoBack && (
-          <button
-            onClick={pop}
-            className="shrink-0 flex items-center gap-1 text-sm text-indigo-600 dark:text-indigo-400"
-          >
-            <svg viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-              <path fillRule="evenodd" d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10Z" clipRule="evenodd" />
-            </svg>
-            返回
+          <button className="pbtn pbtn-ghost" style={{ padding: '4px 10px', fontSize: 13, flexShrink: 0 }} onClick={pop}>
+            ← 返回
           </button>
         )}
       </div>
 
-      {dataError && <p className="shrink-0 text-red-500 text-sm pb-2">{dataError}</p>}
+      {dataError && (
+        <p style={{ color: '#c8633a', fontSize: 13, padding: '0 16px 8px', flexShrink: 0 }}>{dataError}</p>
+      )}
 
-      <div className="flex-1 min-h-0 overflow-hidden">
+      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', padding: '0 16px 8px' }}>
         {current.id === 'home' && (
           <SlideScreen key="home" dir={dir}>
-            <div className="flex flex-col gap-2.5">
-              <OptionButton label="五十音" sub="假名練習" onClick={() => push({ id: 'kana-type' })} accent="indigo" />
-              <OptionButton label="單字" sub="JLPT 詞彙" onClick={() => push({ id: 'vocab-level' })} accent="indigo" />
-              <OptionButton label="文法" sub="填空選擇" onClick={() => push({ id: 'grammar-level' })} accent="teal" />
-              {isSupported() && (
-                <OptionButton label="聽力" sub="聽音選字" onClick={() => push({ id: 'listening-level' })} accent="orange" />
-              )}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              {HOME_OPTIONS.map((opt) => {
+                if (opt.ttsOnly && !isSupported()) return null
+                return (
+                  <OptionButton
+                    key={opt.label}
+                    label={opt.label}
+                    sub={opt.sub}
+                    bg={opt.bg}
+                    onClick={() => push({ id: opt.screen } as Screen)}
+                  />
+                )
+              })}
             </div>
           </SlideScreen>
         )}
 
         {current.id === 'kana-type' && (
           <SlideScreen key="kana-type" dir={dir}>
-            <div className="flex flex-col gap-2.5">
-              <OptionButton label="平假名" sub="ひらがな" onClick={() => push({ id: 'kana-mode', kanaType: 'hiragana' })} accent="indigo" />
-              <OptionButton label="片假名" sub="カタカナ" onClick={() => push({ id: 'kana-mode', kanaType: 'katakana' })} accent="indigo" />
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+              <OptionButton label="平假名" sub="ひらがな" onClick={() => push({ id: 'kana-mode', kanaType: 'hiragana' })} />
+              <OptionButton label="片假名" sub="カタカナ" onClick={() => push({ id: 'kana-mode', kanaType: 'katakana' })} bg="var(--color-indigo-px-soft)" />
             </div>
           </SlideScreen>
         )}
 
         {current.id === 'kana-mode' && (
           <SlideScreen key="kana-mode" dir={dir}>
-            <div className="flex flex-col gap-2.5">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
               <OptionButton
                 label="看假名選讀音"
                 sub="あ → a"
                 onClick={() => push({ id: 'kana-quiz', kanaType: current.kanaType, quizMode: 'kana→romaji' })}
-                accent="indigo"
               />
               <OptionButton
                 label="看讀音選假名"
                 sub="a → あ"
+                bg="var(--color-cream)"
                 onClick={() => push({ id: 'kana-quiz', kanaType: current.kanaType, quizMode: 'romaji→kana' })}
-                accent="indigo"
               />
             </div>
           </SlideScreen>
@@ -364,7 +415,7 @@ export default function QuizPage() {
 
         {current.id === 'vocab-level' && (
           <SlideScreen key="vocab-level" dir={dir}>
-            <LevelGrid allCards={vocabCards} onSelect={(l) => push({ id: 'vocab-quiz', level: l })} color="indigo" />
+            <LevelGrid allCards={vocabCards} onSelect={(l) => push({ id: 'vocab-quiz', level: l })} />
           </SlideScreen>
         )}
 
@@ -374,7 +425,7 @@ export default function QuizPage() {
 
         {current.id === 'grammar-level' && (
           <SlideScreen key="grammar-level" dir={dir}>
-            <LevelGrid allCards={grammarCards} onSelect={(l) => push({ id: 'grammar-quiz', level: l })} color="teal" />
+            <LevelGrid allCards={grammarCards} onSelect={(l) => push({ id: 'grammar-quiz', level: l })} />
           </SlideScreen>
         )}
 
@@ -384,7 +435,7 @@ export default function QuizPage() {
 
         {current.id === 'listening-level' && (
           <SlideScreen key="listening-level" dir={dir}>
-            <LevelGrid allCards={vocabCards} onSelect={(l) => push({ id: 'listening-quiz', level: l })} color="orange" />
+            <LevelGrid allCards={vocabCards} onSelect={(l) => push({ id: 'listening-quiz', level: l })} />
           </SlideScreen>
         )}
 
