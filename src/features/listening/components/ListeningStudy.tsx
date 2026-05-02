@@ -49,11 +49,14 @@ export default function ListeningStudy({ cards }: { cards: VocabCard[] }) {
 
   if (batchDone) {
     return (
-      <div className="flex flex-col items-center gap-6 py-4">
-        <p className="text-slate-500 text-sm">已聆聽 {BATCH_SIZE} 個單字</p>
+      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
+        <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
+          已聆聽 {BATCH_SIZE} 個單字
+        </div>
         <button
+          className="pbtn pbtn-primary"
+          style={{ padding: '10px 24px', fontSize: '0.75rem' }}
           onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
-          className="px-8 py-2.5 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium transition-colors"
         >
           下一組（{BATCH_SIZE} 個）
         </button>
@@ -62,6 +65,7 @@ export default function ListeningStudy({ cards }: { cards: VocabCard[] }) {
   }
 
   const current = deck[index]
+  const progress = ((index + 1) / deck.length) * 100
 
   function play() {
     setTtsError(false)
@@ -74,53 +78,92 @@ export default function ListeningStudy({ cards }: { cards: VocabCard[] }) {
   }
 
   return (
-    <div className="flex flex-col items-center gap-6">
-      {/* 進度 */}
-      <div className="text-sm text-slate-500">第 {index + 1} / {deck.length} 張</div>
-
-      {/* 進度條 */}
-      <div className="w-full max-w-xs h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
-        <div
-          className="h-full rounded-full bg-orange-400 transition-all duration-300"
-          style={{ width: `${(index + 1) / deck.length * 100}%` }}
-        />
-      </div>
-
-      {/* 卡片 */}
-      <div className="w-full max-w-xs rounded-2xl border-2 border-orange-200 dark:border-orange-800 bg-orange-50 dark:bg-orange-950 px-6 py-6 flex items-center gap-4">
-        <button
-          onClick={play}
-          className="flex-none flex items-center justify-center w-12 h-12 rounded-full border border-orange-300 dark:border-orange-600 bg-white dark:bg-orange-900 text-orange-500 hover:bg-orange-100 dark:hover:bg-orange-800 transition-colors"
-          aria-label={`播放 ${current.payload.word}`}
-        >
-          <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-            <path d="M13.5 4.06c0-1.336-1.616-2.005-2.56-1.06l-4.5 4.5H4.508c-1.141 0-2.318.664-2.66 1.905A9.76 9.76 0 0 0 1.5 12c0 .898.121 1.768.35 2.595.341 1.24 1.518 1.905 2.659 1.905h1.93l4.5 4.5c.945.945 2.561.276 2.561-1.06V4.06ZM18.584 5.106a.75.75 0 0 1 1.06 0c3.808 3.807 3.808 9.98 0 13.788a.75.75 0 0 1-1.06-1.06 8.25 8.25 0 0 0 0-11.668.75.75 0 0 1 0-1.06Z" />
-            <path d="M15.932 7.757a.75.75 0 0 1 1.061 0 6 6 0 0 1 0 8.486.75.75 0 0 1-1.06-1.061 4.5 4.5 0 0 0 0-6.364.75.75 0 0 1 0-1.06Z" />
-          </svg>
-        </button>
-        <div className="min-w-0 space-y-1">
-          <p className="text-2xl font-medium">{current.payload.word}</p>
-          <p className="text-base text-orange-400 dark:text-orange-300">{current.payload.reading}</p>
-          <p className="text-sm text-slate-600 dark:text-slate-300">{current.payload.meaning}</p>
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
+      {/* 進度區 */}
+      <div style={{ flexShrink: 0 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
+            第 {index + 1} / {deck.length} 張
+          </span>
+        </div>
+        <div className="px-bar">
+          <span className="px-bar-fill" style={{ width: `${progress}%`, background: 'var(--color-gold)' }} />
         </div>
       </div>
 
-      {ttsError && <p className="text-red-500 text-sm">語音播放失敗，請再試一次</p>}
+      {/* 卡片 */}
+      <div style={{ flex: 1, minHeight: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="pcard" style={{
+          background: 'var(--color-gold-soft)',
+          width: '100%',
+          display: 'flex',
+          alignItems: 'center',
+          gap: 20,
+          padding: '28px 20px',
+        }}>
+          {/* 播放按鈕 */}
+          <div style={{ flexShrink: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}>
+            <button
+              onClick={play}
+              aria-label={`播放 ${current.payload.word}`}
+              style={{
+                width: 60,
+                height: 60,
+                border: '3px solid var(--color-ink)',
+                boxShadow: '3px 3px 0 var(--color-ink)',
+                background: 'var(--color-gold)',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '1.625rem',
+              }}
+            >
+              ▶
+            </button>
+            <span style={{
+              fontFamily: '"VT323", monospace',
+              fontSize: '0.875rem',
+              color: ttsError ? '#c8633a' : 'var(--color-ink-soft)',
+            }}>
+              {ttsError ? '播放失敗' : '點擊播放'}
+            </span>
+          </div>
+
+          {/* 分隔線 */}
+          <div style={{ alignSelf: 'stretch', width: 2, background: 'var(--color-ink)', opacity: 0.15 }} />
+
+          {/* 單字資訊 */}
+          <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 4 }}>
+            <span style={{ fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: '1.75rem' }}>
+              {current.payload.word}
+            </span>
+            <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.625rem', color: 'var(--color-ink-soft)' }}>
+              {current.payload.reading}
+            </span>
+            <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.8125rem', color: 'var(--color-ink-soft)' }}>
+              {current.payload.meaning}
+            </span>
+          </div>
+        </div>
+      </div>
 
       {/* 導覽按鈕 */}
-      <div className="flex items-center gap-3">
+      <div style={{ flexShrink: 0, display: 'flex', gap: 10 }}>
         <button
+          className="pbtn pbtn-ghost"
+          style={{ flex: 1, padding: '10px 0', fontSize: '0.8125rem' }}
           onClick={() => goTo(index - 1)}
           disabled={index === 0}
-          className="px-5 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
         >
           上一張
         </button>
         <button
+          className="pbtn pbtn-primary"
+          style={{ flex: 2, padding: '10px 0', fontSize: '0.8125rem' }}
           onClick={() => index + 1 >= deck.length ? dispatch({ type: 'DONE' }) : goTo(index + 1)}
-          className="px-6 py-2 rounded-lg bg-orange-500 hover:bg-orange-600 text-white text-sm font-medium transition-colors"
         >
-          {index + 1 >= deck.length ? '完成這組' : '下一張'}
+          {index + 1 >= deck.length ? '完成這組' : '下一張 →'}
         </button>
       </div>
     </div>

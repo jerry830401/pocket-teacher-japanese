@@ -58,11 +58,14 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
 
   if (batchDone) {
     return (
-      <div className="h-full flex flex-col items-center justify-center gap-4">
-        <p className="text-slate-500 text-sm">已瀏覽 {BATCH_SIZE} 個文法項目</p>
+      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
+        <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
+          已瀏覽 {BATCH_SIZE} 個文法項目
+        </div>
         <button
+          className="pbtn pbtn-primary"
+          style={{ padding: '10px 24px', fontSize: '0.75rem' }}
           onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
-          className="px-8 py-2.5 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium transition-colors"
         >
           下一組（{BATCH_SIZE} 個）
         </button>
@@ -72,51 +75,74 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
 
   const current = deck[index]
   const [before, after] = splitSentence(current.payload.sentence)
+  const progress = ((index + 1) / deck.length) * 100
 
   return (
-    <div className="h-full flex flex-col justify-between py-2">
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
       {/* 進度區 */}
-      <div className="shrink-0 space-y-2">
-        <div className="text-sm text-slate-500">第 {index + 1} / {deck.length} 張</div>
-        <div className="w-full h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
-          <div
-            className="h-full rounded-full bg-teal-500 transition-all duration-300"
-            style={{ width: `${(index + 1) / deck.length * 100}%` }}
-          />
+      <div style={{ flexShrink: 0 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
+            第 {index + 1} / {deck.length} 張
+          </span>
+        </div>
+        <div className="px-bar">
+          <span className="px-bar-fill" style={{ width: `${progress}%`, background: 'var(--color-matcha)' }} />
         </div>
       </div>
 
       {/* 卡片 */}
-      <div className="flex-1 min-h-0 flex items-center justify-center">
-        <div className="w-full max-w-sm rounded-2xl border-2 border-teal-200 dark:border-teal-800 bg-teal-50 dark:bg-teal-950 px-5 py-5 space-y-3">
-          <p className="text-base font-medium leading-relaxed">
+      <div style={{ flex: 1, minHeight: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div className="pcard" style={{
+          background: 'var(--color-matcha-soft)',
+          width: '100%',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 12,
+          padding: '28px 20px',
+        }}>
+          <p style={{ margin: 0, fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontSize: '1.0625rem', fontWeight: 600, lineHeight: 2 }}>
             {before}
-            <span className="inline-block min-w-10 mx-1 px-2 rounded border-b-2 border-teal-500 text-teal-600 dark:text-teal-300 text-center">
+            <span style={{
+              display: 'inline-block',
+              minWidth: 48,
+              marginInline: 4,
+              paddingInline: 6,
+              borderBottom: '2px solid var(--color-matcha)',
+              color: 'var(--color-matcha)',
+              textAlign: 'center',
+            }}>
               {current.payload.answer}
             </span>
             {after}
           </p>
-          <p className="text-sm text-teal-600 dark:text-teal-300">{current.payload.meaning}</p>
-          <p className="text-xs text-teal-400 dark:text-teal-500">{current.payload.grammar}</p>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.625rem', color: 'var(--color-matcha)' }}>
+            {current.payload.meaning}
+          </span>
+          <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.8125rem', color: 'var(--color-ink-soft)' }}>
+            {current.payload.grammar}
+          </span>
         </div>
       </div>
 
       {/* 導覽按鈕 */}
-      <div className="shrink-0 flex items-center justify-center gap-3 pb-4">
+      <div style={{ flexShrink: 0, display: 'flex', gap: 10 }}>
         <button
+          className="pbtn pbtn-ghost"
+          style={{ flex: 1, padding: '10px 0', fontSize: '0.8125rem' }}
           onClick={() => dispatch({ type: 'GO', index: index - 1 })}
           disabled={index === 0}
-          className="px-5 py-2 rounded-lg border border-slate-200 dark:border-slate-700 text-sm font-medium text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
         >
           上一張
         </button>
         <button
+          className="pbtn pbtn-primary"
+          style={{ flex: 2, padding: '10px 0', fontSize: '0.8125rem' }}
           onClick={() => index + 1 >= deck.length
             ? dispatch({ type: 'DONE' })
             : dispatch({ type: 'GO', index: index + 1 })}
-          className="px-6 py-2 rounded-lg bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium transition-colors"
         >
-          {index + 1 >= deck.length ? '完成這組' : '下一張'}
+          {index + 1 >= deck.length ? '完成這組' : '下一張 →'}
         </button>
       </div>
     </div>

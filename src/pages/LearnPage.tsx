@@ -1,207 +1,531 @@
-import { useState, useEffect } from 'react'
-import type { KanaChar, KanaType } from '@/features/kana/types'
+import { useState, useEffect, useMemo } from 'react'
+import type { KanaChar, KanaType, KanaGroup } from '@/features/kana/types'
 import type { VocabCard } from '@/features/vocabulary/types'
 import type { GrammarCard } from '@/features/grammar/types'
-import { loadKana, filterByType } from '@/features/kana/data'
-import { loadVocabulary, filterByLevel as filterVocab } from '@/features/vocabulary/data'
-import { loadGrammar, filterByLevel as filterGrammar } from '@/features/grammar/data'
-import { preloadVoices } from '@/lib/tts/tts'
-import KanaTable from '@/features/kana/components/KanaTable'
+import {
+  loadKana,
+  filterByType,
+  filterByGroup,
+  GOJUUON_ROW_ORDER,
+  DAKUTEN_ROW_ORDER,
+} from '@/features/kana/data'
+import { loadVocabulary } from '@/features/vocabulary/data'
+import { loadGrammar } from '@/features/grammar/data'
 import VocabStudy from '@/features/vocabulary/components/VocabStudy'
 import GrammarStudy from '@/features/grammar/components/GrammarStudy'
+import BreadcrumbHeader from '@/shared/BreadcrumbHeader'
 
-type Subject = 'kana' | 'vocab' | 'grammar'
 type JlptLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
-const LEVELS: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
+const JLPT_LEVELS: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
 
-const SUBJECTS: { id: Subject; label: string; icon: string }[] = [
-  { id: 'kana',    label: '五十音', icon: 'あ' },
-  { id: 'vocab',   label: '單字',   icon: '語' },
-  { id: 'grammar', label: '文法',   icon: '文' },
+// ── Category definitions ──────────────────────────────────────────────────────
+
+const VOCAB_CATS: Array<{ id: string; label: string; tags: string[] | null; pos: string[] | null }> = [
+  { id: 'all',        label: '全部',         tags: null,                                          pos: null },
+  { id: 'greeting',   label: '問候・表達',   tags: ['greeting', 'question'],                      pos: null },
+  { id: 'person',     label: '人物・家族',   tags: ['person', 'family'],                          pos: null },
+  { id: 'number',     label: '數字・助數詞', tags: ['number'],                                    pos: null },
+  { id: 'time',       label: '時間・日期',   tags: ['time'],                                      pos: null },
+  { id: 'place',      label: '場所・方向',   tags: ['place', 'direction'],                        pos: null },
+  { id: 'food',       label: '食物・飲料',   tags: ['food'],                                      pos: null },
+  { id: 'body',       label: '身體・健康',   tags: ['body', 'health'],                            pos: null },
+  { id: 'home',       label: '家・物品',     tags: ['home', 'clothing'],                          pos: null },
+  { id: 'nature',     label: '自然・動物',   tags: ['nature', 'animal', 'weather'],               pos: null },
+  { id: 'transport',  label: '交通・移動',   tags: ['transport'],                                 pos: null },
+  { id: 'school',     label: '學校・工作',   tags: ['school', 'work'],                            pos: null },
+  { id: 'emotion',    label: '情感・色彩',   tags: ['emotion', 'color', 'size'],                  pos: null },
+  { id: 'verb',       label: '動詞',         tags: null,                                          pos: ['verb'] },
+  { id: 'adjective',  label: '形容詞',       tags: null,                                          pos: ['i-adj', 'na-adj'] },
+  { id: 'adverb',     label: '副詞・接續',   tags: null,                                          pos: ['adverb'] },
 ]
 
-function KanaSection() {
-  const [chars, setChars] = useState<KanaChar[]>([])
-  const [kanaType, setKanaType] = useState<KanaType>('hiragana')
-  const [showRomaji, setShowRomaji] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    loadKana()
-      .then(setChars)
-      .catch(() => setError('資料載入失敗，請重新整理頁面'))
-  }, [])
-
-  if (error) return <p className="text-red-500">{error}</p>
-
-  const filtered = filterByType(chars, kanaType).filter((c) => c.group !== 'combo')
-
-  return (
-    // 五十音允許捲動
-    <div className="h-full overflow-y-auto pb-4">
-      <div className="flex items-center gap-3 flex-wrap pb-4">
-        <div className="flex gap-2">
-          {(['hiragana', 'katakana'] as const).map((t) => (
-            <button
-              key={t}
-              onClick={() => setKanaType(t)}
-              className={[
-                'px-3 py-1 rounded-full text-sm font-medium transition-colors',
-                kanaType === t
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700',
-              ].join(' ')}
-            >
-              {t === 'hiragana' ? '平假名' : '片假名'}
-            </button>
-          ))}
-        </div>
-        <label className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 cursor-pointer">
-          <input
-            type="checkbox"
-            checked={showRomaji}
-            onChange={(e) => setShowRomaji(e.target.checked)}
-            className="rounded"
-          />
-          顯示羅馬拼音
-        </label>
-      </div>
-      {chars.length === 0
-        ? <p className="text-slate-400">載入中⋯</p>
-        : <KanaTable chars={filtered} showRomaji={showRomaji} />
-      }
-    </div>
-  )
+function filterVocabCat(
+  cards: VocabCard[],
+  tags: string[] | null,
+  pos: string[] | null,
+): VocabCard[] {
+  if (tags === null && pos === null) return cards
+  return cards.filter(c => {
+    if (tags !== null && c.tags.some(t => tags.includes(t))) return true
+    if (pos  !== null && pos.includes(c.payload.pos))        return true
+    return false
+  })
 }
 
-function LevelSelector({
-  allCards, level, onChange, color,
+const GRAMMAR_CATS: Array<{ id: string; label: string; tags: string[] | null }> = [
+  { id: 'all',         label: '全部',       tags: null },
+  { id: 'particle',    label: '助詞',       tags: ['particle'] },
+  { id: 'verb-form',   label: '動詞文法',   tags: ['verb-ending', 'te-form', 'ています', 'できる', 'たい', 'てください', 'ておく', 'てみる', 'てから', 'ながら', 'past', 'already'] },
+  { id: 'conditional', label: '條件・假定', tags: ['conditional', 'たら'] },
+  { id: 'obligation',  label: '義務・許可', tags: ['obligation', 'permission', 'prohibition'] },
+  { id: 'adjective',   label: '形容詞文法', tags: ['na-adjective', 'i-adjective', '上手', '下手'] },
+  { id: 'adverb',      label: '副詞・接續', tags: ['adverb', 'conjunction'] },
+  { id: 'existence',   label: '存在・其他', tags: ['existence', 'copula'] },
+]
+
+// ── Navigation state ──────────────────────────────────────────────────────────
+
+interface NavState {
+  subject: 'hiragana' | 'katakana' | 'vocab' | 'grammar' | null
+  sub: string | null
+  catId: string | null
+}
+
+const NAV_INIT: NavState = { subject: null, sub: null, catId: null }
+
+function navBack(nav: NavState): NavState {
+  if (nav.catId !== null) return { ...nav, catId: null }
+  if (nav.sub   !== null) return { ...nav, sub: null }
+  return NAV_INIT
+}
+
+const ALL_ROWS = [...GOJUUON_ROW_ORDER, ...DAKUTEN_ROW_ORDER]
+
+function getBreadcrumb(nav: NavState): string[] {
+  const { subject, sub, catId } = nav
+  const parts = ['學習']
+  if (!subject) return parts
+  if (subject === 'hiragana') parts.push('平假名')
+  else if (subject === 'katakana') parts.push('片假名')
+  else if (subject === 'vocab') parts.push('單字')
+  else parts.push('文法')
+  if (!sub) return parts
+  if (subject === 'hiragana' || subject === 'katakana') {
+    parts.push(ALL_ROWS.find(r => r.group === sub)?.label ?? sub)
+  } else {
+    parts.push(sub)
+    if (catId) {
+      const cats = subject === 'vocab' ? VOCAB_CATS : GRAMMAR_CATS
+      parts.push(cats.find(c => c.id === catId)?.label ?? catId)
+    }
+  }
+  return parts
+}
+
+// ── Pixel drill item ──────────────────────────────────────────────────────────
+
+function DrillItem({
+  label, badge, disabled, coming, onClick,
 }: {
-  allCards: { level: string }[]
-  level: JlptLevel
-  onChange: (l: JlptLevel) => void
-  color: 'indigo' | 'teal'
+  label: string
+  badge?: number
+  disabled?: boolean
+  coming?: boolean
+  onClick?: () => void
 }) {
-  const active = {
-    indigo: 'bg-indigo-600 text-white',
-    teal:   'bg-teal-600 text-white',
-  }[color]
-
   return (
-    <div className="flex gap-1.5 flex-wrap">
-      {LEVELS.map((l) => {
-        const count = allCards.filter((c) => c.level === l).length
-        const available = count > 0
-        return (
-          <button
-            key={l}
-            onClick={() => available && onChange(l)}
-            disabled={!available}
-            className={[
-              'px-3 py-1 rounded-full text-xs font-medium transition-colors',
-              level === l
-                ? active
-                : available
-                  ? 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
-                  : 'bg-slate-100 dark:bg-slate-800 text-slate-300 dark:text-slate-600 cursor-not-allowed',
-            ].join(' ')}
+    <button
+      onClick={onClick}
+      disabled={disabled}
+      className="w-full flex items-center gap-3 text-left pcard-tap"
+      style={{
+        background: disabled ? 'var(--color-cream-2)' : 'var(--color-paper)',
+        border: '2.5px solid var(--color-ink)',
+        boxShadow: disabled ? 'none' : '2px 2px 0 var(--color-ink)',
+        padding: '12px 14px',
+        opacity: disabled ? 0.5 : 1,
+        cursor: disabled ? 'not-allowed' : 'pointer',
+        fontFamily: 'system-ui, sans-serif',
+        fontWeight: 700,
+        fontSize: '0.9375rem',
+        color: 'var(--color-ink)',
+      }}
+    >
+      <span style={{ flex: 1 }}>{label}</span>
+      {coming && (
+        <span className="ptag" style={{ fontSize: '0.625rem', padding: '2px 5px' }}>即將推出</span>
+      )}
+      {badge !== undefined && (
+        <span style={{
+          fontFamily: '"VT323", monospace',
+          fontSize: '1.5rem',
+          color: 'var(--color-ink-soft)',
+          lineHeight: 1,
+        }}>{badge}</span>
+      )}
+      {!disabled && (
+        <span style={{
+          fontFamily: 'system-ui, sans-serif',
+          fontSize: '1.5rem',
+          color: 'var(--color-ink-soft)',
+        }}>→</span>
+      )}
+    </button>
+  )
+}
+
+// ── List screens ──────────────────────────────────────────────────────────────
+
+// Subject tiles — 2×2 pixel card grid
+const TILE_STYLE: Record<string, { bg: string; char: string; label: string }> = {
+  hiragana: { bg: 'var(--color-paper)',     char: 'あ', label: '平假名' },
+  katakana: { bg: 'var(--color-indigo-px-soft)', char: 'ア', label: '片假名' },
+  vocab:    { bg: 'var(--color-sakura-soft)', char: '語', label: '單字' },
+  grammar:  { bg: 'var(--color-matcha-soft)', char: '文', label: '文法' },
+}
+
+function SubjectScreen({
+  onSelect,
+}: {
+  onSelect: (s: 'hiragana' | 'katakana' | 'vocab' | 'grammar') => void
+}) {
+  const ids = ['hiragana', 'katakana', 'vocab', 'grammar'] as const
+  return (
+    <div className="h-full overflow-y-auto">
+      <div className="px-topic-grid">
+        {ids.map(id => {
+          const t = TILE_STYLE[id]
+          return (
+            <div
+              key={id}
+              className="px-topic"
+              style={{ background: t.bg }}
+              onClick={() => onSelect(id)}
+            >
+              <span className="kana" style={{ fontSize: '2.25rem', lineHeight: 1, fontWeight: 900 }}>{t.char}</span>
+              <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', lineHeight: 1.4 }}>
+                {t.label}
+              </span>
+            </div>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+function KanaRowsScreen({
+  kanaType, kanaChars, onSelect,
+}: {
+  kanaType: 'hiragana' | 'katakana'
+  kanaChars: KanaChar[]
+  onSelect: (group: KanaGroup) => void
+}) {
+  const typeChars = filterByType(kanaChars, kanaType)
+  return (
+    <div className="h-full overflow-y-auto">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {ALL_ROWS.map(({ label, group }) => {
+          const count = filterByGroup(typeChars, group).length
+          if (count === 0) return null
+          return (
+            <DrillItem
+              key={group}
+              label={label}
+              badge={count}
+              onClick={() => onSelect(group as KanaGroup)}
+            />
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+function LevelsScreen({
+  subject, vocabCards, grammarCards, onSelect,
+}: {
+  subject: 'vocab' | 'grammar'
+  vocabCards: VocabCard[]
+  grammarCards: GrammarCard[]
+  onSelect: (l: JlptLevel) => void
+}) {
+  const allCards = subject === 'vocab' ? vocabCards : grammarCards
+  const LEVEL_BG: Record<string, string> = {
+    N5: 'var(--color-matcha-soft)',
+    N4: 'var(--color-paper)',
+    N3: 'var(--color-sakura-soft)',
+    N2: 'var(--color-indigo-px-soft)',
+    N1: 'var(--color-cream)',
+  }
+  return (
+    <div className="h-full overflow-y-auto">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {JLPT_LEVELS.map((level) => {
+          const count = allCards.filter(c => c.level === level).length
+          const available = count > 0
+          return (
+            <button
+              key={level}
+              disabled={!available}
+              onClick={() => { if (available) onSelect(level) }}
+              className="pcard-tap"
+              style={{
+                background: available ? LEVEL_BG[level] : 'var(--color-cream-2)',
+                border: '2.5px solid var(--color-ink)',
+                boxShadow: available ? '2px 2px 0 var(--color-ink)' : 'none',
+                padding: '14px',
+                opacity: available ? 1 : 0.45,
+                cursor: available ? 'pointer' : 'not-allowed',
+                display: 'flex',
+                alignItems: 'center',
+                gap: 12,
+                textAlign: 'left',
+              }}
+            >
+              <div style={{
+                width: 48, height: 48,
+                border: '3px solid var(--color-ink)',
+                background: 'var(--color-paper)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontFamily: 'system-ui, sans-serif',
+                fontSize: '0.875rem',
+                color: 'var(--color-ink)',
+                flexShrink: 0,
+              }}>{level}</div>
+              <div style={{ flex: 1 }}>
+                <div style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', lineHeight: 1.4 }}>
+                  {level} {level === 'N5' ? '· 入門' : level === 'N4' ? '· 初級' : level === 'N3' ? '· 中級' : level === 'N2' ? '· 中高' : '· 高級'}
+                </div>
+                {available
+                  ? <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)', marginTop: 2 }}>{count} 個</div>
+                  : <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-faint)', marginTop: 2 }}>即將推出</div>
+                }
+              </div>
+              {available && <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>→</span>}
+            </button>
+          )
+        })}
+      </div>
+    </div>
+  )
+}
+
+function VocabCategoriesScreen({
+  level, vocabCards, onSelect,
+}: {
+  level: JlptLevel
+  vocabCards: VocabCard[]
+  onSelect: (catId: string) => void
+}) {
+  const levelCards = vocabCards.filter(c => c.level === level)
+  return (
+    <div className="h-full overflow-y-auto">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {VOCAB_CATS.map(({ id, label, tags, pos }) => {
+          const count = filterVocabCat(levelCards, tags, pos).length
+          if (count === 0) return null
+          return <DrillItem key={id} label={label} badge={count} onClick={() => onSelect(id)} />
+        })}
+      </div>
+    </div>
+  )
+}
+
+function GrammarCategoriesScreen({
+  level, grammarCards, onSelect,
+}: {
+  level: JlptLevel
+  grammarCards: GrammarCard[]
+  onSelect: (catId: string) => void
+}) {
+  const levelCards = grammarCards.filter(c => c.level === level)
+  return (
+    <div className="h-full overflow-y-auto">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
+        {GRAMMAR_CATS.map(({ id, label, tags }) => {
+          const count = tags === null
+            ? levelCards.length
+            : levelCards.filter(c => c.tags.some(t => tags.includes(t))).length
+          if (count === 0) return null
+          return <DrillItem key={id} label={label} badge={count} onClick={() => onSelect(id)} />
+        })}
+      </div>
+    </div>
+  )
+}
+
+// ── Content screens ───────────────────────────────────────────────────────────
+
+function KanaRowContent({ kanaType, group, allChars }: {
+  kanaType: KanaType; group: KanaGroup; allChars: KanaChar[]
+}) {
+  const chars = useMemo(
+    () => filterByGroup(filterByType(allChars, kanaType), group).sort((a, b) => a.order - b.order),
+    [allChars, kanaType, group],
+  )
+  return (
+    <div className="h-full overflow-y-auto pb-4">
+      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+        {chars.map(char => (
+          <div
+            key={char.id}
+            className="pcard"
+            style={{ padding: 0, overflow: 'hidden' }}
           >
-            {l}
-            {available && <span className="ml-1 opacity-60">{count}</span>}
-          </button>
-        )
-      })}
+            {/* 假名 + 羅馬拼音 */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '14px 16px 10px' }}>
+              <span className="kana" style={{ fontSize: '3.25rem', lineHeight: 1, width: 60, textAlign: 'center', flexShrink: 0 }}>
+                {char.kana}
+              </span>
+              <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
+                {char.romaji}
+              </span>
+            </div>
+            {char.word && (
+              <div style={{
+                borderTop: '2px dashed var(--color-ink-faint)',
+                padding: '10px 16px 12px',
+                display: 'flex', flexDirection: 'column', gap: 4,
+              }}>
+                <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
+                  <span className="kana" style={{ fontSize: '1.0625rem', fontWeight: 900 }}>{char.word.word}</span>
+                  {char.word.word !== char.word.reading && (
+                    <span style={{ fontSize: '0.8125rem', color: 'var(--color-ink-soft)' }}>（{char.word.reading}）</span>
+                  )}
+                  <span style={{ fontSize: '0.8125rem', color: 'var(--color-matcha-dark)', marginLeft: 'auto', flexShrink: 0 }}>
+                    {char.word.meaning}
+                  </span>
+                </div>
+                <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-soft)', margin: 0 }}>{char.word.sentence}</p>
+                <p style={{ fontSize: '0.6875rem', color: 'var(--color-ink-faint)', margin: 0 }}>{char.word.sentence_meaning}</p>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
 
-function VocabSection({ allCards }: { allCards: VocabCard[] }) {
-  const [level, setLevel] = useState<JlptLevel>('N5')
-  const cards = filterVocab(allCards, level)
+function VocabCategoryContent({ level, catId, allCards }: {
+  level: JlptLevel; catId: string; allCards: VocabCard[]
+}) {
+  const cat = VOCAB_CATS.find(c => c.id === catId)!
+  const cards = useMemo(() => {
+    const byLevel = allCards.filter(c => c.level === level)
+    return filterVocabCat(byLevel, cat.tags, cat.pos)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allCards, level, catId])
   return (
     <div className="h-full flex flex-col">
-      <div className="shrink-0 pb-3">
-        <LevelSelector allCards={allCards} level={level} onChange={setLevel} color="indigo" />
-      </div>
       <div className="flex-1 min-h-0">
-        {cards.length > 0 ? <VocabStudy cards={cards} /> : <EmptyLevel level={level} />}
+        {cards.length > 0
+          ? <VocabStudy cards={cards} />
+          : <p style={{ color: 'var(--color-ink-soft)', fontSize: '0.875rem' }}>此分類暫無資料。</p>
+        }
       </div>
     </div>
   )
 }
 
-function GrammarSection({ allCards }: { allCards: GrammarCard[] }) {
-  const [level, setLevel] = useState<JlptLevel>('N5')
-  const cards = filterGrammar(allCards, level)
+function GrammarCategoryContent({ level, catId, allCards }: {
+  level: JlptLevel; catId: string; allCards: GrammarCard[]
+}) {
+  const cat = GRAMMAR_CATS.find(c => c.id === catId)!
+  const cards = useMemo(() => {
+    const byLevel = allCards.filter(c => c.level === level)
+    return cat.tags === null ? byLevel : byLevel.filter(c => c.tags.some(t => cat.tags!.includes(t)))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [allCards, level, catId])
   return (
     <div className="h-full flex flex-col">
-      <div className="shrink-0 pb-3">
-        <LevelSelector allCards={allCards} level={level} onChange={setLevel} color="teal" />
-      </div>
       <div className="flex-1 min-h-0">
-        {cards.length > 0 ? <GrammarStudy cards={cards} /> : <EmptyLevel level={level} />}
+        {cards.length > 0
+          ? <GrammarStudy cards={cards} />
+          : <p style={{ color: 'var(--color-ink-soft)', fontSize: '0.875rem' }}>此分類暫無資料。</p>
+        }
       </div>
     </div>
   )
 }
 
-function EmptyLevel({ level }: { level: JlptLevel }) {
-  return (
-    <div className="rounded-lg border border-dashed border-slate-300 dark:border-slate-700 p-6 text-sm text-slate-500">
-      {level} 資料尚未加入，敬請期待。
-    </div>
-  )
-}
+// ── Page ──────────────────────────────────────────────────────────────────────
 
 export default function LearnPage() {
-  const [subject, setSubject] = useState<Subject>('kana')
-  const [vocabCards, setVocabCards] = useState<VocabCard[]>([])
+  const [kanaChars,    setKanaChars]    = useState<KanaChar[]>([])
+  const [vocabCards,   setVocabCards]   = useState<VocabCard[]>([])
   const [grammarCards, setGrammarCards] = useState<GrammarCard[]>([])
-  const [dataError, setDataError] = useState<string | null>(null)
+  const [nav,          setNav]          = useState<NavState>(NAV_INIT)
+  const [error,        setError]        = useState<string | null>(null)
 
   useEffect(() => {
-    preloadVoices()
-    Promise.all([loadVocabulary(), loadGrammar()])
-      .then(([vocab, grammar]) => {
+    Promise.all([loadKana(), loadVocabulary(), loadGrammar()])
+      .then(([kana, vocab, grammar]) => {
+        setKanaChars(kana)
         setVocabCards(vocab)
         setGrammarCards(grammar)
       })
-      .catch(() => setDataError('資料載入失敗，請重新整理頁面'))
+      .catch(() => setError('資料載入失敗，請重新整理頁面'))
   }, [])
 
+  const back = () => setNav(n => navBack(n))
+  const breadcrumb = getBreadcrumb(nav)
+  const canGoBack = nav.subject !== null
+
+  function renderScreen() {
+    const { subject, sub, catId } = nav
+
+    if (!subject) {
+      return <SubjectScreen onSelect={(s) => setNav({ subject: s, sub: null, catId: null })} />
+    }
+
+    if (subject === 'hiragana' || subject === 'katakana') {
+      if (!sub) {
+        return (
+          <KanaRowsScreen
+            kanaType={subject}
+            kanaChars={kanaChars}
+            onSelect={(group) => setNav({ ...nav, sub: group })}
+          />
+        )
+      }
+      return <KanaRowContent kanaType={subject} group={sub as KanaGroup} allChars={kanaChars} />
+    }
+
+    if (!sub) {
+      return (
+        <LevelsScreen
+          subject={subject}
+          vocabCards={vocabCards}
+          grammarCards={grammarCards}
+          onSelect={(level) => setNav({ ...nav, sub: level })}
+        />
+      )
+    }
+
+    if (subject === 'vocab') {
+      if (!catId) {
+        return (
+          <VocabCategoriesScreen
+            level={sub as JlptLevel}
+            vocabCards={vocabCards}
+            onSelect={(id) => setNav({ ...nav, catId: id })}
+          />
+        )
+      }
+      return <VocabCategoryContent level={sub as JlptLevel} catId={catId} allCards={vocabCards} />
+    }
+
+    // grammar
+    if (!catId) {
+      return (
+        <GrammarCategoriesScreen
+          level={sub as JlptLevel}
+          grammarCards={grammarCards}
+          onSelect={(id) => setNav({ ...nav, catId: id })}
+        />
+      )
+    }
+    return <GrammarCategoryContent level={sub as JlptLevel} catId={catId} allCards={grammarCards} />
+  }
+
   return (
-    <div className="h-full flex flex-col pb-16 md:pb-0">
+    <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* 頁首 */}
-      <div className="shrink-0 pt-4 pb-2 pr-10 md:pr-0">
-        <h1 className="text-xl font-semibold tracking-tight">學習</h1>
-      </div>
+      <BreadcrumbHeader
+        title={breadcrumb[0]}
+        crumbs={breadcrumb.slice(1)}
+        canGoBack={canGoBack}
+        onBack={back}
+      />
 
-      {/* 科目 tabs */}
-      <div className="shrink-0 flex gap-1 border-b border-slate-200 dark:border-slate-800">
-        {SUBJECTS.map((s) => (
-          <button
-            key={s.id}
-            onClick={() => setSubject(s.id)}
-            className={[
-              'flex items-center gap-1 px-2.5 py-2 text-sm font-medium border-b-2 -mb-px transition-colors',
-              subject === s.id
-                ? 'border-indigo-600 text-indigo-600 dark:border-indigo-400 dark:text-indigo-400'
-                : 'border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300',
-            ].join(' ')}
-          >
-            <span className="text-base leading-none">{s.icon}</span>
-            {s.label}
-          </button>
-        ))}
-      </div>
+      {error && (
+        <p style={{ color: '#c8633a', fontSize: '0.8125rem', padding: '0 16px 8px', flexShrink: 0 }}>{error}</p>
+      )}
 
-      {dataError && <p className="shrink-0 text-red-500 text-sm pt-2">{dataError}</p>}
-
-      {/* 內容區 */}
-      <div className="flex-1 min-h-0 pt-3">
-        {subject === 'kana'    && <KanaSection />}
-        {subject === 'vocab'   && <VocabSection allCards={vocabCards} />}
-        {subject === 'grammar' && <GrammarSection allCards={grammarCards} />}
+      <div style={{ flex: 1, minHeight: 0, padding: '0 16px 8px' }}>
+        {renderScreen()}
       </div>
     </div>
   )

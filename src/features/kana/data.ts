@@ -1,4 +1,4 @@
-import type { KanaChar, KanaType } from './types'
+import type { KanaChar, KanaType, KanaWord } from './types'
 
 interface RawKanaChar {
   id: string
@@ -6,6 +6,7 @@ interface RawKanaChar {
   romaji: string
   group: KanaChar['group']
   order: number
+  word?: KanaWord
 }
 
 interface KanaJson {

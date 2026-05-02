@@ -5,497 +5,994 @@
       "kana": "あ",
       "romaji": "a",
       "group": "vowel",
-      "order": 1
+      "order": 1,
+      "word": {
+        "word": "あめ",
+        "reading": "あめ",
+        "meaning": "雨",
+        "sentence": "あめがふっています。",
+        "sentence_meaning": "正在下雨。"
+      }
     },
     {
       "id": "h-i",
       "kana": "い",
       "romaji": "i",
       "group": "vowel",
-      "order": 2
+      "order": 2,
+      "word": {
+        "word": "いぬ",
+        "reading": "いぬ",
+        "meaning": "狗",
+        "sentence": "いぬがいます。",
+        "sentence_meaning": "有一隻狗。"
+      }
     },
     {
       "id": "h-u",
       "kana": "う",
       "romaji": "u",
       "group": "vowel",
-      "order": 3
+      "order": 3,
+      "word": {
+        "word": "うみ",
+        "reading": "うみ",
+        "meaning": "海",
+        "sentence": "うみはひろいです。",
+        "sentence_meaning": "海很遼闊。"
+      }
     },
     {
       "id": "h-e",
       "kana": "え",
       "romaji": "e",
       "group": "vowel",
-      "order": 4
+      "order": 4,
+      "word": {
+        "word": "えき",
+        "reading": "えき",
+        "meaning": "車站",
+        "sentence": "えきはどこですか。",
+        "sentence_meaning": "車站在哪裡？"
+      }
     },
     {
       "id": "h-o",
       "kana": "お",
       "romaji": "o",
       "group": "vowel",
-      "order": 5
+      "order": 5,
+      "word": {
+        "word": "おかあさん",
+        "reading": "おかあさん",
+        "meaning": "媽媽",
+        "sentence": "おかあさんがいます。",
+        "sentence_meaning": "媽媽在。"
+      }
     },
     {
       "id": "h-ka",
       "kana": "か",
       "romaji": "ka",
       "group": "k",
-      "order": 6
+      "order": 6,
+      "word": {
+        "word": "かさ",
+        "reading": "かさ",
+        "meaning": "雨傘",
+        "sentence": "かさをかします。",
+        "sentence_meaning": "我借你雨傘。"
+      }
     },
     {
       "id": "h-ki",
       "kana": "き",
       "romaji": "ki",
       "group": "k",
-      "order": 7
+      "order": 7,
+      "word": {
+        "word": "きって",
+        "reading": "きって",
+        "meaning": "郵票",
+        "sentence": "きってをかいました。",
+        "sentence_meaning": "買了郵票。"
+      }
     },
     {
       "id": "h-ku",
       "kana": "く",
       "romaji": "ku",
       "group": "k",
-      "order": 8
+      "order": 8,
+      "word": {
+        "word": "くるま",
+        "reading": "くるま",
+        "meaning": "車",
+        "sentence": "くるまがはやいです。",
+        "sentence_meaning": "車很快。"
+      }
     },
     {
       "id": "h-ke",
       "kana": "け",
       "romaji": "ke",
       "group": "k",
-      "order": 9
+      "order": 9,
+      "word": {
+        "word": "けいたい",
+        "reading": "けいたい",
+        "meaning": "手機",
+        "sentence": "けいたいをつかいます。",
+        "sentence_meaning": "使用手機。"
+      }
     },
     {
       "id": "h-ko",
       "kana": "こ",
       "romaji": "ko",
       "group": "k",
-      "order": 10
+      "order": 10,
+      "word": {
+        "word": "こども",
+        "reading": "こども",
+        "meaning": "小孩",
+        "sentence": "こどもがあそんでいます。",
+        "sentence_meaning": "小孩在玩耍。"
+      }
     },
     {
       "id": "h-sa",
       "kana": "さ",
       "romaji": "sa",
       "group": "s",
-      "order": 11
+      "order": 11,
+      "word": {
+        "word": "さかな",
+        "reading": "さかな",
+        "meaning": "魚",
+        "sentence": "さかなをたべます。",
+        "sentence_meaning": "吃魚。"
+      }
     },
     {
       "id": "h-si",
       "kana": "し",
       "romaji": "shi",
       "group": "s",
-      "order": 12
+      "order": 12,
+      "word": {
+        "word": "しごと",
+        "reading": "しごと",
+        "meaning": "工作",
+        "sentence": "しごとはたのしいです。",
+        "sentence_meaning": "工作很有趣。"
+      }
     },
     {
       "id": "h-su",
       "kana": "す",
       "romaji": "su",
       "group": "s",
-      "order": 13
+      "order": 13,
+      "word": {
+        "word": "すし",
+        "reading": "すし",
+        "meaning": "壽司",
+        "sentence": "すしがすきです。",
+        "sentence_meaning": "我喜歡壽司。"
+      }
     },
     {
       "id": "h-se",
       "kana": "せ",
       "romaji": "se",
       "group": "s",
-      "order": 14
+      "order": 14,
+      "word": {
+        "word": "せんせい",
+        "reading": "せんせい",
+        "meaning": "老師",
+        "sentence": "せんせいがおしえます。",
+        "sentence_meaning": "老師教導。"
+      }
     },
     {
       "id": "h-so",
       "kana": "そ",
       "romaji": "so",
       "group": "s",
-      "order": 15
+      "order": 15,
+      "word": {
+        "word": "そら",
+        "reading": "そら",
+        "meaning": "天空",
+        "sentence": "そらがあおいです。",
+        "sentence_meaning": "天空是藍色的。"
+      }
     },
     {
       "id": "h-ta",
       "kana": "た",
       "romaji": "ta",
       "group": "t",
-      "order": 16
+      "order": 16,
+      "word": {
+        "word": "たまご",
+        "reading": "たまご",
+        "meaning": "雞蛋",
+        "sentence": "たまごをたべました。",
+        "sentence_meaning": "吃了雞蛋。"
+      }
     },
     {
       "id": "h-ti",
       "kana": "ち",
       "romaji": "chi",
       "group": "t",
-      "order": 17
+      "order": 17,
+      "word": {
+        "word": "ちず",
+        "reading": "ちず",
+        "meaning": "地圖",
+        "sentence": "ちずをみます。",
+        "sentence_meaning": "看地圖。"
+      }
     },
     {
       "id": "h-tu",
       "kana": "つ",
       "romaji": "tsu",
       "group": "t",
-      "order": 18
+      "order": 18,
+      "word": {
+        "word": "つくえ",
+        "reading": "つくえ",
+        "meaning": "桌子",
+        "sentence": "つくえのうえにほんがあります。",
+        "sentence_meaning": "桌上有書。"
+      }
     },
     {
       "id": "h-te",
       "kana": "て",
       "romaji": "te",
       "group": "t",
-      "order": 19
+      "order": 19,
+      "word": {
+        "word": "てがみ",
+        "reading": "てがみ",
+        "meaning": "信",
+        "sentence": "てがみをかきます。",
+        "sentence_meaning": "寫信。"
+      }
     },
     {
       "id": "h-to",
       "kana": "と",
       "romaji": "to",
       "group": "t",
-      "order": 20
+      "order": 20,
+      "word": {
+        "word": "とけい",
+        "reading": "とけい",
+        "meaning": "時鐘/手錶",
+        "sentence": "とけいをみます。",
+        "sentence_meaning": "看時鐘。"
+      }
     },
     {
       "id": "h-na",
       "kana": "な",
       "romaji": "na",
       "group": "n-row",
-      "order": 21
+      "order": 21,
+      "word": {
+        "word": "なまえ",
+        "reading": "なまえ",
+        "meaning": "名字",
+        "sentence": "なまえはなんですか。",
+        "sentence_meaning": "您叫什麼名字？"
+      }
     },
     {
       "id": "h-ni",
       "kana": "に",
       "romaji": "ni",
       "group": "n-row",
-      "order": 22
+      "order": 22,
+      "word": {
+        "word": "にほん",
+        "reading": "にほん",
+        "meaning": "日本",
+        "sentence": "にほんにいきます。",
+        "sentence_meaning": "去日本。"
+      }
     },
     {
       "id": "h-nu",
       "kana": "ぬ",
       "romaji": "nu",
       "group": "n-row",
-      "order": 23
+      "order": 23,
+      "word": {
+        "word": "ぬいぐるみ",
+        "reading": "ぬいぐるみ",
+        "meaning": "玩偶",
+        "sentence": "ぬいぐるみがかわいいです。",
+        "sentence_meaning": "玩偶很可愛。"
+      }
     },
     {
       "id": "h-ne",
       "kana": "ね",
       "romaji": "ne",
       "group": "n-row",
-      "order": 24
+      "order": 24,
+      "word": {
+        "word": "ねこ",
+        "reading": "ねこ",
+        "meaning": "貓",
+        "sentence": "ねこがいます。",
+        "sentence_meaning": "有一隻貓。"
+      }
     },
     {
       "id": "h-no",
       "kana": "の",
       "romaji": "no",
       "group": "n-row",
-      "order": 25
+      "order": 25,
+      "word": {
+        "word": "のみもの",
+        "reading": "のみもの",
+        "meaning": "飲料",
+        "sentence": "のみものはなんですか。",
+        "sentence_meaning": "飲料是什麼？"
+      }
     },
     {
       "id": "h-ha",
       "kana": "は",
       "romaji": "ha",
       "group": "h",
-      "order": 26
+      "order": 26,
+      "word": {
+        "word": "はな",
+        "reading": "はな",
+        "meaning": "花",
+        "sentence": "はながきれいです。",
+        "sentence_meaning": "花很漂亮。"
+      }
     },
     {
       "id": "h-hi",
       "kana": "ひ",
       "romaji": "hi",
       "group": "h",
-      "order": 27
+      "order": 27,
+      "word": {
+        "word": "ひと",
+        "reading": "ひと",
+        "meaning": "人",
+        "sentence": "ひとがおおいです。",
+        "sentence_meaning": "人很多。"
+      }
     },
     {
       "id": "h-hu",
       "kana": "ふ",
       "romaji": "fu",
       "group": "h",
-      "order": 28
+      "order": 28,
+      "word": {
+        "word": "ふゆ",
+        "reading": "ふゆ",
+        "meaning": "冬天",
+        "sentence": "ふゆはさむいです。",
+        "sentence_meaning": "冬天很冷。"
+      }
     },
     {
       "id": "h-he",
       "kana": "へ",
       "romaji": "he",
       "group": "h",
-      "order": 29
+      "order": 29,
+      "word": {
+        "word": "へや",
+        "reading": "へや",
+        "meaning": "房間",
+        "sentence": "へやがひろいです。",
+        "sentence_meaning": "房間很寬敞。"
+      }
     },
     {
       "id": "h-ho",
       "kana": "ほ",
       "romaji": "ho",
       "group": "h",
-      "order": 30
+      "order": 30,
+      "word": {
+        "word": "ほん",
+        "reading": "ほん",
+        "meaning": "書",
+        "sentence": "ほんをよみます。",
+        "sentence_meaning": "讀書。"
+      }
     },
     {
       "id": "h-ma",
       "kana": "ま",
       "romaji": "ma",
       "group": "m",
-      "order": 31
+      "order": 31,
+      "word": {
+        "word": "まち",
+        "reading": "まち",
+        "meaning": "城鎮",
+        "sentence": "まちがにぎやかです。",
+        "sentence_meaning": "城鎮很熱鬧。"
+      }
     },
     {
       "id": "h-mi",
       "kana": "み",
       "romaji": "mi",
       "group": "m",
-      "order": 32
+      "order": 32,
+      "word": {
+        "word": "みず",
+        "reading": "みず",
+        "meaning": "水",
+        "sentence": "みずをのみます。",
+        "sentence_meaning": "喝水。"
+      }
     },
     {
       "id": "h-mu",
       "kana": "む",
       "romaji": "mu",
       "group": "m",
-      "order": 33
+      "order": 33,
+      "word": {
+        "word": "むし",
+        "reading": "むし",
+        "meaning": "蟲",
+        "sentence": "むしがいます。",
+        "sentence_meaning": "有蟲。"
+      }
     },
     {
       "id": "h-me",
       "kana": "め",
       "romaji": "me",
       "group": "m",
-      "order": 34
+      "order": 34,
+      "word": {
+        "word": "め",
+        "reading": "め",
+        "meaning": "眼睛",
+        "sentence": "めがおおきいです。",
+        "sentence_meaning": "眼睛很大。"
+      }
     },
     {
       "id": "h-mo",
       "kana": "も",
       "romaji": "mo",
       "group": "m",
-      "order": 35
+      "order": 35,
+      "word": {
+        "word": "もの",
+        "reading": "もの",
+        "meaning": "東西",
+        "sentence": "このものはなんですか。",
+        "sentence_meaning": "這個東西是什麼？"
+      }
     },
     {
       "id": "h-ya",
       "kana": "や",
       "romaji": "ya",
       "group": "y",
-      "order": 36
+      "order": 36,
+      "word": {
+        "word": "やま",
+        "reading": "やま",
+        "meaning": "山",
+        "sentence": "やまがたかいです。",
+        "sentence_meaning": "山很高。"
+      }
     },
     {
       "id": "h-yu",
       "kana": "ゆ",
       "romaji": "yu",
       "group": "y",
-      "order": 37
+      "order": 37,
+      "word": {
+        "word": "ゆき",
+        "reading": "ゆき",
+        "meaning": "雪",
+        "sentence": "ゆきがふっています。",
+        "sentence_meaning": "正在下雪。"
+      }
     },
     {
       "id": "h-yo",
       "kana": "よ",
       "romaji": "yo",
       "group": "y",
-      "order": 38
+      "order": 38,
+      "word": {
+        "word": "よる",
+        "reading": "よる",
+        "meaning": "晚上",
+        "sentence": "よるはしずかです。",
+        "sentence_meaning": "晚上很安靜。"
+      }
     },
     {
       "id": "h-ra",
       "kana": "ら",
       "romaji": "ra",
       "group": "r",
-      "order": 39
+      "order": 39,
+      "word": {
+        "word": "らじお",
+        "reading": "らじお",
+        "meaning": "收音機",
+        "sentence": "らじおをききます。",
+        "sentence_meaning": "聽收音機。"
+      }
     },
     {
       "id": "h-ri",
       "kana": "り",
       "romaji": "ri",
       "group": "r",
-      "order": 40
+      "order": 40,
+      "word": {
+        "word": "りんご",
+        "reading": "りんご",
+        "meaning": "蘋果",
+        "sentence": "りんごをたべます。",
+        "sentence_meaning": "吃蘋果。"
+      }
     },
     {
       "id": "h-ru",
       "kana": "る",
       "romaji": "ru",
       "group": "r",
-      "order": 41
+      "order": 41,
+      "word": {
+        "word": "るす",
+        "reading": "るす",
+        "meaning": "不在家",
+        "sentence": "かれはるすです。",
+        "sentence_meaning": "他不在家。"
+      }
     },
     {
       "id": "h-re",
       "kana": "れ",
       "romaji": "re",
       "group": "r",
-      "order": 42
+      "order": 42,
+      "word": {
+        "word": "れいぞうこ",
+        "reading": "れいぞうこ",
+        "meaning": "冰箱",
+        "sentence": "れいぞうこにあります。",
+        "sentence_meaning": "在冰箱裡。"
+      }
     },
     {
       "id": "h-ro",
       "kana": "ろ",
       "romaji": "ro",
       "group": "r",
-      "order": 43
+      "order": 43,
+      "word": {
+        "word": "ろうか",
+        "reading": "ろうか",
+        "meaning": "走廊",
+        "sentence": "ろうかをあるきます。",
+        "sentence_meaning": "走在走廊。"
+      }
     },
     {
       "id": "h-wa",
       "kana": "わ",
       "romaji": "wa",
       "group": "w",
-      "order": 44
+      "order": 44,
+      "word": {
+        "word": "わたし",
+        "reading": "わたし",
+        "meaning": "我",
+        "sentence": "わたしはがくせいです。",
+        "sentence_meaning": "我是學生。"
+      }
     },
     {
       "id": "h-wo",
       "kana": "を",
       "romaji": "wo",
       "group": "w",
-      "order": 47
+      "order": 47,
+      "word": {
+        "word": "を",
+        "reading": "を",
+        "meaning": "（受格助詞）",
+        "sentence": "ほんをよみます。",
+        "sentence_meaning": "讀書。"
+      }
     },
     {
       "id": "h-n",
       "kana": "ん",
       "romaji": "n",
       "group": "n-char",
-      "order": 48
+      "order": 48,
+      "word": {
+        "word": "パン",
+        "reading": "パン",
+        "meaning": "麵包",
+        "sentence": "パンをたべます。",
+        "sentence_meaning": "吃麵包。"
+      }
     },
     {
       "id": "h-ga",
       "kana": "が",
       "romaji": "ga",
       "group": "g",
-      "order": 49
+      "order": 49,
+      "word": {
+        "word": "がっこう",
+        "reading": "がっこう",
+        "meaning": "學校",
+        "sentence": "がっこうにいきます。",
+        "sentence_meaning": "去學校。"
+      }
     },
     {
       "id": "h-gi",
       "kana": "ぎ",
       "romaji": "gi",
       "group": "g",
-      "order": 50
+      "order": 50,
+      "word": {
+        "word": "ぎゅうにゅう",
+        "reading": "ぎゅうにゅう",
+        "meaning": "牛奶",
+        "sentence": "ぎゅうにゅうをのみます。",
+        "sentence_meaning": "喝牛奶。"
+      }
     },
     {
       "id": "h-gu",
       "kana": "ぐ",
       "romaji": "gu",
       "group": "g",
-      "order": 51
+      "order": 51,
+      "word": {
+        "word": "ぐあい",
+        "reading": "ぐあい",
+        "meaning": "狀況/身體狀況",
+        "sentence": "ぐあいはどうですか。",
+        "sentence_meaning": "身體狀況如何？"
+      }
     },
     {
       "id": "h-ge",
       "kana": "げ",
       "romaji": "ge",
       "group": "g",
-      "order": 52
+      "order": 52,
+      "word": {
+        "word": "げんき",
+        "reading": "げんき",
+        "meaning": "健康/精神好",
+        "sentence": "おげんきですか。",
+        "sentence_meaning": "您好嗎？"
+      }
     },
     {
       "id": "h-go",
       "kana": "ご",
       "romaji": "go",
       "group": "g",
-      "order": 53
+      "order": 53,
+      "word": {
+        "word": "ごはん",
+        "reading": "ごはん",
+        "meaning": "飯",
+        "sentence": "ごはんをたべます。",
+        "sentence_meaning": "吃飯。"
+      }
     },
     {
       "id": "h-za",
       "kana": "ざ",
       "romaji": "za",
       "group": "z",
-      "order": 54
+      "order": 54,
+      "word": {
+        "word": "ざっし",
+        "reading": "ざっし",
+        "meaning": "雜誌",
+        "sentence": "ざっしをよみます。",
+        "sentence_meaning": "讀雜誌。"
+      }
     },
     {
       "id": "h-zi",
       "kana": "じ",
       "romaji": "ji",
       "group": "z",
-      "order": 55
+      "order": 55,
+      "word": {
+        "word": "じかん",
+        "reading": "じかん",
+        "meaning": "時間",
+        "sentence": "じかんがありません。",
+        "sentence_meaning": "沒有時間。"
+      }
     },
     {
       "id": "h-zu",
       "kana": "ず",
       "romaji": "zu",
       "group": "z",
-      "order": 56
+      "order": 56,
+      "word": {
+        "word": "ずっと",
+        "reading": "ずっと",
+        "meaning": "一直",
+        "sentence": "ずっとまっています。",
+        "sentence_meaning": "一直在等。"
+      }
     },
     {
       "id": "h-ze",
       "kana": "ぜ",
       "romaji": "ze",
       "group": "z",
-      "order": 57
+      "order": 57,
+      "word": {
+        "word": "ぜんぶ",
+        "reading": "ぜんぶ",
+        "meaning": "全部",
+        "sentence": "ぜんぶたべました。",
+        "sentence_meaning": "全部都吃了。"
+      }
     },
     {
       "id": "h-zo",
       "kana": "ぞ",
       "romaji": "zo",
       "group": "z",
-      "order": 58
+      "order": 58,
+      "word": {
+        "word": "ぞう",
+        "reading": "ぞう",
+        "meaning": "大象",
+        "sentence": "ぞうがおおきいです。",
+        "sentence_meaning": "大象很大。"
+      }
     },
     {
       "id": "h-da",
       "kana": "だ",
       "romaji": "da",
       "group": "d",
-      "order": 59
+      "order": 59,
+      "word": {
+        "word": "だいがく",
+        "reading": "だいがく",
+        "meaning": "大學",
+        "sentence": "だいがくにはいりました。",
+        "sentence_meaning": "進了大學。"
+      }
     },
     {
       "id": "h-di",
       "kana": "ぢ",
       "romaji": "ji",
       "group": "d",
-      "order": 60
+      "order": 60,
+      "word": {
+        "word": "ぢめん",
+        "reading": "じめん",
+        "meaning": "地面",
+        "sentence": "じめんにすわります。",
+        "sentence_meaning": "坐在地上。"
+      }
     },
     {
       "id": "h-du",
       "kana": "づ",
       "romaji": "zu",
       "group": "d",
-      "order": 61
+      "order": 61,
+      "word": {
+        "word": "づつ",
+        "reading": "ずつ",
+        "meaning": "各自/每",
+        "sentence": "ひとつずつとります。",
+        "sentence_meaning": "每次拿一個。"
+      }
     },
     {
       "id": "h-de",
       "kana": "で",
       "romaji": "de",
       "group": "d",
-      "order": 62
+      "order": 62,
+      "word": {
+        "word": "でんしゃ",
+        "reading": "でんしゃ",
+        "meaning": "電車",
+        "sentence": "でんしゃにのります。",
+        "sentence_meaning": "搭電車。"
+      }
     },
     {
       "id": "h-do",
       "kana": "ど",
       "romaji": "do",
       "group": "d",
-      "order": 63
+      "order": 63,
+      "word": {
+        "word": "どうぶつ",
+        "reading": "どうぶつ",
+        "meaning": "動物",
+        "sentence": "どうぶつがすきです。",
+        "sentence_meaning": "我喜歡動物。"
+      }
     },
     {
       "id": "h-ba",
       "kana": "ば",
       "romaji": "ba",
       "group": "b",
-      "order": 64
+      "order": 64,
+      "word": {
+        "word": "バス",
+        "reading": "バス",
+        "meaning": "公車",
+        "sentence": "バスにのります。",
+        "sentence_meaning": "搭公車。"
+      }
     },
     {
       "id": "h-bi",
       "kana": "び",
       "romaji": "bi",
       "group": "b",
-      "order": 65
+      "order": 65,
+      "word": {
+        "word": "びょういん",
+        "reading": "びょういん",
+        "meaning": "醫院",
+        "sentence": "びょういんにいきます。",
+        "sentence_meaning": "去醫院。"
+      }
     },
     {
       "id": "h-bu",
       "kana": "ぶ",
       "romaji": "bu",
       "group": "b",
-      "order": 66
+      "order": 66,
+      "word": {
+        "word": "ぶんぽう",
+        "reading": "ぶんぽう",
+        "meaning": "文法",
+        "sentence": "ぶんぽうをべんきょうします。",
+        "sentence_meaning": "學習文法。"
+      }
     },
     {
       "id": "h-be",
       "kana": "べ",
       "romaji": "be",
       "group": "b",
-      "order": 67
+      "order": 67,
+      "word": {
+        "word": "べんきょう",
+        "reading": "べんきょう",
+        "meaning": "學習",
+        "sentence": "まいにちべんきょうします。",
+        "sentence_meaning": "每天學習。"
+      }
     },
     {
       "id": "h-bo",
       "kana": "ぼ",
       "romaji": "bo",
       "group": "b",
-      "order": 68
+      "order": 68,
+      "word": {
+        "word": "ぼうし",
+        "reading": "ぼうし",
+        "meaning": "帽子",
+        "sentence": "ぼうしをかぶります。",
+        "sentence_meaning": "戴帽子。"
+      }
     },
     {
       "id": "h-pa",
       "kana": "ぱ",
       "romaji": "pa",
       "group": "p",
-      "order": 69
+      "order": 69,
+      "word": {
+        "word": "パーティー",
+        "reading": "パーティー",
+        "meaning": "派對",
+        "sentence": "パーティーにいきます。",
+        "sentence_meaning": "去派對。"
+      }
     },
     {
       "id": "h-pi",
       "kana": "ぴ",
       "romaji": "pi",
       "group": "p",
-      "order": 70
+      "order": 70,
+      "word": {
+        "word": "ピアノ",
+        "reading": "ピアノ",
+        "meaning": "鋼琴",
+        "sentence": "ピアノをひきます。",
+        "sentence_meaning": "彈鋼琴。"
+      }
     },
     {
       "id": "h-pu",
       "kana": "ぷ",
       "romaji": "pu",
       "group": "p",
-      "order": 71
+      "order": 71,
+      "word": {
+        "word": "プレゼント",
+        "reading": "プレゼント",
+        "meaning": "禮物",
+        "sentence": "プレゼントをもらいました。",
+        "sentence_meaning": "收到了禮物。"
+      }
     },
     {
       "id": "h-pe",
       "kana": "ぺ",
       "romaji": "pe",
       "group": "p",
-      "order": 72
+      "order": 72,
+      "word": {
+        "word": "ペン",
+        "reading": "ペン",
+        "meaning": "筆",
+        "sentence": "ペンをかします。",
+        "sentence_meaning": "借你筆。"
+      }
     },
     {
       "id": "h-po",
       "kana": "ぽ",
       "romaji": "po",
       "group": "p",
-      "order": 73
+      "order": 73,
+      "word": {
+        "word": "ポスト",
+        "reading": "ポスト",
+        "meaning": "郵筒",
+        "sentence": "ポストにてがみをいれます。",
+        "sentence_meaning": "把信放入郵筒。"
+      }
     },
     {
       "id": "h-kya",
@@ -735,497 +1232,994 @@
       "kana": "ア",
       "romaji": "a",
       "group": "vowel",
-      "order": 1
+      "order": 1,
+      "word": {
+        "word": "あめ",
+        "reading": "あめ",
+        "meaning": "雨",
+        "sentence": "あめがふっています。",
+        "sentence_meaning": "正在下雨。"
+      }
     },
     {
       "id": "k-i",
       "kana": "イ",
       "romaji": "i",
       "group": "vowel",
-      "order": 2
+      "order": 2,
+      "word": {
+        "word": "いぬ",
+        "reading": "いぬ",
+        "meaning": "狗",
+        "sentence": "いぬがいます。",
+        "sentence_meaning": "有一隻狗。"
+      }
     },
     {
       "id": "k-u",
       "kana": "ウ",
       "romaji": "u",
       "group": "vowel",
-      "order": 3
+      "order": 3,
+      "word": {
+        "word": "うみ",
+        "reading": "うみ",
+        "meaning": "海",
+        "sentence": "うみはひろいです。",
+        "sentence_meaning": "海很遼闊。"
+      }
     },
     {
       "id": "k-e",
       "kana": "エ",
       "romaji": "e",
       "group": "vowel",
-      "order": 4
+      "order": 4,
+      "word": {
+        "word": "えき",
+        "reading": "えき",
+        "meaning": "車站",
+        "sentence": "えきはどこですか。",
+        "sentence_meaning": "車站在哪裡？"
+      }
     },
     {
       "id": "k-o",
       "kana": "オ",
       "romaji": "o",
       "group": "vowel",
-      "order": 5
+      "order": 5,
+      "word": {
+        "word": "おかあさん",
+        "reading": "おかあさん",
+        "meaning": "媽媽",
+        "sentence": "おかあさんがいます。",
+        "sentence_meaning": "媽媽在。"
+      }
     },
     {
       "id": "k-ka",
       "kana": "カ",
       "romaji": "ka",
       "group": "k",
-      "order": 6
+      "order": 6,
+      "word": {
+        "word": "かさ",
+        "reading": "かさ",
+        "meaning": "雨傘",
+        "sentence": "かさをかします。",
+        "sentence_meaning": "我借你雨傘。"
+      }
     },
     {
       "id": "k-ki",
       "kana": "キ",
       "romaji": "ki",
       "group": "k",
-      "order": 7
+      "order": 7,
+      "word": {
+        "word": "きって",
+        "reading": "きって",
+        "meaning": "郵票",
+        "sentence": "きってをかいました。",
+        "sentence_meaning": "買了郵票。"
+      }
     },
     {
       "id": "k-ku",
       "kana": "ク",
       "romaji": "ku",
       "group": "k",
-      "order": 8
+      "order": 8,
+      "word": {
+        "word": "くるま",
+        "reading": "くるま",
+        "meaning": "車",
+        "sentence": "くるまがはやいです。",
+        "sentence_meaning": "車很快。"
+      }
     },
     {
       "id": "k-ke",
       "kana": "ケ",
       "romaji": "ke",
       "group": "k",
-      "order": 9
+      "order": 9,
+      "word": {
+        "word": "けいたい",
+        "reading": "けいたい",
+        "meaning": "手機",
+        "sentence": "けいたいをつかいます。",
+        "sentence_meaning": "使用手機。"
+      }
     },
     {
       "id": "k-ko",
       "kana": "コ",
       "romaji": "ko",
       "group": "k",
-      "order": 10
+      "order": 10,
+      "word": {
+        "word": "こども",
+        "reading": "こども",
+        "meaning": "小孩",
+        "sentence": "こどもがあそんでいます。",
+        "sentence_meaning": "小孩在玩耍。"
+      }
     },
     {
       "id": "k-sa",
       "kana": "サ",
       "romaji": "sa",
       "group": "s",
-      "order": 11
+      "order": 11,
+      "word": {
+        "word": "さかな",
+        "reading": "さかな",
+        "meaning": "魚",
+        "sentence": "さかなをたべます。",
+        "sentence_meaning": "吃魚。"
+      }
     },
     {
       "id": "k-si",
       "kana": "シ",
       "romaji": "shi",
       "group": "s",
-      "order": 12
+      "order": 12,
+      "word": {
+        "word": "しごと",
+        "reading": "しごと",
+        "meaning": "工作",
+        "sentence": "しごとはたのしいです。",
+        "sentence_meaning": "工作很有趣。"
+      }
     },
     {
       "id": "k-su",
       "kana": "ス",
       "romaji": "su",
       "group": "s",
-      "order": 13
+      "order": 13,
+      "word": {
+        "word": "すし",
+        "reading": "すし",
+        "meaning": "壽司",
+        "sentence": "すしがすきです。",
+        "sentence_meaning": "我喜歡壽司。"
+      }
     },
     {
       "id": "k-se",
       "kana": "セ",
       "romaji": "se",
       "group": "s",
-      "order": 14
+      "order": 14,
+      "word": {
+        "word": "せんせい",
+        "reading": "せんせい",
+        "meaning": "老師",
+        "sentence": "せんせいがおしえます。",
+        "sentence_meaning": "老師教導。"
+      }
     },
     {
       "id": "k-so",
       "kana": "ソ",
       "romaji": "so",
       "group": "s",
-      "order": 15
+      "order": 15,
+      "word": {
+        "word": "そら",
+        "reading": "そら",
+        "meaning": "天空",
+        "sentence": "そらがあおいです。",
+        "sentence_meaning": "天空是藍色的。"
+      }
     },
     {
       "id": "k-ta",
       "kana": "タ",
       "romaji": "ta",
       "group": "t",
-      "order": 16
+      "order": 16,
+      "word": {
+        "word": "たまご",
+        "reading": "たまご",
+        "meaning": "雞蛋",
+        "sentence": "たまごをたべました。",
+        "sentence_meaning": "吃了雞蛋。"
+      }
     },
     {
       "id": "k-ti",
       "kana": "チ",
       "romaji": "chi",
       "group": "t",
-      "order": 17
+      "order": 17,
+      "word": {
+        "word": "ちず",
+        "reading": "ちず",
+        "meaning": "地圖",
+        "sentence": "ちずをみます。",
+        "sentence_meaning": "看地圖。"
+      }
     },
     {
       "id": "k-tu",
       "kana": "ツ",
       "romaji": "tsu",
       "group": "t",
-      "order": 18
+      "order": 18,
+      "word": {
+        "word": "つくえ",
+        "reading": "つくえ",
+        "meaning": "桌子",
+        "sentence": "つくえのうえにほんがあります。",
+        "sentence_meaning": "桌上有書。"
+      }
     },
     {
       "id": "k-te",
       "kana": "テ",
       "romaji": "te",
       "group": "t",
-      "order": 19
+      "order": 19,
+      "word": {
+        "word": "てがみ",
+        "reading": "てがみ",
+        "meaning": "信",
+        "sentence": "てがみをかきます。",
+        "sentence_meaning": "寫信。"
+      }
     },
     {
       "id": "k-to",
       "kana": "ト",
       "romaji": "to",
       "group": "t",
-      "order": 20
+      "order": 20,
+      "word": {
+        "word": "とけい",
+        "reading": "とけい",
+        "meaning": "時鐘/手錶",
+        "sentence": "とけいをみます。",
+        "sentence_meaning": "看時鐘。"
+      }
     },
     {
       "id": "k-na",
       "kana": "ナ",
       "romaji": "na",
       "group": "n-row",
-      "order": 21
+      "order": 21,
+      "word": {
+        "word": "なまえ",
+        "reading": "なまえ",
+        "meaning": "名字",
+        "sentence": "なまえはなんですか。",
+        "sentence_meaning": "您叫什麼名字？"
+      }
     },
     {
       "id": "k-ni",
       "kana": "ニ",
       "romaji": "ni",
       "group": "n-row",
-      "order": 22
+      "order": 22,
+      "word": {
+        "word": "にほん",
+        "reading": "にほん",
+        "meaning": "日本",
+        "sentence": "にほんにいきます。",
+        "sentence_meaning": "去日本。"
+      }
     },
     {
       "id": "k-nu",
       "kana": "ヌ",
       "romaji": "nu",
       "group": "n-row",
-      "order": 23
+      "order": 23,
+      "word": {
+        "word": "ぬいぐるみ",
+        "reading": "ぬいぐるみ",
+        "meaning": "玩偶",
+        "sentence": "ぬいぐるみがかわいいです。",
+        "sentence_meaning": "玩偶很可愛。"
+      }
     },
     {
       "id": "k-ne",
       "kana": "ネ",
       "romaji": "ne",
       "group": "n-row",
-      "order": 24
+      "order": 24,
+      "word": {
+        "word": "ねこ",
+        "reading": "ねこ",
+        "meaning": "貓",
+        "sentence": "ねこがいます。",
+        "sentence_meaning": "有一隻貓。"
+      }
     },
     {
       "id": "k-no",
       "kana": "ノ",
       "romaji": "no",
       "group": "n-row",
-      "order": 25
+      "order": 25,
+      "word": {
+        "word": "のみもの",
+        "reading": "のみもの",
+        "meaning": "飲料",
+        "sentence": "のみものはなんですか。",
+        "sentence_meaning": "飲料是什麼？"
+      }
     },
     {
       "id": "k-ha",
       "kana": "ハ",
       "romaji": "ha",
       "group": "h",
-      "order": 26
+      "order": 26,
+      "word": {
+        "word": "はな",
+        "reading": "はな",
+        "meaning": "花",
+        "sentence": "はながきれいです。",
+        "sentence_meaning": "花很漂亮。"
+      }
     },
     {
       "id": "k-hi",
       "kana": "ヒ",
       "romaji": "hi",
       "group": "h",
-      "order": 27
+      "order": 27,
+      "word": {
+        "word": "ひと",
+        "reading": "ひと",
+        "meaning": "人",
+        "sentence": "ひとがおおいです。",
+        "sentence_meaning": "人很多。"
+      }
     },
     {
       "id": "k-hu",
       "kana": "フ",
       "romaji": "fu",
       "group": "h",
-      "order": 28
+      "order": 28,
+      "word": {
+        "word": "ふゆ",
+        "reading": "ふゆ",
+        "meaning": "冬天",
+        "sentence": "ふゆはさむいです。",
+        "sentence_meaning": "冬天很冷。"
+      }
     },
     {
       "id": "k-he",
       "kana": "ヘ",
       "romaji": "he",
       "group": "h",
-      "order": 29
+      "order": 29,
+      "word": {
+        "word": "へや",
+        "reading": "へや",
+        "meaning": "房間",
+        "sentence": "へやがひろいです。",
+        "sentence_meaning": "房間很寬敞。"
+      }
     },
     {
       "id": "k-ho",
       "kana": "ホ",
       "romaji": "ho",
       "group": "h",
-      "order": 30
+      "order": 30,
+      "word": {
+        "word": "ほん",
+        "reading": "ほん",
+        "meaning": "書",
+        "sentence": "ほんをよみます。",
+        "sentence_meaning": "讀書。"
+      }
     },
     {
       "id": "k-ma",
       "kana": "マ",
       "romaji": "ma",
       "group": "m",
-      "order": 31
+      "order": 31,
+      "word": {
+        "word": "まち",
+        "reading": "まち",
+        "meaning": "城鎮",
+        "sentence": "まちがにぎやかです。",
+        "sentence_meaning": "城鎮很熱鬧。"
+      }
     },
     {
       "id": "k-mi",
       "kana": "ミ",
       "romaji": "mi",
       "group": "m",
-      "order": 32
+      "order": 32,
+      "word": {
+        "word": "みず",
+        "reading": "みず",
+        "meaning": "水",
+        "sentence": "みずをのみます。",
+        "sentence_meaning": "喝水。"
+      }
     },
     {
       "id": "k-mu",
       "kana": "ム",
       "romaji": "mu",
       "group": "m",
-      "order": 33
+      "order": 33,
+      "word": {
+        "word": "むし",
+        "reading": "むし",
+        "meaning": "蟲",
+        "sentence": "むしがいます。",
+        "sentence_meaning": "有蟲。"
+      }
     },
     {
       "id": "k-me",
       "kana": "メ",
       "romaji": "me",
       "group": "m",
-      "order": 34
+      "order": 34,
+      "word": {
+        "word": "め",
+        "reading": "め",
+        "meaning": "眼睛",
+        "sentence": "めがおおきいです。",
+        "sentence_meaning": "眼睛很大。"
+      }
     },
     {
       "id": "k-mo",
       "kana": "モ",
       "romaji": "mo",
       "group": "m",
-      "order": 35
+      "order": 35,
+      "word": {
+        "word": "もの",
+        "reading": "もの",
+        "meaning": "東西",
+        "sentence": "このものはなんですか。",
+        "sentence_meaning": "這個東西是什麼？"
+      }
     },
     {
       "id": "k-ya",
       "kana": "ヤ",
       "romaji": "ya",
       "group": "y",
-      "order": 36
+      "order": 36,
+      "word": {
+        "word": "やま",
+        "reading": "やま",
+        "meaning": "山",
+        "sentence": "やまがたかいです。",
+        "sentence_meaning": "山很高。"
+      }
     },
     {
       "id": "k-yu",
       "kana": "ユ",
       "romaji": "yu",
       "group": "y",
-      "order": 37
+      "order": 37,
+      "word": {
+        "word": "ゆき",
+        "reading": "ゆき",
+        "meaning": "雪",
+        "sentence": "ゆきがふっています。",
+        "sentence_meaning": "正在下雪。"
+      }
     },
     {
       "id": "k-yo",
       "kana": "ヨ",
       "romaji": "yo",
       "group": "y",
-      "order": 38
+      "order": 38,
+      "word": {
+        "word": "よる",
+        "reading": "よる",
+        "meaning": "晚上",
+        "sentence": "よるはしずかです。",
+        "sentence_meaning": "晚上很安靜。"
+      }
     },
     {
       "id": "k-ra",
       "kana": "ラ",
       "romaji": "ra",
       "group": "r",
-      "order": 39
+      "order": 39,
+      "word": {
+        "word": "らじお",
+        "reading": "らじお",
+        "meaning": "收音機",
+        "sentence": "らじおをききます。",
+        "sentence_meaning": "聽收音機。"
+      }
     },
     {
       "id": "k-ri",
       "kana": "リ",
       "romaji": "ri",
       "group": "r",
-      "order": 40
+      "order": 40,
+      "word": {
+        "word": "りんご",
+        "reading": "りんご",
+        "meaning": "蘋果",
+        "sentence": "りんごをたべます。",
+        "sentence_meaning": "吃蘋果。"
+      }
     },
     {
       "id": "k-ru",
       "kana": "ル",
       "romaji": "ru",
       "group": "r",
-      "order": 41
+      "order": 41,
+      "word": {
+        "word": "るす",
+        "reading": "るす",
+        "meaning": "不在家",
+        "sentence": "かれはるすです。",
+        "sentence_meaning": "他不在家。"
+      }
     },
     {
       "id": "k-re",
       "kana": "レ",
       "romaji": "re",
       "group": "r",
-      "order": 42
+      "order": 42,
+      "word": {
+        "word": "れいぞうこ",
+        "reading": "れいぞうこ",
+        "meaning": "冰箱",
+        "sentence": "れいぞうこにあります。",
+        "sentence_meaning": "在冰箱裡。"
+      }
     },
     {
       "id": "k-ro",
       "kana": "ロ",
       "romaji": "ro",
       "group": "r",
-      "order": 43
+      "order": 43,
+      "word": {
+        "word": "ろうか",
+        "reading": "ろうか",
+        "meaning": "走廊",
+        "sentence": "ろうかをあるきます。",
+        "sentence_meaning": "走在走廊。"
+      }
     },
     {
       "id": "k-wa",
       "kana": "ワ",
       "romaji": "wa",
       "group": "w",
-      "order": 44
+      "order": 44,
+      "word": {
+        "word": "わたし",
+        "reading": "わたし",
+        "meaning": "我",
+        "sentence": "わたしはがくせいです。",
+        "sentence_meaning": "我是學生。"
+      }
     },
     {
       "id": "k-wo",
       "kana": "ヲ",
       "romaji": "wo",
       "group": "w",
-      "order": 45
+      "order": 45,
+      "word": {
+        "word": "を",
+        "reading": "を",
+        "meaning": "（受格助詞）",
+        "sentence": "ほんをよみます。",
+        "sentence_meaning": "讀書。"
+      }
     },
     {
       "id": "k-n",
       "kana": "ン",
       "romaji": "n",
       "group": "n-char",
-      "order": 46
+      "order": 46,
+      "word": {
+        "word": "パン",
+        "reading": "パン",
+        "meaning": "麵包",
+        "sentence": "パンをたべます。",
+        "sentence_meaning": "吃麵包。"
+      }
     },
     {
       "id": "k-ga",
       "kana": "ガ",
       "romaji": "ga",
       "group": "g",
-      "order": 47
+      "order": 47,
+      "word": {
+        "word": "がっこう",
+        "reading": "がっこう",
+        "meaning": "學校",
+        "sentence": "がっこうにいきます。",
+        "sentence_meaning": "去學校。"
+      }
     },
     {
       "id": "k-gi",
       "kana": "ギ",
       "romaji": "gi",
       "group": "g",
-      "order": 48
+      "order": 48,
+      "word": {
+        "word": "ぎゅうにゅう",
+        "reading": "ぎゅうにゅう",
+        "meaning": "牛奶",
+        "sentence": "ぎゅうにゅうをのみます。",
+        "sentence_meaning": "喝牛奶。"
+      }
     },
     {
       "id": "k-gu",
       "kana": "グ",
       "romaji": "gu",
       "group": "g",
-      "order": 49
+      "order": 49,
+      "word": {
+        "word": "ぐあい",
+        "reading": "ぐあい",
+        "meaning": "狀況/身體狀況",
+        "sentence": "ぐあいはどうですか。",
+        "sentence_meaning": "身體狀況如何？"
+      }
     },
     {
       "id": "k-ge",
       "kana": "ゲ",
       "romaji": "ge",
       "group": "g",
-      "order": 50
+      "order": 50,
+      "word": {
+        "word": "げんき",
+        "reading": "げんき",
+        "meaning": "健康/精神好",
+        "sentence": "おげんきですか。",
+        "sentence_meaning": "您好嗎？"
+      }
     },
     {
       "id": "k-go",
       "kana": "ゴ",
       "romaji": "go",
       "group": "g",
-      "order": 51
+      "order": 51,
+      "word": {
+        "word": "ごはん",
+        "reading": "ごはん",
+        "meaning": "飯",
+        "sentence": "ごはんをたべます。",
+        "sentence_meaning": "吃飯。"
+      }
     },
     {
       "id": "k-za",
       "kana": "ザ",
       "romaji": "za",
       "group": "z",
-      "order": 52
+      "order": 52,
+      "word": {
+        "word": "ざっし",
+        "reading": "ざっし",
+        "meaning": "雜誌",
+        "sentence": "ざっしをよみます。",
+        "sentence_meaning": "讀雜誌。"
+      }
     },
     {
       "id": "k-zi",
       "kana": "ジ",
       "romaji": "ji",
       "group": "z",
-      "order": 53
+      "order": 53,
+      "word": {
+        "word": "じかん",
+        "reading": "じかん",
+        "meaning": "時間",
+        "sentence": "じかんがありません。",
+        "sentence_meaning": "沒有時間。"
+      }
     },
     {
       "id": "k-zu",
       "kana": "ズ",
       "romaji": "zu",
       "group": "z",
-      "order": 54
+      "order": 54,
+      "word": {
+        "word": "ずっと",
+        "reading": "ずっと",
+        "meaning": "一直",
+        "sentence": "ずっとまっています。",
+        "sentence_meaning": "一直在等。"
+      }
     },
     {
       "id": "k-ze",
       "kana": "ゼ",
       "romaji": "ze",
       "group": "z",
-      "order": 55
+      "order": 55,
+      "word": {
+        "word": "ぜんぶ",
+        "reading": "ぜんぶ",
+        "meaning": "全部",
+        "sentence": "ぜんぶたべました。",
+        "sentence_meaning": "全部都吃了。"
+      }
     },
     {
       "id": "k-zo",
       "kana": "ゾ",
       "romaji": "zo",
       "group": "z",
-      "order": 56
+      "order": 56,
+      "word": {
+        "word": "ぞう",
+        "reading": "ぞう",
+        "meaning": "大象",
+        "sentence": "ぞうがおおきいです。",
+        "sentence_meaning": "大象很大。"
+      }
     },
     {
       "id": "k-da",
       "kana": "ダ",
       "romaji": "da",
       "group": "d",
-      "order": 57
+      "order": 57,
+      "word": {
+        "word": "だいがく",
+        "reading": "だいがく",
+        "meaning": "大學",
+        "sentence": "だいがくにはいりました。",
+        "sentence_meaning": "進了大學。"
+      }
     },
     {
       "id": "k-di",
       "kana": "ヂ",
       "romaji": "ji",
       "group": "d",
-      "order": 58
+      "order": 58,
+      "word": {
+        "word": "ぢめん",
+        "reading": "じめん",
+        "meaning": "地面",
+        "sentence": "じめんにすわります。",
+        "sentence_meaning": "坐在地上。"
+      }
     },
     {
       "id": "k-du",
       "kana": "ヅ",
       "romaji": "zu",
       "group": "d",
-      "order": 59
+      "order": 59,
+      "word": {
+        "word": "づつ",
+        "reading": "ずつ",
+        "meaning": "各自/每",
+        "sentence": "ひとつずつとります。",
+        "sentence_meaning": "每次拿一個。"
+      }
     },
     {
       "id": "k-de",
       "kana": "デ",
       "romaji": "de",
       "group": "d",
-      "order": 60
+      "order": 60,
+      "word": {
+        "word": "でんしゃ",
+        "reading": "でんしゃ",
+        "meaning": "電車",
+        "sentence": "でんしゃにのります。",
+        "sentence_meaning": "搭電車。"
+      }
     },
     {
       "id": "k-do",
       "kana": "ド",
       "romaji": "do",
       "group": "d",
-      "order": 61
+      "order": 61,
+      "word": {
+        "word": "どうぶつ",
+        "reading": "どうぶつ",
+        "meaning": "動物",
+        "sentence": "どうぶつがすきです。",
+        "sentence_meaning": "我喜歡動物。"
+      }
     },
     {
       "id": "k-ba",
       "kana": "バ",
       "romaji": "ba",
       "group": "b",
-      "order": 62
+      "order": 62,
+      "word": {
+        "word": "バス",
+        "reading": "バス",
+        "meaning": "公車",
+        "sentence": "バスにのります。",
+        "sentence_meaning": "搭公車。"
+      }
     },
     {
       "id": "k-bi",
       "kana": "ビ",
       "romaji": "bi",
       "group": "b",
-      "order": 63
+      "order": 63,
+      "word": {
+        "word": "びょういん",
+        "reading": "びょういん",
+        "meaning": "醫院",
+        "sentence": "びょういんにいきます。",
+        "sentence_meaning": "去醫院。"
+      }
     },
     {
       "id": "k-bu",
       "kana": "ブ",
       "romaji": "bu",
       "group": "b",
-      "order": 64
+      "order": 64,
+      "word": {
+        "word": "ぶんぽう",
+        "reading": "ぶんぽう",
+        "meaning": "文法",
+        "sentence": "ぶんぽうをべんきょうします。",
+        "sentence_meaning": "學習文法。"
+      }
     },
     {
       "id": "k-be",
       "kana": "ベ",
       "romaji": "be",
       "group": "b",
-      "order": 65
+      "order": 65,
+      "word": {
+        "word": "べんきょう",
+        "reading": "べんきょう",
+        "meaning": "學習",
+        "sentence": "まいにちべんきょうします。",
+        "sentence_meaning": "每天學習。"
+      }
     },
     {
       "id": "k-bo",
       "kana": "ボ",
       "romaji": "bo",
       "group": "b",
-      "order": 66
+      "order": 66,
+      "word": {
+        "word": "ぼうし",
+        "reading": "ぼうし",
+        "meaning": "帽子",
+        "sentence": "ぼうしをかぶります。",
+        "sentence_meaning": "戴帽子。"
+      }
     },
     {
       "id": "k-pa",
       "kana": "パ",
       "romaji": "pa",
       "group": "p",
-      "order": 67
+      "order": 67,
+      "word": {
+        "word": "パーティー",
+        "reading": "パーティー",
+        "meaning": "派對",
+        "sentence": "パーティーにいきます。",
+        "sentence_meaning": "去派對。"
+      }
     },
     {
       "id": "k-pi",
       "kana": "ピ",
       "romaji": "pi",
       "group": "p",
-      "order": 68
+      "order": 68,
+      "word": {
+        "word": "ピアノ",
+        "reading": "ピアノ",
+        "meaning": "鋼琴",
+        "sentence": "ピアノをひきます。",
+        "sentence_meaning": "彈鋼琴。"
+      }
     },
     {
       "id": "k-pu",
       "kana": "プ",
       "romaji": "pu",
       "group": "p",
-      "order": 69
+      "order": 69,
+      "word": {
+        "word": "プレゼント",
+        "reading": "プレゼント",
+        "meaning": "禮物",
+        "sentence": "プレゼントをもらいました。",
+        "sentence_meaning": "收到了禮物。"
+      }
     },
     {
       "id": "k-pe",
       "kana": "ペ",
       "romaji": "pe",
       "group": "p",
-      "order": 70
+      "order": 70,
+      "word": {
+        "word": "ペン",
+        "reading": "ペン",
+        "meaning": "筆",
+        "sentence": "ペンをかします。",
+        "sentence_meaning": "借你筆。"
+      }
     },
     {
       "id": "k-po",
       "kana": "ポ",
       "romaji": "po",
       "group": "p",
-      "order": 71
+      "order": 71,
+      "word": {
+        "word": "ポスト",
+        "reading": "ポスト",
+        "meaning": "郵筒",
+        "sentence": "ポストにてがみをいれます。",
+        "sentence_meaning": "把信放入郵筒。"
+      }
     },
     {
       "id": "k-kya",

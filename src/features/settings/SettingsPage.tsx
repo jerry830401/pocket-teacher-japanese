@@ -1,7 +1,7 @@
-import { useNavigate } from 'react-router-dom'
-import { useSettings, QUIZ_ROUND_OPTIONS, type QuizRoundSize, type QuizKey } from '@/stores/useSettings'
+import { useSettings, QUIZ_ROUND_OPTIONS, type QuizRoundSize, type QuizKey, type MascotKind, type CatVariant } from '@/stores/useSettings'
 import OfflineDataButton from '@/features/progress/OfflineDataButton'
 import { isPwa } from '@/lib/pwa'
+import Mascot from '@/shared/Mascot'
 
 const ITEMS: { key: QuizKey; label: string }[] = [
   { key: 'kana',      label: '五十音' },
@@ -10,30 +10,40 @@ const ITEMS: { key: QuizKey; label: string }[] = [
   { key: 'listening', label: '聽力'   },
 ]
 
-function Toggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
+const CAT_VARIANTS: { id: CatVariant; label: string }[] = [
+  { id: 'black',  label: '黑貓'   },
+  { id: 'tuxedo', label: '賓士貓' },
+  { id: 'calico', label: '三花貓' },
+  { id: 'orange', label: '橘貓'   },
+]
+
+const sectionLabel: React.CSSProperties = {
+  fontFamily: 'system-ui, sans-serif',
+  fontWeight: 700,
+  fontSize: '0.875rem',
+  color: 'var(--color-ink-soft)',
+  marginBottom: 8,
+}
+
+function PxToggle({ checked, onChange }: { checked: boolean; onChange: (v: boolean) => void }) {
   return (
-    <button
+    <div
       role="switch"
       aria-checked={checked}
       onClick={() => onChange(!checked)}
-      className={[
-        'relative inline-flex h-6 w-11 shrink-0 rounded-full border-2 border-transparent transition-colors duration-200 focus:outline-none',
-        checked ? 'bg-indigo-600' : 'bg-slate-300 dark:bg-slate-600',
-      ].join(' ')}
+      className={['px-toggle', checked ? 'on' : ''].join(' ')}
+      style={{ cursor: 'pointer' }}
     >
-      <span className={[
-        'inline-block h-5 w-5 rounded-full bg-white shadow transition-transform duration-200',
-        checked ? 'translate-x-5' : 'translate-x-0',
-      ].join(' ')} />
-    </button>
+      <div className="px-toggle-thumb" />
+    </div>
   )
 }
 
 export default function SettingsPage() {
-  const navigate = useNavigate()
   const {
     autoNextKana, autoNextVocab, autoNextGrammar, autoNextListening, setAutoNext,
     roundSizeKana, roundSizeVocab, roundSizeGrammar, roundSizeListening, setRoundSize,
+    mascotKind, catVariant, setMascotKind, setCatVariant,
   } = useSettings()
 
   const autoNextValues: Record<QuizKey, boolean> = {
@@ -42,7 +52,6 @@ export default function SettingsPage() {
     grammar:   autoNextGrammar,
     listening: autoNextListening,
   }
-
   const roundSizeValues: Record<QuizKey, QuizRoundSize> = {
     kana:      roundSizeKana,
     vocab:     roundSizeVocab,
@@ -51,70 +60,116 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="h-full overflow-y-auto pb-20 md:pb-6">
-      <div className="pt-4 space-y-6">
-        <header className="flex items-center justify-between">
-          <h1 className="text-xl font-semibold tracking-tight">設定</h1>
-          <button
-            onClick={() => navigate(-1)}
-            className="text-sm text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-colors"
-          >
-            ← 返回
-          </button>
-        </header>
-
-        <section className="space-y-1">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 px-1">
-            答對自動下一題
-          </h2>
-          <div className="rounded-xl border border-slate-200 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800 overflow-hidden">
-            {ITEMS.map(({ key, label }) => (
-              <div key={key} className="flex items-center justify-between px-4 py-3 bg-white dark:bg-slate-900">
-                <p className="text-sm font-medium text-slate-700 dark:text-slate-200">{label}</p>
-                <Toggle checked={autoNextValues[key]} onChange={(v) => setAutoNext(key, v)} />
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="space-y-1">
-          <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 px-1">
-            每輪題數
-          </h2>
-          <div className="rounded-xl border border-slate-200 dark:border-slate-800 divide-y divide-slate-100 dark:divide-slate-800 overflow-hidden">
-            {ITEMS.map(({ key, label }) => (
-              <div key={key} className="flex items-center justify-between px-4 py-3 bg-white dark:bg-slate-900">
-                <p className="text-sm font-medium text-slate-700 dark:text-slate-200">{label}</p>
-                <div className="flex gap-1.5">
-                  {QUIZ_ROUND_OPTIONS.map((n) => (
-                    <button
-                      key={n}
-                      onClick={() => setRoundSize(key, n)}
-                      className={[
-                        'w-10 py-1.5 rounded-lg text-xs font-medium border-2 transition-colors',
-                        roundSizeValues[key] === n
-                          ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-950 text-indigo-600 dark:text-indigo-300'
-                          : 'border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:border-indigo-300',
-                      ].join(' ')}
-                    >
-                      {n}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {isPwa() && (
-          <section className="space-y-1">
-            <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 px-1">
-              離線
-            </h2>
-            <OfflineDataButton />
-          </section>
-        )}
+    <div style={{ height: '100%', overflowY: 'auto', padding: '0 16px 16px' }}>
+      {/* 頁首 */}
+      <div style={{ padding: '14px 0 10px', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+        <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', lineHeight: 1.4 }}>設定</span>
+        <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>v1.0</span>
       </div>
+
+      {/* 老師角色 */}
+      <div style={sectionLabel}>老師</div>
+      <div className="px-settings-list" style={{ marginBottom: 18 }}>
+        <div className="px-settings-row" style={{ flexDirection: 'column', alignItems: 'stretch', gap: 10 }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <span>角色</span>
+            <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
+              {mascotKind === 'cat' ? '招財貓' : '柴犬'}
+            </span>
+          </div>
+          <div style={{ display: 'flex', gap: 8 }}>
+            {(['cat', 'shiba'] as MascotKind[]).map((k) => (
+              <button
+                key={k}
+                className={['pbtn', 'flex-1', mascotKind === k ? 'pbtn-primary' : ''].join(' ')}
+                style={{ padding: '8px 4px', fontSize: '0.8125rem' }}
+                onClick={() => setMascotKind(k)}
+              >
+                {k === 'cat' ? '招財貓' : '柴犬'}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* 貓咪花色 */}
+      {mascotKind === 'cat' && (
+        <>
+          <div style={sectionLabel}>貓咪花色</div>
+          <div className="px-cat-grid" style={{ marginBottom: 18 }}>
+            {CAT_VARIANTS.map((v) => {
+              const selected = catVariant === v.id
+              return (
+                <div
+                  key={v.id}
+                  className={['px-cat-pick', selected ? 'selected' : ''].join(' ')}
+                  onClick={() => setCatVariant(v.id)}
+                >
+                  <div className="px-cat-pick-frame">
+                    <Mascot kind="cat" variant={v.id} mood="idle" size={3} />
+                  </div>
+                  <span style={{ fontFamily: 'system-ui, sans-serif', fontWeight: 700, fontSize: '0.8125rem' }}>
+                    {v.label}
+                  </span>
+                  {selected && (
+                    <div className="px-cat-pick-check">✓</div>
+                  )}
+                </div>
+              )
+            })}
+          </div>
+        </>
+      )}
+
+      {/* 答對自動下一題 */}
+      <div style={sectionLabel}>答對自動下一題</div>
+      <div className="px-settings-list" style={{ marginBottom: 18 }}>
+        {ITEMS.map(({ key, label }) => (
+          <div key={key} className="px-settings-row">
+            <span>{label}</span>
+            <PxToggle checked={autoNextValues[key]} onChange={(v) => setAutoNext(key, v)} />
+          </div>
+        ))}
+      </div>
+
+      {/* 每輪題數 */}
+      <div style={sectionLabel}>每輪題數</div>
+      <div className="px-settings-list" style={{ marginBottom: 18 }}>
+        {ITEMS.map(({ key, label }) => (
+          <div key={key} className="px-settings-row">
+            <span>{label}</span>
+            <div style={{ display: 'flex', gap: 4 }}>
+              {QUIZ_ROUND_OPTIONS.map((n) => (
+                <button
+                  key={n}
+                  onClick={() => setRoundSize(key, n)}
+                  style={{
+                    width: 36,
+                    padding: '5px 0',
+                    border: '2px solid var(--color-ink)',
+                    background: roundSizeValues[key] === n ? 'var(--color-gold)' : 'var(--color-paper)',
+                    fontFamily: 'system-ui, sans-serif',
+                    fontSize: '1rem',
+                    cursor: 'pointer',
+                    fontWeight: 700,
+                    color: 'var(--color-ink)',
+                  }}
+                >
+                  {n}
+                </button>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* 離線 */}
+      {isPwa() && (
+        <>
+          <div style={sectionLabel}>離線</div>
+          <OfflineDataButton />
+        </>
+      )}
     </div>
   )
 }

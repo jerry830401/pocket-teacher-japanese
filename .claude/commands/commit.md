@@ -20,12 +20,13 @@
 
 3. **顯示計畫並詢問確認**
    - 列出將被 commit 的檔案清單
+   - 計算並顯示總共幾個檔案將被 commit（`git status --short | wc -l`）
    - 顯示草擬的 commit message
    - 詢問使用者：「確認 commit？(y / 修改 message / n 取消)」
    - 若使用者提供新的 message，使用使用者提供的版本
 
 4. **執行 commit**
-   - `git add -u`（只暫存已追蹤的變更，不含 untracked 新檔案）
+   - `git add -A`（暫存所有變更，含新增 untracked 檔案、修改、刪除）
    - `git commit -m "<message>"`
 
 5. **回報結果**

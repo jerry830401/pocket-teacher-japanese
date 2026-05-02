@@ -7,9 +7,9 @@ allowed-tools: Read, Write, Edit, Bash
 
 - `type`：`vocab` 或 `grammar`
 - `level`：`N5`、`N4`、`N3`、`N2`、`N1`
-- `count`：要新增的筆數（建議 10–30）
+- `count`：要新增的筆數（建議 10–50）
 
-範例：`/add-data vocab N5 20`
+範例：`/add-data vocab N4 30`
 
 ---
 
@@ -20,7 +20,7 @@ allowed-tools: Read, Write, Edit, Bash
 - 若參數不足或格式錯誤，停止並說明正確用法。
 - 有效 type：`vocab`、`grammar`
 - 有效 level：`N5`、`N4`、`N3`、`N2`、`N1`
-- count 必須是 1–50 的整數
+- count 必須是 1–100 的整數
 
 ---
 
@@ -31,8 +31,8 @@ allowed-tools: Read, Write, Edit, Bash
 - grammar → `public/data/grammar.json`
 
 記錄：
-1. 目前最大的流水號（例如 `vocab-N5-100` → 100），新資料從 101 開始編號
-2. 現有該 level 的所有 `word`（vocab）或 `answer`+`sentence`（grammar），避免重複
+1. 目前最大的流水號（例如 `vocab-N5-589` → 589），新資料從下一號開始編號
+2. 現有該 level 的所有 `word`（vocab）或 `sentence`（grammar），避免重複
 
 ---
 
@@ -57,7 +57,39 @@ allowed-tools: Read, Write, Edit, Bash
 }
 ```
 
-可用 tags：`pronoun`、`person`、`family`、`place`、`object`、`food`、`transport`、`time`、`weather`、`emotion`、`action`、`size`
+**可用 tags（JLPT 27 主題分類）：**
+
+| Tag | 說明 |
+|-----|------|
+| `greeting` | 問候語、寒暄、常用表達 |
+| `question` | 疑問詞（なに、どこ、いつ…） |
+| `person` | 人稱代名詞（私、あなた…）、職業 |
+| `family` | 家族稱謂（母、お父さん…） |
+| `number` | 數字、助數詞、序數 |
+| `time` | 時間（今日、来年、午後…）、星期 |
+| `place` | 場所（学校、駅、公園…） |
+| `direction` | 方向、位置（右、上、そこ…） |
+| `food` | 食物、料理、飲料 |
+| `body` | 身體部位 |
+| `home` | 家居、日常物品、家具 |
+| `clothing` | 衣物、配件 |
+| `nature` | 自然（山、川、花…） |
+| `animal` | 動物 |
+| `weather` | 天氣（雨、晴れ…） |
+| `transport` | 交通工具、移動動詞 |
+| `school` | 學校、學習相關 |
+| `work` | 工作、職場 |
+| `shopping` | 購物、金錢、數量 |
+| `hobby` | 興趣、休閒、娛樂 |
+| `health` | 健康、身體狀況、醫療 |
+| `emotion` | 情感、心理狀態 |
+| `color` | 顏色 |
+| `size` | 大小、程度形容詞 |
+| `adjective` | 其他形容詞（不屬於上述） |
+| `verb` | 一般動詞（不屬於上述類別） |
+| `adverb` | 副詞、接續詞 |
+
+每筆 vocab 至少標一個 tag，可以標多個。
 
 ### Grammar 格式
 
@@ -84,6 +116,37 @@ Grammar 規範：
 - 干擾選項必須是同類型的助詞或語尾（不能隨意湊數）
 - `meaning` 是完整句子的繁體中文翻譯
 
+**Grammar tags 兩層系統：**
+
+第一層（必填一個，代表功能類別）：
+
+| Tag | 說明 |
+|-----|------|
+| `particle` | 助詞（は、が、を、に、で、へ、と、も、や、から、まで、の、か） |
+| `copula` | です／だ、ではありません 等基本判斷表現 |
+| `verb-form` | 動詞活用（ます形、て形本身、ない形、目的移動 に行く、すぎ、やすい、にくい） |
+| `adjective-form` | い形容詞／な形容詞的活用、連接、修飾 |
+| `sentence-pattern` | 複合語法點（てください、たい、できる、なければならない、たら、ば、と思います 等） |
+| `tense-aspect` | 時態與體貌（ています、ました、てから、た後で、もう、まだ、時、間、たことがある） |
+| `conjunction` | 接續、因果（から原因、ので） |
+| `expression` | 固定表達、副詞、疑問詞用法（いつも、たぶん、どこ、どうやって 等） |
+
+第二層（精確標籤，依語法點選填，可複選）：
+
+- **助詞**：`は`、`が`、`を`、`に`、`で`、`へ`、`と`、`も`、`や`、`から`、`まで`、`の`、`か`
+- **動詞形式**：`te-form`、`ta-form`、`masu-form`、`nai-form`
+- **時態修飾**：`past`、`negative`、`aspect`
+- **語法功能**：`conditional`、`permission`、`prohibition`、`obligation`、`desire`、`ability`、`suggestion`、`concession`、`quotation`、`simultaneous`、`purpose`、`intent`、`habit`、`experience`、`existence`、`location`、`request`
+- **具體語法點**：`ています`、`てから`、`てください`、`てみる`、`ておく`、`たことがある`、`たほうがいい`、`なければならない`、`ことができる`、`と思います`、`と言いました`、`ながら`、`つもり`、`よう`、`ないように`、`ようにしている`、`に行く`、`すぎ`、`やすい`、`にくい`、`にとって`、`によって`、`によると`、`もらう`
+- **副詞**：`adverb`、`interrogative`、`fixed-phrase`
+- **形容詞類型**：`i-adj`、`na-adj`
+
+每筆 grammar 格式範例：
+- 助詞題：`["particle", "に"]`
+- 語法句型：`["sentence-pattern", "te-form", "てください"]`
+- 形容詞活用：`["adjective-form", "i-adj", "past"]`
+- 接續詞：`["conjunction", "ので"]`
+
 ### 生成原則（兩種 type 共用）
 
 - 所有資料必須確實屬於指定 JLPT 等級的範圍
@@ -102,7 +165,8 @@ Grammar 規範：
 - [ ] 讀音正確（例如 食べる → たべる，不是 しょくべる）
 - [ ] 意思符合該等級的常見用法（不用罕見義項）
 - [ ] pos 分類正確（動詞用 verb，い形容詞用 i-adj）
-- [ ] tags 與詞義相符
+- [ ] tags 只使用上方表格中的 27 個，且與詞義相符
+- [ ] 沒有使用舊版廢棄 tag（object、action、pronoun、expression、conjunction）
 
 **Grammar 審查**
 - [ ] `answer` 確實出現在 `choices` 中
@@ -111,6 +175,8 @@ Grammar 規範：
 - [ ] `meaning` 是填入 answer 後完整句子的翻譯
 - [ ] 干擾選項與答案是同類型，具有合理迷惑性
 - [ ] 文法說明準確
+- [ ] tags 第一層必須是以下八個之一：`particle`、`copula`、`verb-form`、`adjective-form`、`sentence-pattern`、`tense-aspect`、`conjunction`、`expression`
+- [ ] tags 第二層使用上方表格中的具體標籤，不自創新標籤
 
 若有問題，就地修正後繼續，並在最後報告修正了哪些條目。
 
@@ -125,13 +191,14 @@ Grammar 規範：
 ```bash
 python3 -c "
 import json, sys
-path = 'public/data/vocabulary.json' if 'vocab' in sys.argv[1] else 'public/data/grammar.json'
+t = '$ARGUMENTS'.split()[0]
+path = 'public/data/vocabulary.json' if t == 'vocab' else 'public/data/grammar.json'
 with open(path) as f:
     data = json.load(f)
 ids = [c['id'] for c in data]
 assert len(ids) == len(set(ids)), 'ID 重複！'
 print(f'✔ 共 {len(data)} 筆，無重複 ID')
-" vocab
+"
 ```
 
 ---
