@@ -209,6 +209,8 @@ img, svg {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  padding-right: 3px;
+  padding-bottom: 3px;
 }
 .px-topic {
   border: 3px solid var(--color-ink);

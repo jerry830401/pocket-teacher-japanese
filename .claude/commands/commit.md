@@ -20,6 +20,7 @@
 
 3. **顯示計畫並詢問確認**
    - 列出將被 commit 的檔案清單
+   - 計算並顯示總共幾個檔案將被 commit（`git status --short | wc -l`）
    - 顯示草擬的 commit message
    - 詢問使用者：「確認 commit？(y / 修改 message / n 取消)」
    - 若使用者提供新的 message，使用使用者提供的版本
