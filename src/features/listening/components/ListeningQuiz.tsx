@@ -111,14 +111,14 @@ export default function ListeningQuiz({ cards }: Props) {
       : '多練幾輪，加油！'
     return (
       <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
-        <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 32, color: 'var(--color-gold)' }}>{pct}%</div>
-        <div style={{ fontFamily: '"VT323", monospace', fontSize: 18, color: 'var(--color-ink-soft)' }}>
+        <div style={{ fontFamily: 'system-ui, sans-serif', fontSize: '2rem', color: 'var(--color-gold)' }}>{pct}%</div>
+        <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
           {deck.length} 題中答對 {correct} 題
         </div>
         <div className="pcard" style={{ background: 'var(--color-gold-soft)', textAlign: 'center', width: '100%', maxWidth: 280 }}>
-          <p style={{ margin: 0, fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 14 }}>{msg}</p>
+          <p style={{ margin: 0, fontFamily: 'system-ui, sans-serif', fontSize: '0.875rem' }}>{msg}</p>
         </div>
-        <button className="pbtn pbtn-primary" style={{ padding: '10px 24px', fontSize: 12 }} onClick={startNextRound}>
+        <button className="pbtn pbtn-primary" style={{ padding: '10px 24px', fontSize: '0.75rem' }} onClick={startNextRound}>
           下一輪（{roundSize} 題）
         </button>
       </div>
@@ -136,10 +136,10 @@ export default function ListeningQuiz({ cards }: Props) {
       {/* 進度區 */}
       <div style={{ flexShrink: 0 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
             第 {index + 1} / {deck.length} 題
           </span>
-          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
             正確 {correct}
           </span>
         </div>
@@ -173,14 +173,14 @@ export default function ListeningQuiz({ cards }: Props) {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: 26,
+                fontSize: '1.625rem',
               }}
             >
               ▶
             </button>
             <span style={{
               fontFamily: '"VT323", monospace',
-              fontSize: 14,
+              fontSize: '0.875rem',
               color: ttsError ? '#c8633a' : 'var(--color-ink-soft)',
             }}>
               {ttsError ? '播放失敗' : '點擊播放'}
@@ -192,13 +192,13 @@ export default function ListeningQuiz({ cards }: Props) {
 
           {/* 答案揭示 */}
           <div style={{ flex: 1, opacity: selected ? 1 : 0, transition: 'opacity 0.2s', display: 'flex', flexDirection: 'column', gap: 4 }}>
-            <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 28 }}>
+            <span style={{ fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: '1.75rem' }}>
               {current.payload.word}
             </span>
-            <span style={{ fontFamily: '"VT323", monospace', fontSize: 20, color: 'var(--color-ink-soft)' }}>
+            <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.625rem', color: 'var(--color-ink-soft)' }}>
               {current.payload.reading}
             </span>
-            <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 13, color: 'var(--color-ink-soft)' }}>
+            <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.8125rem', color: 'var(--color-ink-soft)' }}>
               {current.payload.meaning}
             </span>
           </div>
@@ -222,10 +222,10 @@ export default function ListeningQuiz({ cards }: Props) {
               style={{ opacity: selected && !isCorrect && !isPicked ? 0.4 : 1, flexDirection: 'column', alignItems: 'flex-start', gap: 2 }}
               onClick={() => pick(choice)}
             >
-              <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 15, fontWeight: 700 }}>
+              <span style={{ fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontSize: '0.9375rem', fontWeight: 700 }}>
                 {choice.payload.word}
               </span>
-              <span style={{ fontFamily: '"VT323", monospace', fontSize: 14, color: 'var(--color-ink-soft)' }}>
+              <span style={{ fontFamily: '"VT323", monospace', fontSize: '0.875rem', color: 'var(--color-ink-soft)' }}>
                 {choice.payload.reading}
               </span>
             </button>
@@ -237,7 +237,7 @@ export default function ListeningQuiz({ cards }: Props) {
       <div style={{ flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
         <button
           className="pbtn pbtn-primary"
-          style={{ padding: '10px 32px', fontSize: 13, visibility: showNext ? 'visible' : 'hidden', width: '100%' }}
+          style={{ padding: '10px 32px', fontSize: '0.8125rem', visibility: showNext ? 'visible' : 'hidden', width: '100%' }}
           onClick={() => advance(index + 1)}
           disabled={!showNext}
         >

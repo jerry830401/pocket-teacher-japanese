@@ -12,7 +12,7 @@ const NAV_ITEMS = [
 function TabIcon({ id, active }: { id: string; active: boolean }) {
   const c = active ? 'var(--color-gold)' : 'var(--color-cream)'
   if (id === 'learn') return (
-    <svg width="18" height="18" viewBox="0 0 10 10" shapeRendering="crispEdges" style={{ imageRendering: 'pixelated' }}>
+    <svg width="22" height="22" viewBox="0 0 10 10" shapeRendering="crispEdges" style={{ imageRendering: 'pixelated' }}>
       <rect x="1" y="1" width="3" height="5" fill={c} />
       <rect x="6" y="1" width="3" height="5" fill={c} />
       <rect x="4" y="2" width="2" height="7" fill={c} />
@@ -21,7 +21,7 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
     </svg>
   )
   if (id === 'quiz') return (
-    <svg width="18" height="18" viewBox="0 0 10 10" shapeRendering="crispEdges" style={{ imageRendering: 'pixelated' }}>
+    <svg width="22" height="22" viewBox="0 0 10 10" shapeRendering="crispEdges" style={{ imageRendering: 'pixelated' }}>
       <rect x="1" y="1" width="8" height="6" fill={c} />
       <rect x="2" y="2" width="6" height="4" fill="var(--color-ink)" />
       <rect x="3" y="3" width="2" height="2" fill={c} />
@@ -30,7 +30,7 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
     </svg>
   )
   if (id === 'review') return (
-    <svg width="18" height="18" viewBox="0 0 10 10" shapeRendering="crispEdges" style={{ imageRendering: 'pixelated' }}>
+    <svg width="22" height="22" viewBox="0 0 10 10" shapeRendering="crispEdges" style={{ imageRendering: 'pixelated' }}>
       <rect x="2" y="1" width="6" height="1" fill={c} />
       <rect x="1" y="2" width="1" height="6" fill={c} />
       <rect x="8" y="2" width="1" height="6" fill={c} />
@@ -41,7 +41,7 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
     </svg>
   )
   if (id === 'progress') return (
-    <svg width="18" height="18" viewBox="0 0 10 10" shapeRendering="crispEdges" style={{ imageRendering: 'pixelated' }}>
+    <svg width="22" height="22" viewBox="0 0 10 10" shapeRendering="crispEdges" style={{ imageRendering: 'pixelated' }}>
       <rect x="1" y="7" width="2" height="2" fill={c} />
       <rect x="4" y="5" width="2" height="4" fill={c} />
       <rect x="7" y="3" width="2" height="6" fill={c} />
@@ -52,7 +52,7 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
   )
   // settings
   return (
-    <svg width="18" height="18" viewBox="0 0 10 10" shapeRendering="crispEdges" style={{ imageRendering: 'pixelated' }}>
+    <svg width="22" height="22" viewBox="0 0 10 10" shapeRendering="crispEdges" style={{ imageRendering: 'pixelated' }}>
       <rect x="4" y="1" width="2" height="1" fill={c} />
       <rect x="1" y="4" width="1" height="2" fill={c} />
       <rect x="8" y="4" width="1" height="2" fill={c} />
@@ -81,8 +81,8 @@ export default function Layout() {
         style={{ background: 'var(--color-ink)' }}
       >
         <span style={{
-          fontFamily: '"Press Start 2P", monospace',
-          fontSize: 10,
+          fontFamily: 'system-ui, sans-serif',
+          fontSize: '0.8125rem',
           color: 'var(--color-gold)',
           letterSpacing: 1,
           lineHeight: 1.4,
@@ -103,7 +103,7 @@ export default function Layout() {
                     ? 'text-gold'
                     : 'text-cream hover:text-gold',
                 ].join(' ')}
-                style={{ fontFamily: '"Zen Maru Gothic", sans-serif' }}
+                style={{ fontFamily: 'system-ui, sans-serif' }}
               >
                 {({ isActive }) => (
                   <>

@@ -59,12 +59,12 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
   if (batchDone) {
     return (
       <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
-        <div style={{ fontFamily: '"VT323", monospace', fontSize: 18, color: 'var(--color-ink-soft)' }}>
+        <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
           已瀏覽 {BATCH_SIZE} 個文法項目
         </div>
         <button
           className="pbtn pbtn-primary"
-          style={{ padding: '10px 24px', fontSize: 12 }}
+          style={{ padding: '10px 24px', fontSize: '0.75rem' }}
           onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
         >
           下一組（{BATCH_SIZE} 個）
@@ -82,7 +82,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
       {/* 進度區 */}
       <div style={{ flexShrink: 0 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
             第 {index + 1} / {deck.length} 張
           </span>
         </div>
@@ -101,7 +101,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
           gap: 12,
           padding: '28px 20px',
         }}>
-          <p style={{ margin: 0, fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 17, fontWeight: 600, lineHeight: 2 }}>
+          <p style={{ margin: 0, fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontSize: '1.0625rem', fontWeight: 600, lineHeight: 2 }}>
             {before}
             <span style={{
               display: 'inline-block',
@@ -116,10 +116,10 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
             </span>
             {after}
           </p>
-          <span style={{ fontFamily: '"VT323", monospace', fontSize: 20, color: 'var(--color-matcha)' }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.625rem', color: 'var(--color-matcha)' }}>
             {current.payload.meaning}
           </span>
-          <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 8, color: 'var(--color-ink-soft)' }}>
+          <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.8125rem', color: 'var(--color-ink-soft)' }}>
             {current.payload.grammar}
           </span>
         </div>
@@ -129,7 +129,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
       <div style={{ flexShrink: 0, display: 'flex', gap: 10 }}>
         <button
           className="pbtn pbtn-ghost"
-          style={{ flex: 1, padding: '10px 0', fontSize: 13 }}
+          style={{ flex: 1, padding: '10px 0', fontSize: '0.8125rem' }}
           onClick={() => dispatch({ type: 'GO', index: index - 1 })}
           disabled={index === 0}
         >
@@ -137,7 +137,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
         </button>
         <button
           className="pbtn pbtn-primary"
-          style={{ flex: 2, padding: '10px 0', fontSize: 13 }}
+          style={{ flex: 2, padding: '10px 0', fontSize: '0.8125rem' }}
           onClick={() => index + 1 >= deck.length
             ? dispatch({ type: 'DONE' })
             : dispatch({ type: 'GO', index: index + 1 })}

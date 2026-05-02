@@ -13,6 +13,7 @@ import { loadVocabulary } from '@/features/vocabulary/data'
 import { loadGrammar } from '@/features/grammar/data'
 import VocabStudy from '@/features/vocabulary/components/VocabStudy'
 import GrammarStudy from '@/features/grammar/components/GrammarStudy'
+import BreadcrumbHeader from '@/shared/BreadcrumbHeader'
 
 type JlptLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
 const JLPT_LEVELS: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
@@ -124,28 +125,28 @@ function DrillItem({
         padding: '12px 14px',
         opacity: disabled ? 0.5 : 1,
         cursor: disabled ? 'not-allowed' : 'pointer',
-        fontFamily: '"Zen Maru Gothic", sans-serif',
+        fontFamily: 'system-ui, sans-serif',
         fontWeight: 700,
-        fontSize: 15,
+        fontSize: '0.9375rem',
         color: 'var(--color-ink)',
       }}
     >
       <span style={{ flex: 1 }}>{label}</span>
       {coming && (
-        <span className="ptag" style={{ fontSize: 8, padding: '2px 5px' }}>即將推出</span>
+        <span className="ptag" style={{ fontSize: '0.625rem', padding: '2px 5px' }}>即將推出</span>
       )}
       {badge !== undefined && (
         <span style={{
           fontFamily: '"VT323", monospace',
-          fontSize: 18,
+          fontSize: '1.5rem',
           color: 'var(--color-ink-soft)',
           lineHeight: 1,
         }}>{badge}</span>
       )}
       {!disabled && (
         <span style={{
-          fontFamily: '"Press Start 2P", monospace',
-          fontSize: 9,
+          fontFamily: 'system-ui, sans-serif',
+          fontSize: '1.5rem',
           color: 'var(--color-ink-soft)',
         }}>→</span>
       )}
@@ -181,8 +182,8 @@ function SubjectScreen({
               style={{ background: t.bg }}
               onClick={() => onSelect(id)}
             >
-              <span className="kana" style={{ fontSize: 36, lineHeight: 1, fontWeight: 900 }}>{t.char}</span>
-              <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, lineHeight: 1.4 }}>
+              <span className="kana" style={{ fontSize: '2.25rem', lineHeight: 1, fontWeight: 900 }}>{t.char}</span>
+              <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', lineHeight: 1.4 }}>
                 {t.label}
               </span>
             </div>
@@ -267,21 +268,21 @@ function LevelsScreen({
                 border: '3px solid var(--color-ink)',
                 background: 'var(--color-paper)',
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontFamily: '"Press Start 2P", monospace',
-                fontSize: 12,
+                fontFamily: 'system-ui, sans-serif',
+                fontSize: '0.875rem',
                 color: 'var(--color-ink)',
                 flexShrink: 0,
               }}>{level}</div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, lineHeight: 1.4 }}>
+                <div style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', lineHeight: 1.4 }}>
                   {level} {level === 'N5' ? '· 入門' : level === 'N4' ? '· 初級' : level === 'N3' ? '· 中級' : level === 'N2' ? '· 中高' : '· 高級'}
                 </div>
                 {available
-                  ? <div style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)', marginTop: 2 }}>{count} 個</div>
-                  : <div style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-faint)', marginTop: 2 }}>即將推出</div>
+                  ? <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)', marginTop: 2 }}>{count} 個</div>
+                  : <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-faint)', marginTop: 2 }}>即將推出</div>
                 }
               </div>
-              {available && <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, color: 'var(--color-ink-soft)' }}>→</span>}
+              {available && <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>→</span>}
             </button>
           )
         })}
@@ -354,10 +355,10 @@ function KanaRowContent({ kanaType, group, allChars }: {
           >
             {/* 假名 + 羅馬拼音 */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '14px 16px 10px' }}>
-              <span className="kana" style={{ fontSize: 52, lineHeight: 1, width: 60, textAlign: 'center', flexShrink: 0 }}>
+              <span className="kana" style={{ fontSize: '3.25rem', lineHeight: 1, width: 60, textAlign: 'center', flexShrink: 0 }}>
                 {char.kana}
               </span>
-              <span style={{ fontFamily: '"VT323", monospace', fontSize: 22, color: 'var(--color-ink-soft)' }}>
+              <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
                 {char.romaji}
               </span>
             </div>
@@ -368,16 +369,16 @@ function KanaRowContent({ kanaType, group, allChars }: {
                 display: 'flex', flexDirection: 'column', gap: 4,
               }}>
                 <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
-                  <span className="kana" style={{ fontSize: 17, fontWeight: 900 }}>{char.word.word}</span>
+                  <span className="kana" style={{ fontSize: '1.0625rem', fontWeight: 900 }}>{char.word.word}</span>
                   {char.word.word !== char.word.reading && (
-                    <span style={{ fontSize: 13, color: 'var(--color-ink-soft)' }}>（{char.word.reading}）</span>
+                    <span style={{ fontSize: '0.8125rem', color: 'var(--color-ink-soft)' }}>（{char.word.reading}）</span>
                   )}
-                  <span style={{ fontSize: 13, color: 'var(--color-matcha-dark)', marginLeft: 'auto', flexShrink: 0 }}>
+                  <span style={{ fontSize: '0.8125rem', color: 'var(--color-matcha-dark)', marginLeft: 'auto', flexShrink: 0 }}>
                     {char.word.meaning}
                   </span>
                 </div>
-                <p style={{ fontSize: 13, color: 'var(--color-ink-soft)', margin: 0 }}>{char.word.sentence}</p>
-                <p style={{ fontSize: 11, color: 'var(--color-ink-faint)', margin: 0 }}>{char.word.sentence_meaning}</p>
+                <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-soft)', margin: 0 }}>{char.word.sentence}</p>
+                <p style={{ fontSize: '0.6875rem', color: 'var(--color-ink-faint)', margin: 0 }}>{char.word.sentence_meaning}</p>
               </div>
             )}
           </div>
@@ -401,7 +402,7 @@ function VocabCategoryContent({ level, catId, allCards }: {
       <div className="flex-1 min-h-0">
         {cards.length > 0
           ? <VocabStudy cards={cards} />
-          : <p style={{ color: 'var(--color-ink-soft)', fontSize: 14 }}>此分類暫無資料。</p>
+          : <p style={{ color: 'var(--color-ink-soft)', fontSize: '0.875rem' }}>此分類暫無資料。</p>
         }
       </div>
     </div>
@@ -422,7 +423,7 @@ function GrammarCategoryContent({ level, catId, allCards }: {
       <div className="flex-1 min-h-0">
         {cards.length > 0
           ? <GrammarStudy cards={cards} />
-          : <p style={{ color: 'var(--color-ink-soft)', fontSize: 14 }}>此分類暫無資料。</p>
+          : <p style={{ color: 'var(--color-ink-soft)', fontSize: '0.875rem' }}>此分類暫無資料。</p>
         }
       </div>
     </div>
@@ -512,50 +513,15 @@ export default function LearnPage() {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* 頁首 */}
-      <div style={{
-        flexShrink: 0,
-        padding: '14px 16px 10px',
-        display: 'flex',
-        alignItems: 'center',
-        gap: 8,
-      }}>
-        <span style={{
-          fontFamily: '"Press Start 2P", monospace',
-          fontSize: 11,
-          lineHeight: 1.4,
-          color: 'var(--color-ink)',
-          flexShrink: 0,
-        }}>
-          學習
-        </span>
-        {breadcrumb.length > 1 && (
-          <span style={{
-            flex: 1,
-            fontFamily: '"Press Start 2P", monospace',
-            fontSize: 9,
-            lineHeight: 1.4,
-            color: 'var(--color-ink-soft)',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            whiteSpace: 'nowrap',
-          }}>
-            {breadcrumb.slice(1).join(' › ')}
-          </span>
-        )}
-        {!breadcrumb.length || breadcrumb.length <= 1 ? <span style={{ flex: 1 }} /> : null}
-        {canGoBack && (
-          <button
-            onClick={back}
-            className="pbtn pbtn-ghost"
-            style={{ padding: '4px 10px', fontSize: 13, flexShrink: 0 }}
-          >
-            ← 返回
-          </button>
-        )}
-      </div>
+      <BreadcrumbHeader
+        title={breadcrumb[0]}
+        crumbs={breadcrumb.slice(1)}
+        canGoBack={canGoBack}
+        onBack={back}
+      />
 
       {error && (
-        <p style={{ color: '#c8633a', fontSize: 13, padding: '0 16px 8px', flexShrink: 0 }}>{error}</p>
+        <p style={{ color: '#c8633a', fontSize: '0.8125rem', padding: '0 16px 8px', flexShrink: 0 }}>{error}</p>
       )}
 
       <div style={{ flex: 1, minHeight: 0, padding: '0 16px 8px' }}>

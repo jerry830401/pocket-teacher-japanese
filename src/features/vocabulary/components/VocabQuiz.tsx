@@ -108,14 +108,14 @@ export default function VocabQuiz({ cards }: Props) {
       : '多練幾輪，加油！'
     return (
       <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
-        <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 32, color: 'var(--color-indigo-px)' }}>{pct}%</div>
-        <div style={{ fontFamily: '"VT323", monospace', fontSize: 18, color: 'var(--color-ink-soft)' }}>
+        <div style={{ fontFamily: 'system-ui, sans-serif', fontSize: '2rem', color: 'var(--color-indigo-px)' }}>{pct}%</div>
+        <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
           {deck.length} 題中答對 {correct} 題
         </div>
         <div className="pcard" style={{ background: 'var(--color-sakura-soft)', textAlign: 'center', width: '100%', maxWidth: 280 }}>
-          <p style={{ margin: 0, fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 14 }}>{msg}</p>
+          <p style={{ margin: 0, fontFamily: 'system-ui, sans-serif', fontSize: '0.875rem' }}>{msg}</p>
         </div>
-        <button className="pbtn pbtn-primary" style={{ padding: '10px 24px', fontSize: 12 }} onClick={startNextRound}>
+        <button className="pbtn pbtn-primary" style={{ padding: '10px 24px', fontSize: '0.75rem' }} onClick={startNextRound}>
           下一輪（{roundSize} 題）
         </button>
       </div>
@@ -133,10 +133,10 @@ export default function VocabQuiz({ cards }: Props) {
       {/* 進度區 */}
       <div style={{ flexShrink: 0 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
-          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
             第 {index + 1} / {deck.length} 題
           </span>
-          <span style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
             正確 {correct}
           </span>
         </div>
@@ -156,10 +156,10 @@ export default function VocabQuiz({ cards }: Props) {
           gap: 8,
           padding: '28px 16px',
         }}>
-          <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 48 }}>
+          <span style={{ fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: '3rem' }}>
             {current.payload.word}
           </span>
-          <span style={{ fontFamily: '"VT323", monospace', fontSize: 22, color: 'var(--color-indigo-px)' }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-indigo-px)' }}>
             {current.payload.reading}
           </span>
           <span className="ptag">{POS_LABEL[current.payload.pos] ?? current.payload.pos}</span>
@@ -183,7 +183,7 @@ export default function VocabQuiz({ cards }: Props) {
               style={{ opacity: selected && !isCorrect && !isPicked ? 0.4 : 1, justifyContent: 'center' }}
               onClick={() => pick(choice)}
             >
-              <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontSize: 14, fontWeight: 600 }}>
+              <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.875rem', fontWeight: 600 }}>
                 {choice.payload.meaning}
               </span>
             </button>
@@ -195,7 +195,7 @@ export default function VocabQuiz({ cards }: Props) {
       <div style={{ flexShrink: 0, display: 'flex', justifyContent: 'center' }}>
         <button
           className="pbtn pbtn-primary"
-          style={{ padding: '10px 32px', fontSize: 13, visibility: showNext ? 'visible' : 'hidden', width: '100%' }}
+          style={{ padding: '10px 32px', fontSize: '0.8125rem', visibility: showNext ? 'visible' : 'hidden', width: '100%' }}
           onClick={() => advance(index + 1)}
           disabled={!showNext}
         >

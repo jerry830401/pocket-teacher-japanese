@@ -6,7 +6,6 @@ export type QuizRoundSize = typeof QUIZ_ROUND_OPTIONS[number]
 export type QuizKey = 'kana' | 'vocab' | 'grammar' | 'listening'
 export type MascotKind = 'cat' | 'shiba'
 export type CatVariant = 'black' | 'tuxedo' | 'calico' | 'orange'
-
 interface SettingsState {
   autoNextKana: boolean
   autoNextVocab: boolean

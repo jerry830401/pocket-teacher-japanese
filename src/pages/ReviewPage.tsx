@@ -79,14 +79,14 @@ export default function ReviewPage() {
   if (reviewState.status === 'loading') {
     return (
       <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p style={{ color: 'var(--color-ink-soft)', fontFamily: '"VT323", monospace', fontSize: 20 }}>載入中⋯</p>
+        <p style={{ color: 'var(--color-ink-soft)', fontFamily: '"VT323", monospace', fontSize: '1.625rem' }}>載入中⋯</p>
       </div>
     )
   }
   if (reviewState.status === 'error') {
     return (
       <div style={{ height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <p style={{ color: '#c8633a', fontSize: 13 }}>資料載入失敗，請重新整理頁面</p>
+        <p style={{ color: '#c8633a', fontSize: '0.8125rem' }}>資料載入失敗，請重新整理頁面</p>
       </div>
     )
   }
@@ -97,10 +97,10 @@ export default function ReviewPage() {
       <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
         {/* 頁首 */}
         <div style={{ flexShrink: 0, padding: '14px 16px 10px', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, color: 'var(--color-ink-soft)', flex: 1 }}>
+          <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', color: 'var(--color-ink-soft)', flex: 1 }}>
             {meta.label}複習
           </span>
-          <button className="pbtn pbtn-ghost" style={{ padding: '4px 10px', fontSize: 13, flexShrink: 0 }}
+          <button className="pbtn pbtn-ghost" style={{ padding: '4px 10px', fontSize: '1rem', flexShrink: 0 }}
             onClick={() => setReviewState({ status: 'idle' })}>
             ← 返回
           </button>
@@ -110,7 +110,7 @@ export default function ReviewPage() {
           {reviewState.subject === 'vocab' && (() => {
             if (reviewState.cards.length < 4) return (
               <div className="pcard" style={{ background: 'var(--color-sakura-soft)' }}>
-                <p style={{ margin: 0, fontSize: 14 }}>錯題不足 4 張，多練幾輪後再回來！</p>
+                <p style={{ margin: 0, fontSize: '0.875rem' }}>錯題不足 4 張，多練幾輪後再回來！</p>
               </div>
             )
             return <VocabQuiz cards={reviewState.cards} />
@@ -118,7 +118,7 @@ export default function ReviewPage() {
           {reviewState.subject === 'grammar' && (() => {
             if (reviewState.cards.length < 4) return (
               <div className="pcard" style={{ background: 'var(--color-sakura-soft)' }}>
-                <p style={{ margin: 0, fontSize: 14 }}>錯題不足 4 張，多練幾輪後再回來！</p>
+                <p style={{ margin: 0, fontSize: '0.875rem' }}>錯題不足 4 張，多練幾輪後再回來！</p>
               </div>
             )
             return <GrammarQuiz cards={reviewState.cards} />
@@ -126,7 +126,7 @@ export default function ReviewPage() {
           {reviewState.subject === 'kana' && (() => {
             if (reviewState.chars.length < 4) return (
               <div className="pcard" style={{ background: 'var(--color-sakura-soft)' }}>
-                <p style={{ margin: 0, fontSize: 14 }}>錯題不足 4 張，多練幾輪後再回來！</p>
+                <p style={{ margin: 0, fontSize: '0.875rem' }}>錯題不足 4 張，多練幾輪後再回來！</p>
               </div>
             )
             return <FlashCardQuiz chars={reviewState.chars} mode="kana→romaji" />
@@ -140,15 +140,15 @@ export default function ReviewPage() {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       <div style={{ flexShrink: 0, padding: '14px 16px 10px' }}>
-        <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 11, lineHeight: 1.4 }}>錯題本</span>
+        <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', lineHeight: 1.4 }}>錯題本</span>
       </div>
 
       <div style={{ flex: 1, minHeight: 0, overflowY: 'auto', padding: '0 16px 8px' }}>
         {pageState.status === 'loading' && (
-          <p style={{ color: 'var(--color-ink-soft)', fontFamily: '"VT323", monospace', fontSize: 20 }}>載入中⋯</p>
+          <p style={{ color: 'var(--color-ink-soft)', fontFamily: '"VT323", monospace', fontSize: '1.625rem' }}>載入中⋯</p>
         )}
         {pageState.status === 'error' && (
-          <p style={{ color: '#c8633a', fontSize: 13 }}>無法讀取學習記錄</p>
+          <p style={{ color: '#c8633a', fontSize: '0.8125rem' }}>無法讀取學習記錄</p>
         )}
         {pageState.status === 'ready' && (() => {
           const { weakIds } = pageState
@@ -161,10 +161,10 @@ export default function ReviewPage() {
                 textAlign: 'center',
                 padding: '32px 16px',
               }}>
-                <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 10, lineHeight: 1.6, marginBottom: 8 }}>
+                <div style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.8125rem', lineHeight: 1.6, marginBottom: 8 }}>
                   全部答對！
                 </div>
-                <p style={{ margin: 0, fontSize: 14, color: 'var(--color-ink-soft)' }}>目前沒有錯題，繼續保持！</p>
+                <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--color-ink-soft)' }}>目前沒有錯題，繼續保持！</p>
               </div>
             )
           }
@@ -179,16 +179,16 @@ export default function ReviewPage() {
                   <div key={subject} className="pcard" style={{ background: meta.bg }}>
                     <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                       <div>
-                        <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 10, lineHeight: 1.4 }}>
+                        <div style={{ fontFamily: 'system-ui, sans-serif', fontSize: '0.8125rem', lineHeight: 1.4 }}>
                           {meta.label}
                         </div>
-                        <div style={{ fontFamily: '"VT323", monospace', fontSize: 18, color: 'var(--color-ink-soft)', marginTop: 2 }}>
+                        <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)', marginTop: 2 }}>
                           {count} 張待加強
                         </div>
                       </div>
                       <button
                         className="pbtn pbtn-primary"
-                        style={{ padding: '8px 14px', fontSize: 13 }}
+                        style={{ padding: '8px 14px', fontSize: '0.8125rem' }}
                         onClick={() => startReview(subject, weakIds[subject])}
                       >
                         ▶ 開始複習

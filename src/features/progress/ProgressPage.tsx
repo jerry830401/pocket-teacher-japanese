@@ -39,8 +39,8 @@ function ModuleBlock({
   return (
     <div className="pcard" style={{ background: bg, padding: '12px 14px' }}>
       <div style={{
-        fontFamily: '"Press Start 2P", monospace',
-        fontSize: 9,
+        fontFamily: 'system-ui, sans-serif',
+        fontSize: '1rem',
         lineHeight: 1.4,
         marginBottom: 8,
         color: 'var(--color-ink)',
@@ -50,10 +50,10 @@ function ModuleBlock({
       {showSeen && (
         <div style={{ marginBottom: 6 }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
-            <span style={{ fontFamily: '"VT323", monospace', fontSize: 14, color: 'var(--color-ink-soft)' }}>
+            <span style={{ fontFamily: '"VT323", monospace', fontSize: '0.875rem', color: 'var(--color-ink-soft)' }}>
               已學習 {seen} / {total}
             </span>
-            <span style={{ fontFamily: '"VT323", monospace', fontSize: 14, color: 'var(--color-ink-soft)' }}>
+            <span style={{ fontFamily: '"VT323", monospace', fontSize: '0.875rem', color: 'var(--color-ink-soft)' }}>
               {pct(seen, total)}%
             </span>
           </div>
@@ -62,10 +62,10 @@ function ModuleBlock({
       )}
       <div>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
-          <span style={{ fontFamily: '"VT323", monospace', fontSize: 14, color: 'var(--color-ink-soft)' }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '0.875rem', color: 'var(--color-ink-soft)' }}>
             已熟悉 {mast} / {total}
           </span>
-          <span style={{ fontFamily: '"VT323", monospace', fontSize: 14, color: 'var(--color-ink-soft)' }}>
+          <span style={{ fontFamily: '"VT323", monospace', fontSize: '0.875rem', color: 'var(--color-ink-soft)' }}>
             {pct(mast, total)}%
           </span>
         </div>
@@ -87,10 +87,10 @@ export default function ProgressPage() {
   }, [])
 
   if (loadState.status === 'loading') return (
-    <p style={{ color: 'var(--color-ink-soft)', fontFamily: '"VT323", monospace', fontSize: 20, padding: 16 }}>載入中⋯</p>
+    <p style={{ color: 'var(--color-ink-soft)', fontFamily: '"VT323", monospace', fontSize: '1.625rem', padding: 16 }}>載入中⋯</p>
   )
   if (loadState.status === 'error') return (
-    <p style={{ color: '#c8633a', fontSize: 13, padding: 16 }}>
+    <p style={{ color: '#c8633a', fontSize: '0.8125rem', padding: 16 }}>
       無法讀取學習記錄，您的瀏覽器可能不支援本地儲存（如私密模式）。
     </p>
   )
@@ -107,14 +107,14 @@ export default function ProgressPage() {
     <div style={{ height: '100%', overflowY: 'auto', padding: '0 16px 16px' }}>
       {/* 頁首 */}
       <div style={{ padding: '14px 0 10px' }}>
-        <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 11, lineHeight: 1.4 }}>進度</span>
+        <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', lineHeight: 1.4 }}>進度</span>
       </div>
 
       {/* 五十音 */}
       <section style={{ marginBottom: 20 }}>
         <div style={{
-          fontFamily: '"Press Start 2P", monospace',
-          fontSize: 8,
+          fontFamily: 'system-ui, sans-serif',
+          fontSize: '0.8125rem',
           color: 'var(--color-ink-soft)',
           marginBottom: 8,
           letterSpacing: 1,
@@ -138,7 +138,7 @@ export default function ProgressPage() {
             )
           })}
           {hiraganaCards.length === 0 && katakanaCards.length === 0 && (
-            <p style={{ fontSize: 13, color: 'var(--color-ink-faint)' }}>尚無記錄</p>
+            <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-faint)' }}>尚無記錄</p>
           )}
         </div>
       </section>
@@ -146,8 +146,8 @@ export default function ProgressPage() {
       {/* 單字 */}
       <section style={{ marginBottom: 20 }}>
         <div style={{
-          fontFamily: '"Press Start 2P", monospace',
-          fontSize: 8,
+          fontFamily: 'system-ui, sans-serif',
+          fontSize: '0.8125rem',
           color: 'var(--color-ink-soft)',
           marginBottom: 8,
           letterSpacing: 1,
@@ -169,7 +169,7 @@ export default function ProgressPage() {
             )
           })}
           {JLPT_LEVELS.every((l) => levelCards('vocab', l).length === 0) && (
-            <p style={{ fontSize: 13, color: 'var(--color-ink-faint)' }}>尚無記錄</p>
+            <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-faint)' }}>尚無記錄</p>
           )}
         </div>
       </section>
@@ -177,8 +177,8 @@ export default function ProgressPage() {
       {/* 文法 */}
       <section style={{ marginBottom: 20 }}>
         <div style={{
-          fontFamily: '"Press Start 2P", monospace',
-          fontSize: 8,
+          fontFamily: 'system-ui, sans-serif',
+          fontSize: '0.8125rem',
           color: 'var(--color-ink-soft)',
           marginBottom: 8,
           letterSpacing: 1,
@@ -200,13 +200,13 @@ export default function ProgressPage() {
             )
           })}
           {JLPT_LEVELS.every((l) => levelCards('grammar', l).length === 0) && (
-            <p style={{ fontSize: 13, color: 'var(--color-ink-faint)' }}>尚無記錄</p>
+            <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-faint)' }}>尚無記錄</p>
           )}
         </div>
       </section>
 
       {all.length === 0 && (
-        <p style={{ fontSize: 13, color: 'var(--color-ink-faint)', textAlign: 'center', padding: '8px 0' }}>
+        <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-faint)', textAlign: 'center', padding: '8px 0' }}>
           還沒有練習記錄，去各模組學習後就會顯示統計。
         </p>
       )}

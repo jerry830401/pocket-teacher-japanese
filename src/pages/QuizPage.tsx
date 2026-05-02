@@ -12,6 +12,7 @@ import VocabQuiz from '@/features/vocabulary/components/VocabQuiz'
 import GrammarQuiz from '@/features/grammar/components/GrammarQuiz'
 import ListeningQuiz from '@/features/listening/components/ListeningQuiz'
 import { useSettings } from '@/stores/useSettings'
+import BreadcrumbHeader from '@/shared/BreadcrumbHeader'
 
 type JlptLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
 const LEVELS: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
@@ -94,10 +95,10 @@ function OptionButton({
       }}
     >
       <div style={{ flex: 1 }}>
-        <div style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 16 }}>{label}</div>
-        {sub && <div style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)', marginTop: 1 }}>{sub}</div>}
+        <div style={{ fontFamily: 'system-ui, sans-serif', fontWeight: 700, fontSize: '1rem' }}>{label}</div>
+        {sub && <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)', marginTop: 1 }}>{sub}</div>}
       </div>
-      <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, color: 'var(--color-ink-soft)' }}>→</span>
+      <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>→</span>
     </button>
   )
 }
@@ -147,18 +148,18 @@ function LevelGrid({
               border: '3px solid var(--color-ink)',
               background: 'var(--color-paper)',
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontFamily: '"Press Start 2P", monospace',
-              fontSize: 11,
+              fontFamily: 'system-ui, sans-serif',
+              fontSize: '1rem',
               flexShrink: 0,
             }}>{l}</div>
             <div style={{ flex: 1 }}>
-              <div style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 15 }}>{l}</div>
+              <div style={{ fontFamily: 'system-ui, sans-serif', fontWeight: 700, fontSize: '0.9375rem' }}>{l}</div>
               {available
-                ? <div style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-soft)' }}>{count} 題</div>
-                : <div style={{ fontFamily: '"VT323", monospace', fontSize: 16, color: 'var(--color-ink-faint)' }}>即將推出</div>
+                ? <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>{count} 題</div>
+                : <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-faint)' }}>即將推出</div>
               }
             </div>
-            {available && <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, color: 'var(--color-ink-soft)' }}>→</span>}
+            {available && <span style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>→</span>}
           </button>
         )
       })}
@@ -179,9 +180,9 @@ function KanaQuizScreen({ kanaType, quizMode }: { kanaType: KanaType; quizMode: 
     <SlideScreen dir="forward">
       <div className="flex-1 min-h-0">
         {error
-          ? <p style={{ color: '#c8633a', fontSize: 13 }}>{error}</p>
+          ? <p style={{ color: '#c8633a', fontSize: '0.8125rem' }}>{error}</p>
           : chars.length === 0
-            ? <p style={{ color: 'var(--color-ink-soft)', fontSize: 14 }}>載入中⋯</p>
+            ? <p style={{ color: 'var(--color-ink-soft)', fontSize: '0.875rem' }}>載入中⋯</p>
             : <FlashCardQuiz chars={filtered} mode={quizMode} />
         }
       </div>
@@ -267,10 +268,10 @@ function ListeningQuizScreen({ level, allCards }: { level: JlptLevel; allCards: 
 function NotStudied({ level, needed }: { level: JlptLevel; needed: number }) {
   return (
     <div className="pcard" style={{ background: 'var(--color-sakura-soft)' }}>
-      <div style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 9, lineHeight: 1.6, marginBottom: 8 }}>
+      <div style={{ fontFamily: 'system-ui, sans-serif', fontSize: '1rem', lineHeight: 1.6, marginBottom: 8 }}>
         尚未學習足夠題目
       </div>
-      <p style={{ fontSize: 14, margin: 0, color: 'var(--color-ink-soft)' }}>
+      <p style={{ fontSize: '0.875rem', margin: 0, color: 'var(--color-ink-soft)' }}>
         {level} 至少需看過 {needed} 張卡片。請先前往「學習」頁面瀏覽，再回來測驗。
       </p>
     </div>
@@ -322,40 +323,15 @@ export default function QuizPage() {
   return (
     <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
       {/* 頁首 */}
-      <div style={{
-        flexShrink: 0,
-        padding: '14px 16px 10px',
-        display: 'flex',
-        alignItems: 'center',
-        gap: 8,
-      }}>
-        <span style={{ fontFamily: '"Press Start 2P", monospace', fontSize: 11, lineHeight: 1.4, flexShrink: 0 }}>
-          測驗
-        </span>
-        {breadcrumb.length > 1 && (
-          <span style={{
-            flex: 1,
-            fontFamily: '"Press Start 2P", monospace',
-            fontSize: 9,
-            lineHeight: 1.4,
-            color: 'var(--color-ink-soft)',
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
-            whiteSpace: 'nowrap',
-          }}>
-            {breadcrumb.slice(1).join(' › ')}
-          </span>
-        )}
-        {!breadcrumb.length || breadcrumb.length <= 1 ? <span style={{ flex: 1 }} /> : null}
-        {canGoBack && (
-          <button className="pbtn pbtn-ghost" style={{ padding: '4px 10px', fontSize: 13, flexShrink: 0 }} onClick={pop}>
-            ← 返回
-          </button>
-        )}
-      </div>
+      <BreadcrumbHeader
+        title={breadcrumb[0]}
+        crumbs={breadcrumb.slice(1)}
+        canGoBack={canGoBack}
+        onBack={pop}
+      />
 
       {dataError && (
-        <p style={{ color: '#c8633a', fontSize: 13, padding: '0 16px 8px', flexShrink: 0 }}>{dataError}</p>
+        <p style={{ color: '#c8633a', fontSize: '0.8125rem', padding: '0 16px 8px', flexShrink: 0 }}>{dataError}</p>
       )}
 
       <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', padding: '0 16px 8px' }}>

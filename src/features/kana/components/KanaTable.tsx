@@ -49,8 +49,8 @@ function Section({
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
       <span style={{
-        fontFamily: '"Press Start 2P", monospace',
-        fontSize: 9,
+        fontFamily: 'system-ui, sans-serif',
+        fontSize: '1rem',
         color: 'var(--color-ink-soft)',
         letterSpacing: '0.15em',
       }}>
@@ -73,7 +73,7 @@ function Section({
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontFamily: '"VT323", monospace',
-                  fontSize: 16,
+                  fontSize: '1.375rem',
                   color: 'var(--color-ink-soft)',
                 }}
               >
@@ -91,7 +91,7 @@ function Section({
                   flexShrink: 0,
                   textAlign: 'right',
                   fontFamily: '"VT323", monospace',
-                  fontSize: 13,
+                  fontSize: '0.8125rem',
                   color: 'var(--color-ink-soft)',
                   paddingRight: 2,
                 }}>
@@ -136,11 +136,11 @@ function KanaCell({ char, showRomaji }: { char: KanaChar | null; showRomaji: boo
       onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--color-indigo-px-soft)')}
       onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--color-paper)')}
     >
-      <span style={{ fontFamily: '"Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: 18, lineHeight: 1 }}>
+      <span style={{ fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: '1.125rem', lineHeight: 1 }}>
         {char.kana}
       </span>
       {showRomaji && (
-        <span style={{ fontFamily: '"VT323", monospace', fontSize: 12, color: 'var(--color-ink-soft)', marginTop: 1 }}>
+        <span style={{ fontFamily: '"VT323", monospace', fontSize: '0.75rem', color: 'var(--color-ink-soft)', marginTop: 1 }}>
           {char.romaji}
         </span>
       )}
