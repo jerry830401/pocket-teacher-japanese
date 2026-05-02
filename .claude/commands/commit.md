@@ -25,7 +25,7 @@
    - 若使用者提供新的 message，使用使用者提供的版本
 
 4. **執行 commit**
-   - `git add -u`（只暫存已追蹤的變更，不含 untracked 新檔案）
+   - `git add -A`（暫存所有變更，含新增 untracked 檔案、修改、刪除）
    - `git commit -m "<message>"`
 
 5. **回報結果**
