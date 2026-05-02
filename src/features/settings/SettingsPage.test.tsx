@@ -69,8 +69,8 @@ describe('SettingsPage', () => {
     expect(screen.queryByText('離線')).not.toBeInTheDocument()
   })
 
-  it('renders back button', () => {
+  it('renders version string', () => {
     renderSettings()
-    expect(screen.getByText(/← 返回/)).toBeInTheDocument()
+    expect(screen.getByText(/^v\d/)).toBeInTheDocument()
   })
 })

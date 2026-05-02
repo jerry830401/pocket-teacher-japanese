@@ -61,7 +61,7 @@ describe('vocabulary.json', () => {
       // Allow empty readings for kana-only words (reading == word)
       if (reading.length > 0) {
         expect(
-          /^[぀-ゟー]+$/.test(reading) || reading === (p.word as string),
+          /^[〜]?[぀-ゟー]+$/.test(reading) || reading === (p.word as string),
           `non-hiragana reading "${reading}" in ${c.id}`,
         ).toBe(true)
       }

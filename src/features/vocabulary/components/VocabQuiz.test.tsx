@@ -61,8 +61,8 @@ describe('VocabQuiz', () => {
     await userEvent.click(choiceButtons[0])
 
     const allButtons = screen.getAllByRole('button')
-    const hasGreen = allButtons.some((b) => b.className.includes('green'))
-    const hasRed = allButtons.some((b) => b.className.includes('red'))
+    const hasGreen = allButtons.some((b) => b.className.includes('px-choice-correct'))
+    const hasRed = allButtons.some((b) => b.className.includes('px-choice-wrong'))
     expect(hasGreen || hasRed).toBe(true)
   })
 
@@ -98,7 +98,7 @@ describe('VocabQuiz', () => {
       // fallback: just verify visual feedback
       await userEvent.click(correctBtn)
       const allButtons = screen.getAllByRole('button')
-      expect(allButtons.some((b) => b.className.includes('green'))).toBe(true)
+      expect(allButtons.some((b) => b.className.includes('px-choice-correct'))).toBe(true)
     }
   })
 

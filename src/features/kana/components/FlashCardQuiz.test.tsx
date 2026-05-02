@@ -65,8 +65,8 @@ describe('FlashCardQuiz', () => {
 
     // After picking, at least one button should have a green or red border class
     const allButtons = screen.getAllByRole('button')
-    const hasGreen = allButtons.some((b) => b.className.includes('green'))
-    const hasRed = allButtons.some((b) => b.className.includes('red'))
+    const hasGreen = allButtons.some((b) => b.className.includes('px-choice-correct'))
+    const hasRed = allButtons.some((b) => b.className.includes('px-choice-wrong'))
     expect(hasGreen || hasRed).toBe(true)
   })
 

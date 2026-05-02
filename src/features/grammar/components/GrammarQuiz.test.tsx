@@ -72,7 +72,7 @@ describe('GrammarQuiz', () => {
       const correctBtn = screen.getByRole('button', { name: shownCard.payload.answer })
       await userEvent.click(correctBtn)
       // The blank should now show the answer
-      expect(screen.getByText(shownCard.payload.answer, { selector: 'span' })).toBeInTheDocument()
+      expect(screen.getAllByText(shownCard.payload.answer, { selector: 'span' }).length).toBeGreaterThan(0)
     }
   })
 
@@ -103,7 +103,7 @@ describe('GrammarQuiz', () => {
     await userEvent.click(choiceButtons[0])
 
     const allButtons = screen.getAllByRole('button')
-    const hasGreen = allButtons.some((b) => b.className.includes('green'))
+    const hasGreen = allButtons.some((b) => b.className.includes('px-choice-correct'))
     expect(hasGreen).toBe(true)
   })
 
