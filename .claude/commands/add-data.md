@@ -100,6 +100,7 @@ allowed-tools: Read, Write, Edit, Bash
   "level": "{LEVEL}",
   "payload": {
     "sentence": "含___的日文例句",
+    "sentenceRuby": "含___與<ruby>漢字<rt>よみ</rt></ruby>標記的版本",
     "answer": "正確填入的助詞或語尾",
     "choices": ["answer", "錯誤選項1", "錯誤選項2", "錯誤選項3"],
     "meaning": "繁體中文翻譯",
@@ -111,6 +112,10 @@ allowed-tools: Read, Write, Edit, Bash
 
 Grammar 規範：
 - `sentence` 必須含且只含一個 `___`
+- `sentenceRuby` 是 `sentence` 的 ruby 標記版本，漢字上方顯示平假名讀音
+  - 格式：`<ruby>漢字<rt>よみ</rt></ruby>`，`___` 保持原樣不變
+  - 假名、助詞、符號不需要加 ruby 標記
+  - 例：`<ruby>私<rt>わたし</rt></ruby>___<ruby>学生<rt>がくせい</rt></ruby>です。`
 - `choices` 恰好 4 個，`answer` 必須是其中之一，不可重複
 - `choices` 的順序：第一個放 answer，其餘為干擾選項
 - 干擾選項必須是同類型的助詞或語尾（不能隨意湊數）

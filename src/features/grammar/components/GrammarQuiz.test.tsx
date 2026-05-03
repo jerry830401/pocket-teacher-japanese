@@ -57,8 +57,10 @@ describe('GrammarQuiz', () => {
 
   it('shows the sentence with a blank placeholder', () => {
     render(<GrammarQuiz cards={CARDS} />)
-    expect(screen.getByText(/私は/)).toBeInTheDocument()
-    expect(screen.getByText(/学校に行きます。/)).toBeInTheDocument()
+    // RubyText splits the sentence into multiple inline nodes; check container text instead
+    const body = document.body.textContent ?? ''
+    expect(body).toMatch(/私は/)
+    expect(body).toMatch(/学校に行きます。/)
   })
 
   it('fills the blank with selected answer after picking', async () => {

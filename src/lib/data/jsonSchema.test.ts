@@ -109,6 +109,24 @@ describe('grammar.json', () => {
     }
   })
 
+  it('sentenceRuby, when present, contains exactly one blank (___) and valid <ruby> tags', () => {
+    const rubyTagPattern = /^<ruby>[^<]+<rt>[^<]+<\/rt><\/ruby>$/
+    for (const card of cards) {
+      const c = card as Record<string, unknown>
+      const p = c.payload as Record<string, unknown>
+      const ruby = p.sentenceRuby
+      if (ruby === undefined) continue
+      expect(typeof ruby, `sentenceRuby type in ${c.id}`).toBe('string')
+      const blanks = ((ruby as string).match(/___/g) ?? []).length
+      expect(blanks, `sentenceRuby blank count in ${c.id}`).toBe(1)
+      // each <ruby>...</ruby> block must match the expected format
+      const rubyBlocks = (ruby as string).match(/<ruby>.*?<\/ruby>/g) ?? []
+      for (const block of rubyBlocks) {
+        expect(rubyTagPattern.test(block), `malformed ruby tag "${block}" in ${c.id}`).toBe(true)
+      }
+    }
+  })
+
   it('choices has exactly 4 items with no duplicates', () => {
     for (const card of cards) {
       const c = card as Record<string, unknown>

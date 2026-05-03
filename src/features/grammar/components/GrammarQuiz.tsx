@@ -3,6 +3,7 @@ import type { GrammarCard } from '../types'
 import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
 import { useSettings } from '@/stores/useSettings'
+import RubyText from './RubyText'
 
 
 interface Props {
@@ -49,11 +50,6 @@ function buildRound(cards: GrammarCard[], size: number): GrammarCard[] {
   return shuffle(cards).slice(0, size)
 }
 
-function splitSentence(sentence: string): [string, string] {
-  const idx = sentence.indexOf('___')
-  if (idx === -1) return [sentence, '']
-  return [sentence.slice(0, idx), sentence.slice(idx + 3)]
-}
 
 export default function GrammarQuiz({ cards }: Props) {
   const autoNext = useSettings((s) => s.autoNextGrammar)
@@ -125,7 +121,6 @@ export default function GrammarQuiz({ cards }: Props) {
 
   if (!current) return null
 
-  const [before, after] = splitSentence(current.payload.sentence)
   const isLastQuestion = index === deck.length - 1
   const showNext = selected !== null && !(autoNext && selected === current.payload.answer)
   const progress = ((index + (selected ? 1 : 0)) / deck.length) * 100
@@ -160,27 +155,28 @@ export default function GrammarQuiz({ cards }: Props) {
           padding: '28px 16px',
         }}>
           {/* 填空句子 */}
-          <p style={{ margin: 0, fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontSize: '1.0625rem', fontWeight: 600, textAlign: 'center', lineHeight: 2 }}>
-            {before}
-            <span style={{
-              display: 'inline-block',
-              minWidth: 48,
-              marginInline: 4,
-              paddingInline: 6,
-              borderBottom: `2px solid ${
-                !selected ? 'var(--color-matcha)'
+          <p style={{ margin: 0, fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontSize: '1.0625rem', fontWeight: 600, textAlign: 'center', lineHeight: 2.4 }}>
+            <RubyText
+              html={current.payload.sentenceRuby}
+              fallback={current.payload.sentence}
+              blankContent={selected ?? '　　'}
+              blankStyle={{
+                display: 'inline-block',
+                minWidth: 48,
+                marginInline: 4,
+                paddingInline: 6,
+                borderBottom: `2px solid ${
+                  !selected ? 'var(--color-matcha)'
+                    : isAnswerCorrect ? '#5c9e31'
+                    : '#c8633a'
+                }`,
+                color: !selected ? 'var(--color-matcha)'
                   : isAnswerCorrect ? '#5c9e31'
-                  : '#c8633a'
-              }`,
-              color: !selected ? 'var(--color-matcha)'
-                : isAnswerCorrect ? '#5c9e31'
-                : '#c8633a',
-              textAlign: 'center',
-              transition: 'color 0.15s, border-color 0.15s',
-            }}>
-              {selected ?? '　　'}
-            </span>
-            {after}
+                  : '#c8633a',
+                textAlign: 'center',
+                transition: 'color 0.15s, border-color 0.15s',
+              }}
+            />
           </p>
 
           {/* 答案揭示 */}

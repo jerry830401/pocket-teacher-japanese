@@ -1,6 +1,7 @@
 import { useReducer, useEffect } from 'react'
 import type { GrammarCard } from '../types'
 import { markAsSeen } from '@/lib/db/db'
+import RubyText from './RubyText'
 
 const BATCH_SIZE = 5
 
@@ -32,11 +33,6 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
-function splitSentence(sentence: string): [string, string] {
-  const idx = sentence.indexOf('___')
-  if (idx === -1) return [sentence, '']
-  return [sentence.slice(0, idx), sentence.slice(idx + 3)]
-}
 
 export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
   const [state, dispatch] = useReducer(reducer, undefined, () => ({
@@ -74,7 +70,6 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
   }
 
   const current = deck[index]
-  const [before, after] = splitSentence(current.payload.sentence)
   const progress = ((index + 1) / deck.length) * 100
 
   return (
@@ -101,20 +96,21 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
           gap: 12,
           padding: '28px 20px',
         }}>
-          <p style={{ margin: 0, fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontSize: '1.0625rem', fontWeight: 600, lineHeight: 2 }}>
-            {before}
-            <span style={{
-              display: 'inline-block',
-              minWidth: 48,
-              marginInline: 4,
-              paddingInline: 6,
-              borderBottom: '2px solid var(--color-matcha)',
-              color: 'var(--color-matcha)',
-              textAlign: 'center',
-            }}>
-              {current.payload.answer}
-            </span>
-            {after}
+          <p style={{ margin: 0, fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontSize: '1.0625rem', fontWeight: 600, lineHeight: 2.4 }}>
+            <RubyText
+              html={current.payload.sentenceRuby}
+              fallback={current.payload.sentence}
+              blankContent={current.payload.answer}
+              blankStyle={{
+                display: 'inline-block',
+                minWidth: 48,
+                marginInline: 4,
+                paddingInline: 6,
+                borderBottom: '2px solid var(--color-matcha)',
+                color: 'var(--color-matcha)',
+                textAlign: 'center',
+              }}
+            />
           </p>
           <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.625rem', color: 'var(--color-matcha)' }}>
             {current.payload.meaning}

@@ -97,8 +97,8 @@ describe('ProgressPage', () => {
     render(<ProgressPage />)
 
     await waitFor(() => {
-      // 2 mastered out of 500 total
-      expect(screen.getByText(/已熟悉 2 \/ 500/)).toBeInTheDocument()
+      // 2 mastered; total is read from vocabulary.json so we only assert the mastered count
+      expect(screen.getByText(/已熟悉 2 \//)).toBeInTheDocument()
     })
   })
 })
