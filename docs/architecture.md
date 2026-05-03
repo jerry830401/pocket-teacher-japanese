@@ -8,11 +8,12 @@
 
 | 檔案 | 職責 |
 |------|------|
-| `src/pages/QuizPage.tsx` | 測驗頁（科目 tab、各 Section 元件） |
+| `src/pages/QuizPage.tsx` | 測驗頁（科目 tile、各 Screen 元件） |
 | `src/pages/ReviewPage.tsx` | 錯題複習頁（弱卡列表 + 啟動複習） |
+| `src/features/kana/components/FlashCardQuiz.tsx` | 假名測驗（QuizPage 與 ReviewPage 共用） |
 | `src/features/vocabulary/components/VocabQuiz.tsx` | 單字測驗（QuizPage 與 ReviewPage 共用） |
 | `src/features/grammar/components/GrammarQuiz.tsx` | 文法測驗（QuizPage 與 ReviewPage 共用） |
-| `src/features/kana/components/FlashCardQuiz.tsx` | 假名測驗（QuizPage 與 ReviewPage 共用） |
+| `src/features/listening/components/ListeningQuiz.tsx` | 聽力測驗（僅 QuizPage，不進入弱卡複習） |
 | `src/lib/srs/sm2.ts` | SM-2 間隔重複演算法 |
 | `src/lib/db/db.ts` | IndexedDB 操作（markAsSeen、getSeenIds、saveCard） |
 
@@ -24,7 +25,7 @@ public/data/*.json
 所有卡片
     ↓ getSeenIds()   ← 篩出 IndexedDB 有記錄的（= 看過的）
 已看過的卡片
-    ↓ VocabQuiz / GrammarQuiz / FlashCardQuiz
+    ↓ VocabQuiz / GrammarQuiz / FlashCardQuiz / ListeningQuiz
 答題 → review(card, quality)
     ↓ saveCard()
 IndexedDB srsCards
@@ -65,6 +66,6 @@ function isWeak(card: SrsCard) {
 
 1. **Quiz 元件共用**：學習（QuizPage）和複習（ReviewPage）使用同一套 Quiz 元件，SRS 更新邏輯必須保持一致，不得在複習路徑另開分支。
 2. **弱卡篩選職責**：Quiz 元件不判斷「弱卡」，弱卡篩選由 ReviewPage 負責，透過 `cards` prop 傳入。
-3. **新增科目時同步 ReviewPage**：新增科目需在 ReviewPage 的 `isWeak` 篩選邏輯中加入對應的 `cardId` 前綴（如 `listening-`）。
+3. **新增科目時同步 ReviewPage**：新增科目若需要弱卡複習，必須在 ReviewPage 的科目篩選邏輯中加入對應的 `cardId` 前綴（目前支援 `kana-`、`vocab-`、`grammar-`）。聽力科目刻意不進入弱卡複習，因為其卡片底層複用 `vocab-` 前綴。
 4. **markAsSeen 與 saveCard 不混用**：`markAsSeen` 只在「第一次瀏覽」時呼叫（寫入初始 SrsCard）；答題結果更新走 `saveCard(review(card, quality))`，兩條路徑不能互換。
 5. **測驗前先學習**：Quiz 元件收到的 `cards` 必定是已看過的牌，不允許直接把全部卡片丟進測驗。

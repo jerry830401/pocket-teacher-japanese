@@ -56,6 +56,7 @@ All cards implement the shared `Card` interface: `{ id, type, level, payload, ta
 - **JLPT extensibility**: every learnable item must implement the shared `Card` interface (`id`, `type`, `level`, `payload`, `tags`). Adding N4–N1 should be a data-only change — add entries to the relevant JSON under `public/data/`; no code changes required.
 - **Pure frontend**: no servers, no runtime API calls beyond bundled assets. Persistence is IndexedDB or LocalStorage.
 - **No speaking features**: pronunciation grading, recording, etc. are out of scope.
+- **CSS class naming**: UI primitives use the `px-` prefix (`px-topic`, `px-choice`, `px-toggle`, etc.). Quiz subject cards use `pcard-tap`. These class names are stable e2e selectors — do not rename without updating specs.
 - **Comments**: let names explain *what*; only comment when *why* is non-obvious (constraints, workarounds, surprising invariants).
 
 ## Out of scope
@@ -65,13 +66,11 @@ All cards implement the shared `Card` interface: `{ id, type, level, payload, ta
 - AI-generated content at runtime. (We may use AI offline to *prepare* data, but the shipped app is static.)
 - Speaking practice and pronunciation grading.
 
-## PWA / Offline
-
-To test PWA locally use `npm run preview` — dev server does not register the SW.
-
 ## Testing
 
-Vitest is configured. `src/lib/srs/sm2.test.ts` covers the SM-2 algorithm. Component and data-loading tests are not yet written.
+- Unit / component: `npx vitest run`
+- E2E: `npx playwright test` (Desktop Chrome, dev server auto-starts)
+- Details and selector conventions: `docs/testing.md`
 
 ## Architecture
 
