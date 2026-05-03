@@ -1,5 +1,5 @@
 import { useState, useEffect, useMemo } from 'react'
-import type { KanaChar, KanaType, KanaGroup } from '@/features/kana/types'
+import type { KanaChar, KanaGroup } from '@/features/kana/types'
 import type { VocabCard } from '@/features/vocabulary/types'
 import type { GrammarCard } from '@/features/grammar/types'
 import {
@@ -13,7 +13,10 @@ import { loadVocabulary } from '@/features/vocabulary/data'
 import { loadGrammar } from '@/features/grammar/data'
 import VocabStudy from '@/features/vocabulary/components/VocabStudy'
 import GrammarStudy from '@/features/grammar/components/GrammarStudy'
+import KanaStudy from '@/features/kana/components/KanaStudy'
 import BreadcrumbHeader from '@/shared/BreadcrumbHeader'
+import TeacherBubble from '@/shared/TeacherBubble'
+import { HOME_HINTS } from '@/shared/teacherHints'
 
 type JlptLevel = 'N5' | 'N4' | 'N3' | 'N2' | 'N1'
 const JLPT_LEVELS: JlptLevel[] = ['N5', 'N4', 'N3', 'N2', 'N1']
@@ -170,8 +173,10 @@ function SubjectScreen({
   onSelect: (s: 'hiragana' | 'katakana' | 'vocab' | 'grammar') => void
 }) {
   const ids = ['hiragana', 'katakana', 'vocab', 'grammar'] as const
+  const hint = HOME_HINTS[Math.floor(Math.random() * HOME_HINTS.length)]
   return (
-    <div className="h-full overflow-y-auto">
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 16, paddingTop: 12 }}>
+      <TeacherBubble hint={hint} mood="cheer" />
       <div className="px-topic-grid">
         {ids.map(id => {
           const t = TILE_STYLE[id]
@@ -337,57 +342,6 @@ function GrammarCategoriesScreen({
 
 // ── Content screens ───────────────────────────────────────────────────────────
 
-function KanaRowContent({ kanaType, group, allChars }: {
-  kanaType: KanaType; group: KanaGroup; allChars: KanaChar[]
-}) {
-  const chars = useMemo(
-    () => filterByGroup(filterByType(allChars, kanaType), group).sort((a, b) => a.order - b.order),
-    [allChars, kanaType, group],
-  )
-  return (
-    <div className="h-full overflow-y-auto pb-4">
-      <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-        {chars.map(char => (
-          <div
-            key={char.id}
-            className="pcard"
-            style={{ padding: 0, overflow: 'hidden' }}
-          >
-            {/* 假名 + 羅馬拼音 */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: 16, padding: '14px 16px 10px' }}>
-              <span className="kana" style={{ fontSize: '3.25rem', lineHeight: 1, width: 60, textAlign: 'center', flexShrink: 0 }}>
-                {char.kana}
-              </span>
-              <span style={{ fontFamily: '"VT323", monospace', fontSize: '1.375rem', color: 'var(--color-ink-soft)' }}>
-                {char.romaji}
-              </span>
-            </div>
-            {char.word && (
-              <div style={{
-                borderTop: '2px dashed var(--color-ink-faint)',
-                padding: '10px 16px 12px',
-                display: 'flex', flexDirection: 'column', gap: 4,
-              }}>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: 8, flexWrap: 'wrap' }}>
-                  <span className="kana" style={{ fontSize: '1.0625rem', fontWeight: 900 }}>{char.word.word}</span>
-                  {char.word.word !== char.word.reading && (
-                    <span style={{ fontSize: '0.8125rem', color: 'var(--color-ink-soft)' }}>（{char.word.reading}）</span>
-                  )}
-                  <span style={{ fontSize: '0.8125rem', color: 'var(--color-matcha-dark)', marginLeft: 'auto', flexShrink: 0 }}>
-                    {char.word.meaning}
-                  </span>
-                </div>
-                <p style={{ fontSize: '0.8125rem', color: 'var(--color-ink-soft)', margin: 0 }}>{char.word.sentence}</p>
-                <p style={{ fontSize: '0.6875rem', color: 'var(--color-ink-faint)', margin: 0 }}>{char.word.sentence_meaning}</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
-
 function VocabCategoryContent({ level, catId, allCards }: {
   level: JlptLevel; catId: string; allCards: VocabCard[]
 }) {
@@ -399,7 +353,7 @@ function VocabCategoryContent({ level, catId, allCards }: {
   }, [allCards, level, catId])
   return (
     <div className="h-full flex flex-col">
-      <div className="flex-1 min-h-0">
+      <div className="flex-1 min-h-0 flex flex-col">
         {cards.length > 0
           ? <VocabStudy cards={cards} />
           : <p style={{ color: 'var(--color-ink-soft)', fontSize: '0.875rem' }}>此分類暫無資料。</p>
@@ -420,7 +374,7 @@ function GrammarCategoryContent({ level, catId, allCards }: {
   }, [allCards, level, catId])
   return (
     <div className="h-full flex flex-col">
-      <div className="flex-1 min-h-0">
+      <div className="flex-1 min-h-0 flex flex-col">
         {cards.length > 0
           ? <GrammarStudy cards={cards} />
           : <p style={{ color: 'var(--color-ink-soft)', fontSize: '0.875rem' }}>此分類暫無資料。</p>
@@ -470,7 +424,7 @@ export default function LearnPage() {
           />
         )
       }
-      return <KanaRowContent kanaType={subject} group={sub as KanaGroup} allChars={kanaChars} />
+      return <KanaStudy kanaType={subject} group={sub as KanaGroup} allChars={kanaChars} />
     }
 
     if (!sub) {
@@ -524,7 +478,7 @@ export default function LearnPage() {
         <p style={{ color: '#c8633a', fontSize: '0.8125rem', padding: '0 16px 8px', flexShrink: 0 }}>{error}</p>
       )}
 
-      <div style={{ flex: 1, minHeight: 0, padding: '0 16px 8px' }}>
+      <div style={{ flex: 1, minHeight: 0, padding: '0 16px 8px', display: 'flex', flexDirection: 'column' }}>
         {renderScreen()}
       </div>
     </div>

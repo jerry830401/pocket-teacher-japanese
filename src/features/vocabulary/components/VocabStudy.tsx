@@ -2,6 +2,8 @@ import { useReducer, useState, useEffect } from 'react'
 import type { VocabCard } from '../types'
 import { speak } from '@/lib/tts/tts'
 import { markAsSeen } from '@/lib/db/db'
+import TeacherBubble from '@/shared/TeacherBubble'
+import { VOCAB_DONE_HINTS, getVocabHint, getVocabMood } from '@/shared/teacherHints'
 
 const BATCH_SIZE = 5
 
@@ -9,6 +11,7 @@ const POS_LABEL: Record<string, string> = {
   noun: '名詞', verb: '動詞', 'i-adj': 'い形', 'na-adj': 'な形',
   adverb: '副詞', particle: '助詞', expression: '表現', other: '其他',
 }
+
 
 interface StudyState {
   deck: VocabCard[]
@@ -59,17 +62,25 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
 
   if (batchDone) {
     return (
-      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
-        <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
-          已瀏覽 {BATCH_SIZE} 個單字
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
+        <div style={{ flexShrink: 0 }}>
+          <TeacherBubble
+            hint={VOCAB_DONE_HINTS[Math.floor(Math.random() * VOCAB_DONE_HINTS.length)]}
+            mood="happy"
+          />
         </div>
-        <button
-          className="pbtn pbtn-primary"
-          style={{ padding: '10px 24px', fontSize: '0.75rem' }}
-          onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
-        >
-          下一組（{BATCH_SIZE} 個）
-        </button>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+          <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
+            已瀏覽 {BATCH_SIZE} 個單字
+          </div>
+          <button
+            className="pbtn pbtn-primary"
+            style={{ padding: '10px 24px', fontSize: '0.75rem' }}
+            onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
+          >
+            下一組（{BATCH_SIZE} 個）
+          </button>
+        </div>
       </div>
     )
   }
@@ -87,8 +98,15 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
     setTtsError(false)
   }
 
+  const mood = getVocabMood(index, deck.length)
+  const hint = getVocabHint(index, deck.length, current.payload.pos)
+
   return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
+      {/* 老師泡泡 */}
+      <div style={{ flexShrink: 0 }}>
+        <TeacherBubble hint={hint} mood={mood} />
+      </div>
       {/* 進度區 */}
       <div style={{ flexShrink: 0 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
@@ -133,6 +151,7 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
           <button
             onClick={play}
             aria-label={`播放 ${current.payload.word}`}
+            className="px-play-btn"
             style={{
               flexShrink: 0,
               width: 48,

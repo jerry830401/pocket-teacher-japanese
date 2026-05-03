@@ -2,6 +2,8 @@ import { useReducer, useEffect } from 'react'
 import type { GrammarCard } from '../types'
 import { markAsSeen } from '@/lib/db/db'
 import RubyText from './RubyText'
+import TeacherBubble from '@/shared/TeacherBubble'
+import { GRAMMAR_DONE_HINTS, getGrammarHint, getGrammarMood } from '@/shared/teacherHints'
 
 const BATCH_SIZE = 5
 
@@ -23,6 +25,7 @@ function reducer(_state: StudyState, action: StudyAction): StudyState {
     case 'DONE': return { ..._state, batchDone: true }
   }
 }
+
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr]
@@ -54,26 +57,40 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
 
   if (batchDone) {
     return (
-      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
-        <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
-          已瀏覽 {BATCH_SIZE} 個文法項目
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
+        <div style={{ flexShrink: 0 }}>
+          <TeacherBubble
+            hint={GRAMMAR_DONE_HINTS[Math.floor(Math.random() * GRAMMAR_DONE_HINTS.length)]}
+            mood="happy"
+          />
         </div>
-        <button
-          className="pbtn pbtn-primary"
-          style={{ padding: '10px 24px', fontSize: '0.75rem' }}
-          onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
-        >
-          下一組（{BATCH_SIZE} 個）
-        </button>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+          <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
+            已瀏覽 {BATCH_SIZE} 個文法項目
+          </div>
+          <button
+            className="pbtn pbtn-primary"
+            style={{ padding: '10px 24px', fontSize: '0.75rem' }}
+            onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
+          >
+            下一組（{BATCH_SIZE} 個）
+          </button>
+        </div>
       </div>
     )
   }
 
   const current = deck[index]
   const progress = ((index + 1) / deck.length) * 100
+  const mood = getGrammarMood(index, deck.length)
+  const hint = getGrammarHint(index, deck.length)
 
   return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
+      {/* 老師泡泡 */}
+      <div style={{ flexShrink: 0 }}>
+        <TeacherBubble hint={hint} mood={mood} />
+      </div>
       {/* 進度區 */}
       <div style={{ flexShrink: 0 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>

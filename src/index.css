@@ -117,6 +117,15 @@ img, svg {
 .pbtn-ghost:active { transform: translate(1px, 1px); }
 .pbtn-ghost:disabled { opacity: 0.25; cursor: not-allowed; }
 
+/* ── Play button (TTS) ── */
+.px-play-btn {
+  transition: transform 0.08s, box-shadow 0.08s;
+}
+.px-play-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--color-ink) !important;
+}
+
 /* ── Pixel tag ── */
 .ptag {
   display: inline-block;
