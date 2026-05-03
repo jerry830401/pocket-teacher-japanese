@@ -1,4 +1,4 @@
-import type { CatVariant, MascotKind } from '@/stores/useSettings'
+import type { CatVariant, DogVariant, MascotKind } from '@/stores/useSettings'
 
 export type MascotMood = 'idle' | 'happy' | 'sad' | 'cheer'
 
@@ -32,85 +32,344 @@ function PG({ grid, palette, size = 4, style }: PGProps) {
   )
 }
 
-// ── Shiba ─────────────────────────────────────────────────────────────────────
-const SHIBA_PAL: Record<string, string> = {
-  o: '#3d2b1f', f: '#e8b14a', b: '#b8852f', w: '#fbf6e4',
-  k: '#3d2b1f', n: '#3d2b1f', r: '#e89cae',
+// ── Dog ───────────────────────────────────────────────────────────────────────
+// palette keys:
+//   o=outline  f=main fur  d=dark fur shadow  w=white muzzle area
+//   c=cream chest/cheek  k=pupil  n=nose  r=mouth
+//   e=blue eye iris (husky only)
+const DOG_PALETTES: Record<DogVariant, Record<string, string>> = {
+  shiba: {
+    o: '#2e1a0e', f: '#d4762a', d: '#b05a18', w: '#f5ede0',
+    c: '#f0d8b8', k: '#2e1a0e', n: '#2e1a0e', r: '#c06060',
+  },
+  corgi: {
+    o: '#2e1a0e', f: '#d98c3a', d: '#b86c20', w: '#f8f0e0',
+    c: '#f8f0e0', k: '#2e1a0e', n: '#2e1a0e', r: '#c06060',
+  },
+  poodle: {
+    o: '#1a1020', f: '#c0a8e8', d: '#9070c8', w: '#f5f0fa',
+    c: '#f5f0fa', k: '#1a1020', n: '#1a1020', r: '#c06080',
+  },
+  husky: {
+    o: '#181820', f: '#d0d8e8', d: '#383848', w: '#f8f8fc',
+    c: '#f8f8fc', k: '#181820', n: '#181820', r: '#c06060',
+    e: '#4080d0',
+  },
 }
 
-const SHIBA: Record<MascotMood, string[]> = {
+// ── Shiba Inu ─────────────────────────────────────────────────────────────────
+// Sharp pointy ears, orange body, white cream muzzle patch
+const SHIBA_GRIDS: Record<MascotMood, string[]> = {
   idle: [
-    '................',
-    '...oo......oo...',
-    '..ofbo....obfo..',
-    '.offfbooobffffo.',
+    '..oo........oo..',
+    '..ofo......ofo..',
+    '..offo....offo..',
+    '.offffooooffffo.',
     '.offffffffffffo.',
-    '.offwwffffwwffo.',
-    '.offwwffffwwffo.',
-    '.offffknnkffffo.',
-    '..offfwnnwfffo..',
-    '..offfwwwwfffo..',
-    '...offffffffo...',
-    '....oooooooo....',
+    '.ofwwfffffffwfo.',
+    '.ofwwfffkfffwfo.',
+    '.ofccfkfffkccfo.',
+    '.offcfwnnwfcffo.',
+    '..offcwwwwcffo..',
+    '..offfffrrffffo.',
+    '...oooooooooo...',
     '................',
     '................',
     '................',
     '................',
   ],
   happy: [
-    '................',
-    '...oo......oo...',
-    '..ofbo....obfo..',
-    '.offfbooobffffo.',
+    '..oo........oo..',
+    '..ofo......ofo..',
+    '..offo....offo..',
+    '.offffooooffffo.',
     '.offffffffffffo.',
-    '.offooffffooffo.',
-    '.offffffffffffo.',
-    '.offffknnkffffo.',
-    '..offfwwwwfffo..',
-    '..offfwwwwfffo..',
-    '..oofffffffffo..',
-    '..oo.oooooooo.oo',
-    '..o...........o.',
-    '................',
+    '.ofwwfffffffwfo.',
+    '.ofwwffoffofwfo.',
+    '.ofccfffffffcfo.',
+    '.offcfwnnwfcffo.',
+    '..offcwwwwcffo..',
+    '..offffrrrrfffo.',
+    '...oooooooooo...',
+    '.oo..........oo.',
+    '..o..........o..',
     '................',
     '................',
   ],
   sad: [
-    '................',
-    '...oo......oo...',
-    '..ofbo....obfo..',
-    '.offfbooobffffo.',
+    '..oo........oo..',
+    '..ofo......ofo..',
+    '..offo....offo..',
+    '.offffooooffffo.',
     '.offffffffffffo.',
-    '.offwwffffwwffo.',
-    '.offwwffffwwffo.',
-    '.offffknnkffffo.',
-    '..offfwnnwfffo..',
-    '..offffooffffo..',
-    '..offfoooofffo..',
-    '...offffffffo...',
-    '....oooooooo....',
+    '.ofwwfffffffwfo.',
+    '.ofwwfffkfffwfo.',
+    '.ofccfkfffkccfo.',
+    '.offcfwnnwfcffo.',
+    '..offcfooocffo..',
+    '..offfffffffffo.',
+    '...oooooooooo...',
+    '................',
     '................',
     '................',
     '................',
   ],
   cheer: [
-    '...oo......oo...',
-    '..ofbo....obfo..',
-    '.offfbooobffffo.',
+    '..oo........oo..',
+    '..ofo......ofo..',
+    '..offo....offo..',
+    '.offffooooffffo.',
     '.offffffffffffo.',
-    '.offwwffffwwffo.',
-    '.offwwffffwwffo.',
-    '.offffknnkffffo.',
-    '..offfwnnwfffo..',
-    'oo.offfwwwwfffo.',
-    'oo..offffffffo..',
+    '.ofwwffoffofwfo.',
+    '.ofccfffffffcfo.',
+    '.offcfwnnwfcffo.',
+    'ooffcwwwwcfffooo',
+    'oo.fffffrrfffoo.',
     'o....oooooooo...',
-    '...........oo.oo',
-    '...........oo.oo',
-    '..............o.',
+    '..............oo',
+    '.............oo.',
+    '................',
     '................',
     '................',
   ],
+}
+
+// ── Corgi ─────────────────────────────────────────────────────────────────────
+// Very large bat-like ears, wide round head, orange+white
+const CORGI_GRIDS: Record<MascotMood, string[]> = {
+  idle: [
+    '.ooo......ooo...',
+    'ofdfoo..oofdfoo.',
+    'ofdffoooofffdfoo',
+    '.offfffffffffffo',
+    '.occcfffffffcccf',
+    '.occcfffkfffcccf',
+    '.ofccfkfffkcccfo',
+    '.offcfwnnwfcfffo',
+    '..offcwwwwcfffo.',
+    '..offffrrrffffo.',
+    '...oooooooooo...',
+    '................',
+    '................',
+    '................',
+    '................',
+    '................',
+  ],
+  happy: [
+    '.ooo......ooo...',
+    'ofdfoo..oofdfoo.',
+    'ofdffoooofffdfoo',
+    '.offffffffffffo.',
+    '.occcfffffffcccf',
+    '.occcffoffofcccf',
+    '.ofccfffffffcccf',
+    '.offcfwnnwfcfffo',
+    '..offcwwwwcfffo.',
+    '..offfffrrffffo.',
+    '...oooooooooo...',
+    '.oo..........oo.',
+    '..o..........o..',
+    '................',
+    '................',
+    '................',
+  ],
+  sad: [
+    '.ooo......ooo...',
+    'ofdfoo..oofdfoo.',
+    'ofdffoooofffdfoo',
+    '.offffffffffffo.',
+    '.occcfffffffcccf',
+    '.occcfffkfffcccf',
+    '.ofccfkfffkcccfo',
+    '.offcfwnnwfcfffo',
+    '..offcfoooffffo.',
+    '..offffrffffo...',
+    '...oooooooooo...',
+    '................',
+    '................',
+    '................',
+    '................',
+    '................',
+  ],
+  cheer: [
+    '.ooo......ooo...',
+    'ofdfoo..oofdfoo.',
+    'ofdffoooofffdfoo',
+    '.offffffffffffo.',
+    '.occcffoffofcccf',
+    '.ofccfffffffcccf',
+    '.offcfwnnwfcfffo',
+    'ooffcwwwwcfffoo.',
+    'oo.fffffrrfffoo.',
+    'o....oooooooo...',
+    '..............oo',
+    '.............oo.',
+    '................',
+    '................',
+    '................',
+    '................',
+  ],
+}
+
+// ── Poodle ────────────────────────────────────────────────────────────────────
+// Round pom-pom head bumps on ears, soft lavender
+const POODLE_GRIDS: Record<MascotMood, string[]> = {
+  idle: [
+    '.ooo......ooo...',
+    'offfo....offfo..',
+    'offfoooofffffo..',
+    'offffffffffffo..',
+    '.ofwwfffffffwfo.',
+    '.ofwwfffkfffwfo.',
+    '.ofccfkfffkccfo.',
+    '.offcfwnnwfcffo.',
+    '..offcwwwwcffo..',
+    '..offfffrrffffo.',
+    '...oooooooooo...',
+    '................',
+    '................',
+    '................',
+    '................',
+    '................',
+  ],
+  happy: [
+    '.ooo......ooo...',
+    'offfo....offfo..',
+    'offfoooofffffo..',
+    'offffffffffffo..',
+    '.ofwwfffffffwfo.',
+    '.ofwwffoffofwfo.',
+    '.ofccfffffffcfo.',
+    '.offcfwnnwfcffo.',
+    '..offcwwwwcffo..',
+    '..offffrrrrfffo.',
+    '...oooooooooo...',
+    '.oo..........oo.',
+    '..o..........o..',
+    '................',
+    '................',
+    '................',
+  ],
+  sad: [
+    '.ooo......ooo...',
+    'offfo....offfo..',
+    'offfoooofffffo..',
+    'offffffffffffo..',
+    '.ofwwfffffffwfo.',
+    '.ofwwfffkfffwfo.',
+    '.ofccfkfffkccfo.',
+    '.offcfwnnwfcffo.',
+    '..offcfooocffo..',
+    '..offfffffffffo.',
+    '...oooooooooo...',
+    '................',
+    '................',
+    '................',
+    '................',
+    '................',
+  ],
+  cheer: [
+    '.ooo......ooo...',
+    'offfo....offfo..',
+    'offfoooofffffo..',
+    'offffffffffffo..',
+    '.ofwwffoffofwfo.',
+    '.ofccfffffffcfo.',
+    '.offcfwnnwfcffo.',
+    'ooffcwwwwcfffoo.',
+    'oo.fffffrrfffoo.',
+    'o....oooooooo...',
+    '..............oo',
+    '.............oo.',
+    '................',
+    '................',
+    '................',
+    '................',
+  ],
+}
+
+// ── Husky ─────────────────────────────────────────────────────────────────────
+// Pointy ears, black mask on white face, vivid blue eyes
+const HUSKY_GRIDS: Record<MascotMood, string[]> = {
+  idle: [
+    '..oo........oo..',
+    '..odo......odo..',
+    '..oddo....oddo..',
+    '.oddddooooddddfo',
+    '.offfffffffffff.',
+    '.odddfffkfffdddo',
+    '.odddfeeeefdddo.',
+    '.offdfkfffkdffo.',
+    '.offcfwnnwfcffo.',
+    '..offcwwwwcffo..',
+    '..offfffrrffffo.',
+    '...oooooooooo...',
+    '................',
+    '................',
+    '................',
+    '................',
+  ],
+  happy: [
+    '..oo........oo..',
+    '..odo......odo..',
+    '..oddo....oddo..',
+    '.oddddooooddddfo',
+    '.offfffffffffff.',
+    '.odddffoffofdddo',
+    '.odddfffffffdddo',
+    '.offcfwnnwfcffo.',
+    '..offcwwwwcffo..',
+    '..offffrrrrfffo.',
+    '...oooooooooo...',
+    '.oo..........oo.',
+    '..o..........o..',
+    '................',
+    '................',
+    '................',
+  ],
+  sad: [
+    '..oo........oo..',
+    '..odo......odo..',
+    '..oddo....oddo..',
+    '.oddddooooddddfo',
+    '.offfffffffffff.',
+    '.odddfffkfffdddo',
+    '.odddfeeeefdddo.',
+    '.offdfkfffkdffo.',
+    '.offcfwnnwfcffo.',
+    '..offcfooocffo..',
+    '..offfffffffffo.',
+    '...oooooooooo...',
+    '................',
+    '................',
+    '................',
+    '................',
+  ],
+  cheer: [
+    '..oo........oo..',
+    '..odo......odo..',
+    '..oddo....oddo..',
+    '.oddddooooddddfo',
+    '.offfffffffffff.',
+    '.odddffoffofdddo',
+    '.odddfffffffdddo',
+    '.offcfwnnwfcffo.',
+    'ooffcwwwwcfffoo.',
+    'oo.fffffrrfffoo.',
+    'o....oooooooo...',
+    '..............oo',
+    '.............oo.',
+    '................',
+    '................',
+    '................',
+  ],
+}
+
+const DOG_GRIDS: Record<DogVariant, Record<MascotMood, string[]>> = {
+  shiba:  SHIBA_GRIDS,
+  corgi:  CORGI_GRIDS,
+  poodle: POODLE_GRIDS,
+  husky:  HUSKY_GRIDS,
 }
 
 // ── Cat ───────────────────────────────────────────────────────────────────────
@@ -161,7 +420,7 @@ const CAT: Record<MascotMood, string[]> = {
     'osswwwwwwwwwwsso',
     'owwswwoowwoowwso',
     'owwwwwwwwwwwwwwo',
-    'owwsswoopppowsswo',
+    'owwsswoopppowssw',
     'owwwwwwwppwwwwwo',
     'owrrrrrrrrrrrrwo',
     'owrrrrrgrrrrrrwo',
@@ -196,7 +455,7 @@ const CAT: Record<MascotMood, string[]> = {
     'osswwwwwwwwwwsso',
     'owwswwoowwoowwso',
     'owwwwwwwwwwwwwwo',
-    'owwsswoopppowsswo',
+    'owwsswoopppowssw',
     'owwwwwwwppwwwwwo',
     'oo.wwwwwwwwwww.o',
     'oo.rrrrrrrrrrr.o',
@@ -211,7 +470,7 @@ const CAT: Record<MascotMood, string[]> = {
 // ── Public component ─────────────────────────────────────────────────────────
 interface MascotProps {
   kind?: MascotKind
-  variant?: CatVariant
+  variant?: CatVariant | DogVariant
   mood?: MascotMood
   size?: number
   style?: React.CSSProperties
@@ -224,9 +483,17 @@ export default function Mascot({
   size = 4,
   style,
 }: MascotProps) {
-  const set = kind === 'cat' ? CAT : SHIBA
-  const pal = kind === 'cat' ? (CAT_PALETTES[variant] ?? CAT_PALETTES.calico) : SHIBA_PAL
-  const grid = set[mood] ?? set.idle
+  let grid: string[]
+  let pal: Record<string, string>
+  if (kind === 'cat') {
+    const cv = variant as CatVariant
+    pal = CAT_PALETTES[cv] ?? CAT_PALETTES.calico
+    grid = CAT[mood] ?? CAT.idle
+  } else {
+    const dv = (variant as DogVariant) in DOG_GRIDS ? (variant as DogVariant) : 'shiba'
+    pal = DOG_PALETTES[dv]
+    grid = DOG_GRIDS[dv][mood] ?? DOG_GRIDS[dv].idle
+  }
   return <PG grid={grid} palette={pal} size={size} style={style} />
 }
 

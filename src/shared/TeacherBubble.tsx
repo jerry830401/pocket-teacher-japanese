@@ -9,7 +9,7 @@ interface TeacherBubbleProps {
 }
 
 export default function TeacherBubble({ hint, mood = 'idle' }: TeacherBubbleProps) {
-  const { mascotKind, catVariant } = useSettings()
+  const { mascotKind, catVariant, dogVariant } = useSettings()
   const [visible, setVisible] = useState(false)
   const [currentHint, setCurrentHint] = useState(hint)
 
@@ -39,7 +39,7 @@ export default function TeacherBubble({ hint, mood = 'idle' }: TeacherBubbleProp
       background: 'var(--color-cream)',
     }}>
       <div style={{ flexShrink: 0 }}>
-        <Mascot kind={mascotKind} variant={catVariant} mood={mood} size={4} />
+        <Mascot kind={mascotKind} variant={mascotKind === 'cat' ? catVariant : dogVariant} mood={mood} size={4} />
       </div>
       <div
         style={{

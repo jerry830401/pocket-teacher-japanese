@@ -3,6 +3,8 @@ import type { VocabCard } from '../types'
 import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
 import { useSettings } from '@/stores/useSettings'
+import TeacherBubble from '@/shared/TeacherBubble'
+import { getQuizHint, getQuizMood, getQuizDoneHint, getQuizDoneMood } from '@/shared/teacherHints'
 
 
 interface Props {
@@ -102,22 +104,19 @@ export default function VocabQuiz({ cards }: Props) {
 
   if (roundDone) {
     const pct = Math.round((correct / deck.length) * 100)
-    const msg = pct === 100 ? '完美！全部答對！'
-      : pct >= 80 ? '答得很好，再接再厲！'
-      : pct >= 60 ? '還不錯，繼續練習！'
-      : '多練幾輪，加油！'
     return (
-      <div style={{ height: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, padding: '0 16px' }}>
-        <div style={{ fontFamily: 'system-ui, sans-serif', fontSize: '2rem', color: 'var(--color-indigo-px)' }}>{pct}%</div>
-        <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
-          {deck.length} 題中答對 {correct} 題
+      <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
+        <div style={{ flexShrink: 0 }}>
+          <TeacherBubble hint={getQuizDoneHint(pct)} mood={getQuizDoneMood(pct)} />
         </div>
-        <div className="pcard" style={{ background: 'var(--color-sakura-soft)', textAlign: 'center', width: '100%', maxWidth: 280 }}>
-          <p style={{ margin: 0, fontFamily: 'system-ui, sans-serif', fontSize: '0.875rem' }}>{msg}</p>
+        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16 }}>
+          <div style={{ fontFamily: '"VT323", monospace', fontSize: '1.5rem', color: 'var(--color-ink-soft)' }}>
+            {deck.length} 題中答對 {correct} 題
+          </div>
+          <button className="pbtn pbtn-primary" style={{ padding: '10px 24px', fontSize: '0.75rem' }} onClick={startNextRound}>
+            下一輪（{roundSize} 題）
+          </button>
         </div>
-        <button className="pbtn pbtn-primary" style={{ padding: '10px 24px', fontSize: '0.75rem' }} onClick={startNextRound}>
-          下一輪（{roundSize} 題）
-        </button>
       </div>
     )
   }
@@ -127,9 +126,16 @@ export default function VocabQuiz({ cards }: Props) {
   const isLastQuestion = index === deck.length - 1
   const showNext = selected !== null && !(autoNext && selected === current.id)
   const progress = ((index + (selected ? 1 : 0)) / deck.length) * 100
+  const isCorrect = selected !== null ? selected === current.id : null
+  const mood = getQuizMood(selected, isCorrect, index, deck.length)
+  const hint = getQuizHint(selected, isCorrect, index, deck.length)
 
   return (
-    <div style={{ height: '100%', display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
+    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
+      {/* 老師泡泡 */}
+      <div style={{ flexShrink: 0 }}>
+        <TeacherBubble hint={hint} mood={mood} />
+      </div>
       {/* 進度區 */}
       <div style={{ flexShrink: 0 }}>
         <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>

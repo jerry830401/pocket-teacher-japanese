@@ -6,6 +6,7 @@ export type QuizRoundSize = typeof QUIZ_ROUND_OPTIONS[number]
 export type QuizKey = 'kana' | 'vocab' | 'grammar' | 'listening'
 export type MascotKind = 'cat' | 'shiba'
 export type CatVariant = 'black' | 'tuxedo' | 'calico' | 'orange'
+export type DogVariant = 'shiba' | 'corgi' | 'poodle' | 'husky'
 interface SettingsState {
   autoNextKana: boolean
   autoNextVocab: boolean
@@ -17,10 +18,12 @@ interface SettingsState {
   roundSizeListening: QuizRoundSize
   mascotKind: MascotKind
   catVariant: CatVariant
+  dogVariant: DogVariant
   setAutoNext: (key: QuizKey, value: boolean) => void
   setRoundSize: (key: QuizKey, size: QuizRoundSize) => void
   setMascotKind: (kind: MascotKind) => void
   setCatVariant: (variant: CatVariant) => void
+  setDogVariant: (variant: DogVariant) => void
 }
 
 export const useSettings = create<SettingsState>()(
@@ -36,6 +39,7 @@ export const useSettings = create<SettingsState>()(
       roundSizeListening: 10,
       mascotKind: 'cat',
       catVariant: 'calico',
+      dogVariant: 'shiba',
       setAutoNext: (key, value) => set((s) => ({
         ...s,
         [`autoNext${key.charAt(0).toUpperCase()}${key.slice(1)}`]: value,
@@ -45,6 +49,7 @@ export const useSettings = create<SettingsState>()(
       }),
       setMascotKind: (kind) => set({ mascotKind: kind }),
       setCatVariant: (variant) => set({ catVariant: variant }),
+      setDogVariant: (variant) => set({ dogVariant: variant }),
     }),
     { name: 'ptjp-settings' },
   ),
