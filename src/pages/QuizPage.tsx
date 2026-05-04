@@ -61,7 +61,7 @@ function SlideScreen({ children, dir }: { children: React.ReactNode; dir: 'forwa
     )
   }, [dir])
   return (
-    <div ref={ref} className="h-full flex flex-col">
+    <div ref={ref} className="h-full flex flex-col overflow-y-auto">
       {children}
     </div>
   )

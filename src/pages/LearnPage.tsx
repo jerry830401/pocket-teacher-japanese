@@ -175,7 +175,7 @@ function SubjectScreen({
   const ids = ['hiragana', 'katakana', 'vocab', 'grammar'] as const
   const hint = HOME_HINTS[Math.floor(Math.random() * HOME_HINTS.length)]
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: 16, paddingTop: 12 }}>
+    <div className="h-full overflow-y-auto" style={{ display: 'flex', flexDirection: 'column', gap: 16, paddingTop: 12 }}>
       <TeacherBubble hint={hint} mood="cheer" />
       <div className="px-topic-grid">
         {ids.map(id => {
@@ -478,7 +478,7 @@ export default function LearnPage() {
         <p style={{ color: '#c8633a', fontSize: '0.8125rem', padding: '0 16px 8px', flexShrink: 0 }}>{error}</p>
       )}
 
-      <div style={{ flex: 1, minHeight: 0, padding: '0 16px 8px', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', padding: '0 16px 8px', display: 'flex', flexDirection: 'column' }}>
         {renderScreen()}
       </div>
     </div>

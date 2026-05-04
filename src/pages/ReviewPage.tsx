@@ -106,7 +106,7 @@ export default function ReviewPage() {
           </button>
         </div>
 
-        <div style={{ flex: 1, minHeight: 0, padding: '0 16px 8px' }}>
+        <div style={{ flex: 1, minHeight: 0, overflow: 'hidden', padding: '0 16px 8px' }}>
           {reviewState.subject === 'vocab' && (() => {
             if (reviewState.cards.length < 4) return (
               <div className="pcard" style={{ background: 'var(--color-sakura-soft)' }}>
