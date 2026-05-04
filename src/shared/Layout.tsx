@@ -202,11 +202,11 @@ export default function Layout() {
       {/* ── 手機底部導覽 ── */}
       <nav
         className="md:hidden fixed bottom-0 inset-x-0 z-50"
-        style={{ background: "var(--color-ink)" }}
+        style={{ background: "var(--color-ink)", paddingBottom: "env(safe-area-inset-bottom)" }}
       >
         <div
           className="grid mx-auto max-w-2xl"
-          style={{ gridTemplateColumns: "repeat(5, 1fr)", paddingBottom: "env(safe-area-inset-bottom)" }}
+          style={{ gridTemplateColumns: "repeat(5, 1fr)" }}
         >
           {NAV_ITEMS.map((item) => {
             const id = item.to.slice(1);
