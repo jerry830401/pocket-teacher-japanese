@@ -15,8 +15,8 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
   if (id === "learn")
     return (
       <svg
-        width="22"
-        height="22"
+        width="20"
+        height="20"
         viewBox="0 0 10 10"
         shapeRendering="crispEdges"
         style={{ imageRendering: "pixelated" }}
@@ -31,8 +31,8 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
   if (id === "quiz")
     return (
       <svg
-        width="22"
-        height="22"
+        width="20"
+        height="20"
         viewBox="0 0 10 10"
         shapeRendering="crispEdges"
         style={{ imageRendering: "pixelated" }}
@@ -47,8 +47,8 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
   if (id === "review")
     return (
       <svg
-        width="22"
-        height="22"
+        width="20"
+        height="20"
         viewBox="0 0 10 10"
         shapeRendering="crispEdges"
         style={{ imageRendering: "pixelated" }}
@@ -65,8 +65,8 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
   if (id === "progress")
     return (
       <svg
-        width="22"
-        height="22"
+        width="20"
+        height="20"
         viewBox="0 0 10 10"
         shapeRendering="crispEdges"
         style={{ imageRendering: "pixelated" }}
@@ -82,8 +82,8 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
   // settings
   return (
     <svg
-      width="22"
-      height="22"
+      width="20"
+      height="20"
       viewBox="0 0 10 10"
       shapeRendering="crispEdges"
       style={{ imageRendering: "pixelated" }}

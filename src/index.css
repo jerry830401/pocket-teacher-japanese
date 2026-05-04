@@ -190,11 +190,11 @@ img, svg {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2px;
+  gap: 1px;
   color: var(--color-cream);
   background: none;
   border: 0;
-  padding: 7px 0 6px;
+  padding: 5px 0 4px;
   cursor: pointer;
   position: relative;
   transition: transform 0.1s;
