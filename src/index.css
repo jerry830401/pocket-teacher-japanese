@@ -38,6 +38,13 @@ body,
   height: 100%;
 }
 
+/* In PWA standalone mode the viewport may not fully cover the bottom safe area.
+   Setting html background to ink ensures the home-indicator gap shows dark (nav colour)
+   instead of the cream page background. */
+html {
+  background: var(--color-ink);
+}
+
 :root {
   font-size: 16px;
 }
