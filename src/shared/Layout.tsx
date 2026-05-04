@@ -192,24 +192,16 @@ export default function Layout() {
       </header>
 
       {/* ── 主要內容區 ── */}
-      <main
-        className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-2xl"
-        style={{
-          paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 56px)",
-        }}
-      >
+      {/* nav 是 flex 子項，不需要額外 padding-bottom 補償 */}
+      <main className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-2xl">
         <Outlet />
       </main>
 
       {/* ── 手機底部導覽 ── */}
-      {/* bottom 偏移負的 safe-area，讓背景蓋過 home indicator；padding 把 tab 推回可見區 */}
+      {/* shrink-0 flex 子項，自然貼底；padding-bottom 把 tab 推出 home indicator 安全區 */}
       <nav
-        className="md:hidden fixed inset-x-0 z-50"
-        style={{
-          bottom: "calc(-1 * env(safe-area-inset-bottom, 0px))",
-          background: "var(--color-ink)",
-          paddingBottom: "env(safe-area-inset-bottom, 0px)",
-        }}
+        className="md:hidden shrink-0"
+        style={{ background: "var(--color-ink)" }}
       >
         <div
           className="grid mx-auto max-w-2xl"
