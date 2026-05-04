@@ -202,7 +202,10 @@ export default function Layout() {
       {/* ── 手機底部導覽 ── */}
       <nav
         className="md:hidden fixed bottom-0 inset-x-0 z-50"
-        style={{ background: "var(--color-ink)", paddingBottom: "env(safe-area-inset-bottom)" }}
+        style={{
+          background: "var(--color-ink)",
+          // paddingBottom: "env(safe-area-inset-bottom)"
+        }}
       >
         <div
           className="grid mx-auto max-w-2xl"
