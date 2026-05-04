@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router-dom'
+import { useSwUpdate } from '@/lib/useSwUpdate'
 
 const NAV_ITEMS = [
   { to: '/learn',    label: '學習' },
@@ -64,17 +65,47 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
 }
 
 export default function Layout() {
+  const { hasUpdate, applyUpdate } = useSwUpdate()
+
   return (
     <div
       className="flex flex-col overflow-hidden"
       style={{
-        minHeight: '100dvh',
+        position: 'fixed',
+        inset: 0,
         background: 'var(--color-bg)',
         paddingTop: 'env(safe-area-inset-top)',
         paddingLeft: 'env(safe-area-inset-left)',
         paddingRight: 'env(safe-area-inset-right)',
       }}
     >
+      {/* ── PWA 更新提示 ── */}
+      {hasUpdate && (
+        <div
+          className="shrink-0 flex items-center justify-between px-4 py-2 gap-3"
+          style={{ background: 'var(--color-gold)', fontFamily: 'system-ui, sans-serif' }}
+        >
+          <span style={{ fontSize: '0.8125rem', color: 'var(--color-ink)', fontWeight: 700 }}>
+            有新版本可用
+          </span>
+          <button
+            onClick={applyUpdate}
+            style={{
+              fontSize: '0.75rem',
+              fontWeight: 700,
+              color: 'var(--color-ink)',
+              background: 'var(--color-cream)',
+              border: 'none',
+              borderRadius: 4,
+              padding: '3px 10px',
+              cursor: 'pointer',
+            }}
+          >
+            立即更新
+          </button>
+        </div>
+      )}
+
       {/* ── 桌機頂部導覽 ── */}
       <header
         className="hidden md:flex shrink-0 items-center gap-6 px-6 py-3"
