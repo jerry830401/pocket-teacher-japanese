@@ -194,7 +194,6 @@ export default function Layout() {
       {/* ── 主要內容區 ── */}
       <main
         className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-2xl"
-        style={{ paddingBottom: "52px" }}
       >
         <Outlet />
       </main>
