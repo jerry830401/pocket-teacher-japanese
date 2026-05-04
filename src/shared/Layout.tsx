@@ -200,12 +200,13 @@ export default function Layout() {
       </main>
 
       {/* ── 手機底部導覽 ── */}
-      {/* fixed 定位確保 iOS PWA 捲動時 nav 不會跟著 reflow */}
+      {/* bottom 偏移負的 safe-area，讓背景蓋過 home indicator；padding 把 tab 推回可見區 */}
       <nav
-        className="md:hidden fixed bottom-0 inset-x-0 z-50"
+        className="md:hidden fixed inset-x-0 z-50"
         style={{
+          bottom: "calc(-1 * env(safe-area-inset-bottom, 0px))",
           background: "var(--color-ink)",
-          paddingBottom: "env(safe-area-inset-bottom)",
+          paddingBottom: "env(safe-area-inset-bottom, 0px)",
         }}
       >
         <div
