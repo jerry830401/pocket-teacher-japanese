@@ -9,11 +9,11 @@ vi.mock('@/lib/db/db', () => ({
   saveCard: vi.fn().mockResolvedValue(undefined),
 }))
 
+const mockStore = { autoNextVocab: false, roundSizeVocab: 5, mascotKind: 'cat', catVariant: 'black', dogVariant: 'shiba' }
 vi.mock('@/stores/useSettings', () => ({
-  useSettings: vi.fn((selector) => selector({
-    autoNextVocab: false,
-    roundSizeVocab: 10,
-  })),
+  useSettings: vi.fn((selector?: (s: typeof mockStore) => unknown) =>
+    selector ? selector(mockStore) : mockStore
+  ),
 }))
 
 import VocabQuiz from './VocabQuiz'
@@ -103,11 +103,6 @@ describe('VocabQuiz', () => {
   })
 
   it('shows round summary after answering all questions', async () => {
-    const { useSettings } = await import('@/stores/useSettings')
-    vi.mocked(useSettings).mockImplementation((selector: (s: Parameters<typeof selector>[0]) => unknown) =>
-      selector({ autoNextVocab: false, roundSizeVocab: 5 } as Parameters<typeof selector>[0])
-    )
-
     render(<VocabQuiz cards={CARDS} />)
 
     for (let i = 0; i < 5; i++) {
@@ -122,16 +117,11 @@ describe('VocabQuiz', () => {
     }
 
     await waitFor(() => {
-      expect(screen.getByText(/%/)).toBeInTheDocument()
+      expect(screen.getByText(/題中答對/)).toBeInTheDocument()
     })
   })
 
   it('shows next round button after round is done', async () => {
-    const { useSettings } = await import('@/stores/useSettings')
-    vi.mocked(useSettings).mockImplementation((selector: (s: Parameters<typeof selector>[0]) => unknown) =>
-      selector({ autoNextVocab: false, roundSizeVocab: 5 } as Parameters<typeof selector>[0])
-    )
-
     render(<VocabQuiz cards={CARDS} />)
 
     for (let i = 0; i < 5; i++) {

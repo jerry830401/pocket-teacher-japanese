@@ -9,11 +9,11 @@ vi.mock('@/lib/db/db', () => ({
   saveCard: vi.fn().mockResolvedValue(undefined),
 }))
 
+const mockStore = { autoNextKana: false, roundSizeKana: 5, mascotKind: 'cat', catVariant: 'black', dogVariant: 'shiba' }
 vi.mock('@/stores/useSettings', () => ({
-  useSettings: vi.fn((selector) => selector({
-    autoNextKana: false,
-    roundSizeKana: 10,
-  })),
+  useSettings: vi.fn((selector?: (s: typeof mockStore) => unknown) =>
+    selector ? selector(mockStore) : mockStore
+  ),
 }))
 
 import FlashCardQuiz from './FlashCardQuiz'
@@ -94,12 +94,6 @@ describe('FlashCardQuiz', () => {
   })
 
   it('shows round summary with percentage after completing all questions', async () => {
-    // Use roundSize 5 matching our CHARS length via mock override
-    const { useSettings } = await import('@/stores/useSettings')
-    vi.mocked(useSettings).mockImplementation((selector: (s: Parameters<typeof selector>[0]) => unknown) =>
-      selector({ autoNextKana: false, roundSizeKana: 5 } as Parameters<typeof selector>[0])
-    )
-
     render(<FlashCardQuiz chars={CHARS} mode="kana→romaji" />)
 
     // Answer all 5 questions
@@ -115,16 +109,11 @@ describe('FlashCardQuiz', () => {
     }
 
     await waitFor(() => {
-      expect(screen.getByText(/%/)).toBeInTheDocument()
+      expect(screen.getByText(/題中答對/)).toBeInTheDocument()
     })
   })
 
   it('shows next round button after round is done', async () => {
-    const { useSettings } = await import('@/stores/useSettings')
-    vi.mocked(useSettings).mockImplementation((selector: (s: Parameters<typeof selector>[0]) => unknown) =>
-      selector({ autoNextKana: false, roundSizeKana: 5 } as Parameters<typeof selector>[0])
-    )
-
     render(<FlashCardQuiz chars={CHARS} mode="kana→romaji" />)
 
     for (let i = 0; i < 5; i++) {
