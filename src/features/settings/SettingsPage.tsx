@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import {
   useSettings,
   QUIZ_ROUND_OPTIONS,
@@ -10,6 +11,13 @@ import {
 import OfflineDataButton from "@/features/progress/OfflineDataButton";
 import { isPwa } from "@/lib/pwa";
 import Mascot from "@/shared/Mascot";
+import {
+  exportBackup,
+  parseBackupFile,
+  importBackup,
+  type BackupData,
+  type ImportSummary,
+} from "@/lib/db/backup";
 
 const ITEMS: { key: QuizKey; label: string }[] = [
   { key: "kana", label: "五十音" },
@@ -60,7 +68,42 @@ function PxToggle({
   );
 }
 
+type ImportState =
+  | { phase: "idle" }
+  | { phase: "preview"; data: BackupData; summary: ImportSummary }
+  | { phase: "error"; message: string }
+
 export default function SettingsPage() {
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [importState, setImportState] = useState<ImportState>({ phase: "idle" });
+  const [exporting, setExporting] = useState(false);
+
+  async function handleExport() {
+    setExporting(true);
+    try {
+      await exportBackup();
+    } finally {
+      setExporting(false);
+    }
+  }
+
+  async function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    e.target.value = "";
+    try {
+      const result = await parseBackupFile(file);
+      setImportState({ phase: "preview", ...result });
+    } catch (err) {
+      setImportState({ phase: "error", message: err instanceof Error ? err.message : "讀取失敗" });
+    }
+  }
+
+  async function handleConfirmImport() {
+    if (importState.phase !== "preview") return;
+    await importBackup(importState.data);
+  }
+
   const {
     autoNextKana,
     autoNextVocab,
@@ -299,6 +342,120 @@ export default function SettingsPage() {
           <div style={sectionLabel}>離線</div>
           <OfflineDataButton />
         </>
+      )}
+
+      {/* 資料備份 */}
+      <div style={{ ...sectionLabel, marginTop: 8 }}>資料備份</div>
+      <div className="px-settings-list" style={{ marginBottom: 18 }}>
+        {/* 匯出 */}
+        <div className="px-settings-row">
+          <div>
+            <div style={{ fontWeight: 600 }}>匯出備份</div>
+            <div style={{ fontSize: "0.8125rem", color: "var(--color-ink-soft)", marginTop: 2 }}>
+              下載 JSON 檔至裝置
+            </div>
+          </div>
+          <button
+            className="pbtn pbtn-primary"
+            style={{ padding: "8px 16px", fontSize: "0.875rem", minWidth: 72 }}
+            onClick={handleExport}
+            disabled={exporting}
+          >
+            {exporting ? "處理中…" : "匯出"}
+          </button>
+        </div>
+
+        {/* 匯入 */}
+        <div className="px-settings-row">
+          <div>
+            <div style={{ fontWeight: 600 }}>匯入備份</div>
+            <div style={{ fontSize: "0.8125rem", color: "var(--color-ink-soft)", marginTop: 2 }}>
+              從 JSON 檔還原進度
+            </div>
+          </div>
+          <button
+            className="pbtn"
+            style={{ padding: "8px 16px", fontSize: "0.875rem", minWidth: 72 }}
+            onClick={() => fileInputRef.current?.click()}
+          >
+            選擇檔案
+          </button>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept=".json,application/json"
+            style={{ display: "none" }}
+            onChange={handleFileChange}
+          />
+        </div>
+      </div>
+
+      {/* 匯入預覽 / 錯誤 */}
+      {importState.phase === "error" && (
+        <div
+          style={{
+            marginBottom: 18,
+            padding: "12px 14px",
+            border: "2px solid var(--color-red, #c0392b)",
+            background: "var(--color-paper)",
+            fontFamily: "system-ui, sans-serif",
+            fontSize: "0.875rem",
+            color: "var(--color-red, #c0392b)",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: 8,
+          }}
+        >
+          <span>⚠ {importState.message}</span>
+          <button
+            className="pbtn"
+            style={{ padding: "4px 10px", fontSize: "0.8125rem" }}
+            onClick={() => setImportState({ phase: "idle" })}
+          >
+            關閉
+          </button>
+        </div>
+      )}
+
+      {importState.phase === "preview" && (
+        <div
+          style={{
+            marginBottom: 18,
+            padding: "14px",
+            border: "2px solid var(--color-ink)",
+            background: "var(--color-paper)",
+            fontFamily: "system-ui, sans-serif",
+            fontSize: "0.875rem",
+          }}
+        >
+          <div style={{ fontWeight: 700, marginBottom: 8 }}>確認匯入</div>
+          <div style={{ color: "var(--color-ink-soft)", marginBottom: 4 }}>
+            備份時間：{new Date(importState.summary.exportedAt).toLocaleString("zh-TW")}
+          </div>
+          <div style={{ color: "var(--color-ink-soft)", marginBottom: 12 }}>
+            卡片數量：{importState.summary.cardCount} 張
+          </div>
+          <div style={{ fontSize: "0.8125rem", color: "var(--color-ink-soft)", marginBottom: 12 }}>
+            匯入後目前的學習進度與設定將被覆蓋，頁面會自動重新整理。
+          </div>
+          <div style={{ display: "flex", gap: 8 }}>
+            <button
+              className="pbtn pbtn-primary"
+              style={{ flex: 1, padding: "10px 0", fontSize: "0.875rem" }}
+              onClick={handleConfirmImport}
+            >
+              確認匯入
+            </button>
+            <button
+              className="pbtn"
+              style={{ flex: 1, padding: "10px 0", fontSize: "0.875rem" }}
+              onClick={() => setImportState({ phase: "idle" })}
+            >
+              取消
+            </button>
+          </div>
+        </div>
       )}
     </div>
   );
