@@ -194,14 +194,14 @@ export default function Layout() {
       {/* ── 主要內容區 ── */}
       <main
         className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-2xl"
-        style={{ paddingBottom: "calc(env(safe-area-inset-bottom) + 52px)" }}
+        style={{ paddingBottom: "52px" }}
       >
         <Outlet />
       </main>
 
       {/* ── 手機底部導覽 ── */}
       <nav
-        className="md:hidden fixed bottom-0 inset-x-0 z-50"
+        className="md:hidden shrink-0"
         style={{
           background: "var(--color-ink)",
           paddingBottom: "env(safe-area-inset-bottom)",
