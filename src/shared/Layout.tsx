@@ -194,7 +194,9 @@ export default function Layout() {
       {/* ── 主要內容區 ── */}
       <main
         className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-2xl"
-        style={{ paddingBottom: "calc(env(safe-area-inset-bottom) + 52px)" }}
+        style={{
+          paddingBottom: "calc(env(safe-area-inset-bottom, 0px) + 56px)",
+        }}
       >
         <Outlet />
       </main>
