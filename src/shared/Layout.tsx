@@ -192,13 +192,17 @@ export default function Layout() {
       </header>
 
       {/* ── 主要內容區 ── */}
-      <main className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-2xl">
+      <main
+        className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-2xl"
+        style={{ paddingBottom: "calc(env(safe-area-inset-bottom) + 52px)" }}
+      >
         <Outlet />
       </main>
 
       {/* ── 手機底部導覽 ── */}
+      {/* fixed 定位確保 iOS PWA 捲動時 nav 不會跟著 reflow */}
       <nav
-        className="md:hidden shrink-0"
+        className="md:hidden fixed bottom-0 inset-x-0 z-50"
         style={{
           background: "var(--color-ink)",
           paddingBottom: "env(safe-area-inset-bottom)",
