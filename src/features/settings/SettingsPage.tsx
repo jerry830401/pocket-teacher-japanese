@@ -170,7 +170,7 @@ export default function SettingsPage() {
             color: "var(--color-ink-soft)",
           }}
         >
-          v1.0
+          v{import.meta.env.VITE_APP_VERSION}
         </span>
       </div>
 
