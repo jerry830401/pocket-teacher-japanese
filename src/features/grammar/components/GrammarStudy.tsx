@@ -11,18 +11,19 @@ interface StudyState {
   deck: GrammarCard[]
   index: number
   batchDone: boolean
+  doneHint: string
 }
 
 type StudyAction =
   | { type: 'START'; deck: GrammarCard[] }
   | { type: 'GO'; index: number }
-  | { type: 'DONE' }
+  | { type: 'DONE'; hint: string }
 
 function reducer(_state: StudyState, action: StudyAction): StudyState {
   switch (action.type) {
-    case 'START': return { deck: action.deck, index: 0, batchDone: false }
+    case 'START': return { deck: action.deck, index: 0, batchDone: false, doneHint: '' }
     case 'GO': return { ..._state, index: action.index }
-    case 'DONE': return { ..._state, batchDone: true }
+    case 'DONE': return { ..._state, batchDone: true, doneHint: action.hint }
   }
 }
 
@@ -42,8 +43,9 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
     deck: shuffle(cards).slice(0, BATCH_SIZE),
     index: 0,
     batchDone: false,
+    doneHint: '',
   }))
-  const { deck, index, batchDone } = state
+  const { deck, index, batchDone, doneHint } = state
 
   useEffect(() => {
     dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })
@@ -60,7 +62,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
         <div style={{ flexShrink: 0 }}>
           <TeacherBubble
-            hint={GRAMMAR_DONE_HINTS[Math.floor(Math.random() * GRAMMAR_DONE_HINTS.length)]}
+            hint={doneHint}
             mood="happy"
           />
         </div>
@@ -152,7 +154,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
           className="pbtn pbtn-primary"
           style={{ flex: 2, padding: '10px 0', fontSize: '0.8125rem' }}
           onClick={() => index + 1 >= deck.length
-            ? dispatch({ type: 'DONE' })
+            ? dispatch({ type: 'DONE', hint: GRAMMAR_DONE_HINTS[Math.floor(Math.random() * GRAMMAR_DONE_HINTS.length)] })
             : dispatch({ type: 'GO', index: index + 1 })}
         >
           {index + 1 >= deck.length ? '完成這組' : '下一張 →'}

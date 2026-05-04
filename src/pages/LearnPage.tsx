@@ -173,7 +173,7 @@ function SubjectScreen({
   onSelect: (s: 'hiragana' | 'katakana' | 'vocab' | 'grammar') => void
 }) {
   const ids = ['hiragana', 'katakana', 'vocab', 'grammar'] as const
-  const hint = HOME_HINTS[Math.floor(Math.random() * HOME_HINTS.length)]
+  const [hint] = useState(() => HOME_HINTS[Math.floor(Math.random() * HOME_HINTS.length)])
   return (
     <div className="h-full overflow-y-auto" style={{ display: 'flex', flexDirection: 'column', gap: 16, paddingTop: 12 }}>
       <TeacherBubble hint={hint} mood="cheer" />

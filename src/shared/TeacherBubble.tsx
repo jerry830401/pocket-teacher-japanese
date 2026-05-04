@@ -10,22 +10,18 @@ interface TeacherBubbleProps {
 
 export default function TeacherBubble({ hint, mood = 'idle' }: TeacherBubbleProps) {
   const { mascotKind, catVariant, dogVariant } = useSettings()
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(true)
   const [currentHint, setCurrentHint] = useState(hint)
 
   // fade-in animation on hint change
   useEffect(() => {
-    setVisible(false)
-    const t = setTimeout(() => {
+    const fadeOut = setTimeout(() => setVisible(false), 0)
+    const fadeIn = setTimeout(() => {
       setCurrentHint(hint)
       setVisible(true)
     }, 120)
-    return () => clearTimeout(t)
+    return () => { clearTimeout(fadeOut); clearTimeout(fadeIn) }
   }, [hint])
-
-  useEffect(() => {
-    setVisible(true)
-  }, [])
 
   return (
     <div style={{

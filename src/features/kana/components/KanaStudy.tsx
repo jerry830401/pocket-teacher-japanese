@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useMemo } from 'react'
 import type { KanaChar, KanaGroup, KanaType } from '../types'
 import { filterByType, filterByGroup } from '../data'
 import TeacherBubble from '@/shared/TeacherBubble'
@@ -17,16 +17,20 @@ export default function KanaStudy({ kanaType, group, allChars }: KanaStudyProps)
     [allChars, kanaType, group],
   )
 
+  // key prop on inner component resets all state when deck changes
+  return <KanaStudyInner key={`${kanaType}-${group}`} deck={deck} />
+}
+
+function KanaStudyInner({ deck }: { deck: ReturnType<typeof filterByGroup> }) {
   const [index, setIndex] = useState(0)
   const [done, setDone] = useState(false)
   const [ttsError, setTtsError] = useState(false)
+  const [doneHint, setDoneHint] = useState('')
 
-  // reset when deck changes
-  useEffect(() => {
-    setIndex(0)
-    setDone(false)
-    setTtsError(false)
-  }, [deck])
+  function markDone() {
+    setDoneHint(KANA_DONE_HINTS[Math.floor(Math.random() * KANA_DONE_HINTS.length)])
+    setDone(true)
+  }
 
   if (deck.length === 0) return null
 
@@ -35,7 +39,7 @@ export default function KanaStudy({ kanaType, group, allChars }: KanaStudyProps)
       <div style={{ flex: 1, display: 'flex', flexDirection: 'column', padding: '12px 0 16px', gap: 16 }}>
         <div style={{ flexShrink: 0 }}>
           <TeacherBubble
-            hint={KANA_DONE_HINTS[Math.floor(Math.random() * KANA_DONE_HINTS.length)]}
+            hint={doneHint}
             mood="happy"
           />
         </div>
@@ -176,7 +180,7 @@ export default function KanaStudy({ kanaType, group, allChars }: KanaStudyProps)
         <button
           className="pbtn pbtn-primary"
           style={{ flex: 2, padding: '10px 0', fontSize: '0.8125rem' }}
-          onClick={() => index + 1 >= deck.length ? setDone(true) : goTo(index + 1)}
+          onClick={() => index + 1 >= deck.length ? markDone() : goTo(index + 1)}
         >
           {index + 1 >= deck.length ? '完成這行' : '下一張 →'}
         </button>
