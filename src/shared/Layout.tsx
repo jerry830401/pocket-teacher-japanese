@@ -204,7 +204,7 @@ export default function Layout() {
         className="md:hidden fixed bottom-0 inset-x-0 z-50"
         style={{
           background: "var(--color-ink)",
-          // paddingBottom: "env(safe-area-inset-bottom)"
+          paddingBottom: "env(safe-area-inset-bottom)",
         }}
       >
         <div
