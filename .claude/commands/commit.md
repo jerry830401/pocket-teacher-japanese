@@ -25,11 +25,15 @@
    - 詢問使用者：「確認 commit？(y / 修改 message / n 取消)」
    - 若使用者提供新的 message，使用使用者提供的版本
 
-4. **執行 commit**
+4. **執行前品質檢查**
+   - `npm run lint` — 若有錯誤，列出問題並中止，不繼續 commit
+   - 通過後才繼續
+
+5. **執行 commit**
    - `git add -A`（暫存所有變更，含新增 untracked 檔案、修改、刪除）
    - `git commit -m "<message>"`
 
-5. **回報結果**
+6. **回報結果**
    - 顯示 commit hash 與 message
    - 提示使用者若需要也可執行 `/bump` 推進版本，或 `git push` 推送
 
