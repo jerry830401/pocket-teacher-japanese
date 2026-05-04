@@ -215,7 +215,7 @@ svg {
   background: var(--color-ink);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  padding-bottom: env(safe-area-inset-bottom);
+  /* padding-bottom: env(safe-area-inset-bottom); */
 }
 .px-tab {
   display: flex;
