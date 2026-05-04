@@ -108,6 +108,7 @@ export default function Layout() {
         position: "fixed",
         inset: 0,
         background: "var(--color-bg)",
+        paddingTop: "env(safe-area-inset-top)",
       }}
     >
       {/* ── PWA 更新提示 ── */}
@@ -193,7 +194,7 @@ export default function Layout() {
       {/* ── 主要內容區 ── */}
       <main
         className="flex-1 min-h-0 overflow-hidden mx-auto w-full max-w-2xl"
-        style={{ paddingBottom: "52px" }}
+        style={{ paddingBottom: "calc(env(safe-area-inset-bottom) + 52px)" }}
       >
         <Outlet />
       </main>
@@ -205,7 +206,7 @@ export default function Layout() {
       >
         <div
           className="grid mx-auto max-w-2xl"
-          style={{ gridTemplateColumns: "repeat(5, 1fr)" }}
+          style={{ gridTemplateColumns: "repeat(5, 1fr)", paddingBottom: "env(safe-area-inset-bottom)" }}
         >
           {NAV_ITEMS.map((item) => {
             const id = item.to.slice(1);
