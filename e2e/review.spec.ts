@@ -140,9 +140,10 @@ test.describe('錯題複習 — 有弱卡時的答題流程', () => {
     await expect(page.getByText(/第 \d+ \/ \d+ 題/)).toBeVisible({ timeout: 5000 })
     await expect(page.locator('.px-choice')).toHaveCount(4)
     await page.locator('.px-choice').first().click()
+    // 按鈕文字含箭頭「下一題 →」，用 regex 比對
     await expect(
-      page.getByRole('button', { name: '下一題' }).or(
-        page.getByRole('button', { name: '查看結果' })
+      page.getByRole('button', { name: /下一題/ }).or(
+        page.getByRole('button', { name: /查看結果/ })
       )
     ).toBeVisible({ timeout: 5000 })
   })

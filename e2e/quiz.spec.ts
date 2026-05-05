@@ -185,12 +185,13 @@ async function completeRound(page: import('@playwright/test').Page) {
   for (let i = 0; i < total; i++) {
     await expect(page.getByText(/第 \d+ \/ \d+ 題/)).toBeVisible({ timeout: 5000 })
     await page.locator('.px-choice').first().click()
-    await page.waitForTimeout(200)
+    await page.waitForTimeout(400)
 
-    if (i === total - 1) {
-      await page.getByRole('button', { name: '查看結果' }).click()
-    } else {
-      await page.getByRole('button', { name: '下一題' }).click()
+    // 按鈕文字可能含箭頭（「下一題 →」）或不含，用 regex 比對
+    const nextOrResult = page.getByRole('button', { name: /下一題|查看結果/ })
+    if (await nextOrResult.isVisible({ timeout: 3000 }).catch(() => false)) {
+      await nextOrResult.click()
+      await page.waitForTimeout(300)
     }
   }
 }
@@ -199,7 +200,8 @@ test.describe('測驗完成流程 — 五十音', () => {
   test('答完全部題目後顯示結果與下一輪按鈕', async ({ page }) => {
     await goToKanaQuiz(page, '平假名', '看假名選讀音')
     await completeRound(page)
-    await expect(page.getByText(/%/)).toBeVisible({ timeout: 5000 })
+    // 五十音結果頁顯示「X 題中答對 Y 題」而非百分比
+    await expect(page.getByText(/題中答對/)).toBeVisible({ timeout: 5000 })
     await expect(page.getByRole('button', { name: /下一輪/ })).toBeVisible()
   })
 })
@@ -217,7 +219,8 @@ test.describe('測驗完成流程 — 單字', () => {
 
     await completeRound(page)
 
-    await expect(page.getByText(/%/)).toBeVisible({ timeout: 5000 })
+    // 結果頁顯示「X 題中答對 Y 題」
+    await expect(page.getByText(/題中答對/)).toBeVisible({ timeout: 5000 })
     await expect(page.getByRole('button', { name: /下一輪/ })).toBeVisible()
   })
 })
@@ -235,7 +238,8 @@ test.describe('測驗完成流程 — 文法', () => {
 
     await completeRound(page)
 
-    await expect(page.getByText(/%/)).toBeVisible({ timeout: 5000 })
+    // 結果頁顯示「X 題中答對 Y 題」
+    await expect(page.getByText(/題中答對/)).toBeVisible({ timeout: 5000 })
     await expect(page.getByRole('button', { name: /下一輪/ })).toBeVisible()
   })
 })

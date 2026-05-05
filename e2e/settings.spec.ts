@@ -11,8 +11,9 @@ test.describe('設定頁', () => {
   })
 
   test('顯示老師角色切換按鈕', async ({ page }) => {
-    await expect(page.getByRole('button', { name: '招財貓' })).toBeVisible()
-    await expect(page.getByRole('button', { name: '柴犬' })).toBeVisible()
+    // 切換 kind 的按鈕標籤為「貓」和「狗」
+    await expect(page.getByRole('button', { name: '貓' })).toBeVisible()
+    await expect(page.getByRole('button', { name: '狗' })).toBeVisible()
   })
 
   test('顯示答對自動下一題開關（四個科目）', async ({ page }) => {
@@ -31,17 +32,17 @@ test.describe('設定頁', () => {
     await expect(page.getByRole('button', { name: '20' }).first()).toBeVisible()
   })
 
-  test('切換到柴犬後不顯示貓咪花色區塊', async ({ page }) => {
-    await page.getByRole('button', { name: '柴犬' }).click()
+  test('切換到狗狗後不顯示貓咪花色區塊', async ({ page }) => {
+    await page.getByRole('button', { name: '狗' }).click()
     await page.waitForTimeout(300)
     await expect(page.getByText('貓咪花色')).toBeHidden()
   })
 
-  test('切換到招財貓後顯示貓咪花色選項', async ({ page }) => {
-    // 先切到柴犬再切回招財貓，確保狀態可切換
-    await page.getByRole('button', { name: '柴犬' }).click()
+  test('切換到貓咪後顯示貓咪花色選項', async ({ page }) => {
+    // 先切到狗再切回貓，確保狀態可切換
+    await page.getByRole('button', { name: '狗' }).click()
     await page.waitForTimeout(300)
-    await page.getByRole('button', { name: '招財貓' }).click()
+    await page.getByRole('button', { name: '貓' }).click()
     await page.waitForTimeout(300)
     await expect(page.getByText('貓咪花色')).toBeVisible()
     await expect(page.getByText('黑貓')).toBeVisible()

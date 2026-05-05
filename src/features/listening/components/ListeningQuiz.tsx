@@ -190,8 +190,8 @@ export default function ListeningQuiz({ cards }: Props) {
           {/* 分隔線 */}
           <div style={{ alignSelf: 'stretch', width: 2, background: 'var(--color-ink)', opacity: 0.15 }} />
 
-          {/* 答案揭示 */}
-          <div style={{ flex: 1, opacity: selected ? 1 : 0, transition: 'opacity 0.2s', display: 'flex', flexDirection: 'column', gap: 4 }}>
+          {/* 答案揭示：selected 時淡入；換題時瞬間隱藏（不 transition）避免新題答案閃現 */}
+          <div style={{ flex: 1, opacity: selected ? 1 : 0, transition: selected ? 'opacity 0.2s' : 'none', display: 'flex', flexDirection: 'column', gap: 4 }}>
             <span style={{ fontFamily: '"DotGothic16", "Zen Maru Gothic", sans-serif', fontWeight: 700, fontSize: '1.75rem' }}>
               {current.payload.word}
             </span>
