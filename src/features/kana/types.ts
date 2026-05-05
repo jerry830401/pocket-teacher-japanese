@@ -28,13 +28,3 @@ export interface KanaChar {
   order: number       // for display ordering
   word?: KanaWord     // representative N5 word (absent for combo chars)
 }
-
-// 五十音表格用的格子（可能為空）
-export interface KanaCell {
-  char: KanaChar | null
-}
-
-export type KanaRow = {
-  label: string       // 行標題，e.g. "あ行"
-  cells: KanaCell[]   // 5 格（あいうえお順）
-}
