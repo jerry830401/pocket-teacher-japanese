@@ -6,7 +6,7 @@ import { loadKana, filterByType } from '@/features/kana/data'
 import { loadVocabulary, filterByLevel as filterVocab } from '@/features/vocabulary/data'
 import { loadGrammar, filterByLevel as filterGrammar } from '@/features/grammar/data'
 import { isSupported, preloadVoices } from '@/lib/tts/tts'
-import { getSeenIds } from '@/lib/db/db'
+import { getSeenCards } from '@/lib/db/db'
 import FlashCardQuiz from '@/features/kana/components/FlashCardQuiz'
 import VocabQuiz from '@/features/vocabulary/components/VocabQuiz'
 import GrammarQuiz from '@/features/grammar/components/GrammarQuiz'
@@ -195,10 +195,16 @@ function VocabQuizScreen({ level, allCards }: { level: JlptLevel; allCards: Voca
   const [seenCards, setSeenCards] = useState<VocabCard[] | null>(null)
   const levelCards = filterVocab(allCards, level)
   useEffect(() => {
-    const ids$ = levelCards.length === 0
-      ? Promise.resolve(new Set<string>())
-      : getSeenIds(levelCards.map((c) => c.id))
-    ids$.then((ids) => setSeenCards(levelCards.filter((c) => ids.has(c.id))))
+    const p = levelCards.length === 0
+      ? Promise.resolve([] as VocabCard[])
+      : getSeenCards(levelCards.map((c) => c.id)).then((srsCards) => {
+          const seenIdSet = new Set(srsCards.map((s) => s.cardId))
+          const now = Date.now()
+          const dueSet = new Set(srsCards.filter((s) => s.dueAt <= now).map((s) => s.cardId))
+          const seen = levelCards.filter((c) => seenIdSet.has(c.id))
+          return [...seen.filter((c) => dueSet.has(c.id)), ...seen.filter((c) => !dueSet.has(c.id))]
+        })
+    p.then(setSeenCards)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, allCards])
   return (
@@ -220,10 +226,16 @@ function GrammarQuizScreen({ level, allCards }: { level: JlptLevel; allCards: Gr
   const [seenCards, setSeenCards] = useState<GrammarCard[] | null>(null)
   const levelCards = filterGrammar(allCards, level)
   useEffect(() => {
-    const ids$ = levelCards.length === 0
-      ? Promise.resolve(new Set<string>())
-      : getSeenIds(levelCards.map((c) => c.id))
-    ids$.then((ids) => setSeenCards(levelCards.filter((c) => ids.has(c.id))))
+    const p = levelCards.length === 0
+      ? Promise.resolve([] as GrammarCard[])
+      : getSeenCards(levelCards.map((c) => c.id)).then((srsCards) => {
+          const seenIdSet = new Set(srsCards.map((s) => s.cardId))
+          const now = Date.now()
+          const dueSet = new Set(srsCards.filter((s) => s.dueAt <= now).map((s) => s.cardId))
+          const seen = levelCards.filter((c) => seenIdSet.has(c.id))
+          return [...seen.filter((c) => dueSet.has(c.id)), ...seen.filter((c) => !dueSet.has(c.id))]
+        })
+    p.then(setSeenCards)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, allCards])
   return (
@@ -245,10 +257,16 @@ function ListeningQuizScreen({ level, allCards }: { level: JlptLevel; allCards: 
   const [seenCards, setSeenCards] = useState<VocabCard[] | null>(null)
   const levelCards = filterVocab(allCards, level)
   useEffect(() => {
-    const ids$ = levelCards.length === 0
-      ? Promise.resolve(new Set<string>())
-      : getSeenIds(levelCards.map((c) => c.id))
-    ids$.then((ids) => setSeenCards(levelCards.filter((c) => ids.has(c.id))))
+    const p = levelCards.length === 0
+      ? Promise.resolve([] as VocabCard[])
+      : getSeenCards(levelCards.map((c) => c.id)).then((srsCards) => {
+          const seenIdSet = new Set(srsCards.map((s) => s.cardId))
+          const now = Date.now()
+          const dueSet = new Set(srsCards.filter((s) => s.dueAt <= now).map((s) => s.cardId))
+          const seen = levelCards.filter((c) => seenIdSet.has(c.id))
+          return [...seen.filter((c) => dueSet.has(c.id)), ...seen.filter((c) => !dueSet.has(c.id))]
+        })
+    p.then(setSeenCards)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [level, allCards])
   return (

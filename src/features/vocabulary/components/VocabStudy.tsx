@@ -1,7 +1,7 @@
-import { useReducer, useState, useEffect } from 'react'
+import { useReducer, useState, useEffect, useCallback } from 'react'
 import type { VocabCard } from '../types'
 import { speak } from '@/lib/tts/tts'
-import { markAsSeen } from '@/lib/db/db'
+import { markAsSeen, getSeenCards } from '@/lib/db/db'
 import TeacherBubble from '@/shared/TeacherBubble'
 import { VOCAB_DONE_HINTS, getVocabHint, getVocabMood } from '@/shared/teacherHints'
 
@@ -42,19 +42,31 @@ function shuffle<T>(arr: T[]): T[] {
   return a
 }
 
+async function buildDeck(cards: VocabCard[]): Promise<VocabCard[]> {
+  const srsCards = await getSeenCards(cards.map((c) => c.id))
+  const repMap = new Map(srsCards.map((s) => [s.cardId, s.repetitions]))
+  const sorted = [...cards].sort((a, b) => (repMap.get(a.id) ?? 0) - (repMap.get(b.id) ?? 0))
+  const batch = sorted.slice(0, BATCH_SIZE)
+  return shuffle(batch)
+}
+
 export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
-  const [state, dispatch] = useReducer(reducer, undefined, () => ({
-    deck: shuffle(cards).slice(0, BATCH_SIZE),
+  const [state, dispatch] = useReducer(reducer, {
+    deck: [],
     index: 0,
     batchDone: false,
     doneHint: '',
-  }))
+  })
   const [ttsError, setTtsError] = useState(false)
   const { deck, index, batchDone, doneHint } = state
 
-  useEffect(() => {
-    dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })
+  const startNextBatch = useCallback(() => {
+    buildDeck(cards).then((deck) => dispatch({ type: 'START', deck }))
   }, [cards])
+
+  useEffect(() => {
+    startNextBatch()
+  }, [startNextBatch])
 
   useEffect(() => {
     if (deck[index]) markAsSeen(deck[index].id)
@@ -78,7 +90,7 @@ export default function VocabStudy({ cards }: { cards: VocabCard[] }) {
           <button
             className="pbtn pbtn-primary"
             style={{ padding: '10px 24px', fontSize: '0.75rem' }}
-            onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
+            onClick={startNextBatch}
           >
             下一組（{BATCH_SIZE} 個）
           </button>

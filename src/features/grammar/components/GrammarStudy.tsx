@@ -1,6 +1,6 @@
-import { useReducer, useEffect } from 'react'
+import { useReducer, useEffect, useCallback } from 'react'
 import type { GrammarCard } from '../types'
-import { markAsSeen } from '@/lib/db/db'
+import { markAsSeen, getSeenCards } from '@/lib/db/db'
 import RubyText from './RubyText'
 import TeacherBubble from '@/shared/TeacherBubble'
 import { GRAMMAR_DONE_HINTS, getGrammarHint, getGrammarMood } from '@/shared/teacherHints'
@@ -38,18 +38,30 @@ function shuffle<T>(arr: T[]): T[] {
 }
 
 
+async function buildDeck(cards: GrammarCard[]): Promise<GrammarCard[]> {
+  const srsCards = await getSeenCards(cards.map((c) => c.id))
+  const repMap = new Map(srsCards.map((s) => [s.cardId, s.repetitions]))
+  const sorted = [...cards].sort((a, b) => (repMap.get(a.id) ?? 0) - (repMap.get(b.id) ?? 0))
+  const batch = sorted.slice(0, BATCH_SIZE)
+  return shuffle(batch)
+}
+
 export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
-  const [state, dispatch] = useReducer(reducer, undefined, () => ({
-    deck: shuffle(cards).slice(0, BATCH_SIZE),
+  const [state, dispatch] = useReducer(reducer, {
+    deck: [],
     index: 0,
     batchDone: false,
     doneHint: '',
-  }))
+  })
   const { deck, index, batchDone, doneHint } = state
 
-  useEffect(() => {
-    dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })
+  const startNextBatch = useCallback(() => {
+    buildDeck(cards).then((deck) => dispatch({ type: 'START', deck }))
   }, [cards])
+
+  useEffect(() => {
+    startNextBatch()
+  }, [startNextBatch])
 
   useEffect(() => {
     if (deck[index]) markAsSeen(deck[index].id)
@@ -73,7 +85,7 @@ export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
           <button
             className="pbtn pbtn-primary"
             style={{ padding: '10px 24px', fontSize: '0.75rem' }}
-            onClick={() => dispatch({ type: 'START', deck: shuffle(cards).slice(0, BATCH_SIZE) })}
+            onClick={startNextBatch}
           >
             下一組（{BATCH_SIZE} 個）
           </button>

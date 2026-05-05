@@ -54,3 +54,7 @@ export async function getSeenIds(cardIds: string[]): Promise<Set<string>> {
   const found = await db.srsCards.where('cardId').anyOf(cardIds).primaryKeys()
   return new Set(found as string[])
 }
+
+export async function getSeenCards(cardIds: string[]): Promise<SrsCard[]> {
+  return db.srsCards.where('cardId').anyOf(cardIds).toArray()
+}
