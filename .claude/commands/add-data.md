@@ -32,7 +32,7 @@ allowed-tools: Read, Write, Edit, Bash
 
 記錄：
 1. 目前最大的流水號（例如 `vocab-N5-589` → 589），新資料從下一號開始編號
-2. 現有該 level 的所有 `word`（vocab）或 `sentence`（grammar），避免重複
+2. **整個檔案所有 level** 的 `word`（vocab）或 `sentence`（grammar）—— 過濾範圍不限當前 level，因為同一個詞可能已被收錄在其他 level，重複收錄會造成學習資料衝突
 
 ---
 
@@ -155,7 +155,7 @@ Grammar 規範：
 ### 生成原則（兩種 type 共用）
 
 - 所有資料必須確實屬於指定 JLPT 等級的範圍
-- 不得與現有資料重複（相同的 word 或相同的 sentence 結構）
+- 不得與現有資料重複（相同的 word 或相同的 sentence 結構）；vocab 須對照**所有 level** 的 word 集合去重，不只是當前 level
 - `reading` 只用平假名，不含漢字
 - `meaning` 用繁體中文，不用簡體
 - 意思若有多個常見用法，用頓號分隔（例如：「現在、此刻」）

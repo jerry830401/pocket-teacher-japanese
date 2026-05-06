@@ -11450,5 +11450,10409 @@
       "verb",
       "health"
     ]
+  },
+  {
+    "id": "vocab-N4-001",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "当たる",
+      "reading": "あたる",
+      "meaning": "命中、符合",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-002",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "預ける",
+      "reading": "あずける",
+      "meaning": "寄存、託付",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-003",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "生きる",
+      "reading": "いきる",
+      "meaning": "生活、活著",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-004",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "祈る",
+      "reading": "いのる",
+      "meaning": "祈禱、祝願",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-005",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "受ける",
+      "reading": "うける",
+      "meaning": "接受、受到",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-006",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "動かす",
+      "reading": "うごかす",
+      "meaning": "移動（他物）、使運作",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-007",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "失う",
+      "reading": "うしなう",
+      "meaning": "失去、喪失",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-008",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "疑う",
+      "reading": "うたがう",
+      "meaning": "懷疑",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-009",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "生まれる",
+      "reading": "うまれる",
+      "meaning": "出生、誕生",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N4-010",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "起こる",
+      "reading": "おこる",
+      "meaning": "發生",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-011",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "落とす",
+      "reading": "おとす",
+      "meaning": "掉落、遺失",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-012",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "変える",
+      "reading": "かえる",
+      "meaning": "改變、更換",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-013",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "構う",
+      "reading": "かまう",
+      "meaning": "在乎、干涉",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-014",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "乾かす",
+      "reading": "かわかす",
+      "meaning": "弄乾、晾乾",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-015",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "気にする",
+      "reading": "きにする",
+      "meaning": "在意、擔心",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-016",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "倒れる",
+      "reading": "たおれる",
+      "meaning": "倒下、崩塌",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-017",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "出す",
+      "reading": "だす",
+      "meaning": "拿出、提交、發出",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-018",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "連絡する",
+      "reading": "れんらくする",
+      "meaning": "聯絡、通知",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-019",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "集中する",
+      "reading": "しゅうちゅうする",
+      "meaning": "集中、專注",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-020",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "利用する",
+      "reading": "りようする",
+      "meaning": "利用、使用",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-021",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "観察する",
+      "reading": "かんさつする",
+      "meaning": "觀察",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-022",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "比較する",
+      "reading": "ひかくする",
+      "meaning": "比較",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-023",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "記録する",
+      "reading": "きろくする",
+      "meaning": "記錄",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-024",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "紹介する",
+      "reading": "しょうかいする",
+      "meaning": "介紹",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-025",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "修理する",
+      "reading": "しゅうりする",
+      "meaning": "修理",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "home",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-026",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "遅れる",
+      "reading": "おくれる",
+      "meaning": "遲到、落後",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "time",
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N4-027",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "増やす",
+      "reading": "ふやす",
+      "meaning": "增加（他動詞）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-028",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "育てる",
+      "reading": "そだてる",
+      "meaning": "養育、培養",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "family",
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-029",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "植える",
+      "reading": "うえる",
+      "meaning": "種植",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-030",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "招く",
+      "reading": "まねく",
+      "meaning": "邀請、招致",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-031",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "続く",
+      "reading": "つづく",
+      "meaning": "持續、連續",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-032",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "暮らす",
+      "reading": "くらす",
+      "meaning": "生活、度日",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-033",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "叫ぶ",
+      "reading": "さけぶ",
+      "meaning": "呼喊、叫喊",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-034",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "調べる",
+      "reading": "しらべる",
+      "meaning": "調查、查詢",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-035",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "眠る",
+      "reading": "ねむる",
+      "meaning": "睡眠、入睡",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-036",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "以外",
+      "reading": "いがい",
+      "meaning": "以外、除了",
+      "pos": "noun"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-037",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "印鑑",
+      "reading": "いんかん",
+      "meaning": "印章",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-038",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "運賃",
+      "reading": "うんちん",
+      "meaning": "交通費、運費",
+      "pos": "noun"
+    },
+    "tags": [
+      "transport",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-039",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "絵",
+      "reading": "え",
+      "meaning": "圖畫、繪畫",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-040",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "屋上",
+      "reading": "おくじょう",
+      "meaning": "屋頂",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-041",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "温泉",
+      "reading": "おんせん",
+      "meaning": "溫泉",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "health",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-042",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "会場",
+      "reading": "かいじょう",
+      "meaning": "會場",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-043",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "家賃",
+      "reading": "やちん",
+      "meaning": "房租",
+      "pos": "noun"
+    },
+    "tags": [
+      "home",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-044",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "環境",
+      "reading": "かんきょう",
+      "meaning": "環境",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-045",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "観光",
+      "reading": "かんこう",
+      "meaning": "觀光、旅遊",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-046",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "規則",
+      "reading": "きそく",
+      "meaning": "規定、規則",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-047",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "記念",
+      "reading": "きねん",
+      "meaning": "紀念",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-048",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "希望",
+      "reading": "きぼう",
+      "meaning": "希望、願望",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-049",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "記録",
+      "reading": "きろく",
+      "meaning": "記錄、紀錄",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-050",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "計算",
+      "reading": "けいさん",
+      "meaning": "計算",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-051",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "参る",
+      "reading": "まいる",
+      "meaning": "前往（謙讓語）、去",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-052",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "申す",
+      "reading": "もうす",
+      "meaning": "說（謙讓語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-053",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "いたす",
+      "reading": "いたす",
+      "meaning": "做（謙讓語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-054",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "おる",
+      "reading": "おる",
+      "meaning": "在（謙讓語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-055",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "ございます",
+      "reading": "ございます",
+      "meaning": "有、是（鄭重語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-056",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "拝見する",
+      "reading": "はいけんする",
+      "meaning": "閱覽（謙讓語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-057",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "伺う",
+      "reading": "うかがう",
+      "meaning": "拜訪、詢問（謙讓語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-058",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "差し上げる",
+      "reading": "さしあげる",
+      "meaning": "給予（謙讓語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-059",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "いただく",
+      "reading": "いただく",
+      "meaning": "接受、吃喝（謙讓語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting",
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N4-060",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "おっしゃる",
+      "reading": "おっしゃる",
+      "meaning": "說（尊敬語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-061",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "いらっしゃる",
+      "reading": "いらっしゃる",
+      "meaning": "在、去、來（尊敬語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-062",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "召し上がる",
+      "reading": "めしあがる",
+      "meaning": "吃、喝（尊敬語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "food",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-063",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "なさる",
+      "reading": "なさる",
+      "meaning": "做（尊敬語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-064",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "くださる",
+      "reading": "くださる",
+      "meaning": "給予（尊敬語）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-065",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "驚かす",
+      "reading": "おどろかす",
+      "meaning": "使驚嚇、嚇到",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-066",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "確かめる",
+      "reading": "たしかめる",
+      "meaning": "確認",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-067",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "表す",
+      "reading": "あらわす",
+      "meaning": "表達、表示",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-068",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "建物",
+      "reading": "たてもの",
+      "meaning": "建築物",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-069",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "事故",
+      "reading": "じこ",
+      "meaning": "事故、意外",
+      "pos": "noun"
+    },
+    "tags": [
+      "transport",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-070",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "政治",
+      "reading": "せいじ",
+      "meaning": "政治",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-071",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "税金",
+      "reading": "ぜいきん",
+      "meaning": "稅金",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-072",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "相談",
+      "reading": "そうだん",
+      "meaning": "商量、諮詢",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-073",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "速度",
+      "reading": "そくど",
+      "meaning": "速度",
+      "pos": "noun"
+    },
+    "tags": [
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N4-074",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "代金",
+      "reading": "だいきん",
+      "meaning": "費用、貨款",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-075",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "地域",
+      "reading": "ちいき",
+      "meaning": "地區、地域",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-076",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "注文",
+      "reading": "ちゅうもん",
+      "meaning": "點餐、訂購",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-077",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "通知",
+      "reading": "つうち",
+      "meaning": "通知、告知",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-078",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "特徴",
+      "reading": "とくちょう",
+      "meaning": "特徵、特色",
+      "pos": "noun"
+    },
+    "tags": [
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-079",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "努力",
+      "reading": "どりょく",
+      "meaning": "努力",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-080",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "内容",
+      "reading": "ないよう",
+      "meaning": "內容",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-081",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "人気",
+      "reading": "にんき",
+      "meaning": "人氣、受歡迎",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-082",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "年齢",
+      "reading": "ねんれい",
+      "meaning": "年齡",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-083",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "場所",
+      "reading": "ばしょ",
+      "meaning": "地點、場所",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-084",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "発表",
+      "reading": "はっぴょう",
+      "meaning": "發表、宣布",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-085",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "番組",
+      "reading": "ばんぐみ",
+      "meaning": "節目（電視、廣播）",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-086",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "部分",
+      "reading": "ぶぶん",
+      "meaning": "部分",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-087",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "文化",
+      "reading": "ぶんか",
+      "meaning": "文化",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-088",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "平和",
+      "reading": "へいわ",
+      "meaning": "和平",
+      "pos": "noun"
+    },
+    "tags": [
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-089",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "方向",
+      "reading": "ほうこう",
+      "meaning": "方向",
+      "pos": "noun"
+    },
+    "tags": [
+      "direction",
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N4-090",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "本物",
+      "reading": "ほんもの",
+      "meaning": "真品、真正的",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-091",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "窓口",
+      "reading": "まどぐち",
+      "meaning": "窗口、服務窗",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-092",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "約束",
+      "reading": "やくそく",
+      "meaning": "約定、承諾",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-093",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "夕食",
+      "reading": "ゆうしょく",
+      "meaning": "晚餐",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-094",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "理解",
+      "reading": "りかい",
+      "meaning": "理解",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-095",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "留学",
+      "reading": "りゅうがく",
+      "meaning": "留學",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-096",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "連絡",
+      "reading": "れんらく",
+      "meaning": "聯絡、通知",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-097",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "感想",
+      "reading": "かんそう",
+      "meaning": "感想、心得",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-098",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "具合",
+      "reading": "ぐあい",
+      "meaning": "狀況、健康狀態",
+      "pos": "noun"
+    },
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-099",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "計画",
+      "reading": "けいかく",
+      "meaning": "計畫",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-100",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "原料",
+      "reading": "げんりょう",
+      "meaning": "原料、材料",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-101",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "言語",
+      "reading": "げんご",
+      "meaning": "語言",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-102",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "交通",
+      "reading": "こうつう",
+      "meaning": "交通",
+      "pos": "noun"
+    },
+    "tags": [
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N4-103",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "公共",
+      "reading": "こうきょう",
+      "meaning": "公共、公眾",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-104",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "工夫",
+      "reading": "くふう",
+      "meaning": "巧思、辦法",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-105",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "合格",
+      "reading": "ごうかく",
+      "meaning": "合格、通過",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-106",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "国際",
+      "reading": "こくさい",
+      "meaning": "國際",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-107",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "才能",
+      "reading": "さいのう",
+      "meaning": "才能、天賦",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-108",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "採用",
+      "reading": "さいよう",
+      "meaning": "採用、錄用",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-109",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "材料",
+      "reading": "ざいりょう",
+      "meaning": "材料、食材",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-110",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "試合",
+      "reading": "しあい",
+      "meaning": "比賽",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-111",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "事情",
+      "reading": "じじょう",
+      "meaning": "情況、原因",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-112",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "自然",
+      "reading": "しぜん",
+      "meaning": "自然",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-113",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "社員",
+      "reading": "しゃいん",
+      "meaning": "員工、社員",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-114",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "重要",
+      "reading": "じゅうよう",
+      "meaning": "重要",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-115",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "将来",
+      "reading": "しょうらい",
+      "meaning": "將來、未來",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-116",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "消費",
+      "reading": "しょうひ",
+      "meaning": "消費",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-117",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "食料",
+      "reading": "しょくりょう",
+      "meaning": "食糧、糧食",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N4-118",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "信頼",
+      "reading": "しんらい",
+      "meaning": "信任、信賴",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-119",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "進歩",
+      "reading": "しんぽ",
+      "meaning": "進步",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-120",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "水道",
+      "reading": "すいどう",
+      "meaning": "自來水、水道",
+      "pos": "noun"
+    },
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-121",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "性格",
+      "reading": "せいかく",
+      "meaning": "性格、個性",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-122",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "製品",
+      "reading": "せいひん",
+      "meaning": "產品",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-123",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "世界",
+      "reading": "せかい",
+      "meaning": "世界",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-124",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "責任",
+      "reading": "せきにん",
+      "meaning": "責任",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-125",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "説明",
+      "reading": "せつめい",
+      "meaning": "說明、解釋",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-126",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "専門",
+      "reading": "せんもん",
+      "meaning": "專業、專門",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-127",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "先輩",
+      "reading": "せんぱい",
+      "meaning": "前輩、學長姐",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-128",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "後輩",
+      "reading": "こうはい",
+      "meaning": "後輩、學弟妹",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-129",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "倉庫",
+      "reading": "そうこ",
+      "meaning": "倉庫",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-130",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "存在",
+      "reading": "そんざい",
+      "meaning": "存在",
+      "pos": "noun"
+    },
+    "tags": [
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-131",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "体験",
+      "reading": "たいけん",
+      "meaning": "體驗",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-132",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "態度",
+      "reading": "たいど",
+      "meaning": "態度",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-133",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "担当",
+      "reading": "たんとう",
+      "meaning": "負責、主管",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-134",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "知識",
+      "reading": "ちしき",
+      "meaning": "知識",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-135",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "中心",
+      "reading": "ちゅうしん",
+      "meaning": "中心、核心",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "direction"
+    ]
+  },
+  {
+    "id": "vocab-N4-136",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "注意",
+      "reading": "ちゅうい",
+      "meaning": "注意、小心",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-137",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "長所",
+      "reading": "ちょうしょ",
+      "meaning": "長處、優點",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-138",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "短所",
+      "reading": "たんしょ",
+      "meaning": "短處、缺點",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-139",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "調査",
+      "reading": "ちょうさ",
+      "meaning": "調查",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-140",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "出来事",
+      "reading": "できごと",
+      "meaning": "事件、發生的事",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-141",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "点数",
+      "reading": "てんすう",
+      "meaning": "分數、得分",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-142",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "電力",
+      "reading": "でんりょく",
+      "meaning": "電力",
+      "pos": "noun"
+    },
+    "tags": [
+      "home",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-143",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "伝統",
+      "reading": "でんとう",
+      "meaning": "傳統",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-144",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "道具",
+      "reading": "どうぐ",
+      "meaning": "工具",
+      "pos": "noun"
+    },
+    "tags": [
+      "home",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-145",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "動作",
+      "reading": "どうさ",
+      "meaning": "動作、行為",
+      "pos": "noun"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-146",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "独身",
+      "reading": "どくしん",
+      "meaning": "單身",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N4-147",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "土地",
+      "reading": "とち",
+      "meaning": "土地、地面",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-148",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "友人",
+      "reading": "ゆうじん",
+      "meaning": "朋友",
+      "pos": "noun"
+    },
+    "tags": [
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-149",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "入院",
+      "reading": "にゅういん",
+      "meaning": "住院",
+      "pos": "noun"
+    },
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-150",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "人口",
+      "reading": "じんこう",
+      "meaning": "人口",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-151",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "表れる",
+      "reading": "あらわれる",
+      "meaning": "出現、顯現",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-152",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "表現する",
+      "reading": "ひょうげんする",
+      "meaning": "表現、表達",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-153",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "判断する",
+      "reading": "はんだんする",
+      "meaning": "判斷",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-154",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "発見する",
+      "reading": "はっけんする",
+      "meaning": "發現",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-155",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "発展する",
+      "reading": "はってんする",
+      "meaning": "發展、發達",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-156",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "反省する",
+      "reading": "はんせいする",
+      "meaning": "反省",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-157",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "必要とする",
+      "reading": "ひつようとする",
+      "meaning": "需要",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-158",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "病む",
+      "reading": "やむ",
+      "meaning": "生病、患病",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-159",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "降る",
+      "reading": "ふる",
+      "meaning": "（雨雪）降下",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "weather"
+    ]
+  },
+  {
+    "id": "vocab-N4-160",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "触れる",
+      "reading": "ふれる",
+      "meaning": "觸碰、接觸",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-161",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "分かれる",
+      "reading": "わかれる",
+      "meaning": "分開、分岐",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-162",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "別れる",
+      "reading": "わかれる",
+      "meaning": "分別、告別",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-163",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "焼く",
+      "reading": "やく",
+      "meaning": "烤、燒",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N4-164",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "沸かす",
+      "reading": "わかす",
+      "meaning": "燒開水",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "food",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-165",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "整える",
+      "reading": "ととのえる",
+      "meaning": "整理、準備",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "home",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-166",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "覚ます",
+      "reading": "さます",
+      "meaning": "弄醒、使冷卻",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-167",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "怠る",
+      "reading": "おこたる",
+      "meaning": "怠惰、疏忽",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-168",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "困らせる",
+      "reading": "こまらせる",
+      "meaning": "使為難、使困擾",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-169",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "感じる",
+      "reading": "かんじる",
+      "meaning": "感覺、感受",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-170",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "発明",
+      "reading": "はつめい",
+      "meaning": "發明",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-171",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "反対",
+      "reading": "はんたい",
+      "meaning": "反對、相反",
+      "pos": "noun"
+    },
+    "tags": [
+      "adjective",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-172",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "比較",
+      "reading": "ひかく",
+      "meaning": "比較",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-173",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "表現",
+      "reading": "ひょうげん",
+      "meaning": "表現、表達",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-174",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "風景",
+      "reading": "ふうけい",
+      "meaning": "風景、景色",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-175",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "普通",
+      "reading": "ふつう",
+      "meaning": "普通、一般",
+      "pos": "noun"
+    },
+    "tags": [
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-176",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "文章",
+      "reading": "ぶんしょう",
+      "meaning": "文章",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-177",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "文法",
+      "reading": "ぶんぽう",
+      "meaning": "文法",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-178",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "変化",
+      "reading": "へんか",
+      "meaning": "變化",
+      "pos": "noun"
+    },
+    "tags": [
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-179",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "返却",
+      "reading": "へんきゃく",
+      "meaning": "歸還",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-180",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "保険",
+      "reading": "ほけん",
+      "meaning": "保險",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-181",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "方針",
+      "reading": "ほうしん",
+      "meaning": "方針、方向",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-182",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "本社",
+      "reading": "ほんしゃ",
+      "meaning": "總公司",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-183",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "問い合わせ",
+      "reading": "といあわせ",
+      "meaning": "詢問、洽詢",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-184",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "役割",
+      "reading": "やくわり",
+      "meaning": "角色、職責",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-185",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "優先",
+      "reading": "ゆうせん",
+      "meaning": "優先",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-186",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "予算",
+      "reading": "よさん",
+      "meaning": "預算",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-187",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "予防",
+      "reading": "よぼう",
+      "meaning": "預防",
+      "pos": "noun"
+    },
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-188",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "余裕",
+      "reading": "よゆう",
+      "meaning": "餘裕、從容",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-189",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "雷",
+      "reading": "かみなり",
+      "meaning": "雷、雷聲",
+      "pos": "noun"
+    },
+    "tags": [
+      "weather",
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-190",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "落下",
+      "reading": "らっか",
+      "meaning": "落下",
+      "pos": "noun"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-191",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "理想",
+      "reading": "りそう",
+      "meaning": "理想",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-192",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "利点",
+      "reading": "りてん",
+      "meaning": "優點、好處",
+      "pos": "noun"
+    },
+    "tags": [
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-193",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "流行",
+      "reading": "りゅうこう",
+      "meaning": "流行、趨勢",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "clothing"
+    ]
+  },
+  {
+    "id": "vocab-N4-194",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "揃える",
+      "reading": "そろえる",
+      "meaning": "備齊、整理",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "home",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-195",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "逃げる",
+      "reading": "にげる",
+      "meaning": "逃跑、逃走",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-196",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "迷子になる",
+      "reading": "まいごになる",
+      "meaning": "迷路",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-197",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "交換する",
+      "reading": "こうかんする",
+      "meaning": "交換、更換",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "shopping",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-198",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "成功する",
+      "reading": "せいこうする",
+      "meaning": "成功",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-199",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "失敗する",
+      "reading": "しっぱいする",
+      "meaning": "失敗",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-200",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "感動する",
+      "reading": "かんどうする",
+      "meaning": "感動",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-201",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "安心する",
+      "reading": "あんしんする",
+      "meaning": "放心、安心",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-202",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "応援する",
+      "reading": "おうえんする",
+      "meaning": "聲援、加油",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "sport",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-203",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "相談する",
+      "reading": "そうだんする",
+      "meaning": "商量、諮詢",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-204",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "到着する",
+      "reading": "とうちゃくする",
+      "meaning": "到達、抵達",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N4-205",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "経営する",
+      "reading": "けいえいする",
+      "meaning": "經營",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-206",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "計画する",
+      "reading": "けいかくする",
+      "meaning": "計畫",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-207",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "設計する",
+      "reading": "せっけいする",
+      "meaning": "設計",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-208",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "生産する",
+      "reading": "せいさんする",
+      "meaning": "生產",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-209",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "輸出する",
+      "reading": "ゆしゅつする",
+      "meaning": "出口、輸出",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-210",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "輸入する",
+      "reading": "ゆにゅうする",
+      "meaning": "進口、輸入",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-211",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "展示する",
+      "reading": "てんじする",
+      "meaning": "展示、陳列",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "hobby",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-212",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "宣伝する",
+      "reading": "せんでんする",
+      "meaning": "宣傳",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-213",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "採点する",
+      "reading": "さいてんする",
+      "meaning": "評分",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-214",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "報告する",
+      "reading": "ほうこくする",
+      "meaning": "報告",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-215",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "解決する",
+      "reading": "かいけつする",
+      "meaning": "解決",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-216",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "焦る",
+      "reading": "あせる",
+      "meaning": "焦急、著急",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-217",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "諦めない",
+      "reading": "あきらめない",
+      "meaning": "不放棄",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-218",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "掘る",
+      "reading": "ほる",
+      "meaning": "挖掘",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-219",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "捕まえる",
+      "reading": "つかまえる",
+      "meaning": "抓住、捉住",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-220",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "乗り込む",
+      "reading": "のりこむ",
+      "meaning": "乘上、搭乘",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N4-221",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "医療",
+      "reading": "いりょう",
+      "meaning": "醫療",
+      "pos": "noun"
+    },
+    "tags": [
+      "health",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-222",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "印象",
+      "reading": "いんしょう",
+      "meaning": "印象",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-223",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "運命",
+      "reading": "うんめい",
+      "meaning": "命運",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-224",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "演奏",
+      "reading": "えんそう",
+      "meaning": "演奏",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-225",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "応募",
+      "reading": "おうぼ",
+      "meaning": "應募、報名",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-226",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "お世話",
+      "reading": "おせわ",
+      "meaning": "照顧、關照",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-227",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "お礼",
+      "reading": "おれい",
+      "meaning": "道謝、謝禮",
+      "pos": "noun"
+    },
+    "tags": [
+      "greeting",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-228",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "改善",
+      "reading": "かいぜん",
+      "meaning": "改善",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-229",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "会費",
+      "reading": "かいひ",
+      "meaning": "會費",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-230",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "解説",
+      "reading": "かいせつ",
+      "meaning": "解說、說明",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-231",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "火山",
+      "reading": "かざん",
+      "meaning": "火山",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-232",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "課題",
+      "reading": "かだい",
+      "meaning": "課題、作業",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-233",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "活動",
+      "reading": "かつどう",
+      "meaning": "活動",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-234",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "感覚",
+      "reading": "かんかく",
+      "meaning": "感覺、感官",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-235",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "関心",
+      "reading": "かんしん",
+      "meaning": "關心、關注",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-236",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "官庁",
+      "reading": "かんちょう",
+      "meaning": "政府機關",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-237",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "記事",
+      "reading": "きじ",
+      "meaning": "新聞報導、文章",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-238",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "機能",
+      "reading": "きのう",
+      "meaning": "功能",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-239",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "基礎",
+      "reading": "きそ",
+      "meaning": "基礎",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-240",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "期間",
+      "reading": "きかん",
+      "meaning": "期間",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-241",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "強調",
+      "reading": "きょうちょう",
+      "meaning": "強調",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-242",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "共通",
+      "reading": "きょうつう",
+      "meaning": "共通、共同",
+      "pos": "noun"
+    },
+    "tags": [
+      "adjective",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-243",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "競争",
+      "reading": "きょうそう",
+      "meaning": "競爭",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-244",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "協力",
+      "reading": "きょうりょく",
+      "meaning": "協力、合作",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-245",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "禁止",
+      "reading": "きんし",
+      "meaning": "禁止",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-246",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "区別",
+      "reading": "くべつ",
+      "meaning": "區別、分別",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-247",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "経済",
+      "reading": "けいざい",
+      "meaning": "經濟",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-248",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "結果",
+      "reading": "けっか",
+      "meaning": "結果",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-249",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "結婚",
+      "reading": "けっこん",
+      "meaning": "結婚",
+      "pos": "noun"
+    },
+    "tags": [
+      "family",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-250",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "健康",
+      "reading": "けんこう",
+      "meaning": "健康",
+      "pos": "noun"
+    },
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-251",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "個人",
+      "reading": "こじん",
+      "meaning": "個人",
+      "pos": "noun"
+    },
+    "tags": [
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-252",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "興奮",
+      "reading": "こうふん",
+      "meaning": "興奮",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-253",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "工事",
+      "reading": "こうじ",
+      "meaning": "工程、施工",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-254",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "行動",
+      "reading": "こうどう",
+      "meaning": "行動",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-255",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "個性",
+      "reading": "こせい",
+      "meaning": "個性",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-256",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "再生",
+      "reading": "さいせい",
+      "meaning": "再生、播放",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-257",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "在学",
+      "reading": "ざいがく",
+      "meaning": "在學",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-258",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "作業",
+      "reading": "さぎょう",
+      "meaning": "作業、工作",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-259",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "産業",
+      "reading": "さんぎょう",
+      "meaning": "產業",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-260",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "指導",
+      "reading": "しどう",
+      "meaning": "指導",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-261",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "時代",
+      "reading": "じだい",
+      "meaning": "時代",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-262",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "自信",
+      "reading": "じしん",
+      "meaning": "自信",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-263",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "自動",
+      "reading": "じどう",
+      "meaning": "自動",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-264",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "実力",
+      "reading": "じつりょく",
+      "meaning": "實力",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-265",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "実習",
+      "reading": "じっしゅう",
+      "meaning": "實習",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-266",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "写真家",
+      "reading": "しゃしんか",
+      "meaning": "攝影師",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "hobby",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-267",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "社会人",
+      "reading": "しゃかいじん",
+      "meaning": "社會人、上班族",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-268",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "就職",
+      "reading": "しゅうしょく",
+      "meaning": "就職、找工作",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-269",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "主人公",
+      "reading": "しゅじんこう",
+      "meaning": "主角、主人翁",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-270",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "出身",
+      "reading": "しゅっしん",
+      "meaning": "出身、籍貫",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-271",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "状況",
+      "reading": "じょうきょう",
+      "meaning": "狀況、情況",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-272",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "情報",
+      "reading": "じょうほう",
+      "meaning": "資訊、情報",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-273",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "食欲",
+      "reading": "しょくよく",
+      "meaning": "食慾",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-274",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "親切",
+      "reading": "しんせつ",
+      "meaning": "親切、熱心",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-275",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "成長",
+      "reading": "せいちょう",
+      "meaning": "成長",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-276",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "生命",
+      "reading": "せいめい",
+      "meaning": "生命",
+      "pos": "noun"
+    },
+    "tags": [
+      "health",
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-277",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "積極的",
+      "reading": "せっきょくてき",
+      "meaning": "積極的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-278",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "設備",
+      "reading": "せつび",
+      "meaning": "設備、設施",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-279",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "全体",
+      "reading": "ぜんたい",
+      "meaning": "全體",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-280",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "線路",
+      "reading": "せんろ",
+      "meaning": "鐵路、軌道",
+      "pos": "noun"
+    },
+    "tags": [
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N4-281",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "専攻",
+      "reading": "せんこう",
+      "meaning": "主修、專攻",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-282",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "選手",
+      "reading": "せんしゅ",
+      "meaning": "選手",
+      "pos": "noun"
+    },
+    "tags": [
+      "sport",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-283",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "組合",
+      "reading": "くみあい",
+      "meaning": "組合、工會",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-284",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "増加",
+      "reading": "ぞうか",
+      "meaning": "增加",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-285",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "対象",
+      "reading": "たいしょう",
+      "meaning": "對象",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-286",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "宅配",
+      "reading": "たくはい",
+      "meaning": "宅配、快遞",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-287",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "段階",
+      "reading": "だんかい",
+      "meaning": "階段、階段",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-288",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "断水",
+      "reading": "だんすい",
+      "meaning": "停水",
+      "pos": "noun"
+    },
+    "tags": [
+      "home",
+      "weather"
+    ]
+  },
+  {
+    "id": "vocab-N4-289",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "明らかな",
+      "reading": "あきらかな",
+      "meaning": "明顯的、清楚的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-290",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "鮮やかな",
+      "reading": "あざやかな",
+      "meaning": "鮮豔的、清晰的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "color",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-291",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "意外な",
+      "reading": "いがいな",
+      "meaning": "意外的、出乎意料的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "emotion",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-292",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "正確な",
+      "reading": "せいかくな",
+      "meaning": "正確的、準確的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-293",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "必要な",
+      "reading": "ひつような",
+      "meaning": "必要的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-294",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "苦しい",
+      "reading": "くるしい",
+      "meaning": "痛苦的、難受的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "emotion",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-295",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "親しい",
+      "reading": "したしい",
+      "meaning": "親近的、熟悉的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-296",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "立派な",
+      "reading": "りっぱな",
+      "meaning": "出色的、了不起的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-297",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "若い",
+      "reading": "わかい",
+      "meaning": "年輕的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "person",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-298",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "厚い",
+      "reading": "あつい",
+      "meaning": "厚的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "size",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-299",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "薄い",
+      "reading": "うすい",
+      "meaning": "薄的、淡的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "size",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-300",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "貧しい",
+      "reading": "まずしい",
+      "meaning": "貧窮的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "adjective",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-301",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "豊かな",
+      "reading": "ゆたかな",
+      "meaning": "豐富的、富裕的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-302",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "固い",
+      "reading": "かたい",
+      "meaning": "堅固的、堅硬的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "adjective",
+      "size"
+    ]
+  },
+  {
+    "id": "vocab-N4-303",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "重要な",
+      "reading": "じゅうような",
+      "meaning": "重要的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-304",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "素直な",
+      "reading": "すなおな",
+      "meaning": "直率的、聽話的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "person",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-305",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "奇妙な",
+      "reading": "きみょうな",
+      "meaning": "奇妙的、奇怪的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-306",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "不思議な",
+      "reading": "ふしぎな",
+      "meaning": "不可思議的、奇妙的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-307",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "あまりにも",
+      "reading": "あまりにも",
+      "meaning": "過於、太…了",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-308",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "いつか",
+      "reading": "いつか",
+      "meaning": "某天、不知何時",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-309",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "いつでも",
+      "reading": "いつでも",
+      "meaning": "隨時、任何時候",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-310",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "大体",
+      "reading": "だいたい",
+      "meaning": "大致上、大概",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-311",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "少なくとも",
+      "reading": "すくなくとも",
+      "meaning": "至少",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-312",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "もしかしたら",
+      "reading": "もしかしたら",
+      "meaning": "也許、說不定",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-313",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "改めて",
+      "reading": "あらためて",
+      "meaning": "重新、再次",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-314",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "かなり",
+      "reading": "かなり",
+      "meaning": "相當、頗",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "size"
+    ]
+  },
+  {
+    "id": "vocab-N4-315",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "必ずしも",
+      "reading": "かならずしも",
+      "meaning": "未必、不一定",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-316",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "確かに",
+      "reading": "たしかに",
+      "meaning": "確實、的確",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-317",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "特別に",
+      "reading": "とくべつに",
+      "meaning": "特別地",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-318",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "突然",
+      "reading": "とつぜん",
+      "meaning": "突然、忽然",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-319",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "どうせ",
+      "reading": "どうせ",
+      "meaning": "反正、既然如此",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-320",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "幸い",
+      "reading": "さいわい",
+      "meaning": "幸好、幸運地",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-321",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "以上",
+      "reading": "いじょう",
+      "meaning": "以上、不少於",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-322",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "以下",
+      "reading": "いか",
+      "meaning": "以下、不超過",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-323",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "打ち合わせ",
+      "reading": "うちあわせ",
+      "meaning": "事先商量、碰面討論",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-324",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "売り上げ",
+      "reading": "うりあげ",
+      "meaning": "銷售額",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-325",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "栄養",
+      "reading": "えいよう",
+      "meaning": "營養",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-326",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "縁",
+      "reading": "えん",
+      "meaning": "緣分、邊緣",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-327",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "演劇",
+      "reading": "えんげき",
+      "meaning": "戲劇、話劇",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-328",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "応接",
+      "reading": "おうせつ",
+      "meaning": "接待、接見",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-329",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "折り紙",
+      "reading": "おりがみ",
+      "meaning": "摺紙",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-330",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "音声",
+      "reading": "おんせい",
+      "meaning": "聲音、音聲",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-331",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "街",
+      "reading": "まち",
+      "meaning": "街道、城市",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-332",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "海岸",
+      "reading": "かいがん",
+      "meaning": "海岸",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-333",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "会計",
+      "reading": "かいけい",
+      "meaning": "會計、結帳",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-334",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "学期",
+      "reading": "がっき",
+      "meaning": "學期",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-335",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "学力",
+      "reading": "がくりょく",
+      "meaning": "學力、學業能力",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-336",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "感染",
+      "reading": "かんせん",
+      "meaning": "感染",
+      "pos": "noun"
+    },
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-337",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "管理",
+      "reading": "かんり",
+      "meaning": "管理",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-338",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "機械",
+      "reading": "きかい",
+      "meaning": "機械、機器",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-339",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "記憶",
+      "reading": "きおく",
+      "meaning": "記憶",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-340",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "期待",
+      "reading": "きたい",
+      "meaning": "期待",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-341",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "救助",
+      "reading": "きゅうじょ",
+      "meaning": "救助",
+      "pos": "noun"
+    },
+    "tags": [
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-342",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "教育",
+      "reading": "きょういく",
+      "meaning": "教育",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-343",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "許可",
+      "reading": "きょか",
+      "meaning": "許可",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-344",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "金額",
+      "reading": "きんがく",
+      "meaning": "金額",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-345",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "近代",
+      "reading": "きんだい",
+      "meaning": "近代",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-346",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "空間",
+      "reading": "くうかん",
+      "meaning": "空間",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-347",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "工業",
+      "reading": "こうぎょう",
+      "meaning": "工業",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-348",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "高校",
+      "reading": "こうこう",
+      "meaning": "高中",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-349",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "行為",
+      "reading": "こうい",
+      "meaning": "行為",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-350",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "効果",
+      "reading": "こうか",
+      "meaning": "效果",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-351",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "効率",
+      "reading": "こうりつ",
+      "meaning": "效率",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-352",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "固定",
+      "reading": "こてい",
+      "meaning": "固定",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-353",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "根拠",
+      "reading": "こんきょ",
+      "meaning": "根據",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-354",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "作品",
+      "reading": "さくひん",
+      "meaning": "作品",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-355",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "参考",
+      "reading": "さんこう",
+      "meaning": "參考",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-356",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "支援",
+      "reading": "しえん",
+      "meaning": "支援",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-357",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "指示",
+      "reading": "しじ",
+      "meaning": "指示",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-358",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "事業",
+      "reading": "じぎょう",
+      "meaning": "事業",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-359",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "自由",
+      "reading": "じゆう",
+      "meaning": "自由",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-360",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "手続き",
+      "reading": "てつづき",
+      "meaning": "手續、程序",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-361",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "収入",
+      "reading": "しゅうにゅう",
+      "meaning": "收入",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-362",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "修正",
+      "reading": "しゅうせい",
+      "meaning": "修正",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-363",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "周辺",
+      "reading": "しゅうへん",
+      "meaning": "周邊、周圍",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "direction"
+    ]
+  },
+  {
+    "id": "vocab-N4-364",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "受付",
+      "reading": "うけつけ",
+      "meaning": "接待處、受理",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-365",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "商業",
+      "reading": "しょうぎょう",
+      "meaning": "商業",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-366",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "商店",
+      "reading": "しょうてん",
+      "meaning": "商店",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-367",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "条件",
+      "reading": "じょうけん",
+      "meaning": "條件",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-368",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "証明",
+      "reading": "しょうめい",
+      "meaning": "證明",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-369",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "情熱",
+      "reading": "じょうねつ",
+      "meaning": "熱情",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-370",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "食堂",
+      "reading": "しょくどう",
+      "meaning": "食堂、餐廳",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "food"
+    ]
+  },
+  {
+    "id": "vocab-N4-371",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "書類",
+      "reading": "しょるい",
+      "meaning": "文件、書類",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-372",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "人物",
+      "reading": "じんぶつ",
+      "meaning": "人物",
+      "pos": "noun"
+    },
+    "tags": [
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-373",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "睡眠",
+      "reading": "すいみん",
+      "meaning": "睡眠",
+      "pos": "noun"
+    },
+    "tags": [
+      "health",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-374",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "数学",
+      "reading": "すうがく",
+      "meaning": "數學",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-375",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "図形",
+      "reading": "ずけい",
+      "meaning": "圖形",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-376",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "制度",
+      "reading": "せいど",
+      "meaning": "制度",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-377",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "成果",
+      "reading": "せいか",
+      "meaning": "成果",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-378",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "正義",
+      "reading": "せいぎ",
+      "meaning": "正義",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-379",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "生産",
+      "reading": "せいさん",
+      "meaning": "生產",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-380",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "成分",
+      "reading": "せいぶん",
+      "meaning": "成分",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "health",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-381",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "勢力",
+      "reading": "せいりょく",
+      "meaning": "勢力",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-382",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "接続",
+      "reading": "せつぞく",
+      "meaning": "連接",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-383",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "設定",
+      "reading": "せってい",
+      "meaning": "設定",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-384",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "戦争",
+      "reading": "せんそう",
+      "meaning": "戦爭",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-385",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "相互",
+      "reading": "そうご",
+      "meaning": "相互",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-386",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "装置",
+      "reading": "そうち",
+      "meaning": "裝置、設備",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-387",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "速達",
+      "reading": "そくたつ",
+      "meaning": "快遞、速遞",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-388",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "存在感",
+      "reading": "そんざいかん",
+      "meaning": "存在感",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-389",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "対応",
+      "reading": "たいおう",
+      "meaning": "對應、應對",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-390",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "対策",
+      "reading": "たいさく",
+      "meaning": "對策",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-391",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "大会",
+      "reading": "たいかい",
+      "meaning": "大會、競技大會",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-392",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "題名",
+      "reading": "だいめい",
+      "meaning": "題目、名稱",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-393",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "達成",
+      "reading": "たっせい",
+      "meaning": "達成",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-394",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "探偵",
+      "reading": "たんてい",
+      "meaning": "偵探",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-395",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "地形",
+      "reading": "ちけい",
+      "meaning": "地形",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-396",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "地方",
+      "reading": "ちほう",
+      "meaning": "地方、地區",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-397",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "調節",
+      "reading": "ちょうせつ",
+      "meaning": "調節",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-398",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "直接",
+      "reading": "ちょくせつ",
+      "meaning": "直接",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-399",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "停電",
+      "reading": "ていでん",
+      "meaning": "停電",
+      "pos": "noun"
+    },
+    "tags": [
+      "home",
+      "weather"
+    ]
+  },
+  {
+    "id": "vocab-N4-400",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "提案",
+      "reading": "ていあん",
+      "meaning": "提案",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-401",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "提出",
+      "reading": "ていしゅつ",
+      "meaning": "提出、提交",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-402",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "適切な",
+      "reading": "てきせつな",
+      "meaning": "適切的、適當的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-403",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "テーマ",
+      "reading": "てーま",
+      "meaning": "主題",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-404",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "点検",
+      "reading": "てんけん",
+      "meaning": "檢查、點檢",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-405",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "電子",
+      "reading": "でんし",
+      "meaning": "電子",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-406",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "伝言",
+      "reading": "でんごん",
+      "meaning": "傳言、留言",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-407",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "同期",
+      "reading": "どうき",
+      "meaning": "同期、同屆",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-408",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "同僚",
+      "reading": "どうりょう",
+      "meaning": "同事",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-409",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "読書",
+      "reading": "どくしょ",
+      "meaning": "讀書",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-410",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "特産",
+      "reading": "とくさん",
+      "meaning": "特產",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-411",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "特定",
+      "reading": "とくてい",
+      "meaning": "特定",
+      "pos": "noun"
+    },
+    "tags": [
+      "adjective",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-412",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "取引",
+      "reading": "とりひき",
+      "meaning": "交易、買賣",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-413",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "内側",
+      "reading": "うちがわ",
+      "meaning": "內側",
+      "pos": "noun"
+    },
+    "tags": [
+      "direction",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-414",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "流れ",
+      "reading": "ながれ",
+      "meaning": "流動、流程",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-415",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "名刺",
+      "reading": "めいし",
+      "meaning": "名片",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-416",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "野外",
+      "reading": "やがい",
+      "meaning": "野外、戶外",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-417",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "役所",
+      "reading": "やくしょ",
+      "meaning": "行政機關、市政府",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-418",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "友好",
+      "reading": "ゆうこう",
+      "meaning": "友好",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-419",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "有効",
+      "reading": "ゆうこう",
+      "meaning": "有效",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-420",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "幼稚園",
+      "reading": "ようちえん",
+      "meaning": "幼稚園",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-421",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "洋服",
+      "reading": "ようふく",
+      "meaning": "洋服、西式服裝",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ]
+  },
+  {
+    "id": "vocab-N4-422",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "予想",
+      "reading": "よそう",
+      "meaning": "預想、預測",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-423",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "来客",
+      "reading": "らいきゃく",
+      "meaning": "來賓、訪客",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-424",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "落ち着く",
+      "reading": "おちつく",
+      "meaning": "冷靜、穩定",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-425",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "列車",
+      "reading": "れっしゃ",
+      "meaning": "列車",
+      "pos": "noun"
+    },
+    "tags": [
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N4-426",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "老人",
+      "reading": "ろうじん",
+      "meaning": "老人",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N4-427",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "話題",
+      "reading": "わだい",
+      "meaning": "話題",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-428",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "割合",
+      "reading": "わりあい",
+      "meaning": "比例、比率",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-429",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "原文",
+      "reading": "げんぶん",
+      "meaning": "原文",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-430",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "ラベル",
+      "reading": "らべる",
+      "meaning": "標籤",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-431",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "パターン",
+      "reading": "ぱたーん",
+      "meaning": "模式、圖案",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-432",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "レベル",
+      "reading": "れべる",
+      "meaning": "程度、等級",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-433",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "乗り越える",
+      "reading": "のりこえる",
+      "meaning": "越過、克服",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion",
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N4-434",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "引っ張る",
+      "reading": "ひっぱる",
+      "meaning": "拉、拖",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-435",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "抱える",
+      "reading": "かかえる",
+      "meaning": "抱著、懷有（問題）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-436",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "積み重ねる",
+      "reading": "つみかさねる",
+      "meaning": "積累",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-437",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "向き合う",
+      "reading": "むきあう",
+      "meaning": "面對、正視",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-438",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "思い切る",
+      "reading": "おもいきる",
+      "meaning": "下定決心",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-439",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "書き直す",
+      "reading": "かきなおす",
+      "meaning": "重寫",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-440",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "取り組む",
+      "reading": "とりくむ",
+      "meaning": "努力、投入（工作）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-441",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "打ち込む",
+      "reading": "うちこむ",
+      "meaning": "全力投入",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-442",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "引き受ける",
+      "reading": "ひきうける",
+      "meaning": "接受、承擔",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-443",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "声をかける",
+      "reading": "こえをかける",
+      "meaning": "搭話、招呼",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "person",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-444",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "役立てる",
+      "reading": "やくだてる",
+      "meaning": "善加利用",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-445",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "押さえる",
+      "reading": "おさえる",
+      "meaning": "按住、控制",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-446",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "覚悟する",
+      "reading": "かくごする",
+      "meaning": "做好覺悟",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-447",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "気付く",
+      "reading": "きづく",
+      "meaning": "注意到、察覺",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-448",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "あいさつ",
+      "reading": "あいさつ",
+      "meaning": "問候、打招呼",
+      "pos": "noun"
+    },
+    "tags": [
+      "greeting",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-449",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "生活費",
+      "reading": "せいかつひ",
+      "meaning": "生活費",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "home",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-450",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "行事",
+      "reading": "ぎょうじ",
+      "meaning": "活動、儀式",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-451",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "光景",
+      "reading": "こうけい",
+      "meaning": "光景、景象",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-452",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "交流",
+      "reading": "こうりゅう",
+      "meaning": "交流",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-453",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "高齢者",
+      "reading": "こうれいしゃ",
+      "meaning": "高齡者、老年人",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N4-454",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "古典",
+      "reading": "こてん",
+      "meaning": "古典",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-455",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "言い訳",
+      "reading": "いいわけ",
+      "meaning": "藉口、辯解",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-456",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "財産",
+      "reading": "ざいさん",
+      "meaning": "財產",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-457",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "作法",
+      "reading": "さほう",
+      "meaning": "禮法、規矩",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-458",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "支出",
+      "reading": "ししゅつ",
+      "meaning": "支出",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-459",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "思想",
+      "reading": "しそう",
+      "meaning": "思想",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-460",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "色彩",
+      "reading": "しきさい",
+      "meaning": "色彩",
+      "pos": "noun"
+    },
+    "tags": [
+      "color",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-461",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "実験",
+      "reading": "じっけん",
+      "meaning": "實驗",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-462",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "実施",
+      "reading": "じっし",
+      "meaning": "實施",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-463",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "実態",
+      "reading": "じったい",
+      "meaning": "實際狀態",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-464",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "受験",
+      "reading": "じゅけん",
+      "meaning": "應試",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-465",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "宿泊",
+      "reading": "しゅくはく",
+      "meaning": "住宿",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-466",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "主張",
+      "reading": "しゅちょう",
+      "meaning": "主張",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-467",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "術",
+      "reading": "じゅつ",
+      "meaning": "技術、方法",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-468",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "上司",
+      "reading": "じょうし",
+      "meaning": "上司",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-469",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "部下",
+      "reading": "ぶか",
+      "meaning": "部下",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-470",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "焦点",
+      "reading": "しょうてん",
+      "meaning": "焦點",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-471",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "消去",
+      "reading": "しょうきょ",
+      "meaning": "消去、刪除",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-472",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "象徴",
+      "reading": "しょうちょう",
+      "meaning": "象徵",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-473",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "商品券",
+      "reading": "しょうひんけん",
+      "meaning": "商品券",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-474",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "省エネ",
+      "reading": "しょうえね",
+      "meaning": "節能",
+      "pos": "noun"
+    },
+    "tags": [
+      "home",
+      "nature",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-475",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "書道",
+      "reading": "しょどう",
+      "meaning": "書法",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-476",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "所得",
+      "reading": "しょとく",
+      "meaning": "所得、收入",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-477",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "植物",
+      "reading": "しょくぶつ",
+      "meaning": "植物",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-478",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "食費",
+      "reading": "しょくひ",
+      "meaning": "伙食費",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-479",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "職場",
+      "reading": "しょくば",
+      "meaning": "職場",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-480",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "人類",
+      "reading": "じんるい",
+      "meaning": "人類",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-481",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "数量",
+      "reading": "すうりょう",
+      "meaning": "數量",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-482",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "スタッフ",
+      "reading": "すたっふ",
+      "meaning": "員工、工作人員",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-483",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "図書",
+      "reading": "としょ",
+      "meaning": "圖書",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-484",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "スケジュール",
+      "reading": "すけじゅーる",
+      "meaning": "日程、行程",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-485",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "スト",
+      "reading": "すと",
+      "meaning": "罷工",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-486",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "スタイル",
+      "reading": "すたいる",
+      "meaning": "風格、體型",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-487",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "ステップ",
+      "reading": "すてっぷ",
+      "meaning": "步驟",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-488",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "スポンサー",
+      "reading": "すぽんさー",
+      "meaning": "贊助商",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-489",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "生涯",
+      "reading": "しょうがい",
+      "meaning": "生涯、一生",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-490",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "精神",
+      "reading": "せいしん",
+      "meaning": "精神",
+      "pos": "noun"
+    },
+    "tags": [
+      "health",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-491",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "請求",
+      "reading": "せいきゅう",
+      "meaning": "請求、索取",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-492",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "整理",
+      "reading": "せいり",
+      "meaning": "整理",
+      "pos": "noun"
+    },
+    "tags": [
+      "home",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-493",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "施設",
+      "reading": "しせつ",
+      "meaning": "設施",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-494",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "戦略",
+      "reading": "せんりゃく",
+      "meaning": "策略",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-495",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "創造",
+      "reading": "そうぞう",
+      "meaning": "創造",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-496",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "総合",
+      "reading": "そうごう",
+      "meaning": "綜合",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-497",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "退職",
+      "reading": "たいしょく",
+      "meaning": "退職",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-498",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "単語",
+      "reading": "たんご",
+      "meaning": "單字",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-499",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "担任",
+      "reading": "たんにん",
+      "meaning": "班主任",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-500",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "地下",
+      "reading": "ちか",
+      "meaning": "地下",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "direction"
+    ]
+  },
+  {
+    "id": "vocab-N4-501",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "父親",
+      "reading": "ちちおや",
+      "meaning": "父親",
+      "pos": "noun"
+    },
+    "tags": [
+      "family",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-502",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "中級",
+      "reading": "ちゅうきゅう",
+      "meaning": "中級",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-503",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "中断",
+      "reading": "ちゅうだん",
+      "meaning": "中斷",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-504",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "貯金",
+      "reading": "ちょきん",
+      "meaning": "存錢",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-505",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "程度",
+      "reading": "ていど",
+      "meaning": "程度、限度",
+      "pos": "noun"
+    },
+    "tags": [
+      "adjective",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-506",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "適度な",
+      "reading": "てきどな",
+      "meaning": "適度的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-507",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "電球",
+      "reading": "でんきゅう",
+      "meaning": "電燈泡",
+      "pos": "noun"
+    },
+    "tags": [
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-508",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "転換",
+      "reading": "てんかん",
+      "meaning": "轉換",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-509",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "転勤",
+      "reading": "てんきん",
+      "meaning": "調職",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-510",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "当然",
+      "reading": "とうぜん",
+      "meaning": "當然",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-511",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "同意",
+      "reading": "どうい",
+      "meaning": "同意",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-512",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "動機",
+      "reading": "どうき",
+      "meaning": "動機",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-513",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "独立",
+      "reading": "どくりつ",
+      "meaning": "獨立",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-514",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "入門",
+      "reading": "にゅうもん",
+      "meaning": "入門",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-515",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "熱心な",
+      "reading": "ねっしんな",
+      "meaning": "熱心的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-516",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "能力",
+      "reading": "のうりょく",
+      "meaning": "能力",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-517",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "廃棄",
+      "reading": "はいき",
+      "meaning": "廢棄",
+      "pos": "noun"
+    },
+    "tags": [
+      "home",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-518",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "場面",
+      "reading": "ばめん",
+      "meaning": "場面",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-519",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "貼る",
+      "reading": "はる",
+      "meaning": "貼、黏貼",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "home",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-520",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "反応",
+      "reading": "はんのう",
+      "meaning": "反應",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-521",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "判明",
+      "reading": "はんめい",
+      "meaning": "查明、弄清楚",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-522",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "被害",
+      "reading": "ひがい",
+      "meaning": "受害、損害",
+      "pos": "noun"
+    },
+    "tags": [
+      "health",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-523",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "引き出す",
+      "reading": "ひきだす",
+      "meaning": "取出、引出",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-524",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "評価",
+      "reading": "ひょうか",
+      "meaning": "評價",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-525",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "部門",
+      "reading": "ぶもん",
+      "meaning": "部門",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-526",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "分析",
+      "reading": "ぶんせき",
+      "meaning": "分析",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-527",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "分野",
+      "reading": "ぶんや",
+      "meaning": "領域、分野",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-528",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "保証",
+      "reading": "ほしょう",
+      "meaning": "保證",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-529",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "本人",
+      "reading": "ほんにん",
+      "meaning": "本人",
+      "pos": "noun"
+    },
+    "tags": [
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-530",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "目的",
+      "reading": "もくてき",
+      "meaning": "目的",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-531",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "目的地",
+      "reading": "もくてきち",
+      "meaning": "目的地",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "transport"
+    ]
+  },
+  {
+    "id": "vocab-N4-532",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "文明",
+      "reading": "ぶんめい",
+      "meaning": "文明",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-533",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "問い合わせる",
+      "reading": "といあわせる",
+      "meaning": "詢問、洽詢",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-534",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "申し込む",
+      "reading": "もうしこむ",
+      "meaning": "申請、報名",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-535",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "最低",
+      "reading": "さいてい",
+      "meaning": "最低、至少",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-536",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "最高",
+      "reading": "さいこう",
+      "meaning": "最高、最棒",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-537",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "最初",
+      "reading": "さいしょ",
+      "meaning": "最初",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-538",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "最後",
+      "reading": "さいご",
+      "meaning": "最後",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-539",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "最近",
+      "reading": "さいきん",
+      "meaning": "最近",
+      "pos": "adverb"
+    },
+    "tags": [
+      "time",
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-540",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "再度",
+      "reading": "さいど",
+      "meaning": "再次",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-541",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "残業",
+      "reading": "ざんぎょう",
+      "meaning": "加班",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-542",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "賞金",
+      "reading": "しょうきん",
+      "meaning": "獎金",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-543",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "表情",
+      "reading": "ひょうじょう",
+      "meaning": "表情",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-544",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "明確な",
+      "reading": "めいかくな",
+      "meaning": "明確的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-545",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "面接",
+      "reading": "めんせつ",
+      "meaning": "面試",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-546",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "予報",
+      "reading": "よほう",
+      "meaning": "預報",
+      "pos": "noun"
+    },
+    "tags": [
+      "weather",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-547",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "余暇",
+      "reading": "よか",
+      "meaning": "餘暇、空閒",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-548",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "容量",
+      "reading": "ようりょう",
+      "meaning": "容量",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-549",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "無駄な",
+      "reading": "むだな",
+      "meaning": "浪費的、多餘的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-550",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "申請",
+      "reading": "しんせい",
+      "meaning": "申請",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-551",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "夢中",
+      "reading": "むちゅう",
+      "meaning": "著迷、入迷",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-552",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "迷惑",
+      "reading": "めいわく",
+      "meaning": "麻煩、困擾",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-553",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "模様",
+      "reading": "もよう",
+      "meaning": "花樣、圖案",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-554",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "物語",
+      "reading": "ものがたり",
+      "meaning": "故事、物語",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-555",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "漫画",
+      "reading": "まんが",
+      "meaning": "漫畫",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-556",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "丸暗記",
+      "reading": "まるあんき",
+      "meaning": "死記硬背",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-557",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "まとめ",
+      "reading": "まとめ",
+      "meaning": "總結、整理",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-558",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "マナー",
+      "reading": "まなー",
+      "meaning": "禮儀",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "greeting"
+    ]
+  },
+  {
+    "id": "vocab-N4-559",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "マップ",
+      "reading": "まっぷ",
+      "meaning": "地圖",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "direction"
+    ]
+  },
+  {
+    "id": "vocab-N4-560",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "本棚",
+      "reading": "ほんだな",
+      "meaning": "書架",
+      "pos": "noun"
+    },
+    "tags": [
+      "home",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-561",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "補助",
+      "reading": "ほじょ",
+      "meaning": "補助",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-562",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "放課後",
+      "reading": "ほうかご",
+      "meaning": "放學後",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-563",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "方言",
+      "reading": "ほうげん",
+      "meaning": "方言",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-564",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "法律",
+      "reading": "ほうりつ",
+      "meaning": "法律",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-565",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "増税",
+      "reading": "ぞうぜい",
+      "meaning": "加稅",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-566",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "開始",
+      "reading": "かいし",
+      "meaning": "開始",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-567",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "開放",
+      "reading": "かいほう",
+      "meaning": "開放",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-568",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "感激",
+      "reading": "かんげき",
+      "meaning": "感激",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-569",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "完成",
+      "reading": "かんせい",
+      "meaning": "完成",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-570",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "完了",
+      "reading": "かんりょう",
+      "meaning": "完了、完畢",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-571",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "観客",
+      "reading": "かんきゃく",
+      "meaning": "觀眾",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-572",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "企業",
+      "reading": "きぎょう",
+      "meaning": "企業",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-573",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "技術",
+      "reading": "ぎじゅつ",
+      "meaning": "技術",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-574",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "期末",
+      "reading": "きまつ",
+      "meaning": "期末",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-575",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "気候",
+      "reading": "きこう",
+      "meaning": "氣候",
+      "pos": "noun"
+    },
+    "tags": [
+      "weather",
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-576",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "規模",
+      "reading": "きぼ",
+      "meaning": "規模",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-577",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "緊急",
+      "reading": "きんきゅう",
+      "meaning": "緊急",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-578",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "偶然",
+      "reading": "ぐうぜん",
+      "meaning": "偶然",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-579",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "詳しい",
+      "reading": "くわしい",
+      "meaning": "詳細的、熟悉的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "adjective",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-580",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "経費",
+      "reading": "けいひ",
+      "meaning": "經費",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-581",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "計測",
+      "reading": "けいそく",
+      "meaning": "計測、測量",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-582",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "激しい",
+      "reading": "はげしい",
+      "meaning": "激烈的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "adjective",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-583",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "欠陥",
+      "reading": "けっかん",
+      "meaning": "缺陷",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-584",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "欠席",
+      "reading": "けっせき",
+      "meaning": "缺席",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-585",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "現状",
+      "reading": "げんじょう",
+      "meaning": "現狀",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-586",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "現代",
+      "reading": "げんだい",
+      "meaning": "現代",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-587",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "原則",
+      "reading": "げんそく",
+      "meaning": "原則",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-588",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "講義",
+      "reading": "こうぎ",
+      "meaning": "講義、課程",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-589",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "公表",
+      "reading": "こうひょう",
+      "meaning": "公布、公告",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-590",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "公平な",
+      "reading": "こうへいな",
+      "meaning": "公平的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-591",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "高齢",
+      "reading": "こうれい",
+      "meaning": "高齢",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "family"
+    ]
+  },
+  {
+    "id": "vocab-N4-592",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "古代",
+      "reading": "こだい",
+      "meaning": "古代",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-593",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "国内",
+      "reading": "こくない",
+      "meaning": "國內",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-594",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "国民",
+      "reading": "こくみん",
+      "meaning": "國民",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-595",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "根本",
+      "reading": "こんぽん",
+      "meaning": "根本",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-596",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "差別",
+      "reading": "さべつ",
+      "meaning": "差別、歧視",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-597",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "作成",
+      "reading": "さくせい",
+      "meaning": "製作、編製",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-598",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "産地",
+      "reading": "さんち",
+      "meaning": "產地",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-599",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "散策",
+      "reading": "さんさく",
+      "meaning": "散步、閑逛",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-600",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "試行",
+      "reading": "しこう",
+      "meaning": "試行",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-601",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "自覚",
+      "reading": "じかく",
+      "meaning": "自覺",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-602",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "持続",
+      "reading": "じぞく",
+      "meaning": "持續",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-603",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "実際",
+      "reading": "じっさい",
+      "meaning": "實際、實際上",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-604",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "実現",
+      "reading": "じつげん",
+      "meaning": "實現",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-605",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "実績",
+      "reading": "じっせき",
+      "meaning": "實績",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-606",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "失業",
+      "reading": "しつぎょう",
+      "meaning": "失業",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-607",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "弱点",
+      "reading": "じゃくてん",
+      "meaning": "弱點",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-608",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "手順",
+      "reading": "てじゅん",
+      "meaning": "手順、步驟",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-609",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "出勤",
+      "reading": "しゅっきん",
+      "meaning": "上班、出勤",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-610",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "小学校",
+      "reading": "しょうがっこう",
+      "meaning": "小學",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-611",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "消耗",
+      "reading": "しょうもう",
+      "meaning": "消耗",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-612",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "処理",
+      "reading": "しょり",
+      "meaning": "處理",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-613",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "新鮮な",
+      "reading": "しんせんな",
+      "meaning": "新鮮的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "food",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-614",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "信用",
+      "reading": "しんよう",
+      "meaning": "信用",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-615",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "推薦",
+      "reading": "すいせん",
+      "meaning": "推薦",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-616",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "睡眠不足",
+      "reading": "すいみんぶそく",
+      "meaning": "睡眠不足",
+      "pos": "noun"
+    },
+    "tags": [
+      "health",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-617",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "住民",
+      "reading": "じゅうみん",
+      "meaning": "居民",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-618",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "純粋な",
+      "reading": "じゅんすいな",
+      "meaning": "純粹的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-619",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "清潔な",
+      "reading": "せいけつな",
+      "meaning": "清潔的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "health",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-620",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "生物",
+      "reading": "せいぶつ",
+      "meaning": "生物",
+      "pos": "noun"
+    },
+    "tags": [
+      "nature",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-621",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "節約",
+      "reading": "せつやく",
+      "meaning": "節約",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-622",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "相性",
+      "reading": "あいしょう",
+      "meaning": "相性、合得來",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-623",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "先進",
+      "reading": "せんしん",
+      "meaning": "先進",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-624",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "全力",
+      "reading": "ぜんりょく",
+      "meaning": "全力",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-625",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "素材",
+      "reading": "そざい",
+      "meaning": "素材、材料",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "hobby",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-626",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "組織",
+      "reading": "そしき",
+      "meaning": "組織",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-627",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "速度感",
+      "reading": "そくどかん",
+      "meaning": "速度感",
+      "pos": "noun"
+    },
+    "tags": [
+      "transport",
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-628",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "存続",
+      "reading": "そんぞく",
+      "meaning": "存續",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-629",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "互い",
+      "reading": "たがい",
+      "meaning": "互相",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-630",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "大切にする",
+      "reading": "たいせつにする",
+      "meaning": "珍惜",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-631",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "振り返る",
+      "reading": "ふりかえる",
+      "meaning": "回顧、回頭看",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-632",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "引き止める",
+      "reading": "ひきとめる",
+      "meaning": "留住、阻止",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-633",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "追いかける",
+      "reading": "おいかける",
+      "meaning": "追趕",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ]
+  },
+  {
+    "id": "vocab-N4-634",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "生み出す",
+      "reading": "うみだす",
+      "meaning": "創造出",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "hobby"
+    ]
+  },
+  {
+    "id": "vocab-N4-635",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "繰り返す",
+      "reading": "くりかえす",
+      "meaning": "重複",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-636",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "売り出す",
+      "reading": "うりだす",
+      "meaning": "開始販售、推銷",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "shopping",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-637",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "問い直す",
+      "reading": "といなおす",
+      "meaning": "重新質問",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-638",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "呼びかける",
+      "reading": "よびかける",
+      "meaning": "呼籲、招呼",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "person",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-639",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "取り出す",
+      "reading": "とりだす",
+      "meaning": "取出",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "home",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-640",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "取り消す",
+      "reading": "とりけす",
+      "meaning": "取消",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-641",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "書き留める",
+      "reading": "かきとめる",
+      "meaning": "記下、筆記",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-642",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "感じ取る",
+      "reading": "かんじとる",
+      "meaning": "感受到",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "emotion"
+    ]
+  },
+  {
+    "id": "vocab-N4-643",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "見直す",
+      "reading": "みなおす",
+      "meaning": "重新審視",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-644",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "伝え合う",
+      "reading": "つたえあう",
+      "meaning": "互相傳達",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-645",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "体重計",
+      "reading": "たいじゅうけい",
+      "meaning": "體重計",
+      "pos": "noun"
+    },
+    "tags": [
+      "health",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-646",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "代表",
+      "reading": "だいひょう",
+      "meaning": "代表",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-647",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "台無し",
+      "reading": "だいなし",
+      "meaning": "白費、毀掉",
+      "pos": "noun"
+    },
+    "tags": [
+      "emotion",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-648",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "段落",
+      "reading": "だんらく",
+      "meaning": "段落",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-649",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "昼食",
+      "reading": "ちゅうしょく",
+      "meaning": "午餐",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "time"
+    ]
+  },
+  {
+    "id": "vocab-N4-650",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "中学校",
+      "reading": "ちゅうがっこう",
+      "meaning": "中學",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-651",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "注釈",
+      "reading": "ちゅうしゃく",
+      "meaning": "注釋",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-652",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "調味料",
+      "reading": "ちょうみりょう",
+      "meaning": "調味料",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-653",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "直訳",
+      "reading": "ちょくやく",
+      "meaning": "直譯",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-654",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "通訳",
+      "reading": "つうやく",
+      "meaning": "口譯",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-655",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "電報",
+      "reading": "でんぽう",
+      "meaning": "電報",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-656",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "展覧会",
+      "reading": "てんらんかい",
+      "meaning": "展覽會",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "place"
+    ]
+  },
+  {
+    "id": "vocab-N4-657",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "道徳",
+      "reading": "どうとく",
+      "meaning": "道德",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-658",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "独語",
+      "reading": "どくご",
+      "meaning": "獨白",
+      "pos": "noun"
+    },
+    "tags": [
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-659",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "読解",
+      "reading": "どっかい",
+      "meaning": "閱讀理解",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-660",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "内線",
+      "reading": "ないせん",
+      "meaning": "內線電話",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-661",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "内訳",
+      "reading": "うちわけ",
+      "meaning": "明細、分類",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-662",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "難点",
+      "reading": "なんてん",
+      "meaning": "難點",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-663",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "二次試験",
+      "reading": "にじしけん",
+      "meaning": "二次考試",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-664",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "任務",
+      "reading": "にんむ",
+      "meaning": "任務",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-665",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "入学金",
+      "reading": "にゅうがくきん",
+      "meaning": "入學費",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-666",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "入社",
+      "reading": "にゅうしゃ",
+      "meaning": "入職",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-667",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "年度",
+      "reading": "ねんど",
+      "meaning": "年度",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-668",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "農業",
+      "reading": "のうぎょう",
+      "meaning": "農業",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-669",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "配達",
+      "reading": "はいたつ",
+      "meaning": "配送",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-670",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "派遣",
+      "reading": "はけん",
+      "meaning": "派遣",
+      "pos": "noun"
+    },
+    "tags": [
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-671",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "発売",
+      "reading": "はつばい",
+      "meaning": "發售",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-672",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "番頭",
+      "reading": "ばんとう",
+      "meaning": "掌柜、總管",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-673",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "費用",
+      "reading": "ひよう",
+      "meaning": "費用",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-674",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "品質",
+      "reading": "ひんしつ",
+      "meaning": "品質",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-675",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "普及",
+      "reading": "ふきゅう",
+      "meaning": "普及",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-676",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "福祉",
+      "reading": "ふくし",
+      "meaning": "福利、福祉",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "health"
+    ]
+  },
+  {
+    "id": "vocab-N4-677",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "文書",
+      "reading": "ぶんしょ",
+      "meaning": "文書、文件",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-678",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "平均",
+      "reading": "へいきん",
+      "meaning": "平均",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-679",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "変換",
+      "reading": "へんかん",
+      "meaning": "轉換、變換",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-680",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "補充",
+      "reading": "ほじゅう",
+      "meaning": "補充",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "home"
+    ]
+  },
+  {
+    "id": "vocab-N4-681",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "方式",
+      "reading": "ほうしき",
+      "meaning": "方式",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-682",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "豊富な",
+      "reading": "ほうふな",
+      "meaning": "豐富的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective"
+    ]
+  },
+  {
+    "id": "vocab-N4-683",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "本格的な",
+      "reading": "ほんかくてきな",
+      "meaning": "正式的、道地的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-684",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "翻訳",
+      "reading": "ほんやく",
+      "meaning": "翻譯",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-685",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "毎朝",
+      "reading": "まいあさ",
+      "meaning": "每天早上",
+      "pos": "adverb"
+    },
+    "tags": [
+      "time",
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-686",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "毎晩",
+      "reading": "まいばん",
+      "meaning": "每天晚上",
+      "pos": "adverb"
+    },
+    "tags": [
+      "time",
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-687",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "漫然と",
+      "reading": "まんぜんと",
+      "meaning": "漫然地、漫不經心地",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ]
+  },
+  {
+    "id": "vocab-N4-688",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "身近な",
+      "reading": "みぢかな",
+      "meaning": "身邊的、切身的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-689",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "見本",
+      "reading": "みほん",
+      "meaning": "樣本",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-690",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "民族",
+      "reading": "みんぞく",
+      "meaning": "民族",
+      "pos": "noun"
+    },
+    "tags": [
+      "person",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-691",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "民間",
+      "reading": "みんかん",
+      "meaning": "民間",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-692",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "目安",
+      "reading": "めやす",
+      "meaning": "目標、大略標準",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "number"
+    ]
+  },
+  {
+    "id": "vocab-N4-693",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "免税",
+      "reading": "めんぜい",
+      "meaning": "免稅",
+      "pos": "noun"
+    },
+    "tags": [
+      "shopping"
+    ]
+  },
+  {
+    "id": "vocab-N4-694",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "問題点",
+      "reading": "もんだいてん",
+      "meaning": "問題點",
+      "pos": "noun"
+    },
+    "tags": [
+      "work",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-695",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "役者",
+      "reading": "やくしゃ",
+      "meaning": "演員",
+      "pos": "noun"
+    },
+    "tags": [
+      "hobby",
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-696",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "有名人",
+      "reading": "ゆうめいじん",
+      "meaning": "名人",
+      "pos": "noun"
+    },
+    "tags": [
+      "person"
+    ]
+  },
+  {
+    "id": "vocab-N4-697",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "優秀な",
+      "reading": "ゆうしゅうな",
+      "meaning": "優秀的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "person",
+      "school"
+    ]
+  },
+  {
+    "id": "vocab-N4-698",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "夕暮れ",
+      "reading": "ゆうぐれ",
+      "meaning": "黃昏",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "nature"
+    ]
+  },
+  {
+    "id": "vocab-N4-699",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "輸送",
+      "reading": "ゆそう",
+      "meaning": "運輸",
+      "pos": "noun"
+    },
+    "tags": [
+      "transport",
+      "work"
+    ]
+  },
+  {
+    "id": "vocab-N4-700",
+    "type": "vocabulary",
+    "level": "N4",
+    "payload": {
+      "word": "容易な",
+      "reading": "よういな",
+      "meaning": "容易的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "school"
+    ]
   }
 ]
