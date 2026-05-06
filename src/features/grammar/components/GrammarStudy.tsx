@@ -39,11 +39,26 @@ function shuffle<T>(arr: T[]): T[] {
 
 
 async function buildDeck(cards: GrammarCard[]): Promise<GrammarCard[]> {
+  const now = Date.now()
   const srsCards = await getSeenCards(cards.map((c) => c.id))
-  const repMap = new Map(srsCards.map((s) => [s.cardId, s.repetitions]))
-  const sorted = [...cards].sort((a, b) => (repMap.get(a.id) ?? 0) - (repMap.get(b.id) ?? 0))
-  const batch = sorted.slice(0, BATCH_SIZE)
-  return shuffle(batch)
+  const srsMap = new Map(srsCards.map((s) => [s.cardId, s]))
+
+  // 0 = unseen (new), 1 = due, 2 = not yet due
+  function priority(id: string): number {
+    const s = srsMap.get(id)
+    if (!s) return 0
+    return s.dueAt <= now ? 1 : 2
+  }
+
+  const sorted = [...cards].sort((a, b) => {
+    const pa = priority(a.id), pb = priority(b.id)
+    if (pa !== pb) return pa - pb
+    const da = srsMap.get(a.id)?.dueAt ?? 0
+    const db = srsMap.get(b.id)?.dueAt ?? 0
+    return da - db
+  })
+
+  return shuffle(sorted.slice(0, BATCH_SIZE))
 }
 
 export default function GrammarStudy({ cards }: { cards: GrammarCard[] }) {
