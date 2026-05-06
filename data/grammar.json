@@ -4739,5 +4739,3849 @@
       "sentence-pattern",
       "modality"
     ]
+  },
+  {
+    "id": "grammar-N4-001",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "もっと早く起きれば、電車に___のに。",
+      "sentenceRuby": "もっと<ruby>早<rt>はや</rt></ruby>く<ruby>起<rt>お</rt></ruby>きれば、<ruby>電車<rt>でんしゃ</rt></ruby>に___のに。",
+      "answer": "乗れた",
+      "choices": [
+        "乗れた",
+        "乗った",
+        "乗れる",
+        "乗っている"
+      ],
+      "meaning": "如果更早起的話，就能搭上電車了。",
+      "grammar": "ば〜のに：表示與事實相反的假設遺憾，「如果…就好了」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "conditional",
+      "past"
+    ]
+  },
+  {
+    "id": "grammar-N4-002",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女に___、彼女は怒った。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>に___、<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>怒<rt>おこ</rt></ruby>った。",
+      "answer": "注意したら",
+      "choices": [
+        "注意したら",
+        "注意すると",
+        "注意して",
+        "注意するなら"
+      ],
+      "meaning": "一告誡她，她就生氣了。",
+      "grammar": "たら：表示動作完了後緊接著發生的事"
+    },
+    "tags": [
+      "sentence-pattern",
+      "conditional",
+      "ta-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-003",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この薬を飲む___、すぐ良くなりますよ。",
+      "sentenceRuby": "この<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>む___、すぐ<ruby>良<rt>よ</rt></ruby>くなりますよ。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "たら",
+        "なら",
+        "ば"
+      ],
+      "meaning": "一吃這個藥，馬上就會好的。",
+      "grammar": "と：表示自然、必然的結果，前件發生後件必定跟著發生"
+    },
+    "tags": [
+      "particle",
+      "conditional",
+      "と"
+    ]
+  },
+  {
+    "id": "grammar-N4-004",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "日本語が___ようになりました。",
+      "sentenceRuby": "<ruby>日本語<rt>にほんご</rt></ruby>が___ようになりました。",
+      "answer": "話せる",
+      "choices": [
+        "話せる",
+        "話す",
+        "話した",
+        "話せた"
+      ],
+      "meaning": "變得能說日語了。",
+      "grammar": "〜ようになる：表示狀態或能力的變化，「漸漸變得…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "ability",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-005",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "毎日練習する___にしています。",
+      "sentenceRuby": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>練習<rt>れんしゅう</rt></ruby>する___にしています。",
+      "answer": "よう",
+      "choices": [
+        "よう",
+        "こと",
+        "ため",
+        "から"
+      ],
+      "meaning": "我決定每天練習。",
+      "grammar": "〜ようにしている：表示有意識地保持某種習慣"
+    },
+    "tags": [
+      "sentence-pattern",
+      "habit",
+      "ようにしている"
+    ]
+  },
+  {
+    "id": "grammar-N4-006",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "風邪を引かない___に、手を洗ってください。",
+      "sentenceRuby": "<ruby>風邪<rt>かぜ</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>かない___に、<ruby>手<rt>て</rt></ruby>を<ruby>洗<rt>あら</rt></ruby>ってください。",
+      "answer": "よう",
+      "choices": [
+        "よう",
+        "ため",
+        "こと",
+        "まで"
+      ],
+      "meaning": "為了不感冒，請洗手。",
+      "grammar": "〜ないように：表示為了避免某事發生的目的"
+    },
+    "tags": [
+      "sentence-pattern",
+      "purpose",
+      "ないように"
+    ]
+  },
+  {
+    "id": "grammar-N4-007",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "試験に合格する___に、毎日勉強しています。",
+      "sentenceRuby": "<ruby>試験<rt>しけん</rt></ruby>に<ruby>合格<rt>ごうかく</rt></ruby>する___に、<ruby>毎日<rt>まいにち</rt></ruby><ruby>勉強<rt>べんきょう</rt></ruby>しています。",
+      "answer": "ため",
+      "choices": [
+        "ため",
+        "よう",
+        "こと",
+        "から"
+      ],
+      "meaning": "為了通過考試，每天在念書。",
+      "grammar": "〜ために：表示目的，「為了…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "purpose"
+    ]
+  },
+  {
+    "id": "grammar-N4-008",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "先生に___て、とても嬉しかった。",
+      "sentenceRuby": "<ruby>先生<rt>せんせい</rt></ruby>に___て、とても<ruby>嬉<rt>うれ</rt></ruby>しかった。",
+      "answer": "褒められ",
+      "choices": [
+        "褒められ",
+        "褒め",
+        "褒めさせ",
+        "褒めて"
+      ],
+      "meaning": "被老師稱讚，非常高興。",
+      "grammar": "〜られる（受身）：被動形，表示受到他人動作的影響"
+    },
+    "tags": [
+      "verb-form",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-009",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "子供に野菜を___ました。",
+      "sentenceRuby": "<ruby>子供<rt>こども</rt></ruby>に<ruby>野菜<rt>やさい</rt></ruby>を___ました。",
+      "answer": "食べさせ",
+      "choices": [
+        "食べさせ",
+        "食べられ",
+        "食べてもらい",
+        "食べさせられ"
+      ],
+      "meaning": "讓孩子吃了蔬菜。",
+      "grammar": "〜させる（使役）：使役形，表示讓/叫人做某事"
+    },
+    "tags": [
+      "verb-form",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-010",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "部長に残業___てしまった。",
+      "sentenceRuby": "<ruby>部長<rt>ぶちょう</rt></ruby>に<ruby>残業<rt>ざんぎょう</rt></ruby>___てしまった。",
+      "answer": "させられ",
+      "choices": [
+        "させられ",
+        "させ",
+        "され",
+        "されて"
+      ],
+      "meaning": "被主任逼著加班了。",
+      "grammar": "〜させられる（使役受身）：被迫做某事，「被迫…」"
+    },
+    "tags": [
+      "verb-form",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-011",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "あなた___来なければ、私も行きません。",
+      "sentenceRuby": "あなた___<ruby>来<rt>こ</rt></ruby>なければ、<ruby>私<rt>わたし</rt></ruby>も<ruby>行<rt>い</rt></ruby>きません。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "も",
+        "なら"
+      ],
+      "meaning": "如果你不來，我也不去。",
+      "grammar": "〜が来なければ：「が」標示主語，「なければ」表示條件"
+    },
+    "tags": [
+      "particle",
+      "conditional",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N4-012",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "田中さん___かっこいいし、頭もいい。",
+      "sentenceRuby": "<ruby>田中<rt>たなか</rt></ruby>さん___かっこいいし、<ruby>頭<rt>あたま</rt></ruby>もいい。",
+      "answer": "は",
+      "choices": [
+        "は",
+        "が",
+        "も",
+        "って"
+      ],
+      "meaning": "田中先生既帥又聰明。",
+      "grammar": "〜し：並列原因，「既…又…」"
+    },
+    "tags": [
+      "particle",
+      "は"
+    ]
+  },
+  {
+    "id": "grammar-N4-013",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は医者___そうです。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>医者<rt>いしゃ</rt></ruby>___そうです。",
+      "answer": "だ",
+      "choices": [
+        "だ",
+        "の",
+        "な",
+        "で"
+      ],
+      "meaning": "聽說他是醫生。",
+      "grammar": "〜だそうです：傳聞，「聽說…」（名詞/な形容詞後接だそうです）"
+    },
+    "tags": [
+      "copula",
+      "expression"
+    ]
+  },
+  {
+    "id": "grammar-N4-014",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "雨が降り___です。",
+      "sentenceRuby": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>り___です。",
+      "answer": "そう",
+      "choices": [
+        "そう",
+        "らしい",
+        "ようだ",
+        "はずだ"
+      ],
+      "meaning": "看起來快下雨了。",
+      "grammar": "〜そうだ（樣態）：根據視覺判斷，「看起來…」（動詞ます形+そう）"
+    },
+    "tags": [
+      "expression",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-015",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は日本人___、敬語がとても上手だ。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>日本人<rt>にほんじん</rt></ruby>___、<ruby>敬語<rt>けいご</rt></ruby>がとても<ruby>上手<rt>じょうず</rt></ruby>だ。",
+      "answer": "らしく",
+      "choices": [
+        "らしく",
+        "のように",
+        "みたいで",
+        "そうで"
+      ],
+      "meaning": "她很像日本人，敬語說得非常好。",
+      "grammar": "〜らしい：推測，具有某種典型特徵，「像…一樣、有…的樣子」"
+    },
+    "tags": [
+      "expression",
+      "adjective-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-016",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "明日は晴れる___です。",
+      "sentenceRuby": "<ruby>明日<rt>あした</rt></ruby>は<ruby>晴<rt>は</rt></ruby>れる___です。",
+      "answer": "はず",
+      "choices": [
+        "はず",
+        "そう",
+        "らしい",
+        "ようだ"
+      ],
+      "meaning": "明天應該會放晴。",
+      "grammar": "〜はずだ：根據已知情報判斷應當如此，「應該…」"
+    },
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "grammar-N4-017",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は来る___がない。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>来<rt>く</rt></ruby>る___がない。",
+      "answer": "はず",
+      "choices": [
+        "はず",
+        "こと",
+        "わけ",
+        "つもり"
+      ],
+      "meaning": "他不可能來的。",
+      "grammar": "〜はずがない：表示根本不可能，「不可能…」"
+    },
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "grammar-N4-018",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "宿題を忘れた___ではない。",
+      "sentenceRuby": "<ruby>宿題<rt>しゅくだい</rt></ruby>を<ruby>忘<rt>わす</rt></ruby>れた___ではない。",
+      "answer": "わけ",
+      "choices": [
+        "わけ",
+        "はず",
+        "こと",
+        "つもり"
+      ],
+      "meaning": "並不是忘了作業。",
+      "grammar": "〜わけではない：表示否定並非如此，「並非…」"
+    },
+    "tags": [
+      "expression",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N4-019",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "早く帰った___がいいよ。",
+      "sentenceRuby": "<ruby>早<rt>はや</rt></ruby>く<ruby>帰<rt>かえ</rt></ruby>った___がいいよ。",
+      "answer": "ほう",
+      "choices": [
+        "ほう",
+        "こと",
+        "もの",
+        "はず"
+      ],
+      "meaning": "早點回家比較好喔。",
+      "grammar": "〜たほうがいい：給予建議，「…比較好」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "suggestion",
+      "たほうがいい"
+    ]
+  },
+  {
+    "id": "grammar-N4-020",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この本を読ん___ことがありますか。",
+      "sentenceRuby": "この<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>ん___ことがありますか。",
+      "answer": "だ",
+      "choices": [
+        "だ",
+        "で",
+        "た",
+        "でいる"
+      ],
+      "meaning": "你有讀過這本書嗎？",
+      "grammar": "〜たことがある：表示曾有某種經驗，「曾經…過」"
+    },
+    "tags": [
+      "tense-aspect",
+      "experience",
+      "たことがある"
+    ]
+  },
+  {
+    "id": "grammar-N4-021",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "日本語が上手に___たい。",
+      "sentenceRuby": "<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>に___たい。",
+      "answer": "なり",
+      "choices": [
+        "なり",
+        "なっ",
+        "なる",
+        "して"
+      ],
+      "meaning": "想要日語變得說得好。",
+      "grammar": "〜たい：表示說話者的願望，「想要…」（動詞ます形+たい）"
+    },
+    "tags": [
+      "sentence-pattern",
+      "desire"
+    ]
+  },
+  {
+    "id": "grammar-N4-022",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この問題は難し___て、全然わかりません。",
+      "sentenceRuby": "この<ruby>問題<rt>もんだい</rt></ruby>は<ruby>難し<rt>むずかし</rt></ruby>___て、<ruby>全然<rt>ぜんぜん</rt></ruby>わかりません。",
+      "answer": "すぎ",
+      "choices": [
+        "すぎ",
+        "くて",
+        "なくて",
+        "だから"
+      ],
+      "meaning": "這道題太難了，完全不懂。",
+      "grammar": "〜すぎる（て形）：すぎ+て，表示過度的結果，「太…以致於…」"
+    },
+    "tags": [
+      "verb-form",
+      "すぎ",
+      "i-adj"
+    ]
+  },
+  {
+    "id": "grammar-N4-023",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この仕事は___やすい。",
+      "sentenceRuby": "この<ruby>仕事<rt>しごと</rt></ruby>は___やすい。",
+      "answer": "し",
+      "choices": [
+        "し",
+        "して",
+        "した",
+        "する"
+      ],
+      "meaning": "這個工作容易做。",
+      "grammar": "〜やすい：動詞ます形+やすい，表示容易做某事"
+    },
+    "tags": [
+      "verb-form",
+      "やすい"
+    ]
+  },
+  {
+    "id": "grammar-N4-024",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この字は___にくい。",
+      "sentenceRuby": "この<ruby>字<rt>じ</rt></ruby>は___にくい。",
+      "answer": "読み",
+      "choices": [
+        "読み",
+        "読んで",
+        "読む",
+        "読んだ"
+      ],
+      "meaning": "這個字難以閱讀。",
+      "grammar": "〜にくい：動詞ます形+にくい，表示難以做某事"
+    },
+    "tags": [
+      "verb-form",
+      "にくい"
+    ]
+  },
+  {
+    "id": "grammar-N4-025",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は先生___言いました。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>先生<rt>せんせい</rt></ruby>___<ruby>言<rt>い</rt></ruby>いました。",
+      "answer": "だと",
+      "choices": [
+        "だと",
+        "には",
+        "にと",
+        "との"
+      ],
+      "meaning": "他說他是老師。",
+      "grammar": "〜だと言う：引用句，「說是…」"
+    },
+    "tags": [
+      "expression",
+      "quotation",
+      "と言いました"
+    ]
+  },
+  {
+    "id": "grammar-N4-026",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "田中先生___いう人を知っていますか。",
+      "sentenceRuby": "<ruby>田中<rt>たなか</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>___いう<ruby>人<rt>ひと</rt></ruby>を<ruby>知<rt>し</rt></ruby>っていますか。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "を",
+        "が",
+        "に"
+      ],
+      "meaning": "你知道叫田中老師的人嗎？",
+      "grammar": "〜という：說明名稱或定義，「叫做…」"
+    },
+    "tags": [
+      "expression",
+      "quotation",
+      "と"
+    ]
+  },
+  {
+    "id": "grammar-N4-027",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "音楽を聴き___勉強します。",
+      "sentenceRuby": "<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聴<rt>き</rt></ruby>き___<ruby>勉強<rt>べんきょう</rt></ruby>します。",
+      "answer": "ながら",
+      "choices": [
+        "ながら",
+        "てから",
+        "ために",
+        "てしまい"
+      ],
+      "meaning": "一邊聽音樂一邊念書。",
+      "grammar": "〜ながら：同時進行兩個動作，「一邊…一邊…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "simultaneous",
+      "ながら"
+    ]
+  },
+  {
+    "id": "grammar-N4-028",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "宿題をして___、テレビを見ました。",
+      "sentenceRuby": "<ruby>宿題<rt>しゅくだい</rt></ruby>をして___、テレビを<ruby>見<rt>み</rt></ruby>ました。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "ながら",
+        "ても",
+        "のに"
+      ],
+      "meaning": "做完作業後看了電視。",
+      "grammar": "〜てから：表示動作完了後接著做下一個動作，「…之後」"
+    },
+    "tags": [
+      "tense-aspect",
+      "てから"
+    ]
+  },
+  {
+    "id": "grammar-N4-029",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "どんなに疲れて___、仕事は続けます。",
+      "sentenceRuby": "どんなに<ruby>疲<rt>つか</rt></ruby>れて___、<ruby>仕事<rt>しごと</rt></ruby>は<ruby>続<rt>つづ</rt></ruby>けます。",
+      "answer": "も",
+      "choices": [
+        "も",
+        "から",
+        "のに",
+        "けど"
+      ],
+      "meaning": "不管多麼疲累，工作還是會繼續做。",
+      "grammar": "〜ても：即使…也…，表示讓步"
+    },
+    "tags": [
+      "sentence-pattern",
+      "concession",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-030",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この映画は面白い___、長すぎる。",
+      "sentenceRuby": "この<ruby>映画<rt>えいが</rt></ruby>は<ruby>面白<rt>おもしろ</rt></ruby>い___、<ruby>長<rt>なが</rt></ruby>すぎる。",
+      "answer": "けど",
+      "choices": [
+        "けど",
+        "から",
+        "ので",
+        "のに"
+      ],
+      "meaning": "這部電影雖然有趣，但是太長了。",
+      "grammar": "〜けど：表示轉折，「雖然…但是…」"
+    },
+    "tags": [
+      "conjunction",
+      "concession"
+    ]
+  },
+  {
+    "id": "grammar-N4-031",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "明日は雨___かもしれない。",
+      "sentenceRuby": "<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>___かもしれない。",
+      "answer": "か",
+      "choices": [
+        "か",
+        "が",
+        "は",
+        "で"
+      ],
+      "meaning": "明天或許會下雨。",
+      "grammar": "〜かもしれない：表示不確定的可能性，「也許…」"
+    },
+    "tags": [
+      "expression"
+    ]
+  },
+  {
+    "id": "grammar-N4-032",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "日本語の勉強は大変___、楽しいです。",
+      "sentenceRuby": "<ruby>日本語<rt>にほんご</rt></ruby>の<ruby>勉強<rt>べんきょう</rt></ruby>は<ruby>大変<rt>たいへん</rt></ruby>___、<ruby>楽<rt>たの</rt></ruby>しいです。",
+      "answer": "だけど",
+      "choices": [
+        "だけど",
+        "ので",
+        "から",
+        "し"
+      ],
+      "meaning": "日語學習雖然辛苦，但很有趣。",
+      "grammar": "〜だけど：名詞/な形容詞後的轉折，「雖然…但是…」"
+    },
+    "tags": [
+      "conjunction",
+      "concession",
+      "copula"
+    ]
+  },
+  {
+    "id": "grammar-N4-033",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "先生___ご意見をお聞きしたいです。",
+      "sentenceRuby": "<ruby>先生<rt>せんせい</rt></ruby>___ご<ruby>意見<rt>いけん</rt></ruby>をお<ruby>聞<rt>き</rt></ruby>きしたいです。",
+      "answer": "の",
+      "choices": [
+        "の",
+        "が",
+        "に",
+        "を"
+      ],
+      "meaning": "想聽聽老師您的意見。",
+      "grammar": "先生の意見：「の」表示所屬關係"
+    },
+    "tags": [
+      "particle",
+      "の"
+    ]
+  },
+  {
+    "id": "grammar-N4-034",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "漢字を覚える___に、何度も書きます。",
+      "sentenceRuby": "<ruby>漢字<rt>かんじ</rt></ruby>を<ruby>覚<rt>おぼ</rt></ruby>える___に、<ruby>何度<rt>なんど</rt></ruby>も<ruby>書<rt>か</rt></ruby>きます。",
+      "answer": "ため",
+      "choices": [
+        "ため",
+        "よう",
+        "こと",
+        "もの"
+      ],
+      "meaning": "為了記住漢字，反覆書寫。",
+      "grammar": "〜ために：動詞辭書形+ために，表示目的"
+    },
+    "tags": [
+      "sentence-pattern",
+      "purpose"
+    ]
+  },
+  {
+    "id": "grammar-N4-035",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "会議に出席___なければなりません。",
+      "sentenceRuby": "<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>出席<rt>しゅっせき</rt></ruby>___なければなりません。",
+      "answer": "し",
+      "choices": [
+        "し",
+        "して",
+        "する",
+        "した"
+      ],
+      "meaning": "必須出席會議。",
+      "grammar": "〜なければならない：表示義務，「必須…」（動詞ます形+なければならない）"
+    },
+    "tags": [
+      "sentence-pattern",
+      "obligation",
+      "なければならない"
+    ]
+  },
+  {
+    "id": "grammar-N4-036",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "ここでタバコを吸って___いけません。",
+      "sentenceRuby": "ここでタバコを<ruby>吸<rt>す</rt></ruby>って___いけません。",
+      "answer": "は",
+      "choices": [
+        "は",
+        "が",
+        "も",
+        "を"
+      ],
+      "meaning": "不可以在這裡抽菸。",
+      "grammar": "〜てはいけない：表示禁止，「不可以…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "prohibition",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-037",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この部屋に入って___いいです。",
+      "sentenceRuby": "この<ruby>部屋<rt>へや</rt></ruby>に<ruby>入<rt>はい</rt></ruby>って___いいです。",
+      "answer": "も",
+      "choices": [
+        "も",
+        "は",
+        "が",
+        "を"
+      ],
+      "meaning": "可以進這個房間。",
+      "grammar": "〜てもいい：表示允許，「可以…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "permission",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-038",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "ピアノが___ことができますか。",
+      "sentenceRuby": "ピアノが___ことができますか。",
+      "answer": "弾く",
+      "choices": [
+        "弾く",
+        "弾き",
+        "弾いて",
+        "弾いた"
+      ],
+      "meaning": "你會彈鋼琴嗎？",
+      "grammar": "〜ことができる：表示能力，「能夠…」（辭書形+ことができる）"
+    },
+    "tags": [
+      "sentence-pattern",
+      "ability",
+      "ことができる"
+    ]
+  },
+  {
+    "id": "grammar-N4-039",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女が来ると___います。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>が<ruby>来<rt>く</rt></ruby>ると___います。",
+      "answer": "思って",
+      "choices": [
+        "思って",
+        "言って",
+        "知って",
+        "見て"
+      ],
+      "meaning": "我覺得她會來。",
+      "grammar": "〜と思っている：表示說話者的想法，「我認為…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "quotation",
+      "と思います"
+    ]
+  },
+  {
+    "id": "grammar-N4-040",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この薬は体___いいですよ。",
+      "sentenceRuby": "この<ruby>薬<rt>くすり</rt></ruby>は<ruby>体<rt>からだ</rt></ruby>___いいですよ。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "が",
+        "で",
+        "の"
+      ],
+      "meaning": "這個藥對身體好喔。",
+      "grammar": "〜にいい：表示對…有益，「對…好」"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N4-041",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "試験を受ける___、緊張しています。",
+      "sentenceRuby": "<ruby>試験<rt>しけん</rt></ruby>を<ruby>受<rt>う</rt></ruby>ける___、<ruby>緊張<rt>きんちょう</rt></ruby>しています。",
+      "answer": "ので",
+      "choices": [
+        "ので",
+        "が",
+        "けど",
+        "から"
+      ],
+      "meaning": "因為要考試，所以很緊張。",
+      "grammar": "〜ので：客觀、婉轉地表示原因，「因為…」"
+    },
+    "tags": [
+      "conjunction",
+      "ので"
+    ]
+  },
+  {
+    "id": "grammar-N4-042",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "日本語が上手になる___練習が大切です。",
+      "sentenceRuby": "<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>になる___<ruby>練習<rt>れんしゅう</rt></ruby>が<ruby>大切<rt>たいせつ</rt></ruby>です。",
+      "answer": "には",
+      "choices": [
+        "には",
+        "ので",
+        "ために",
+        "ように"
+      ],
+      "meaning": "要日語變好，練習很重要。",
+      "grammar": "〜には：表示目的或必要條件，「要…的話」"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "purpose"
+    ]
+  },
+  {
+    "id": "grammar-N4-043",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼___日本語を教えてもらいました。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>___<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてもらいました。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "から",
+        "を",
+        "で"
+      ],
+      "meaning": "我請他教我日語。",
+      "grammar": "〜にもらう／〜てもらう：請對方為自己做某事，「讓…為我…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "もらう"
+    ]
+  },
+  {
+    "id": "grammar-N4-044",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼に___てあげました。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>に___てあげました。",
+      "answer": "教え",
+      "choices": [
+        "教え",
+        "教えて",
+        "教える",
+        "教えた"
+      ],
+      "meaning": "我教了他。",
+      "grammar": "〜てあげる：為別人做某事，「（為某人）…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-045",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "友達に本を___てもらいました。",
+      "sentenceRuby": "<ruby>友達<rt>ともだち</rt></ruby>に<ruby>本<rt>ほん</rt></ruby>を___てもらいました。",
+      "answer": "貸し",
+      "choices": [
+        "貸し",
+        "貸して",
+        "貸す",
+        "貸した"
+      ],
+      "meaning": "請朋友借了書給我。",
+      "grammar": "〜てもらう：請他人為自己做某事，「請…（為我）…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "もらう",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-046",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "母が私に手紙を___てくれました。",
+      "sentenceRuby": "<ruby>母<rt>はは</rt></ruby>が<ruby>私<rt>わたし</rt></ruby>に<ruby>手紙<rt>てがみ</rt></ruby>を___てくれました。",
+      "answer": "書い",
+      "choices": [
+        "書い",
+        "書いて",
+        "書く",
+        "書いた"
+      ],
+      "meaning": "媽媽替我寫了信。",
+      "grammar": "〜てくれる：他人為自己做某事，「（他人）替我…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-047",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "財布を落とし___しまった。",
+      "sentenceRuby": "<ruby>財布<rt>さいふ</rt></ruby>を<ruby>落<rt>お</rt></ruby>とし___しまった。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "た",
+        "で",
+        "に"
+      ],
+      "meaning": "不小心把錢包掉了。",
+      "grammar": "〜てしまう：表示完了或遺憾，「（不小心）…了」"
+    },
+    "tags": [
+      "tense-aspect",
+      "te-form",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-048",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "旅行の前に荷物をまとめ___おきます。",
+      "sentenceRuby": "<ruby>旅行<rt>りょこう</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>に<ruby>荷物<rt>にもつ</rt></ruby>をまとめ___おきます。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "た",
+        "で",
+        "に"
+      ],
+      "meaning": "旅行前先打包好行李。",
+      "grammar": "〜ておく：事先做好某事，「預先…」"
+    },
+    "tags": [
+      "tense-aspect",
+      "ておく",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-049",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この料理を食べ___みてください。",
+      "sentenceRuby": "この<ruby>料理<rt>りょうり</rt></ruby>を<ruby>食<rt>た</rt></ruby>べ___みてください。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "た",
+        "で",
+        "を"
+      ],
+      "meaning": "請試吃看看這道料理。",
+      "grammar": "〜てみる：嘗試做某事，「試著…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "てみる",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-050",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "新しい仕事___慣れるまで時間がかかった。",
+      "sentenceRuby": "<ruby>新<rt>あたら</rt></ruby>しい<ruby>仕事<rt>しごと</rt></ruby>___<ruby>慣<rt>な</rt></ruby>れるまで<ruby>時間<rt>じかん</rt></ruby>がかかった。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "が",
+        "を",
+        "で"
+      ],
+      "meaning": "習慣新工作花了一段時間。",
+      "grammar": "〜に慣れる：對…習慣，「習慣…」"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N4-051",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女___会いたい。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>___<ruby>会<rt>あ</rt></ruby>いたい。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "が",
+        "を",
+        "と"
+      ],
+      "meaning": "想見她。",
+      "grammar": "〜に会いたい：表示想見某人，「に」標示對象"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "desire"
+    ]
+  },
+  {
+    "id": "grammar-N4-052",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この仕事___終わったら、帰ってもいいですよ。",
+      "sentenceRuby": "この<ruby>仕事<rt>しごと</rt></ruby>___<ruby>終<rt>お</rt></ruby>わったら、<ruby>帰<rt>かえ</rt></ruby>ってもいいですよ。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "を",
+        "は",
+        "に"
+      ],
+      "meaning": "這個工作結束的話，可以回家喔。",
+      "grammar": "〜が終わったら：「が」為主語，「たら」表示完了後的條件"
+    },
+    "tags": [
+      "particle",
+      "が",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N4-053",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "その映画は___ことに決めました。",
+      "sentenceRuby": "その<ruby>映画<rt>えいが</rt></ruby>は___ことに<ruby>決<rt>き</rt></ruby>めました。",
+      "answer": "見る",
+      "choices": [
+        "見る",
+        "見て",
+        "見た",
+        "見られる"
+      ],
+      "meaning": "決定去看那部電影。",
+      "grammar": "〜ことにする：決定做某事，「決定…」（辭書形+ことにする）"
+    },
+    "tags": [
+      "sentence-pattern",
+      "intent"
+    ]
+  },
+  {
+    "id": "grammar-N4-054",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "毎日運動する___にした。",
+      "sentenceRuby": "<ruby>毎日<rt>まいにち</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>する___にした。",
+      "answer": "こと",
+      "choices": [
+        "こと",
+        "よう",
+        "もの",
+        "はず"
+      ],
+      "meaning": "決定每天運動。",
+      "grammar": "〜ことにした：決定做某事，「決定了…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "intent"
+    ]
+  },
+  {
+    "id": "grammar-N4-055",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "日本語が___ようになった。",
+      "sentenceRuby": "<ruby>日本語<rt>にほんご</rt></ruby>が___ようになった。",
+      "answer": "わかる",
+      "choices": [
+        "わかる",
+        "わかり",
+        "わかって",
+        "わかった"
+      ],
+      "meaning": "日語變得聽得懂了。",
+      "grammar": "〜ようになる：狀態逐漸改變，「漸漸能…」（辭書形+ようになる）"
+    },
+    "tags": [
+      "sentence-pattern",
+      "ability",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-056",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼___作った料理を食べた。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>___<ruby>作<rt>つく</rt></ruby>った<ruby>料理<rt>りょうり</rt></ruby>を<ruby>食<rt>た</rt></ruby>べた。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "の",
+        "で"
+      ],
+      "meaning": "吃了他做的料理。",
+      "grammar": "〜が（連體節中的主語）：在修飾名詞的句子裡，主語用「が」"
+    },
+    "tags": [
+      "particle",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N4-057",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "宿題をしない___、先生に怒られた。",
+      "sentenceRuby": "<ruby>宿題<rt>しゅくだい</rt></ruby>をしない___、<ruby>先生<rt>せんせい</rt></ruby>に<ruby>怒<rt>おこ</rt></ruby>られた。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "ので",
+        "のに",
+        "けど"
+      ],
+      "meaning": "因為沒做作業，被老師罵了。",
+      "grammar": "〜から：直接、主觀地表示原因，「因為…」"
+    },
+    "tags": [
+      "conjunction",
+      "から"
+    ]
+  },
+  {
+    "id": "grammar-N4-058",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "田中さんはいつも___そうに働いている。",
+      "sentenceRuby": "<ruby>田中<rt>たなか</rt></ruby>さんはいつも___そうに<ruby>働<rt>はたら</rt></ruby>いている。",
+      "answer": "楽し",
+      "choices": [
+        "楽し",
+        "楽しい",
+        "楽しく",
+        "楽しんで"
+      ],
+      "meaning": "田中先生總是一副開心地在工作的樣子。",
+      "grammar": "〜そうに（様態）：い形容詞語幹+そうに，表示看起來的樣子"
+    },
+    "tags": [
+      "adjective-form",
+      "i-adj",
+      "expression"
+    ]
+  },
+  {
+    "id": "grammar-N4-059",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は親切___人です。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>親切<rt>しんせつ</rt></ruby>___<ruby>人<rt>ひと</rt></ruby>です。",
+      "answer": "な",
+      "choices": [
+        "な",
+        "の",
+        "に",
+        "で"
+      ],
+      "meaning": "她是個親切的人。",
+      "grammar": "な形容詞+な+名詞：な形容詞修飾名詞時需要「な」"
+    },
+    "tags": [
+      "adjective-form",
+      "na-adj"
+    ]
+  },
+  {
+    "id": "grammar-N4-060",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "元気___なりましたか。",
+      "sentenceRuby": "<ruby>元気<rt>げんき</rt></ruby>___なりましたか。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "が",
+        "と",
+        "で"
+      ],
+      "meaning": "身體好起來了嗎？",
+      "grammar": "〜になる：な形容詞/名詞+になる，表示變化"
+    },
+    "tags": [
+      "adjective-form",
+      "na-adj",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-061",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "試験が難しかった___、合格できた。",
+      "sentenceRuby": "<ruby>試験<rt>しけん</rt></ruby>が<ruby>難<rt>むずか</rt></ruby>しかった___、<ruby>合格<rt>ごうかく</rt></ruby>できた。",
+      "answer": "のに",
+      "choices": [
+        "のに",
+        "から",
+        "ので",
+        "けど"
+      ],
+      "meaning": "明明考試很難，還是通過了。",
+      "grammar": "〜のに：表示意外、驚訝或遺憾，「明明…卻…」"
+    },
+    "tags": [
+      "conjunction",
+      "concession"
+    ]
+  },
+  {
+    "id": "grammar-N4-062",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "それは本当___話ですか。",
+      "sentenceRuby": "それは<ruby>本当<rt>ほんとう</rt></ruby>___<ruby>話<rt>はなし</rt></ruby>ですか。",
+      "answer": "の",
+      "choices": [
+        "の",
+        "な",
+        "に",
+        "で"
+      ],
+      "meaning": "那是真實的故事嗎？",
+      "grammar": "名詞+の+名詞：「の」表示修飾關係"
+    },
+    "tags": [
+      "particle",
+      "の"
+    ]
+  },
+  {
+    "id": "grammar-N4-063",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "子供の頃、よく海___泳いだ。",
+      "sentenceRuby": "<ruby>子供<rt>こども</rt></ruby>の<ruby>頃<rt>ころ</rt></ruby>、よく<ruby>海<rt>うみ</rt></ruby>___<ruby>泳<rt>およ</rt></ruby>いだ。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "に",
+        "を",
+        "が"
+      ],
+      "meaning": "小時候常常在海裡游泳。",
+      "grammar": "〜で（場所）：表示動作發生的場所，「在…（做）」"
+    },
+    "tags": [
+      "particle",
+      "で"
+    ]
+  },
+  {
+    "id": "grammar-N4-064",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この店は10時___開く。",
+      "sentenceRuby": "この<ruby>店<rt>みせ</rt></ruby>は10<ruby>時<rt>じ</rt></ruby>___<ruby>開<rt>あ</rt></ruby>く。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "で",
+        "が",
+        "から"
+      ],
+      "meaning": "這家店在10點開門。",
+      "grammar": "時間+に：時間點+「に」，表示動作發生的時刻"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "time"
+    ]
+  },
+  {
+    "id": "grammar-N4-065",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "日本___来てから、3年になります。",
+      "sentenceRuby": "<ruby>日本<rt>にほん</rt></ruby>___<ruby>来<rt>き</rt></ruby>てから、3<ruby>年<rt>ねん</rt></ruby>になります。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "で",
+        "へ",
+        "から"
+      ],
+      "meaning": "來到日本後，已經3年了。",
+      "grammar": "〜に来て：目的地+に+移動動詞，表示移動到某地"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "transport"
+    ]
+  },
+  {
+    "id": "grammar-N4-066",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "会議は3時間___かかった。",
+      "sentenceRuby": "<ruby>会議<rt>かいぎ</rt></ruby>は3<ruby>時間<rt>じかん</rt></ruby>___かかった。",
+      "answer": "も",
+      "choices": [
+        "も",
+        "が",
+        "に",
+        "で"
+      ],
+      "meaning": "會議花了整整3小時之多。",
+      "grammar": "〜もかかる：強調時間或費用超出預期，「花了…之多」"
+    },
+    "tags": [
+      "particle",
+      "も"
+    ]
+  },
+  {
+    "id": "grammar-N4-067",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "東京___大阪まで新幹線で2時間半かかる。",
+      "sentenceRuby": "<ruby>東京<rt>とうきょう</rt></ruby>___<ruby>大阪<rt>おおさか</rt></ruby>まで<ruby>新幹線<rt>しんかんせん</rt></ruby>で2<ruby>時間<rt>じかん</rt></ruby><ruby>半<rt>はん</rt></ruby>かかる。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "に",
+        "で",
+        "を"
+      ],
+      "meaning": "從東京到大阪搭新幹線要2小時半。",
+      "grammar": "〜から〜まで：表示起點到終點，「從…到…」"
+    },
+    "tags": [
+      "particle",
+      "から"
+    ]
+  },
+  {
+    "id": "grammar-N4-068",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "失敗を恐れず___ください。",
+      "sentenceRuby": "<ruby>失敗<rt>しっぱい</rt></ruby>を<ruby>恐<rt>おそ</rt></ruby>れず___ください。",
+      "answer": "挑戦して",
+      "choices": [
+        "挑戦して",
+        "挑戦し",
+        "挑戦する",
+        "挑戦した"
+      ],
+      "meaning": "請不怕失敗，勇於挑戰。",
+      "grammar": "〜てください：表示請求或指示，「請…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "request",
+      "てください"
+    ]
+  },
+  {
+    "id": "grammar-N4-069",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は自分___間違いを認めた。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>自分<rt>じぶん</rt></ruby>___<ruby>間違<rt>まちが</rt></ruby>いを<ruby>認<rt>みと</rt></ruby>めた。",
+      "answer": "の",
+      "choices": [
+        "の",
+        "が",
+        "は",
+        "に"
+      ],
+      "meaning": "他承認了自己的錯誤。",
+      "grammar": "自分の：「の」表示所屬，「自己的」"
+    },
+    "tags": [
+      "particle",
+      "の"
+    ]
+  },
+  {
+    "id": "grammar-N4-070",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "ここに名前を書いて___いいですか。",
+      "sentenceRuby": "ここに<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いて___いいですか。",
+      "answer": "も",
+      "choices": [
+        "も",
+        "は",
+        "が",
+        "を"
+      ],
+      "meaning": "可以在這裡寫名字嗎？",
+      "grammar": "〜てもいいですか：請求許可，「可以…嗎？」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "permission",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-071",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "仕事___終わったら、飲みに行こう。",
+      "sentenceRuby": "<ruby>仕事<rt>しごと</rt></ruby>___<ruby>終<rt>お</rt></ruby>わったら、<ruby>飲<rt>の</rt></ruby>みに<ruby>行<rt>い</rt></ruby>こう。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "を",
+        "は",
+        "に"
+      ],
+      "meaning": "工作結束後，去喝一杯吧。",
+      "grammar": "〜が終わったら：主語+が，表示完成狀態後的條件"
+    },
+    "tags": [
+      "particle",
+      "が",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N4-072",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "先生___なりたいです。",
+      "sentenceRuby": "<ruby>先生<rt>せんせい</rt></ruby>___なりたいです。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "が",
+        "で",
+        "と"
+      ],
+      "meaning": "想成為老師。",
+      "grammar": "〜になる：名詞+に+なる，表示成為某種狀態"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "desire"
+    ]
+  },
+  {
+    "id": "grammar-N4-073",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "その店は___安いし、料理もおいしい。",
+      "sentenceRuby": "その<ruby>店<rt>みせ</rt></ruby>は___<ruby>安<rt>やす</rt></ruby>いし、<ruby>料理<rt>りょうり</rt></ruby>もおいしい。",
+      "answer": "値段が",
+      "choices": [
+        "値段が",
+        "値段は",
+        "値段を",
+        "値段に"
+      ],
+      "meaning": "那家店價格便宜，料理也好吃。",
+      "grammar": "〜し〜し：並列理由，「既…也…」"
+    },
+    "tags": [
+      "conjunction",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N4-074",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "お客様___ご説明申し上げます。",
+      "sentenceRuby": "お<ruby>客様<rt>きゃくさま</rt></ruby>___ご<ruby>説明<rt>せつめい</rt></ruby><ruby>申<rt>もう</rt></ruby>し<ruby>上<rt>あ</rt></ruby>げます。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "へ",
+        "を",
+        "が"
+      ],
+      "meaning": "向客人說明。",
+      "grammar": "〜にご説明する：向對方進行說明，「に」標示說明的對象"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "work"
+    ]
+  },
+  {
+    "id": "grammar-N4-075",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "このレポートは来週___提出してください。",
+      "sentenceRuby": "このレポートは<ruby>来週<rt>らいしゅう</rt></ruby>___<ruby>提出<rt>ていしゅつ</rt></ruby>してください。",
+      "answer": "までに",
+      "choices": [
+        "までに",
+        "まで",
+        "ために",
+        "には"
+      ],
+      "meaning": "這份報告請在下週之前提交。",
+      "grammar": "〜までに：表示截止時限，「在…之前」"
+    },
+    "tags": [
+      "particle",
+      "まで",
+      "time"
+    ]
+  },
+  {
+    "id": "grammar-N4-076",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は来る___連絡がない。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>来<rt>く</rt></ruby>る___<ruby>連絡<rt>れんらく</rt></ruby>がない。",
+      "answer": "とも",
+      "choices": [
+        "とも",
+        "か",
+        "かどうか",
+        "かも"
+      ],
+      "meaning": "不知道她來不來，沒有聯絡。",
+      "grammar": "〜かどうか：表示不確定，「是否…」（常簡化為か）"
+    },
+    "tags": [
+      "expression",
+      "particle",
+      "か"
+    ]
+  },
+  {
+    "id": "grammar-N4-077",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "部屋を掃除し___、音楽を聴く。",
+      "sentenceRuby": "<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>し___、<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聴<rt>き</rt></ruby>く。",
+      "answer": "ながら",
+      "choices": [
+        "ながら",
+        "てから",
+        "ために",
+        "てしまい"
+      ],
+      "meaning": "一邊打掃房間，一邊聽音樂。",
+      "grammar": "〜ながら：同時進行兩個動作（動詞ます形+ながら）"
+    },
+    "tags": [
+      "sentence-pattern",
+      "simultaneous",
+      "ながら"
+    ]
+  },
+  {
+    "id": "grammar-N4-078",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は医者___、患者にとても親切だ。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>医者<rt>いしゃ</rt></ruby>___、<ruby>患者<rt>かんじゃ</rt></ruby>にとても<ruby>親切<rt>しんせつ</rt></ruby>だ。",
+      "answer": "として",
+      "choices": [
+        "として",
+        "なので",
+        "だから",
+        "にとって"
+      ],
+      "meaning": "身為醫生，他對病人非常親切。",
+      "grammar": "〜として：表示身分立場，「作為…」"
+    },
+    "tags": [
+      "expression",
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N4-079",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "私___、この問題はとても難しい。",
+      "sentenceRuby": "<ruby>私<rt>わたし</rt></ruby>___、この<ruby>問題<rt>もんだい</rt></ruby>はとても<ruby>難<rt>むずか</rt></ruby>しい。",
+      "answer": "にとって",
+      "choices": [
+        "にとって",
+        "にとり",
+        "として",
+        "に"
+      ],
+      "meaning": "對我來說，這個問題非常難。",
+      "grammar": "〜にとって：從…的角度來看，「對…來說」"
+    },
+    "tags": [
+      "expression",
+      "にとって"
+    ]
+  },
+  {
+    "id": "grammar-N4-080",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "地震___橋が崩れた。",
+      "sentenceRuby": "<ruby>地震<rt>じしん</rt></ruby>___<ruby>橋<rt>はし</rt></ruby>が<ruby>崩<rt>くず</rt></ruby>れた。",
+      "answer": "によって",
+      "choices": [
+        "によって",
+        "によると",
+        "にとって",
+        "に"
+      ],
+      "meaning": "橋因地震而倒塌。",
+      "grammar": "〜によって：表示原因或手段，「因…而…」"
+    },
+    "tags": [
+      "expression",
+      "によって"
+    ]
+  },
+  {
+    "id": "grammar-N4-081",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "天気予報___、明日は雨だそうだ。",
+      "sentenceRuby": "<ruby>天気予報<rt>てんきよほう</rt></ruby>___、<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>だそうだ。",
+      "answer": "によると",
+      "choices": [
+        "によると",
+        "によって",
+        "にとって",
+        "について"
+      ],
+      "meaning": "根據天氣預報，明天好像會下雨。",
+      "grammar": "〜によると：引用資訊來源，「根據…」"
+    },
+    "tags": [
+      "expression",
+      "によると"
+    ]
+  },
+  {
+    "id": "grammar-N4-082",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "環境問題___話し合いましょう。",
+      "sentenceRuby": "<ruby>環境<rt>かんきょう</rt></ruby><ruby>問題<rt>もんだい</rt></ruby>___<ruby>話<rt>はな</rt></ruby>し<ruby>合<rt>あ</rt></ruby>いましょう。",
+      "answer": "について",
+      "choices": [
+        "について",
+        "にとって",
+        "によって",
+        "にわたって"
+      ],
+      "meaning": "讓我們討論一下環境問題吧。",
+      "grammar": "〜について：關於某個主題，「關於…」"
+    },
+    "tags": [
+      "expression",
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N4-083",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "3日間___、ずっと雨が降り続いた。",
+      "sentenceRuby": "3<ruby>日間<rt>にちかん</rt></ruby>___、ずっと<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>り<ruby>続<rt>つづ</rt></ruby>いた。",
+      "answer": "にわたって",
+      "choices": [
+        "にわたって",
+        "について",
+        "によって",
+        "にとって"
+      ],
+      "meaning": "連續3天都在下雨。",
+      "grammar": "〜にわたって：表示範圍或期間，「持續…」"
+    },
+    "tags": [
+      "expression",
+      "time"
+    ]
+  },
+  {
+    "id": "grammar-N4-084",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "子供の頃の写真を見て、懐かしく___。",
+      "sentenceRuby": "<ruby>子供<rt>こども</rt></ruby>の<ruby>頃<rt>ころ</rt></ruby>の<ruby>写真<rt>しゃしん</rt></ruby>を<ruby>見<rt>み</rt></ruby>て、<ruby>懐<rt>なつ</rt></ruby>かしく___。",
+      "answer": "なりました",
+      "choices": [
+        "なりました",
+        "しました",
+        "なってきました",
+        "になりました"
+      ],
+      "meaning": "看了小時候的照片，感到懷念。",
+      "grammar": "〜くなる：い形容詞語幹+くなる，表示狀態變化"
+    },
+    "tags": [
+      "adjective-form",
+      "i-adj",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-085",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "来年から毎日運動___つもりです。",
+      "sentenceRuby": "<ruby>来年<rt>らいねん</rt></ruby>から<ruby>毎日<rt>まいにち</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>する___です。",
+      "answer": "つもり",
+      "choices": [
+        "つもり",
+        "はず",
+        "よう",
+        "こと"
+      ],
+      "meaning": "打算從明年開始每天運動。",
+      "grammar": "〜つもりだ：表示說話者的意圖或打算，「打算…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "intent",
+      "つもり"
+    ]
+  },
+  {
+    "id": "grammar-N4-086",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "会議に参加する___。",
+      "sentenceRuby": "<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>参加<rt>さんか</rt></ruby>する___。",
+      "answer": "ことになった",
+      "choices": [
+        "ことになった",
+        "つもりだ",
+        "はずだ",
+        "ようになった"
+      ],
+      "meaning": "決定要參加會議了。",
+      "grammar": "〜ことになる：事情自然地、或由外部決定而成，「（自然地/外部決定）變成…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "intent",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-087",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女に花を___あげた。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>に<ruby>花<rt>はな</rt></ruby>を___あげた。",
+      "answer": "買って",
+      "choices": [
+        "買って",
+        "買い",
+        "買う",
+        "買った"
+      ],
+      "meaning": "買了花送給她。",
+      "grammar": "〜てあげる：為他人做某事，「（為某人）…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-088",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "もし明日雨___、試合は中止になります。",
+      "sentenceRuby": "もし<ruby>明日<rt>あした</rt></ruby><ruby>雨<rt>あめ</rt></ruby>___、<ruby>試合<rt>しあい</rt></ruby>は<ruby>中止<rt>ちゅうし</rt></ruby>になります。",
+      "answer": "なら",
+      "choices": [
+        "なら",
+        "だったら",
+        "であれば",
+        "ならば"
+      ],
+      "meaning": "如果明天下雨，比賽就取消。",
+      "grammar": "もし〜なら：表示假設，「如果…的話」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N4-089",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "子供が生まれて___から、生活が変わった。",
+      "sentenceRuby": "<ruby>子供<rt>こども</rt></ruby>が<ruby>生<rt>う</rt></ruby>まれて___から、<ruby>生活<rt>せいかつ</rt></ruby>が<ruby>変<rt>か</rt></ruby>わった。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "からだ",
+        "以来",
+        "以降"
+      ],
+      "meaning": "自從孩子出生後，生活就改變了。",
+      "grammar": "〜てから：表示動作完了後，「…之後」"
+    },
+    "tags": [
+      "tense-aspect",
+      "てから"
+    ]
+  },
+  {
+    "id": "grammar-N4-090",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この映画はもう何度___見たことがある。",
+      "sentenceRuby": "この<ruby>映画<rt>えいが</rt></ruby>はもう<ruby>何度<rt>なんど</rt></ruby>___<ruby>見<rt>み</rt></ruby>たことがある。",
+      "answer": "も",
+      "choices": [
+        "も",
+        "が",
+        "か",
+        "は"
+      ],
+      "meaning": "這部電影我已經看過好幾次了。",
+      "grammar": "何度も：表示多次，「許多次」"
+    },
+    "tags": [
+      "expression",
+      "も",
+      "experience"
+    ]
+  },
+  {
+    "id": "grammar-N4-091",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は歌が上手___そうです。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>歌<rt>うた</rt></ruby>が<ruby>上手<rt>じょうず</rt></ruby>___そうです。",
+      "answer": "だ",
+      "choices": [
+        "だ",
+        "な",
+        "の",
+        "で"
+      ],
+      "meaning": "聽說她歌唱得很好。",
+      "grammar": "な形容詞+だそうです：傳聞，「聽說…」"
+    },
+    "tags": [
+      "expression",
+      "copula"
+    ]
+  },
+  {
+    "id": "grammar-N4-092",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "忙しい___も、健康に気をつけてください。",
+      "sentenceRuby": "<ruby>忙<rt>いそが</rt></ruby>しい___も、<ruby>健康<rt>けんこう</rt></ruby>に<ruby>気<rt>き</rt></ruby>をつけてください。",
+      "answer": "として",
+      "choices": [
+        "として",
+        "ので",
+        "から",
+        "けど"
+      ],
+      "meaning": "即使再忙，也請注意健康。",
+      "grammar": "〜としても：即使作為…，「即使…」"
+    },
+    "tags": [
+      "expression",
+      "concession"
+    ]
+  },
+  {
+    "id": "grammar-N4-093",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は朝から___飲んでいる。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>朝<rt>あさ</rt></ruby>から___<ruby>飲<rt>の</rt></ruby>んでいる。",
+      "answer": "ずっと",
+      "choices": [
+        "ずっと",
+        "もっと",
+        "きっと",
+        "そっと"
+      ],
+      "meaning": "他從早上就一直在喝。",
+      "grammar": "ずっと：表示持續狀態，「一直、持續」"
+    },
+    "tags": [
+      "expression",
+      "adverb",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-094",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "パソコン___使い方を教えてください。",
+      "sentenceRuby": "パソコン___<ruby>使<rt>つか</rt></ruby>い<ruby>方<rt>かた</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてください。",
+      "answer": "の",
+      "choices": [
+        "の",
+        "を",
+        "に",
+        "が"
+      ],
+      "meaning": "請教我電腦的使用方法。",
+      "grammar": "〜の使い方：「の」表示所屬，「…的使用方法」"
+    },
+    "tags": [
+      "particle",
+      "の"
+    ]
+  },
+  {
+    "id": "grammar-N4-095",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "あの店はいつ行って___混んでいる。",
+      "sentenceRuby": "あの<ruby>店<rt>みせ</rt></ruby>はいつ<ruby>行<rt>い</rt></ruby>って___<ruby>混<rt>こ</rt></ruby>んでいる。",
+      "answer": "も",
+      "choices": [
+        "も",
+        "は",
+        "が",
+        "を"
+      ],
+      "meaning": "那家店不管什麼時候去都很擠。",
+      "grammar": "いつ〜ても：不管何時，「無論何時…都…」"
+    },
+    "tags": [
+      "expression",
+      "も",
+      "concession"
+    ]
+  },
+  {
+    "id": "grammar-N4-096",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は___日本語を話せる。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は___<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>話<rt>はな</rt></ruby>せる。",
+      "answer": "もう",
+      "choices": [
+        "もう",
+        "まだ",
+        "もっと",
+        "ずっと"
+      ],
+      "meaning": "她已經能說日語了。",
+      "grammar": "もう〜（肯定）：表示已經完成或達到某狀態，「已經…」"
+    },
+    "tags": [
+      "expression",
+      "adverb",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-097",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "電話___あったら、すぐ教えてください。",
+      "sentenceRuby": "<ruby>電話<rt>でんわ</rt></ruby>___あったら、すぐ<ruby>教<rt>おし</rt></ruby>えてください。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "を",
+        "に"
+      ],
+      "meaning": "如果有電話的話，請馬上告訴我。",
+      "grammar": "〜があったら：「が」標示存在主語，「如果有…的話」"
+    },
+    "tags": [
+      "particle",
+      "が",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N4-098",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "旅行から帰っ___すぐ仕事が始まった。",
+      "sentenceRuby": "<ruby>旅行<rt>りょこう</rt></ruby>から<ruby>帰<rt>かえ</rt></ruby>っ___すぐ<ruby>仕事<rt>しごと</rt></ruby>が<ruby>始<rt>はじ</rt></ruby>まった。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "た",
+        "から",
+        "で"
+      ],
+      "meaning": "旅行一回來，工作馬上就開始了。",
+      "grammar": "〜てすぐ：…之後馬上，「一…就…」"
+    },
+    "tags": [
+      "tense-aspect",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-099",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この仕事は私には___すぎる。",
+      "sentenceRuby": "この<ruby>仕事<rt>しごと</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>には___すぎる。",
+      "answer": "難し",
+      "choices": [
+        "難し",
+        "難しく",
+        "難しい",
+        "難しな"
+      ],
+      "meaning": "這個工作對我來說太難了。",
+      "grammar": "い形容詞語幹+すぎる：表示過度，「太…了」"
+    },
+    "tags": [
+      "verb-form",
+      "すぎ",
+      "i-adj"
+    ]
+  },
+  {
+    "id": "grammar-N4-100",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は料理が___上手になってきた。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>が___<ruby>上手<rt>じょうず</rt></ruby>になってきた。",
+      "answer": "どんどん",
+      "choices": [
+        "どんどん",
+        "だんだん",
+        "ずっと",
+        "もっと"
+      ],
+      "meaning": "她的料理越來越厲害了。",
+      "grammar": "どんどん〜てくる：表示持續進步中，「越來越…」"
+    },
+    "tags": [
+      "expression",
+      "adverb",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-101",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "疲れて___、仕事を続けた。",
+      "sentenceRuby": "<ruby>疲<rt>つか</rt></ruby>れて___、<ruby>仕事<rt>しごと</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けた。",
+      "answer": "いて",
+      "choices": [
+        "いて",
+        "も",
+        "いるのに",
+        "いても"
+      ],
+      "meaning": "雖然很累，還是繼續工作了。",
+      "grammar": "〜ていても：表示即使持續某狀態也…，「即使…仍然」"
+    },
+    "tags": [
+      "tense-aspect",
+      "concession",
+      "ています"
+    ]
+  },
+  {
+    "id": "grammar-N4-102",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この映画は子供___見られる。",
+      "sentenceRuby": "この<ruby>映画<rt>えいが</rt></ruby>は<ruby>子供<rt>こども</rt></ruby>___<ruby>見<rt>み</rt></ruby>られる。",
+      "answer": "でも",
+      "choices": [
+        "でも",
+        "にも",
+        "しか",
+        "だけ"
+      ],
+      "meaning": "這部電影連小孩子都可以看。",
+      "grammar": "〜でも〜られる：表示連…都能，「連…也…」"
+    },
+    "tags": [
+      "expression",
+      "ability",
+      "particle"
+    ]
+  },
+  {
+    "id": "grammar-N4-103",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "先生に聞いて___ください。",
+      "sentenceRuby": "<ruby>先生<rt>せんせい</rt></ruby>に<ruby>聞<rt>き</rt></ruby>いて___ください。",
+      "answer": "みて",
+      "choices": [
+        "みて",
+        "あげて",
+        "もらって",
+        "おいて"
+      ],
+      "meaning": "請試著問問老師。",
+      "grammar": "〜てみてください：請嘗試做某事，「請試著…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "てみる",
+      "request"
+    ]
+  },
+  {
+    "id": "grammar-N4-104",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "夜遅く___なると、静かになる。",
+      "sentenceRuby": "<ruby>夜<rt>よる</rt></ruby><ruby>遅<rt>おそ</rt></ruby>く___なると、<ruby>静<rt>しず</rt></ruby>かになる。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "が",
+        "は",
+        "で"
+      ],
+      "meaning": "到了深夜就變安靜了。",
+      "grammar": "〜くになると：時間到了某時刻就會…，「到了…就」"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "time",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N4-105",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "あなたの___、私もそう思います。",
+      "sentenceRuby": "あなたの___、<ruby>私<rt>わたし</rt></ruby>もそう<ruby>思<rt>おも</rt></ruby>います。",
+      "answer": "言う通り",
+      "choices": [
+        "言う通り",
+        "言い方",
+        "考え方",
+        "話し方"
+      ],
+      "meaning": "就如你說的，我也這樣認為。",
+      "grammar": "〜の言う通り：「正如…所說的」"
+    },
+    "tags": [
+      "expression",
+      "quotation"
+    ]
+  },
+  {
+    "id": "grammar-N4-106",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は怒って___わけではない。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>怒<rt>おこ</rt></ruby>って___わけではない。",
+      "answer": "いる",
+      "choices": [
+        "いる",
+        "いた",
+        "いない",
+        "あった"
+      ],
+      "meaning": "他並不是在生氣。",
+      "grammar": "〜わけではない：並非如此，「並不是…」"
+    },
+    "tags": [
+      "expression",
+      "negative",
+      "ています"
+    ]
+  },
+  {
+    "id": "grammar-N4-107",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "ここに車を止めて___いけませんよ。",
+      "sentenceRuby": "ここに<ruby>車<rt>くるま</rt></ruby>を<ruby>止<rt>と</rt></ruby>めて___いけませんよ。",
+      "answer": "は",
+      "choices": [
+        "は",
+        "も",
+        "が",
+        "を"
+      ],
+      "meaning": "不可以在這裡停車喔。",
+      "grammar": "〜てはいけない：禁止，「不可以…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "prohibition",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-108",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "お金___あれば、旅行に行けるのに。",
+      "sentenceRuby": "お<ruby>金<rt>かね</rt></ruby>___あれば、<ruby>旅行<rt>りょこう</rt></ruby>に<ruby>行<rt>い</rt></ruby>けるのに。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "も",
+        "さえ"
+      ],
+      "meaning": "要是有錢就能去旅行了。",
+      "grammar": "〜ば〜のに：與事實相反的遺憾假設，「要是…就好了」"
+    },
+    "tags": [
+      "particle",
+      "が",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N4-109",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "このボタンを押す___ドアが開きます。",
+      "sentenceRuby": "このボタンを<ruby>押<rt>お</rt></ruby>す___ドアが<ruby>開<rt>あ</rt></ruby>きます。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "たら",
+        "なら",
+        "ば"
+      ],
+      "meaning": "按這個按鈕門就開了。",
+      "grammar": "〜と：自然、必然的結果，「一…就…」"
+    },
+    "tags": [
+      "particle",
+      "conditional",
+      "と"
+    ]
+  },
+  {
+    "id": "grammar-N4-110",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "社長___お目にかかりたいのですが。",
+      "sentenceRuby": "<ruby>社長<rt>しゃちょう</rt></ruby>___お<ruby>目<rt>め</rt></ruby>にかかりたいのですが。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "と",
+        "が",
+        "を"
+      ],
+      "meaning": "我想拜見社長。",
+      "grammar": "お目にかかる：見面（謙讓語），「に」標示對象"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "greeting"
+    ]
+  },
+  {
+    "id": "grammar-N4-111",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "資料を読んで___から、質問してください。",
+      "sentenceRuby": "<ruby>資料<rt>しりょう</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んで___から、<ruby>質問<rt>しつもん</rt></ruby>してください。",
+      "answer": "おいて",
+      "choices": [
+        "おいて",
+        "みて",
+        "しまって",
+        "あげて"
+      ],
+      "meaning": "請先讀完資料之後再提問。",
+      "grammar": "〜ておいてから：事先做好後再…，「先…之後再…」"
+    },
+    "tags": [
+      "tense-aspect",
+      "ておく",
+      "てから"
+    ]
+  },
+  {
+    "id": "grammar-N4-112",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は医者___なりました。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>医者<rt>いしゃ</rt></ruby>___なりました。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "が",
+        "で",
+        "と"
+      ],
+      "meaning": "她成為了醫生。",
+      "grammar": "〜になる：名詞+になる，表示轉變成某種狀態"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-113",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "日本___来た理由は日本語を学ぶためです。",
+      "sentenceRuby": "<ruby>日本<rt>にほん</rt></ruby>___<ruby>来<rt>き</rt></ruby>た<ruby>理由<rt>りゆう</rt></ruby>は<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>学<rt>まな</rt></ruby>ぶためです。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "へ",
+        "で",
+        "から"
+      ],
+      "meaning": "來日本的理由是為了學習日語。",
+      "grammar": "〜に来た：目的地+に+来た，表示到某地"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "purpose"
+    ]
+  },
+  {
+    "id": "grammar-N4-114",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "このニュースを聞いて、驚か___を得なかった。",
+      "sentenceRuby": "このニュースを<ruby>聞<rt>き</rt></ruby>いて、<ruby>驚<rt>おどろ</rt></ruby>か___を<ruby>得<rt>え</rt></ruby>なかった。",
+      "answer": "ざる",
+      "choices": [
+        "ざる",
+        "ない",
+        "ず",
+        "なく"
+      ],
+      "meaning": "聽到這個消息，不得不感到驚訝。",
+      "grammar": "〜ざるを得ない：不得不…，「不得不…」（書面語）"
+    },
+    "tags": [
+      "expression",
+      "obligation",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N4-115",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は料理が___くて、いつも手作りだ。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>料理<rt>りょうり</rt></ruby>が___くて、いつも<ruby>手作<rt>てづく</rt></ruby>りだ。",
+      "answer": "上手",
+      "choices": [
+        "上手",
+        "上手な",
+        "上手に",
+        "上手く"
+      ],
+      "meaning": "她料理做得好，總是自己做。",
+      "grammar": "上手くて：い形容詞くて形，連接兩個句子"
+    },
+    "tags": [
+      "adjective-form",
+      "i-adj",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-116",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "熱があって、学校___休みました。",
+      "sentenceRuby": "<ruby>熱<rt>ねつ</rt></ruby>があって、<ruby>学校<rt>がっこう</rt></ruby>___<ruby>休<rt>やす</rt></ruby>みました。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "に",
+        "は"
+      ],
+      "meaning": "因為發燒，請了學校的假。",
+      "grammar": "〜を休む：請（學校、公司等）的假，「を」標示離開的對象"
+    },
+    "tags": [
+      "particle",
+      "を"
+    ]
+  },
+  {
+    "id": "grammar-N4-117",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "バスを降りて___、10分歩いてください。",
+      "sentenceRuby": "バスを<ruby>降<rt>お</rt></ruby>りて___、10<ruby>分<rt>ふん</rt></ruby><ruby>歩<rt>ある</rt></ruby>いてください。",
+      "answer": "から",
+      "choices": [
+        "から",
+        "しまって",
+        "おいて",
+        "みて"
+      ],
+      "meaning": "下公車後，請走10分鐘。",
+      "grammar": "〜てから：完成後接著做，「…之後」"
+    },
+    "tags": [
+      "tense-aspect",
+      "てから"
+    ]
+  },
+  {
+    "id": "grammar-N4-118",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "急い___、タクシーに乗った。",
+      "sentenceRuby": "<ruby>急<rt>いそ</rt></ruby>い___、タクシーに<ruby>乗<rt>の</rt></ruby>った。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "て",
+        "から",
+        "に"
+      ],
+      "meaning": "因為趕時間，所以搭了計程車。",
+      "grammar": "〜で（理由）：動詞て形或名詞+で表示原因，「因為…」"
+    },
+    "tags": [
+      "particle",
+      "で",
+      "conjunction"
+    ]
+  },
+  {
+    "id": "grammar-N4-119",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は泳ぐのが___です。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>泳<rt>およ</rt></ruby>ぐのが___です。",
+      "answer": "得意",
+      "choices": [
+        "得意",
+        "上手",
+        "好き",
+        "できる"
+      ],
+      "meaning": "他擅長游泳。",
+      "grammar": "〜のが得意だ：擅長做某事，「が」標示能力對象"
+    },
+    "tags": [
+      "particle",
+      "が",
+      "ability"
+    ]
+  },
+  {
+    "id": "grammar-N4-120",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "田中さんが来る___確認してください。",
+      "sentenceRuby": "<ruby>田中<rt>たなか</rt></ruby>さんが<ruby>来<rt>く</rt></ruby>る___<ruby>確認<rt>かくにん</rt></ruby>してください。",
+      "answer": "かどうか",
+      "choices": [
+        "かどうか",
+        "か",
+        "かな",
+        "かと"
+      ],
+      "meaning": "請確認田中先生是否會來。",
+      "grammar": "〜かどうか確認する：確認是否…，「是否…」"
+    },
+    "tags": [
+      "expression",
+      "particle",
+      "か"
+    ]
+  },
+  {
+    "id": "grammar-N4-121",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は学生___時から、勉強が好きだった。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>学生<rt>がくせい</rt></ruby>___<ruby>時<rt>とき</rt></ruby>から、<ruby>勉強<rt>べんきょう</rt></ruby>が<ruby>好<rt>す</rt></ruby>きだった。",
+      "answer": "の",
+      "choices": [
+        "の",
+        "な",
+        "だった",
+        "だ"
+      ],
+      "meaning": "他從學生時代起就喜歡讀書。",
+      "grammar": "〜の時：「の」連接名詞，表示「…的時候」"
+    },
+    "tags": [
+      "particle",
+      "の",
+      "time"
+    ]
+  },
+  {
+    "id": "grammar-N4-122",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "日本語で手紙を___ことにした。",
+      "sentenceRuby": "<ruby>日本語<rt>にほんご</rt></ruby>で<ruby>手紙<rt>てがみ</rt></ruby>を___ことにした。",
+      "answer": "書く",
+      "choices": [
+        "書く",
+        "書き",
+        "書いて",
+        "書いた"
+      ],
+      "meaning": "決定用日語寫信。",
+      "grammar": "〜ことにする：決定做某事，辭書形+ことにする"
+    },
+    "tags": [
+      "sentence-pattern",
+      "intent"
+    ]
+  },
+  {
+    "id": "grammar-N4-123",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女___誘ったのに、断られた。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>___<ruby>誘<rt>さそ</rt></ruby>ったのに、<ruby>断<rt>ことわ</rt></ruby>られた。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "に",
+        "が",
+        "は"
+      ],
+      "meaning": "明明邀了她，卻被拒絕了。",
+      "grammar": "〜のに：逆接、感到意外，「明明…卻…」"
+    },
+    "tags": [
+      "particle",
+      "を",
+      "concession"
+    ]
+  },
+  {
+    "id": "grammar-N4-124",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "ここに___名前を書いていただけますか。",
+      "sentenceRuby": "ここに___<ruby>名前<rt>なまえ</rt></ruby>を<ruby>書<rt>か</rt></ruby>いていただけますか。",
+      "answer": "お",
+      "choices": [
+        "お",
+        "ご",
+        "御",
+        "へ"
+      ],
+      "meaning": "能請您在這裡填上您的姓名嗎？",
+      "grammar": "お〜いただけますか：鄭重的請求表現，「能請您…嗎？」"
+    },
+    "tags": [
+      "expression",
+      "request",
+      "greeting"
+    ]
+  },
+  {
+    "id": "grammar-N4-125",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "電車が遅れた___、会議に間に合わなかった。",
+      "sentenceRuby": "<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>れた___、<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わなかった。",
+      "answer": "ため",
+      "choices": [
+        "ため",
+        "から",
+        "ので",
+        "けど"
+      ],
+      "meaning": "由於電車誤點，沒能趕上會議。",
+      "grammar": "〜ために（原因）：表示原因，「由於…」（書面語）"
+    },
+    "tags": [
+      "conjunction",
+      "purpose"
+    ]
+  },
+  {
+    "id": "grammar-N4-126",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼___意見はとても参考になった。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>___<ruby>意見<rt>いけん</rt></ruby>はとても<ruby>参考<rt>さんこう</rt></ruby>になった。",
+      "answer": "の",
+      "choices": [
+        "の",
+        "が",
+        "に",
+        "は"
+      ],
+      "meaning": "他的意見非常有參考價值。",
+      "grammar": "〜の意見：「の」表示所屬，「…的意見」"
+    },
+    "tags": [
+      "particle",
+      "の"
+    ]
+  },
+  {
+    "id": "grammar-N4-127",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この問題___解決するのは難しい。",
+      "sentenceRuby": "この<ruby>問題<rt>もんだい</rt></ruby>___<ruby>解決<rt>かいけつ</rt></ruby>するのは<ruby>難<rt>むずか</rt></ruby>しい。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "に",
+        "は"
+      ],
+      "meaning": "解決這個問題很困難。",
+      "grammar": "〜を解決するのは：「を」標示動作對象，のは將動詞名詞化"
+    },
+    "tags": [
+      "particle",
+      "を"
+    ]
+  },
+  {
+    "id": "grammar-N4-128",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この本は読み___があります。",
+      "sentenceRuby": "この<ruby>本<rt>ほん</rt></ruby>は<ruby>読<rt>よ</rt></ruby>み___があります。",
+      "answer": "がい",
+      "choices": [
+        "がい",
+        "やすい",
+        "にくい",
+        "すぎ"
+      ],
+      "meaning": "這本書值得一讀。",
+      "grammar": "〜がい（甲斐）：動詞ます形+がい，表示值得做某事"
+    },
+    "tags": [
+      "verb-form",
+      "expression"
+    ]
+  },
+  {
+    "id": "grammar-N4-129",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この仕事は私___できません。",
+      "sentenceRuby": "この<ruby>仕事<rt>しごと</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>___できません。",
+      "answer": "には",
+      "choices": [
+        "には",
+        "にも",
+        "だけ",
+        "しか"
+      ],
+      "meaning": "這個工作我做不到。",
+      "grammar": "〜にはできない：對於…來說做不到，強調主體的限制"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "ability",
+      "negative"
+    ]
+  },
+  {
+    "id": "grammar-N4-130",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女___、もっと早く来るべきだった。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>___、もっと<ruby>早<rt>はや</rt></ruby>く<ruby>来<rt>く</rt></ruby>るべきだった。",
+      "answer": "は",
+      "choices": [
+        "は",
+        "が",
+        "も",
+        "に"
+      ],
+      "meaning": "她應該更早來的。",
+      "grammar": "〜べきだった：表示過去本應如此，「應該…才對」"
+    },
+    "tags": [
+      "expression",
+      "obligation",
+      "past"
+    ]
+  },
+  {
+    "id": "grammar-N4-131",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "今日中に___なければならない。",
+      "sentenceRuby": "<ruby>今日中<rt>きょうじゅう</rt></ruby>に___なければならない。",
+      "answer": "終わら",
+      "choices": [
+        "終わら",
+        "終わり",
+        "終わって",
+        "終わる"
+      ],
+      "meaning": "今天之內必須完成。",
+      "grammar": "〜なければならない：義務，「必須…」（五段動詞否定形+なければならない）"
+    },
+    "tags": [
+      "sentence-pattern",
+      "obligation",
+      "なければならない"
+    ]
+  },
+  {
+    "id": "grammar-N4-132",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "友達に頼め___よかったのに。",
+      "sentenceRuby": "<ruby>友達<rt>ともだち</rt></ruby>に<ruby>頼<rt>たの</rt></ruby>め___よかったのに。",
+      "answer": "ば",
+      "choices": [
+        "ば",
+        "たら",
+        "なら",
+        "と"
+      ],
+      "meaning": "如果能拜託朋友就好了。",
+      "grammar": "〜ばよかった：表示後悔，「要是…就好了」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "conditional",
+      "past"
+    ]
+  },
+  {
+    "id": "grammar-N4-133",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "雨___降っても、試合は続けます。",
+      "sentenceRuby": "<ruby>雨<rt>あめ</rt></ruby>___<ruby>降<rt>ふ</rt></ruby>っても、<ruby>試合<rt>しあい</rt></ruby>は<ruby>続<rt>つづ</rt></ruby>けます。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "でも",
+        "に"
+      ],
+      "meaning": "就算下雨，比賽也會繼續。",
+      "grammar": "〜ても：即使…也…，表示讓步"
+    },
+    "tags": [
+      "particle",
+      "が",
+      "concession"
+    ]
+  },
+  {
+    "id": "grammar-N4-134",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "あの山の頂上___登ったことがある。",
+      "sentenceRuby": "あの<ruby>山<rt>やま</rt></ruby>の<ruby>頂上<rt>ちょうじょう</rt></ruby>___<ruby>登<rt>のぼ</rt></ruby>ったことがある。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "を",
+        "で",
+        "が"
+      ],
+      "meaning": "我曾經登上過那座山的山頂。",
+      "grammar": "〜に登る：目標地點+に+移動動詞，「登上…」"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "experience",
+      "たことがある"
+    ]
+  },
+  {
+    "id": "grammar-N4-135",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女に秘密を話して___しまった。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>に<ruby>秘密<rt>ひみつ</rt></ruby>を<ruby>話<rt>はな</rt></ruby>して___しまった。",
+      "answer": "しまって",
+      "choices": [
+        "しまって",
+        "みて",
+        "おいて",
+        "あげて"
+      ],
+      "meaning": "不小心把秘密告訴了她。",
+      "grammar": "〜てしまう：表示不小心或遺憾的完了，「不小心…了」"
+    },
+    "tags": [
+      "tense-aspect",
+      "te-form",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-136",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この薬を飲む___、熱が下がる。",
+      "sentenceRuby": "この<ruby>薬<rt>くすり</rt></ruby>を<ruby>飲<rt>の</rt></ruby>む___、<ruby>熱<rt>ねつ</rt></ruby>が<ruby>下<rt>さ</rt></ruby>がる。",
+      "answer": "と",
+      "choices": [
+        "と",
+        "ば",
+        "たら",
+        "なら"
+      ],
+      "meaning": "吃了這個藥，燒就退了。",
+      "grammar": "〜と：必然的結果，「一…就…」"
+    },
+    "tags": [
+      "particle",
+      "conditional",
+      "と"
+    ]
+  },
+  {
+    "id": "grammar-N4-137",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "もっと早く来れ___よかったです。",
+      "sentenceRuby": "もっと<ruby>早<rt>はや</rt></ruby>く<ruby>来<rt>こ</rt></ruby>れ___よかったです。",
+      "answer": "ば",
+      "choices": [
+        "ば",
+        "たら",
+        "なら",
+        "と"
+      ],
+      "meaning": "如果能早點來就好了。",
+      "grammar": "〜ればよかった：後悔某事未發生，「要是…就好了」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "conditional",
+      "past"
+    ]
+  },
+  {
+    "id": "grammar-N4-138",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "何___努力すれば、うまくなる。",
+      "sentenceRuby": "<ruby>何<rt>なに</rt></ruby>___<ruby>努力<rt>どりょく</rt></ruby>すれば、うまくなる。",
+      "answer": "でも",
+      "choices": [
+        "でも",
+        "が",
+        "も",
+        "を"
+      ],
+      "meaning": "不管什麼事，只要努力就會進步。",
+      "grammar": "何でも〜すれば：不管什麼，「什麼事都…」"
+    },
+    "tags": [
+      "expression",
+      "concession",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N4-139",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "部屋を片付けて___ほうがいいですよ。",
+      "sentenceRuby": "<ruby>部屋<rt>へや</rt></ruby>を<ruby>片付<rt>かたづ</rt></ruby>けて___ほうがいいですよ。",
+      "answer": "おいた",
+      "choices": [
+        "おいた",
+        "みた",
+        "しまった",
+        "あげた"
+      ],
+      "meaning": "最好先把房間整理好喔。",
+      "grammar": "〜ておいたほうがいい：建議事先做好某事，「最好先…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "suggestion",
+      "ておく"
+    ]
+  },
+  {
+    "id": "grammar-N4-140",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は日本語___勉強している。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>日本語<rt>にほんご</rt></ruby>___<ruby>勉強<rt>べんきょう</rt></ruby>している。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "に",
+        "で"
+      ],
+      "meaning": "她正在學習日語。",
+      "grammar": "〜を勉強する：「を」標示學習的對象，「學習…」"
+    },
+    "tags": [
+      "particle",
+      "を",
+      "ています"
+    ]
+  },
+  {
+    "id": "grammar-N4-141",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は来年___と言っていました。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>来年<rt>らいねん</rt></ruby>___と<ruby>言<rt>い</rt></ruby>っていました。",
+      "answer": "結婚する",
+      "choices": [
+        "結婚する",
+        "結婚した",
+        "結婚している",
+        "結婚しない"
+      ],
+      "meaning": "他說他明年要結婚。",
+      "grammar": "〜すると言っていた：引用他人的話，「（他說）…」"
+    },
+    "tags": [
+      "expression",
+      "quotation",
+      "と言いました"
+    ]
+  },
+  {
+    "id": "grammar-N4-142",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この映画は見る___があります。",
+      "sentenceRuby": "この<ruby>映画<rt>えいが</rt></ruby>は<ruby>見<rt>み</rt></ruby>る___があります。",
+      "answer": "価値",
+      "choices": [
+        "価値",
+        "がい",
+        "ほど",
+        "もの"
+      ],
+      "meaning": "這部電影有看的價值。",
+      "grammar": "〜価値がある：有…的價值，「值得…」"
+    },
+    "tags": [
+      "expression",
+      "ability"
+    ]
+  },
+  {
+    "id": "grammar-N4-143",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "授業中に携帯を使って___なりません。",
+      "sentenceRuby": "<ruby>授業<rt>じゅぎょう</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>に<ruby>携帯<rt>けいたい</rt></ruby>を<ruby>使<rt>つか</rt></ruby>って___なりません。",
+      "answer": "は",
+      "choices": [
+        "は",
+        "も",
+        "が",
+        "を"
+      ],
+      "meaning": "上課中不可以用手機。",
+      "grammar": "〜てはなりません：禁止的正式表達，「不可以…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "prohibition",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-144",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "山田さん___お願いがあるのですが。",
+      "sentenceRuby": "<ruby>山田<rt>やまだ</rt></ruby>さん___お<ruby>願<rt>ねが</rt></ruby>いがあるのですが。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "へ",
+        "が",
+        "を"
+      ],
+      "meaning": "我有事想拜託山田先生。",
+      "grammar": "〜にお願いがある：向…有所請求，「に」標示對象"
+    },
+    "tags": [
+      "particle",
+      "に",
+      "request"
+    ]
+  },
+  {
+    "id": "grammar-N4-145",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "頑張れ___、絶対できる。",
+      "sentenceRuby": "<ruby>頑張<rt>がんば</rt></ruby>れ___、<ruby>絶対<rt>ぜったい</rt></ruby>できる。",
+      "answer": "ば",
+      "choices": [
+        "ば",
+        "たら",
+        "なら",
+        "と"
+      ],
+      "meaning": "只要努力，一定能做到。",
+      "grammar": "〜ば…：條件，「如果…就…」（五段動詞假定形）"
+    },
+    "tags": [
+      "sentence-pattern",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N4-146",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "新幹線___行けば、早く着きます。",
+      "sentenceRuby": "<ruby>新幹線<rt>しんかんせん</rt></ruby>___<ruby>行<rt>い</rt></ruby>けば、<ruby>早<rt>はや</rt></ruby>く<ruby>着<rt>つ</rt></ruby>きます。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "に",
+        "を",
+        "が"
+      ],
+      "meaning": "搭新幹線去的話，很快就能到。",
+      "grammar": "交通手段+で：「で」表示手段，「乘…前往」"
+    },
+    "tags": [
+      "particle",
+      "で",
+      "transport"
+    ]
+  },
+  {
+    "id": "grammar-N4-147",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この歌を聴く___、昔のことを思い出す。",
+      "sentenceRuby": "この<ruby>歌<rt>うた</rt></ruby>を<ruby>聴<rt>き</rt></ruby>く___、<ruby>昔<rt>むかし</rt></ruby>のことを<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>だ</rt></ruby>す。",
+      "answer": "たびに",
+      "choices": [
+        "たびに",
+        "と",
+        "ながら",
+        "ところに"
+      ],
+      "meaning": "每次聽這首歌，就想起以前的事。",
+      "grammar": "〜たびに：每次…的時候，「每次…就…」"
+    },
+    "tags": [
+      "expression",
+      "time",
+      "habit"
+    ]
+  },
+  {
+    "id": "grammar-N4-148",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "先生に相談し___、アドバイスをもらった。",
+      "sentenceRuby": "<ruby>先生<rt>せんせい</rt></ruby>に<ruby>相談<rt>そうだん</rt></ruby>し___、アドバイスをもらった。",
+      "answer": "て",
+      "choices": [
+        "て",
+        "から",
+        "ながら",
+        "で"
+      ],
+      "meaning": "跟老師商量後，得到了建議。",
+      "grammar": "〜して（動作連接）：連接動作，「…並且…」"
+    },
+    "tags": [
+      "tense-aspect",
+      "te-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-149",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女が何___言っても、聞かない。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>が<ruby>何<rt>なに</rt></ruby>___<ruby>言<rt>い</rt></ruby>っても、<ruby>聞<rt>き</rt></ruby>かない。",
+      "answer": "を",
+      "choices": [
+        "を",
+        "が",
+        "も",
+        "に"
+      ],
+      "meaning": "不管她說什麼，都不聽。",
+      "grammar": "何を〜ても：不管…什麼，「無論…都…」"
+    },
+    "tags": [
+      "particle",
+      "を",
+      "concession"
+    ]
+  },
+  {
+    "id": "grammar-N4-150",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この本は読め___読むほど、面白くなってくる。",
+      "sentenceRuby": "この<ruby>本<rt>ほん</rt></ruby>は<ruby>読<rt>よ</rt></ruby>め___<ruby>読<rt>よ</rt></ruby>むほど、<ruby>面白<rt>おもしろ</rt></ruby>くなってくる。",
+      "answer": "ば",
+      "choices": [
+        "ば",
+        "たら",
+        "と",
+        "なら"
+      ],
+      "meaning": "這本書越讀越有趣。",
+      "grammar": "〜ば〜ほど：越…越…，「越…就越…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N4-151",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "疲れて___、早く寝た。",
+      "sentenceRuby": "<ruby>疲<rt>つか</rt></ruby>れて___、<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>た。",
+      "answer": "いたので",
+      "choices": [
+        "いたので",
+        "いるから",
+        "しまって",
+        "おいて"
+      ],
+      "meaning": "因為一直很累，所以早早就寢了。",
+      "grammar": "〜ていたので：持續狀態作為原因，「因為一直…」"
+    },
+    "tags": [
+      "tense-aspect",
+      "ています",
+      "conjunction"
+    ]
+  },
+  {
+    "id": "grammar-N4-152",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は日本語が話せるだけ___なく、書けるのだ。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>話<rt>はな</rt></ruby>せるだけ___なく、<ruby>書<rt>か</rt></ruby>けるのだ。",
+      "answer": "で",
+      "choices": [
+        "で",
+        "も",
+        "に",
+        "が"
+      ],
+      "meaning": "他不只能說日語，還能寫。",
+      "grammar": "〜だけでなく：不僅…還…，「不只是…」"
+    },
+    "tags": [
+      "expression",
+      "ability"
+    ]
+  },
+  {
+    "id": "grammar-N4-153",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "子供の___、もっと英語を勉強しておけばよかった。",
+      "sentenceRuby": "<ruby>子供<rt>こども</rt></ruby>の___、もっと<ruby>英語<rt>えいご</rt></ruby>を<ruby>勉強<rt>べんきょう</rt></ruby>しておけばよかった。",
+      "answer": "頃",
+      "choices": [
+        "頃",
+        "時",
+        "間",
+        "後"
+      ],
+      "meaning": "如果小時候多學英語就好了。",
+      "grammar": "〜の頃：「の頃」表示「那個時期」，常指過去某段時間"
+    },
+    "tags": [
+      "expression",
+      "time",
+      "past"
+    ]
+  },
+  {
+    "id": "grammar-N4-154",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この本を読んだ___、感想を教えてください。",
+      "sentenceRuby": "この<ruby>本<rt>ほん</rt></ruby>を<ruby>読<rt>よ</rt></ruby>んだ___、<ruby>感想<rt>かんそう</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてください。",
+      "answer": "ら",
+      "choices": [
+        "ら",
+        "後で",
+        "から",
+        "なら"
+      ],
+      "meaning": "讀完這本書後，請告訴我你的感想。",
+      "grammar": "〜たら：完了後緊接著的動作，「…之後」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "conditional",
+      "ta-form"
+    ]
+  },
+  {
+    "id": "grammar-N4-155",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は私___日本語を教えてくれた。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>私<rt>わたし</rt></ruby>___<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてくれた。",
+      "answer": "に",
+      "choices": [
+        "に",
+        "を",
+        "が",
+        "と"
+      ],
+      "meaning": "她教了我日語。",
+      "grammar": "〜にてくれる：為「に」標示的對象做某事，「（為我）…」"
+    },
+    "tags": [
+      "particle",
+      "に"
+    ]
+  },
+  {
+    "id": "grammar-N4-156",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "ご飯を食べ___、歯を磨きましょう。",
+      "sentenceRuby": "ご<ruby>飯<rt>はん</rt></ruby>を<ruby>食<rt>た</rt></ruby>べ___、<ruby>歯<rt>は</rt></ruby>を<ruby>磨<rt>みが</rt></ruby>きましょう。",
+      "answer": "た後で",
+      "choices": [
+        "た後で",
+        "てから",
+        "てしまって",
+        "ながら"
+      ],
+      "meaning": "吃完飯之後，我們刷牙吧。",
+      "grammar": "〜た後で：動作完了後，「…之後」（強調先後順序）"
+    },
+    "tags": [
+      "tense-aspect",
+      "ta-form",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-157",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は英語___か、中国語もできる。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>英語<rt>えいご</rt></ruby>___か、<ruby>中国語<rt>ちゅうごくご</rt></ruby>もできる。",
+      "answer": "だけでな",
+      "choices": [
+        "だけでな",
+        "ばかりで",
+        "しかでき",
+        "だけが"
+      ],
+      "meaning": "他不只會英語，也會中文。",
+      "grammar": "〜だけでなく：不僅…也…，「不只是…還…」"
+    },
+    "tags": [
+      "expression",
+      "ability"
+    ]
+  },
+  {
+    "id": "grammar-N4-158",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "先生に確認して___から、始めます。",
+      "sentenceRuby": "<ruby>先生<rt>せんせい</rt></ruby>に<ruby>確認<rt>かくにん</rt></ruby>して___から、<ruby>始<rt>はじ</rt></ruby>めます。",
+      "answer": "おいて",
+      "choices": [
+        "おいて",
+        "みて",
+        "しまって",
+        "あげて"
+      ],
+      "meaning": "先跟老師確認好後再開始。",
+      "grammar": "〜ておいてから：事先做好準備再…，「先…之後再…」"
+    },
+    "tags": [
+      "tense-aspect",
+      "ておく",
+      "てから"
+    ]
+  },
+  {
+    "id": "grammar-N4-159",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女___書いた手紙がとても丁寧だった。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>___<ruby>書<rt>か</rt></ruby>いた<ruby>手紙<rt>てがみ</rt></ruby>がとても<ruby>丁寧<rt>ていねい</rt></ruby>だった。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "の",
+        "は",
+        "に"
+      ],
+      "meaning": "她寫的信非常有禮貌。",
+      "grammar": "〜が書いた：連體節主語用「が」修飾名詞"
+    },
+    "tags": [
+      "particle",
+      "が"
+    ]
+  },
+  {
+    "id": "grammar-N4-160",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "練習___すれば、できるようになる。",
+      "sentenceRuby": "<ruby>練習<rt>れんしゅう</rt></ruby>___すれば、できるようになる。",
+      "answer": "さえ",
+      "choices": [
+        "さえ",
+        "だけ",
+        "ばかり",
+        "しか"
+      ],
+      "meaning": "只要練習，就能學會。",
+      "grammar": "〜さえ〜ば：只要…就…，「只要…就…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "conditional"
+    ]
+  },
+  {
+    "id": "grammar-N4-161",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "車のエンジンを___まま、出かけてしまった。",
+      "sentenceRuby": "<ruby>車<rt>くるま</rt></ruby>のエンジンを___まま、<ruby>出<rt>で</rt></ruby>かけてしまった。",
+      "answer": "つけた",
+      "choices": [
+        "つけた",
+        "つけて",
+        "つける",
+        "つけている"
+      ],
+      "meaning": "沒關引擎就出門了。",
+      "grammar": "〜たまま：保持某狀態不變，「維持…的狀態」"
+    },
+    "tags": [
+      "tense-aspect",
+      "ta-form",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-162",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "雨が降り___でした。",
+      "sentenceRuby": "<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>り___でした。",
+      "answer": "そう",
+      "choices": [
+        "そう",
+        "らしい",
+        "ようだ",
+        "はず"
+      ],
+      "meaning": "天空好像要下雨的樣子。",
+      "grammar": "〜そうだ（様態）：動詞ます形+そうだ，根據視覺判斷"
+    },
+    "tags": [
+      "expression",
+      "aspect"
+    ]
+  },
+  {
+    "id": "grammar-N4-163",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼は毎日運動して___ので、体が強い。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>毎日<rt>まいにち</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>して___ので、<ruby>体<rt>からだ</rt></ruby>が<ruby>強<rt>つよ</rt></ruby>い。",
+      "answer": "いる",
+      "choices": [
+        "いる",
+        "いた",
+        "しまう",
+        "おく"
+      ],
+      "meaning": "因為他每天都在運動，所以身體很強壯。",
+      "grammar": "〜ているので：持續的習慣行為作為原因，「因為一直…」"
+    },
+    "tags": [
+      "tense-aspect",
+      "ています",
+      "conjunction"
+    ]
+  },
+  {
+    "id": "grammar-N4-164",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "社長に資料を___いただきました。",
+      "sentenceRuby": "<ruby>社長<rt>しゃちょう</rt></ruby>に<ruby>資料<rt>しりょう</rt></ruby>を___いただきました。",
+      "answer": "見せて",
+      "choices": [
+        "見せて",
+        "見て",
+        "見せ",
+        "見た"
+      ],
+      "meaning": "請社長讓我看了資料。",
+      "grammar": "〜ていただく：請對方為自己做某事（謙讓語），「請…（為我）…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "もらう",
+      "greeting"
+    ]
+  },
+  {
+    "id": "grammar-N4-165",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "急いで___ください。まだ間に合います。",
+      "sentenceRuby": "<ruby>急<rt>いそ</rt></ruby>いで___ください。まだ<ruby>間<rt>ま</rt></ruby>に<ruby>合<rt>あ</rt></ruby>います。",
+      "answer": "来て",
+      "choices": [
+        "来て",
+        "行って",
+        "走って",
+        "戻って"
+      ],
+      "meaning": "請快點過來。還來得及。",
+      "grammar": "〜て来てください：請趕來，移動動詞+てください"
+    },
+    "tags": [
+      "sentence-pattern",
+      "request",
+      "てください"
+    ]
+  },
+  {
+    "id": "grammar-N4-166",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "この仕事___終わるまで、帰れない。",
+      "sentenceRuby": "この<ruby>仕事<rt>しごと</rt></ruby>___<ruby>終<rt>お</rt></ruby>わるまで、<ruby>帰<rt>かえ</rt></ruby>れない。",
+      "answer": "が",
+      "choices": [
+        "が",
+        "は",
+        "を",
+        "に"
+      ],
+      "meaning": "這份工作還沒結束，不能回去。",
+      "grammar": "〜が終わるまで：直到…結束，「が」為主語，まで表示期限"
+    },
+    "tags": [
+      "particle",
+      "が",
+      "まで",
+      "time"
+    ]
+  },
+  {
+    "id": "grammar-N4-167",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女のことを思い___と、胸が痛む。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>のことを<ruby>思<rt>おも</rt></ruby>い___と、<ruby>胸<rt>むね</rt></ruby>が<ruby>痛<rt>いた</rt></ruby>む。",
+      "answer": "出す",
+      "choices": [
+        "出す",
+        "出した",
+        "出せる",
+        "出して"
+      ],
+      "meaning": "一想起她，心就痛。",
+      "grammar": "思い出すと：「と」表示一…就…的必然關係"
+    },
+    "tags": [
+      "particle",
+      "conditional",
+      "と"
+    ]
+  },
+  {
+    "id": "grammar-N4-168",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "先生の話を聞き___、ノートをとった。",
+      "sentenceRuby": "<ruby>先生<rt>せんせい</rt></ruby>の<ruby>話<rt>はなし</rt></ruby>を<ruby>聞<rt>き</rt></ruby>き___、ノートをとった。",
+      "answer": "ながら",
+      "choices": [
+        "ながら",
+        "てから",
+        "てしまって",
+        "ながらも"
+      ],
+      "meaning": "一邊聽老師說話，一邊做筆記。",
+      "grammar": "〜ながら：同時進行，「一邊…一邊…」"
+    },
+    "tags": [
+      "sentence-pattern",
+      "simultaneous",
+      "ながら"
+    ]
+  },
+  {
+    "id": "grammar-N4-169",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "あの店のラーメン___食べたことがない。",
+      "sentenceRuby": "あの<ruby>店<rt>みせ</rt></ruby>のラーメン___<ruby>食<rt>た</rt></ruby>べたことがない。",
+      "answer": "は",
+      "choices": [
+        "は",
+        "を",
+        "が",
+        "も"
+      ],
+      "meaning": "那家店的拉麵我還沒吃過。",
+      "grammar": "〜は食べたことがない：對比強調未曾有的經驗，「は」對比主題"
+    },
+    "tags": [
+      "particle",
+      "は",
+      "experience",
+      "たことがある"
+    ]
+  },
+  {
+    "id": "grammar-N4-170",
+    "type": "grammar",
+    "level": "N4",
+    "payload": {
+      "sentence": "彼女は美しい___かりでなく、頭もいい。",
+      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>美<rt>うつく</rt></ruby>しい___かりでなく、<ruby>頭<rt>あたま</rt></ruby>もいい。",
+      "answer": "ば",
+      "choices": [
+        "ば",
+        "だけ",
+        "のみ",
+        "だけでな"
+      ],
+      "meaning": "她不只漂亮，頭腦也好。",
+      "grammar": "〜ばかりでなく：不只是…，「不僅…還…」"
+    },
+    "tags": [
+      "expression",
+      "adjective-form",
+      "i-adj"
+    ]
   }
 ]
