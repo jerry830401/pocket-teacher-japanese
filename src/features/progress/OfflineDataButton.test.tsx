@@ -29,7 +29,7 @@ describe('OfflineDataButton', () => {
     render(<OfflineDataButton />)
 
     await waitFor(() => {
-      expect(screen.getByRole('button', { name: '下載離線資料' })).toBeInTheDocument()
+      expect(screen.getByRole('button', { name: '下載' })).toBeInTheDocument()
     })
   })
 
@@ -48,11 +48,11 @@ describe('OfflineDataButton', () => {
     mockDownloadOfflineData.mockReturnValue(new Promise(() => {}))
 
     render(<OfflineDataButton />)
-    await waitFor(() => screen.getByRole('button', { name: '下載離線資料' }))
+    await waitFor(() => screen.getByRole('button', { name: '下載' }))
 
     await userEvent.click(screen.getByRole('button'))
     expect(screen.getByRole('button')).toBeDisabled()
-    expect(screen.getByRole('button').textContent).toMatch(/下載中/)
+    expect(screen.getByRole('button').textContent).toMatch(/\d+\/\d+/)
   })
 
   it('shows updated timestamp after successful download', async () => {
@@ -63,7 +63,7 @@ describe('OfflineDataButton', () => {
     mockDownloadOfflineData.mockResolvedValue(undefined)
 
     render(<OfflineDataButton />)
-    await waitFor(() => screen.getByRole('button', { name: '下載離線資料' }))
+    await waitFor(() => screen.getByRole('button', { name: '下載' }))
 
     await userEvent.click(screen.getByRole('button'))
 
@@ -78,12 +78,12 @@ describe('OfflineDataButton', () => {
     mockDownloadOfflineData.mockRejectedValue(new Error('下載失敗：vocab (404)'))
 
     render(<OfflineDataButton />)
-    await waitFor(() => screen.getByRole('button', { name: '下載離線資料' }))
+    await waitFor(() => screen.getByRole('button', { name: '下載' }))
 
     await userEvent.click(screen.getByRole('button'))
 
     await waitFor(() => {
-      expect(screen.getByText('下載失敗：vocab (404)')).toBeInTheDocument()
+      expect(screen.getByText(/下載失敗：vocab \(404\)/)).toBeInTheDocument()
     })
   })
 })

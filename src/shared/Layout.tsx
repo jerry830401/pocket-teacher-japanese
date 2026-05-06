@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useSwUpdate } from "@/lib/useSwUpdate";
-import { useDataRefresh } from "@/lib/useDataRefresh";
+import { useDataRefresh, markDataRefreshReload } from "@/lib/useDataRefresh";
 import { invalidateVocabCache } from "@/features/vocabulary/data";
 import { invalidateGrammarCache } from "@/features/grammar/data";
 
@@ -106,6 +106,7 @@ export default function Layout() {
   const { dataUpdated } = useDataRefresh();
 
   function reloadData() {
+    markDataRefreshReload();
     invalidateVocabCache();
     invalidateGrammarCache();
     window.location.reload();

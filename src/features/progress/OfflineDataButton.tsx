@@ -40,38 +40,34 @@ export default function OfflineDataButton() {
   const isDownloading = state.phase === 'downloading'
 
   return (
-    <section className="rounded-xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 px-4 py-3 space-y-2">
-      <div className="flex items-center justify-between">
-        <div className="space-y-0.5">
-          <p className="text-sm font-medium text-slate-700 dark:text-slate-200">離線資料</p>
-          {hasData && savedAt ? (
-            <p className="text-xs text-slate-400">
-              已儲存 · {new Date(savedAt).toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}
-            </p>
-          ) : (
-            <p className="text-xs text-slate-400">尚未下載，需連線才能學習</p>
+    <div className="px-settings-list" style={{ marginBottom: 18 }}>
+      <div className="px-settings-row">
+        <div>
+          <div style={{ fontWeight: 600 }}>離線資料</div>
+          <div style={{ fontSize: '0.8125rem', color: 'var(--color-ink-soft)', marginTop: 2 }}>
+            {hasData && savedAt
+              ? `已儲存 · ${new Date(savedAt).toLocaleString('zh-TW', { month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit' })}`
+              : '尚未下載，需連線才能學習'
+            }
+          </div>
+          {state.phase === 'error' && (
+            <div style={{ fontSize: '0.8125rem', color: 'var(--color-red, #c0392b)', marginTop: 4 }}>
+              ⚠ {state.message}
+            </div>
           )}
         </div>
-
         <button
+          className={['pbtn', !hasData ? 'pbtn-primary' : ''].join(' ')}
           onClick={handleClick}
           disabled={isDownloading}
-          className={`shrink-0 rounded-lg px-3 py-1.5 text-sm font-medium transition-colors disabled:opacity-50
-            ${hasData
-              ? 'border border-slate-300 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800'
-              : 'bg-indigo-600 text-white hover:bg-indigo-700'
-            }`}
+          style={{ padding: '8px 14px', fontSize: '0.875rem', minWidth: 72 }}
         >
           {isDownloading
-            ? `下載中 ${state.done}/${state.total}…`
-            : hasData ? '更新' : '下載離線資料'
+            ? `${state.done}/${state.total}…`
+            : hasData ? '更新' : '下載'
           }
         </button>
       </div>
-
-      {state.phase === 'error' && (
-        <p className="text-xs text-red-500">{state.message}</p>
-      )}
-    </section>
+    </div>
   )
 }
