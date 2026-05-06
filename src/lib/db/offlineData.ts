@@ -30,9 +30,41 @@ export async function downloadOfflineData(
     const res = await fetch(URLS[key])
     if (!res.ok) throw new Error(`下載失敗：${key} (${res.status})`)
     const data = await res.json()
-    await db.offlineData.put({ key, data, savedAt: Date.now() })
+    const etag = res.headers.get('etag') ?? undefined
+    await db.offlineData.put({ key, data, savedAt: Date.now(), etag })
     onProgress?.(i + 1, total)
   }
+}
+
+// Check each key via HEAD request; re-download if ETag differs.
+// Returns true if any key was updated. Callers may fire-and-forget.
+export async function checkAndRefreshOfflineData(): Promise<boolean> {
+  let updated = false
+  for (const key of KEYS) {
+    try {
+      const record = await db.offlineData.get(key)
+      if (!record) continue  // not downloaded yet; skip
+
+      const head = await fetch(URLS[key], { method: 'HEAD' })
+      if (!head.ok) continue
+
+      const remoteEtag = head.headers.get('etag')
+      // If server sends no ETag we can't compare — skip to avoid unnecessary downloads
+      if (!remoteEtag) continue
+      if (remoteEtag === record.etag) continue  // up to date
+
+      // ETag changed: re-download this key
+      const res = await fetch(URLS[key])
+      if (!res.ok) continue
+      const data = await res.json()
+      const etag = res.headers.get('etag') ?? undefined
+      await db.offlineData.put({ key, data, savedAt: Date.now(), etag })
+      updated = true
+    } catch {
+      // network offline or transient error — silently skip
+    }
+  }
+  return updated
 }
 
 export async function getOfflineVocab(): Promise<unknown[] | null> {

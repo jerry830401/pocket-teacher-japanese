@@ -5,6 +5,7 @@ export interface OfflineDataRecord {
   key: string      // 'vocab' | 'grammar'
   data: unknown[]
   savedAt: number  // timestamp ms
+  etag?: string    // HTTP ETag for change detection
 }
 
 class PtjpDb extends Dexie {

@@ -1,9 +1,11 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest'
 
 const mockGetOfflineGrammar = vi.hoisted(() => vi.fn())
+const mockCheckAndRefresh = vi.hoisted(() => vi.fn().mockResolvedValue(undefined))
 
 vi.mock('@/lib/db/offlineData', () => ({
   getOfflineGrammar: mockGetOfflineGrammar,
+  checkAndRefreshOfflineData: mockCheckAndRefresh,
 }))
 
 const mockFetch = vi.fn()

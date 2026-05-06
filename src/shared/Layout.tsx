@@ -1,5 +1,8 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { useSwUpdate } from "@/lib/useSwUpdate";
+import { useDataRefresh } from "@/lib/useDataRefresh";
+import { invalidateVocabCache } from "@/features/vocabulary/data";
+import { invalidateGrammarCache } from "@/features/grammar/data";
 
 const NAV_ITEMS = [
   { to: "/learn", label: "學習" },
@@ -100,6 +103,13 @@ function TabIcon({ id, active }: { id: string; active: boolean }) {
 
 export default function Layout() {
   const { hasUpdate, applyUpdate } = useSwUpdate();
+  const { dataUpdated } = useDataRefresh();
+
+  function reloadData() {
+    invalidateVocabCache();
+    invalidateGrammarCache();
+    window.location.reload();
+  }
 
   return (
     <div
@@ -111,6 +121,36 @@ export default function Layout() {
         paddingTop: "env(safe-area-inset-top)",
       }}
     >
+      {/* ── 離線資料更新提示 ── */}
+      {dataUpdated && !hasUpdate && (
+        <div
+          className="shrink-0 flex items-center justify-between px-4 py-2 gap-3"
+          style={{
+            background: "var(--color-gold)",
+            fontFamily: "system-ui, sans-serif",
+          }}
+        >
+          <span style={{ fontSize: "0.8125rem", color: "var(--color-ink)", fontWeight: 700 }}>
+            學習資料已更新
+          </span>
+          <button
+            onClick={reloadData}
+            style={{
+              fontSize: "0.75rem",
+              fontWeight: 700,
+              color: "var(--color-ink)",
+              background: "var(--color-cream)",
+              border: "none",
+              borderRadius: 4,
+              padding: "3px 10px",
+              cursor: "pointer",
+            }}
+          >
+            重新載入
+          </button>
+        </div>
+      )}
+
       {/* ── PWA 更新提示 ── */}
       {hasUpdate && (
         <div

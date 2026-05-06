@@ -53,9 +53,14 @@ describe('downloadOfflineData', () => {
     const vocabData = [{ id: 'vocab-N5-001' }]
     const grammarData = [{ id: 'grammar-N5-001' }]
 
+    const makeRes = (data: unknown) => ({
+      ok: true,
+      headers: { get: () => null },
+      json: async () => data,
+    })
     mockFetch
-      .mockResolvedValueOnce({ ok: true, json: async () => vocabData })
-      .mockResolvedValueOnce({ ok: true, json: async () => grammarData })
+      .mockResolvedValueOnce(makeRes(vocabData))
+      .mockResolvedValueOnce(makeRes(grammarData))
     mockOfflineData.put.mockResolvedValue(undefined)
 
     await downloadOfflineData()
@@ -71,9 +76,10 @@ describe('downloadOfflineData', () => {
   })
 
   it('reports progress after each fetch', async () => {
+    const emptyRes = { ok: true, headers: { get: () => null }, json: async () => [] }
     mockFetch
-      .mockResolvedValueOnce({ ok: true, json: async () => [] })
-      .mockResolvedValueOnce({ ok: true, json: async () => [] })
+      .mockResolvedValueOnce(emptyRes)
+      .mockResolvedValueOnce(emptyRes)
     mockOfflineData.put.mockResolvedValue(undefined)
 
     const progress: Array<[number, number]> = []
@@ -83,7 +89,7 @@ describe('downloadOfflineData', () => {
   })
 
   it('throws when fetch fails', async () => {
-    mockFetch.mockResolvedValueOnce({ ok: false, status: 404 })
+    mockFetch.mockResolvedValueOnce({ ok: false, status: 404, headers: { get: () => null } })
 
     await expect(downloadOfflineData()).rejects.toThrow('下載失敗')
   })

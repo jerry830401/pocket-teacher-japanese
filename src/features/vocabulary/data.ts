@@ -3,6 +3,10 @@ import { getOfflineVocab } from '@/lib/db/offlineData'
 
 let cache: VocabCard[] | null = null
 
+export function invalidateVocabCache() {
+  cache = null
+}
+
 export async function loadVocabulary(): Promise<VocabCard[]> {
   if (cache) return cache
   const offline = await getOfflineVocab()

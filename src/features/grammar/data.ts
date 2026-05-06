@@ -3,6 +3,10 @@ import { getOfflineGrammar } from '@/lib/db/offlineData'
 
 let cache: GrammarCard[] | null = null
 
+export function invalidateGrammarCache() {
+  cache = null
+}
+
 export async function loadGrammar(): Promise<GrammarCard[]> {
   if (cache) return cache
   const offline = await getOfflineGrammar()
