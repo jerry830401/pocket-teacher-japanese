@@ -27,7 +27,9 @@
 
 4. **執行前品質檢查**
    - `npm run lint` — 若有錯誤，列出問題並中止，不繼續 commit
-   - 通過後才繼續
+   - `npx vitest run` — 若有測試失敗，列出失敗的測試並中止，不繼續 commit
+   - `npx playwright test` — 若有 e2e 測試失敗，列出失敗的測試並中止，不繼續 commit
+   - 三項全數通過後才繼續
 
 5. **執行 commit**
    - `git add -A`（暫存所有變更，含新增 untracked 檔案、修改、刪除）

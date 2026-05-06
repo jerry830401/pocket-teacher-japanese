@@ -5214,17 +5214,17 @@
     "type": "grammar",
     "level": "N4",
     "payload": {
-      "sentence": "この問題は難し___すぎる。",
-      "sentenceRuby": "この<ruby>問題<rt>もんだい</rt></ruby>は<ruby>難<rt>むずか</rt></ruby>し___すぎる。",
-      "answer": "",
+      "sentence": "この問題は難し___て、全然わかりません。",
+      "sentenceRuby": "この<ruby>問題<rt>もんだい</rt></ruby>は<ruby>難し<rt>むずかし</rt></ruby>___て、<ruby>全然<rt>ぜんぜん</rt></ruby>わかりません。",
+      "answer": "すぎ",
       "choices": [
-        "（語尾）すぎる",
-        "すぎる",
-        "くすぎる",
-        "なすぎる"
+        "すぎ",
+        "くて",
+        "なくて",
+        "だから"
       ],
-      "meaning": "這道題太難了。",
-      "grammar": "〜すぎる：表示過度，「太…了」（い形容詞語幹+すぎる）"
+      "meaning": "這道題太難了，完全不懂。",
+      "grammar": "〜すぎる（て形）：すぎ+て，表示過度的結果，「太…以致於…」"
     },
     "tags": [
       "verb-form",
@@ -5333,7 +5333,7 @@
       "choices": [
         "ながら",
         "てから",
-        "ながら",
+        "ために",
         "てしまい"
       ],
       "meaning": "一邊聽音樂一邊念書。",
@@ -5687,8 +5687,8 @@
     "type": "grammar",
     "level": "N4",
     "payload": {
-      "sentence": "彼___日本語を教えて___らいました。",
-      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>___<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えて___らいました。",
+      "sentence": "彼___日本語を教えてもらいました。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>___<ruby>日本語<rt>にほんご</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてもらいました。",
       "answer": "に",
       "choices": [
         "に",
@@ -6453,14 +6453,14 @@
     "type": "grammar",
     "level": "N4",
     "payload": {
-      "sentence": "部屋を掃除し___ながら、音楽を聴く。",
-      "sentenceRuby": "<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>し___ながら、<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聴<rt>き</rt></ruby>く。",
-      "answer": "",
+      "sentence": "部屋を掃除し___、音楽を聴く。",
+      "sentenceRuby": "<ruby>部屋<rt>へや</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>し___、<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聴<rt>き</rt></ruby>く。",
+      "answer": "ながら",
       "choices": [
         "ながら",
-        "し",
-        "て",
-        "た"
+        "てから",
+        "ために",
+        "てしまい"
       ],
       "meaning": "一邊打掃房間，一邊聽音樂。",
       "grammar": "〜ながら：同時進行兩個動作（動詞ます形+ながら）"
@@ -6654,16 +6654,16 @@
     "type": "grammar",
     "level": "N4",
     "payload": {
-      "sentence": "会議に参加___ことになった。",
-      "sentenceRuby": "<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>参加<rt>さんか</rt></ruby>する___ことになった。",
-      "answer": "",
+      "sentence": "会議に参加する___。",
+      "sentenceRuby": "<ruby>会議<rt>かいぎ</rt></ruby>に<ruby>参加<rt>さんか</rt></ruby>する___。",
+      "answer": "ことになった",
       "choices": [
         "ことになった",
-        "することになった",
-        "するつもり",
-        "するはず"
+        "つもりだ",
+        "はずだ",
+        "ようになった"
       ],
-      "meaning": "決定要參加會議了（由外部決定）。",
+      "meaning": "決定要參加會議了。",
       "grammar": "〜ことになる：事情自然地、或由外部決定而成，「（自然地/外部決定）變成…」"
     },
     "tags": [
@@ -8111,8 +8111,8 @@
     "type": "grammar",
     "level": "N4",
     "payload": {
-      "sentence": "この本は読め___読む___、面白くなってくる。",
-      "sentenceRuby": "この<ruby>本<rt>ほん</rt></ruby>は<ruby>読<rt>よ</rt></ruby>め___<ruby>読<rt>よ</rt></ruby>む___、<ruby>面白<rt>おもしろ</rt></ruby>くなってくる。",
+      "sentence": "この本は読め___読むほど、面白くなってくる。",
+      "sentenceRuby": "この<ruby>本<rt>ほん</rt></ruby>は<ruby>読<rt>よ</rt></ruby>め___<ruby>読<rt>よ</rt></ruby>むほど、<ruby>面白<rt>おもしろ</rt></ruby>くなってくる。",
       "answer": "ば",
       "choices": [
         "ば",
@@ -8156,14 +8156,14 @@
     "type": "grammar",
     "level": "N4",
     "payload": {
-      "sentence": "彼は日本語が話せる___でなく、書ける___だ。",
-      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>話<rt>はな</rt></ruby>せる___でなく、<ruby>書<rt>か</rt></ruby>ける___だ。",
-      "answer": "だけ",
+      "sentence": "彼は日本語が話せるだけ___なく、書けるのだ。",
+      "sentenceRuby": "<ruby>彼<rt>かれ</rt></ruby>は<ruby>日本語<rt>にほんご</rt></ruby>が<ruby>話<rt>はな</rt></ruby>せるだけ___なく、<ruby>書<rt>か</rt></ruby>けるのだ。",
+      "answer": "で",
       "choices": [
-        "だけ",
-        "ばかり",
-        "しか",
-        "ほど"
+        "で",
+        "も",
+        "に",
+        "が"
       ],
       "meaning": "他不只能說日語，還能寫。",
       "grammar": "〜だけでなく：不僅…還…，「不只是…」"
