@@ -162,9 +162,9 @@
       "answer": "に",
       "choices": [
         "に",
-        "へ",
         "で",
-        "を"
+        "を",
+        "が"
       ],
       "meaning": "去學校。",
       "grammar": "に（方向助詞）：表示移動的目的地",
@@ -1062,9 +1062,9 @@
       "answer": "から",
       "choices": [
         "から",
-        "ので",
-        "て",
-        "が"
+        "のに",
+        "が",
+        "を"
       ],
       "meaning": "因為累了，所以早點睡。",
       "grammar": "〜から（原因）：表示主觀原因，語氣較直接",
@@ -1380,9 +1380,9 @@
       "answer": "上手",
       "choices": [
         "上手",
-        "上手い",
-        "じょうず",
-        "うまい"
+        "下手",
+        "苦手",
+        "嫌い"
       ],
       "meaning": "她很擅長唱歌。",
       "grammar": "〜が上手（擅長）：表示擅長某事，對象用が",
@@ -1642,43 +1642,21 @@
     ]
   },
   {
-    "id": "grammar-N5-074",
-    "type": "grammar",
-    "level": "N5",
-    "payload": {
-      "sentence": "公園___遊びます。",
-      "answer": "で",
-      "choices": [
-        "で",
-        "に",
-        "を",
-        "が"
-      ],
-      "meaning": "在公園玩耍。",
-      "grammar": "で（場所助詞）：表示動作發生的場所",
-      "sentenceRuby": "<ruby>公園<rt>こうえん</rt></ruby>___<ruby>遊<rt>あそ</rt></ruby>びます。"
-    },
-    "tags": [
-      "particle",
-      "で"
-    ]
-  },
-  {
     "id": "grammar-N5-075",
     "type": "grammar",
     "level": "N5",
     "payload": {
-      "sentence": "学校___行きます。",
+      "sentence": "駅___行きます。",
       "answer": "へ",
       "choices": [
         "へ",
-        "に",
         "で",
-        "を"
+        "を",
+        "が"
       ],
-      "meaning": "去學校。",
+      "meaning": "去車站。",
       "grammar": "へ（方向助詞）：表示移動方向，可與に替換",
-      "sentenceRuby": "<ruby>学校<rt>がっこう</rt></ruby>___<ruby>行<rt>い</rt></ruby>きます。"
+      "sentenceRuby": "<ruby>駅<rt>えき</rt></ruby>___<ruby>行<rt>い</rt></ruby>きます。"
     },
     "tags": [
       "particle",
@@ -1727,28 +1705,6 @@
     "tags": [
       "particle",
       "で"
-    ]
-  },
-  {
-    "id": "grammar-N5-078",
-    "type": "grammar",
-    "level": "N5",
-    "payload": {
-      "sentence": "りんご___みかんを買いました。",
-      "answer": "と",
-      "choices": [
-        "と",
-        "や",
-        "も",
-        "が"
-      ],
-      "meaning": "買了蘋果和橘子。",
-      "grammar": "と（並列助詞）：列舉全部事物",
-      "sentenceRuby": "りんご___みかんを<ruby>買<rt>か</rt></ruby>いました。"
-    },
-    "tags": [
-      "particle",
-      "と"
     ]
   },
   {
@@ -3955,17 +3911,17 @@
     "type": "grammar",
     "level": "N5",
     "payload": {
-      "sentence": "疲れた___、早く寝ます。",
+      "sentence": "電車が遅れた___、遅刻しました。",
       "answer": "ので",
       "choices": [
         "ので",
-        "から",
+        "のに",
         "が",
-        "て"
+        "たら"
       ],
-      "meaning": "因為累了，早點睡。",
+      "meaning": "因為電車誤點，所以遲到了。",
       "grammar": "〜ので：表示原因（比から更柔和）",
-      "sentenceRuby": "<ruby>疲<rt>つか</rt></ruby>れた___、<ruby>早<rt>はや</rt></ruby>く<ruby>寝<rt>ね</rt></ruby>ます。"
+      "sentenceRuby": "<ruby>電車<rt>でんしゃ</rt></ruby>が<ruby>遅<rt>おく</rt></ruby>れた___、<ruby>遅刻<rt>ちこく</rt></ruby>しました。"
     },
     "tags": [
       "conjunction",
@@ -4293,17 +4249,17 @@
     "type": "grammar",
     "level": "N5",
     "payload": {
-      "sentence": "彼女は歌が___です。",
+      "sentence": "私は英語が___です。",
       "answer": "得意",
       "choices": [
         "得意",
-        "苦手",
         "上手",
+        "苦手",
         "下手"
       ],
-      "meaning": "她擅長唱歌。",
-      "grammar": "得意（とくい）：擅長，比上手更主觀（自信）",
-      "sentenceRuby": "<ruby>彼女<rt>かのじょ</rt></ruby>は<ruby>歌<rt>うた</rt></ruby>が___です。"
+      "meaning": "我擅長英語。",
+      "grammar": "得意（とくい）：說自己擅長某事用得意；上手用來稱讚別人，不用在自己身上",
+      "sentenceRuby": "<ruby>私<rt>わたし</rt></ruby>は<ruby>英語<rt>えいご</rt></ruby>が___です。"
     },
     "tags": [
       "sentence-pattern",
@@ -4444,8 +4400,7 @@
     },
     "tags": [
       "sentence-pattern",
-      "に",
-      "interest"
+      "に"
     ]
   },
   {
@@ -6195,8 +6150,7 @@
     },
     "tags": [
       "particle",
-      "に",
-      "transport"
+      "に"
     ]
   },
   {
@@ -6398,8 +6352,7 @@
     },
     "tags": [
       "particle",
-      "に",
-      "work"
+      "に"
     ]
   },
   {
@@ -6631,7 +6584,7 @@
     "type": "grammar",
     "level": "N4",
     "payload": {
-      "sentence": "来年から毎日運動___つもりです。",
+      "sentence": "来年から毎日運動する___です。",
       "sentenceRuby": "<ruby>来年<rt>らいねん</rt></ruby>から<ruby>毎日<rt>まいにち</rt></ruby><ruby>運動<rt>うんどう</rt></ruby>する___です。",
       "answer": "つもり",
       "choices": [
@@ -7213,8 +7166,7 @@
     },
     "tags": [
       "particle",
-      "に",
-      "greeting"
+      "に"
     ]
   },
   {
@@ -7532,8 +7484,7 @@
     },
     "tags": [
       "expression",
-      "request",
-      "greeting"
+      "request"
     ]
   },
   {
@@ -8034,8 +7985,7 @@
     },
     "tags": [
       "particle",
-      "で",
-      "transport"
+      "で"
     ]
   },
   {
@@ -8440,8 +8390,7 @@
     },
     "tags": [
       "sentence-pattern",
-      "もらう",
-      "greeting"
+      "もらう"
     ]
   },
   {
