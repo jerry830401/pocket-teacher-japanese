@@ -514,17 +514,17 @@
     "type": "grammar",
     "level": "N5",
     "payload": {
-      "sentence": "これは私の___ではありません。",
-      "answer": "もの",
+      "sentence": "いいえ、これは私のもの___。",
+      "answer": "ではありません",
       "choices": [
-        "もの",
-        "こと",
-        "ところ",
-        "とき"
+        "ではありません",
+        "です",
+        "でした",
+        "だ"
       ],
-      "meaning": "這不是我的東西。",
+      "meaning": "不，這不是我的東西。",
       "grammar": "〜ではありません（禮貌體否定）：名詞禮貌形否定",
-      "sentenceRuby": "これは<ruby>私<rt>わたし</rt></ruby>の___ではありません。"
+      "sentenceRuby": "いいえ、これは<ruby>私<rt>わたし</rt></ruby>のもの___。"
     },
     "tags": [
       "copula",

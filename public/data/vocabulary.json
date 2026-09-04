@@ -18330,21 +18330,6 @@
     ]
   },
   {
-    "id": "vocab-N4-467",
-    "type": "vocabulary",
-    "level": "N4",
-    "payload": {
-      "word": "術",
-      "reading": "じゅつ",
-      "meaning": "方法、手段",
-      "pos": "noun"
-    },
-    "tags": [
-      "work",
-      "hobby"
-    ]
-  },
-  {
     "id": "vocab-N4-468",
     "type": "vocabulary",
     "level": "N4",
@@ -18461,21 +18446,6 @@
     "tags": [
       "hobby",
       "school"
-    ]
-  },
-  {
-    "id": "vocab-N4-476",
-    "type": "vocabulary",
-    "level": "N4",
-    "payload": {
-      "word": "所得",
-      "reading": "しょとく",
-      "meaning": "所得、收益",
-      "pos": "noun"
-    },
-    "tags": [
-      "work",
-      "shopping"
     ]
   },
   {
