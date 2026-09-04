@@ -58,7 +58,7 @@ function isWeak(card: SrsCard) {
 
 ### 測驗前置條件（`src/pages/QuizPage.tsx`）
 
-測驗只抽「已看過的牌」。看過的牌數量必須 ≥ `roundSize`（預設值由 `useSettings` 讀取），否則顯示「請先去學習」。
+測驗只抽「已看過的牌」。看過的牌數量必須 ≥ `roundSize`（預設值由 `useSettings` 讀取），否則顯示「尚未學習足夠題目」。
 
 ## 不變式（Invariants）
 
