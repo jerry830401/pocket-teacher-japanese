@@ -24,27 +24,28 @@ allowed-tools: Read, Write, Edit, Bash
 
 ---
 
-## 步驟二：讀取現有資料
+## 步驟二：查詢現有資料
 
-根據 type 讀取對應檔案：
-- vocab → `public/data/vocabulary.json`
-- grammar → `public/data/grammar.json`
+```bash
+node scripts/jlpt-data.mjs stats <type> <level>
+```
 
-記錄：
-1. 目前最大的流水號（例如 `vocab-N5-589` → 589），新資料從下一號開始編號
-2. **整個檔案所有 level** 的 `word`（vocab）或 `sentence`（grammar）—— 過濾範圍不限當前 level，因為同一個詞可能已被收錄在其他 level，重複收錄會造成學習資料衝突
+輸出兩件事：各 level 目前筆數與**下一個可用 id**，以及**所有 level** 的既有 `word`（vocab）／`sentence`（grammar）清單。
+
+- **不要用 Read 直接讀 `public/data/*.json`**。這兩個檔案已超過 1400 筆、400KB，整份讀進 context 只為了拿去重清單，代價完全不成比例。
+- 去重範圍是整個檔案、不分 level：同一個詞若已收錄在別的 level，再收一次會造成學習資料衝突。
 
 ---
 
 ## 步驟三：生成新資料
 
 根據 type 生成 `count` 筆新資料，嚴格遵守以下格式與規範。
+**id 交給步驟四的腳本自動配號，這裡可以省略 `id` 欄位**（若要自己填，必須從步驟二的「下一個可用 id」開始連號）。
 
 ### Vocab 格式
 
 ```json
 {
-  "id": "vocab-{LEVEL}-{NNN}",
   "type": "vocabulary",
   "level": "{LEVEL}",
   "payload": {
@@ -57,7 +58,7 @@ allowed-tools: Read, Write, Edit, Bash
 }
 ```
 
-**可用 tags（JLPT 27 主題分類）：**
+**可用 tags（28 個主題分類）：**
 
 | Tag | 說明 |
 |-----|------|
@@ -80,22 +81,24 @@ allowed-tools: Read, Write, Edit, Bash
 | `school` | 學校、學習相關 |
 | `work` | 工作、職場 |
 | `shopping` | 購物、金錢、數量 |
-| `hobby` | 興趣、休閒、娛樂 |
+| `hobby` | 興趣、休閒、娛樂、運動 |
 | `health` | 健康、身體狀況、醫療 |
 | `emotion` | 情感、心理狀態 |
 | `color` | 顏色 |
 | `size` | 大小、程度形容詞 |
 | `adjective` | 其他形容詞（不屬於上述） |
 | `verb` | 一般動詞（不屬於上述類別） |
-| `adverb` | 副詞、接續詞 |
+| `adverb` | 副詞、接續詞（だから、でも、そして…） |
+| `misc` | 不屬於任何主題的抽象名詞（理由、方法、結果…） |
 
 每筆 vocab 至少標一個 tag，可以標多個。
+
+> 白名單的**強制來源是 `src/lib/data/tags.ts`**，上表只是附說明的版本。自創 tag 會在步驟五被測試擋下；要新增分類，先改 `tags.ts` 再改這張表。
 
 ### Grammar 格式
 
 ```json
 {
-  "id": "grammar-{LEVEL}-{NNN}",
   "type": "grammar",
   "level": "{LEVEL}",
   "payload": {
@@ -112,18 +115,18 @@ allowed-tools: Read, Write, Edit, Bash
 
 Grammar 規範：
 - `sentence` 必須含且只含一個 `___`
-- `sentenceRuby` 是 `sentence` 的 ruby 標記版本，漢字上方顯示平假名讀音
+- `sentenceRuby` 是 `sentence` 的 ruby 標記版本，**去掉 `<ruby>`／`<rt>` 標記後必須逐字等於 `sentence`**
   - 格式：`<ruby>漢字<rt>よみ</rt></ruby>`，`___` 保持原樣不變
   - 假名、助詞、符號不需要加 ruby 標記
   - 例：`<ruby>私<rt>わたし</rt></ruby>___<ruby>学生<rt>がくせい</rt></ruby>です。`
 - `choices` 恰好 4 個，`answer` 必須是其中之一，不可重複
 - `choices` 的順序：第一個放 answer，其餘為干擾選項
-- 干擾選項必須是同類型的助詞或語尾（不能隨意湊數）
+- 干擾選項必須是同類型的助詞或語尾，且**填進去之後必須是錯的**（見步驟五的「唯一解」檢查）
 - `meaning` 是完整句子的繁體中文翻譯
 
 **Grammar tags 兩層系統：**
 
-第一層（必填一個，代表功能類別）：
+第一層（必填至少一個，代表功能類別）：
 
 | Tag | 說明 |
 |-----|------|
@@ -136,15 +139,9 @@ Grammar 規範：
 | `conjunction` | 接續、因果（から原因、ので） |
 | `expression` | 固定表達、副詞、疑問詞用法（いつも、たぶん、どこ、どうやって 等） |
 
-第二層（精確標籤，依語法點選填，可複選）：
+第二層（精確標籤，依語法點選填，可複選）：完整清單在 `src/lib/data/tags.ts` 的 `GRAMMAR_TIER2_TAGS`，大致分為助詞（`は`、`が`、`を`…）、動詞形式（`te-form`、`ta-form`…）、時態（`past`、`negative`、`aspect`…）、語法功能（`conditional`、`obligation`、`ability`…）、具體語法點（`ています`、`てください`、`なければならない`…）、副詞與形容詞類型。**不要自創**，需要新標籤就先加進 `tags.ts`。
 
-- **助詞**：`は`、`が`、`を`、`に`、`で`、`へ`、`と`、`も`、`や`、`から`、`まで`、`の`、`か`
-- **動詞形式**：`te-form`、`ta-form`、`masu-form`、`nai-form`
-- **時態修飾**：`past`、`negative`、`aspect`
-- **語法功能**：`conditional`、`permission`、`prohibition`、`obligation`、`desire`、`ability`、`suggestion`、`concession`、`quotation`、`simultaneous`、`purpose`、`intent`、`habit`、`experience`、`existence`、`location`、`request`
-- **具體語法點**：`ています`、`てから`、`てください`、`てみる`、`ておく`、`たことがある`、`たほうがいい`、`なければならない`、`ことができる`、`と思います`、`と言いました`、`ながら`、`つもり`、`よう`、`ないように`、`ようにしている`、`に行く`、`すぎ`、`やすい`、`にくい`、`にとって`、`によって`、`によると`、`もらう`
-- **副詞**：`adverb`、`interrogative`、`fixed-phrase`
-- **形容詞類型**：`i-adj`、`na-adj`
+第二層**不要放主題標籤**（`transport`、`work`、`greeting` 這類屬於 vocab 的分類），文法卡只描述語法。
 
 每筆 grammar 格式範例：
 - 助詞題：`["particle", "に"]`
@@ -155,63 +152,51 @@ Grammar 規範：
 ### 生成原則（兩種 type 共用）
 
 - 所有資料必須確實屬於指定 JLPT 等級的範圍
-- 不得與現有資料重複（相同的 word 或相同的 sentence 結構）；vocab 須對照**所有 level** 的 word 集合去重，不只是當前 level
+- 不得與現有資料重複；對照步驟二輸出的**所有 level** 清單去重
 - `reading` 只用平假名，不含漢字
 - `meaning` 用繁體中文，不用簡體
 - 意思若有多個常見用法，用頓號分隔（例如：「現在、此刻」）
 
 ---
 
-## 步驟四：審查
+## 步驟四：寫入
 
-逐條自我審查以下項目，標出有問題的條目：
+把生成的陣列寫成暫存 JSON（例如 `tmp-add-data.json`），然後：
 
-**Vocab 審查**
-- [ ] 讀音正確（例如 食べる → たべる，不是 しょくべる）
-- [ ] 意思符合該等級的常見用法（不用罕見義項）
-- [ ] pos 分類正確（動詞用 verb，い形容詞用 i-adj）
-- [ ] tags 只使用上方表格中的 27 個，且與詞義相符
-- [ ] 沒有使用舊版廢棄 tag（object、action、pronoun、expression、conjunction）
+```bash
+node scripts/jlpt-data.mjs append <type> tmp-add-data.json
+```
 
-**Grammar 審查**
-- [ ] `answer` 確實出現在 `choices` 中
-- [ ] `choices` 恰好 4 個且無重複
-- [ ] 填入 `answer` 後句子文法正確且自然
-- [ ] `meaning` 是填入 answer 後完整句子的翻譯
-- [ ] 干擾選項與答案是同類型，具有合理迷惑性
-- [ ] 文法說明準確
-- [ ] tags 第一層必須是以下八個之一：`particle`、`copula`、`verb-form`、`adjective-form`、`sentence-pattern`、`tense-aspect`、`conjunction`、`expression`
-- [ ] tags 第二層使用上方表格中的具體標籤，不自創新標籤
-
-若有問題，就地修正後繼續，並在最後報告修正了哪些條目。
+腳本會自動配號、擋掉重複的 id／word／sentence，並保留原檔的 2 空格 + CRLF 格式。
+寫入成功後刪掉暫存檔。若腳本因重複而中止，回步驟三改掉那幾筆再重跑（腳本是全有全無，不會寫入半套）。
 
 ---
 
-## 步驟五：寫入
-
-將新資料 append 到現有 JSON 陣列末尾並寫回檔案。
-
-寫入後執行驗證：
+## 步驟五：驗證與審查
 
 ```bash
-python3 -c "
-import json, sys
-t = '$ARGUMENTS'.split()[0]
-path = 'public/data/vocabulary.json' if t == 'vocab' else 'public/data/grammar.json'
-with open(path) as f:
-    data = json.load(f)
-ids = [c['id'] for c in data]
-assert len(ids) == len(set(ids)), 'ID 重複！'
-print(f'✔ 共 {len(data)} 筆，無重複 ID')
-"
+pnpm exec vitest run src/lib/data
 ```
+
+**這些規則已經由測試強制，不需要人工逐條檢查**：id 格式與唯一性、level 合法、`pos` 白名單、`reading` 純平假名、tag 白名單（vocab 與 grammar 兩層）、跨 level 的 word／sentence 去重、`___` 恰好一個、`sentenceRuby` 與 `sentence` 一致、`choices` 恰 4 個無重複、`answer` 在 `choices` 內。測試紅了就照訊息修，修到綠。
+
+**測試判不出來、必須自己逐條看的**：
+
+- [ ] **讀音正確**（食べる → たべる，不是 しょくべる）——機器只驗「是不是平假名」，不驗「對不對」
+- [ ] **意思符合該等級的常見用法**，不用罕見義項；`pos` 與詞義相符
+- [ ] **等級歸屬正確**，不要把 N3 的詞塞進 N5
+- [ ] **唯一解**：把每個干擾選項實際填回句子，確認它在該語境下真的是錯的。這是最常見的瑕疵——`に`／`へ`、`から`／`ので`、`上手`／`得意` 這類可互換的組合放在同一題，學習者選了正確答案卻被判錯。
+- [ ] **`meaning` 是填入 `answer` 後整句的翻譯**，不是題幹的翻譯
+- [ ] **文法說明準確**，且與 `answer` 對應
+
+若有問題，就地修正（直接編輯 `public/data/*.json`）後重跑測試，並在最後報告修正了哪些條目。
 
 ---
 
 ## 步驟六：回報結果
 
 輸出摘要：
-- 新增了幾筆（哪個 type、哪個 level）
+- 新增了幾筆（哪個 type、哪個 level）、id 區間
 - 審查時發現並修正了哪些問題（若無則說「審查通過，無需修正」）
 - 現在該 level 共有幾筆
 - 提示：可執行 `pnpm run dev` 在瀏覽器確認顯示正常

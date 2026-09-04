@@ -22,7 +22,9 @@
     "test:ui": "vitest --ui",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "deploy": "bash scripts/deploy-gh-pages.sh"
+    "deploy": "bash scripts/deploy-gh-pages.sh",
+    "data:stats": "node scripts/jlpt-data.mjs stats",
+    "data:append": "node scripts/jlpt-data.mjs append"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.4",

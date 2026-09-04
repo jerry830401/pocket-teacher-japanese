@@ -1,9 +1,15 @@
 import { describe, it, expect } from 'vitest'
 import { readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import {
+  VOCAB_TAG_SET,
+  VOCAB_POS_SET,
+  GRAMMAR_TIER1_SET,
+  GRAMMAR_TAG_SET,
+  stripRuby,
+} from './tags'
 
 const VALID_LEVELS = new Set(['N5', 'N4', 'N3', 'N2', 'N1'])
-const VALID_POS = new Set(['noun', 'verb', 'i-adj', 'na-adj', 'adverb', 'particle', 'expression', 'other'])
 
 function loadJson(filename: string): unknown[] {
   const path = resolve(process.cwd(), 'public/data', filename)
@@ -35,7 +41,7 @@ describe('vocabulary.json', () => {
       expect(typeof p.word, `word in ${c.id}`).toBe('string')
       expect(typeof p.reading, `reading in ${c.id}`).toBe('string')
       expect(typeof p.meaning, `meaning in ${c.id}`).toBe('string')
-      expect(VALID_POS.has(p.pos as string), `pos "${p.pos}" in ${c.id}`).toBe(true)
+      expect(VOCAB_POS_SET.has(p.pos as string), `pos "${p.pos}" in ${c.id}`).toBe(true)
     }
   })
 
@@ -65,6 +71,28 @@ describe('vocabulary.json', () => {
           `non-hiragana reading "${reading}" in ${c.id}`,
         ).toBe(true)
       }
+    }
+  })
+
+  it('every tag is in the vocabulary whitelist', () => {
+    for (const card of cards) {
+      const c = card as Record<string, unknown>
+      const tags = c.tags as string[]
+      expect(tags.length, `no tags on ${c.id}`).toBeGreaterThan(0)
+      for (const tag of tags) {
+        expect(VOCAB_TAG_SET.has(tag), `unknown tag "${tag}" in ${c.id}`).toBe(true)
+      }
+    }
+  })
+
+  it('has no duplicate words across all levels', () => {
+    const seen = new Map<string, string>()
+    for (const card of cards) {
+      const c = card as Record<string, unknown>
+      const word = (c.payload as Record<string, unknown>).word as string
+      const first = seen.get(word)
+      expect(first, `word "${word}" in ${c.id} duplicates ${first}`).toBeUndefined()
+      seen.set(word, c.id as string)
     }
   })
 })
@@ -160,5 +188,39 @@ describe('grammar.json', () => {
     const ids = cards.map((c) => (c as Record<string, unknown>).id as string)
     const unique = new Set(ids)
     expect(unique.size).toBe(ids.length)
+  })
+
+  it('every card has exactly one tier-1 tag and only known tier-2 tags', () => {
+    for (const card of cards) {
+      const c = card as Record<string, unknown>
+      const tags = c.tags as string[]
+      const tier1 = tags.filter((t) => GRAMMAR_TIER1_SET.has(t))
+      expect(tier1.length, `tier-1 tags ${JSON.stringify(tier1)} in ${c.id}`).toBeGreaterThan(0)
+      for (const tag of tags) {
+        expect(GRAMMAR_TAG_SET.has(tag), `unknown tag "${tag}" in ${c.id}`).toBe(true)
+      }
+    }
+  })
+
+  it('sentenceRuby, stripped of ruby markup, equals sentence', () => {
+    for (const card of cards) {
+      const c = card as Record<string, unknown>
+      const p = c.payload as Record<string, unknown>
+      if (p.sentenceRuby === undefined) continue
+      expect(stripRuby(p.sentenceRuby as string), `sentenceRuby drifted from sentence in ${c.id}`).toBe(
+        p.sentence as string,
+      )
+    }
+  })
+
+  it('has no duplicate sentences', () => {
+    const seen = new Map<string, string>()
+    for (const card of cards) {
+      const c = card as Record<string, unknown>
+      const sentence = (c.payload as Record<string, unknown>).sentence as string
+      const first = seen.get(sentence)
+      expect(first, `sentence "${sentence}" in ${c.id} duplicates ${first}`).toBeUndefined()
+      seen.set(sentence, c.id as string)
+    }
   })
 })
