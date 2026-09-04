@@ -87,45 +87,50 @@ if (cmd === 'overlap') {
 
   // A learner reads the whole meaning string off the button, so two cards clash
   // when they share a listed sense. A parenthetical qualifier resolves the clash
-  // only if BOTH sides carry one: "危險的（口語）" beside a bare "危險的" still
-  // leaves the bare button looking correct.
+  // only if BOTH cards carry one — and it qualifies the sense it sits in, not the
+  // whole string: "在、去、來（尊敬語）" still offers a bare 在 and a bare 去.
   const senses = (meaning) => meaning.split(/[、,，/／]/).map((t) => t.trim()).filter(Boolean)
   const stem = (sense) => sense.replace(/[（(][^）)]*[）)]/g, '').trim()
-  const qualified = (sense) => sense !== stem(sense)
+  const qualified = (card) => /[（(][^）)]*[）)]/.test(card.payload.meaning)
 
-  const byLevel = new Map()
+  const pickedIds = new Set(picked.map((c) => c.id))
+  const levels = new Set(picked.map((c) => c.level))
+
+  // group by stem so a term shared by three cards prints as one group, not three
+  // pairs — "which card keeps the plain gloss" is the decision being made, and it
+  // cannot be made one pair at a time
+  const groups = new Map()
   for (const c of cards) {
-    if (!byLevel.has(c.level)) byLevel.set(c.level, [])
-    byLevel.get(c.level).push(c)
-  }
-
-  const seen = new Set()
-  const hits = []
-  for (const card of picked) {
-    for (const other of byLevel.get(card.level)) {
-      if (other.id === card.id) continue
-      const pair = [card.id, other.id].sort().join(' ')
-      if (seen.has(pair)) continue
-      for (const a of senses(card.payload.meaning)) {
-        for (const b of senses(other.payload.meaning)) {
-          let level = null
-          if (a === b) level = 'HIGH'
-          else if (stem(a) === stem(b) && !(qualified(a) && qualified(b))) level = 'MED '
-          if (!level) continue
-          seen.add(pair)
-          hits.push(
-            `${level} ${card.id} ${card.payload.word}「${card.payload.meaning}」\n` +
-            `     ↔ ${other.id} ${other.payload.word}「${other.payload.meaning}」  共用「${a === b ? a : stem(a)}」`,
-          )
-        }
-      }
+    if (!levels.has(c.level)) continue
+    for (const sense of senses(c.payload.meaning)) {
+      const key = `${c.level}|${stem(sense)}`
+      if (!groups.has(key)) groups.set(key, [])
+      groups.get(key).push({ card: c, sense })
     }
   }
 
-  console.log(hits.length ? hits.join('\n') : 'no overlapping meanings')
-  console.log(`\n--- ${picked.length} entries checked, ${hits.length} overlap(s) ---`)
-  console.log('HIGH = identical sense (two identical-looking buttons)')
-  console.log('MED  = same sense, only one side qualified — qualify both, or reword one')
+  const hits = []
+  for (const [key, members] of groups) {
+    const ids = new Set(members.map((m) => m.card.id))
+    if (ids.size < 2 || ![...ids].some((id) => pickedIds.has(id))) continue
+    const exact = members.some((a, i) => members.slice(i + 1).some((b) => a.sense === b.sense && a.card.id !== b.card.id))
+    if (!exact && members.every((m) => qualified(m.card))) continue
+    const list = members
+      .map((m) => `${m.card.id} ${m.card.payload.word}「${m.card.payload.meaning}」`)
+      .filter((line, i, arr) => arr.indexOf(line) === i)
+    hits.push(`${exact ? 'HIGH' : 'MED '} 共用「${key.split('|')[1]}」（${ids.size} 筆）\n     ` + list.join('\n     '))
+  }
+
+  // a card repeating a sense inside its own meaning escapes both the schema test
+  // and the comparison above, which never compares a card with itself
+  const selfDupes = picked
+    .filter((c) => new Set(senses(c.payload.meaning)).size !== senses(c.payload.meaning).length)
+    .map((c) => `DUP  ${c.id} ${c.payload.word}「${c.payload.meaning}」— 同一筆內義項重複`)
+
+  console.log([...hits, ...selfDupes].join('\n') || 'no overlapping meanings')
+  console.log(`\n--- ${picked.length} entries checked, ${hits.length} overlap group(s), ${selfDupes.length} self-duplicate(s) ---`)
+  console.log('HIGH = a sense string appears verbatim on two cards')
+  console.log('MED  = same sense, at least one card carries no qualifier anywhere')
   process.exit(0)
 }
 

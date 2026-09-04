@@ -91,7 +91,7 @@
     "payload": {
       "word": "学生",
       "reading": "がくせい",
-      "meaning": "學生",
+      "meaning": "學生（大學生）",
       "pos": "noun"
     },
     "tags": [
@@ -134,7 +134,7 @@
     "payload": {
       "word": "父",
       "reading": "ちち",
-      "meaning": "父親",
+      "meaning": "父親（自己的）",
       "pos": "noun"
     },
     "tags": [
@@ -148,7 +148,7 @@
     "payload": {
       "word": "母",
       "reading": "はは",
-      "meaning": "母親",
+      "meaning": "母親（自己的）",
       "pos": "noun"
     },
     "tags": [
@@ -846,7 +846,7 @@
     "payload": {
       "word": "働く",
       "reading": "はたらく",
-      "meaning": "工作、勞動",
+      "meaning": "工作（動作）、勞動",
       "pos": "verb"
     },
     "tags": [
@@ -861,7 +861,7 @@
     "payload": {
       "word": "勉強する",
       "reading": "べんきょうする",
-      "meaning": "學習",
+      "meaning": "讀書、用功（自己學習）",
       "pos": "verb"
     },
     "tags": [
@@ -1302,7 +1302,7 @@
     "payload": {
       "word": "嫌いな",
       "reading": "きらいな",
-      "meaning": "討厭的",
+      "meaning": "厭惡的、不喜歡的",
       "pos": "na-adj"
     },
     "tags": [
@@ -1330,7 +1330,7 @@
     "payload": {
       "word": "下手な",
       "reading": "へたな",
-      "meaning": "不擅長的",
+      "meaning": "拙劣的、技術差的",
       "pos": "na-adj"
     },
     "tags": [
@@ -1387,7 +1387,7 @@
     "payload": {
       "word": "もう",
       "reading": "もう",
-      "meaning": "已經/再",
+      "meaning": "已經、再（多一個）",
       "pos": "adverb"
     },
     "tags": [
@@ -2272,7 +2272,7 @@
     "payload": {
       "word": "それ",
       "reading": "それ",
-      "meaning": "那個",
+      "meaning": "那個（靠近對方）",
       "pos": "noun"
     },
     "tags": [
@@ -2286,7 +2286,7 @@
     "payload": {
       "word": "あれ",
       "reading": "あれ",
-      "meaning": "那個(遠)",
+      "meaning": "那個（離雙方都遠）",
       "pos": "noun"
     },
     "tags": [
@@ -2935,7 +2935,7 @@
     "payload": {
       "word": "休む",
       "reading": "やすむ",
-      "meaning": "休息、請假",
+      "meaning": "休息（動作）、請假",
       "pos": "verb"
     },
     "tags": [
@@ -3941,7 +3941,7 @@
     "payload": {
       "word": "音",
       "reading": "おと",
-      "meaning": "聲音",
+      "meaning": "聲音（物體發出的）",
       "pos": "noun"
     },
     "tags": [
@@ -4196,7 +4196,7 @@
     "payload": {
       "word": "仕事",
       "reading": "しごと",
-      "meaning": "工作、職務",
+      "meaning": "工作（事情）、職務",
       "pos": "noun"
     },
     "tags": [
@@ -4384,7 +4384,7 @@
     "payload": {
       "word": "返事する",
       "reading": "へんじする",
-      "meaning": "回答/回覆",
+      "meaning": "回覆、答覆",
       "pos": "verb"
     },
     "tags": [
@@ -4413,7 +4413,7 @@
     "payload": {
       "word": "注意する",
       "reading": "ちゅういする",
-      "meaning": "注意",
+      "meaning": "提醒、警告",
       "pos": "verb"
     },
     "tags": [
@@ -5003,7 +5003,7 @@
     "payload": {
       "word": "気持ち",
       "reading": "きもち",
-      "meaning": "感受/心情",
+      "meaning": "感受、心情（對事物的）",
       "pos": "noun"
     },
     "tags": [
@@ -5144,7 +5144,7 @@
     "payload": {
       "word": "また",
       "reading": "また",
-      "meaning": "再/又",
+      "meaning": "又、再一次",
       "pos": "adverb"
     },
     "tags": [
@@ -5257,7 +5257,7 @@
     "payload": {
       "word": "きっと",
       "reading": "きっと",
-      "meaning": "一定",
+      "meaning": "一定、想必（推測）",
       "pos": "adverb"
     },
     "tags": [
@@ -5299,7 +5299,7 @@
     "payload": {
       "word": "だから",
       "reading": "だから",
-      "meaning": "所以",
+      "meaning": "所以、因此",
       "pos": "adverb"
     },
     "tags": [
@@ -5356,7 +5356,7 @@
     "payload": {
       "word": "それで",
       "reading": "それで",
-      "meaning": "所以（承接）",
+      "meaning": "於是、接著（承接前句）",
       "pos": "adverb"
     },
     "tags": [
@@ -6692,7 +6692,7 @@
     "payload": {
       "word": "答える",
       "reading": "こたえる",
-      "meaning": "回答",
+      "meaning": "回答（問題）",
       "pos": "verb"
     },
     "tags": [
@@ -7225,7 +7225,7 @@
     "payload": {
       "word": "すみません",
       "reading": "すみません",
-      "meaning": "不好意思/對不起",
+      "meaning": "不好意思、抱歉（也用於搭話）",
       "pos": "adverb"
     },
     "tags": [
@@ -7239,7 +7239,7 @@
     "payload": {
       "word": "ごめんなさい",
       "reading": "ごめんなさい",
-      "meaning": "對不起",
+      "meaning": "對不起（道歉）",
       "pos": "adverb"
     },
     "tags": [
@@ -7753,7 +7753,7 @@
     "payload": {
       "word": "なぜ",
       "reading": "なぜ",
-      "meaning": "為什麼",
+      "meaning": "為何（書面、正式）",
       "pos": "adverb"
     },
     "tags": [
@@ -7767,7 +7767,7 @@
     "payload": {
       "word": "どうして",
       "reading": "どうして",
-      "meaning": "為什麼/怎麼",
+      "meaning": "為什麼、怎麼會",
       "pos": "adverb"
     },
     "tags": [
@@ -8246,7 +8246,7 @@
     "payload": {
       "word": "なかなか",
       "reading": "なかなか",
-      "meaning": "相當/不太（後接否定）",
+      "meaning": "相當地、遲遲不…（後接否定）",
       "pos": "adverb"
     },
     "tags": [
@@ -8946,7 +8946,7 @@
     "payload": {
       "word": "やっと",
       "reading": "やっと",
-      "meaning": "終於、好不容易",
+      "meaning": "終於、總算",
       "pos": "adverb"
     },
     "tags": [
@@ -8988,7 +8988,7 @@
     "payload": {
       "word": "あまり",
       "reading": "あまり",
-      "meaning": "不太（後接否定）",
+      "meaning": "不太…（後接否定）",
       "pos": "adverb"
     },
     "tags": [
@@ -9237,7 +9237,7 @@
     "payload": {
       "word": "叩く",
       "reading": "たたく",
-      "meaning": "敲、打",
+      "meaning": "敲、拍打",
       "pos": "verb"
     },
     "tags": [
@@ -9651,7 +9651,7 @@
     "payload": {
       "word": "真剣な",
       "reading": "しんけんな",
-      "meaning": "認真的、嚴肅的",
+      "meaning": "嚴肅的、當真的",
       "pos": "na-adj"
     },
     "tags": [
@@ -9679,7 +9679,7 @@
     "payload": {
       "word": "大丈夫な",
       "reading": "だいじょうぶな",
-      "meaning": "沒問題的、安全的",
+      "meaning": "沒問題的、不要緊的",
       "pos": "na-adj"
     },
     "tags": [
@@ -9708,7 +9708,7 @@
     "payload": {
       "word": "苦手な",
       "reading": "にがてな",
-      "meaning": "不擅長的、害怕的",
+      "meaning": "不擅長的、害怕應付的",
       "pos": "na-adj"
     },
     "tags": [
@@ -10456,7 +10456,7 @@
     "payload": {
       "word": "だいぶ",
       "reading": "だいぶ",
-      "meaning": "相當、頗",
+      "meaning": "相當、頗（程度變化）",
       "pos": "adverb"
     },
     "tags": [
@@ -10484,7 +10484,7 @@
     "payload": {
       "word": "きちんと",
       "reading": "きちんと",
-      "meaning": "整齊地、確實地",
+      "meaning": "整齊地、有條理地",
       "pos": "adverb"
     },
     "tags": [
@@ -10845,7 +10845,7 @@
     "payload": {
       "word": "気分",
       "reading": "きぶん",
-      "meaning": "心情、感覺",
+      "meaning": "情緒、身體舒適與否",
       "pos": "noun"
     },
     "tags": [
@@ -11059,7 +11059,7 @@
     "payload": {
       "word": "せっかく",
       "reading": "せっかく",
-      "meaning": "好不容易、特地",
+      "meaning": "特地、難得",
       "pos": "adverb"
     },
     "tags": [
@@ -11101,7 +11101,7 @@
     "payload": {
       "word": "必ず",
       "reading": "かならず",
-      "meaning": "一定、必定",
+      "meaning": "必定、無一例外",
       "pos": "adverb"
     },
     "tags": [
@@ -11401,7 +11401,7 @@
     "payload": {
       "word": "気をつける",
       "reading": "きをつける",
-      "meaning": "小心、注意",
+      "meaning": "小心、留意",
       "pos": "verb"
     },
     "tags": [
@@ -11445,7 +11445,7 @@
     "payload": {
       "word": "生きる",
       "reading": "いきる",
-      "meaning": "生活、活著",
+      "meaning": "活著、生存",
       "pos": "verb"
     },
     "tags": [
@@ -11578,7 +11578,7 @@
     "payload": {
       "word": "変える",
       "reading": "かえる",
-      "meaning": "改變、更換",
+      "meaning": "改變、變更",
       "pos": "verb"
     },
     "tags": [
@@ -11652,7 +11652,7 @@
     "payload": {
       "word": "出す",
       "reading": "だす",
-      "meaning": "拿出、提交、發出",
+      "meaning": "拿出、寄出、發出",
       "pos": "verb"
     },
     "tags": [
@@ -11744,7 +11744,7 @@
     "payload": {
       "word": "記録する",
       "reading": "きろくする",
-      "meaning": "記錄",
+      "meaning": "記錄下來",
       "pos": "verb"
     },
     "tags": [
@@ -11808,7 +11808,7 @@
     "payload": {
       "word": "増やす",
       "reading": "ふやす",
-      "meaning": "增加（他動詞）",
+      "meaning": "增添、擴增（他動詞）",
       "pos": "verb"
     },
     "tags": [
@@ -11870,7 +11870,7 @@
     "payload": {
       "word": "続く",
       "reading": "つづく",
-      "meaning": "持續、連續",
+      "meaning": "連續、延續",
       "pos": "verb"
     },
     "tags": [
@@ -11914,7 +11914,7 @@
     "payload": {
       "word": "調べる",
       "reading": "しらべる",
-      "meaning": "調查、查詢",
+      "meaning": "查閱、查看",
       "pos": "verb"
     },
     "tags": [
@@ -11930,7 +11930,7 @@
     "payload": {
       "word": "眠る",
       "reading": "ねむる",
-      "meaning": "睡眠、入睡",
+      "meaning": "入睡、睡著",
       "pos": "verb"
     },
     "tags": [
@@ -12138,7 +12138,7 @@
     "payload": {
       "word": "記録",
       "reading": "きろく",
-      "meaning": "記錄、紀錄",
+      "meaning": "紀錄、記載",
       "pos": "noun"
     },
     "tags": [
@@ -12168,7 +12168,7 @@
     "payload": {
       "word": "参る",
       "reading": "まいる",
-      "meaning": "前往（謙讓語）、去",
+      "meaning": "前往、前來（謙讓語）",
       "pos": "verb"
     },
     "tags": [
@@ -12292,7 +12292,7 @@
     "payload": {
       "word": "いただく",
       "reading": "いただく",
-      "meaning": "接受、吃喝（謙讓語）",
+      "meaning": "收下、吃喝（謙讓語）",
       "pos": "verb"
     },
     "tags": [
@@ -12323,7 +12323,7 @@
     "payload": {
       "word": "いらっしゃる",
       "reading": "いらっしゃる",
-      "meaning": "在、去、來（尊敬語）",
+      "meaning": "蒞臨、在（尊敬語）",
       "pos": "verb"
     },
     "tags": [
@@ -12517,7 +12517,7 @@
     "payload": {
       "word": "代金",
       "reading": "だいきん",
-      "meaning": "費用、貨款",
+      "meaning": "貨款、價款",
       "pos": "noun"
     },
     "tags": [
@@ -12870,7 +12870,7 @@
     "payload": {
       "word": "具合",
       "reading": "ぐあい",
-      "meaning": "狀況、健康狀態",
+      "meaning": "身體狀況、運作情形",
       "pos": "noun"
     },
     "tags": [
@@ -12899,7 +12899,7 @@
     "payload": {
       "word": "原料",
       "reading": "げんりょう",
-      "meaning": "原料、材料",
+      "meaning": "原料、原物料",
       "pos": "noun"
     },
     "tags": [
@@ -13060,7 +13060,7 @@
     "payload": {
       "word": "事情",
       "reading": "じじょう",
-      "meaning": "情況、原因",
+      "meaning": "原因、原委",
       "pos": "noun"
     },
     "tags": [
@@ -13088,7 +13088,7 @@
     "payload": {
       "word": "社員",
       "reading": "しゃいん",
-      "meaning": "員工、社員",
+      "meaning": "公司職員、社員",
       "pos": "noun"
     },
     "tags": [
@@ -13205,7 +13205,7 @@
     "payload": {
       "word": "性格",
       "reading": "せいかく",
-      "meaning": "性格、個性",
+      "meaning": "性格、脾氣",
       "pos": "noun"
     },
     "tags": [
@@ -13444,7 +13444,7 @@
     "payload": {
       "word": "長所",
       "reading": "ちょうしょ",
-      "meaning": "長處、優點",
+      "meaning": "長處、擅長之處",
       "pos": "noun"
     },
     "tags": [
@@ -13563,7 +13563,7 @@
     "payload": {
       "word": "動作",
       "reading": "どうさ",
-      "meaning": "動作、行為",
+      "meaning": "動作、舉止",
       "pos": "noun"
     },
     "tags": [
@@ -13814,7 +13814,7 @@
     "payload": {
       "word": "別れる",
       "reading": "わかれる",
-      "meaning": "分別、告別",
+      "meaning": "分手、告別",
       "pos": "verb"
     },
     "tags": [
@@ -13861,7 +13861,7 @@
     "payload": {
       "word": "整える",
       "reading": "ととのえる",
-      "meaning": "整理、準備",
+      "meaning": "弄整齊、準備妥當",
       "pos": "verb"
     },
     "tags": [
@@ -13923,7 +13923,7 @@
     "payload": {
       "word": "感じる",
       "reading": "かんじる",
-      "meaning": "感覺、感受",
+      "meaning": "感到、覺得",
       "pos": "verb"
     },
     "tags": [
@@ -14098,7 +14098,7 @@
     "payload": {
       "word": "方針",
       "reading": "ほうしん",
-      "meaning": "方針、方向",
+      "meaning": "方針、政策",
       "pos": "noun"
     },
     "tags": [
@@ -14127,7 +14127,7 @@
     "payload": {
       "word": "問い合わせ",
       "reading": "といあわせ",
-      "meaning": "詢問、查詢",
+      "meaning": "洽詢、查詢",
       "pos": "noun"
     },
     "tags": [
@@ -14258,7 +14258,7 @@
     "payload": {
       "word": "利点",
       "reading": "りてん",
-      "meaning": "優點、好處",
+      "meaning": "好處、有利之處",
       "pos": "noun"
     },
     "tags": [
@@ -14287,7 +14287,7 @@
     "payload": {
       "word": "揃える",
       "reading": "そろえる",
-      "meaning": "備齊、整理",
+      "meaning": "備齊、湊齊",
       "pos": "verb"
     },
     "tags": [
@@ -14757,7 +14757,7 @@
     "payload": {
       "word": "応募",
       "reading": "おうぼ",
-      "meaning": "應募、報名",
+      "meaning": "應徵、應募",
       "pos": "noun"
     },
     "tags": [
@@ -14831,7 +14831,7 @@
     "payload": {
       "word": "解説",
       "reading": "かいせつ",
-      "meaning": "解說、說明",
+      "meaning": "解說、講解",
       "pos": "noun"
     },
     "tags": [
@@ -14935,7 +14935,7 @@
     "payload": {
       "word": "記事",
       "reading": "きじ",
-      "meaning": "新聞報導、文章",
+      "meaning": "新聞報導、報導",
       "pos": "noun"
     },
     "tags": [
@@ -15069,7 +15069,7 @@
     "payload": {
       "word": "区別",
       "reading": "くべつ",
-      "meaning": "區別、分別",
+      "meaning": "區別、辨別",
       "pos": "noun"
     },
     "tags": [
@@ -15244,7 +15244,7 @@
     "payload": {
       "word": "作業",
       "reading": "さぎょう",
-      "meaning": "作業、工作",
+      "meaning": "工作、操作",
       "pos": "noun"
     },
     "tags": [
@@ -15543,7 +15543,7 @@
     "payload": {
       "word": "設備",
       "reading": "せつび",
-      "meaning": "設備、設施",
+      "meaning": "設備、配備",
       "pos": "noun"
     },
     "tags": [
@@ -15630,7 +15630,7 @@
     "payload": {
       "word": "増加",
       "reading": "ぞうか",
-      "meaning": "增加",
+      "meaning": "增加、增長",
       "pos": "noun"
     },
     "tags": [
@@ -15659,7 +15659,7 @@
     "payload": {
       "word": "宅配",
       "reading": "たくはい",
-      "meaning": "宅配、快遞",
+      "meaning": "宅配、送貨到府",
       "pos": "noun"
     },
     "tags": [
@@ -15674,7 +15674,7 @@
     "payload": {
       "word": "段階",
       "reading": "だんかい",
-      "meaning": "階段、階段",
+      "meaning": "階段",
       "pos": "noun"
     },
     "tags": [
@@ -15793,7 +15793,7 @@
     "payload": {
       "word": "親しい",
       "reading": "したしい",
-      "meaning": "親近的、熟悉的",
+      "meaning": "親近的、要好的",
       "pos": "i-adj"
     },
     "tags": [
@@ -15883,7 +15883,7 @@
     "payload": {
       "word": "豊かな",
       "reading": "ゆたかな",
-      "meaning": "豐富的、富裕的",
+      "meaning": "富裕的、充裕的",
       "pos": "na-adj"
     },
     "tags": [
@@ -15956,7 +15956,7 @@
     "payload": {
       "word": "不思議な",
       "reading": "ふしぎな",
-      "meaning": "不可思議的、奇妙的",
+      "meaning": "不可思議的、難以理解的",
       "pos": "na-adj"
     },
     "tags": [
@@ -16058,7 +16058,7 @@
     "payload": {
       "word": "改めて",
       "reading": "あらためて",
-      "meaning": "重新、再次",
+      "meaning": "重新、另行",
       "pos": "adverb"
     },
     "tags": [
@@ -16902,7 +16902,7 @@
     "payload": {
       "word": "書類",
       "reading": "しょるい",
-      "meaning": "文件、書類",
+      "meaning": "文件、表單",
       "pos": "noun"
     },
     "tags": [
@@ -17121,7 +17121,7 @@
     "payload": {
       "word": "装置",
       "reading": "そうち",
-      "meaning": "裝置、設備",
+      "meaning": "裝置、儀器",
       "pos": "noun"
     },
     "tags": [
@@ -17135,7 +17135,7 @@
     "payload": {
       "word": "速達",
       "reading": "そくたつ",
-      "meaning": "快遞、速遞",
+      "meaning": "限時專送、快遞",
       "pos": "noun"
     },
     "tags": [
@@ -17270,7 +17270,7 @@
     "payload": {
       "word": "地方",
       "reading": "ちほう",
-      "meaning": "地方、地區",
+      "meaning": "地方、鄉下",
       "pos": "noun"
     },
     "tags": [
@@ -17789,7 +17789,7 @@
     "payload": {
       "word": "パターン",
       "reading": "ぱたーん",
-      "meaning": "模式、圖案",
+      "meaning": "模式、固定形式",
       "pos": "noun"
     },
     "tags": [
@@ -17804,7 +17804,7 @@
     "payload": {
       "word": "レベル",
       "reading": "れべる",
-      "meaning": "程度、等級",
+      "meaning": "等級、水準",
       "pos": "noun"
     },
     "tags": [
@@ -17928,7 +17928,7 @@
     "payload": {
       "word": "取り組む",
       "reading": "とりくむ",
-      "meaning": "努力、投入（工作）",
+      "meaning": "認真投入、著手處理",
       "pos": "verb"
     },
     "tags": [
@@ -17960,7 +17960,7 @@
     "payload": {
       "word": "引き受ける",
       "reading": "ひきうける",
-      "meaning": "接受、承擔",
+      "meaning": "承擔、接下",
       "pos": "verb"
     },
     "tags": [
@@ -18083,7 +18083,7 @@
     "payload": {
       "word": "行事",
       "reading": "ぎょうじ",
-      "meaning": "活動、儀式",
+      "meaning": "例行活動、儀式",
       "pos": "noun"
     },
     "tags": [
@@ -18336,7 +18336,7 @@
     "payload": {
       "word": "術",
       "reading": "じゅつ",
-      "meaning": "技術、方法",
+      "meaning": "方法、手段",
       "pos": "noun"
     },
     "tags": [
@@ -18470,7 +18470,7 @@
     "payload": {
       "word": "所得",
       "reading": "しょとく",
-      "meaning": "所得、收入",
+      "meaning": "所得、收益",
       "pos": "noun"
     },
     "tags": [
@@ -18942,7 +18942,7 @@
     "payload": {
       "word": "転換",
       "reading": "てんかん",
-      "meaning": "轉換",
+      "meaning": "轉變、轉向",
       "pos": "noun"
     },
     "tags": [
@@ -19168,7 +19168,7 @@
     "payload": {
       "word": "引き出す",
       "reading": "ひきだす",
-      "meaning": "取出、引出",
+      "meaning": "提領、引出",
       "pos": "verb"
     },
     "tags": [
@@ -19330,7 +19330,7 @@
     "payload": {
       "word": "申し込む",
       "reading": "もうしこむ",
-      "meaning": "申請、報名",
+      "meaning": "報名、提出要求",
       "pos": "verb"
     },
     "tags": [
@@ -19346,7 +19346,7 @@
     "payload": {
       "word": "最低",
       "reading": "さいてい",
-      "meaning": "最低、至少",
+      "meaning": "最低、最差",
       "pos": "noun"
     },
     "tags": [
@@ -19672,7 +19672,7 @@
     "payload": {
       "word": "まとめ",
       "reading": "まとめ",
-      "meaning": "總結、整理",
+      "meaning": "總結、歸納",
       "pos": "noun"
     },
     "tags": [
@@ -19999,7 +19999,7 @@
     "payload": {
       "word": "詳しい",
       "reading": "くわしい",
-      "meaning": "詳細的、熟悉的",
+      "meaning": "詳細的、精通的",
       "pos": "i-adj"
     },
     "tags": [
@@ -20429,7 +20429,7 @@
     "payload": {
       "word": "手順",
       "reading": "てじゅん",
-      "meaning": "手順、步驟",
+      "meaning": "作業程序、先後順序",
       "pos": "noun"
     },
     "tags": [
@@ -20685,7 +20685,7 @@
     "payload": {
       "word": "素材",
       "reading": "そざい",
-      "meaning": "素材、材料",
+      "meaning": "素材、題材",
       "pos": "noun"
     },
     "tags": [
@@ -20882,7 +20882,7 @@
     "payload": {
       "word": "呼びかける",
       "reading": "よびかける",
-      "meaning": "呼籲、招呼",
+      "meaning": "呼籲、號召",
       "pos": "verb"
     },
     "tags": [
@@ -21461,7 +21461,7 @@
     "payload": {
       "word": "文書",
       "reading": "ぶんしょ",
-      "meaning": "文書、文件",
+      "meaning": "文書、公文",
       "pos": "noun"
     },
     "tags": [
@@ -22047,7 +22047,7 @@
     "payload": {
       "word": "休み",
       "reading": "やすみ",
-      "meaning": "休息、休假",
+      "meaning": "休假、假期",
       "pos": "noun"
     },
     "tags": [
@@ -22117,7 +22117,7 @@
     "payload": {
       "word": "両親",
       "reading": "りょうしん",
-      "meaning": "父母、雙親",
+      "meaning": "雙親（父母兩人）",
       "pos": "noun"
     },
     "tags": [
@@ -22145,7 +22145,7 @@
     "payload": {
       "word": "親",
       "reading": "おや",
-      "meaning": "父母、家長",
+      "meaning": "家長、父母（單指一方）",
       "pos": "noun"
     },
     "tags": [

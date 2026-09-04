@@ -187,6 +187,8 @@ pnpm exec vitest run src/lib/data
 node scripts/jlpt-data.mjs overlap vocab last:<count>
 ```
 
+修完釋義要**重跑 `overlap` 整個 level**（`overlap vocab <LEVEL>`）——改寫很容易撞到第三筆條目。
+
 **其餘測試判不出來的部分，交給 `data-reviewer` subagent 審**：
 
 ```

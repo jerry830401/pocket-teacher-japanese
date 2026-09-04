@@ -8,9 +8,9 @@
       "answer": "は",
       "choices": [
         "は",
-        "が",
         "を",
-        "に"
+        "に",
+        "で"
       ],
       "meaning": "我是學生。",
       "grammar": "は（主題助詞）：標示句子的主題",
@@ -30,8 +30,8 @@
       "answer": "は",
       "choices": [
         "は",
-        "も",
-        "が",
+        "を",
+        "に",
         "の"
       ],
       "meaning": "這是書。",
@@ -52,9 +52,9 @@
       "answer": "は",
       "choices": [
         "は",
-        "が",
         "を",
-        "で"
+        "で",
+        "に"
       ],
       "meaning": "田中先生是老師。",
       "grammar": "は（主題助詞）：標示句子的主題",
@@ -74,9 +74,9 @@
       "answer": "が",
       "choices": [
         "が",
-        "は",
         "を",
-        "に"
+        "に",
+        "の"
       ],
       "meaning": "有貓。",
       "grammar": "が（主語助詞）：強調存在的主體",
@@ -96,7 +96,7 @@
       "answer": "が",
       "choices": [
         "が",
-        "は",
+        "を",
         "で",
         "に"
       ],
@@ -141,7 +141,7 @@
       "choices": [
         "を",
         "が",
-        "は",
+        "に",
         "の"
       ],
       "meaning": "讀書。",
@@ -184,7 +184,7 @@
       "answer": "に",
       "choices": [
         "に",
-        "は",
+        "を",
         "が",
         "で"
       ],
@@ -274,7 +274,7 @@
         "で",
         "に",
         "を",
-        "が"
+        "の"
       ],
       "meaning": "搭電車來了。",
       "grammar": "で（手段助詞）：表示動作的手段或工具",
@@ -294,7 +294,7 @@
       "answer": "へ",
       "choices": [
         "へ",
-        "に",
+        "と",
         "で",
         "を"
       ],
@@ -316,9 +316,9 @@
       "answer": "も",
       "choices": [
         "も",
-        "は",
+        "を",
         "が",
-        "の"
+        "で"
       ],
       "meaning": "我也有妹妹。",
       "grammar": "も（添加助詞）：表示「也」，添加同類項目",
@@ -340,7 +340,7 @@
         "と",
         "に",
         "で",
-        "が"
+        "の"
       ],
       "meaning": "和朋友一起看了電影。",
       "grammar": "と（共同助詞）：表示「和…一起」",
@@ -360,7 +360,7 @@
       "answer": "と",
       "choices": [
         "と",
-        "や",
+        "の",
         "が",
         "を"
       ],
@@ -382,7 +382,7 @@
       "answer": "や",
       "choices": [
         "や",
-        "と",
+        "の",
         "が",
         "を"
       ],
@@ -400,17 +400,17 @@
     "type": "grammar",
     "level": "N5",
     "payload": {
-      "sentence": "これは何___ですか。",
+      "sentence": "これは何___か。",
       "answer": "です",
       "choices": [
         "です",
         "ます",
-        "だ",
-        "でした"
+        "ました",
+        "ません"
       ],
       "meaning": "這是什麼？",
       "grammar": "です（禮貌體）：禮貌的判斷句結尾",
-      "sentenceRuby": "これは<ruby>何<rt>なん</rt></ruby>___ですか。"
+      "sentenceRuby": "これは<ruby>何<rt>なん</rt></ruby>___か。"
     },
     "tags": [
       "copula",
@@ -467,7 +467,7 @@
     "type": "grammar",
     "level": "N5",
     "payload": {
-      "sentence": "お酒は飲み___。",
+      "sentence": "お酒は全然飲み___。",
       "answer": "ません",
       "choices": [
         "ません",
@@ -475,9 +475,9 @@
         "ました",
         "ないです"
       ],
-      "meaning": "不喝酒。",
+      "meaning": "我完全不喝酒。",
       "grammar": "〜ません（禮貌體否定）：動詞禮貌形否定",
-      "sentenceRuby": "お<ruby>酒<rt>さけ</rt></ruby>は<ruby>飲<rt>の</rt></ruby>み___。"
+      "sentenceRuby": "お<ruby>酒<rt>さけ</rt></ruby>は<ruby>全然<rt>ぜんぜん</rt></ruby><ruby>飲<rt>の</rt></ruby>み___。"
     },
     "tags": [
       "verb-form",
@@ -584,9 +584,9 @@
       "answer": "いません",
       "choices": [
         "いません",
-        "ありません",
-        "いないです",
-        "いない"
+        "います",
+        "あります",
+        "ありません"
       ],
       "meaning": "房間裡沒有任何人。",
       "grammar": "いません（有生命否定存在）：有生命體不存在",
@@ -603,17 +603,17 @@
     "type": "grammar",
     "level": "N5",
     "payload": {
-      "sentence": "お金が___。",
+      "sentence": "お金が全然___。",
       "answer": "ありません",
       "choices": [
         "ありません",
-        "いません",
-        "ないです",
-        "ない"
+        "あります",
+        "います",
+        "いません"
       ],
-      "meaning": "沒有錢。",
+      "meaning": "我完全沒有錢。",
       "grammar": "ありません（無生命否定存在）：無生命事物不存在",
-      "sentenceRuby": "お<ruby>金<rt>かね</rt></ruby>が___。"
+      "sentenceRuby": "お<ruby>金<rt>かね</rt></ruby>が<ruby>全然<rt>ぜんぜん</rt></ruby>___。"
     },
     "tags": [
       "sentence-pattern",
@@ -631,7 +631,7 @@
       "choices": [
         "います",
         "あります",
-        "ます",
+        "です",
         "いました"
       ],
       "meaning": "現在正在看電視。",
@@ -649,17 +649,17 @@
     "type": "grammar",
     "level": "N5",
     "payload": {
-      "sentence": "結婚して___。",
+      "sentence": "兄はもう結婚して___。",
       "answer": "います",
       "choices": [
         "います",
         "あります",
-        "ます",
-        "いました"
+        "です",
+        "なります"
       ],
-      "meaning": "已婚（現在狀態）。",
+      "meaning": "哥哥已經結婚了。",
       "grammar": "〜ています（狀態持續）：表示動作結果的持續狀態",
-      "sentenceRuby": "<ruby>結婚<rt>けっこん</rt></ruby>して___。"
+      "sentenceRuby": "<ruby>兄<rt>あに</rt></ruby>はもう<ruby>結婚<rt>けっこん</rt></ruby>して___。"
     },
     "tags": [
       "tense-aspect",
@@ -4612,17 +4612,17 @@
     "type": "grammar",
     "level": "N5",
     "payload": {
-      "sentence": "明日は雨___かもしれません。",
-      "answer": "かも",
+      "sentence": "明日は雨が降る___。",
+      "answer": "かもしれません",
       "choices": [
-        "かも",
-        "でしょう",
-        "だろう",
-        "らしい"
+        "かもしれません",
+        "ましょう",
+        "たいです",
+        "ませんか"
       ],
       "meaning": "明天可能會下雨。",
       "grammar": "〜かもしれない（不確定推測）：表示說話者不確定的推測，可能性約50%",
-      "sentenceRuby": "<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>___かもしれません。"
+      "sentenceRuby": "<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>る___。"
     },
     "tags": [
       "sentence-pattern",
@@ -5372,14 +5372,14 @@
     "type": "grammar",
     "level": "N4",
     "payload": {
-      "sentence": "明日は雨___かもしれない。",
-      "sentenceRuby": "<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>___かもしれない。",
-      "answer": "か",
+      "sentence": "明日は雨が降る___しれない。",
+      "sentenceRuby": "<ruby>明日<rt>あした</rt></ruby>は<ruby>雨<rt>あめ</rt></ruby>が<ruby>降<rt>ふ</rt></ruby>る___しれない。",
+      "answer": "かも",
       "choices": [
-        "か",
-        "が",
-        "は",
-        "で"
+        "かも",
+        "こそ",
+        "さえ",
+        "しか"
       ],
       "meaning": "明天或許會下雨。",
       "grammar": "〜かもしれない：表示不確定的可能性，「也許…」"
@@ -6674,14 +6674,14 @@
     "type": "grammar",
     "level": "N4",
     "payload": {
-      "sentence": "子供が生まれて___から、生活が変わった。",
-      "sentenceRuby": "<ruby>子供<rt>こども</rt></ruby>が<ruby>生<rt>う</rt></ruby>まれて___から、<ruby>生活<rt>せいかつ</rt></ruby>が<ruby>変<rt>か</rt></ruby>わった。",
+      "sentence": "子供が生まれて___、生活が変わった。",
+      "sentenceRuby": "<ruby>子供<rt>こども</rt></ruby>が<ruby>生<rt>う</rt></ruby>まれて___、<ruby>生活<rt>せいかつ</rt></ruby>が<ruby>変<rt>か</rt></ruby>わった。",
       "answer": "から",
       "choices": [
         "から",
-        "からだ",
-        "以来",
-        "以降"
+        "まで",
+        "ながら",
+        "ように"
       ],
       "meaning": "自從孩子出生後，生活就改變了。",
       "grammar": "〜てから：表示動作完了後，「…之後」"

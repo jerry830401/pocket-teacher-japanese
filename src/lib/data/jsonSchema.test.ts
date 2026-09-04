@@ -189,6 +189,21 @@ describe('grammar.json', () => {
     }
   })
 
+  it('answer does not duplicate the text next to the blank', () => {
+    // "これは何___ですか" + "です" fills to "これは何ですですか" — the blank sits in
+    // the wrong place, so no choice can be right and the card is unanswerable
+    for (const card of cards) {
+      const c = card as Record<string, unknown>
+      const p = c.payload as Record<string, unknown>
+      const [before, after] = (p.sentence as string).split('___')
+      const answer = p.answer as string
+      expect(
+        after.startsWith(answer) || before.endsWith(answer),
+        `filling ${c.id} yields "${(p.sentence as string).replace('___', answer)}"`,
+      ).toBe(false)
+    }
+  })
+
   it('id format matches grammar-{LEVEL}-{NNN}', () => {
     const pattern = /^grammar-(N[1-5])-\d+$/
     for (const card of cards) {
