@@ -1,18 +1,38 @@
 import { useEffect, useState } from "react";
 import { db } from "@/lib/db/db";
+import { loadVocabulary } from "@/features/vocabulary/data";
+import { loadGrammar } from "@/features/grammar/data";
 import type { SrsCard } from "@/lib/srs/types";
 
 const KANA_TOTAL = { hiragana: 71, katakana: 71 };
-const MODULE_TOTALS: Record<string, Record<string, number>> = {
-  vocab: { N5: 500 },
-  grammar: { N5: 200 },
-};
+type ModuleTotals = Record<string, Record<string, number>>;
 const JLPT_LEVELS = ["N5", "N4", "N3", "N2", "N1"] as const;
 
 type LoadState =
   | { status: "loading" }
-  | { status: "ok"; data: SrsCard[] }
+  | { status: "ok"; data: SrsCard[]; totals: ModuleTotals }
   | { status: "error" };
+
+// 分母取自題庫本身。寫死的數字撐不過下一批資料落地——N4 上線後常數表裡
+// 沒有 N4 條目，分母會退回「已學卡數」，進度條永遠顯示 100%。
+function countByLevel(cards: { level: string }[]) {
+  return cards.reduce<Record<string, number>>((acc, c) => {
+    acc[c.level] = (acc[c.level] ?? 0) + 1;
+    return acc;
+  }, {});
+}
+
+async function loadTotals(): Promise<ModuleTotals> {
+  try {
+    const [vocab, grammar] = await Promise.all([
+      loadVocabulary(),
+      loadGrammar(),
+    ]);
+    return { vocab: countByLevel(vocab), grammar: countByLevel(grammar) };
+  } catch {
+    return { vocab: {}, grammar: {} };
+  }
+}
 
 function pct(a: number, b: number) {
   if (b === 0) return 0;
@@ -146,7 +166,9 @@ export default function ProgressPage() {
   useEffect(() => {
     db.srsCards
       .toArray()
-      .then((all) => setLoadState({ status: "ok", data: all }))
+      .then(async (all) =>
+        setLoadState({ status: "ok", data: all, totals: await loadTotals() }),
+      )
       .catch(() => setLoadState({ status: "error" }));
   }, []);
 
@@ -171,6 +193,7 @@ export default function ProgressPage() {
     );
 
   const all = loadState.data;
+  const totals = loadState.totals;
   const hiraganaCards = all.filter((c) => c.cardId.startsWith("kana-h-"));
   const katakanaCards = all.filter((c) => c.cardId.startsWith("kana-k-"));
 
@@ -268,7 +291,7 @@ export default function ProgressPage() {
           {JLPT_LEVELS.map((level) => {
             const cards = levelCards("vocab", level);
             if (cards.length === 0) return null;
-            const total = MODULE_TOTALS.vocab[level] ?? cards.length;
+            const total = totals.vocab[level] ?? cards.length;
             return (
               <ModuleBlock
                 key={level}
@@ -307,7 +330,7 @@ export default function ProgressPage() {
           {JLPT_LEVELS.map((level) => {
             const cards = levelCards("grammar", level);
             if (cards.length === 0) return null;
-            const total = MODULE_TOTALS.grammar[level] ?? cards.length;
+            const total = totals.grammar[level] ?? cards.length;
             return (
               <ModuleBlock
                 key={level}
