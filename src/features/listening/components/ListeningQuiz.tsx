@@ -3,6 +3,7 @@ import type { VocabCard } from '@/features/vocabulary/types'
 import { getOrCreateCard, saveCard } from '@/lib/db/db'
 import { review } from '@/lib/srs/sm2'
 import { speak } from '@/lib/tts/tts'
+import { shuffle, buildChoices as pickChoices } from '@/shared/buildChoices'
 import { useSettings } from '@/stores/useSettings'
 
 
@@ -38,19 +39,10 @@ function reducer(state: QuizState, action: QuizAction): QuizState {
   }
 }
 
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
-
-function buildChoices(correct: VocabCard, pool: VocabCard[]): VocabCard[] {
-  const wrong = shuffle(pool.filter((c) => c.id !== correct.id)).slice(0, 3)
-  return shuffle([correct, ...wrong])
-}
+// the question is the spoken reading, so two cards sharing one reading (早い /
+// 速い, 取る / 撮る) would sound identical and both be defensible
+const buildChoices = (correct: VocabCard, pool: VocabCard[]) =>
+  pickChoices(correct, pool, (c) => c.payload.reading)
 
 function buildRound(cards: VocabCard[], size: number): { deck: VocabCard[]; choices: VocabCard[] } {
   const deck = shuffle(cards).slice(0, size)

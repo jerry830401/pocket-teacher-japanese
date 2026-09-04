@@ -5,6 +5,7 @@ import { review } from '@/lib/srs/sm2'
 import { useSettings } from '@/stores/useSettings'
 import TeacherBubble from '@/shared/TeacherBubble'
 import { getQuizHint, getQuizMood, getQuizDoneHint, getQuizDoneMood } from '@/shared/teacherHints'
+import { shuffle, buildChoices as pickChoices } from '@/shared/buildChoices'
 
 
 type Mode = 'kana→romaji' | 'romaji→kana'
@@ -42,19 +43,8 @@ function reducer(state: QuizState, action: QuizAction): QuizState {
   }
 }
 
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
-
-function buildChoices(correct: KanaChar, pool: KanaChar[]): KanaChar[] {
-  const wrong = shuffle(pool.filter((c) => c.id !== correct.id)).slice(0, 3)
-  return shuffle([correct, ...wrong])
-}
+const buildChoices = (correct: KanaChar, pool: KanaChar[]) =>
+  pickChoices(correct, pool, (c) => c.romaji)
 
 function buildRound(chars: KanaChar[], size: number): { deck: KanaChar[]; choices: KanaChar[] } {
   const deck = shuffle(chars).slice(0, size)

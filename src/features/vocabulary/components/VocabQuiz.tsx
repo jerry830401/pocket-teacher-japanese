@@ -5,6 +5,7 @@ import { review } from '@/lib/srs/sm2'
 import { useSettings } from '@/stores/useSettings'
 import TeacherBubble from '@/shared/TeacherBubble'
 import { getQuizHint, getQuizMood, getQuizDoneHint, getQuizDoneMood } from '@/shared/teacherHints'
+import { shuffle, buildChoices as pickChoices } from '@/shared/buildChoices'
 
 
 interface Props {
@@ -39,19 +40,10 @@ function reducer(state: QuizState, action: QuizAction): QuizState {
   }
 }
 
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
-
-function buildChoices(correct: VocabCard, pool: VocabCard[]): VocabCard[] {
-  const wrong = shuffle(pool.filter((c) => c.id !== correct.id)).slice(0, 3)
-  return shuffle([correct, ...wrong])
-}
+// choices render the meaning, so a distractor with the same meaning would be a
+// second right-looking answer
+const buildChoices = (correct: VocabCard, pool: VocabCard[]) =>
+  pickChoices(correct, pool, (c) => c.payload.meaning)
 
 function buildRound(cards: VocabCard[], size: number): { deck: VocabCard[]; choices: VocabCard[] } {
   const deck = shuffle(cards).slice(0, size)

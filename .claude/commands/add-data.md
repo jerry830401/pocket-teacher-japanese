@@ -161,7 +161,8 @@ Grammar 規範：
 
 ## 步驟四：寫入
 
-把生成的陣列寫成暫存 JSON（例如 `tmp-add-data.json`），然後：
+**用 Write 工具**把生成的陣列寫成暫存 JSON（例如 `tmp-add-data.json`）。
+不要用 Bash heredoc——幾十筆以上的 JSON 會讓 heredoc 解析失敗（`unexpected EOF`）而且不會建檔。寫好後：
 
 ```bash
 node scripts/jlpt-data.mjs append <type> tmp-add-data.json
@@ -178,12 +179,13 @@ node scripts/jlpt-data.mjs append <type> tmp-add-data.json
 pnpm exec vitest run src/lib/data
 ```
 
-**這些規則已經由測試強制，不需要人工逐條檢查**：id 格式與唯一性、level 合法、`pos` 白名單、`reading` 純平假名、tag 白名單（vocab 與 grammar 兩層）、跨 level 的 word／sentence 去重、`___` 恰好一個、`sentenceRuby` 與 `sentence` 一致、`choices` 恰 4 個無重複、`answer` 在 `choices` 內。測試紅了就照訊息修，修到綠。
+**這些規則已經由測試強制，不需要人工逐條檢查**：id 格式與唯一性、level 合法、`pos` 白名單、`reading` 純平假名、tag 白名單（vocab 與 grammar 兩層）、跨 level 的 word／sentence 去重、同 level 的 meaning 去重、`___` 恰好一個、`sentenceRuby` 與 `sentence` 一致、`choices` 恰 4 個無重複、`answer` 在 `choices` 內。測試紅了就照訊息修，修到綠。
 
 **測試判不出來、必須自己逐條看的**：
 
 - [ ] **讀音正確**（食べる → たべる，不是 しょくべる）——機器只驗「是不是平假名」，不驗「對不對」
 - [ ] **意思符合該等級的常見用法**，不用罕見義項；`pos` 與詞義相符
+- [ ] **釋義要能區分**：同 level 內 `meaning` 字串完全相同會被測試擋下（quiz 按鈕印的就是 meaning）。真同義詞（危ない／危険な）要在釋義裡寫出差別，寫不出差別就別收第二個
 - [ ] **等級歸屬正確**，不要把 N3 的詞塞進 N5
 - [ ] **唯一解**：把每個干擾選項實際填回句子，確認它在該語境下真的是錯的。這是最常見的瑕疵——`に`／`へ`、`から`／`ので`、`上手`／`得意` 這類可互換的組合放在同一題，學習者選了正確答案卻被判錯。
 - [ ] **`meaning` 是填入 `answer` 後整句的翻譯**，不是題幹的翻譯

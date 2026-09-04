@@ -846,7 +846,7 @@
     "payload": {
       "word": "働く",
       "reading": "はたらく",
-      "meaning": "工作",
+      "meaning": "工作、勞動",
       "pos": "verb"
     },
     "tags": [
@@ -2935,7 +2935,7 @@
     "payload": {
       "word": "休む",
       "reading": "やすむ",
-      "meaning": "休息",
+      "meaning": "休息、請假",
       "pos": "verb"
     },
     "tags": [
@@ -4196,7 +4196,7 @@
     "payload": {
       "word": "仕事",
       "reading": "しごと",
-      "meaning": "工作",
+      "meaning": "工作、職務",
       "pos": "noun"
     },
     "tags": [
@@ -4877,7 +4877,7 @@
     "payload": {
       "word": "スポーツ",
       "reading": "すぽーつ",
-      "meaning": "運動",
+      "meaning": "體育、運動項目",
       "pos": "noun"
     },
     "tags": [
@@ -6378,7 +6378,7 @@
     "payload": {
       "word": "運動する",
       "reading": "うんどうする",
-      "meaning": "運動",
+      "meaning": "運動、鍛鍊身體",
       "pos": "verb"
     },
     "tags": [
@@ -9622,7 +9622,7 @@
     "payload": {
       "word": "休憩",
       "reading": "きゅうけい",
-      "meaning": "休息",
+      "meaning": "休息片刻、中場休息",
       "pos": "noun"
     },
     "tags": [
@@ -10983,20 +10983,6 @@
     ]
   },
   {
-    "id": "vocab-N5-770",
-    "type": "vocabulary",
-    "level": "N5",
-    "payload": {
-      "word": "にぎやかな",
-      "reading": "にぎやかな",
-      "meaning": "熱鬧的",
-      "pos": "na-adj"
-    },
-    "tags": [
-      "adjective"
-    ]
-  },
-  {
     "id": "vocab-N5-771",
     "type": "vocabulary",
     "level": "N5",
@@ -11682,7 +11668,7 @@
     "payload": {
       "word": "連絡する",
       "reading": "れんらくする",
-      "meaning": "聯絡、通知",
+      "meaning": "聯絡、通知對方",
       "pos": "verb"
     },
     "tags": [
@@ -11743,7 +11729,7 @@
     "payload": {
       "word": "比較する",
       "reading": "ひかくする",
-      "meaning": "比較",
+      "meaning": "拿來比較",
       "pos": "verb"
     },
     "tags": [
@@ -12016,7 +12002,7 @@
     "payload": {
       "word": "屋上",
       "reading": "おくじょう",
-      "meaning": "屋頂",
+      "meaning": "頂樓、天台",
       "pos": "noun"
     },
     "tags": [
@@ -12854,7 +12840,7 @@
     "payload": {
       "word": "連絡",
       "reading": "れんらく",
-      "meaning": "聯絡、通知",
+      "meaning": "聯繫、消息",
       "pos": "noun"
     },
     "tags": [
@@ -12898,7 +12884,7 @@
     "payload": {
       "word": "計画",
       "reading": "けいかく",
-      "meaning": "計畫",
+      "meaning": "計畫、方案",
       "pos": "noun"
     },
     "tags": [
@@ -13678,7 +13664,7 @@
     "payload": {
       "word": "表現する",
       "reading": "ひょうげんする",
-      "meaning": "表現、表達",
+      "meaning": "表達出來",
       "pos": "verb"
     },
     "tags": [
@@ -13982,7 +13968,7 @@
     "payload": {
       "word": "比較",
       "reading": "ひかく",
-      "meaning": "比較",
+      "meaning": "比較、對比",
       "pos": "noun"
     },
     "tags": [
@@ -13997,7 +13983,7 @@
     "payload": {
       "word": "表現",
       "reading": "ひょうげん",
-      "meaning": "表現、表達",
+      "meaning": "表達方式、說法",
       "pos": "noun"
     },
     "tags": [
@@ -14141,7 +14127,7 @@
     "payload": {
       "word": "問い合わせ",
       "reading": "といあわせ",
-      "meaning": "詢問、洽詢",
+      "meaning": "詢問、查詢",
       "pos": "noun"
     },
     "tags": [
@@ -14439,7 +14425,7 @@
     "payload": {
       "word": "相談する",
       "reading": "そうだんする",
-      "meaning": "商量、諮詢",
+      "meaning": "找人商量",
       "pos": "verb"
     },
     "tags": [
@@ -14485,7 +14471,7 @@
     "payload": {
       "word": "計画する",
       "reading": "けいかくする",
-      "meaning": "計畫",
+      "meaning": "擬定計畫",
       "pos": "verb"
     },
     "tags": [
@@ -14516,7 +14502,7 @@
     "payload": {
       "word": "生産する",
       "reading": "せいさんする",
-      "meaning": "生產",
+      "meaning": "生產製造",
       "pos": "verb"
     },
     "tags": [
@@ -17033,7 +17019,7 @@
     "payload": {
       "word": "生産",
       "reading": "せいさん",
-      "meaning": "生產",
+      "meaning": "生產、產量",
       "pos": "noun"
     },
     "tags": [
@@ -19329,7 +19315,7 @@
     "payload": {
       "word": "問い合わせる",
       "reading": "といあわせる",
-      "meaning": "詢問、洽詢",
+      "meaning": "向對方詢問",
       "pos": "verb"
     },
     "tags": [

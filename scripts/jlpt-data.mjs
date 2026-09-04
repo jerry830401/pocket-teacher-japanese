@@ -53,6 +53,11 @@ if (cmd === 'append') {
 
   const ids = new Set(cards.map((c) => c.id))
   const keys = new Map(cards.map((c) => [c.payload[key], c.id]))
+  // the quiz labels its buttons with the meaning, so same-level duplicates
+  // render as two identical options
+  const meanings = new Map(
+    type === 'vocab' ? cards.map((c) => [`${c.level}|${c.payload.meaning}`, c.id]) : [],
+  )
   const seq = {}
 
   for (const card of incoming) {
@@ -64,6 +69,12 @@ if (cmd === 'append') {
     if (ids.has(card.id)) die(`duplicate id ${card.id}`)
     const dup = keys.get(card.payload[key])
     if (dup) die(`duplicate ${key} "${card.payload[key]}" — already in ${dup}`)
+    if (type === 'vocab') {
+      const mk = `${card.level}|${card.payload.meaning}`
+      const dupMeaning = meanings.get(mk)
+      if (dupMeaning) die(`duplicate meaning "${card.payload.meaning}" in ${card.level} — already in ${dupMeaning}`)
+      meanings.set(mk, card.id)
+    }
     ids.add(card.id)
     keys.set(card.payload[key], card.id)
   }

@@ -85,6 +85,19 @@ describe('vocabulary.json', () => {
     }
   })
 
+  it('has no duplicate meanings within a level', () => {
+    // the quiz labels its buttons with the meaning, so two same-level cards
+    // sharing one meaning render as two identical options
+    const seen = new Map<string, string>()
+    for (const card of cards) {
+      const c = card as Record<string, unknown>
+      const key = `${c.level}|${(c.payload as Record<string, unknown>).meaning as string}`
+      const first = seen.get(key)
+      expect(first, `meaning "${key}" in ${c.id} duplicates ${first}`).toBeUndefined()
+      seen.set(key, c.id as string)
+    }
+  })
+
   it('has no duplicate words across all levels', () => {
     const seen = new Map<string, string>()
     for (const card of cards) {
