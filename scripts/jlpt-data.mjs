@@ -2,13 +2,18 @@
 // Helper for the /add-data workflow.
 //
 //   node scripts/jlpt-data.mjs stats  <vocab|grammar> [level]
-//   node scripts/jlpt-data.mjs show   <vocab|grammar> <last:N | id-range | level>
-//   node scripts/jlpt-data.mjs append <vocab|grammar> <new-entries.json>
+//   node scripts/jlpt-data.mjs show    <vocab|grammar> <last:N | id-range | level>
+//   node scripts/jlpt-data.mjs overlap <vocab> <last:N | id-range | level>
+//   node scripts/jlpt-data.mjs append  <vocab|grammar> <new-entries.json>
 //
 // `stats` prints only what generation needs (next id + every existing
 // word/sentence) so the 400KB data file never has to be read in full.
 // `show` prints the full payload of a selected slice, for the same reason:
 // reviewing 30 new entries should not mean reading 1400.
+// `overlap` finds same-level cards whose meanings share a term. buildChoices
+// only drops distractors whose answer key is byte-identical, so a partial
+// overlap ships two right-looking buttons — and the collision is usually
+// hundreds of entries away, where nobody reviewing a new batch would look.
 // `append` assigns ids, rejects collisions, and rewrites the file in place
 // keeping its 2-space + CRLF formatting.
 
@@ -49,10 +54,10 @@ if (cmd === 'stats') {
   process.exit(0)
 }
 
-if (cmd === 'show') {
-  if (!arg) die('show needs a selector: "last:N", "N5-401..N5-430", or a level like "N4"')
-  const last = arg.match(/^last:(\d+)$/)
-  const range = arg.match(/^(?:[a-z]+-)?(N[1-5])-(\d+)\.\.(?:[a-z]+-)?(?:N[1-5]-)?(\d+)$/)
+const select = (selector) => {
+  if (!selector) die('needs a selector: "last:N", "N5-401..N5-430", or a level like "N4"')
+  const last = selector.match(/^last:(\d+)$/)
+  const range = selector.match(/^(?:[a-z]+-)?(N[1-5])-(\d+)\.\.(?:[a-z]+-)?(?:N[1-5]-)?(\d+)$/)
   let picked
   if (last) {
     picked = cards.slice(-Number(last[1]))
@@ -62,13 +67,65 @@ if (cmd === 'show') {
       const [, lv, seq] = c.id.split('-')
       return lv === level && Number(seq) >= Number(from) && Number(seq) <= Number(to)
     })
-  } else if (/^N[1-5]$/.test(arg)) {
-    picked = cards.filter((c) => c.level === arg)
+  } else if (/^N[1-5]$/.test(selector)) {
+    picked = cards.filter((c) => c.level === selector)
   } else {
-    die(`unrecognised selector "${arg}" — use "last:N", "N5-401..N5-430", or a level`)
+    die(`unrecognised selector "${selector}" — use "last:N", "N5-401..N5-430", or a level`)
   }
-  if (!picked.length) die(`selector "${arg}" matched no entries`)
-  console.log(JSON.stringify(picked, null, 2))
+  if (!picked.length) die(`selector "${selector}" matched no entries`)
+  return picked
+}
+
+if (cmd === 'show') {
+  console.log(JSON.stringify(select(arg), null, 2))
+  process.exit(0)
+}
+
+if (cmd === 'overlap') {
+  if (type !== 'vocab') die('overlap applies to vocab only — grammar cards carry their own choices')
+  const picked = select(arg)
+
+  // A learner reads the whole meaning string off the button, so two cards clash
+  // when they share a listed sense. A parenthetical qualifier resolves the clash
+  // only if BOTH sides carry one: "危險的（口語）" beside a bare "危險的" still
+  // leaves the bare button looking correct.
+  const senses = (meaning) => meaning.split(/[、,，/／]/).map((t) => t.trim()).filter(Boolean)
+  const stem = (sense) => sense.replace(/[（(][^）)]*[）)]/g, '').trim()
+  const qualified = (sense) => sense !== stem(sense)
+
+  const byLevel = new Map()
+  for (const c of cards) {
+    if (!byLevel.has(c.level)) byLevel.set(c.level, [])
+    byLevel.get(c.level).push(c)
+  }
+
+  const seen = new Set()
+  const hits = []
+  for (const card of picked) {
+    for (const other of byLevel.get(card.level)) {
+      if (other.id === card.id) continue
+      const pair = [card.id, other.id].sort().join(' ')
+      if (seen.has(pair)) continue
+      for (const a of senses(card.payload.meaning)) {
+        for (const b of senses(other.payload.meaning)) {
+          let level = null
+          if (a === b) level = 'HIGH'
+          else if (stem(a) === stem(b) && !(qualified(a) && qualified(b))) level = 'MED '
+          if (!level) continue
+          seen.add(pair)
+          hits.push(
+            `${level} ${card.id} ${card.payload.word}「${card.payload.meaning}」\n` +
+            `     ↔ ${other.id} ${other.payload.word}「${other.payload.meaning}」  共用「${a === b ? a : stem(a)}」`,
+          )
+        }
+      }
+    }
+  }
+
+  console.log(hits.length ? hits.join('\n') : 'no overlapping meanings')
+  console.log(`\n--- ${picked.length} entries checked, ${hits.length} overlap(s) ---`)
+  console.log('HIGH = identical sense (two identical-looking buttons)')
+  console.log('MED  = same sense, only one side qualified — qualify both, or reword one')
   process.exit(0)
 }
 
@@ -112,4 +169,4 @@ if (cmd === 'append') {
   process.exit(0)
 }
 
-die('command must be "stats", "show" or "append"')
+die('command must be "stats", "show", "overlap" or "append"')

@@ -181,7 +181,13 @@ pnpm exec vitest run src/lib/data
 
 **這些規則已經由測試強制，不需要人工逐條檢查**：id 格式與唯一性、level 合法、`pos` 白名單、`reading` 純平假名、tag 白名單（vocab 與 grammar 兩層）、跨 level 的 word／sentence 去重、同 level 的 meaning 去重、`___` 恰好一個、`sentenceRuby` 與 `sentence` 一致、`choices` 恰 4 個無重複、`answer` 在 `choices` 內。測試紅了就照訊息修，修到綠。
 
-**測試判不出來的部分，交給 `data-reviewer` subagent 審**：
+釋義撞車再多跑一道機械檢查（`meaning` 部分重疊不會被測試擋下，但 quiz 會出現兩個都對的按鈕）：
+
+```bash
+node scripts/jlpt-data.mjs overlap vocab last:<count>
+```
+
+**其餘測試判不出來的部分，交給 `data-reviewer` subagent 審**：
 
 ```
 用 data-reviewer 審 <type> 最後 <count> 筆

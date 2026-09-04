@@ -2554,7 +2554,7 @@
     "payload": {
       "word": "早い",
       "reading": "はやい",
-      "meaning": "早的/快的",
+      "meaning": "早的（時間）",
       "pos": "i-adj"
     },
     "tags": [
@@ -2845,7 +2845,7 @@
     "payload": {
       "word": "危険な",
       "reading": "きけんな",
-      "meaning": "危險的",
+      "meaning": "危險的（正式、書面）",
       "pos": "na-adj"
     },
     "tags": [
@@ -23007,7 +23007,7 @@
     "payload": {
       "word": "危ない",
       "reading": "あぶない",
-      "meaning": "危險的、快要出事的",
+      "meaning": "危險的（口語）、快要出事的",
       "pos": "i-adj"
     },
     "tags": [
@@ -23080,7 +23080,7 @@
     "payload": {
       "word": "よく",
       "reading": "よく",
-      "meaning": "經常、好好地",
+      "meaning": "時常、仔細地",
       "pos": "adverb"
     },
     "tags": [
@@ -23094,7 +23094,7 @@
     "payload": {
       "word": "たいてい",
       "reading": "たいてい",
-      "meaning": "大概、通常",
+      "meaning": "通常、大多",
       "pos": "adverb"
     },
     "tags": [
@@ -23108,7 +23108,7 @@
     "payload": {
       "word": "ぜひ",
       "reading": "ぜひ",
-      "meaning": "務必、一定",
+      "meaning": "務必、無論如何（表請求或願望）",
       "pos": "adverb"
     },
     "tags": [
@@ -23137,7 +23137,7 @@
     "payload": {
       "word": "もうすぐ",
       "reading": "もうすぐ",
-      "meaning": "快要、馬上",
+      "meaning": "不久後、快要…了",
       "pos": "adverb"
     },
     "tags": [
@@ -23238,8 +23238,8 @@
     "payload": {
       "word": "どちら",
       "reading": "どちら",
-      "meaning": "哪一個、哪邊",
-      "pos": "adverb"
+      "meaning": "哪一位、哪一邊（禮貌說法）",
+      "pos": "noun"
     },
     "tags": [
       "question",
