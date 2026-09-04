@@ -7372,29 +7372,6 @@
     ]
   },
   {
-    "id": "grammar-N4-172",
-    "type": "grammar",
-    "level": "N4",
-    "payload": {
-      "sentence": "音楽を聴き___、勉強します。",
-      "answer": "ながら",
-      "choices": [
-        "ながら",
-        "てから",
-        "つつ",
-        "まま"
-      ],
-      "meaning": "一邊聽音樂一邊學習。",
-      "grammar": "〜ながら（同時動作）：表示兩個動作同時進行",
-      "sentenceRuby": "<ruby>音楽<rt>おんがく</rt></ruby>を<ruby>聴<rt>き</rt></ruby>き___、<ruby>勉強<rt>べんきょう</rt></ruby>します。"
-    },
-    "tags": [
-      "sentence-pattern",
-      "simultaneous",
-      "ながら"
-    ]
-  },
-  {
     "id": "grammar-N4-173",
     "type": "grammar",
     "level": "N4",
