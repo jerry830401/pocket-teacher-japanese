@@ -2,10 +2,13 @@
 // Helper for the /add-data workflow.
 //
 //   node scripts/jlpt-data.mjs stats  <vocab|grammar> [level]
+//   node scripts/jlpt-data.mjs show   <vocab|grammar> <last:N | id-range | level>
 //   node scripts/jlpt-data.mjs append <vocab|grammar> <new-entries.json>
 //
 // `stats` prints only what generation needs (next id + every existing
 // word/sentence) so the 400KB data file never has to be read in full.
+// `show` prints the full payload of a selected slice, for the same reason:
+// reviewing 30 new entries should not mean reading 1400.
 // `append` assigns ids, rejects collisions, and rewrites the file in place
 // keeping its 2-space + CRLF formatting.
 
@@ -43,6 +46,29 @@ if (cmd === 'stats') {
   }
   console.log(`\n--- existing ${key}s (all levels, ${cards.length} total) ---`)
   console.log(cards.map((c) => c.payload[key]).join(type === 'vocab' ? ' ' : '\n'))
+  process.exit(0)
+}
+
+if (cmd === 'show') {
+  if (!arg) die('show needs a selector: "last:N", "N5-401..N5-430", or a level like "N4"')
+  const last = arg.match(/^last:(\d+)$/)
+  const range = arg.match(/^(?:[a-z]+-)?(N[1-5])-(\d+)\.\.(?:[a-z]+-)?(?:N[1-5]-)?(\d+)$/)
+  let picked
+  if (last) {
+    picked = cards.slice(-Number(last[1]))
+  } else if (range) {
+    const [, level, from, to] = range
+    picked = cards.filter((c) => {
+      const [, lv, seq] = c.id.split('-')
+      return lv === level && Number(seq) >= Number(from) && Number(seq) <= Number(to)
+    })
+  } else if (/^N[1-5]$/.test(arg)) {
+    picked = cards.filter((c) => c.level === arg)
+  } else {
+    die(`unrecognised selector "${arg}" — use "last:N", "N5-401..N5-430", or a level`)
+  }
+  if (!picked.length) die(`selector "${arg}" matched no entries`)
+  console.log(JSON.stringify(picked, null, 2))
   process.exit(0)
 }
 
@@ -86,4 +112,4 @@ if (cmd === 'append') {
   process.exit(0)
 }
 
-die('command must be "stats" or "append"')
+die('command must be "stats", "show" or "append"')

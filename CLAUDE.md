@@ -4,7 +4,7 @@ A frontend-only React web app for learning Japanese. Users practice 五十音, J
 
 ## Status
 
-N5 complete (kana + vocabulary 500 entries + grammar 200 entries, listening, SRS review, weak-card review, offline PWA). Higher JLPT levels (N4–N1) are planned but not yet populated; designs must keep them in mind.
+N5 complete (kana, listening, SRS review, weak-card review, offline PWA). N4 content is well underway. Content counts drift as data lands — run `node scripts/jlpt-data.mjs stats <vocab|grammar>` for the current per-level numbers rather than trusting a figure written here. N3–N1 are planned but not yet populated; designs must keep them in mind.
 
 ## Stack
 
