@@ -4,6 +4,15 @@
   "version": "0.0.3",
   "description": "Pocket Teacher Japanese — a frontend-only React web app for learning Japanese (kana, vocab, kanji, grammar, listening).",
   "type": "module",
+  "packageManager": "pnpm@10.28.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build && node scripts/build-sw.js",

@@ -4,8 +4,8 @@
 
 | Layer | Runner | Command | Coverage |
 |-------|--------|---------|----------|
-| Unit / component | Vitest | `npx vitest run` | SM-2 algorithm (`src/lib/srs/sm2.test.ts`), grammar quiz, progress page |
-| E2E | Playwright | `npx playwright test` | All pages — learn, quiz (五十音/vocab/grammar/listening), review, settings, navigation |
+| Unit / component | Vitest | `pnpm exec vitest run` | SM-2 algorithm (`src/lib/srs/sm2.test.ts`), grammar quiz, progress page |
+| E2E | Playwright | `pnpm exec playwright test` | All pages — learn, quiz (五十音/vocab/grammar/listening), review, settings, navigation |
 
 ## Playwright setup
 
@@ -17,7 +17,7 @@ Config: `playwright.config.ts`
 
 ## PWA / Offline
 
-Test PWA locally with `npm run preview` — the dev server does not register the service worker.
+Test PWA locally with `pnpm run preview` — the dev server does not register the service worker.
 
 ## Writing e2e tests
 

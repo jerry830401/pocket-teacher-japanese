@@ -1,0 +1,9 @@
+# 專案工具鏈版本（proto: https://moonrepo.dev/proto）
+# 進入此目錄時 proto shim 會自動套用以下版本，覆寫全域 ~/.proto/.prototools。
+# 首次設定或版本變更後執行：proto use
+node = "22.22.0"
+pnpm = "10.28.0"
+
+[settings]
+# 遇到未安裝的版本時自動下載，避免新機器手動 proto install
+auto-install = true

@@ -20,11 +20,11 @@ N5 complete (kana + vocabulary 500 entries + grammar 200 entries, listening, SRS
 
 | Command | What it does |
 |---|---|
-| `npm run dev` | Vite dev server (http://localhost:5173) |
-| `npm run build` | Type-check (`tsc -b`), production build, then generate `dist/sw.js` via Workbox |
-| `npm run lint` | ESLint over the project |
-| `npm run preview` | Serve the production build locally |
-| `npm run deploy` | 發佈到 GitHub Pages，發佈前執行完整防呆檢查（分支、乾淨工作區、遠端同步、Node 版本、node_modules）|
+| `pnpm run dev` | Vite dev server (http://localhost:5173) |
+| `pnpm run build` | Type-check (`tsc -b`), production build, then generate `dist/sw.js` via Workbox |
+| `pnpm run lint` | ESLint over the project |
+| `pnpm run preview` | Serve the production build locally |
+| `pnpm run deploy` | 發佈到 GitHub Pages，發佈前執行完整防呆檢查（分支、乾淨工作區、遠端同步、Node 版本、node_modules）|
 
 ## Project structure
 
@@ -68,8 +68,8 @@ All cards implement the shared `Card` interface: `{ id, type, level, payload, ta
 
 ## Testing
 
-- Unit / component: `npx vitest run`
-- E2E: `npx playwright test` (Desktop Chrome, dev server auto-starts)
+- Unit / component: `pnpm exec vitest run`
+- E2E: `pnpm exec playwright test` (Desktop Chrome, dev server auto-starts)
 - Details and selector conventions: `docs/testing.md`
 
 ## Architecture

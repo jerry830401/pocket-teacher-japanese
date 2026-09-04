@@ -84,7 +84,7 @@ Python 驗證無重複 ID
 skill 執行完後建議用瀏覽器確認顯示正常：
 
 ```bash
-npm run dev
+pnpm run dev
 ```
 
 開啟 http://localhost:5173，進入「學習」→ 切換到對應等級，確認新資料出現且顯示正確。

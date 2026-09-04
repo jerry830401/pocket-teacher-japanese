@@ -12,23 +12,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
-      - uses: actions/setup-node@v4
-        env:
-          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      # Node 與 pnpm 版本一律來自 .prototools，不在此處重複宣告
+      - uses: moonrepo/setup-toolchain@v0
         with:
-          node-version: 22
-          cache: npm
+          auto-install: true
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
-      - run: npm run lint
+      - run: pnpm run lint
 
-      - run: npx vitest run
+      - run: pnpm exec vitest run
 
-      - run: npm run build
+      - run: pnpm run build
 
       - uses: peaceiris/actions-gh-pages@v4
         with:

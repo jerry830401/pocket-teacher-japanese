@@ -13,16 +13,27 @@
 
 > 不在範圍：口說 / 發音評分、後端服務、跨裝置同步。
 
+## 環境需求
+
+工具鏈版本由 [proto](https://moonrepo.dev/proto) 的 `.prototools` 統一管理（Node 22.22.0、pnpm 10.28.0）。
+
+```bash
+proto install   # 依 .prototools 安裝指定版本
+proto status    # 確認目前解析到的版本
+```
+
+未安裝 proto 時請自備 Node 22.x。
+
 ## 開發指令
 
 | 指令              | 用途                                    |
 | ----------------- | --------------------------------------- |
-| `npm install`     | 安裝依賴                                |
-| `npm run dev`     | 啟動開發伺服器（http://localhost:5173） |
-| `npm run build`   | 型別檢查 + production build + 產生 sw.js |
-| `npm run lint`    | ESLint 檢查                              |
-| `npm run preview` | 預覽 production build（可測試 PWA/SW）   |
-| `npm run deploy`  | 部署到 GitHub Pages                      |
+| `pnpm install`       | 安裝依賴                                |
+| `pnpm run dev`     | 啟動開發伺服器（http://localhost:5173） |
+| `pnpm run build`   | 型別檢查 + production build + 產生 sw.js |
+| `pnpm run lint`    | ESLint 檢查                              |
+| `pnpm run preview` | 預覽 production build（可測試 PWA/SW）   |
+| `pnpm run deploy`  | 部署到 GitHub Pages                      |
 
 ## 技術棧
 

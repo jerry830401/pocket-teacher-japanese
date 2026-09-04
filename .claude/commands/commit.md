@@ -26,9 +26,9 @@
    - 若使用者提供新的 message，使用使用者提供的版本
 
 4. **執行前品質檢查**
-   - `npm run lint` — 若有錯誤，列出問題並中止，不繼續 commit
-   - `npx vitest run` — 若有測試失敗，列出失敗的測試並中止，不繼續 commit
-   - `npx playwright test` — 若有 e2e 測試失敗，列出失敗的測試並中止，不繼續 commit
+   - `pnpm run lint` — 若有錯誤，列出問題並中止，不繼續 commit
+   - `pnpm exec vitest run` — 若有測試失敗，列出失敗的測試並中止，不繼續 commit
+   - `pnpm exec playwright test` — 若有 e2e 測試失敗，列出失敗的測試並中止，不繼續 commit
    - 三項全數通過後才繼續
 
 5. **執行 commit**

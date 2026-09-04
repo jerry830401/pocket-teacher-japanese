@@ -8,13 +8,13 @@
    - 若有未暫存或暫存的變更，告知使用者後中止
 
 2. **執行測試**
-   - `npm test`
+   - `pnpm test`
    - 測試失敗時中止，不進行版本推進
 
 3. **推進版本**
-   - 用 `npm version <patch|minor|major> --no-git-tag-version` 更新 `package.json`
+   - 用 `pnpm version <patch|minor|major> --no-git-tag-version` 更新 `package.json`
    - 讀取新版本號（`node -p "require('./package.json').version"`）
-   - `git add package.json package-lock.json`
+   - `git add package.json`
    - `git commit -m "chore: bump version to v<NEW_VERSION>"`
    - `git tag v<NEW_VERSION>`
 

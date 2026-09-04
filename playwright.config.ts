@@ -18,7 +18,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'npm run dev',
+    command: 'pnpm run dev',
     url: 'http://localhost:5173/pocket-teacher-japanese/',
     reuseExistingServer: !process.env.CI,
   },

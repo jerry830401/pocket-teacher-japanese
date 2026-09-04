@@ -32,7 +32,7 @@ allowed-tools: Read, Write, Edit, Bash
    - 在 `src/shared/Layout.tsx` 的 `navItems` 加入繁中導覽標籤
 
 5. **驗證**
-   - 執行 `npm run build`
+   - 執行 `pnpm run build`
    - 若有 TS 錯誤請修正後再回報
 
 完成後告訴我下一步可以怎麼繼續（例如：「可以開始在 `$ARGUMENTS/components/` 裡實作 UI」）。

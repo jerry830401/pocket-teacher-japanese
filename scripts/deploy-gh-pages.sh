@@ -33,22 +33,25 @@ REMOTE=$(git rev-parse origin/main)
 [ "$LOCAL" = "$REMOTE" ] || fail "本地 main 與 origin/main 不同步，請先 git pull。"
 pass "本地與遠端同步"
 
-# 4. 確認 Node.js 版本 >= 18
-NODE_MAJOR=$(node -e "process.stdout.write(String(process.versions.node.split('.')[0]))")
-[ "$NODE_MAJOR" -ge 18 ] || fail "需要 Node.js >= 18，目前是 $(node -v)。"
-pass "Node.js $(node -v)"
+# 4. 確認 Node.js 版本與 .prototools 一致
+EXPECTED_NODE=$(grep -m1 '^node' .prototools | cut -d'"' -f2)
+[ -n "$EXPECTED_NODE" ] || fail ".prototools 未指定 node 版本。"
+ACTUAL_NODE=$(node -e "process.stdout.write(process.versions.node)")
+[ "$ACTUAL_NODE" = "$EXPECTED_NODE" ] || fail "需要 Node.js $EXPECTED_NODE（.prototools），目前是 v$ACTUAL_NODE。請執行 proto install。"
+pass "Node.js v$ACTUAL_NODE"
 
-# 5. 確認相依套件已安裝（node_modules 存在且 package-lock.json 未變動）
-[ -d "node_modules" ] || fail "node_modules 不存在，請先執行 npm install。"
-pass "node_modules 存在"
+# 5. 確認相依套件已安裝且與 lockfile 一致
+[ -d "node_modules" ] || fail "node_modules 不存在，請先執行 pnpm install。"
+pnpm install --frozen-lockfile --prefer-offline >/dev/null || fail "相依套件與 pnpm-lock.yaml 不一致，請執行 pnpm install。"
+pass "相依套件與 pnpm-lock.yaml 一致"
 
 echo ""
 echo "=== 開始打包 ==="
-npm run build
+pnpm run build
 
 echo ""
 echo "=== 推送到 GitHub Pages ==="
-npx gh-pages -d dist -b gh-pages
+pnpm exec gh-pages -d dist -b gh-pages
 
 echo ""
 pass "部署完成！網址：https://jerry830401.github.io/pocket-teacher-japanese/"

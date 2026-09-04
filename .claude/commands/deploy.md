@@ -13,14 +13,14 @@
    - 確認 `node_modules` 存在
 
 2. **執行測試**
-   - `npm test`
+   - `pnpm test`
    - 測試失敗時中止，不進行部署
 
 3. **打包**
-   - `npm run build`
+   - `pnpm run build`
 
 4. **推送到 GitHub Pages**
-   - `npx gh-pages -d dist -b gh-pages`
+   - `pnpm exec gh-pages -d dist -b gh-pages`
 
 5. **回報結果**
    - 顯示部署完成，並印出網址：`https://jerry830401.github.io/pocket-teacher-japanese/`
