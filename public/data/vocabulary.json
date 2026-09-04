@@ -2015,7 +2015,7 @@
     "payload": {
       "word": "机",
       "reading": "つくえ",
-      "meaning": "桌子",
+      "meaning": "書桌",
       "pos": "noun"
     },
     "tags": [
@@ -21825,5 +21825,1440 @@
       "adjective",
       "school"
     ]
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "四つ",
+      "reading": "よっつ",
+      "meaning": "四個",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ],
+    "id": "vocab-N5-801"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "五つ",
+      "reading": "いつつ",
+      "meaning": "五個",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ],
+    "id": "vocab-N5-802"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "六つ",
+      "reading": "むっつ",
+      "meaning": "六個",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ],
+    "id": "vocab-N5-803"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "七つ",
+      "reading": "ななつ",
+      "meaning": "七個",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ],
+    "id": "vocab-N5-804"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "八つ",
+      "reading": "やっつ",
+      "meaning": "八個",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ],
+    "id": "vocab-N5-805"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "九つ",
+      "reading": "ここのつ",
+      "meaning": "九個",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ],
+    "id": "vocab-N5-806"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜歳",
+      "reading": "〜さい",
+      "meaning": "〜歲（年齡助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "person"
+    ],
+    "id": "vocab-N5-807"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜円",
+      "reading": "〜えん",
+      "meaning": "〜日圓（金額單位）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number",
+      "shopping"
+    ],
+    "id": "vocab-N5-808"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜回",
+      "reading": "〜かい",
+      "meaning": "〜次（次數助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ],
+    "id": "vocab-N5-809"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜個",
+      "reading": "〜こ",
+      "meaning": "〜個（物品助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "number"
+    ],
+    "id": "vocab-N5-810"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "一昨日",
+      "reading": "おととい",
+      "meaning": "前天",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
+    ],
+    "id": "vocab-N5-811"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "明後日",
+      "reading": "あさって",
+      "meaning": "後天",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
+    ],
+    "id": "vocab-N5-812"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "今夜",
+      "reading": "こんや",
+      "meaning": "今夜、今天晚上",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
+    ],
+    "id": "vocab-N5-813"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜週間",
+      "reading": "〜しゅうかん",
+      "meaning": "〜週（期間助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "number"
+    ],
+    "id": "vocab-N5-814"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "〜か月",
+      "reading": "〜かげつ",
+      "meaning": "〜個月（期間助數詞）",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "number"
+    ],
+    "id": "vocab-N5-815"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "夏休み",
+      "reading": "なつやすみ",
+      "meaning": "暑假",
+      "pos": "noun"
+    },
+    "tags": [
+      "time",
+      "school"
+    ],
+    "id": "vocab-N5-816"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "休み",
+      "reading": "やすみ",
+      "meaning": "休息、休假",
+      "pos": "noun"
+    },
+    "tags": [
+      "time"
+    ],
+    "id": "vocab-N5-817"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "おじさん",
+      "reading": "おじさん",
+      "meaning": "伯父、叔叔",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ],
+    "id": "vocab-N5-818"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "おばさん",
+      "reading": "おばさん",
+      "meaning": "伯母、阿姨",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ],
+    "id": "vocab-N5-819"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "息子",
+      "reading": "むすこ",
+      "meaning": "兒子",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ],
+    "id": "vocab-N5-820"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "娘",
+      "reading": "むすめ",
+      "meaning": "女兒",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ],
+    "id": "vocab-N5-821"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "両親",
+      "reading": "りょうしん",
+      "meaning": "父母、雙親",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ],
+    "id": "vocab-N5-822"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "兄弟",
+      "reading": "きょうだい",
+      "meaning": "兄弟姊妹",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ],
+    "id": "vocab-N5-823"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "親",
+      "reading": "おや",
+      "meaning": "父母、家長",
+      "pos": "noun"
+    },
+    "tags": [
+      "family"
+    ],
+    "id": "vocab-N5-824"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "顔",
+      "reading": "かお",
+      "meaning": "臉",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ],
+    "id": "vocab-N5-825"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "髪",
+      "reading": "かみ",
+      "meaning": "頭髮",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ],
+    "id": "vocab-N5-826"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "歯",
+      "reading": "は",
+      "meaning": "牙齒",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ],
+    "id": "vocab-N5-827"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "体",
+      "reading": "からだ",
+      "meaning": "身體",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ],
+    "id": "vocab-N5-828"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "声",
+      "reading": "こえ",
+      "meaning": "聲音（人或動物發出的）",
+      "pos": "noun"
+    },
+    "tags": [
+      "body"
+    ],
+    "id": "vocab-N5-829"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "お菓子",
+      "reading": "おかし",
+      "meaning": "點心、零食",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ],
+    "id": "vocab-N5-830"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "紅茶",
+      "reading": "こうちゃ",
+      "meaning": "紅茶",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ],
+    "id": "vocab-N5-831"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "味",
+      "reading": "あじ",
+      "meaning": "味道",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ],
+    "id": "vocab-N5-832"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "食事",
+      "reading": "しょくじ",
+      "meaning": "用餐、餐點",
+      "pos": "noun"
+    },
+    "tags": [
+      "food"
+    ],
+    "id": "vocab-N5-833"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "お湯",
+      "reading": "おゆ",
+      "meaning": "熱水",
+      "pos": "noun"
+    },
+    "tags": [
+      "food",
+      "home"
+    ],
+    "id": "vocab-N5-834"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "町",
+      "reading": "まち",
+      "meaning": "城鎮",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ],
+    "id": "vocab-N5-835"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "村",
+      "reading": "むら",
+      "meaning": "村莊",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ],
+    "id": "vocab-N5-836"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "島",
+      "reading": "しま",
+      "meaning": "島",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "nature"
+    ],
+    "id": "vocab-N5-837"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "本屋",
+      "reading": "ほんや",
+      "meaning": "書店",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "shopping"
+    ],
+    "id": "vocab-N5-838"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "花屋",
+      "reading": "はなや",
+      "meaning": "花店",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "shopping"
+    ],
+    "id": "vocab-N5-839"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "八百屋",
+      "reading": "やおや",
+      "meaning": "蔬果店",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "shopping"
+    ],
+    "id": "vocab-N5-840"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "パン屋",
+      "reading": "ぱんや",
+      "meaning": "麵包店",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "shopping"
+    ],
+    "id": "vocab-N5-841"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "喫茶店",
+      "reading": "きっさてん",
+      "meaning": "咖啡廳",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "food"
+    ],
+    "id": "vocab-N5-842"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "交番",
+      "reading": "こうばん",
+      "meaning": "派出所",
+      "pos": "noun"
+    },
+    "tags": [
+      "place"
+    ],
+    "id": "vocab-N5-843"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "映画館",
+      "reading": "えいがかん",
+      "meaning": "電影院",
+      "pos": "noun"
+    },
+    "tags": [
+      "place",
+      "hobby"
+    ],
+    "id": "vocab-N5-844"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "大学",
+      "reading": "だいがく",
+      "meaning": "大學",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "place"
+    ],
+    "id": "vocab-N5-845"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "生徒",
+      "reading": "せいと",
+      "meaning": "學生（中小學）",
+      "pos": "noun"
+    },
+    "tags": [
+      "school",
+      "person"
+    ],
+    "id": "vocab-N5-846"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "クラス",
+      "reading": "くらす",
+      "meaning": "班級",
+      "pos": "noun"
+    },
+    "tags": [
+      "school"
+    ],
+    "id": "vocab-N5-847"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ベッド",
+      "reading": "べっど",
+      "meaning": "床",
+      "pos": "noun"
+    },
+    "tags": [
+      "home"
+    ],
+    "id": "vocab-N5-848"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "テーブル",
+      "reading": "てーぶる",
+      "meaning": "餐桌",
+      "pos": "noun"
+    },
+    "tags": [
+      "home"
+    ],
+    "id": "vocab-N5-849"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "カーテン",
+      "reading": "かーてん",
+      "meaning": "窗簾",
+      "pos": "noun"
+    },
+    "tags": [
+      "home"
+    ],
+    "id": "vocab-N5-850"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ナイフ",
+      "reading": "ないふ",
+      "meaning": "刀子",
+      "pos": "noun"
+    },
+    "tags": [
+      "home"
+    ],
+    "id": "vocab-N5-851"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ストーブ",
+      "reading": "すとーぶ",
+      "meaning": "暖爐",
+      "pos": "noun"
+    },
+    "tags": [
+      "home"
+    ],
+    "id": "vocab-N5-852"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "エアコン",
+      "reading": "えあこん",
+      "meaning": "冷氣機",
+      "pos": "noun"
+    },
+    "tags": [
+      "home"
+    ],
+    "id": "vocab-N5-853"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "シャワー",
+      "reading": "しゃわー",
+      "meaning": "淋浴",
+      "pos": "noun"
+    },
+    "tags": [
+      "home"
+    ],
+    "id": "vocab-N5-854"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "石鹸",
+      "reading": "せっけん",
+      "meaning": "肥皂",
+      "pos": "noun"
+    },
+    "tags": [
+      "home"
+    ],
+    "id": "vocab-N5-855"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "上着",
+      "reading": "うわぎ",
+      "meaning": "外套、上衣",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ],
+    "id": "vocab-N5-856"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "下着",
+      "reading": "したぎ",
+      "meaning": "內衣",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ],
+    "id": "vocab-N5-857"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ネクタイ",
+      "reading": "ねくたい",
+      "meaning": "領帶",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ],
+    "id": "vocab-N5-858"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ハンカチ",
+      "reading": "はんかち",
+      "meaning": "手帕",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ],
+    "id": "vocab-N5-859"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "めがね",
+      "reading": "めがね",
+      "meaning": "眼鏡",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ],
+    "id": "vocab-N5-860"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "靴下",
+      "reading": "くつした",
+      "meaning": "襪子",
+      "pos": "noun"
+    },
+    "tags": [
+      "clothing"
+    ],
+    "id": "vocab-N5-861"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "言う",
+      "reading": "いう",
+      "meaning": "說",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ],
+    "id": "vocab-N5-862"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "死ぬ",
+      "reading": "しぬ",
+      "meaning": "死",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "health"
+    ],
+    "id": "vocab-N5-863"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "習う",
+      "reading": "ならう",
+      "meaning": "學習（向人學）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "school"
+    ],
+    "id": "vocab-N5-864"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "通う",
+      "reading": "かよう",
+      "meaning": "通勤、通學",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "transport"
+    ],
+    "id": "vocab-N5-865"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "飛ぶ",
+      "reading": "とぶ",
+      "meaning": "飛",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ],
+    "id": "vocab-N5-866"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "登る",
+      "reading": "のぼる",
+      "meaning": "攀登、爬上",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "nature"
+    ],
+    "id": "vocab-N5-867"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "吹く",
+      "reading": "ふく",
+      "meaning": "吹（風）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "weather"
+    ],
+    "id": "vocab-N5-868"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "弾く",
+      "reading": "ひく",
+      "meaning": "彈奏（樂器）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "hobby"
+    ],
+    "id": "vocab-N5-869"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "歌う",
+      "reading": "うたう",
+      "meaning": "唱歌",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "hobby"
+    ],
+    "id": "vocab-N5-870"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "踊る",
+      "reading": "おどる",
+      "meaning": "跳舞",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "hobby"
+    ],
+    "id": "vocab-N5-871"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "返す",
+      "reading": "かえす",
+      "meaning": "歸還、退還",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ],
+    "id": "vocab-N5-872"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "撮る",
+      "reading": "とる",
+      "meaning": "拍攝",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "hobby"
+    ],
+    "id": "vocab-N5-873"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "かぶる",
+      "reading": "かぶる",
+      "meaning": "戴（帽子）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "clothing"
+    ],
+    "id": "vocab-N5-874"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "消す",
+      "reading": "けす",
+      "meaning": "關掉、擦掉",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ],
+    "id": "vocab-N5-875"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "掛ける",
+      "reading": "かける",
+      "meaning": "掛上、打（電話）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ],
+    "id": "vocab-N5-876"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "締める",
+      "reading": "しめる",
+      "meaning": "繫緊、勒緊",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "clothing"
+    ],
+    "id": "vocab-N5-877"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "出かける",
+      "reading": "でかける",
+      "meaning": "外出",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ],
+    "id": "vocab-N5-878"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "吸う",
+      "reading": "すう",
+      "meaning": "吸、抽（菸）",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ],
+    "id": "vocab-N5-879"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "手伝う",
+      "reading": "てつだう",
+      "meaning": "幫忙",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb"
+    ],
+    "id": "vocab-N5-880"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "間に合う",
+      "reading": "まにあう",
+      "meaning": "來得及、趕上",
+      "pos": "verb"
+    },
+    "tags": [
+      "verb",
+      "time"
+    ],
+    "id": "vocab-N5-881"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "低い",
+      "reading": "ひくい",
+      "meaning": "低的、矮的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "size"
+    ],
+    "id": "vocab-N5-882"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "汚い",
+      "reading": "きたない",
+      "meaning": "髒的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "adjective"
+    ],
+    "id": "vocab-N5-883"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "危ない",
+      "reading": "あぶない",
+      "meaning": "危險的、快要出事的",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "adjective",
+      "health"
+    ],
+    "id": "vocab-N5-884"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "速い",
+      "reading": "はやい",
+      "meaning": "快的（速度）",
+      "pos": "i-adj"
+    },
+    "tags": [
+      "adjective"
+    ],
+    "id": "vocab-N5-885"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "大変な",
+      "reading": "たいへんな",
+      "meaning": "辛苦的、嚴重的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "emotion"
+    ],
+    "id": "vocab-N5-886"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "変な",
+      "reading": "へんな",
+      "meaning": "奇怪的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective"
+    ],
+    "id": "vocab-N5-887"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "楽な",
+      "reading": "らくな",
+      "meaning": "輕鬆的",
+      "pos": "na-adj"
+    },
+    "tags": [
+      "adjective",
+      "emotion"
+    ],
+    "id": "vocab-N5-888"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "よく",
+      "reading": "よく",
+      "meaning": "經常、好好地",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ],
+    "id": "vocab-N5-889"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "たいてい",
+      "reading": "たいてい",
+      "meaning": "大概、通常",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ],
+    "id": "vocab-N5-890"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "ぜひ",
+      "reading": "ぜひ",
+      "meaning": "務必、一定",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb"
+    ],
+    "id": "vocab-N5-891"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "まっすぐ",
+      "reading": "まっすぐ",
+      "meaning": "筆直地",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "direction"
+    ],
+    "id": "vocab-N5-892"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "もうすぐ",
+      "reading": "もうすぐ",
+      "meaning": "快要、馬上",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "time"
+    ],
+    "id": "vocab-N5-893"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "さっき",
+      "reading": "さっき",
+      "meaning": "剛才",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "time"
+    ],
+    "id": "vocab-N5-894"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "一人で",
+      "reading": "ひとりで",
+      "meaning": "獨自地",
+      "pos": "adverb"
+    },
+    "tags": [
+      "adverb",
+      "person"
+    ],
+    "id": "vocab-N5-895"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "さようなら",
+      "reading": "さようなら",
+      "meaning": "再見",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ],
+    "id": "vocab-N5-896"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "どういたしまして",
+      "reading": "どういたしまして",
+      "meaning": "不客氣",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ],
+    "id": "vocab-N5-897"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "もしもし",
+      "reading": "もしもし",
+      "meaning": "喂（電話用語）",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ],
+    "id": "vocab-N5-898"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "どうぞ",
+      "reading": "どうぞ",
+      "meaning": "請（勸讓）",
+      "pos": "adverb"
+    },
+    "tags": [
+      "greeting"
+    ],
+    "id": "vocab-N5-899"
+  },
+  {
+    "type": "vocabulary",
+    "level": "N5",
+    "payload": {
+      "word": "どちら",
+      "reading": "どちら",
+      "meaning": "哪一個、哪邊",
+      "pos": "adverb"
+    },
+    "tags": [
+      "question",
+      "direction"
+    ],
+    "id": "vocab-N5-900"
   }
 ]
