@@ -8,6 +8,13 @@ const URLS: Record<OfflineKey, string> = {
   grammar: `${import.meta.env.BASE_URL}data/grammar.json`,
 }
 
+// 下載失敗的訊息會直接印在設定頁上（OfflineDataButton），所以這裡的字串是
+// 使用者看得到的文案，不能把內部的 key 漏出去
+const LABELS: Record<OfflineKey, string> = {
+  vocab:   '單字',
+  grammar: '文法',
+}
+
 export interface OfflineStatus {
   hasData: boolean
   savedAt: number | null  // ms timestamp; null = no data
@@ -28,7 +35,7 @@ export async function downloadOfflineData(
   for (let i = 0; i < KEYS.length; i++) {
     const key = KEYS[i]
     const res = await fetch(URLS[key])
-    if (!res.ok) throw new Error(`下載失敗：${key} (${res.status})`)
+    if (!res.ok) throw new Error(`下載失敗：${LABELS[key]}（${res.status}）`)
     const data = await res.json()
     const etag = res.headers.get('etag') ?? undefined
     await db.offlineData.put({ key, data, savedAt: Date.now(), etag })
