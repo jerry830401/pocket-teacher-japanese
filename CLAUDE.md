@@ -72,6 +72,19 @@ All cards implement the shared `Card` interface: `{ id, type, level, payload, ta
 - E2E: `pnpm exec playwright test` (Desktop Chrome, dev server auto-starts)
 - Details and selector conventions: `docs/testing.md`
 
+## Hooks
+
+`.claude/settings.json` wires two project hooks; their scripts live in `.claude/hooks/`.
+
+| Script | Fires on | What it does |
+|---|---|---|
+| `validate-data.mjs` | `PostToolUse`, Edit/Write of `public/data/*.json` | Runs `src/lib/data/jsonSchema.test.ts`, blocking with the failure output |
+| `no-npm.mjs` | `PreToolUse`, Bash | Denies `npm` / `npx` in command position, pointing at `pnpm` / `pnpm exec` |
+
+The data hook exists because those schema rules (duplicate ids, cross-level duplicate words, tag whitelist, blank counts) otherwise only run at `/commit` and in CI, so bad entries surfaced long after they landed. The npm guard keeps a stray `npm install` from writing the `package-lock.json` that `.gitignore` deliberately rejects.
+
+Two things in the scripts are load-bearing and easy to "simplify" back into silent failure: they stream stdin rather than `readFileSync(0)`, which truncates on the ~250KB payload an Edit produces and fails without a trace; and they match paths through `node:path`, not a separator regex, so Windows backslash paths still match. A hook that cannot parse its payload exits 1 (visible, non-blocking) rather than exiting 0 and pretending to pass.
+
 ## Architecture
 
 Core data-flow, SRS update rules, weak-card criteria, and design invariants are documented in `docs/architecture.md`. Read it before modifying quiz, review, or SRS-related code.

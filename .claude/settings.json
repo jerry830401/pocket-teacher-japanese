@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "c=$(cat); case \"$c\" in *npm*|*npx*) printf '%s' \"$c\" | node \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/no-npm.mjs\" ;; esac",
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "shell": "bash",
+            "command": "c=$(cat); case \"$c\" in *public*data*) printf '%s' \"$c\" | node \"${CLAUDE_PROJECT_DIR:-.}/.claude/hooks/validate-data.mjs\" ;; esac",
+            "timeout": 120,
+            "statusMessage": "驗證 JLPT 資料…"
+          }
+        ]
+      }
+    ]
+  }
+}
